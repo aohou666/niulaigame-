@@ -1,0 +1,20 @@
+# Keep recursive text search out of large/generated trees.
+.git/
+.tools/
+apk_analysis/
+recovered_runtime/extracted/
+android_offline_shell/.gradle/
+android_offline_shell/app/build/
+local_game/resource/
+outputs/
+pc_server_data/
+
+# Historical binary evidence and release packages.
+*.apk
+device-*.png
+device-*.json
+before-*.json
+after-*.json
+persist-*.json
+restart-*.json
+

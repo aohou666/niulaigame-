@@ -1,0 +1,38 @@
+# Large release artifacts are published as GitHub Release assets, not Git objects.
+/*.apk
+/release-manifest/*.sha256
+
+# Local toolchains and generated Android build state.
+/.tools/
+/android_offline_shell/.gradle/
+/android_offline_shell/app/build/
+/android_offline_shell/local.properties
+
+# Reverse-engineering work products and bundled tools.
+/apk_analysis/
+/recovered_runtime/extracted/
+/recovered_runtime/app_private_runtime.tar
+
+# Generated previews, captures, exports, and runtime state.
+/outputs/
+/device-*.png
+/device-*.json
+/current-check.png
+/map-current.png
+/*-save*.json
+/before-*.json
+/after-*.json
+/persist-*.json
+/restart-*.json
+/pc_server_data/
+/offline_art_preview/device-preview.png
+/android_offline_shell/device-*.png
+
+# Common caches and editor files.
+**/__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+*.log
+
+
