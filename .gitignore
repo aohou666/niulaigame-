@@ -1,6 +1,8 @@
 # Large release artifacts are published as GitHub Release assets, not Git objects.
 /*.apk
 /release-manifest/*.sha256
+/release-manifest/*.tar.zst
+/release-manifest/*.part-*
 
 # Local toolchains and generated Android build state.
 /.tools/
