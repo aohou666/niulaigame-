@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>换皮离线预览</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #111; color: white; font-family: sans-serif; }
+    body.light { background: #e8e8e8; color: #111; }
+    #title { position: fixed; z-index: 2; top: env(safe-area-inset-top); left: 0; width: 100%; padding: 12px 16px 8px; text-align: center; background: #000a; }
+    body.light #title { background: #fffffff0; }
+    #count { font-size: 16px; font-weight: 700; }
+    #name { margin-top: 5px; font-size: 13px; word-break: break-all; }
+    #stage { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; padding: 82px 10px 70px; }
+    #image { max-width: 100%; max-height: 100%; object-fit: contain; image-rendering: auto; }
+    #help { position: fixed; z-index: 2; bottom: 0; left: 0; width: 100%; padding: 12px 8px calc(12px + env(safe-area-inset-bottom)); text-align: center; font-size: 13px; background: #000a; }
+    body.light #help { background: #fffffff0; }
+    .zone { position: fixed; z-index: 3; top: 74px; bottom: 56px; width: 33.33%; }
+    #prev { left: 0; } #toggle { left: 33.33%; } #next { right: 0; }
+  </style>
+</head>
+<body>
+  <div id="title"><div id="count">加载中…</div><div id="name"></div></div>
+  <main id="stage"><img id="image" alt="预览素材"></main>
+  <div id="help">左侧上一张 · 右侧下一张 · 中间切换黑白底</div>
+  <div class="zone" id="prev"></div><div class="zone" id="toggle"></div><div class="zone" id="next"></div>
+  <script>
+    let items = [], current = 0;
+    const image = document.querySelector('#image');
+    const count = document.querySelector('#count');
+    const name = document.querySelector('#name');
+    function show() {
+      const item = items[current];
+      image.src = item.path;
+      count.textContent = `${current + 1} / ${items.length}　${item.category}`;
+      name.textContent = item.name;
+    }
+    fetch('assets/index.txt', {cache: 'no-store'}).then(r => r.text()).then(text => {
+      items = text.trim().split(/\r?\n/).map(line => {
+        const [category, name, path] = line.split('|'); return {category, name, path: 'assets/' + path};
+      });
+      show();
+    });
+    document.querySelector('#prev').onclick = () => { current = (current + items.length - 1) % items.length; show(); };
+    document.querySelector('#next').onclick = () => { current = (current + 1) % items.length; show(); };
+    document.querySelector('#toggle').onclick = () => document.body.classList.toggle('light');
+  </script>
+</body>
+</html>

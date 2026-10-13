@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>离线复刻测试入口</title>
+  <style>
+    :root { color-scheme: dark; font-family: "Microsoft YaHei", sans-serif; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #171a20; color: #f4ead4; }
+    main { width: min(760px, 92vw); padding: 34px; border: 1px solid #584a37; border-radius: 18px; background: #242832; box-shadow: 0 24px 70px #0008; }
+    h1 { margin: 0 0 10px; font-size: 28px; }
+    p { color: #c9c0b2; line-height: 1.7; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(190px,1fr)); gap: 14px; margin-top: 24px; }
+    a { display: block; min-height: 126px; padding: 20px; border: 1px solid #7b6545; border-radius: 12px; color: inherit; text-decoration: none; background: #302b25; }
+    a:hover { border-color: #d7ad62; transform: translateY(-2px); }
+    strong { display: block; color: #ffd486; font-size: 20px; margin-bottom: 9px; }
+    small { color: #bcb3a5; line-height: 1.55; }
+    footer { margin-top: 24px; color: #8e8a83; font-size: 13px; }
+    #save-status { margin-top: 18px; padding: 14px 16px; border-radius: 10px; background: #1c2028; color: #d9c9ad; line-height: 1.7; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>离线复刻测试入口</h1>
+    <p>当前入口使用电脑端本地服务器、电脑端存档和本地配置，不经过 Icefox 登录，也不连接原服务器。</p>
+    <div id="save-status">正在读取本地存档……</div>
+    <div class="grid">
+      <a id="game-link" href="index_bh_lite3zbtest_andr.html?mode=main"><strong>进入本地游戏</strong><small id="game-desc">按原包登录后逻辑进入主界面，再通过原生按钮前往世界地图、武将、阵容和战斗。</small></a>
+      <a href="admin.html"><strong>可视化编辑后台</strong><small>编辑武将、技能、阵容、地图、功能、奖励和全部美术资源映射。</small></a>
+    </div>
+    <footer>本地地址：127.0.0.1:8787 · 当前阶段用于复刻验证</footer>
+  </main>
+  <script>
+    (async function () {
+      var node = document.getElementById("save-status");
+      try {
+        var save = null;
+        try {
+          var response = await fetch("/api/save", { cache: "no-store" });
+          if (response.ok) save = await response.json();
+        } catch (_) {}
+        if (!save) save = JSON.parse(localStorage.getItem("offlineReplicaSaveV1") || "null");
+        if (!save) {
+          node.textContent = "尚未创建本地存档；首次进入任一游戏模式后会自动创建。";
+          return;
+        }
+        var progress = save.progress || {};
+        var formed = (save.formation || []).length;
+        var equips = save.equips || [];
+        var equipped = equips.filter(function (item) { return !!item.heroUuid; }).length;
+        var items = save.items || {};
+        node.textContent = (save.player && save.player.name || "本地玩家") +
+          " · 主角 " + (save.summoner && save.summoner.level || 1) + " 级" +
+          " · 英雄 " + (save.heroes || []).length + " 名" +
+          " · 上阵 " + formed + " 名" +
+          " · 装备 " + equipped + "/" + equips.length + " 件" +
+          " · 当前第 " + (progress.stage || 1) + " 关" +
+          " · 胜场 " + (progress.wins || 0) +
+          " · 金币 " + (progress.gold || 0) +
+          " · 玄铁 " + (items["30000003"] || 0) +
+          " · 进阶丹 " + (items["30000002"] || 0);
+        var battle = save.battleConfig || { scenario: "yellow", difficulty: "normal", enemyCount: 8 };
+        if (!save.enemyCountRestoredV17) {
+          battle.enemyCount = 8;
+          save.battleConfig = battle;
+          save.enemyCountRestoredV17 = true;
+          localStorage.setItem("offlineReplicaSaveV1", JSON.stringify(save));
+          try { await fetch("/api/save", { method: "PUT", headers: { "Content-Type": "application/json" }, body: JSON.stringify(save) }); } catch (_) {}
+        }
+        var scenarioNames = { yellow: "黄巾余党", wei: "曹魏精锐", shu: "蜀汉突击", wu: "江东火阵", legend: "名将试炼", god: "神将天威", demon: "魔将炼狱", mixed: "群雄混战", cavalry: "铁骑突阵", shield: "重甲坚阵", burst: "爆发强攻", control: "控制连锁", healing: "续航援军" };
+        var difficultyNames = { normal: "普通", hard: "困难", hell: "炼狱" };
+        document.getElementById("game-desc").textContent = "按原包主界面进入；当前战斗配置：" + (scenarioNames[battle.scenario] || battle.scenario) + " · " + (difficultyNames[battle.difficulty] || battle.difficulty) + " · " + Number(battle.enemyCount || 8) + "人。";
+      } catch (err) {
+        node.textContent = "本地存档无法读取：" + err.message;
+      }
+    })();
+  </script>
+</body>
+</html>

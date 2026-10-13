@@ -2,7 +2,9 @@
 
 ## 当前可交付版本
 
-- 最新已发布安装包：`离线复刻测试-v0.18-原包界面与世界状态修复版.apk`
+- 2026-10-13 迁移说明：`MIGRATION.md`；完整开发包发布到 Release `migration-20261013`。
+- 当前工程版本：0.19.0，包含已有 v0.19 APK 之后的本地修改；迁移快照不等于新增修复全部验收。
+- 此前已发布安装包：`离线复刻测试-v0.18-原包界面与世界状态修复版.apk`
 - GitHub Release：<https://github.com/houguangdong104-beep/-/releases/tag/v0.18>
 - 原始包：`apk_analysis/package_test/original.apk`
 - Android 工程：`android_offline_shell/`
@@ -25,7 +27,7 @@
 - 搜索源码时优先限定到 `android_offline_shell/app/src/`、`local_game/` 或具体文件类型。
 - 本地对话开始时先以用户本轮限定范围为准，再按需读取对应文件；不要把历史任务自动并入当前修改范围。
 - 历史截图和旧 APK 只用于发布归档，不作为日常上下文。
-- Git 只保存源码、脚本和小型文档；大文件通过 GitHub Releases 管理。
+- Git 保存源码、脚本和小型文档；`local_game/resource/` 等大资源通过 GitHub Releases 开发迁移包管理。
 
 ## 发布与本地保留策略
 

@@ -32,9 +32,28 @@
 
 # Common caches and editor files.
 **/__pycache__/
+**/node_modules/
 *.py[cod]
 .DS_Store
 Thumbs.db
 *.log
+
+# Migration archives, large resource library, and diagnostic captures.
+/migration-packages/
+/local_game/resource/
+/local_game/*.png
+/local_game/*.bak
+/*.png
+/offline_art_preview/*.png
+/workbenches/**/cache/
+/workbenches/**/source-videos/
+/workbenches/**/game-assets/
+/workbenches/**/exports/
+/workbenches/**/backups/
+/workbenches/**/*.png
+/workbenches/**/*.jpg
+/workbenches/**/*.zip
+/workbenches/**/*.7z
+/workbenches/**/runtime/
 
 

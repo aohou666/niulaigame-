@@ -1,0 +1,44 @@
+plugins {
+    id "com.android.application"
+}
+
+android {
+    namespace "com.local.offlinereplica"
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.local.offlinereplica"
+        minSdk 23
+        targetSdk 35
+        versionCode 19
+        versionName "0.19.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    sourceSets {
+        main {
+            // Keep one canonical copy of the recovered game. Gradle packages it
+            // directly into the APK instead of duplicating 785 MiB in this tree.
+            assets.srcDirs = ["../../local_game"]
+            assets.exclude "**/server_data/**", "**/__pycache__/**", "**/*.py", "**/*.ps1", "**/README.md"
+        }
+    }
+
+    androidResources {
+        // These files are already compressed or must remain seekable by the
+        // embedded HTTP server. Avoiding recompression also shortens builds.
+        noCompress += ["bin", "dbbin", "png", "jpg", "json", "js", "ttf", "mp3", "fnt", "html"]
+    }
+}
+
