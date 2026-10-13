@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>绿幕导帧工作台 · 橡皮擦版</title>
+  <link rel="stylesheet" href="./styles.css?v=sprite-video-lab-20260626">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">
+          <span class="brand-kicker">Sprite Video Lab</span>
+          <span class="brand-title">绿幕导帧工作台 · 橡皮擦版</span>
+        </span>
+      </div>
+      <div class="top-actions">
+        <button id="newProjectBtn" type="button">新项目</button>
+        <button id="backupProjectBtn" type="button">导出项目</button>
+        <label class="file-button">导入项目<input id="importProjectInput" type="file" accept=".json"></label>
+        <button id="saveBtn" class="primary" type="button">保存</button>
+        <button id="exportCurrentBtn" type="button">导出当前</button>
+        <button id="exportAllBtn" type="button">导出到文件夹</button>
+      </div>
+    </header>
+
+    <aside class="sidebar">
+      <section class="panel">
+        <div class="panel-title">项目</div>
+        <select id="projectSelect" class="full"></select>
+        <div class="row gap">
+          <button id="deleteProjectBtn" class="danger subtle" type="button">删除项目</button>
+        </div>
+      </section>
+
+      <section class="panel frames-panel">
+        <div class="panel-title">帧</div>
+        <label class="file-button full">
+          导入图片
+          <input id="frameInput" type="file" accept="image/*" multiple>
+        </label>
+        <div id="dropTarget" class="drop-target">拖入多张绿幕图片</div>
+        <div id="frameList" class="frame-list"></div>
+      </section>
+    </aside>
+
+    <main class="workspace">
+      <div class="canvas-toolbar">
+        <label>
+          画布
+          <select id="presetSelect"></select>
+        </label>
+        <label>
+          绿幕
+          <input id="bgColorInput" type="color" value="#00ff00">
+        </label>
+        <label>
+          抠绿
+          <input id="thresholdInput" type="range" min="20" max="140" step="1" value="64">
+          <output id="thresholdValue">64</output>
+        </label>
+        <label class="check">
+          <input id="guidesToggle" type="checkbox" checked>
+          参考线
+        </label>
+      </div>
+
+      <div id="stageWrap" class="stage-wrap">
+        <div class="stage-header">
+          <div>
+            <span class="stage-eyebrow">Calibrate</span>
+            <strong>绿幕画布</strong>
+          </div>
+          <span class="stage-badge">Sprite preview</span>
+        </div>
+        <div class="stage-viewport">
+          <canvas id="stage"></canvas>
+          <div id="emptyHint" class="empty-hint">拖入图片开始</div>
+        </div>
+      </div>
+
+      <div id="statusBar" class="statusbar">准备就绪</div>
+    </main>
+
+    <aside class="inspector">
+      <section class="panel">
+        <div class="panel-title">当前项目</div>
+        <label>
+          名称
+          <input id="projectNameInput" type="text" autocomplete="off">
+        </label>
+      </section>
+
+      <section class="panel">
+        <div class="panel-title">抠像与导出</div>
+        <label>操作<select id="editMode"><option value="move">移动 / 缩放</option><option value="erase">橡皮擦</option></select></label>
+        <label>笔刷直径（画布像素）<input id="brushSize" type="range" min="4" max="240" value="40" oninput="this.nextElementSibling.value=this.value"><output>40</output></label>
+        <div class="button-grid"><button id="undoEraseBtn">撤销上一笔</button><button id="resetEraseBtn">恢复本帧擦除</button></div>
+        <label class="check"><input id="transparentExport" type="checkbox" checked>导出透明 PNG</label>
+        <div class="hint">先抠绿，再用橡皮擦清理。切换到移动模式可拖动图片；下面的中心、缩放和旋转会用于最终导出。背景色只用于预览，取消透明导出可输出绿幕底图。</div>
+        <div class="panel-title">输出前位置调整</div>
+        <div class="control-grid">
+          <label>
+            中心 X
+            <input id="centerXInput" type="number" step="1">
+          </label>
+          <label>
+            中心 Y
+            <input id="centerYInput" type="number" step="1">
+          </label>
+          <label>
+            缩放 %
+            <input id="scaleInput" type="number" step="1" min="1">
+          </label>
+          <label>
+            旋转 °
+            <input id="rotationInput" type="number" step="1">
+          </label>
+        </div>
+        <div class="button-grid">
+          <button id="fitBtn" type="button">重置适配</button>
+          <button id="centerLeftBtn" type="button">中间偏左</button>
+          <button id="bottomAlignBtn" type="button">底部对齐</button>
+          <button id="rotateLeftBtn" type="button">左转 15°</button>
+          <button id="rotateRightBtn" type="button">右转 15°</button>
+          <button id="removeFrameBtn" class="danger subtle" type="button">移除帧</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-title">洋葱皮</div>
+        <div class="hint">在左侧帧列表勾选一张作为参考。</div>
+        <button id="clearReferenceBtn" class="subtle full" type="button">清除参考</button>
+        <label class="check">
+          <input id="onionToggle" type="checkbox" checked>
+          显示洋葱皮
+        </label>
+        <label>
+          不透明度
+          <input id="onionOpacityInput" type="range" min="0" max="100" step="1" value="35">
+          <output id="onionOpacityValue">35%</output>
+        </label>
+      </section>
+    </aside>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
