@@ -13,7 +13,7 @@ subprocess.run(['git', 'bundle', 'create', str(bundle), '--all'], cwd=root, chec
 paths = {}
 tracked = subprocess.check_output(['git', 'ls-files', '-z'], cwd=root).decode('utf-8').split('\0')
 for name in tracked:
-    if name and not name.startswith('workbenches/'):
+    if name:
         paths[name] = root / name
 for folder in ['local_game/resource', '.tools/python']:
     for path in (root / folder).rglob('*'):
