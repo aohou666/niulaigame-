@@ -1,0 +1,456 @@
+{
+  "heroId": 43,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/043/portrait.png",
+      "prepared": "art-migration/references/body-043-v3/idle.png",
+      "foot": [
+        384.47,
+        700
+      ],
+      "size": [
+        234,
+        500
+      ],
+      "sha256": "c0aeb2a2c7ed1625a719a08477f33ef8ecd6a53e7d27f66c95b75dc5c774bb33"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero043-attack-v4/hero043_attack_continuity_alpha_00002_.png",
+      "prepared": "art-migration/references/body-043-v3/attack.png",
+      "foot": [
+        383.96,
+        700
+      ],
+      "size": [
+        247,
+        500
+      ],
+      "sha256": "5aa49621692ff33cad2be19e8d3454abff7df248bd07815b6ec00de86d0467df"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero043-skill-v4/hero043_skill_continuity_alpha_00002_.png",
+      "prepared": "art-migration/references/body-043-v3/skill.png",
+      "foot": [
+        384.35,
+        700
+      ],
+      "size": [
+        225,
+        500
+      ],
+      "sha256": "648238bbd05ff03fc6f7f8577790e874a86f4443fe0cca76ea2d7d7adfc3371b"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H043-ATK",
+        "heroId": 43,
+        "name": "赵海牛",
+        "originalName": "黄盖",
+        "slot": "普攻",
+        "skillId": 550430110,
+        "skillName": "普通攻击",
+        "newSkillName": "迎潮重拳",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "近身攻击",
+        "movement": "移到目标前出手",
+        "weapon": "徒手／拳脚",
+        "weaponObservation": "straw-hat yellow farmer bull, OFF-WHITE stained sleeveless vest, faded OLIVE GREEN knee-length shorts, mustard/yellow shoes; single broad metal CLEAVER in anatomical RIGHT hand on viewer LEFT. Never brown full-length trousers.",
+        "effectClass": "命中/生效附着特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "Retain RIGHT-hand cleaver fully visible near shoulder, one compact forward-right cleaver chop. LEFT hand empty and tucked.",
+        "rootPolicy": "引擎负责接近与返回；视频固定根位置，只做出手",
+        "batch": "B02",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_huanggai_02",
+        "model": "hero_043_01",
+        "action": "gongji",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "wuqi_01、wuqi、wuqi_02、wuqi1",
+        "rawDurationMs": 1266.667,
+        "fps": 30,
+        "durationFrames": 38,
+        "rawEvents": [
+          {
+            "frame0": 15,
+            "timeMs": 500.0,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@500.0ms（角色事件）",
+        "impactMs": [
+          500.0
+        ],
+        "impactStatus": "角色pia直接回调；待游戏内验收",
+        "performance": {
+          "effectsPiaEnemy": [
+            {
+              "delay": 0,
+              "posType": 1,
+              "src": [
+                "common_skill_huanggai_02"
+              ],
+              "type": 0
+            }
+          ],
+          "effectsPiaUs": [
+            {
+              "delay": 0,
+              "posType": 1,
+              "src": [
+                "common_skill_huanggai_02"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            2,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_huanggai_02",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_huanggai_02_2d57f094.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_huanggai_02",
+                  "name": "common_skill_huanggai_02",
+                  "fps": 24,
+                  "durationFrames": 12,
+                  "durationMs": 500.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaUs",
+            "resource": "common_skill_huanggai_02",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_huanggai_02_2d57f094.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_huanggai_02",
+                  "name": "common_skill_huanggai_02",
+                  "fps": 24,
+                  "durationFrames": 12,
+                  "durationMs": 500.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsPiaEnemy: common_skill_huanggai_02 delay=0 dt=None speed=1\neffectsPiaUs: common_skill_huanggai_02 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_huanggai_02"
+        ],
+        "portrait": "reskin/hero_043.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H043-ULT",
+        "heroId": 43,
+        "name": "赵海牛",
+        "originalName": "黄盖",
+        "slot": "大招",
+        "skillId": 550430210,
+        "skillName": "苦肉计",
+        "newSkillName": "逆潮苦战",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "近身攻击",
+        "movement": "移到目标前出手",
+        "weapon": "徒手／拳脚",
+        "weaponObservation": "straw-hat yellow farmer bull, OFF-WHITE stained sleeveless vest, faded OLIVE GREEN knee-length shorts, mustard/yellow shoes; single broad metal CLEAVER in anatomical RIGHT hand on viewer LEFT. Never brown full-length trousers.",
+        "effectClass": "目标位置特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "Retain SAME RIGHT-hand cleaver at chest, empty LEFT hand makes brief stop gesture. Do not discard cleaver or swap hands.",
+        "rootPolicy": "引擎负责接近与返回；视频固定根位置，只做出手",
+        "batch": "B05",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成335%伤害,并使其受到伤害加深8%,持续2回合。",
+        "skillModel": "common_skill_huanggai_01",
+        "model": "hero_043_01",
+        "action": "jineng",
+        "effectiveDesc": "对敌方前排单体造成335%伤害,并使其受到伤害加深8%,持续2回合。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "wuqi_01、wuqi、wuqi_02、wuqi1",
+        "rawDurationMs": 2666.667,
+        "fps": 30,
+        "durationFrames": 80,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "__attackDoneDelay": 750,
+          "forceSkillActionType": 2,
+          "effectsTarEnemy": [
+            {
+              "delay": 0,
+              "posType": 1,
+              "src": [
+                "common_skill_huanggai_03"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            2,
+            300,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_huanggai_03",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_huanggai_03_db99dde9.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_huanggai_03",
+                  "name": "common_skill_huanggai_03",
+                  "fps": 30,
+                  "durationFrames": 77,
+                  "durationMs": 2566.667,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        8
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 16,
+                      "timeMs": 533.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 16,
+                      "timeMs": 533.333,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 18,
+                      "timeMs": 600.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 21,
+                      "timeMs": 700.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 23,
+                      "timeMs": 766.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 23,
+                      "timeMs": 766.667,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 24,
+                      "timeMs": 800.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 30,
+                      "timeMs": 1000.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 34,
+                      "timeMs": 1133.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 34,
+                      "timeMs": 1133.333,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 40,
+                      "timeMs": 1333.333,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                },
+                {
+                  "armature": "shouji",
+                  "name": "shouji",
+                  "fps": 30,
+                  "durationFrames": 18,
+                  "durationMs": 600.0,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "xunhuanyanwu",
+                  "name": "xunhuanyanwu",
+                  "fps": 30,
+                  "durationFrames": 14,
+                  "durationMs": 466.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_huanggai_03 delay=0 dt=None speed=1 事件=pia@533.3,pia@600.0,pia@700.0,pia@766.7,pia@800.0,pia@1000.0,pia@1133.3,pia@1333.3",
+        "variants": [
+          "common_skill_huanggai_01"
+        ],
+        "portrait": "reskin/hero_043.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false,
+  "denseGuideSchedule": [
+    {
+      "frame": 4,
+      "image": "idle"
+    },
+    {
+      "frame": 8,
+      "image": "idle"
+    },
+    {
+      "frame": 12,
+      "image": "attack"
+    },
+    {
+      "frame": 16,
+      "image": "attack"
+    },
+    {
+      "frame": 20,
+      "image": "attack"
+    },
+    {
+      "frame": 24,
+      "image": "attack"
+    },
+    {
+      "frame": 28,
+      "image": "idle"
+    },
+    {
+      "frame": 32,
+      "image": "idle"
+    },
+    {
+      "frame": 36,
+      "image": "idle"
+    },
+    {
+      "frame": 40,
+      "image": "idle"
+    },
+    {
+      "frame": 44,
+      "image": "idle"
+    },
+    {
+      "frame": 48,
+      "image": "skill"
+    },
+    {
+      "frame": 52,
+      "image": "skill"
+    },
+    {
+      "frame": 56,
+      "image": "skill"
+    },
+    {
+      "frame": 60,
+      "image": "skill"
+    },
+    {
+      "frame": 64,
+      "image": "skill"
+    },
+    {
+      "frame": 68,
+      "image": "idle"
+    },
+    {
+      "frame": 72,
+      "image": "idle"
+    }
+  ]
+}

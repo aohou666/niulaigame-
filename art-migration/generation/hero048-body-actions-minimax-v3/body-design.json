@@ -1,0 +1,391 @@
+{
+  "heroId": 48,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/048/portrait.png",
+      "prepared": "art-migration/references/body-048-v3/idle.png",
+      "foot": [
+        384.42,
+        700
+      ],
+      "size": [
+        259,
+        500
+      ],
+      "sha256": "3c94243ee861541f3fc634169bd7a856b3aa5250a41df90d119957a4515bdbe1"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero048-attack-v3/hero048_attack_continuity_alpha_00001_.png",
+      "prepared": "art-migration/references/body-048-v3/attack.png",
+      "foot": [
+        383.53,
+        700
+      ],
+      "size": [
+        311,
+        500
+      ],
+      "sha256": "9a049464d37e9245f01609d62cccd325ba0343212695c920dd209db57fb345b5"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero048-skill-v3/hero048_skill_continuity_alpha_00001_.png",
+      "prepared": "art-migration/references/body-048-v3/skill.png",
+      "foot": [
+        384.14,
+        700
+      ],
+      "size": [
+        245,
+        500
+      ],
+      "sha256": "b6ee228f918431f02b6443144fed26cbcbe605e93aa641d50f3b27635f38c5a7"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H048-ATK",
+        "heroId": 48,
+        "name": "烤串师傅",
+        "originalName": "蒋钦",
+        "slot": "普攻",
+        "skillId": 550480110,
+        "skillName": "普通攻击",
+        "newSkillName": "火候轻试",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "近身攻击",
+        "movement": "移到目标前出手",
+        "weapon": "食物道具",
+        "weaponObservation": "yellow bull chef, tall WHITE chef hat, WHITE double-breasted coat, orange neckerchief, black trousers and shoes; cluster of meat skewers held ONLY in anatomical LEFT hand on viewer RIGHT, anatomical RIGHT hand on viewer LEFT stays empty. Preserve which shoulder/arm connects to skewer hand; do not mirror.",
+        "effectClass": "命中/生效附着特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "Mostly frontal body, LEFT arm on viewer RIGHT gently extends same skewers slightly forward on viewer RIGHT. Empty RIGHT arm stays bent on viewer LEFT. No crossed arms, no hand swap.",
+        "rootPolicy": "引擎负责接近与返回；视频固定根位置，只做出手",
+        "batch": "B02",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_huanggai_02",
+        "model": "hero_048_01",
+        "action": "gongji",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "wuqizhuan、wuqizhuan1",
+        "rawDurationMs": 800.0,
+        "fps": 30,
+        "durationFrames": 24,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "effectsPiaEnemy": [
+            {
+              "delay": 0,
+              "posType": 1,
+              "src": [
+                "common_skill_huanggai_02"
+              ],
+              "type": 0
+            }
+          ],
+          "effectsPiaUs": [
+            {
+              "delay": 0,
+              "posType": 1,
+              "src": [
+                "common_skill_huanggai_02"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            2,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_huanggai_02",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_huanggai_02_2d57f094.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_huanggai_02",
+                  "name": "common_skill_huanggai_02",
+                  "fps": 24,
+                  "durationFrames": 12,
+                  "durationMs": 500.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaUs",
+            "resource": "common_skill_huanggai_02",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_huanggai_02_2d57f094.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_huanggai_02",
+                  "name": "common_skill_huanggai_02",
+                  "fps": 24,
+                  "durationFrames": 12,
+                  "durationMs": 500.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsPiaEnemy: common_skill_huanggai_02 delay=0 dt=None speed=1\neffectsPiaUs: common_skill_huanggai_02 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_huanggai_02"
+        ],
+        "portrait": "reskin/hero_048.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H048-ULT",
+        "heroId": 48,
+        "name": "烤串师傅",
+        "originalName": "蒋钦",
+        "slot": "大招",
+        "skillId": 550480210,
+        "skillName": "烈焰锤",
+        "newSkillName": "炙火重锤",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "近身攻击",
+        "movement": "移到目标前出手",
+        "weapon": "食物道具",
+        "weaponObservation": "yellow bull chef, tall WHITE chef hat, WHITE double-breasted coat, orange neckerchief, black trousers and shoes; cluster of meat skewers held ONLY in anatomical LEFT hand on viewer RIGHT, anatomical RIGHT hand on viewer LEFT stays empty. Preserve which shoulder/arm connects to skewer hand; do not mirror.",
+        "effectClass": "目标位置特效",
+        "semantic": "灼烧",
+        "bodyDesign": "LEFT elbow stays on viewer RIGHT, same left hand holds skewers higher near left shoulder; empty RIGHT palm on viewer LEFT gives a small presenting gesture. Preserve left-handed skewers throughout.",
+        "rootPolicy": "引擎负责接近与返回；视频固定根位置，只做出手",
+        "batch": "B05",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成300%伤害,并附加<灼烧>,每回合造成100%伤害,持续2回合。",
+        "skillModel": "common_skill_jiangqin_02",
+        "model": "hero_048_01",
+        "action": "jineng",
+        "effectiveDesc": "对敌方前排单体造成300%伤害,并附加<灼烧>,每回合造成100%伤害,持续2回合。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "wuqizhuan、wuqizhuan1",
+        "rawDurationMs": 1233.333,
+        "fps": 30,
+        "durationFrames": 37,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "effectsTarEnemy": [
+            {
+              "delay": 0,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_jiangqin_1_01"
+              ],
+              "type": 0
+            },
+            {
+              "delay": 0,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_jiangqin_1_02"
+              ],
+              "type": 0,
+              "z": 0
+            }
+          ],
+          "meFlyConfig": [
+            2,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_jiangqin_1_01",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_jiangqin_1_01_85aa57f0.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_jiangqin_1_01",
+                  "name": "common_skill_jiangqin_1_01",
+                  "fps": 30,
+                  "durationFrames": 20,
+                  "durationMs": 666.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_jiangqin_1_02",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_jiangqin_1_02_1552f350.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_jiangqin_1_02",
+                  "name": "common_skill_jiangqin_1_02",
+                  "fps": 30,
+                  "durationFrames": 33,
+                  "durationMs": 1100.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_jiangqin_1_01 delay=0 dt=None speed=1\neffectsTarEnemy: common_skill_jiangqin_1_02 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_jiangqin_02"
+        ],
+        "portrait": "reskin/hero_048.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false,
+  "denseGuideSchedule": [
+    {
+      "frame": 4,
+      "image": "idle"
+    },
+    {
+      "frame": 8,
+      "image": "idle"
+    },
+    {
+      "frame": 12,
+      "image": "attack"
+    },
+    {
+      "frame": 16,
+      "image": "attack"
+    },
+    {
+      "frame": 20,
+      "image": "attack"
+    },
+    {
+      "frame": 24,
+      "image": "attack"
+    },
+    {
+      "frame": 28,
+      "image": "idle"
+    },
+    {
+      "frame": 32,
+      "image": "idle"
+    },
+    {
+      "frame": 36,
+      "image": "idle"
+    },
+    {
+      "frame": 40,
+      "image": "idle"
+    },
+    {
+      "frame": 44,
+      "image": "idle"
+    },
+    {
+      "frame": 48,
+      "image": "skill"
+    },
+    {
+      "frame": 52,
+      "image": "skill"
+    },
+    {
+      "frame": 56,
+      "image": "skill"
+    },
+    {
+      "frame": 60,
+      "image": "skill"
+    },
+    {
+      "frame": 64,
+      "image": "skill"
+    },
+    {
+      "frame": 68,
+      "image": "idle"
+    },
+    {
+      "frame": 72,
+      "image": "idle"
+    }
+  ]
+}

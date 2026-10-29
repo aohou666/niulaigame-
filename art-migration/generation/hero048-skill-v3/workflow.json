@@ -1,0 +1,133 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "prompt": "Create ONE production full-body skill key pose of the EXACT character in the reference image. Preserve face, hair, horns, species, exact garment colors, all props and which hand holds each prop. Actual reference continuity requirements: yellow bull chef, tall WHITE chef hat, WHITE double-breasted coat, orange neckerchief, black trousers and shoes; cluster of meat skewers held ONLY in anatomical LEFT hand on viewer RIGHT, anatomical RIGHT hand on viewer LEFT stays empty. Preserve which shoulder/arm connects to skewer hand; do not mirror.. Requested action: LEFT elbow stays on viewer RIGHT, same left hand holds skewers higher near left shoulder; empty RIGHT palm on viewer LEFT gives a small presenting gesture. Preserve left-handed skewers throughout.. The character identity picture takes priority over any earlier action plan. Use slightly right-facing three-quarter pose but do not mirror the reference, swap hands or hide essential held objects. Fixed body root, entire horns, tools, feet and hands inside generous safe margins. Same tactile 2.5D semi-realistic semi-cartoon absurd modern neighborhood game rendering, same soft lighting and material palette as reference. Crisp silhouette, no motion blur, no VFX, no target, no setting, no UI, no lettering, no watermark. Plain solid white background for clean alpha matting. Do not replace an existing object with a different object.",
+      "negative_prompt": "blurry, cropped body, duplicate character, watermark, unreadable text, medieval armor, ancient Chinese costume",
+      "resolution": 768,
+      "images.image_1": [
+        "8",
+        0
+      ]
+    }
+  },
+  "5": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "seed": 202610293097,
+      "steps": 28,
+      "cfg": 4,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "4",
+        1
+      ],
+      "latent_image": [
+        "4",
+        2
+      ],
+      "denoise": 1
+    }
+  },
+  "6": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "5",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "7": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "6",
+        0
+      ],
+      "filename_prefix": "street-reskin/qwen"
+    }
+  },
+  "8": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "street_2f43110709ff3bec.png"
+    }
+  },
+  "11": {
+    "class_type": "SplitImageWithAlpha",
+    "inputs": {
+      "image": [
+        "6",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "easy imageRemBg",
+    "inputs": {
+      "images": [
+        "11",
+        0
+      ],
+      "rem_mode": "RMBG-1.4",
+      "image_output": "Hide",
+      "save_prefix": "street-reskin/matte",
+      "add_background": "none",
+      "torchscript_jit": false,
+      "refine_foreground": false
+    }
+  },
+  "10": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "9",
+        0
+      ],
+      "filename_prefix": "street-reskin/hero048_skill_continuity_alpha"
+    }
+  }
+}
