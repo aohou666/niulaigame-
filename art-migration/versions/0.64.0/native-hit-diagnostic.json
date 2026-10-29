@@ -1,0 +1,89 @@
+{
+  "pass": false,
+  "checks": [
+    {
+      "model": "hero_002_01",
+      "action": "gongji",
+      "native": [
+        {
+          "name": "zd",
+          "time": 0.5333333333333333
+        },
+        {
+          "name": "zd",
+          "time": 0.5666666666666667
+        }
+      ],
+      "callbacks": [
+        {
+          "elapsedMs": 533.2000000029802,
+          "key": "zd",
+          "nativeFrame": 16,
+          "sourceFrame": 28
+        }
+      ],
+      "authored": [
+        {
+          "name": "zd",
+          "timeMs": 533.3333333333334,
+          "frame0": 16
+        },
+        {
+          "name": "zd",
+          "timeMs": 566.6666666666666,
+          "frame0": 17
+        }
+      ],
+      "expectedMs": 533.3333333333334,
+      "fps": 30
+    },
+    {
+      "model": "hero_002_01_ez",
+      "action": "gongji",
+      "native": [
+        {
+          "name": "zd",
+          "time": 0.5333333333333333
+        },
+        {
+          "name": "zd",
+          "time": 0.5666666666666667
+        }
+      ],
+      "callbacks": [
+        {
+          "elapsedMs": 534.6000000014901,
+          "key": "zd",
+          "nativeFrame": 16,
+          "sourceFrame": 28
+        }
+      ],
+      "authored": [
+        {
+          "name": "zd",
+          "timeMs": 533.3333333333334,
+          "frame0": 16
+        },
+        {
+          "name": "zd",
+          "timeMs": 566.6666666666666,
+          "frame0": 17
+        }
+      ],
+      "expectedMs": 533.3333333333334,
+      "fps": 30
+    }
+  ],
+  "after": {
+    "installed": true,
+    "framesPresented": 64,
+    "actions": {
+      "gongji": 64
+    },
+    "atlasRequests": 2,
+    "suppressedViewsDetached": 0,
+    "errors": [],
+    "caches": [],
+    "active": []
+  }
+}
