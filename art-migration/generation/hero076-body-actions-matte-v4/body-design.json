@@ -1,0 +1,702 @@
+{
+  "heroId": 76,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/076/portrait.png",
+      "prepared": "art-migration/references/body-076-v4/idle.png",
+      "foot": [
+        384.19,
+        700
+      ],
+      "size": [
+        341,
+        560
+      ],
+      "sha256": "f3d3a14a3545ffd993f4339643f7016a042052eaf678ac7303b854fa3748d808"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero076-attack-v2/hero076_attack_alpha_00001_.png",
+      "prepared": "art-migration/references/body-076-v4/attack.png",
+      "foot": [
+        383.92,
+        700
+      ],
+      "size": [
+        370,
+        560
+      ],
+      "sha256": "bf8d03e82f2d5196ba97013717cf966fd5352c847884e53419c20bd263463976"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero076-skill-v2/hero076_skill_alpha_00001_.png",
+      "prepared": "art-migration/references/body-076-v4/skill.png",
+      "foot": [
+        383.69,
+        700
+      ],
+      "size": [
+        388,
+        560
+      ],
+      "sha256": "3441546dac22d7abd2da29bcfe76e04a280376e7cce658aa5a4489e470a13b44"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H076-ATK",
+        "heroId": 76,
+        "name": "虎",
+        "originalName": "魔张辽",
+        "slot": "普攻",
+        "skillId": 550760110,
+        "skillName": "普通攻击",
+        "newSkillName": "虎纹试锋",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "近身攻击",
+        "movement": "移到目标前出手",
+        "weapon": "兽爪／拳脚",
+        "weaponObservation": "orange tiger-costume bull with tiger hood and striped tail, white belly, BOTH hands holding one WHITE RICEBALL at chest",
+        "effectClass": "目标位置特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "Both hands MUST REMAIN TOGETHER cupping the riceball at every single frame. Move hands and ball together only 10cm forward then back. Elbows never separate hands; no windup, no empty palms or loose claws. Riceball remains in front of white belly and fully visible.",
+        "rootPolicy": "引擎负责接近与返回；视频固定根位置，只做出手",
+        "batch": "B02",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_zhangliao_2",
+        "model": "hero_076_03",
+        "action": "gongji",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "wuqi1、wuqi2、wuqi2_2、wuqi1_2",
+        "rawDurationMs": 1600.0,
+        "fps": 30,
+        "durationFrames": 48,
+        "rawEvents": [
+          {
+            "frame0": 22,
+            "timeMs": 733.333,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@733.3ms（角色事件）",
+        "impactMs": [
+          733.333
+        ],
+        "impactStatus": "角色pia直接回调；待游戏内验收",
+        "performance": {
+          "__attackDoneDelay": 1000,
+          "effectsTarEnemy": [
+            {
+              "delay": 0,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 0,
+              "src": [
+                "common_skill_zhangliao_2"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            2,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_zhangliao_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhangliao_2_6d919c64.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhangliao_2",
+                  "name": "common_skill_zhangliao_2",
+                  "fps": 30,
+                  "durationFrames": 16,
+                  "durationMs": 533.333,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 1,
+                      "timeMs": 33.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 2,
+                      "timeMs": 66.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 6,
+                      "timeMs": 200.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 7,
+                      "timeMs": 233.333,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_zhangliao_2 delay=0 dt=None speed=1 事件=pia@33.3,pia@66.7,pia@200.0,pia@233.3",
+        "variants": [
+          "common_skill_zhangliao_2"
+        ],
+        "portrait": "reskin/hero_076.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H076-ULT",
+        "heroId": 76,
+        "name": "虎",
+        "originalName": "魔张辽",
+        "slot": "大招",
+        "skillId": 550760210,
+        "skillName": "横扫千军",
+        "newSkillName": "虎威扫阵",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "前排",
+        "delivery": "中场释放（远近待回放）",
+        "movement": "移到场地中部释放",
+        "weapon": "兽爪／拳脚",
+        "weaponObservation": "orange tiger-costume bull with tiger hood and striped tail, white belly, BOTH hands holding one WHITE RICEBALL at chest",
+        "effectClass": "场景/范围特效、命中/生效附着特效",
+        "semantic": "窃取",
+        "bodyDesign": "Both hands continuously cup the SAME riceball. Make one small torso bow while offering riceball only 10cm forward; keep both hands and visible riceball connected throughout. No loose arms or empty hands at any point.",
+        "rootPolicy": "引擎移到中场后播出手；视频不自行横穿战场",
+        "batch": "B07",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排造成180%伤害,若敌方速度低于自身,则额外造成15%目标当前生命的伤害；若速度高于自身则窃取其15%速度,持续3回合。",
+        "skillModel": "common_skill_zhangliao_1",
+        "model": "hero_076_03",
+        "action": "jineng",
+        "effectiveDesc": "对敌方前排造成180%伤害,若敌方速度低于自身,则额外造成15%目标当前生命的伤害；若速度高于自身则窃取其15%速度,持续3回合。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "wuqi1、wuqi2、wuqi2_2、wuqi1_2",
+        "rawDurationMs": 4000.0,
+        "fps": 30,
+        "durationFrames": 120,
+        "rawEvents": [
+          {
+            "frame0": 0,
+            "timeMs": 0.0,
+            "ints": [
+              11
+            ],
+            "type": 10,
+            "name": "count"
+          },
+          {
+            "frame0": 38,
+            "timeMs": 1266.667,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 42,
+            "timeMs": 1400.0,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 46,
+            "timeMs": 1533.333,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 48,
+            "timeMs": 1600.0,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 50,
+            "timeMs": 1666.667,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 52,
+            "timeMs": 1733.333,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 54,
+            "timeMs": 1800.0,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 56,
+            "timeMs": 1866.667,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 60,
+            "timeMs": 2000.0,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 64,
+            "timeMs": 2133.333,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 92,
+            "timeMs": 3066.667,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 92,
+            "timeMs": 3066.667,
+            "ints": [
+              15
+            ],
+            "type": 10,
+            "name": "pz"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@1266.7ms（角色事件）；pia@1400.0ms（角色事件）；pia@1533.3ms（角色事件）；pia@1600.0ms（角色事件）；pia@1666.7ms（角色事件）；pia@1733.3ms（角色事件）；pia@1800.0ms（角色事件）；pia@1866.7ms（角色事件）；pia@2000.0ms（角色事件）；pia@2133.3ms（角色事件）；pia@3066.7ms（角色事件）",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "__attackDoneDelay": 1000,
+          "effectQP": [
+            {
+              "delay": 500,
+              "offset": [
+                0,
+                0
+              ],
+              "src": [
+                "common_skill_zhangliao_1_01"
+              ]
+            },
+            {
+              "delay": 2500,
+              "offset": [
+                0,
+                0
+              ],
+              "src": [
+                "common_skill_zhangliao_1_02"
+              ]
+            }
+          ],
+          "effectsPiaEnemy": [
+            {
+              "posType": 1,
+              "src": [
+                "common_skill_zhangliao_1_03"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            1,
+            150,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectQP",
+            "resource": "common_skill_zhangliao_1_01",
+            "delay": 500,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhangliao_1_01_9c8748bd.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhangliao_1_01",
+                  "name": "common_skill_zhangliao_1_01",
+                  "fps": 30,
+                  "durationFrames": 59,
+                  "durationMs": 1966.667,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 7,
+                      "timeMs": 233.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 9,
+                      "timeMs": 300.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 12,
+                      "timeMs": 400.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 15,
+                      "timeMs": 500.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 18,
+                      "timeMs": 600.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 23,
+                      "timeMs": 766.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 24,
+                      "timeMs": 800.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 27,
+                      "timeMs": 900.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 30,
+                      "timeMs": 1000.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 33,
+                      "timeMs": 1100.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 34,
+                      "timeMs": 1133.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 42,
+                      "timeMs": 1400.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 47,
+                      "timeMs": 1566.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 50,
+                      "timeMs": 1666.667,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectQP",
+            "resource": "common_skill_zhangliao_1_02",
+            "delay": 2500,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhangliao_1_02_119f2746.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhangliao_1_02",
+                  "name": "common_skill_zhangliao_1_02",
+                  "fps": 30,
+                  "durationFrames": 11,
+                  "durationMs": 366.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_zhangliao_1_03",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhangliao_1_03_590dca2f.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhangliao_1_03",
+                  "name": "common_skill_zhangliao_1_03",
+                  "fps": 30,
+                  "durationFrames": 8,
+                  "durationMs": 266.667,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 1,
+                      "timeMs": 33.333,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectQP: common_skill_zhangliao_1_01 delay=500 dt=None speed=1 事件=pia@233.3,pia@300.0,pia@400.0,pia@500.0,pia@600.0,pia@766.7,pia@800.0,pia@900.0,pia@1000.0,pia@1100.0,pia@1133.3,pia@1400.0,pia@1566.7,pia@1666.7\neffectQP: common_skill_zhangliao_1_02 delay=2500 dt=None speed=1\neffectsPiaEnemy: common_skill_zhangliao_1_03 delay=0 dt=None speed=1 事件=pia@0.0,pia@33.3",
+        "variants": [
+          "common_skill_zhangliao_1"
+        ],
+        "portrait": "reskin/hero_076.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "approved-for-matting",
+  "runtimeIntegrated": false,
+  "denseGuideSchedule": [
+    {
+      "frame": 4,
+      "image": "idle"
+    },
+    {
+      "frame": 8,
+      "image": "idle"
+    },
+    {
+      "frame": 12,
+      "image": "attack"
+    },
+    {
+      "frame": 16,
+      "image": "attack"
+    },
+    {
+      "frame": 20,
+      "image": "attack"
+    },
+    {
+      "frame": 24,
+      "image": "attack"
+    },
+    {
+      "frame": 28,
+      "image": "idle"
+    },
+    {
+      "frame": 32,
+      "image": "idle"
+    },
+    {
+      "frame": 36,
+      "image": "idle"
+    },
+    {
+      "frame": 40,
+      "image": "idle"
+    },
+    {
+      "frame": 44,
+      "image": "idle"
+    },
+    {
+      "frame": 48,
+      "image": "skill"
+    },
+    {
+      "frame": 52,
+      "image": "skill"
+    },
+    {
+      "frame": 56,
+      "image": "skill"
+    },
+    {
+      "frame": 60,
+      "image": "skill"
+    },
+    {
+      "frame": 64,
+      "image": "skill"
+    },
+    {
+      "frame": 68,
+      "image": "idle"
+    },
+    {
+      "frame": 72,
+      "image": "idle"
+    }
+  ],
+  "sourceBodyJob": "art-migration/generation/hero076-body-actions-minimax-v4",
+  "sourceFrameOrder": [
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00147_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00148_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00149_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00150_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00151_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00152_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00153_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00154_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00155_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00156_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00157_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00158_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00159_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00160_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00161_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00162_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00163_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00164_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00165_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00166_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00167_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00168_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00169_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00170_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00171_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00172_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00173_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00174_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00175_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00176_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00177_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00178_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00179_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00180_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00181_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00182_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00183_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00184_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00185_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00186_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00187_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00188_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00189_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00190_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00191_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00192_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00193_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00194_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00195_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00196_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00197_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00198_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00199_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00200_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00201_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00202_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00203_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00204_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00205_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00206_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00207_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00208_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00209_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00210_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00211_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00212_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00213_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00214_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00215_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00216_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00217_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00218_.png",
+    "art-migration/generation/hero076-body-actions-minimax-v4/hero076_body_00219_.png"
+  ]
+}

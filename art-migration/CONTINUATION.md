@@ -129,3 +129,14 @@
 -33/34/36/37/38/39/40/41/42/44/45/47及49/52/53/54/55/56/58/59/60/62/64及65/66/68/70/71/72/73/74/75/78/80/84/85导图均逐个与idle对照批准，bodyv1批量排队。51attack含火光已撤销批准，未排body。
 -35/43/46两导图道具丢失已拒，61鼓槌换手、63麻将丢失、69小绿环丢失、81skill胡萝卜消失已拒。50/57/67/48手部待大图核对，83原火球需要分层方案。31v4、12v3、79v3待看。13额外角色官方3姿势v2路径见上轮摘要，尚未抠图/接入。
 - v34提交后下一版本35需按33/34/35一起push delivery main；32远程d9e0b38已核对。原用户未提交文件不动。下一步扩大动作接入、补移动受击死亡和皮肤，旧大特效/顶部VS/UI很多未替换。
+
+
+## 2026-10-29 15:12 v0.35 最新
+- v34已提交2000379，v35准备提交并马上push33/34/35到delivery main，必须ls-remote核对。v35当前19角色1387帧3622映射76模型动作，新增16/18/76；三个真实战斗通过，失败前测保留。16/18/76alpha全73+16均已看。
+- 战斗UI8新图已接入(总65绑定，6新sheet区域=剩2280)，官方source battle-controls-source.png。图生成间距不均，sourceBox明确沿透明间隙，group_promote已支持显式sourceBox。实战截图看过，旧顶部头像head1_zhu_10_png/独立头像圈、字体、其他UI仍待换。新角色动作截图多被原大特效遮挡，但全部原生帧位和单独图集检查通过。
+- 35/43/46/50/51/57/61/63/69/81实际道具修正版3共20Qwen导图刚排front，用--square保留道具，prop-continuity-overrides有逐手说明。原35金属爪/罐、43菜刀、46鱼竿/桶、61左鼓槌、63左麻将、69右绿环、81胡萝卜不能掉。48/67还没判手部，83火球分层待做；12v3/31v4/79v3需看。
+- GPU worker约15:10 submitted40余，Qwen20在前，MiniMaxbody近30在后。现无实战测试占8791，所有save已恢复；其他8792–95也空闲。所有19cfg数据在street-body-data.js。
+- tools/street-effects-export-batch.mjs已导出6高频原特效全帧(native.json记录原生frames/fps/aabb/origin)：common_buff_hudun20@24、common_skill_longzhua_0115@24、common_skill_tongyonghuiji9@24、common_skill_huifu28@24、common_skill_qusan19@24、common_skinskill02_jinjishushi_01_232@24。在outputs/street-reskin/effect-reference各folder。多数aabb0，origin256,256，要看输出图是否裁边再用于MiniMax。尚未生成新6特效！最常用禁忌术士命中275次/96样本、护盾203次，优先处理遮挡巨大蓝爆与光球。
+- 原effectpack硬编码hero001单条会覆盖effects表，不能直接拿来批量跑。应新建通用打包器保留existingrecords、读真实native时间和anchors；source参考视频用原导出帧ffmpeg编码到Comfy input，然后MiniMax ref2va模板hero001-cast-minimax-v2。当前模板124帧5秒4steps；可以合理改73/512但必须真实生成审查。新工具还没创建。
+- 额外13已官方生成v2三姿势但未抠图/接入；源路径exec-d921af9b-e80e-47de-a285-99f6369d8fd8.png在generated_images当前session；现有013pose-source-v1被裁头拒绝，不能用。需单独RMBG3cells+生成body73和独立idle73，不能拿attack前9帧循环冒充新idle。不要改变85目标集合。
+- 本heartbeat最终应通知重要v35上传完成，下一次继续到20:00。deadline12UTC，不要提前宣称全替换或零bug；所有move/hit/death和独立skins未完成。Goal保持active。
