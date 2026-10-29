@@ -1,0 +1,41 @@
+{
+  "scope": "15s headless Chrome sample at480x900 on this Windows PC; concurrent audit processes may still run. Not mobile/APK or universal no-stutter validation.",
+  "sampleMs": 15000,
+  "frames": 901,
+  "frameIntervalP50": 16.69999999999891,
+  "frameIntervalP95": 16.799999999999272,
+  "framesOver50ms": 0,
+  "framesOver100ms": 0,
+  "longTasks": [],
+  "heapUsedBytes": 156799378,
+  "body": {
+    "installed": true,
+    "framesPresented": 109,
+    "actions": {
+      "gongji": 51,
+      "jineng": 58
+    },
+    "errors": [],
+    "caches": [
+      {
+        "id": "1",
+        "users": 1,
+        "ready": true
+      }
+    ],
+    "active": [
+      {
+        "model": "hero_001_01_ez",
+        "action": "daiji",
+        "frame": 69,
+        "nativeFrame": 43,
+        "visible": false,
+        "nativeVisible": false,
+        "ready": true,
+        "onStage": true
+      }
+    ]
+  },
+  "errors": [],
+  "failed": []
+}

@@ -1,0 +1,45 @@
+{
+  "pass": false,
+  "checks": [
+    {
+      "model": "hero_071_01",
+      "native": [],
+      "callbacks": [
+        {
+          "elapsedMs": 569.8999999985099,
+          "key": "pia",
+          "nativeFrame": 17,
+          "sourceFrame": 16
+        }
+      ],
+      "authored": [],
+      "expectedMs": 571.6666666666666,
+      "fps": 30
+    },
+    {
+      "model": "hero_071_01_ez",
+      "native": [],
+      "callbacks": [
+        {
+          "elapsedMs": 583.0999999940395,
+          "key": "pia",
+          "nativeFrame": 18,
+          "sourceFrame": 17
+        }
+      ],
+      "authored": [],
+      "expectedMs": 571.6666666666666,
+      "fps": 30
+    }
+  ],
+  "after": {
+    "installed": true,
+    "framesPresented": 72,
+    "actions": {
+      "gongji": 72
+    },
+    "errors": [],
+    "caches": [],
+    "active": []
+  }
+}

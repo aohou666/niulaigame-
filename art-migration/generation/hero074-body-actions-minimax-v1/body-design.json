@@ -1,0 +1,421 @@
+{
+  "heroId": 74,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/074/portrait.png",
+      "prepared": "art-migration/references/body-074/idle.png",
+      "foot": [
+        383.55,
+        700
+      ],
+      "size": [
+        292,
+        560
+      ],
+      "sha256": "9fccb45ae6716d8609c71398e328d74c7178a55a7f5db13b196c19d84a336b77"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero074-attack-v2/hero074_attack_alpha_00001_.png",
+      "prepared": "art-migration/references/body-074/attack.png",
+      "foot": [
+        383.68,
+        700
+      ],
+      "size": [
+        320,
+        560
+      ],
+      "sha256": "bf8ffcc8c3af98aaa3973214fb5ce6bd75da18534673ec2a42e79615e8a1a866"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero074-skill-v2/hero074_skill_alpha_00001_.png",
+      "prepared": "art-migration/references/body-074/skill.png",
+      "foot": [
+        383.85,
+        700
+      ],
+      "size": [
+        265,
+        560
+      ],
+      "sha256": "50cb30bdec7b899be6263a29a98aba7d9d79b88a3f7f5602da154db9904b8650"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H074-ATK",
+        "heroId": 74,
+        "name": "头套牛",
+        "originalName": "黄忠",
+        "slot": "普攻",
+        "skillId": 550740110,
+        "skillName": "普通攻击",
+        "newSkillName": "衔石试投",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "远程弹道/连线",
+        "movement": "原站位出手",
+        "weapon": "徒手／手势",
+        "weaponObservation": "头套造型，无手持武器",
+        "effectClass": "飞行弹道、命中/生效附着特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "收臂蓄力→拳/掌/肘击→回到待机",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B03",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_huangzhong_01",
+        "model": "hero_074_01",
+        "action": "gongji",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1100.0,
+        "fps": 30,
+        "durationFrames": 33,
+        "rawEvents": [
+          {
+            "frame0": 24,
+            "timeMs": 800.0,
+            "type": 10,
+            "name": "zd"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "zd@800.0ms（发射/启动特效）",
+        "impactMs": [
+          1100.0
+        ],
+        "impactStatus": "发射事件＋弹道delay/dt推导；待游戏内验收",
+        "performance": {
+          "effectsPiaEnemy": [
+            {
+              "posType": 0,
+              "src": [
+                "common_skill_huangzhong_02"
+              ]
+            }
+          ],
+          "effectsTarEnemy": [
+            {
+              "dt": 300,
+              "fixedWidth": 150,
+              "offset": [
+                0,
+                -50
+              ],
+              "posType": 0,
+              "src": [
+                "common_skill_huangzhong_01"
+              ],
+              "type": 1
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_huangzhong_01",
+            "delay": 0,
+            "dt": 300,
+            "timeScale": 1,
+            "type": 1,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_huangzhong_01_2be45a57.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_huangzhong_01",
+                  "name": "common_skill_huangzhong_01",
+                  "fps": 30,
+                  "durationFrames": 1,
+                  "durationMs": 33.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_huangzhong_02",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_huangzhong_02_73905074.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_huangzhong_02",
+                  "name": "common_skill_huangzhong_02",
+                  "fps": 30,
+                  "durationFrames": 15,
+                  "durationMs": 500.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_huangzhong_01 delay=0 dt=300 speed=1\neffectsPiaEnemy: common_skill_huangzhong_02 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_huangzhong_01"
+        ],
+        "portrait": "reskin/hero_074.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H074-ULT",
+        "heroId": 74,
+        "name": "头套牛",
+        "originalName": "黄忠",
+        "slot": "大招",
+        "skillId": 550740210,
+        "skillName": "百步穿杨",
+        "newSkillName": "填海远射",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "后排",
+        "delivery": "中场释放（远近待回放）",
+        "movement": "移到场地中部释放",
+        "weapon": "徒手／手势",
+        "weaponObservation": "头套造型，无手持武器",
+        "effectClass": "场景/范围特效",
+        "semantic": "灼烧",
+        "bodyDesign": "收臂蓄力→拳/掌/肘击→回到待机；命中覆盖由独立目标特效控制",
+        "rootPolicy": "引擎移到中场后播出手；视频不自行横穿战场",
+        "batch": "B05",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方后排造成200%伤害,并附加<灼烧>效果,每回合造成50%伤害,持续2回合。",
+        "skillModel": "common_skill_huangzhong_02",
+        "model": "hero_074_01",
+        "action": "jineng",
+        "effectiveDesc": "对敌方后排造成200%伤害,并附加<灼烧>效果,每回合造成50%伤害,持续2回合。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 2066.667,
+        "fps": 30,
+        "durationFrames": 62,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "effectQP": [
+            {
+              "offset": [
+                0,
+                100
+              ],
+              "src": [
+                "common_skill_huangzhong_01_1"
+              ]
+            },
+            {
+              "delay": 500,
+              "offset": [
+                300,
+                100
+              ],
+              "src": [
+                "common_skill_huangzhong_01_2"
+              ]
+            },
+            {
+              "delay": 950,
+              "offset": [
+                250,
+                0
+              ],
+              "src": [
+                "common_skill_huangzhong_01_3"
+              ],
+              "z": 0
+            }
+          ],
+          "meFlyConfig": [
+            1,
+            100,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectQP",
+            "resource": "common_skill_huangzhong_01_1",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_huangzhong_01_1_eb5e6f95.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_huangzhong_01_1",
+                  "name": "common_skill_huangzhong_01_1",
+                  "fps": 24,
+                  "durationFrames": 25,
+                  "durationMs": 1041.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectQP",
+            "resource": "common_skill_huangzhong_01_2",
+            "delay": 500,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_huangzhong_01_2_692c8c79.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_huangzhong_01_2",
+                  "name": "common_skill_huangzhong_01_2",
+                  "fps": 24,
+                  "durationFrames": 30,
+                  "durationMs": 1250.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectQP",
+            "resource": "common_skill_huangzhong_01_3",
+            "delay": 950,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_huangzhong_01_3_7f3e6d4e.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_huangzhong_01_3",
+                  "name": "common_skill_huangzhong_01_3",
+                  "fps": 24,
+                  "durationFrames": 29,
+                  "durationMs": 1208.333,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        9
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 2,
+                      "timeMs": 83.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 3,
+                      "timeMs": 125.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 4,
+                      "timeMs": 166.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 5,
+                      "timeMs": 208.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 6,
+                      "timeMs": 250.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 7,
+                      "timeMs": 291.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 8,
+                      "timeMs": 333.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 9,
+                      "timeMs": 375.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 10,
+                      "timeMs": 416.667,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectQP: common_skill_huangzhong_01_1 delay=0 dt=None speed=1\neffectQP: common_skill_huangzhong_01_2 delay=500 dt=None speed=1\neffectQP: common_skill_huangzhong_01_3 delay=950 dt=None speed=1 事件=pia@83.3,pia@125.0,pia@166.7,pia@208.3,pia@250.0,pia@291.7,pia@333.3,pia@375.0,pia@416.7",
+        "variants": [
+          "common_skill_huangzhong_02"
+        ],
+        "portrait": "reskin/hero_074.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false
+}

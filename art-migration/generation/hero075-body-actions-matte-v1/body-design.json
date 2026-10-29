@@ -1,0 +1,363 @@
+{
+  "heroId": 75,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/075/portrait.png",
+      "prepared": "art-migration/references/body-075/idle.png",
+      "foot": [
+        383.56,
+        700
+      ],
+      "size": [
+        293,
+        560
+      ],
+      "sha256": "6d36f126b3370a0edb05dc7252a6e172d3d154f2ff952c56e8e7ca2d9d150c56"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero075-attack-v2/hero075_attack_alpha_00001_.png",
+      "prepared": "art-migration/references/body-075/attack.png",
+      "foot": [
+        383.66,
+        700
+      ],
+      "size": [
+        358,
+        560
+      ],
+      "sha256": "c91be3e2e08d6132784ae01e565f777aea9e769f0cbaf5aa9e4114e32559535a"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero075-skill-v3/hero075_skill_continuity_alpha_00001_.png",
+      "prepared": "art-migration/references/body-075/skill.png",
+      "foot": [
+        383.64,
+        700
+      ],
+      "size": [
+        304,
+        560
+      ],
+      "sha256": "12e36b3b62c0956936d0c21f49be3c8abd898c2f77d286bcec4187f1f2da9859"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H075-ATK",
+        "heroId": 75,
+        "name": "变异牛",
+        "originalName": "魔张角",
+        "slot": "普攻",
+        "skillId": 550750110,
+        "skillName": "普通攻击",
+        "newSkillName": "异符轻鸣",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "原地远程作用",
+        "movement": "原站位出手",
+        "weapon": "徒手／能量",
+        "weaponObservation": "furry GREEN alien bull, TWO thin antennae with green bulbs, large round green eyes, purple muzzle/hooves; BOTH hands completely EMPTY",
+        "effectClass": "目标位置特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "One simple physical open-hand palm press forward. No object, no energy, no glow, no sun or orb.",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B03",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_zhangjiao_2",
+        "model": "hero_075_03",
+        "action": "gongji",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1200.0,
+        "fps": 30,
+        "durationFrames": 36,
+        "rawEvents": [
+          {
+            "frame0": 17,
+            "timeMs": 566.667,
+            "type": 10,
+            "name": "zd"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "zd@566.7ms（发射/启动特效）",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "__tag": "神张角普攻",
+          "effectsTarEnemy": [
+            {
+              "delay": 0,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 0,
+              "src": [
+                "common_skill_zhangjiao_2"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_zhangjiao_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhangjiao_2_24dd296c.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhangjiao_2",
+                  "name": "common_skill_zhangjiao_2",
+                  "fps": 30,
+                  "durationFrames": 56,
+                  "durationMs": 1866.667,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 33,
+                      "timeMs": 1100.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 34,
+                      "timeMs": 1133.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 35,
+                      "timeMs": 1166.667,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_zhangjiao_2 delay=0 dt=None speed=1 事件=pia@1100.0,pia@1133.3,pia@1166.7",
+        "variants": [
+          "common_skill_zhangjiao_2"
+        ],
+        "portrait": "reskin/hero_075.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H075-ULT",
+        "heroId": 75,
+        "name": "变异牛",
+        "originalName": "魔张角",
+        "slot": "大招",
+        "skillId": 550750210,
+        "skillName": "黄天傀咒",
+        "newSkillName": "赤砂傀阵",
+        "purpose": "召唤／引爆",
+        "targetSide": "召唤物；引爆目标另核",
+        "scope": "召唤物／引爆分支",
+        "delivery": "原地远程作用",
+        "movement": "原站位出手",
+        "weapon": "徒手／能量",
+        "weaponObservation": "furry GREEN alien bull, TWO thin antennae with green bulbs, large round green eyes, purple muzzle/hooves; BOTH hands completely EMPTY",
+        "effectClass": "施法者特效",
+        "semantic": "召唤",
+        "bodyDesign": "Raise both EMPTY open palms gently at chest height, a physical acting gesture only. Absolutely no orb, light, energy, sun, ball, magic, smoke or particle.",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B04",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "召唤一只继承自身属性的<黄巾傀儡>加入战斗（额外继承20%生命）。若场上已有<黄巾傀儡>,则引爆当前傀儡,并召唤新傀儡,新的傀儡提升20%攻击和生命。",
+        "skillModel": "common_skill_zhangjiao_1",
+        "model": "hero_075_03",
+        "action": "jineng",
+        "effectiveDesc": "召唤一只继承自身属性的<黄巾傀儡>加入战斗（额外继承20%生命）。若场上已有<黄巾傀儡>,则引爆当前傀儡,并召唤新傀儡,新的傀儡提升20%攻击和生命。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 2000.0,
+        "fps": 30,
+        "durationFrames": 60,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "__tag": "神张角主动,由于会触发黄巾力士,所以需要由buff控制攻击完成时机",
+          "attackFrameDelay": 500,
+          "effectSrc": [
+            {
+              "delay": 200,
+              "offset": [
+                70,
+                -100
+              ],
+              "posType": 0,
+              "src": [
+                "common_skill_zhangjiao_1_01"
+              ]
+            }
+          ],
+          "customDoneHandle": 1,
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectSrc",
+            "resource": "common_skill_zhangjiao_1_01",
+            "delay": 200,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhangjiao_1_01_cea221b8.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhangjiao_1_01",
+                  "name": "common_skill_zhangjiao_1_01",
+                  "fps": 30,
+                  "durationFrames": 31,
+                  "durationMs": 1033.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectSrc: common_skill_zhangjiao_1_01 delay=200 dt=None speed=1",
+        "variants": [
+          "common_skill_zhangjiao_1"
+        ],
+        "portrait": "reskin/hero_075.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "approved-for-matting",
+  "runtimeIntegrated": false,
+  "sourceBodyJob": "art-migration/generation/hero075-body-actions-minimax-v1",
+  "sourceFrameOrder": [
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00001_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00002_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00003_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00004_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00005_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00006_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00007_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00008_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00009_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00010_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00011_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00012_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00013_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00014_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00015_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00016_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00017_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00018_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00019_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00020_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00021_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00022_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00023_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00024_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00025_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00026_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00027_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00028_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00029_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00030_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00031_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00032_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00033_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00034_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00035_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00036_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00037_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00038_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00039_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00040_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00041_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00042_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00043_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00044_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00045_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00046_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00047_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00048_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00049_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00050_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00051_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00052_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00053_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00054_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00055_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00056_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00057_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00058_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00059_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00060_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00061_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00062_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00063_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00064_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00065_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00066_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00067_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00068_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00069_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00070_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00071_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00072_.png",
+    "art-migration/generation/hero075-body-actions-minimax-v1/hero075_body_00073_.png"
+  ]
+}

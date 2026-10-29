@@ -1,0 +1,330 @@
+{
+  "heroId": 78,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/078/portrait.png",
+      "prepared": "art-migration/references/body-078/idle.png",
+      "foot": [
+        383.73,
+        700
+      ],
+      "size": [
+        320,
+        560
+      ],
+      "sha256": "52dad511955f226cdc8d01a1a2cf16170edd11640de2991ef23d9156231452f3"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero078-attack-v2/hero078_attack_alpha_00001_.png",
+      "prepared": "art-migration/references/body-078/attack.png",
+      "foot": [
+        383.85,
+        700
+      ],
+      "size": [
+        354,
+        560
+      ],
+      "sha256": "7b430f6b1cd394d8131635156d17cc202b6c34cc6f97b8c236f2290ea3f58df8"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero078-skill-v2/hero078_skill_alpha_00001_.png",
+      "prepared": "art-migration/references/body-078/skill.png",
+      "foot": [
+        383.83,
+        700
+      ],
+      "size": [
+        276,
+        560
+      ],
+      "sha256": "4499caa20b7dbf58989355d9c19c1bc3d77a45fd1aa3f634a7e7c1ff32119b81"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H078-ATK",
+        "heroId": 78,
+        "name": "咕咕嘎嘎",
+        "originalName": "神陆逊",
+        "slot": "普攻",
+        "skillId": 550780110,
+        "skillName": "普通攻击",
+        "newSkillName": "夜羽轻鸣",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "原地远程作用",
+        "movement": "原站位出手",
+        "weapon": "徒手／手势",
+        "weaponObservation": "企鹅装角色，无手持武器",
+        "effectClass": "目标位置特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "收臂蓄力→拳/掌/肘击→回到待机",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B03",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成150%伤害。",
+        "skillModel": "common_skill_shenluxun_01",
+        "model": "hero_078_01",
+        "action": "gongji",
+        "effectiveDesc": "对敌方前排单体造成150%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 2000.0,
+        "fps": 30,
+        "durationFrames": 60,
+        "rawEvents": [
+          {
+            "frame0": 26,
+            "timeMs": 866.667,
+            "type": 10,
+            "name": "zd"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "zd@866.7ms（发射/启动特效）",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "__tag": "神陆逊普攻",
+          "effectsTarEnemy": [
+            {
+              "delay": 0,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_shenluxun_01_1"
+              ],
+              "type": 0
+            },
+            {
+              "delay": 0,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_shenluxun_01_2"
+              ],
+              "z": 0,
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_shenluxun_01_1",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_shenluxun_01_1_2aca7353.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_shenluxun_01_1",
+                  "name": "common_skill_shenluxun_01_1",
+                  "fps": 24,
+                  "durationFrames": 28,
+                  "durationMs": 1166.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_shenluxun_01_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_shenluxun_01_2_dec8c17a.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_shenluxun_01_2",
+                  "name": "common_skill_shenluxun_01_2",
+                  "fps": 24,
+                  "durationFrames": 28,
+                  "durationMs": 1166.667,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_shenluxun_01_fz",
+                  "name": "common_skill_shenluxun_01_fz",
+                  "fps": 24,
+                  "durationFrames": 30,
+                  "durationMs": 1250.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_shenluxun_01_1 delay=0 dt=None speed=1\neffectsTarEnemy: common_skill_shenluxun_01_2 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_shenluxun_01"
+        ],
+        "portrait": "reskin/hero_078.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H078-ULT",
+        "heroId": 78,
+        "name": "咕咕嘎嘎",
+        "originalName": "神陆逊",
+        "slot": "大招",
+        "skillId": 550690210,
+        "skillName": "铁口直言",
+        "newSkillName": "夜羽直言",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "原地远程作用",
+        "movement": "原站位出手",
+        "weapon": "徒手／手势",
+        "weaponObservation": "企鹅装角色，无手持武器",
+        "effectClass": "目标位置特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "收臂蓄力→拳/掌/肘击→回到待机",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B08",
+        "status": "需复核：原包共用田丰大招表现/技能；保留实际配置，角色专属设计待核定",
+        "reviewReasons": [
+          "原包共用田丰大招表现/技能；保留实际配置，角色专属设计待核定"
+        ],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_tianfeng_02",
+        "model": "hero_078_01",
+        "action": "jineng",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 2533.333,
+        "fps": 30,
+        "durationFrames": 76,
+        "rawEvents": [
+          {
+            "frame0": 32,
+            "timeMs": 1066.667,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@1066.7ms（角色事件）",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "effectsTarEnemy": [
+            {
+              "delay": 500,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_tianfeng_02"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_tianfeng_02",
+            "delay": 500,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_tianfeng_02_24d07109.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_tianfeng_02",
+                  "name": "common_skill_tianfeng_02",
+                  "fps": 24,
+                  "durationFrames": 40,
+                  "durationMs": 1666.667,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        1
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 7,
+                      "timeMs": 291.667,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_tianfeng_02 delay=500 dt=None speed=1 事件=pia@291.7",
+        "variants": [
+          "common_skill_tianfeng_02"
+        ],
+        "portrait": "reskin/hero_078.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false
+}
