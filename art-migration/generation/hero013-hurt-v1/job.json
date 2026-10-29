@@ -1,0 +1,54 @@
+{
+  "promptId": "6ea26f02-36b9-44b8-bbd4-b51a3768e69d",
+  "submittedUtc": "2026-10-29T10:18:48Z",
+  "status": "generated-unreviewed",
+  "provider": "local-comfyui",
+  "workflowSha256": "c6e28bff585ef3a713f0f87c8838ddf168389f39339a098c634c497aa84c88d8",
+  "response": {
+    "prompt_id": "6ea26f02-36b9-44b8-bbd4-b51a3768e69d",
+    "number": 593,
+    "node_errors": {}
+  },
+  "comfyStatus": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "6ea26f02-36b9-44b8-bbd4-b51a3768e69d",
+          "timestamp": 1793269334237
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "1",
+            "2",
+            "3"
+          ],
+          "prompt_id": "6ea26f02-36b9-44b8-bbd4-b51a3768e69d",
+          "timestamp": 1793269334275
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "6ea26f02-36b9-44b8-bbd4-b51a3768e69d",
+          "timestamp": 1793269384060
+        }
+      ]
+    ]
+  },
+  "outputs": [
+    {
+      "path": "art-migration/generation/hero013-hurt-v1/qwen_00232_.png",
+      "sha256": "61b822ee0362769a155877f104c90c5f1a80a4f2847ab2ba100d5b34e50fe465"
+    },
+    {
+      "path": "art-migration/generation/hero013-hurt-v1/hero013_hurt_alpha_00001_.png",
+      "sha256": "e6cd22061a6dbcbed856f5a174cb0a7b424a43c1b37fd8e09c78881465286d6a"
+    }
+  ]
+}

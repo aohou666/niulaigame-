@@ -1,0 +1,44 @@
+{
+  "heroId": 13,
+  "motionSegments": {
+    "shouji": [
+      0,
+      72
+    ]
+  },
+  "inputs": {
+    "idle": {
+      "prepared": "art-migration/references/motion-013/idle.png",
+      "size": [
+        329,
+        560
+      ]
+    },
+    "hurt": {
+      "source": "art-migration/generation/hero013-hurt-v1/hero013_hurt_alpha_00001_.png",
+      "prepared": "art-migration/references/motion-013/hurt.png"
+    }
+  },
+  "bodyHeight": 373.3333333333333,
+  "root": [
+    256,
+    466.7
+  ],
+  "guideSchedule": [
+    [
+      24,
+      "hurt"
+    ],
+    [
+      36,
+      "hurt"
+    ],
+    [
+      72,
+      "idle"
+    ]
+  ],
+  "prompt": "One73-frame fixed-camera production sprite clip at24fps of EXACT reference identity: yellow safety marshal in white hardhat/orange vest/navy workwear/pale gloves/brown boots, red radio ALWAYS in RIGHT hand, LEFT hand empty. Same face, body size, clothing, colors, persistent props and hand assignment. Pure black background, full horns/hands/feet remain within safe central75percent canvas. No camera movement, no scene, no other person, no attack, no outgoing punch, no VFX, flash, shock lines, light, smoke or newly invented item. Stable foot/root ground line and scale. Natural physical body animation, tactile2.5D semi-realistic semi-cartoon absurd neighborhood game. Frames0-12 original idle. Frames13-36 ONE startled protective flinch: knees soften, torso leans back slightly, LEFT palm guards chest while RIGHT hand keeps radio at hip, reaching supplied hurt guide24-36. Frames37-72 smoothly recover to EXACT original idle. One recoil only, no walking, no repeated shaking.",
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false
+}

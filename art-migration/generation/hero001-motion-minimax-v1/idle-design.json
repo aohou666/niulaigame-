@@ -1,0 +1,48 @@
+{
+  "heroId": 1,
+  "motionSegments": {
+    "paobu": [
+      0,
+      35
+    ],
+    "shouji": [
+      36,
+      72
+    ]
+  },
+  "inputs": {
+    "idle": {
+      "prepared": "art-migration/references/motion-001/idle.png",
+      "size": [
+        334,
+        620
+      ]
+    },
+    "hurt": {
+      "source": "art-migration/generation/hero001-hurt-v2/hero001_hurt_alpha_00002_.png",
+      "prepared": "art-migration/references/motion-001/hurt.png"
+    }
+  },
+  "bodyHeight": 413.3,
+  "root": [
+    256,
+    466.7
+  ],
+  "guideSchedule": [
+    [
+      35,
+      "idle"
+    ],
+    [
+      54,
+      "hurt"
+    ],
+    [
+      72,
+      "idle"
+    ]
+  ],
+  "prompt": "One73-frame fixed-camera production sprite clip at24fps of EXACT reference identity: golden bull with swept blond hair, black horns, purple muzzle, navy suit, white shirt and red tie; empty hands and no attached objects. Same face, body size, clothing, colors, persistent props and hand assignment. Pure black background, full horns/hands/feet remain within safe central75percent canvas. No camera movement, no scene, no other person, no attack, no outgoing punch, no VFX, flash, shock lines, light, smoke or newly invented item. Stable foot/root ground line and scale. Natural physical body animation, tactile2.5D semi-realistic semi-cartoon absurd neighborhood game. Frames0-35 ONE COMPLETE in-place two-foot RUNNING CYCLE: LEFT knee/foot lifts and plants, then RIGHT knee/foot lifts and plants, hips/shoulders counter-swing naturally. Root remains at same canvas position; do not slide or travel across frame. Both distinct feet must step, no static idle or one-leg bouncing. Return to starting idle at35 for a clean loop. Frames36-54 ONE startled protective recoil: torso leans backward, knees bend, hands come toward chest as supplied hurt guide at54. Frames55-72 recover to EXACT original idle. No second flinch, no punch.",
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false
+}

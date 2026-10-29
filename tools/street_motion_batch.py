@@ -1,0 +1,26 @@
+"""Generate real independent locomotion/recoil clips from reviewed identity and hurt guides."""
+import argparse,hashlib,json,shutil
+from PIL import Image
+from street_comfy import ROOT,COMFY,submit
+parser=argparse.ArgumentParser();parser.add_argument('ids',nargs='+',type=int);args=parser.parse_args()
+base=ROOT/'art-migration/generation';data=json.loads((ROOT/'local_game/street-body-data.js').read_text('utf8').split('=',1)[1].strip().rstrip(';'))
+template=json.loads((base/'hero001-body-actions-minimax-v3-fastdecode/workflow.json').read_text('utf8'))
+for hid in args.ids:
+ name=f'hero{hid:03}-motion-minimax-v1'
+ if (base/name).exists():continue
+ cfg=next(c for c in data['characters'] if c['id']==hid);original=json.loads((ROOT/cfg['source']/'body-design.json').read_text('utf8'));idleSource=ROOT/original['inputs']['idle']['prepared'];guideFolder=base/f'hero{hid:03}-hurt-v{1 if hid==13 else 2}';q=json.loads((guideFolder/'qa.json').read_text('utf8'));assert q['manualReview']=='approved';guide=ROOT/q['image'];out=ROOT/f'art-migration/references/motion-{hid:03}';out.mkdir(exist_ok=True)
+ idle=out/'idle.png';shutil.copyfile(idleSource,idle);targetHeight=cfg['bodyHeight']*768/512
+ im=Image.open(guide).convert('RGBA');im=im.crop(im.getchannel('A').point(lambda a:255 if a>16 else 0).getbbox());scale=min(targetHeight/im.height,620/im.width);im=im.resize((round(im.width*scale),round(im.height*scale)),Image.Resampling.LANCZOS);foot=im.getchannel('A').crop((0,int(im.height*.88),im.width,im.height));pixels=list(foot.getdata());anchor=sum((i%im.width)*v for i,v in enumerate(pixels))/max(1,sum(pixels));x=round(384-anchor);canvas=Image.new('RGBA',(768,768));canvas.alpha_composite(im,(x,700-im.height));hurt=out/'hurt.png';canvas.save(hurt)
+ files={}
+ for kind,path in [('idle',idle),('hurt',hurt)]:
+  filename=f'street_motion_{hid:03}_{kind}.png';shutil.copyfile(path,COMFY/'input'/filename);files[kind]=filename
+ identity={1:'golden bull with swept blond hair, black horns, purple muzzle, navy suit, white shirt and red tie; empty hands and no attached objects',5:'round white bull with exact black coat patches, black horns, pink muzzle/hooves and empty hands; no tools or attached objects',13:'yellow safety marshal in white hardhat/orange vest/navy workwear/pale gloves/brown boots, red radio ALWAYS in RIGHT hand, LEFT hand empty'}[hid]
+ common=f'One73-frame fixed-camera production sprite clip at24fps of EXACT reference identity: {identity}. Same face, body size, clothing, colors, persistent props and hand assignment. Pure black background, full horns/hands/feet remain within safe central75percent canvas. No camera movement, no scene, no other person, no attack, no outgoing punch, no VFX, flash, shock lines, light, smoke or newly invented item. Stable foot/root ground line and scale. Natural physical body animation, tactile2.5D semi-realistic semi-cartoon absurd neighborhood game.'
+ if hid==13:
+  prompt=common+' Frames0-12 original idle. Frames13-36 ONE startled protective flinch: knees soften, torso leans back slightly, LEFT palm guards chest while RIGHT hand keeps radio at hip, reaching supplied hurt guide24-36. Frames37-72 smoothly recover to EXACT original idle. One recoil only, no walking, no repeated shaking.';schedule=[(24,'hurt'),(36,'hurt'),(72,'idle')];segments={'shouji':[0,72]}
+ else:
+  prompt=common+' Frames0-35 ONE COMPLETE in-place two-foot RUNNING CYCLE: LEFT knee/foot lifts and plants, then RIGHT knee/foot lifts and plants, hips/shoulders counter-swing naturally. Root remains at same canvas position; do not slide or travel across frame. Both distinct feet must step, no static idle or one-leg bouncing. Return to starting idle at35 for a clean loop. Frames36-54 ONE startled protective recoil: torso leans backward, knees bend, hands come toward chest as supplied hurt guide at54. Frames55-72 recover to EXACT original idle. No second flinch, no punch.';schedule=[(35,'idle'),(54,'hurt'),(72,'idle')];segments={'paobu':[0,35],'shouji':[36,72]}
+ g=json.loads(json.dumps(template));g['4']['inputs']['image']=files['idle'];g['5']['inputs']['image']=files['hurt'];g['6']['inputs']['image']=files['idle'];g['7']['inputs']['prompt']=prompt;g['7']['inputs']['first_frame']=['4',0];g['7']['inputs']['last_frame']=['4',0]
+ for node,prior,(frame,kind) in zip(['8','9','10'],['7','8','9'],schedule):g[node]={'class_type':'MiniMaxH3AddGuide','inputs':{'positive':[prior,0],'latent':['7',1],'frame_idx':frame,'vae':['3',0],'image':['5' if kind=='hurt' else '4',0]}}
+ g['13']['inputs']['conditioning']=['10',0];g['14']['inputs']['noise_seed']=202610294300+hid;g['18']['inputs']['filename_prefix']=f'street-reskin/hero{hid:03}_motion';g['20']['inputs']['filename_prefix']=f'street-reskin/hero{hid:03}_motion_video'
+ folder=submit(g,name,front=False);(folder/'idle-design.json').write_text(json.dumps({'heroId':hid,'motionSegments':segments,'inputs':{'idle':{'prepared':idle.relative_to(ROOT).as_posix(),'size':original['inputs']['idle']['size']},'hurt':{'source':guide.relative_to(ROOT).as_posix(),'prepared':hurt.relative_to(ROOT).as_posix()}},'bodyHeight':cfg['bodyHeight'],'root':[256,466.7],'guideSchedule':schedule,'prompt':prompt,'manualVideoReview':'pending','runtimeIntegrated':False},indent=2)+'\n','utf8')

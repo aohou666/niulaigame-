@@ -1,0 +1,133 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "prompt": "Create ONE full-body physical HURT/RECOIL guide pose of EXACT reference character: round WHITE bull with exact BLACK patches, short black hair, black horns and pink muzzle/hooves, empty hands. Same species, face, clothing colors, proportions, horns, all persistent props and hand assignment. Keep mostly front-facing with slight right-facing three-quarter orientation. A modest startled flinch: torso leans BACK slightly, shoulders recoil, knees bend, chin tucked, hands protect chest; no attack or outgoing punch. Both feet stay on the same ground line, no jump or dramatic twist. Both hands are EMPTY and NO objects, radios, bags, tools or belt attachments may be added anywhere. Preserve all items, no doubled arms. Full head/horns/hands/feet inside large safe margins. Tactile2.5D semi-realistic semi-cartoon absurd neighborhood game illustration, same soft light and material palette. Plain white background, no environment, no target, no wounds, no blood, no VFX, no flash, no shock lines, no text.",
+      "negative_prompt": "blurry, cropped body, duplicate character, watermark, unreadable text, medieval armor, ancient Chinese costume",
+      "resolution": 768,
+      "images.image_1": [
+        "8",
+        0
+      ]
+    }
+  },
+  "5": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "seed": 202610294505,
+      "steps": 28,
+      "cfg": 4,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "4",
+        1
+      ],
+      "latent_image": [
+        "4",
+        2
+      ],
+      "denoise": 1
+    }
+  },
+  "6": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "5",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "7": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "6",
+        0
+      ],
+      "filename_prefix": "street-reskin/qwen"
+    }
+  },
+  "8": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "street_854e8f401b6d7896.png"
+    }
+  },
+  "11": {
+    "class_type": "SplitImageWithAlpha",
+    "inputs": {
+      "image": [
+        "6",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "easy imageRemBg",
+    "inputs": {
+      "images": [
+        "11",
+        0
+      ],
+      "rem_mode": "RMBG-1.4",
+      "image_output": "Hide",
+      "save_prefix": "street-reskin/matte",
+      "add_background": "none",
+      "torchscript_jit": false,
+      "refine_foreground": false
+    }
+  },
+  "10": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "9",
+        0
+      ],
+      "filename_prefix": "street-reskin/hero005_hurt_alpha"
+    }
+  }
+}

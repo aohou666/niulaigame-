@@ -3,7 +3,7 @@ const require=createRequire(import.meta.url),{chromium}=require('C:/Users/dongdo
 const version=process.argv.find(v=>v.startsWith('--version='))?.slice(10)||'0.28.0',ids=process.argv.filter(v=>/^\d+$/.test(v)).map(Number);await fs.mkdir('art-migration/versions/'+version,{recursive:true});await fs.mkdir('outputs/street-reskin/body-roster',{recursive:true});
 const browser=await chromium.launch({channel:'chrome',headless:true});
 try{
- const page=await browser.newPage({viewport:{width:480,height:900}}),errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('http://127.0.0.1:8787/index_bh_lite3zbtest_andr.html?mode=heroes');await page.waitForFunction(()=>window.StreetBody?.snapshot().installed);
+ const page=await browser.newPage({viewport:{width:480,height:900}}),errors=[];page.on('pageerror',e=>{errors.push({message:e.message,stack:e.stack});console.log(JSON.stringify({pageError:e.message,stack:e.stack}));});await page.goto('http://127.0.0.1:8787/index_bh_lite3zbtest_andr.html?mode=heroes');await page.waitForFunction(()=>window.StreetBody?.snapshot().installed);
  const configs=await page.evaluate(ids=>StreetBodyData.characters.filter(c=>!ids.length||ids.includes(c.id)),ids),reports=[];if(ids.length)assert.deepEqual(configs.map(c=>c.id).sort((a,b)=>a-b),[...new Set(ids)].sort((a,b)=>a-b),'Every requested hero must be integrated before runtime verification');
  for(const cfg of configs){
   await page.evaluate(async cfg=>{
@@ -23,7 +23,7 @@ try{
   await fs.writeFile(`outputs/street-reskin/body-roster/hero${cfg.id}.png`,Buffer.from(frames.screenshot,'base64'));
   const timing=await page.evaluate(async cfg=>{
    const {container,players}=window.__bodyRoster,events=[];
-   for(const p of players)for(const action of ['gongji','jineng','gongji']){
+   for(const p of players)for(const action of ['gongji','jineng',...Object.keys(cfg.actions).filter(a=>!['gongji','jineng','daiji'].includes(a)),'gongji']){
     const seq=cfg.modelActionOverrides?.[p._dbName]?.[action]||cfg.actions[action],expected=seq.frameMap.length/seq.fps*1000,native=[];let calls=0;const start=performance.now(),listener=e=>native.push({name:e.eventObject.name,elapsedMs:performance.now()-start});p._armature.addEventListener(dragonBones.EventObject.FRAME_EVENT,listener,null);
     await new Promise((resolve,reject)=>{const timeout=setTimeout(()=>reject(Error('completion timeout '+p._dbName+' '+action)),expected+2000);p.trigger(action,()=>{calls++;clearTimeout(timeout);resolve();},1);});p._armature.removeEventListener(dragonBones.EventObject.FRAME_EVENT,listener,null);events.push({model:p._dbName,action,expected,calls,elapsedMs:performance.now()-start,native,expectedEvents:seq.nativeEvents||[],fps:seq.fps});
    }
@@ -34,5 +34,5 @@ try{
   assert(timing.idle.every(r=>cfg.actions.daiji?r.body&&!r.native:!r.body&&!r.native&&r.idle));assert(timing.shared.sameCache&&timing.shared.users===2);assert.equal(timing.after.caches.length,0);assert.equal(timing.after.errors.length,0);
   const report={hero:cfg.id,pass:true,frameChecks:frames.checks.length,clocks:frames.clocks,timing};reports.push(report);console.log(JSON.stringify({hero:cfg.id,pass:true,frameChecks:report.frameChecks}));
  }
- assert.equal(errors.length,0);await fs.writeFile('art-migration/versions/'+version+'/body-roster.json',JSON.stringify({pass:true,errors,reports},null,2));
+ await fs.writeFile('art-migration/versions/'+version+'/body-roster.json',JSON.stringify({pass:errors.length===0,errors,reports},null,2));assert.equal(errors.length,0);
 }finally{await browser.close();}

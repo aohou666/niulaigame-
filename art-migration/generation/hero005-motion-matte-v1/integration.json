@@ -1,0 +1,22 @@
+{
+  "status": "runtime-verified",
+  "heroId": 5,
+  "version": "0.43.0",
+  "sourceOffset": 73,
+  "sourceFrames": 73,
+  "actions": [
+    "paobu",
+    "shouji"
+  ],
+  "crop": [
+    114,
+    120,
+    390,
+    483
+  ],
+  "nativeClocksRetained": true,
+  "atlasSha256": "f4cda981ea0752431880228794135e3f5ab40b9fa8ae32835da8e7dd980d01bc",
+  "evidence": "art-migration/versions/0.43.0/body-roster.json",
+  "visualEvidence": "art-migration/versions/0.43.0/motion-runtime.json",
+  "battleMotionCoverage": "Run/hurt not observed in sampled battle; actual native DBPlayer timing/frame selection verified separately."
+}

@@ -1,0 +1,120 @@
+{
+  "heroId": 13,
+  "motionSegments": {
+    "shouji": [
+      0,
+      72
+    ]
+  },
+  "inputs": {
+    "idle": {
+      "prepared": "art-migration/references/motion-013/idle.png",
+      "size": [
+        329,
+        560
+      ]
+    },
+    "hurt": {
+      "source": "art-migration/generation/hero013-hurt-v1/hero013_hurt_alpha_00001_.png",
+      "prepared": "art-migration/references/motion-013/hurt.png"
+    }
+  },
+  "bodyHeight": 373.3333333333333,
+  "root": [
+    256,
+    466.7
+  ],
+  "guideSchedule": [
+    [
+      24,
+      "hurt"
+    ],
+    [
+      36,
+      "hurt"
+    ],
+    [
+      72,
+      "idle"
+    ]
+  ],
+  "prompt": "One73-frame fixed-camera production sprite clip at24fps of EXACT reference identity: yellow safety marshal in white hardhat/orange vest/navy workwear/pale gloves/brown boots, red radio ALWAYS in RIGHT hand, LEFT hand empty. Same face, body size, clothing, colors, persistent props and hand assignment. Pure black background, full horns/hands/feet remain within safe central75percent canvas. No camera movement, no scene, no other person, no attack, no outgoing punch, no VFX, flash, shock lines, light, smoke or newly invented item. Stable foot/root ground line and scale. Natural physical body animation, tactile2.5D semi-realistic semi-cartoon absurd neighborhood game. Frames0-12 original idle. Frames13-36 ONE startled protective flinch: knees soften, torso leans back slightly, LEFT palm guards chest while RIGHT hand keeps radio at hip, reaching supplied hurt guide24-36. Frames37-72 smoothly recover to EXACT original idle. One recoil only, no walking, no repeated shaking.",
+  "manualVideoReview": "approved-for-matting",
+  "runtimeIntegrated": false,
+  "sourceBodyJob": "art-migration/generation/hero013-motion-minimax-v1",
+  "sourceFrameOrder": [
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00001_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00002_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00003_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00004_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00005_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00006_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00007_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00008_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00009_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00010_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00011_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00012_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00013_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00014_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00015_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00016_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00017_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00018_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00019_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00020_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00021_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00022_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00023_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00024_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00025_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00026_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00027_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00028_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00029_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00030_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00031_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00032_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00033_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00034_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00035_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00036_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00037_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00038_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00039_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00040_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00041_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00042_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00043_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00044_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00045_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00046_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00047_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00048_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00049_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00050_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00051_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00052_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00053_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00054_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00055_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00056_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00057_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00058_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00059_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00060_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00061_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00062_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00063_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00064_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00065_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00066_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00067_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00068_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00069_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00070_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00071_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00072_.png",
+    "art-migration/generation/hero013-motion-minimax-v1/hero013_motion_00073_.png"
+  ]
+}
