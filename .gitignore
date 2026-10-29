@@ -56,4 +56,12 @@ Thumbs.db
 /workbenches/**/*.7z
 /workbenches/**/runtime/
 
+# Original full-resolution animation frames are included in release asset packs.
+/local_game/assets/character_idle/
+/migration-packages.zip
+/recovered_runtime/android_decompiled/
+# Raw model outputs stay local until reviewed and promoted into game assets.
+/art-migration/generation/**/*.png
+/art-migration/generation/**/history.json
+
 

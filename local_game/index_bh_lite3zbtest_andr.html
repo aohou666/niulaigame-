@@ -47,6 +47,13 @@
 </div>
 
 <script src="offline-ui.js"></script>
+<script src="character-reskin-data.js"></script>
+<script src="character-art-data.js?v=20261029-21"></script>
+<script src="character-art.js?v=20261029-21"></script>
+<script src="character-reskin.js?v=20261022-bag3"></script>
+<script src="character-idle-data.js?v=20261021-clean2"></script>
+<script src="character-idle.js?v=20261022-bag3"></script>
+<script src="character-regression.js?v=20261022-1"></script>
 <script>
     var now = Date.now();
     var manifestJson = {};
@@ -419,6 +426,7 @@
                         });
                         RES._offlineAliasPatched = true;
                     }
+                    if (window.CharacterReskin) window.CharacterReskin.apply();
                     var offlineSave;
                     offlineSave = loadOfflineSaveData();
                     if (!offlineSave || !offlineSave.summoner || !offlineSave.player || !offlineSave.heroes || !offlineSave.formation) {
@@ -617,6 +625,29 @@
                             offlineSave.heroTestRecordsRemovedV5 = true;
                             console.log("[OFFLINE] test-only hero records removed", offlineSave.heroes.length);
                         }
+                        // Include every canonical material mapping, including variants that
+                        // the legacy portrait-only roster migration deliberately excluded.
+                        var canonicalIds = Object.keys(CharacterIdleData.heroes).map(Number).concat([13]);
+                        var ownedCanonical = {}, canonicalAdded = [], canonicalMissing = [];
+                        offlineSave.heroes.forEach(function(hero){var row=config.HeroLO.Get(hero.code);if(row)ownedCanonical[row.subType]=true;});
+                        canonicalIds.forEach(function(id){
+                            var variants = Object.keys(config.HeroLO.Store).map(function(key){return config.HeroLO.Get(Number(key));}).filter(function(row){return row&&Number(row.subType)===id&&Math.floor(Number(row.code)/100000)===410;});
+                            variants.sort(function(a,b){var artA=a.halfPic&&RES.hasRes(a.halfPic+'_png')?1:0,artB=b.halfPic&&RES.hasRes(b.halfPic+'_png')?1:0;return artB-artA||(Number(a.initStar)||99)-(Number(b.initStar)||99)||Number(a.code)-Number(b.code);});
+                            var cfg=variants[0],material=CharacterIdleData.heroes[id];
+                            if(!cfg){canonicalMissing.push(id);return;}
+                            if(material)variants.forEach(function(row){
+                                if(!row.halfPic||!RES.hasRes(row.halfPic+'_png')){
+                                    var key='canonical_half_'+id+'_png';
+                                    RES.config.addResourceData({name:key,url:encodeURI(material.baseUrl+material.files[0]),type:'image',root:''});
+                                    row.halfPic='canonical_half_'+id;
+                                }
+                            });
+                            if(ownedCanonical[id])return;
+                            offlineSave.heroes.push({uuid:'offline-canonical-'+id,code:cfg.code,level:50,exp:0,pos:0,raceType:cfg.race||0,skillList:[],sectionLevel:0,awakenLevel:0,attr:'{}',fightCap:20000,resonate:[],artifactResonate:[],resonateLevelList:[],isLocked:false,num:1,starLevel:cfg.initStar||1});
+                            ownedCanonical[id]=true;canonicalAdded.push(id);
+                        });
+                        window.CharacterRosterAudit={expected:canonicalIds.length,owned:canonicalIds.filter(function(id){return ownedCanonical[id];}).length,added:canonicalAdded,missing:canonicalMissing};
+                        if(canonicalAdded.length){offlineSave.canonicalIdleRosterV1=true;persistOfflineSaveData(offlineSave);}
                         offlineSave.heroes.forEach(function (hero) {
                             var cfg = config.HeroLO.Get(hero.code);
                             // HeroBagView uses num - 1 as the number of duplicate
@@ -1607,7 +1638,21 @@
                     if (Utils.Socket && !Utils.Socket._offlineTrainRpcPatched) {
                         var originalOfflineSocketSend = Utils.Socket.send.bind(Utils.Socket);
                         Utils.Socket.send = function (module, action, data) {
+                            if (module === "worldEmpires" && action === "GetWorldEmpiresCurDt") {
+                                // The offline world is available for the current local day.
+                                // Sending this to the disabled server rejected with undefined,
+                                // leaving SLG open-info uninitialized on every hero view.
+                                var localDay = new Date(); localDay.setHours(0, 0, 0, 0);
+                                var nextDay = new Date(localDay.getTime()); nextDay.setDate(nextDay.getDate() + 1);
+                                return Promise.resolve({ err: 0, startDt: Math.floor(localDay.getTime() / 1000), endDt: Math.floor(nextDay.getTime() / 1000) });
+                            }
+                            if (module === "guildDefence" && action === "GetGuildDefenceInfo") {
+                                var defenceState = offlineSave.guildDefence || { code: 0, stageInfos: [] };
+                                return Promise.resolve({ err: 0, playerInfo: { code: Number(defenceState.code) || 0 }, stageInfos: defenceState.stageInfos || [] });
+                            }
                             if (!offlineTrainRpcModules[module]) {
+                                window.OfflineMissingRpcAudit = window.OfflineMissingRpcAudit || [];
+                                if (window.OfflineMissingRpcAudit.length < 100) window.OfflineMissingRpcAudit.push({ module: module, action: action, stack: new Error().stack });
                                 return originalOfflineSocketSend(module, action, data);
                             }
                             return fetch("/api/train-rpc", {
@@ -2031,136 +2076,7 @@
                         if (game.GameMVC.raceTowerProxy) game.GameMVC.raceTowerProxy.GetRaceTowerInfo(0);
                         if (game.GameMVC.worldKingPy) game.GameMVC.worldKingPy.GetWorldKingInfo();
                     }
-                    // Test adapter for the six supplied transparent PNG idle sequences.
-                    // Bind by hero subtype instead of model name so the existing
-                    // 魔貂蝉 / 魔曹操 model swap does not swap their new idle art.
-                    var offlineIdleFrameSets = {
-                        77: { name: "baize_阿伟", frames: 4, width: 206 },
-                        75: { name: "bifang_戾墟咆主", frames: 3, width: 197 },
-                        82: { name: "cangyuan_肘击牛", frames: 4, width: 195 },
-                        79: { name: "changli_鸽鸽", frames: 3, width: 163 },
-                        76: { name: "changqin_奶蛙", frames: 3, width: 225 },
-                        94: { name: "chimei_牛新娘", frames: 4, width: 246 }
-                    };
-                    Object.keys(offlineIdleFrameSets).forEach(function (subtype) {
-                        var config = offlineIdleFrameSets[subtype];
-                        config.urls = [];
-                        for (var frameIndex = 0; frameIndex < config.frames; frameIndex++) {
-                            config.urls.push("assets/custom_idle/hero_" + subtype + "/frame_" + (frameIndex < 10 ? "0" : "") + frameIndex + ".png");
-                        }
-                    });
-                    if (customui.HeroDynamicModel && !customui.HeroDynamicModel.prototype._offlineFrameIdlePatched) {
-                        var heroDynamicProto = customui.HeroDynamicModel.prototype;
-                        var originalHeroDynamicUpdate = heroDynamicProto.update;
-                        var originalHeroDynamicReset = heroDynamicProto.reset;
-                        var modelSubtypeFallback = {
-                            hero_077_03: 77,
-                            hero_075_03: 75,
-                            hero_094_03: 82,
-                            hero_079_03: 79,
-                            hero_076_03: 76,
-                            hero_082_03: 94
-                        };
-                        function getOfflineIdleSubtype(view) {
-                            var data = view && view.data;
-                            var code = Number(data && data.code);
-                            if (!isFinite(code) || !code) code = Number(data && data.info && data.info.code);
-                            if (!isFinite(code)) code = 0;
-                            var tailSubtype = code ? code % 1000 : 0;
-                            if (offlineIdleFrameSets[tailSubtype]) return tailSubtype;
-                            var legacySubtype = code ? Math.floor(code / 100) % 1000 : 0;
-                            if (offlineIdleFrameSets[legacySubtype]) return legacySubtype;
-                            var rawModel = data && data.model;
-                            if (rawModel && typeof rawModel === "object") rawModel = rawModel.model || rawModel.name || "";
-                            var model = String(rawModel || "").replace(/_ez$/, "");
-                            return modelSubtypeFallback[model] || 0;
-                        }
-                        function restoreOfflineIdleModel(view) {
-                            if (!view || !view.getModel) return;
-                            var model = view.getModel();
-                            if (model) model.visible = true;
-                        }
-                        function cleanupOfflineIdle(view) {
-                            var state = view && view._offlineIdleFrameState;
-                            if (!state) return;
-                            view.removeEventListener(egret.Event.ENTER_FRAME, state.onFrame, view);
-                            restoreOfflineIdleModel(view);
-                            if (state.bitmap && state.bitmap.parent === view) view.removeChild(state.bitmap);
-                            view._offlineIdleFrameState = null;
-                        }
-                        function ensureOfflineIdle(view) {
-                            var subtype = getOfflineIdleSubtype(view);
-                            var config = offlineIdleFrameSets[subtype];
-                            var oldState = view._offlineIdleFrameState;
-                            if (!config) {
-                                if (oldState) cleanupOfflineIdle(view);
-                                return;
-                            }
-                            if (oldState && oldState.subtype === subtype) return;
-                            if (oldState) cleanupOfflineIdle(view);
-                            var bitmap = new egret.Bitmap();
-                            bitmap.name = "offlineCustomIdle";
-                            bitmap.touchEnabled = false;
-                            bitmap.visible = false;
-                            bitmap.x = 0;
-                            bitmap.y = 0;
-                            view.addChild(bitmap);
-                            var state = {
-                                subtype: subtype,
-                                bitmap: bitmap,
-                                textures: [],
-                                frame: 0,
-                                lastFrameAt: egret.getTimer(),
-                                interval: 180,
-                                onFrame: null
-                            };
-                            state.onFrame = function () {
-                                if (view._offlineIdleFrameState !== state) return;
-                                var model = view.getModel && view.getModel();
-                                var action = model && (model.action || model.lastAction || model._action) || view._action;
-                                var idleAction = typeof ROLE_ACTION_NAME !== "undefined" && ROLE_ACTION_NAME.DJ || "daiji";
-                                var isIdle = action === idleAction || action === "daiji";
-                                if (!isIdle || !state.textures[0]) {
-                                    bitmap.visible = false;
-                                    if (model) model.visible = true;
-                                    return;
-                                }
-                                if (model) model.visible = false;
-                                bitmap.visible = true;
-                                var now = egret.getTimer();
-                                if (now - state.lastFrameAt >= state.interval) {
-                                    state.frame = (state.frame + 1) % config.frames;
-                                    state.lastFrameAt = now;
-                                }
-                                var texture = state.textures[state.frame] || state.textures[0];
-                                if (texture && bitmap.texture !== texture) {
-                                    bitmap.texture = texture;
-                                    bitmap.anchorOffsetX = (texture.textureWidth || config.width) / 2;
-                                    bitmap.anchorOffsetY = texture.textureHeight || 300;
-                                }
-                            };
-                            view._offlineIdleFrameState = state;
-                            view.addEventListener(egret.Event.ENTER_FRAME, state.onFrame, view);
-                            config.urls.forEach(function (url, index) {
-                                RES.getResByUrl(url, function (texture) {
-                                    if (view._offlineIdleFrameState !== state || !texture) return;
-                                    state.textures[index] = texture;
-                                    state.onFrame();
-                                }, view, RES.ResourceItem.TYPE_IMAGE);
-                            });
-                            console.log("[OFFLINE][FRAME-IDLE] attached", subtype, config.name);
-                        }
-                        heroDynamicProto.update = function () {
-                            var result = originalHeroDynamicUpdate.apply(this, arguments);
-                            ensureOfflineIdle(this);
-                            return result;
-                        };
-                        heroDynamicProto.reset = function () {
-                            cleanupOfflineIdle(this);
-                            return originalHeroDynamicReset.apply(this, arguments);
-                        };
-                        heroDynamicProto._offlineFrameIdlePatched = true;
-                    }
+                    if (window.CharacterIdle) window.CharacterIdle.install();
                     function mergeLocalCosts(costs) {
                         var merged = {};
                         (costs || []).forEach(function (cost) {

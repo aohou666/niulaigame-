@@ -1,0 +1,42 @@
+"""Version gate: inspect every binding and report all unfinished art honestly."""
+import argparse,collections,hashlib,json,time
+from pathlib import Path
+from PIL import Image,ImageDraw,ImageFont
+ROOT=Path(__file__).resolve().parents[1];GAME=ROOT/'local_game';OUT=ROOT/'art-migration'
+def loadjs(p):return json.loads(p.read_text('utf8').split('=',1)[1].strip().rstrip(';'))
+def main():
+ p=argparse.ArgumentParser();p.add_argument('--version',required=True);a=p.parse_args()
+ art=loadjs(GAME/'character-art-data.js')['heroes'];errors=[];checked=0
+ for hid,h in art.items():
+  for key,binding in h['bindings'].items():
+   target=GAME/binding['url'];checked+=1
+   if not target.exists():errors.append({'id':hid,'key':key,'error':'missing'});continue
+   with Image.open(target) as im:
+    if list(im.size)!=binding['size']:errors.append({'id':hid,'key':key,'error':'wrong dimensions'})
+    if 'A' not in im.getbands():errors.append({'id':hid,'key':key,'error':'missing alpha'})
+    if im.getbbox() is None:errors.append({'id':hid,'key':key,'error':'empty image'})
+ manifest=json.loads((GAME/'resource/default.res_49784.json').read_text('utf8'))
+ missing=[r['url'] for r in manifest['resources'] if not (GAME/'resource'/r['url']).exists()]
+ results_path=ROOT/'outputs/street-reskin/all-heroes-runtime.json'
+ runtime=json.loads(results_path.read_text('utf8')) if results_path.exists() and results_path.stat().st_size else None
+ originals=[json.loads(x) for x in (OUT/'assets.jsonl').read_text('utf8').splitlines()]
+ pending=collections.Counter(r['category'] for r in originals if r['status']!='complete')
+ packed=json.loads((OUT/'packed-summary.json').read_text('utf8'))
+ report={'version':a.version,'reviewedUtc':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'characterImageBindings':checked,'bindingErrors':errors,'originalManifestEntriesChecked':len(manifest['resources']),'missingOriginals':missing,'detailRuntime':runtime,'originalArtNotYetFullyReplaced':dict(pending),'packedRegionsNotYetReplaced':packed['regions'],'animationsNotYetReplaced':packed['animations'],'allArtReplaced':False,'zeroBugsClaimed':False,'visualReview':'Contact sheets and key game screens; this is not a visual sign-off for every original resource.'}
+ folder=OUT/'versions'/a.version;folder.mkdir(parents=True,exist_ok=True)
+ (folder/'review.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n','utf8')
+ font=ImageFont.truetype('C:/Windows/Fonts/msyh.ttc',20)
+ items=sorted(art.items(),key=lambda p:int(p[0]))
+ for start in range(0,len(items),24):
+  sheet=Image.new('RGB',(1200,1280),'#26373c');draw=ImageDraw.Draw(sheet)
+  for i,(hid,h) in enumerate(items[start:start+24]):
+   x=(i%6)*200;y=(i//6)*320
+   with Image.open(GAME/h['portrait']) as im:
+    im=im.convert('RGBA');im.thumbnail((184,270),Image.Resampling.LANCZOS)
+    sheet.paste(im,(x+(200-im.width)//2,y+275-im.height),im)
+   draw.text((x+10,y+282),hid+' '+h['name'][:7],font=font,fill='#f1e8d1')
+  sheet.save(ROOT/f'outputs/street-reskin/characters-review-{start//24+1}.jpg',quality=90)
+ print(json.dumps({k:v for k,v in report.items() if k not in ['detailRuntime','originalArtNotYetFullyReplaced']},ensure_ascii=False))
+ if errors or missing:raise SystemExit(1)
+
+if __name__=='__main__':main()

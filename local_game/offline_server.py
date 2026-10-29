@@ -11,6 +11,7 @@ import mimetypes
 import re
 import threading
 import time
+import sys
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, quote, urlsplit
@@ -360,7 +361,10 @@ class OfflineHandler(SimpleHTTPRequestHandler):
         self.do_POST()
 
     def log_message(self, format, *args):
-        print("[%s] %s" % (self.log_date_time_string(), format % args), flush=True)
+        line = "[%s] %s" % (self.log_date_time_string(), format % args)
+        # Logging must not abort a valid resource response on Windows GBK streams.
+        encoding = getattr(sys.stdout, "encoding", None) or "utf-8"
+        print(line.encode(encoding, errors="backslashreplace").decode(encoding), flush=True)
 
 
 def main():

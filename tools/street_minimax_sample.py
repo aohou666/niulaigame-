@@ -1,0 +1,23 @@
+"""Generate a local MiniMax H3 replacement using an actually rendered source effect."""
+import shutil
+from pathlib import Path
+from street_comfy import ROOT,COMFY,submit
+source=ROOT/'outputs/street-reskin/effect-reference/caocao-cast.mp4'
+shutil.copy2(source,COMFY/'input/street_caocao_cast_reference.mp4')
+prompt='''Generate a NEW isolated video-game visual effect for the absurd modern neighborhood character 懂子. <Video 1> is the original casting effect; use its rising energy rhythm, short anticipation, centered silhouette and decay as motion guidance only. Completely replace the ancient imperial dragon seal with a glossy golden bull-horn emblem and a bold circular street loudspeaker sound-wave ring, energetic warm amber light and petrol-teal sparks, playful 2.5D semi-realistic semi-cartoon commercial mobile game art. Single isolated foreground VFX, fixed locked camera, centered at ground level, pure BLACK RGB 0,0,0 background throughout, no floor or environment or character or letters. Start with a small anticipation glow, one clear outward impact pulse, then smooth ember decay to black. No repeated explosions. Keep all energy within a safe margin, bright sculpted luminous edges, no smoke curtain. Five-second clip at 24fps, no camera movement, no audio required. This is newly generated art, do not preserve any dragon or Chinese historical seal from the reference.'''
+graph={
+ '1':{'class_type':'UNETLoader','inputs':{'unet_name':'minimax_h3_ref2va_pruned_w4a8_mixed.safetensors','weight_dtype':'default'}},
+ '2':{'class_type':'CLIPLoader','inputs':{'clip_name':'qwen3vl_32b_minimax_h3_int4_convrot.safetensors','type':'minimax','device':'default'}},
+ '3':{'class_type':'VAELoader','inputs':{'vae_name':'minimax_h3_video_vae_fp16.safetensors'}},
+ '4':{'class_type':'VHS_LoadVideo','inputs':{'video':'street_caocao_cast_reference.mp4','force_rate':24,'custom_width':512,'custom_height':512,'frame_load_cap':53,'skip_first_frames':0,'select_every_nth':1,'format':'None'}},
+ '5':{'class_type':'MiniMaxH3ReferenceToVideo','inputs':{'clip':['2',0],'vae':['3',0],'prompt':prompt,'width':512,'height':512,'length':124,'ref_image_size':'match','ref_videos.ref_video_1':['4',0]}},
+ '6':{'class_type':'LoraLoaderModelOnly','inputs':{'model':['1',0],'lora_name':'minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors','strength_model':1}},
+ '7':{'class_type':'MiniMaxH3MemoryEfficientSageAttentionPatch','inputs':{'model':['6',0]}},
+ '8':{'class_type':'MiniMaxH3DualClockSamplerT8','inputs':{'model':['7',0],'av_latent':['5',1],'steps':4,'shift_video':12,'shift_audio':3,'sampler_name':'dual_clock_euler','scheduler':'native_flow'}},
+ '9':{'class_type':'BasicGuider','inputs':{'model':['8',0],'conditioning':['5',0]}},
+ '10':{'class_type':'RandomNoise','inputs':{'noise_seed':2026102901}},
+ '11':{'class_type':'SamplerCustomAdvanced','inputs':{'noise':['10',0],'guider':['9',0],'sampler':['8',1],'sigmas':['8',2],'latent_image':['5',1]}},
+ '12':{'class_type':'LTXVSeparateAVLatent','inputs':{'av_latent':['11',0]}},
+ '13':{'class_type':'VAEDecodeTiled','inputs':{'samples':['12',0],'vae':['3',0],'tile_size':256,'overlap':64,'temporal_size':16,'temporal_overlap':4}},
+ '14':{'class_type':'SaveImage','inputs':{'images':['13',0],'filename_prefix':'street-reskin/hero001_cast_minimax'}}}
+submit(graph,'hero001-cast-minimax-v1')
