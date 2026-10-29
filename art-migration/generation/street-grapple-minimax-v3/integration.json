@@ -1,0 +1,193 @@
+{
+  "id": "street-grapple",
+  "kind": "pulse",
+  "models": [
+    "common_skill_longzhua_01",
+    "common_skill_longzhua_01_ez"
+  ],
+  "atlas": "assets/street/effects/street-grapple/effect.webp",
+  "atlasSize": [
+    2048,
+    432
+  ],
+  "atlasSha256": "aa482d937dbd072abaccbacde2aaca45b70902afecdc3483e6f48e7fdcc70e13",
+  "frames": [
+    {
+      "x": 2,
+      "y": 2,
+      "w": 252,
+      "h": 212
+    },
+    {
+      "x": 258,
+      "y": 2,
+      "w": 252,
+      "h": 212
+    },
+    {
+      "x": 514,
+      "y": 2,
+      "w": 252,
+      "h": 212
+    },
+    {
+      "x": 770,
+      "y": 2,
+      "w": 252,
+      "h": 212
+    },
+    {
+      "x": 1026,
+      "y": 2,
+      "w": 252,
+      "h": 212
+    },
+    {
+      "x": 1282,
+      "y": 2,
+      "w": 252,
+      "h": 212
+    },
+    {
+      "x": 1538,
+      "y": 2,
+      "w": 252,
+      "h": 212
+    },
+    {
+      "x": 1794,
+      "y": 2,
+      "w": 252,
+      "h": 212
+    },
+    {
+      "x": 2,
+      "y": 218,
+      "w": 252,
+      "h": 212
+    },
+    {
+      "x": 258,
+      "y": 218,
+      "w": 252,
+      "h": 212
+    },
+    {
+      "x": 514,
+      "y": 218,
+      "w": 252,
+      "h": 212
+    },
+    {
+      "x": 770,
+      "y": 218,
+      "w": 252,
+      "h": 212
+    },
+    {
+      "x": 1026,
+      "y": 218,
+      "w": 252,
+      "h": 212
+    },
+    {
+      "x": 1282,
+      "y": 218,
+      "w": 252,
+      "h": 212
+    },
+    {
+      "x": 1538,
+      "y": 218,
+      "w": 252,
+      "h": 212
+    }
+  ],
+  "fps": 24,
+  "frameCount": 15,
+  "nativeTimelineRetained": true,
+  "blendMode": "normal-alpha",
+  "alphaEncoding": "max-channel alpha with unpremultiplied RGB; preserves generated source over black within rounding, avoids additive washout over bright existing effects",
+  "render": {
+    "x": -230.875,
+    "y": -190.625,
+    "width": 402.5,
+    "height": 337.96875,
+    "alpha": 1
+  },
+  "sourceOriginalFrames": 15,
+  "sourceGeneratedFrames": 124,
+  "originalPeakFrame": 8,
+  "retargetPeakFrame": 8,
+  "generatedPeakFrame": 68,
+  "sampling": [
+    0,
+    8,
+    17,
+    26,
+    34,
+    42,
+    51,
+    60,
+    68,
+    77,
+    86,
+    96,
+    105,
+    114,
+    123
+  ],
+  "sourceCrop": [
+    44,
+    100,
+    412,
+    409
+  ],
+  "generationJob": "art-migration/generation/street-grapple-minimax-v3",
+  "visualReview": "Viewed all124 frames and16 enlarged: same orange tow-hook and ivory cable remain coherent during one curved rotation then fade. No old orange flame ring or split tool. Generated from official replacement reference still; original video analyzed only for native phase/clock, not supplied as generation conditioning.",
+  "runtimeIntegrated": true,
+  "maxScreenDiagonal": 240,
+  "nativeEventAuditPath": "art-migration/versions/0.37.0/effect-native-events.json",
+  "nativeEventAuditSha256": "44ee5c3bd998dd7cea5a0ac9e7374ff237381802872cb781826b389e4640a69b",
+  "nativeModels": {
+    "common_skill_longzhua_01": {
+      "model": "common_skill_longzhua_01",
+      "action": "common_skill_longzhua_01",
+      "fps": 24,
+      "durationFrames": 15,
+      "durationMs": 625,
+      "events": []
+    },
+    "common_skill_longzhua_01_ez": {
+      "model": "common_skill_longzhua_01_ez",
+      "action": "common_skill_longzhua_01",
+      "fps": 24,
+      "durationFrames": 14,
+      "durationMs": 583.3333333333334,
+      "events": []
+    }
+  },
+  "modelOverrides": {
+    "common_skill_longzhua_01_ez": {
+      "fps": 24,
+      "frameCount": 14,
+      "frameMap": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "visualPeakFrame": 7
+    }
+  }
+}

@@ -1,0 +1,340 @@
+{
+  "promptId": "01b4e36d-d48a-4811-b20e-19c751ee9a46",
+  "submittedUtc": "2026-10-29T08:11:05Z",
+  "status": "generated-unreviewed",
+  "provider": "local-comfyui",
+  "workflowSha256": "bb72891746a8fa41008aea2f4fd32f1b4f6a816ad1d1627f919f2f0312af4414",
+  "response": {
+    "prompt_id": "01b4e36d-d48a-4811-b20e-19c751ee9a46",
+    "number": -545,
+    "node_errors": {}
+  },
+  "comfyStatus": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "01b4e36d-d48a-4811-b20e-19c751ee9a46",
+          "timestamp": 1793261500708
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "1",
+            "2",
+            "3",
+            "11",
+            "19"
+          ],
+          "prompt_id": "01b4e36d-d48a-4811-b20e-19c751ee9a46",
+          "timestamp": 1793261500743
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "01b4e36d-d48a-4811-b20e-19c751ee9a46",
+          "timestamp": 1793261551463
+        }
+      ]
+    ]
+  },
+  "outputs": [
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00001_.png",
+      "sha256": "62b65977b6fd91a59bdaff4697d6f9a9e8f6a58808325091e80b7dd88936828d"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00002_.png",
+      "sha256": "1a04168e19e3b4900b991f991bbd81be54d311f8886abec9fbb864ad2f9a4d7d"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00003_.png",
+      "sha256": "6de3a8d89aca5a8c7bfc6a86bb30d7dffbec556ef1625e988896a13808209c5f"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00004_.png",
+      "sha256": "6ea649be099499edc0e0c225e148e1151b20ba58fb22c06f8badab7e18d4bd47"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00005_.png",
+      "sha256": "b18b4b140292c967c260f483b858e27ac0e0ea84d7cbb843a28149a96eff1766"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00006_.png",
+      "sha256": "aea1ba29cdc5d4a8aef59ed00e7b79938933970d32b1b48d3639c0c4684a0986"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00007_.png",
+      "sha256": "0dbedf3e1da0dd329c847fc70bd2902bacf71dc71b1cd9428c947775671e03bc"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00008_.png",
+      "sha256": "f3c5431008ac7fda2f218f60384da381b9f4ecec62c47888e6b0cf1fc4ebc0e0"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00009_.png",
+      "sha256": "3d94b3e50f176c9579e814ab7ed7eb265664f2c00a256c1c8db76678b091ae81"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00010_.png",
+      "sha256": "4f357146208b641ea8ca7bbc3293d8e2ab66ac113185f717bec9adc393432e7c"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00011_.png",
+      "sha256": "38b851a4ef52c2c3232e096845aa4df306be8fa2e48ae2ee45ce3761ddaed04a"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00012_.png",
+      "sha256": "6b4b02df5c72e1dbf726a444730a45cff1f1aa05b6b1db6e230479f3594cd503"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00013_.png",
+      "sha256": "031f7f09e173c5a6f21bf3150d37d334f6e0a508930754da42a2facadb8edabc"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00014_.png",
+      "sha256": "e09898a8ff7e37694e2749485b2358bf223197d1026a013eb1158ea7e9f9e870"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00015_.png",
+      "sha256": "53243df3b175340c5aa93f965783a062d5d6734349ec66759e52219c8f61928f"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00016_.png",
+      "sha256": "179974a217c5b7fe0ab1581b40b938fea6ba200d9dd977a760614216a7083c59"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00017_.png",
+      "sha256": "006ee7bab0b42208538eb69c072c95c0ed09c9d480adfbcbe9fe7aba29cfe204"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00018_.png",
+      "sha256": "fd3c694a2cb4a40bf76f874647916581c860b2726f3c82168e908f49e9f7b099"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00019_.png",
+      "sha256": "7f6864018697a4ac47fc3935a0d89cafa85c117aeecb54ea10346fe306bbc5cc"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00020_.png",
+      "sha256": "241c5c8e6ff374047f463cff5f7eb7eece1213e0d4adb51df88b0634a3ba4452"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00021_.png",
+      "sha256": "42f6ac25f910af91a1f5b6ca965bfb6157d6408503eaaa4cf939481be3ab7a50"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00022_.png",
+      "sha256": "7a6b6673a6280f17702205d1e46ec6f277037f4457183c43292d8b4a286a822e"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00023_.png",
+      "sha256": "1329cd59b1ed0095999132d194a8b32de56a06b88ef5410f2fc10b3982757e6e"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00024_.png",
+      "sha256": "6813062b948f5665559ce674377b4889e2a2580501f479ef419ebd6d56be88cf"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00025_.png",
+      "sha256": "d8b247f6c41e3c351d18647fc4eea0162ee008e40c73fde94834567589ce8374"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00026_.png",
+      "sha256": "5f58eb71e124546546e6dfc19ac7fa24964c4d31ed17c5bd373057016f01b23d"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00027_.png",
+      "sha256": "0fdd8eeb6df1b23fa96df80ee62eee7f86616b45cbebcd597109ea1d53b481bf"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00028_.png",
+      "sha256": "363ccb4ddc97b2e91f18e33727f66d945923cd83fac35e94bcfc5b14b0020cf3"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00029_.png",
+      "sha256": "cae85ab0e26f33e978abf127364544175008271b10decf5ad1313930a0101ebc"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00030_.png",
+      "sha256": "31793cb5fa6c71d553c635671349b46a30b67aad6e74a49894401d21a5452d35"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00031_.png",
+      "sha256": "ebf8a924c97384c1eba87848197613b0db8ca7d8318b3dcea05c6c05ed8710ce"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00032_.png",
+      "sha256": "32864ae6ab9da4ff5fef21d472fb0a68be6ac0839fff0fd835fb4eefd2a42c2f"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00033_.png",
+      "sha256": "63c2d6516ef25f9c2a636859fbcdff014316ef10cd5a4f5a3608b16a8c330072"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00034_.png",
+      "sha256": "7fe5a475513e51c0cbc1d1cdb466a227d0eb83dc249ae5d72f15c357893ef95e"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00035_.png",
+      "sha256": "a3be1130a847056726b05d1970511d9a482c7213b223419c76339e513be44a8c"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00036_.png",
+      "sha256": "d76652bbd1217974fc95223b0f4508fe2fee008c990a8d20bf707ea147b443bc"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00037_.png",
+      "sha256": "1fedc803a8c605bd3f98965dd1a39a1601ed1d031082bd6494befb1b63a56c4f"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00038_.png",
+      "sha256": "56ead9d39eae64526044433ef729b5e524f86bcf57fde8f3f08a7696a5877c00"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00039_.png",
+      "sha256": "be55bd78a5a1ec6ed41d0bef1df78f7133fb06a3e0e9d127d9478a0be5e0e367"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00040_.png",
+      "sha256": "5c2879cb4c2f1ab351970ae83cceb33b8914325d4cd9b009b7c8900d3a12b2db"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00041_.png",
+      "sha256": "89ed16f3e7dc0091609c54aeb9653c592e848f1a16fea39c37b42d164b8c5575"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00042_.png",
+      "sha256": "c4611857cdc6b4b39094a7fa9fcefb11a3371de16edbe1836790f6d748d04108"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00043_.png",
+      "sha256": "77a3117a0751878504c81d6a25f2607c383b8038023b450ce883252e8cb37966"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00044_.png",
+      "sha256": "223142eaa2c5f3f09e3209ba6a14c7cb0de933978acada522117fef979cc4d26"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00045_.png",
+      "sha256": "7eff9031c73dc5177602a036e9c806d09ecd3b7bfba20bd07a0e654c8b7a699c"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00046_.png",
+      "sha256": "e2ce49a2ef06ca7f022a795a7db55a4ba5665811d98da251d555374472fab023"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00047_.png",
+      "sha256": "03eda9a4401e8107975f983629aed11e7dfba7edd5eef233e04b743fece51955"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00048_.png",
+      "sha256": "dd250dc067e01641bdde75b74141a6d5ea2374eaa3b5d17fd90ac1035f116258"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00049_.png",
+      "sha256": "cf33ed626111cd319e074eab1687c557d8c034cb56ab6d48e06ad6fdb28f5951"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00050_.png",
+      "sha256": "781e40697b25bf6086b537ef4d4a3186dcdc65e4222b10408a5c0c0a89f443dd"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00051_.png",
+      "sha256": "1615058d693e9851515a1369961e1efea9f7a5a3a018ef4f4e952cc151c3ba50"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00052_.png",
+      "sha256": "6265a7a5fbb702653e4d3130233169440d67873529fcaccc6afbc1e614e3142f"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00053_.png",
+      "sha256": "a6b2be0abf4b7bff896e4149a6293a22585c8f7bd1d4193fb3aea8cd9aadcb99"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00054_.png",
+      "sha256": "8184569de646477ac14be7d36c9a6a8bdb7b33097b1615c3e3b56702017cffd4"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00055_.png",
+      "sha256": "0b4b3129116a115907cf086145ce1b75498b16b12115c46e700cd961f04ff7a8"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00056_.png",
+      "sha256": "6f537595fe96ebd2fa7f6dfa1904c7d7480832828c7438b036f0cffb8bb8911a"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00057_.png",
+      "sha256": "e6e8bd43688da3d961cece8d4150ebc8abeb83158049f45604744be258474f8a"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00058_.png",
+      "sha256": "9856322b5e10cfca3a81e049c928047b3656e2fae8aadcf65b95fe9152a081cc"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00059_.png",
+      "sha256": "1cc1df7db254207ea2e8eae30e8e26c3e35d75988f4d638f812e5f9adeab34a5"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00060_.png",
+      "sha256": "32b136698bb9738d4ca497d8fc7a6ddc8ea47b2b47230e5255363bf5617d0fb2"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00061_.png",
+      "sha256": "038d8efbd457a14587f3119ff4fc94b356d8430032b4b64dc82b98b03a722831"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00062_.png",
+      "sha256": "f2fc38b5cf94205dfc662d36e692b5eea87109f8b08d2eae8de7d529f089a54e"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00063_.png",
+      "sha256": "b812d96db54682a58cf1e40a0775fde6eac76c07ec20a336c2d5ab020b98ba09"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00064_.png",
+      "sha256": "694c58dc817e0a607792a98b48c1c022852316d6ac4024af455355f7a8a57a5d"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00065_.png",
+      "sha256": "670d67490f53a0319476b7f668bffe454daf2309dba20bd33a51fe4e2813a7e7"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00066_.png",
+      "sha256": "52bed98bce89e6f477637cb0abcb8c42b5960d3b4833f1d41cf2e82586447771"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00067_.png",
+      "sha256": "772fe0f344a1a02e92fad6211348377e2a4858197cd3467ca307e572f468c661"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00068_.png",
+      "sha256": "a32e4b12a9ef9d53b5f120eb870a46fc59fdfab53c08052555db6f5de4f794f3"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00069_.png",
+      "sha256": "5c8a2bb84d90354543a29c95ecfd2f807204754909d6d2cef0352251f10bf2f9"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00070_.png",
+      "sha256": "ec2724eac37976c98f2ed6c3c25d02dfdafc594d4cfef3574eadb58d4b12e810"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00071_.png",
+      "sha256": "e61cd931d0116db939d3dee6a61b574c9c3e7a9609fdd412b21d89fbed8a1059"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00072_.png",
+      "sha256": "8930ab99ee0b4869c2c874ec557877ab5afcccf5921580d1b7ded99f385a6548"
+    },
+    {
+      "path": "art-migration/generation/street-shield-minimax-v4/street-shield-loop-v4_00073_.png",
+      "sha256": "35534bb0149aa67dee021a1511847bfd93c02d37083a5eedd1e14ce70ef0a634"
+    }
+  ]
+}

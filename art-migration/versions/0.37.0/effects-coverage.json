@@ -1,0 +1,35 @@
+{
+  "pass": true,
+  "nativeModels": 14,
+  "nativeFramePositions": 348,
+  "modelVariantDifferences": {
+    "tongyonghuiji": [
+      9,
+      8
+    ],
+    "longzhua": [
+      15,
+      14
+    ],
+    "qusan": [
+      19,
+      18
+    ],
+    "hudun": [
+      20,
+      19
+    ]
+  },
+  "completedEffectContainers": 14,
+  "actualBattleObserved": [
+    "hero001-cast",
+    "street-cleanse",
+    "street-grapple",
+    "street-heal",
+    "street-impact",
+    "street-shield",
+    "street-spark-hit"
+  ],
+  "scope": "Each accepted source clip reviewed in full and enlarged.14 models tested frame by frame, native event audit retained, all caches released.30seconds x3 ordinary isolated battle samples plus explicit wounded heroes8/4 integration fixture. This is not all gameplay/long-lifetime validation.",
+  "failedCoverageAttempts": "Hero56 was incorrectly assumed to heal; actual authored active poisons enemies. Both no-heal-observed attempts preserved with zero page errors. Corrected to actual healer4 and explicit20percent initial-life fixture; native AI and original renderer ran without synthetic effect spawning."
+}

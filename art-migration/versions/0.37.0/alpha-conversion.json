@@ -1,0 +1,36 @@
+{
+  "pass": true,
+  "scope": "All promoted normal-alpha atlas frames compared against cropped/resized original generated RGB, threshold<3 removed black noise only. No source animation frames invented.",
+  "reports": [
+    {
+      "id": "street-heal",
+      "frames": 28,
+      "maximumChannelDifferenceOverBlack": 2.0
+    },
+    {
+      "id": "street-impact",
+      "frames": 9,
+      "maximumChannelDifferenceOverBlack": 2.0
+    },
+    {
+      "id": "street-grapple",
+      "frames": 15,
+      "maximumChannelDifferenceOverBlack": 2.0
+    },
+    {
+      "id": "street-cleanse",
+      "frames": 19,
+      "maximumChannelDifferenceOverBlack": 2.0
+    },
+    {
+      "id": "street-shield",
+      "frames": 20,
+      "maximumChannelDifferenceOverBlack": 2.0
+    },
+    {
+      "id": "street-spark-hit",
+      "frames": 32,
+      "maximumChannelDifferenceOverBlack": 2.0
+    }
+  ]
+}

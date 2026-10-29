@@ -1,0 +1,303 @@
+{
+  "id": "street-heal",
+  "kind": "pulse",
+  "models": [
+    "common_skill_huifu",
+    "common_skill_huifu_ez"
+  ],
+  "atlas": "assets/street/effects/street-heal/effect.webp",
+  "atlasSize": [
+    1704,
+    832
+  ],
+  "atlasSha256": "7501ace82f39d0586c19e8799aa453904802a116f487ce73132abfa1d35b7e26",
+  "frames": [
+    {
+      "x": 2,
+      "y": 2,
+      "w": 209,
+      "h": 204
+    },
+    {
+      "x": 215,
+      "y": 2,
+      "w": 209,
+      "h": 204
+    },
+    {
+      "x": 428,
+      "y": 2,
+      "w": 209,
+      "h": 204
+    },
+    {
+      "x": 641,
+      "y": 2,
+      "w": 209,
+      "h": 204
+    },
+    {
+      "x": 854,
+      "y": 2,
+      "w": 209,
+      "h": 204
+    },
+    {
+      "x": 1067,
+      "y": 2,
+      "w": 209,
+      "h": 204
+    },
+    {
+      "x": 1280,
+      "y": 2,
+      "w": 209,
+      "h": 204
+    },
+    {
+      "x": 1493,
+      "y": 2,
+      "w": 209,
+      "h": 204
+    },
+    {
+      "x": 2,
+      "y": 210,
+      "w": 209,
+      "h": 204
+    },
+    {
+      "x": 215,
+      "y": 210,
+      "w": 209,
+      "h": 204
+    },
+    {
+      "x": 428,
+      "y": 210,
+      "w": 209,
+      "h": 204
+    },
+    {
+      "x": 641,
+      "y": 210,
+      "w": 209,
+      "h": 204
+    },
+    {
+      "x": 854,
+      "y": 210,
+      "w": 209,
+      "h": 204
+    },
+    {
+      "x": 1067,
+      "y": 210,
+      "w": 209,
+      "h": 204
+    },
+    {
+      "x": 1280,
+      "y": 210,
+      "w": 209,
+      "h": 204
+    },
+    {
+      "x": 1493,
+      "y": 210,
+      "w": 209,
+      "h": 204
+    },
+    {
+      "x": 2,
+      "y": 418,
+      "w": 209,
+      "h": 204
+    },
+    {
+      "x": 215,
+      "y": 418,
+      "w": 209,
+      "h": 204
+    },
+    {
+      "x": 428,
+      "y": 418,
+      "w": 209,
+      "h": 204
+    },
+    {
+      "x": 641,
+      "y": 418,
+      "w": 209,
+      "h": 204
+    },
+    {
+      "x": 854,
+      "y": 418,
+      "w": 209,
+      "h": 204
+    },
+    {
+      "x": 1067,
+      "y": 418,
+      "w": 209,
+      "h": 204
+    },
+    {
+      "x": 1280,
+      "y": 418,
+      "w": 209,
+      "h": 204
+    },
+    {
+      "x": 1493,
+      "y": 418,
+      "w": 209,
+      "h": 204
+    },
+    {
+      "x": 2,
+      "y": 626,
+      "w": 209,
+      "h": 204
+    },
+    {
+      "x": 215,
+      "y": 626,
+      "w": 209,
+      "h": 204
+    },
+    {
+      "x": 428,
+      "y": 626,
+      "w": 209,
+      "h": 204
+    },
+    {
+      "x": 641,
+      "y": 626,
+      "w": 209,
+      "h": 204
+    }
+  ],
+  "fps": 24,
+  "frameCount": 28,
+  "nativeTimelineRetained": true,
+  "blendMode": "normal-alpha",
+  "alphaEncoding": "max-channel alpha with unpremultiplied RGB; preserves generated source over black within rounding, avoids additive washout over bright existing effects",
+  "render": {
+    "x": -168.16843749999998,
+    "y": -259.91890624999996,
+    "width": 420.857421875,
+    "height": 410.7890625,
+    "alpha": 1
+  },
+  "sourceOriginalFrames": 28,
+  "sourceGeneratedFrames": 124,
+  "originalPeakFrame": 14,
+  "retargetPeakFrame": 14,
+  "generatedPeakFrame": 12,
+  "sampling": [
+    0,
+    1,
+    2,
+    3,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    9,
+    10,
+    11,
+    12,
+    21,
+    29,
+    38,
+    46,
+    55,
+    63,
+    72,
+    80,
+    89,
+    97,
+    106,
+    114,
+    123
+  ],
+  "sourceCrop": [
+    172,
+    146,
+    381,
+    350
+  ],
+  "generationJob": "art-migration/generation/street-heal-minimax-v3",
+  "visualReview": "Viewed all124 frames and16 enlarged: new mint first-aid PLUS rises from amber ring then both fade to black. No original green column or unrelated old phase. Generated from official replacement reference still; original video analyzed only for native phase/clock, not supplied as generation conditioning.",
+  "runtimeIntegrated": true,
+  "maxScreenDiagonal": 240,
+  "nativeEventAuditPath": "art-migration/versions/0.37.0/effect-native-events.json",
+  "nativeEventAuditSha256": "44ee5c3bd998dd7cea5a0ac9e7374ff237381802872cb781826b389e4640a69b",
+  "nativeModels": {
+    "common_skill_huifu": {
+      "model": "common_skill_huifu",
+      "action": "common_skill_huifu",
+      "fps": 24,
+      "durationFrames": 28,
+      "durationMs": 1166.6666666666667,
+      "events": [
+        {
+          "name": "count",
+          "frame0": 0,
+          "timeMs": 0
+        },
+        {
+          "name": "pia",
+          "frame0": 6,
+          "timeMs": 250
+        },
+        {
+          "name": "pia",
+          "frame0": 12,
+          "timeMs": 500
+        },
+        {
+          "name": "pia",
+          "frame0": 18,
+          "timeMs": 750
+        }
+      ]
+    },
+    "common_skill_huifu_ez": {
+      "model": "common_skill_huifu_ez",
+      "action": "common_skill_huifu",
+      "fps": 24,
+      "durationFrames": 28,
+      "durationMs": 1166.6666666666667,
+      "events": [
+        {
+          "name": "count",
+          "frame0": 0,
+          "timeMs": 0
+        },
+        {
+          "name": "pia",
+          "frame0": 6,
+          "timeMs": 250
+        },
+        {
+          "name": "pia",
+          "frame0": 12,
+          "timeMs": 500
+        },
+        {
+          "name": "pia",
+          "frame0": 18,
+          "timeMs": 750
+        }
+      ]
+    }
+  }
+}

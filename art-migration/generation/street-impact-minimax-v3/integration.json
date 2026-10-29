@@ -1,0 +1,145 @@
+{
+  "id": "street-impact",
+  "kind": "pulse",
+  "models": [
+    "common_skill_tongyonghuiji",
+    "common_skill_tongyonghuiji_ez"
+  ],
+  "atlas": "assets/street/effects/street-impact/effect.webp",
+  "atlasSize": [
+    2048,
+    498
+  ],
+  "atlasSha256": "005545c9864758a62f835de4fe89f0df1cce1c383ee2aa602fa8aad1b8f7913f",
+  "frames": [
+    {
+      "x": 2,
+      "y": 2,
+      "w": 252,
+      "h": 245
+    },
+    {
+      "x": 258,
+      "y": 2,
+      "w": 252,
+      "h": 245
+    },
+    {
+      "x": 514,
+      "y": 2,
+      "w": 252,
+      "h": 245
+    },
+    {
+      "x": 770,
+      "y": 2,
+      "w": 252,
+      "h": 245
+    },
+    {
+      "x": 1026,
+      "y": 2,
+      "w": 252,
+      "h": 245
+    },
+    {
+      "x": 1282,
+      "y": 2,
+      "w": 252,
+      "h": 245
+    },
+    {
+      "x": 1538,
+      "y": 2,
+      "w": 252,
+      "h": 245
+    },
+    {
+      "x": 1794,
+      "y": 2,
+      "w": 252,
+      "h": 245
+    },
+    {
+      "x": 2,
+      "y": 251,
+      "w": 252,
+      "h": 245
+    }
+  ],
+  "fps": 24,
+  "frameCount": 9,
+  "nativeTimelineRetained": true,
+  "blendMode": "normal-alpha",
+  "alphaEncoding": "max-channel alpha with unpremultiplied RGB; preserves generated source over black within rounding, avoids additive washout over bright existing effects",
+  "render": {
+    "x": -486.28125,
+    "y": -309.681640625,
+    "width": 776.4609375,
+    "height": 754.892578125,
+    "alpha": 1
+  },
+  "sourceOriginalFrames": 9,
+  "sourceGeneratedFrames": 124,
+  "originalPeakFrame": 0,
+  "retargetPeakFrame": 0,
+  "generatedPeakFrame": 43,
+  "sampling": [
+    43,
+    53,
+    63,
+    73,
+    83,
+    93,
+    103,
+    113,
+    123
+  ],
+  "sourceCrop": [
+    80,
+    137,
+    404,
+    452
+  ],
+  "generationJob": "art-migration/generation/street-impact-minimax-v3",
+  "visualReview": "Viewed all124 frames and16 enlarged: new chalk/enamel crescent and orange hardware chips make one restrained contact flare and dissolve. No copied original white slash after mid-clip. Generated from official replacement reference still; original video analyzed only for native phase/clock, not supplied as generation conditioning.",
+  "runtimeIntegrated": true,
+  "maxScreenDiagonal": 240,
+  "nativeEventAuditPath": "art-migration/versions/0.37.0/effect-native-events.json",
+  "nativeEventAuditSha256": "44ee5c3bd998dd7cea5a0ac9e7374ff237381802872cb781826b389e4640a69b",
+  "nativeModels": {
+    "common_skill_tongyonghuiji": {
+      "model": "common_skill_tongyonghuiji",
+      "action": "common_skill_tongyonghuiji",
+      "fps": 24,
+      "durationFrames": 9,
+      "durationMs": 375,
+      "events": []
+    },
+    "common_skill_tongyonghuiji_ez": {
+      "model": "common_skill_tongyonghuiji_ez",
+      "action": "common_skill_tongyonghuiji",
+      "fps": 24,
+      "durationFrames": 8,
+      "durationMs": 333.3333333333333,
+      "events": []
+    }
+  },
+  "modelOverrides": {
+    "common_skill_tongyonghuiji_ez": {
+      "fps": 24,
+      "frameCount": 8,
+      "frameMap": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8
+      ],
+      "visualPeakFrame": 0
+    }
+  }
+}

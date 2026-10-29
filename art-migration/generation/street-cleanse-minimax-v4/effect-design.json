@@ -1,0 +1,68 @@
+{
+  "id": "street-cleanse",
+  "models": [
+    "common_skill_qusan",
+    "common_skill_qusan_ez"
+  ],
+  "kind": "pulse",
+  "native": {
+    "name": "common_skill_qusan",
+    "action": "common_skill_qusan",
+    "frames": 19,
+    "fps": 24,
+    "aabb": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "scale": 1,
+    "origin": [
+      512,
+      512
+    ],
+    "foregroundBox": [
+      331,
+      372,
+      695,
+      652
+    ],
+    "peakFrame": 6,
+    "allFramesNonempty": true
+  },
+  "referenceVideo": "G:\\comfylight\\ComfyUI_windows_portable_nvidia\\ComfyUI_windows_portable\\ComfyUI\\input\\street_street-cleanse_native_v2.mp4",
+  "referenceVideoSha256": "e230add468e3bcd054dcdbd83939352e198756656ef1b39c7be9fd442f384b00",
+  "referenceCrop": [
+    3,
+    2,
+    1023,
+    1022
+  ],
+  "render": {
+    "x": -509.0,
+    "y": -510.0,
+    "width": 1020.0,
+    "height": 1020.0,
+    "alpha": 1
+  },
+  "prompt": "Create a NEW production video-game VFX animation using <Image 1> as the ONLY visible design reference. The ivory broom-bristle crescent makes ONE gentle curved cleaning sweep with a thin teal air arc and3 tiny amber dust motes. Then the ENTIRE broom and arc become uniformly faint and vanish into BLACK. Keep broom shape until fully invisible. Do not morph into an orb, sphere, circle, star, blue glint or unrelated object. Premium2.5D semi-realistic semi-cartoon absurd contemporary neighborhood hardware/enamel materials, same teal/ivory/orange palette and tactile lighting as Image1. Isolated foreground centered in central35% of frame throughout. Entire effect, particles and glow inside central40%, huge completely empty solid BLACK RGB0,0,0 margins. Fixed camera, no floor, environment, character or text. Five seconds at24fps. The exact object identity and materials must remain consistent throughout; no new object or second effect appears.",
+  "sourceFrames": 124,
+  "referenceMotionRetimedSeconds": 2.5,
+  "newArtGuide": "local_game/assets/street/effects/neighborhood-six-guides.png",
+  "manualReview": "pending",
+  "runtimeIntegrated": false,
+  "referenceVideoSourcePath": "art-migration/references/vfx-native/street_street-cleanse_native_v2.mp4",
+  "referenceNativeMetadataPath": "art-migration/references/vfx-native/street-cleanse-native.json",
+  "imageGuide": "art-migration/references/vfx-guides/street-cleanse.png",
+  "imageGuideSha256": "60ce1c3b0961599c8561092212d766cbf5fce9a150d2c9abdcd45b6c48e90618",
+  "newArtGuideSha256": "15da9d4afd9f1dfc1424031084398a0836cfb0e664b7c3bf6cc6878291be46bc",
+  "newArtGuideCell": [
+    1,
+    1
+  ],
+  "officialImagePrompt": "art-migration/prompts/vfx-neighborhood-six.txt",
+  "generationVideoReference": false,
+  "generationImageOnly": true,
+  "referenceVideoRole": "Native motion/phase analyzed offline; original video is NOT conditioned into this revision to prevent old-texture reconstruction.",
+  "revisionReason": "Earlier reference-video output reconstructed original effect; new motion is generated from official replacement still only, retargeted to the measured original native clock."
+}

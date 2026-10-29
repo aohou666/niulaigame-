@@ -1,0 +1,225 @@
+{
+  "id": "street-cleanse",
+  "kind": "pulse",
+  "models": [
+    "common_skill_qusan",
+    "common_skill_qusan_ez"
+  ],
+  "atlas": "assets/street/effects/street-cleanse/effect.webp",
+  "atlasSize": [
+    2048,
+    762
+  ],
+  "atlasSha256": "e78eb036ea30c2e474b96ae3d5038b7ac7901f164b22ae45d7567740a6071355",
+  "frames": [
+    {
+      "x": 2,
+      "y": 2,
+      "w": 252,
+      "h": 250
+    },
+    {
+      "x": 258,
+      "y": 2,
+      "w": 252,
+      "h": 250
+    },
+    {
+      "x": 514,
+      "y": 2,
+      "w": 252,
+      "h": 250
+    },
+    {
+      "x": 770,
+      "y": 2,
+      "w": 252,
+      "h": 250
+    },
+    {
+      "x": 1026,
+      "y": 2,
+      "w": 252,
+      "h": 250
+    },
+    {
+      "x": 1282,
+      "y": 2,
+      "w": 252,
+      "h": 250
+    },
+    {
+      "x": 1538,
+      "y": 2,
+      "w": 252,
+      "h": 250
+    },
+    {
+      "x": 1794,
+      "y": 2,
+      "w": 252,
+      "h": 250
+    },
+    {
+      "x": 2,
+      "y": 256,
+      "w": 252,
+      "h": 250
+    },
+    {
+      "x": 258,
+      "y": 256,
+      "w": 252,
+      "h": 250
+    },
+    {
+      "x": 514,
+      "y": 256,
+      "w": 252,
+      "h": 250
+    },
+    {
+      "x": 770,
+      "y": 256,
+      "w": 252,
+      "h": 250
+    },
+    {
+      "x": 1026,
+      "y": 256,
+      "w": 252,
+      "h": 250
+    },
+    {
+      "x": 1282,
+      "y": 256,
+      "w": 252,
+      "h": 250
+    },
+    {
+      "x": 1538,
+      "y": 256,
+      "w": 252,
+      "h": 250
+    },
+    {
+      "x": 1794,
+      "y": 256,
+      "w": 252,
+      "h": 250
+    },
+    {
+      "x": 2,
+      "y": 510,
+      "w": 252,
+      "h": 250
+    },
+    {
+      "x": 258,
+      "y": 510,
+      "w": 252,
+      "h": 250
+    },
+    {
+      "x": 514,
+      "y": 510,
+      "w": 252,
+      "h": 250
+    }
+  ],
+  "fps": 24,
+  "frameCount": 19,
+  "nativeTimelineRetained": true,
+  "blendMode": "normal-alpha",
+  "alphaEncoding": "max-channel alpha with unpremultiplied RGB; preserves generated source over black within rounding, avoids additive washout over bright existing effects",
+  "render": {
+    "x": -281.890625,
+    "y": -332.6953125,
+    "width": 539.8828125,
+    "height": 535.8984375,
+    "alpha": 1
+  },
+  "sourceOriginalFrames": 19,
+  "sourceGeneratedFrames": 124,
+  "originalPeakFrame": 6,
+  "retargetPeakFrame": 6,
+  "generatedPeakFrame": 8,
+  "sampling": [
+    0,
+    1,
+    3,
+    4,
+    5,
+    7,
+    8,
+    18,
+    27,
+    37,
+    46,
+    56,
+    66,
+    75,
+    85,
+    94,
+    104,
+    113,
+    123
+  ],
+  "sourceCrop": [
+    114,
+    89,
+    385,
+    358
+  ],
+  "generationJob": "art-migration/generation/street-cleanse-minimax-v4",
+  "visualReview": "Viewed all124 frames and16 enlarged: same ivory broom crescent, teal air arc and amber motes perform one sweep and fade as a whole. No old blue orb/glint phase. Safe margins all frames. Generated from official replacement reference still; original video analyzed only for native phase/clock, not supplied as generation conditioning.",
+  "runtimeIntegrated": true,
+  "maxScreenDiagonal": 240,
+  "nativeEventAuditPath": "art-migration/versions/0.37.0/effect-native-events.json",
+  "nativeEventAuditSha256": "44ee5c3bd998dd7cea5a0ac9e7374ff237381802872cb781826b389e4640a69b",
+  "nativeModels": {
+    "common_skill_qusan": {
+      "model": "common_skill_qusan",
+      "action": "common_skill_qusan",
+      "fps": 24,
+      "durationFrames": 19,
+      "durationMs": 791.6666666666666,
+      "events": []
+    },
+    "common_skill_qusan_ez": {
+      "model": "common_skill_qusan_ez",
+      "action": "common_skill_qusan",
+      "fps": 24,
+      "durationFrames": 18,
+      "durationMs": 750,
+      "events": []
+    }
+  },
+  "modelOverrides": {
+    "common_skill_qusan_ez": {
+      "fps": 24,
+      "frameCount": 18,
+      "frameMap": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "visualPeakFrame": 6
+    }
+  }
+}

@@ -45,7 +45,7 @@ def verify():
    assert len(cfg['frames'])==len(cfg['sampling'])==cfg['frameCount']==cfg['sourceOriginalFrames'],'effect native frame count differs'
    assert cfg['nativeTimelineRetained'] and cfg['fps']>0
    assert cfg['sampling']==sorted(cfg['sampling']) and all(0<=n<cfg['sourceGeneratedFrames'] for n in cfg['sampling']),'effect source order/index invalid'
-   if cfg.get('originalPeakFrame') is not None:assert cfg['sampling'][cfg['originalPeakFrame']]==cfg['generatedPeakFrame'],'effect peak phase mismatch'
+   if cfg.get('kind')!='loop' and cfg.get('originalPeakFrame') is not None:assert cfg['sampling'][cfg.get('retargetPeakFrame',cfg['originalPeakFrame'])]==cfg['generatedPeakFrame'],'effect peak phase mismatch'
    hashes=set();nonempty=0
    with Image.open(GAME/cfg['atlas']) as im:
     assert list(im.size)==cfg['atlasSize']
@@ -55,6 +55,13 @@ def verify():
    assert nonempty>3 and len(hashes)>4,'effect motion empty/static'
    source=ROOT/cfg['generationJob'];qa=source/'effect-qa.json'
    if qa.exists():review=json.loads(qa.read_text('utf8'));assert review['manualReview']=='approved' and not review['croppedFrames'],'unapproved/cropped effect'
+   if cfg.get('nativeEventAuditPath'):
+    nativeFile=ROOT/cfg['nativeEventAuditPath'];assert hashlib.sha256(nativeFile.read_bytes()).hexdigest()==cfg['nativeEventAuditSha256'],'effect native audit digest mismatch'
+    nativeData=json.loads(nativeFile.read_text('utf8'));assert nativeData['complete'];nativeRows={r['model']:r for r in nativeData['records']}
+    for model in cfg['models']:
+     row=nativeRows[model];seq=cfg.get('modelOverrides',{}).get(model,cfg);assert seq['frameCount']==row['durationFrames'] and abs(seq['fps']-row['fps'])<.0001,'effect variant native clock mismatch'
+     assert cfg['nativeModels'][model]['events']==row['events'],'effect authored event metadata mismatch'
+     mapping=seq.get('frameMap',list(range(cfg['frameCount'])));assert len(mapping)==seq['frameCount'] and mapping==sorted(mapping) and min(mapping)>=0 and max(mapping)<cfg['frameCount'],'effect variant frame mapping invalid'
    effects.append({'id':cfg['id'],'models':len(cfg['models']),'nativeFrames':cfg['frameCount'],'nonemptyFrames':nonempty,'distinctFrames':len(hashes)})
   except Exception as e:errors.append({'effect':cfg['id'],'error':str(e)})
  return {'images':images,'bodyAtlasFrames':frames,'bodyCharacters':characters,'nativeModelActionsChecked':nativeChecks,'effects':effects,'errors':errors}

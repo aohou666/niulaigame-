@@ -10,6 +10,8 @@ def run():
   if not jobfile.exists():continue
   job=json.loads(jobfile.read_text('utf8'))
   if job['status']!='generated-unreviewed' or not (folder/'design.json').exists():continue
+  design=json.loads((folder/'design.json').read_text('utf8'))
+  if not isinstance(design.get('heroId'),int) or not isinstance(design.get('action'),str):continue
   chosen=next((x for x in job.get('outputs',[]) if '_alpha' in x['path']),None)
   if chosen is None:continue
   image_path=ROOT/chosen['path'];findings=[]
@@ -28,7 +30,7 @@ def run():
     record['manualReview']=previous.get('manualReview','pending')
     if 'manualNotes' in previous:record['manualNotes']=previous['manualNotes']
   prior.write_text(json.dumps(record,ensure_ascii=False,indent=2)+'\n','utf8')
-  design=json.loads((folder/'design.json').read_text('utf8'));candidates.append((folder,image_path,record,design))
+  candidates.append((folder,image_path,record,design))
  font=ImageFont.truetype('C:/Windows/Fonts/msyh.ttc',18)
  for start in range(0,len(candidates),18):
   canvas=Image.new('RGB',(1200,1080),'#26373c');draw=ImageDraw.Draw(canvas)

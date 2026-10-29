@@ -1,0 +1,543 @@
+{
+  "promptId": "7be0a2f9-2983-4452-893b-87f2cd548527",
+  "submittedUtc": "2026-10-29T07:57:57Z",
+  "status": "generated-unreviewed",
+  "provider": "local-comfyui",
+  "workflowSha256": "2c0de1dedab0f5624693d02dea7bda480c4eeba2b142f46d7f86d42e7f7f6e8d",
+  "response": {
+    "prompt_id": "7be0a2f9-2983-4452-893b-87f2cd548527",
+    "number": -535,
+    "node_errors": {}
+  },
+  "comfyStatus": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "7be0a2f9-2983-4452-893b-87f2cd548527",
+          "timestamp": 1793261123887
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "1",
+            "2",
+            "3",
+            "6"
+          ],
+          "prompt_id": "7be0a2f9-2983-4452-893b-87f2cd548527",
+          "timestamp": 1793261123928
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "7be0a2f9-2983-4452-893b-87f2cd548527",
+          "timestamp": 1793261179503
+        }
+      ]
+    ]
+  },
+  "outputs": [
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00001_.png",
+      "sha256": "237e63f1ecae326e1ff84b79fad7e80326a0a4bbe60e29d48a22da296cfcff14"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00002_.png",
+      "sha256": "163d8f27c581d3817fc87d17a05daef5efe05d3f2fd5143d73c26680e9ffcc10"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00003_.png",
+      "sha256": "4a485fe4ad0da6104e429c1c9842b2a053483d3feae8d4ac599dc8d616dcd4d1"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00004_.png",
+      "sha256": "b5b6fbf786f0e52331c28322b8b8f90c56728a0fef55fb79e01b62bf14345fd9"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00005_.png",
+      "sha256": "c1e8021abac43310388223ae3c6d036639c2ab95c9aded64088132124764690b"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00006_.png",
+      "sha256": "e75a21041f0529e581e2032a6487b081bf7186d7c1e16bdfa08a5a315b64fdf2"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00007_.png",
+      "sha256": "41d452b7fd6248141bd6eefe7da3ee261892782d9767073c644b7d2c37a47c85"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00008_.png",
+      "sha256": "fe55ce888d9757c0aa3c2c56bad657b020ce6439b6e75b209f4519cf357a94e7"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00009_.png",
+      "sha256": "4354aa7e6c6be011c8db556781fff7db6d2b203fa38d1d634ea702d4400794b4"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00010_.png",
+      "sha256": "b58c8f49fd70b70cf8d3d5443df9f41f9813eb07ea4b6d58fd3056fd32d6624c"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00011_.png",
+      "sha256": "c08eb2219997103e2364b8d851ff2ce975fda102672b51ef04cf80538eeb95cd"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00012_.png",
+      "sha256": "3fca937159905ab3ba72153249c93cf11a0a40063966c7750474060ef8893fac"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00013_.png",
+      "sha256": "1761e549104bc0be90cb06efc4060ebd370222c6e59b4034539075fb5ed602f7"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00014_.png",
+      "sha256": "b054724371ae45a912c578108c787f0f092dc7df15647083c6e926f7d44227cf"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00015_.png",
+      "sha256": "08b4dad51b56bca454ca122e33517ef8d74d9bdfdff300ee177bc5592d8198a4"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00016_.png",
+      "sha256": "fe744cc523e51159183e88c8daa04a84b699ccb3695cac442586dc4a14ae1341"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00017_.png",
+      "sha256": "1e3a6069f295b06bb821bf09473be7c98fa41d18e646eddb0b1484e9a286fbc1"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00018_.png",
+      "sha256": "4b8e2ab61da583b78a4bfe155d2675e907dc0d37c958c41f55167d39856e7a54"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00019_.png",
+      "sha256": "3d97b317fdfd544e888e292a508fadffd5500d8963271d8183efae3333cc13f9"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00020_.png",
+      "sha256": "11bd3cf6016c0b4f2be3b35d54c85c547506ec18c76c8a3858fdf6995bd390bb"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00021_.png",
+      "sha256": "442757f3c9f3e43edebb656e1b0227765242fb78e24bf488057a705eb6da07e6"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00022_.png",
+      "sha256": "6efa5877567ccc434a90c9f868c48f2e469e5a34b60e330669f5327b45815c6a"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00023_.png",
+      "sha256": "169f2fe22436863993b60e18417f3f05899447fe407a4091df0f03654b816a6e"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00024_.png",
+      "sha256": "be829028e9098831fefa432ad403ab85978aef489f0b765418b9abf332114d85"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00025_.png",
+      "sha256": "4582cb3b681460fc4dd3a914b696d87a3daec706afce3a7ba0d12435dd532bf0"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00026_.png",
+      "sha256": "c77f7c92978e0ca727c169931cce1aefc1bd32a41f6f3da11ed387a4e4ee76e6"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00027_.png",
+      "sha256": "b74f8abfe22aa206d73c39af55f32a8ee5c6324e9724f3c14eab45d05edc01af"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00028_.png",
+      "sha256": "283a1d15456689f4f86b9706f8e6acb42414cfa717307877bbec6c90ef729abe"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00029_.png",
+      "sha256": "3933dffaf7b99528d7851d99aec8e0003dfb1e8256604dd74e371cce8b91c20a"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00030_.png",
+      "sha256": "a546acab7aa703e9b48aef8bb73f8df4b7c71f4c214e3a8fda1bd0d6eb1db407"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00031_.png",
+      "sha256": "fceee7c74115cf32f29d9767e8042c0769c05cc911d89bfeab78faa8b7652852"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00032_.png",
+      "sha256": "a2d688405eb03b509b42cd5ad0478cc613bfc7982b913a42bc06ddab205e616a"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00033_.png",
+      "sha256": "da8a3c8469a30de140cac52ac17606d7e09f4151ed02d7cda18051d9da34af13"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00034_.png",
+      "sha256": "7418c0c4e874b30f82ef6cf61df31458598a5ae08e1f6dcc722e4e02d1cc8dc0"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00035_.png",
+      "sha256": "af98bb76cd172b339e7da8a65af3cef8f05493b9e73b5da240e3c422a701a75d"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00036_.png",
+      "sha256": "53d4bbec00586a1ab561b5a70b90c4d09b2be81e9c03b8d0898525e254b028fb"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00037_.png",
+      "sha256": "38a447ecb08dc8636390d1bce6bc5af6d907a55ee98daac5867eec2afbfbbcfc"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00038_.png",
+      "sha256": "28d52ce00989e9a746cf72f42d155229d2dc7343ee66354fe4f367dd86d103c1"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00039_.png",
+      "sha256": "cea87e305287dae4c7ac08aecd351aba6e246172daf504bb3e6067267b2e3f9a"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00040_.png",
+      "sha256": "7d0355384703520f7a4c2577ce637a1a3183205df2e03ac04a366a10fb63aa69"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00041_.png",
+      "sha256": "5dd0ea016626902ed88b64b58a91bfc27e2c61ced200db9153554b0de7f00c09"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00042_.png",
+      "sha256": "d349fe536b2be672c9e75a075ea1c1b23f7c4b7a01b0ba98d2b386d284c3fa5e"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00043_.png",
+      "sha256": "99cc66da999123d38fd0d7ce1f106ea7f2eed622a4267bfd07b1b56bcaa86a4c"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00044_.png",
+      "sha256": "7809a08dcfe3f3e8bc802cd89b896adb23d49881cc0dc807df5328d1cea935c3"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00045_.png",
+      "sha256": "4ca4972937a0c632777c7aa523d2d4cb06903ae077ef9f2151953af6fe87e789"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00046_.png",
+      "sha256": "c49b58b1f1d4a7a385de9bad12b096d65978afc7837c305073ef26ac79dcfe77"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00047_.png",
+      "sha256": "bef9c8c1a37e663a8dfb12f594d92f07462815215c42a829b6c6aeb18f030beb"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00048_.png",
+      "sha256": "98f4093d4d59a1ade8d85b1ca86ac198d696dad05257c9557cca047b1f241190"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00049_.png",
+      "sha256": "3d29480d18a26e4433b52e01da9fa1c52942a9bab194c86a20bacea5716a988c"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00050_.png",
+      "sha256": "fce5ac306622d82dc4eb498196f002c425bebf32bf42579824b9231485930ce1"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00051_.png",
+      "sha256": "500ccfd4676226e637fd2472658aba99cf6500ac1e637151ded0a825afdfc930"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00052_.png",
+      "sha256": "242c81046587746df9477285ace062951db3fddbb375cd8f16becdc74b55e3a7"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00053_.png",
+      "sha256": "acd58d6c8f84a101096ff05104f4c28f083fc73ca6da155035e24592ac7a3e30"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00054_.png",
+      "sha256": "707baa120acebe64330e42c6ec3d6f63c10181d8194cf1be389f93a5b280660f"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00055_.png",
+      "sha256": "d8ad7ce4b193a160eea0884331aafb9bc936696ab55aca3d77254436b0d5353f"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00056_.png",
+      "sha256": "31071d545136190835033c054d3d0924a2eff45172d6cb7e61504e31bd3f1bd9"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00057_.png",
+      "sha256": "7fc25fd466ccb15803ef4c5db8d10137bacb929ea95c00462ae669f18d743f6d"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00058_.png",
+      "sha256": "aba447ef1280e2718fc3f0b21ca4a1cb0020731565f61e514f4e9933e85185f2"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00059_.png",
+      "sha256": "959862d8cc8accb1b9a9ba539453c66d22d46a2db5e37010e8b8fbcce1a259ad"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00060_.png",
+      "sha256": "09a55d3080b031a0c730d030011ddbd8a49a7ec0e8d7ce1ab9d81fc447dcab8c"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00061_.png",
+      "sha256": "c31ac486c71ca92353f3d5d8d290b25a5c0fc1e0f843030ea819ecfe29f6c3fa"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00062_.png",
+      "sha256": "13579fa21c13e5906a27e58f901f875058394b4127cf2795fda8797230df3e22"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00063_.png",
+      "sha256": "8e0d54ea86280d385a33b63d15568f18e793979aee44c15d48132cc72f1a6e54"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00064_.png",
+      "sha256": "25b98f776fb558ddd979ff4ed49e0528e75516f2b9aae16a5073d8bda6ecc701"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00065_.png",
+      "sha256": "4f108158d8e319c65717499b31c2689761e70424ac060fd0665115e56217c36c"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00066_.png",
+      "sha256": "9dcf17fc294b4fa395052e97b99b6d5afbe7aa7617ce3db3a74b30eb10440281"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00067_.png",
+      "sha256": "b684a2887487ee30325758eb59c2b6ba18de681f00c52127d0ffee7e0ee7489e"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00068_.png",
+      "sha256": "67d6d85208bed8cfc32e79dc9230d3c443b883a74eaf3d0eb862cf5bb316be86"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00069_.png",
+      "sha256": "db1968e37f83458a48b15c13d14f362daf1ccd6e4e6c79dc339f670b7656ef6f"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00070_.png",
+      "sha256": "529cd6c8b94d02318cd4d90e142f6d51cf4a36381920c3fa96d5fc938f79da5c"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00071_.png",
+      "sha256": "79651220c3e111437e6a9a1be83c6a35867152504fa0a6afe3a2357464700e3c"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00072_.png",
+      "sha256": "4cbef0eb7f5d7eb729612622ce8e016ac70cdf99d3e75ece65f50885fe7ec5f1"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00073_.png",
+      "sha256": "fd5b9a1db94fb37780c987fa84c6ee737ac36447476903e76029a3d1c76cab55"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00074_.png",
+      "sha256": "50738e38dbcf854ec24bb486c83dde7b320124c8ba8442a9df114b86ebc8dd66"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00075_.png",
+      "sha256": "acccfff7c808f4255a6c56e4a72902ba465f22e0afde8e475607292eb83eb0f1"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00076_.png",
+      "sha256": "bbe2806f98270fc8e0e12b4280355a22abb1a8895c3913d425babfec642e01c4"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00077_.png",
+      "sha256": "484d20962dbf357c8f5ea532f950fc7cbf255e8a80e8001f1d4b36553df4e54c"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00078_.png",
+      "sha256": "bb0aa5c6ce35fc391ae8c1253f9947b554a74481ef957d5a1bdc473759abe5e0"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00079_.png",
+      "sha256": "a3c8f8343c8b8ce93727c64149dff0a721d9c6e0b6565eed9a04146390f715d9"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00080_.png",
+      "sha256": "e6d7c5501adf43ff7a88a79464df3d7754f00010aca36ff7fec2be866c1edb71"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00081_.png",
+      "sha256": "d5d2cfd3de4bf0fb3f51c966f8d7481677de4dfc07e9c4371421ebeb76e8e1ae"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00082_.png",
+      "sha256": "7ffe02fa222c83ce5d6e7ef56f00e9f27303736906d9bf508e9b8b0cc5df0bfb"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00083_.png",
+      "sha256": "1600c6d661e19bd0351bf7133fe30ea31b5ebf6473bd8cec6c4e4f1abc6943e3"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00084_.png",
+      "sha256": "5eb6fe9b12fc9fb3c1b219fc4b5f0da2a8add1329ea93ce10e01ff7864ae1d05"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00085_.png",
+      "sha256": "1712ea1220c09deb49cb93173474d80734969fb85897648a9b97f21b1bfdfecc"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00086_.png",
+      "sha256": "0eb0d6aaecc4d273c948c650a21a61f3c348a4845372430b3841958e6c50ad3f"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00087_.png",
+      "sha256": "6243229eb56ffac7eacceecdae5fe24a1f7d35db6371575a4f64621cae8898b7"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00088_.png",
+      "sha256": "d97b1c1a156b49186b653bc10126a511e5db78a0f4272196fb762613981b1c4e"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00089_.png",
+      "sha256": "73671e708504e7709035231e840d175b21164876d03d615c750370194e6a97e9"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00090_.png",
+      "sha256": "39763a3c996812758e191b2aa5e839107f49ef87c69b1e0dba050071ba9ca6db"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00091_.png",
+      "sha256": "3e6d709aabe85d4065cd5d2c3f47b07f36f55d0ff3432f6493697d68d280e458"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00092_.png",
+      "sha256": "4ca1ab187707b1ee045fe3b7c9d22b6fec34e473b01def4d2e3dc08389cd101c"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00093_.png",
+      "sha256": "e4139d7e98e4a521fb8dbbbad3cd0dfa79d5158f320d9d0df1e752634d1acf62"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00094_.png",
+      "sha256": "3739b6f47d72e8ca8f38aa52e918f9cad8c28bbdab8908a02fcc6cd3406c1746"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00095_.png",
+      "sha256": "2271b03ee74b6650e7ad7b3a78bc390042df470be01b0806500a184509f2dd44"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00096_.png",
+      "sha256": "b15c0a4cd7cf75e66b05a2750c5725489e47315338099ed0861ab9a51fa99f29"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00097_.png",
+      "sha256": "fc378aa0caec36521e404ce16d9ce5457f3195bc0662ae8f723bfb03df0f79ee"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00098_.png",
+      "sha256": "e3bfd118ba2423bb527f5c6a5b5cfa6ada8f5c21d0e39d7fc354b9361e6a57aa"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00099_.png",
+      "sha256": "870e7d4d02709c0d3df43e3417a54b24d2da77eba5a4b9a199faa6e9c76d74d5"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00100_.png",
+      "sha256": "3d54ebe47060a2775766b2b99a3fb9c134785b262bbf482f7e8c57c5b1abb726"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00101_.png",
+      "sha256": "906f72e67f6afdbebfb8d4c187869e237d84bc68ef03401307924ff8d087c57c"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00102_.png",
+      "sha256": "3e74524c65e5a523d698d7e194eba02fc35304b169e90d4db85e5a6f1594e48c"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00103_.png",
+      "sha256": "cf7b0e4e023621eb07d7151be6b89605ad2203650751af096838c9b52bee11dc"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00104_.png",
+      "sha256": "86f2098d96b5f66f175ea0e9ebacaf31d6bcf6bd221ae68cf22923839ddce09a"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00105_.png",
+      "sha256": "a90e4ca0bef4b099ae3a54fa0cb6aded0d0a44d5e380b568987b343a3bf0fe65"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00106_.png",
+      "sha256": "2838eb2de7c5d382f6c66e3b64aa759f330285efff49e49301aaea0dece651da"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00107_.png",
+      "sha256": "7b955377a822f55b7fc4230a0f19c46d60bd8ad1262e71bc1ad3f3800b78ad89"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00108_.png",
+      "sha256": "119332af5cb5141d18820be48472269bc50100575e35bf0894d32463ccaccfb6"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00109_.png",
+      "sha256": "ecbbf21a416ffdea0a4455fe39a6e7c5413a0ec71f8666a8b69a4065b23efbb6"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00110_.png",
+      "sha256": "55fa31dffb749ab73519ac2ec530c206cecb0214fb832d10a0aabfe9b6310efe"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00111_.png",
+      "sha256": "4f289f89604e7134c0ea4701022b852a41d63b84970992d82d78c185c01d970f"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00112_.png",
+      "sha256": "4b1ea0810f0964bb6d68a29206ba4f6cdcd787ffb271d96890bfa043f25fad3f"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00113_.png",
+      "sha256": "d24ef4b4f654f1485216848051a9c6818599474db151b3bdd45ab25862001d34"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00114_.png",
+      "sha256": "e0f01fb704fab2ee7070d829596c52a0efae0834e3907f0fc58be46bf60a31a3"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00115_.png",
+      "sha256": "404577930f891f6b009b580898dd4fceb114a998b56ac6286f7b95772b632a95"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00116_.png",
+      "sha256": "10e586d8b9de1c2d2fa4afd2145bfca4143acda050ed8e542e175a08edd954b3"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00117_.png",
+      "sha256": "87623e9c5a08ec140efcd50c13c29b62bda8463fdbcc3552c946c0cff02a0524"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00118_.png",
+      "sha256": "ad405978e3be435f0809e53e151ad1e43fb5e867544f6ef9ca608db9f32df0c0"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00119_.png",
+      "sha256": "2a85fc04cddaa737a27be14685169c06ca6ae6a29993c0295d645caa8341e03c"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00120_.png",
+      "sha256": "9bd71912da096a72a93678b29ef07d94754e6016c5edb3913999fcf646696996"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00121_.png",
+      "sha256": "fd48edc75d25376e6d4986282836a0db8341aece9a93951f30d6fa5d26db2169"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00122_.png",
+      "sha256": "be6677be29072a3d474e49d101c71e4571c8381b958adcef88d6ac94a2d10a1c"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00123_.png",
+      "sha256": "f09a51cd68814f32c2016a292e4541260f6873078d9a6bc8f6129b595135d1e0"
+    },
+    {
+      "path": "art-migration/generation/street-heal-minimax-v3/street-heal-v3_00124_.png",
+      "sha256": "4bf834547f6c2540525cc512b2078a881c14b871e42ba47d2cff37c28dbf9349"
+    }
+  ]
+}

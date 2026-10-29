@@ -1,5 +1,6 @@
 {
   "id": "street-spark-hit",
+  "kind": "pulse",
   "models": [
     "common_skinskill02_jinjishushi_01_2",
     "common_skinskill02_jinjishushi_01_2_ez"
@@ -9,7 +10,7 @@
     2048,
     968
   ],
-  "atlasSha256": "f7dda63f5b19e346ca30563d072c6517e9a510b442b034a37181448c73a261d0",
+  "atlasSha256": "e4229eed27e4a5be65cd674812e09dae566deb91692077d0f35ed160dd1097e9",
   "frames": [
     {
       "x": 2,
@@ -207,7 +208,8 @@
   "fps": 24,
   "frameCount": 32,
   "nativeTimelineRetained": true,
-  "blendMode": "add",
+  "blendMode": "normal-alpha",
+  "alphaEncoding": "max-channel alpha with unpremultiplied RGB; preserves generated source over black within rounding, avoids additive washout over bright existing effects",
   "render": {
     "x": -430.69499999999994,
     "y": -375.811875,
@@ -218,39 +220,40 @@
   "sourceOriginalFrames": 32,
   "sourceGeneratedFrames": 124,
   "originalPeakFrame": 4,
+  "retargetPeakFrame": 15,
   "generatedPeakFrame": 8,
   "sampling": [
     0,
+    1,
+    1,
     2,
+    2,
+    3,
+    3,
     4,
+    4,
+    5,
+    5,
     6,
+    6,
+    7,
+    7,
     8,
-    12,
-    17,
-    21,
-    25,
-    29,
-    34,
-    38,
-    42,
-    46,
+    15,
+    22,
+    30,
+    37,
+    44,
     51,
-    55,
-    59,
-    63,
-    68,
-    72,
-    76,
+    58,
+    66,
+    73,
     80,
-    85,
-    89,
-    93,
-    97,
-    102,
-    106,
-    110,
-    114,
-    119,
+    87,
+    94,
+    101,
+    109,
+    116,
     123
   ],
   "sourceCrop": [
@@ -260,10 +263,39 @@
     417
   ],
   "generationJob": "art-migration/generation/street-spark-hit-minimax-v2",
-  "visualReview": "All124 generated frames +16 enlarged, individual rendered output and actual before/after battle screenshots viewed. Camera-scale cap verified at4 parent scales.",
+  "visualReview": "Viewed all124 frames plus16 enlarged samples: compact new warning-stripe electrical contact spark, central safe silhouette, no old blue cloud, single peak8 then decay to black. Newly generated official guide preserved. Native timing still requires packaging/runtime validation.",
   "runtimeIntegrated": true,
   "maxScreenDiagonal": 240,
-  "screenSizeReason": "Actual native cutscene parent scales the effect dramatically. Cap new impact visual diagonal in logical screen units while retaining original parent, position, native clock/events and damage.",
-  "runtimeEvidence": "versions/0.36.0/effects-roster-runtime.json",
-  "battleEvidence": "versions/0.36.0/effects-live.json"
+  "nativeEventAuditPath": "art-migration/versions/0.37.0/effect-native-events.json",
+  "nativeEventAuditSha256": "44ee5c3bd998dd7cea5a0ac9e7374ff237381802872cb781826b389e4640a69b",
+  "nativeModels": {
+    "common_skinskill02_jinjishushi_01_2": {
+      "model": "common_skinskill02_jinjishushi_01_2",
+      "action": "common_skinskill02_jinjishushi_01_2",
+      "fps": 24,
+      "durationFrames": 32,
+      "durationMs": 1333.3333333333333,
+      "events": [
+        {
+          "name": "pia",
+          "frame0": 15,
+          "timeMs": 625
+        }
+      ]
+    },
+    "common_skinskill02_jinjishushi_01_2_ez": {
+      "model": "common_skinskill02_jinjishushi_01_2_ez",
+      "action": "common_skinskill02_jinjishushi_01_2",
+      "fps": 24,
+      "durationFrames": 32,
+      "durationMs": 1333.3333333333333,
+      "events": [
+        {
+          "name": "pia",
+          "frame0": 15,
+          "timeMs": 625
+        }
+      ]
+    }
+  }
 }

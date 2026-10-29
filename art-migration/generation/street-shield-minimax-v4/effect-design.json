@@ -1,0 +1,69 @@
+{
+  "id": "street-shield",
+  "models": [
+    "common_buff_hudun",
+    "common_buff_hudun_ez"
+  ],
+  "kind": "loop",
+  "native": {
+    "name": "common_buff_hudun",
+    "action": "common_buff_hudun",
+    "frames": 20,
+    "fps": 24,
+    "aabb": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "scale": 1,
+    "origin": [
+      512,
+      512
+    ],
+    "foregroundBox": [
+      396,
+      396,
+      627,
+      628
+    ],
+    "peakFrame": 17,
+    "allFramesNonempty": true
+  },
+  "referenceVideo": "G:\\comfylight\\ComfyUI_windows_portable_nvidia\\ComfyUI_windows_portable\\ComfyUI\\input\\street_street-shield_native_v2.mp4",
+  "referenceVideoSha256": "95880120b47800e31a2050d87d0732095e438aeb3a30571598eed920ecab0390",
+  "referenceCrop": [
+    186,
+    187,
+    836,
+    837
+  ],
+  "render": {
+    "x": -326.0,
+    "y": -325.0,
+    "width": 650.0,
+    "height": 650.0,
+    "alpha": 1
+  },
+  "prompt": "Create a seamless73-frame three-second LOOP of the EXACT thin teal safety-wire protective cage and amber hexagon tabs in the supplied same first/last/guide images. NO character or person. The wire cage remains nearly motionless and identical in shape, scale, position, topology and brightness throughout. Only a tiny soft shimmer can travel around the existing wire edges. All hoops and orange tabs remain stable and the center remains EMPTY BLACK. Absolutely NO central light, flare, flash, explosion, sparks, fire, particles, bubble, sphere, smoke, extra ring, fadeout or new object. This is a calm constant protective outline, not an impact. Identical first and last pose. Fixed camera, isolated centered foreground on pure BLACK RGB0,0,0, all elements inside central40% of canvas. Premium2.5D semi-realistic semi-cartoon absurd neighborhood hardware/enamel rendering, same exact visual material as reference.",
+  "sourceFrames": 73,
+  "referenceMotionRetimedSeconds": 2.5,
+  "newArtGuide": "local_game/assets/street/effects/neighborhood-six-guides.png",
+  "manualReview": "pending",
+  "runtimeIntegrated": false,
+  "referenceVideoSourcePath": "art-migration/references/vfx-native/street_street-shield_native_v2.mp4",
+  "referenceNativeMetadataPath": "art-migration/references/vfx-native/street-shield-native.json",
+  "imageGuide": "art-migration/references/vfx-guides/street-shield.png",
+  "imageGuideSha256": "e490a69e247d572ef91f3a8d0a92aef849c4bd75dd8cfba046ca4b9f2b5b28a4",
+  "newArtGuideSha256": "15da9d4afd9f1dfc1424031084398a0836cfb0e664b7c3bf6cc6878291be46bc",
+  "newArtGuideCell": [
+    0,
+    0
+  ],
+  "officialImagePrompt": "art-migration/prompts/vfx-neighborhood-six.txt",
+  "generationVideoReference": false,
+  "generationImageOnly": true,
+  "referenceVideoRole": "Native motion/phase analyzed offline; original video is NOT conditioned into this revision to prevent old-texture reconstruction.",
+  "revisionReason": "Earlier reference-video output reconstructed original effect; new motion is generated from official replacement still only, retargeted to the measured original native clock.",
+  "generationMethod": "MiniMaxFL2VA same first/last wire cage plus three consistent pose guides; all73 output frames synthesized by MiniMax, not duplicated still frames"
+}

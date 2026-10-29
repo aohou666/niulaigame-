@@ -1,0 +1,68 @@
+{
+  "id": "street-impact",
+  "models": [
+    "common_skill_tongyonghuiji",
+    "common_skill_tongyonghuiji_ez"
+  ],
+  "kind": "pulse",
+  "native": {
+    "name": "common_skill_tongyonghuiji",
+    "action": "common_skill_tongyonghuiji",
+    "frames": 9,
+    "fps": 24,
+    "aabb": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "scale": 1,
+    "origin": [
+      512,
+      512
+    ],
+    "foregroundBox": [
+      228,
+      309,
+      666,
+      667
+    ],
+    "peakFrame": 0,
+    "allFramesNonempty": true
+  },
+  "referenceVideo": "G:\\comfylight\\ComfyUI_windows_portable_nvidia\\ComfyUI_windows_portable\\ComfyUI\\input\\street_street-impact_native_v2.mp4",
+  "referenceVideoSha256": "aa0457d3f074d0037508a2b730ee909cf4dac6838c02c1b56e4bc76f7cfe9258",
+  "referenceCrop": [
+    -166,
+    -126,
+    1061,
+    1101
+  ],
+  "render": {
+    "x": -678.0,
+    "y": -638.0,
+    "width": 1227.0,
+    "height": 1227.0,
+    "alpha": 1
+  },
+  "prompt": "Create a NEW production video-game VFX animation using <Image 1> as the ONLY visible design reference. One ivory chalk crescent makes a single short sweep with3 tiny orange hardware chips and a restrained contact flash; then all elements fade to black. No morphing into a different old slash effect. Premium2.5D semi-realistic semi-cartoon absurd contemporary neighborhood hardware/enamel materials, same teal/ivory/orange palette and tactile lighting as Image1. Isolated foreground centered in central35% of frame throughout. Entire effect, particles and glow inside central40%, huge completely empty solid BLACK RGB0,0,0 margins. Fixed camera, no floor, environment, character or text. Five seconds at24fps. The exact object identity and materials must remain consistent throughout; no new object or second effect appears.",
+  "sourceFrames": 124,
+  "referenceMotionRetimedSeconds": 2.5,
+  "newArtGuide": "local_game/assets/street/effects/neighborhood-six-guides.png",
+  "manualReview": "pending",
+  "runtimeIntegrated": false,
+  "referenceVideoSourcePath": "art-migration/references/vfx-native/street_street-impact_native_v2.mp4",
+  "referenceNativeMetadataPath": "art-migration/references/vfx-native/street-impact-native.json",
+  "imageGuide": "art-migration/references/vfx-guides/street-impact.png",
+  "imageGuideSha256": "5814041fe6813f14c2603f52272ae13d9f5417aec7419d7c2d9fe8557f76a453",
+  "newArtGuideSha256": "15da9d4afd9f1dfc1424031084398a0836cfb0e664b7c3bf6cc6878291be46bc",
+  "newArtGuideCell": [
+    2,
+    0
+  ],
+  "officialImagePrompt": "art-migration/prompts/vfx-neighborhood-six.txt",
+  "generationVideoReference": false,
+  "generationImageOnly": true,
+  "referenceVideoRole": "Native motion/phase analyzed offline; original video is NOT conditioned into this revision to prevent old-texture reconstruction.",
+  "revisionReason": "Earlier reference-video output reconstructed original effect; new motion is generated from official replacement still only, retargeted to the measured original native clock."
+}

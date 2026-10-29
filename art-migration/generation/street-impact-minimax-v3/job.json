@@ -1,0 +1,543 @@
+{
+  "promptId": "6d891161-bb8a-471c-8255-40f88a8975f7",
+  "submittedUtc": "2026-10-29T07:57:57Z",
+  "status": "generated-unreviewed",
+  "provider": "local-comfyui",
+  "workflowSha256": "444712c6013703b32ab572abf8d8b0fe19ffc0cec981a2bd03663d62011b73ac",
+  "response": {
+    "prompt_id": "6d891161-bb8a-471c-8255-40f88a8975f7",
+    "number": -536,
+    "node_errors": {}
+  },
+  "comfyStatus": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "6d891161-bb8a-471c-8255-40f88a8975f7",
+          "timestamp": 1793261067924
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "1",
+            "2",
+            "3",
+            "6"
+          ],
+          "prompt_id": "6d891161-bb8a-471c-8255-40f88a8975f7",
+          "timestamp": 1793261067931
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "6d891161-bb8a-471c-8255-40f88a8975f7",
+          "timestamp": 1793261123579
+        }
+      ]
+    ]
+  },
+  "outputs": [
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00001_.png",
+      "sha256": "1bd565251494912e07a91e535e80925d797eb5ddc346e0542fb0aa3acfe7d1e6"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00002_.png",
+      "sha256": "5275149a30e284e01bf44e8dee0b8ce7fc72ae76cf0500567657463df551c5ee"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00003_.png",
+      "sha256": "0f45c5a74e2e18b2ffa658c2eb6cf331201cf25e144dc8bd4524e55aac345718"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00004_.png",
+      "sha256": "c0b7793ed02603888f3f1c08572991eb6f651d7747ae2efbc0e9d319b93e622b"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00005_.png",
+      "sha256": "ff3941d02468478fe9ab4601fea8c19f570acaa09888b7bb74c143da57f96411"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00006_.png",
+      "sha256": "e435fb04a43ebc85344db628c10c3b13d4ebba3cfd576e79c96913fc8aaf3016"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00007_.png",
+      "sha256": "e0bf76bfe6d4778636777917136a9a29de78909e1644d6477e277e16ae6d87d0"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00008_.png",
+      "sha256": "38f9893cbbacb36be3c3b62f512c28bcc9ff526f24b493175661d2364a0957a7"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00009_.png",
+      "sha256": "f0cccec69b6e448e08fa952366738392b04949ee867983f88f2b014c81971e88"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00010_.png",
+      "sha256": "0b44894b86e8ab98f84f9e36e6df94cd2ab364c0ad52ed1c63de5bace9c208e0"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00011_.png",
+      "sha256": "091971fa5377d878705a7352c680a1c067ff2e3db24a55308ea6b388c8ae324c"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00012_.png",
+      "sha256": "3014762d33ed85a3c9a1d8ad44faaca8577a3299a21d67f6cfdcae03e29c2a42"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00013_.png",
+      "sha256": "fd50b3e4265b36906f261e7b58b2d51a491894421d2450b496096782bd6569d7"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00014_.png",
+      "sha256": "ce8edb776f80e3411d250ae22880731279fdebdb8f7a850a8dd252a58e585d2d"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00015_.png",
+      "sha256": "5192660ad198f2ecb6434b49c41f45d99b7823f2abdd6dfc9a4e0554d9b7ec3e"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00016_.png",
+      "sha256": "09b1ed7a33abd34fcd5b4e30e53cbee9f36ed06af6f1746faa5fe61b93941abd"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00017_.png",
+      "sha256": "7ac2ede183fcaeef818ea3310b98d5c83d5b0b029632ae99fb6c50e0558690df"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00018_.png",
+      "sha256": "e420b51573b51bf6d7419cf515fd9d4b5f84fc31a729220ef45154e9c7101580"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00019_.png",
+      "sha256": "53de1a4e45f01e4ca57b101be7ff1666c6c8d914a3687a9738c4f2ea6a63cbc9"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00020_.png",
+      "sha256": "08579a553a980222d5f5c296c33b6b2fa318073795b853ef139176077fc23eff"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00021_.png",
+      "sha256": "36ed2646d701658b93e5a1c12a804422daf32b2f48eec9cfb4c05891ff263c3b"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00022_.png",
+      "sha256": "10c3b228091e31074b78082408e0af688f7b3f59025999faa7aa7489ea291628"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00023_.png",
+      "sha256": "433216fabde9c959d96e4770ad1d71c8d64b0aa367eff61ab63e7810b1c56f59"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00024_.png",
+      "sha256": "4aaba825e495f8affdfd2f3c97cdba292644d8267ddaee425da67fdefda2a854"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00025_.png",
+      "sha256": "61598223c9c1dec41da808d1deca7562eb711089dc3945a171e22763809b1936"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00026_.png",
+      "sha256": "2f1ecfe678be7c0a0930fa420b35feac7d15973803e6879026f181a83a274adf"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00027_.png",
+      "sha256": "1697a133af3f763b4ad5de5c832f71875f7ee12f09d8cc1bd0bda48ac06f73aa"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00028_.png",
+      "sha256": "842df3f74362894ab22525e2639ef0f432941de3919b7093671bcecab3902256"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00029_.png",
+      "sha256": "29e714afd9f39b110574d7af09bc1cf0030e3bbf62871699af996ad69403a581"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00030_.png",
+      "sha256": "e6b72edba9df4db3cb3d52b198a1355900f046abd56196da08d38279e673a6e0"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00031_.png",
+      "sha256": "967d86844df5f98a309366243915861f619230d6cd2bd443d25b2d9561f15b0a"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00032_.png",
+      "sha256": "b108bbeb9708f8de0c8d24c0d4aa11c881dcf1f5a8d25aaef32cf71ebda6aa58"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00033_.png",
+      "sha256": "4cd930a6262ce3bb68c784456dec30396ee9c05d4c2318480e61395282fc92df"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00034_.png",
+      "sha256": "de3a0af1089c7146d3e9a48651cf7c871e9cdf294195b7c777c7235d05da5bf2"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00035_.png",
+      "sha256": "248272e832bf9e7717e1a1f486e792c3f3d03f049dce41db891c061fdf7fc205"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00036_.png",
+      "sha256": "66b4ff342593085b57cf7403eab4bed567ac9dd1a0aea3304f9f02ff63bfd998"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00037_.png",
+      "sha256": "6cd9b2ef27fe45eb106f0592cc2469f933dcae3ef416d4077c0cc02c46e25c7c"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00038_.png",
+      "sha256": "ac8aa1e68e6b51b91fa1bbbcac1eed987aadf549e8b708100e4de8797799e2e6"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00039_.png",
+      "sha256": "a31e156c23c04daef08769278716c8550c5ff89e2ab4510932fc8c354428338e"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00040_.png",
+      "sha256": "31eb9672eebb8f8cabfe7e6186b5e545a71027737c6b08308592673049d2511d"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00041_.png",
+      "sha256": "665347fe7111719a8add7b04223d3c1b32282d921976538a1d92c8f3b7beafa2"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00042_.png",
+      "sha256": "ba968f0351a1f21cbb6e372e0854511e7952277a7cd0209695c2db89fe16097e"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00043_.png",
+      "sha256": "5ce494e6764f0247784bd64b394fa70ae592a0c41c84e3229004c86c74f6af3f"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00044_.png",
+      "sha256": "459b25c2d214b61094aa152567096abf5539076e673fd17b0c04ca22d2ec14ae"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00045_.png",
+      "sha256": "b12ec1747122e55921410f69276b7342ae63124f152a4fa33a84691e5b1a5148"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00046_.png",
+      "sha256": "02d478b3dab41ddaf851b21160aa4af2788cddf57a1fd612b002e27157ba0382"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00047_.png",
+      "sha256": "b635dd9c6e9aab8adfcb1aa75adb0c2d7b836c4a3c639ba0a4c90ab439ee84ad"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00048_.png",
+      "sha256": "846764b3af773b6ae16f41b1f1f1d1e9e0d90e514b6e819fe0317d517e9e5822"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00049_.png",
+      "sha256": "a6f90e1035c5f246a0b0af1b42a2ee3a3184bf67ee8ef48478dff0dede3222ca"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00050_.png",
+      "sha256": "f090a7cc1c582f39eeeed228b62b3ba80cba4b49128e4b02d91f6b240d26c303"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00051_.png",
+      "sha256": "b995325afbd86b4319c3f4cfc2062482af8eb29fa9aa8ecf6ad0578e0779b8d1"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00052_.png",
+      "sha256": "e06225d0d86e3e2327fc7e20fe4448395a46a96471725948351a3f624d0f3698"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00053_.png",
+      "sha256": "bb12cebe4909c50f9c59500a5a3fbe4e06c37c3663d259d4a5234f9ce32f988e"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00054_.png",
+      "sha256": "4fca71c2725be05b4e1a4bcb4bf4ba5553a67d5ef9cf6c2998dc5244c5f8fb8b"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00055_.png",
+      "sha256": "264f78d429817ab90551a31f65cbebb30d2848bdb3398d5829611283c6ed859f"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00056_.png",
+      "sha256": "608501d0969bc52baad48e3afd84aca963a2a0bfb4045e10be6c4882fc755411"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00057_.png",
+      "sha256": "2b0b67f063e78a6445e026b2c9172150b6e6fd4aa55fbc668ca51b73052a908f"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00058_.png",
+      "sha256": "75be922c75fa3bd980662d339d25045e48264219d8cc15267a7b575d9afe306e"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00059_.png",
+      "sha256": "d271f8d3255e79b27c6140c8cc55e7a6f8cc52c19674e786bea50f9354ef2247"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00060_.png",
+      "sha256": "6f1e5f4945234596154a78212251f7428ce3e8215d23a8610477c27f8fe7ed43"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00061_.png",
+      "sha256": "9b9a3cb3a9d50ce984c099905c980e4d63ea7862cd63cbd7342240bc16a68447"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00062_.png",
+      "sha256": "71af47a4f161799b15d6d1f86ab69cadd7f206793b1e34d64492293d17718857"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00063_.png",
+      "sha256": "631829c388b5860a5ae4563ef4bd996cea1322c8710c900f0b23dcd516aa4c95"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00064_.png",
+      "sha256": "51f24d30f9a2309ff58db8705d4d597c04fb04b4ce2075b0c4e02251a3c64353"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00065_.png",
+      "sha256": "a7aab07de919517253cf7d258728a81456f613957e6cf10b4bf38cd6f067ee93"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00066_.png",
+      "sha256": "bf055fa705e399f8832ce659160e5b009e450b5bbf75993a0c81e23fa8511bd9"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00067_.png",
+      "sha256": "cdde95488cb4bdee6d77e57b495def0c6ac1e3ba31224b5091e1d37acf6b2d42"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00068_.png",
+      "sha256": "2c3e0146c6b1bf4205880a71911a1b2ea7e9b7de487547cc8c316c4571657107"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00069_.png",
+      "sha256": "bf54ff46be855d0df15a272da6ab39c8fe903e36da13553ef0449fefdc1ffdd3"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00070_.png",
+      "sha256": "519f8ba3c9c84473f21c0c09017c15116d6b0d5d262ce97f2ffc2b3f80aaf8b8"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00071_.png",
+      "sha256": "7bbd96b09ccae086078d8d1e0dde22e9a74bac429d9dfe3f87c4c8f950bfe6b7"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00072_.png",
+      "sha256": "8d530c06b58d283f5cc8a82d1b4fdfdaba0e60cfe831d17e18171ec9ca48b69e"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00073_.png",
+      "sha256": "0558ad629249d3a7bc95f8205be096b8bdaf955a268c1ec51311ddb07bab0943"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00074_.png",
+      "sha256": "2d338a7bb3738b920768b907b80de0c43977fdb820cad718372a619d0dffe8ff"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00075_.png",
+      "sha256": "6e08fbb5f2c6d29378898d59210d468c635cffc8994fcdd2436c09da9a1282c0"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00076_.png",
+      "sha256": "371c40fad70f8d0dcb392646062d4b39ce7ac943d02dbde8c2d918fc68d71dbb"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00077_.png",
+      "sha256": "e4b1f2d810db70ef3f3416f903c574c12ef22827700ed8a83f589fcf35d8b4b7"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00078_.png",
+      "sha256": "d95faec6e38ab9c122f1d10f48f558783abad99f516ba349f2a2955295d6f215"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00079_.png",
+      "sha256": "5901245d1f7c7fe1806dee2fbd5cb7ebbbc83bd671c2732de230fa7c6d4c19b6"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00080_.png",
+      "sha256": "9f205ba910e5a17044f4997932757605671ad695850b2805e6efe6254fa64e7d"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00081_.png",
+      "sha256": "43bee43bf86310a56784359f09c94a7225ac2d9da0b122450129acd0386f8b38"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00082_.png",
+      "sha256": "12db4602eb49876915c6265ad86a0b6475fc7c48a8256ad3c690103518d94f7d"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00083_.png",
+      "sha256": "26bd6570afdea2fc919362691031fcee05f3d8e5ae3abe5878aed1001189863a"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00084_.png",
+      "sha256": "8a5222f4bdd2f876a2fb170a350b5727937a9fa6bd0f8461febebe3dfeeb7049"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00085_.png",
+      "sha256": "c8c710a9c1a7913db273edfddf877597ad051df9078439c150c0f337267e2dcc"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00086_.png",
+      "sha256": "5a4a0325d088c022ea42c4d8cb65f7236b5bb37ec109d23eccbe031ecc0e2678"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00087_.png",
+      "sha256": "19d359c007e443a1fa4bf0d9d60802b7ba9979bdad0dd72402a36b9b638e8341"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00088_.png",
+      "sha256": "db7663b6b38903a43e92b0d03ecb8c0527897fe211d00346989b849f4a64cd00"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00089_.png",
+      "sha256": "3a4b5eacda654b6c8ac83aba1f649f81a0ce09fec433dfe873841700cced6847"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00090_.png",
+      "sha256": "4545e53ae65b53c8c11948c25837f435adbd21000ede2a692db5f043a3a73128"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00091_.png",
+      "sha256": "4277747e049e25637efd70d03e77d8f8bb94cd6fefd138ef79d0c32d0bf4c4a6"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00092_.png",
+      "sha256": "25a194f8adbeb07b167980191c89d14aa1a5536d0b9bcbe7e5cb3438afea590d"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00093_.png",
+      "sha256": "9dc52ab4658842bc93cfa32667995415168dddbe81d4b0a6b38ef021a52aa1e1"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00094_.png",
+      "sha256": "569ecfea2d21f9b950a757cbd2157beb58187f81eea0a18f326dafe519e12d68"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00095_.png",
+      "sha256": "c523435a69c2bc039a4b58b7b7159cce44f97427bdd17738a4cc081b86c6324a"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00096_.png",
+      "sha256": "b72e044b7fe611dc0706578f57f0bfdf4af969f7753b155c827ec08ad9e5b674"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00097_.png",
+      "sha256": "0e7215bd9992b97bfa6a00f18049432483eff7f121a8345c25b8653d48259574"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00098_.png",
+      "sha256": "27afacc575226f06b6fd0a7b47a7bb9bf283021f22549db9dedb49fd7872b325"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00099_.png",
+      "sha256": "c4aab11b1e7c3270c25c57fe56e8dde03ac150950f0e98596d035b7cccb10fe5"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00100_.png",
+      "sha256": "2b337b6d9feaf78e458ee10ca234878c600fd4833aa50bb2e36c0418c3855758"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00101_.png",
+      "sha256": "ae111e0a8d17c5fee3e1d4f9b7cddd2e85858efe94f845d39f97c852866136ca"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00102_.png",
+      "sha256": "3bded435992d88748acfaa360431136cea22b2ce600ecd717faae049bac81f78"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00103_.png",
+      "sha256": "bcfbec3efbc02191cf6d57a792025d94ea6cb807c8bb1ba8eafcce69fac6e24a"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00104_.png",
+      "sha256": "83d8a185c7c9845e7c0f4af71fb02063ec26fe90f7506a8ae031d55dac29fb4c"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00105_.png",
+      "sha256": "45f2a61ec3dd62c8bbf792632ff1f94ccd7ef285034bdf23eeb999af53d697c6"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00106_.png",
+      "sha256": "72a116d1bd388d9b20b4e912632b365f17fd6d0ec34c60a00d9b81124bac925a"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00107_.png",
+      "sha256": "cdbe2d5acaf8c89c65d3c7f0a2068154f455d882afea96c0181102017a454de7"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00108_.png",
+      "sha256": "9b1e38ea6b31b7b83a56f06f67fc0d35df0761593db1bb410f7ac8d130e6e4d6"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00109_.png",
+      "sha256": "ffb9ce10e1f01977b321a0d9bdd75bfcae57e69906284f6922be34f2283c6770"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00110_.png",
+      "sha256": "bccda3b0a50a848ff10578af15bcb29958665a2af0be110be1964a2819533abf"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00111_.png",
+      "sha256": "3eabcccf5b7874dbaf7e3989e0d5bdafe6316396e57523accfc658c5edf274b7"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00112_.png",
+      "sha256": "2b91cf130ba4bf9671859dd51a205fd2888ebf742b1bd4658605cd5513ffb479"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00113_.png",
+      "sha256": "2b91cf130ba4bf9671859dd51a205fd2888ebf742b1bd4658605cd5513ffb479"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00114_.png",
+      "sha256": "2b91cf130ba4bf9671859dd51a205fd2888ebf742b1bd4658605cd5513ffb479"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00115_.png",
+      "sha256": "2b91cf130ba4bf9671859dd51a205fd2888ebf742b1bd4658605cd5513ffb479"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00116_.png",
+      "sha256": "2b91cf130ba4bf9671859dd51a205fd2888ebf742b1bd4658605cd5513ffb479"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00117_.png",
+      "sha256": "2b91cf130ba4bf9671859dd51a205fd2888ebf742b1bd4658605cd5513ffb479"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00118_.png",
+      "sha256": "2b91cf130ba4bf9671859dd51a205fd2888ebf742b1bd4658605cd5513ffb479"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00119_.png",
+      "sha256": "2b91cf130ba4bf9671859dd51a205fd2888ebf742b1bd4658605cd5513ffb479"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00120_.png",
+      "sha256": "2b91cf130ba4bf9671859dd51a205fd2888ebf742b1bd4658605cd5513ffb479"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00121_.png",
+      "sha256": "2b91cf130ba4bf9671859dd51a205fd2888ebf742b1bd4658605cd5513ffb479"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00122_.png",
+      "sha256": "2b91cf130ba4bf9671859dd51a205fd2888ebf742b1bd4658605cd5513ffb479"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00123_.png",
+      "sha256": "2b91cf130ba4bf9671859dd51a205fd2888ebf742b1bd4658605cd5513ffb479"
+    },
+    {
+      "path": "art-migration/generation/street-impact-minimax-v3/street-impact-v3_00124_.png",
+      "sha256": "2b91cf130ba4bf9671859dd51a205fd2888ebf742b1bd4658605cd5513ffb479"
+    }
+  ]
+}

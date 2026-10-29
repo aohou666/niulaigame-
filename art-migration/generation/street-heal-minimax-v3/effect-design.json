@@ -1,0 +1,68 @@
+{
+  "id": "street-heal",
+  "models": [
+    "common_skill_huifu",
+    "common_skill_huifu_ez"
+  ],
+  "kind": "pulse",
+  "native": {
+    "name": "common_skill_huifu",
+    "action": "common_skill_huifu",
+    "frames": 28,
+    "fps": 24,
+    "aabb": {
+      "x": -101.78,
+      "y": -277.32,
+      "width": 206.52,
+      "height": 410.81
+    },
+    "scale": 1,
+    "origin": [
+      510.52,
+      583.915
+    ],
+    "foregroundBox": [
+      352,
+      361,
+      671,
+      729
+    ],
+    "peakFrame": 14,
+    "allFramesNonempty": true
+  },
+  "referenceVideo": "G:\\comfylight\\ComfyUI_windows_portable_nvidia\\ComfyUI_windows_portable\\ComfyUI\\input\\street_street-heal_native_v2.mp4",
+  "referenceVideoSha256": "28662cd8e28aa09203b44f586d4417eb4ca15d4752009a1f1dfab9e6c9a9ed71",
+  "referenceCrop": [
+    -4,
+    30,
+    1027,
+    1061
+  ],
+  "render": {
+    "x": -514.52,
+    "y": -553.915,
+    "width": 1031.0,
+    "height": 1031.0,
+    "alpha": 1
+  },
+  "prompt": "Create a NEW production video-game VFX animation using <Image 1> as the ONLY visible design reference. A mint-teal first-aid plus emblem rises gently above a thin amber ring, then the entire plus and ring fade to black. The plus exists from frame0. No green column, green pillar, orb, original graphics or transformation. Premium2.5D semi-realistic semi-cartoon absurd contemporary neighborhood hardware/enamel materials, same teal/ivory/orange palette and tactile lighting as Image1. Isolated foreground centered in central35% of frame throughout. Entire effect, particles and glow inside central40%, huge completely empty solid BLACK RGB0,0,0 margins. Fixed camera, no floor, environment, character or text. Five seconds at24fps. The exact object identity and materials must remain consistent throughout; no new object or second effect appears.",
+  "sourceFrames": 124,
+  "referenceMotionRetimedSeconds": 2.5,
+  "newArtGuide": "local_game/assets/street/effects/neighborhood-six-guides.png",
+  "manualReview": "pending",
+  "runtimeIntegrated": false,
+  "referenceVideoSourcePath": "art-migration/references/vfx-native/street_street-heal_native_v2.mp4",
+  "referenceNativeMetadataPath": "art-migration/references/vfx-native/street-heal-native.json",
+  "imageGuide": "art-migration/references/vfx-guides/street-heal.png",
+  "imageGuideSha256": "858f55149e5e55561034086c87854e9650c766bc6b8dfd8443371df6698f77e8",
+  "newArtGuideSha256": "15da9d4afd9f1dfc1424031084398a0836cfb0e664b7c3bf6cc6878291be46bc",
+  "newArtGuideCell": [
+    0,
+    1
+  ],
+  "officialImagePrompt": "art-migration/prompts/vfx-neighborhood-six.txt",
+  "generationVideoReference": false,
+  "generationImageOnly": true,
+  "referenceVideoRole": "Native motion/phase analyzed offline; original video is NOT conditioned into this revision to prevent old-texture reconstruction.",
+  "revisionReason": "Earlier reference-video output reconstructed original effect; new motion is generated from official replacement still only, retargeted to the measured original native clock."
+}

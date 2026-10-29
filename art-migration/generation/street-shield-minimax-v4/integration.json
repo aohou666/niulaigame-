@@ -1,0 +1,233 @@
+{
+  "id": "street-shield",
+  "kind": "loop",
+  "models": [
+    "common_buff_hudun",
+    "common_buff_hudun_ez"
+  ],
+  "atlas": "assets/street/effects/street-shield/effect.webp",
+  "atlasSize": [
+    1848,
+    744
+  ],
+  "atlasSha256": "433c6fd8f51c23262ee33ee666e66402d2dab714c7c936909430da36ba6b9ced",
+  "frames": [
+    {
+      "x": 2,
+      "y": 2,
+      "w": 227,
+      "h": 244
+    },
+    {
+      "x": 233,
+      "y": 2,
+      "w": 227,
+      "h": 244
+    },
+    {
+      "x": 464,
+      "y": 2,
+      "w": 227,
+      "h": 244
+    },
+    {
+      "x": 695,
+      "y": 2,
+      "w": 227,
+      "h": 244
+    },
+    {
+      "x": 926,
+      "y": 2,
+      "w": 227,
+      "h": 244
+    },
+    {
+      "x": 1157,
+      "y": 2,
+      "w": 227,
+      "h": 244
+    },
+    {
+      "x": 1388,
+      "y": 2,
+      "w": 227,
+      "h": 244
+    },
+    {
+      "x": 1619,
+      "y": 2,
+      "w": 227,
+      "h": 244
+    },
+    {
+      "x": 2,
+      "y": 250,
+      "w": 227,
+      "h": 244
+    },
+    {
+      "x": 233,
+      "y": 250,
+      "w": 227,
+      "h": 244
+    },
+    {
+      "x": 464,
+      "y": 250,
+      "w": 227,
+      "h": 244
+    },
+    {
+      "x": 695,
+      "y": 250,
+      "w": 227,
+      "h": 244
+    },
+    {
+      "x": 926,
+      "y": 250,
+      "w": 227,
+      "h": 244
+    },
+    {
+      "x": 1157,
+      "y": 250,
+      "w": 227,
+      "h": 244
+    },
+    {
+      "x": 1388,
+      "y": 250,
+      "w": 227,
+      "h": 244
+    },
+    {
+      "x": 1619,
+      "y": 250,
+      "w": 227,
+      "h": 244
+    },
+    {
+      "x": 2,
+      "y": 498,
+      "w": 227,
+      "h": 244
+    },
+    {
+      "x": 233,
+      "y": 498,
+      "w": 227,
+      "h": 244
+    },
+    {
+      "x": 464,
+      "y": 498,
+      "w": 227,
+      "h": 244
+    },
+    {
+      "x": 695,
+      "y": 498,
+      "w": 227,
+      "h": 244
+    }
+  ],
+  "fps": 24,
+  "frameCount": 20,
+  "nativeTimelineRetained": true,
+  "blendMode": "normal-alpha",
+  "alphaEncoding": "max-channel alpha with unpremultiplied RGB; preserves generated source over black within rounding, avoids additive washout over bright existing effects",
+  "render": {
+    "x": -110.1796875,
+    "y": -142.1875,
+    "width": 288.18359375,
+    "height": 309.765625,
+    "alpha": 1
+  },
+  "sourceOriginalFrames": 20,
+  "sourceGeneratedFrames": 73,
+  "originalPeakFrame": 17,
+  "retargetPeakFrame": 17,
+  "generatedPeakFrame": 17,
+  "sampling": [
+    0,
+    4,
+    8,
+    11,
+    15,
+    19,
+    23,
+    27,
+    30,
+    34,
+    38,
+    42,
+    45,
+    49,
+    53,
+    57,
+    61,
+    64,
+    68,
+    72
+  ],
+  "sourceCrop": [
+    170,
+    144,
+    397,
+    388
+  ],
+  "generationJob": "art-migration/generation/street-shield-minimax-v4",
+  "visualReview": "Viewed all73 frames plus16 enlarged. Thin teal safety-wire hoops and amber tabs remain coherent and continuously visible, center remains empty black, subtle wire shimmer only, no explosion/particles/old blue bubble. First/last mean absolute RGB difference0.444 on0-255 scale; no edge clipping. Generated all73 frames with MiniMaxFL2VA same first/last and guide conditions, not copied still frames.",
+  "runtimeIntegrated": true,
+  "maxScreenDiagonal": 240,
+  "nativeEventAuditPath": "art-migration/versions/0.37.0/effect-native-events.json",
+  "nativeEventAuditSha256": "44ee5c3bd998dd7cea5a0ac9e7374ff237381802872cb781826b389e4640a69b",
+  "nativeModels": {
+    "common_buff_hudun": {
+      "model": "common_buff_hudun",
+      "action": "common_buff_hudun",
+      "fps": 24,
+      "durationFrames": 20,
+      "durationMs": 833.3333333333334,
+      "events": []
+    },
+    "common_buff_hudun_ez": {
+      "model": "common_buff_hudun_ez",
+      "action": "common_buff_hudun",
+      "fps": 24,
+      "durationFrames": 19,
+      "durationMs": 791.6666666666666,
+      "events": []
+    }
+  },
+  "modelOverrides": {
+    "common_buff_hudun_ez": {
+      "fps": 24,
+      "frameCount": 19,
+      "frameMap": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "visualPeakFrame": 16
+    }
+  }
+}

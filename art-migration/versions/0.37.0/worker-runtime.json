@@ -1,0 +1,43 @@
+{
+  "pass": true,
+  "tests": [
+    {
+      "scenario": "deadline-before-collection-and-foreign-queue-isolation",
+      "pass": true,
+      "calls": [
+        [
+          "/queue",
+          null
+        ],
+        [
+          "/queue",
+          {
+            "delete": [
+              "own-pending"
+            ]
+          }
+        ],
+        [
+          "/interrupt",
+          {}
+        ]
+      ],
+      "status": "deadline-stopped"
+    },
+    {
+      "scenario": "candidate-QA-exception-does-not-disable-deadline-monitor",
+      "pass": true,
+      "calls": [
+        [
+          "/history?max_items=1000",
+          null
+        ],
+        [
+          "/queue",
+          null
+        ]
+      ],
+      "status": "active"
+    }
+  ]
+}
