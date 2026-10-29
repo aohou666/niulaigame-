@@ -1,0 +1,17 @@
+{
+  "provider": "official-built-in-image_gen",
+  "review": "79x81 alpha gray composite and native NightDemonPvpViewSkin enabled/disabled screenshots inspected",
+  "scope": "two independent button states; not full activity or reward transaction",
+  "outputs": {
+    "enabled": {
+      "source": "art-migration/generation/rank-claim-buttons-v1/official-enabled-source.png",
+      "sha256": "b08dfccf956dc9342eb623705da7ce6a3cef35043a96e36f875f3c0e861a3aba",
+      "prompt": "art-migration/generation/rank-claim-buttons-v1/prompt-enabled.txt"
+    },
+    "disabled": {
+      "source": "art-migration/generation/rank-claim-buttons-v1/official-disabled-source.png",
+      "sha256": "a1736cc370c0fa1bf390f0d3ec0087a2cc964a03af2eb0985a923db7bb0addf8",
+      "prompt": "art-migration/generation/rank-claim-buttons-v1/prompt-disabled.txt"
+    }
+  }
+}
