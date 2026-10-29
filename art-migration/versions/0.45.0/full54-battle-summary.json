@@ -1,0 +1,677 @@
+{
+  "complete": true,
+  "pass": false,
+  "checked": 54,
+  "passed": 44,
+  "criterion": "Target model distinct from all enemy models; target attack at impact and skill at native halfway, no browser/resource error. Failures retained; no automatic inference that timeout is game bug.",
+  "results": [
+    {
+      "hero": 1,
+      "pass": false,
+      "observedTargetActions": {
+        "jineng": 44
+      },
+      "error": "page.waitForFunction: Timeout 90000ms exceeded.",
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8792.json"
+    },
+    {
+      "hero": 2,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 32,
+        "jineng": 28
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8793.json"
+    },
+    {
+      "hero": 3,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 17,
+        "jineng": 25
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8794.json"
+    },
+    {
+      "hero": 4,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 40,
+        "jineng": 56
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8795.json"
+    },
+    {
+      "hero": 5,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 27,
+        "jineng": 23,
+        "shouji": 10
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8792.json"
+    },
+    {
+      "hero": 6,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 25,
+        "jineng": 36
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8793.json"
+    },
+    {
+      "hero": 7,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 19,
+        "jineng": 55
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8794.json"
+    },
+    {
+      "hero": 8,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 29,
+        "jineng": 35
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8795.json"
+    },
+    {
+      "hero": 9,
+      "pass": false,
+      "observedTargetActions": {
+        "gongji": 125,
+        "jineng": 40
+      },
+      "error": "page.waitForFunction: Timeout 90000ms exceeded.",
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8792.json"
+    },
+    {
+      "hero": 10,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 36,
+        "jineng": 19
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8793.json"
+    },
+    {
+      "hero": 11,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 30,
+        "jineng": 34
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8794.json"
+    },
+    {
+      "hero": 13,
+      "pass": true,
+      "observedTargetActions": {
+        "daiji": 1085,
+        "gongji": 27,
+        "jineng": 15,
+        "shouji": 9
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8795.json"
+    },
+    {
+      "hero": 14,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 31,
+        "jineng": 17
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8792.json"
+    },
+    {
+      "hero": 15,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 33,
+        "jineng": 24
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8793.json"
+    },
+    {
+      "hero": 16,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 25,
+        "jineng": 17
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8794.json"
+    },
+    {
+      "hero": 18,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 25,
+        "jineng": 25
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8795.json"
+    },
+    {
+      "hero": 19,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 26,
+        "jineng": 38
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8792.json"
+    },
+    {
+      "hero": 20,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 31,
+        "jineng": 25
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8793.json"
+    },
+    {
+      "hero": 21,
+      "pass": false,
+      "observedTargetActions": {
+        "gongji": 192
+      },
+      "error": "page.waitForFunction: Timeout 90000ms exceeded.",
+      "pageErrors": [
+        {
+          "message": "\u6587\u4ef6\u52a0\u8f7d\u5931\u8d25:assets/street/environments/noodle-plaza-battle.jpg?v=ecd9922fad4e932d",
+          "stack": "1001: \u6587\u4ef6\u52a0\u8f7d\u5931\u8d25:assets/street/environments/noodle-plaza-battle.jpg?v=ecd9922fad4e932d\n    at new r (http://127.0.0.1:8794/js/all.min_32285d70.js:12:19345)\n    at s (http://127.0.0.1:8794/js/all.min_32285d70.js:12:30592)\n    at r.$notifyListener (http://127.0.0.1:8794/js/all.min_32285d70.js:1:2646)\n    at r.dispatchEvent (http://127.0.0.1:8794/js/all.min_32285d70.js:1:2418)\n    at r.dispatchEventWith (http://127.0.0.1:8794/js/all.min_32285d70.js:1:3008)\n    at http://127.0.0.1:8794/js/all.min_32285d70.js:7:38782"
+        }
+      ],
+      "resourceFailures": [
+        {
+          "name": "street_noodle_plaza_battle_jpg",
+          "url": "assets/street/environments/noodle-plaza-battle.jpg?v=ecd9922fad4e932d",
+          "type": "image",
+          "keys": [
+            "$hashCode",
+            "$eventPhase",
+            "$currentTarget",
+            "$target",
+            "$isDefaultPrevented",
+            "$isPropagationStopped",
+            "$isPropagationImmediateStopped",
+            "$type",
+            "$bubbles",
+            "$cancelable",
+            "data",
+            "itemsLoaded",
+            "itemsTotal",
+            "groupName",
+            "resItem"
+          ]
+        }
+      ],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8794.json"
+    },
+    {
+      "hero": 22,
+      "pass": false,
+      "observedTargetActions": {},
+      "error": "page.waitForFunction: Timeout 90000ms exceeded.",
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8795.json"
+    },
+    {
+      "hero": 23,
+      "pass": false,
+      "observedTargetActions": {
+        "gongji": 103
+      },
+      "error": "page.waitForFunction: Timeout 90000ms exceeded.",
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8792.json"
+    },
+    {
+      "hero": 24,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 37,
+        "jineng": 21
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8793.json"
+    },
+    {
+      "hero": 25,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 46,
+        "jineng": 27
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8794.json"
+    },
+    {
+      "hero": 26,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 23,
+        "jineng": 21
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8795.json"
+    },
+    {
+      "hero": 27,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 25,
+        "jineng": 9
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8792.json"
+    },
+    {
+      "hero": 28,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 105,
+        "jineng": 21
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8793.json"
+    },
+    {
+      "hero": 29,
+      "pass": false,
+      "observedTargetActions": {
+        "gongji": 215
+      },
+      "error": "page.waitForFunction: Timeout 90000ms exceeded.",
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8794.json"
+    },
+    {
+      "hero": 30,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 25,
+        "jineng": 19
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8795.json"
+    },
+    {
+      "hero": 31,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 25,
+        "jineng": 17
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8792.json"
+    },
+    {
+      "hero": 32,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 24,
+        "jineng": 19
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8793.json"
+    },
+    {
+      "hero": 33,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 69,
+        "jineng": 19
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8794.json"
+    },
+    {
+      "hero": 34,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 33,
+        "jineng": 21
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8795.json"
+    },
+    {
+      "hero": 35,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 21,
+        "jineng": 20
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8792.json"
+    },
+    {
+      "hero": 36,
+      "pass": false,
+      "observedTargetActions": {
+        "gongji": 250,
+        "jineng": 114
+      },
+      "error": "page.waitForFunction: Timeout 90000ms exceeded.",
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8793.json"
+    },
+    {
+      "hero": 37,
+      "pass": false,
+      "observedTargetActions": {
+        "jineng": 27
+      },
+      "error": "page.waitForFunction: Timeout 90000ms exceeded.",
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8794.json"
+    },
+    {
+      "hero": 38,
+      "pass": false,
+      "observedTargetActions": {
+        "gongji": 26,
+        "jineng": 11
+      },
+      "error": "page.waitForFunction: Timeout 90000ms exceeded.",
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8795.json"
+    },
+    {
+      "hero": 39,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 38,
+        "jineng": 32
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8792.json"
+    },
+    {
+      "hero": 40,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 28,
+        "jineng": 23
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8793.json"
+    },
+    {
+      "hero": 41,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 19,
+        "jineng": 17
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8794.json"
+    },
+    {
+      "hero": 42,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 63,
+        "jineng": 69
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8795.json"
+    },
+    {
+      "hero": 44,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 25,
+        "jineng": 57
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8792.json"
+    },
+    {
+      "hero": 45,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 19,
+        "jineng": 42
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8793.json"
+    },
+    {
+      "hero": 47,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 21,
+        "jineng": 32
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8794.json"
+    },
+    {
+      "hero": 50,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 24,
+        "jineng": 15
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8795.json"
+    },
+    {
+      "hero": 54,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 43,
+        "jineng": 27
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8792.json"
+    },
+    {
+      "hero": 55,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 27,
+        "jineng": 32
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8793.json"
+    },
+    {
+      "hero": 56,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 40,
+        "jineng": 21
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8794.json"
+    },
+    {
+      "hero": 57,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 28,
+        "jineng": 21
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8795.json"
+    },
+    {
+      "hero": 58,
+      "pass": false,
+      "observedTargetActions": {},
+      "error": "page.waitForFunction: Timeout 90000ms exceeded.",
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8792.json"
+    },
+    {
+      "hero": 59,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 43,
+        "jineng": 28
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8793.json"
+    },
+    {
+      "hero": 76,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 99,
+        "jineng": 61
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8794.json"
+    },
+    {
+      "hero": 77,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 32,
+        "jineng": 35
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8795.json"
+    },
+    {
+      "hero": 82,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 39,
+        "jineng": 29
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8792.json"
+    },
+    {
+      "hero": 94,
+      "pass": true,
+      "observedTargetActions": {
+        "gongji": 33,
+        "jineng": 31
+      },
+      "error": null,
+      "pageErrors": [],
+      "resourceFailures": [],
+      "evidence": "art-migration/versions/0.44.0/full-battle-lane8793.json"
+    }
+  ]
+}

@@ -54,6 +54,12 @@ def open_static_file(path: Path):
             time.sleep(0.02)
 
 
+class OfflineHTTPServer(ThreadingHTTPServer):
+    # Several deferred scripts, RES images and API requests connect at startup.
+    # The stdlib backlog of five can refuse a burst before a handler accepts it.
+    request_queue_size = 128
+
+
 class OfflineHandler(SimpleHTTPRequestHandler):
     server_version = "OfflineReplica/0.17"
 
@@ -414,7 +420,7 @@ def main():
     parser.add_argument("--save", type=Path, default=ROOT / "server_data" / "offline-replica-save.json")
     parser.add_argument("--config", type=Path)
     args = parser.parse_args()
-    server = ThreadingHTTPServer((args.host, args.port), OfflineHandler)
+    server = OfflineHTTPServer((args.host, args.port), OfflineHandler)
     server.save_path = args.save.resolve()
     server.config_path = (args.config or args.save.with_name("offline-replica-config.json")).resolve()
     server.catalog_path = args.save.with_name("offline-runtime-catalog.json").resolve()

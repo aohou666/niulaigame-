@@ -17,5 +17,12 @@
     "next": "Capture RESOURCE ITEM_LOAD_ERROR name/url plus network/request failures before any intermittent null rejection; do not suppress null errors or claim root cause fixed.",
     "additionalObservation": "v0.40 hero6 random8hell battle also emitted two null Promise rejections. Exact recorded enemy setup recheck passed;12 new12second samples passed with0 errors/HTTP/resource-event failures. RES legacy callback APIs statically reject(null) on resource failure, but original failing resource not captured: causal link unproven.",
     "additionalEvidence": "versions/0.40.0/body-battle-lane2-null-attempt.json; versions/0.40.0/null-stress-summary.json"
+  },
+  {
+    "id": "RESOURCE-LOAD-015",
+    "status": "investigating",
+    "observed": "Full54 battle hero21 emitted new background image RES load failure. Exact8enemy isolated rerun had0 browser/resource errors but no target skill halfway. HTTP200/920495bytes/SHA intact.",
+    "evidence": "versions/0.44.0/full-battle-lane8794.json; versions/0.45.0/hero21-isolated-resource-recheck.json",
+    "next": "Capture requestfailed URL/net error on recurrence. Concurrent startup connection refusal was separately observed and mitigated with128listen backlog; historical RES failure causal link not established."
   }
 ]

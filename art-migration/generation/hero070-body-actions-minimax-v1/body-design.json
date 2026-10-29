@@ -1,0 +1,367 @@
+{
+  "heroId": 70,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/070/portrait.png",
+      "prepared": "art-migration/references/body-070/idle.png",
+      "foot": [
+        383.89,
+        700
+      ],
+      "size": [
+        355,
+        560
+      ],
+      "sha256": "61ec74b2bf0b12f4d977f8423526fa6983e48be7254bbd66918feb0227139f5e"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero070-attack-v2/hero070_attack_alpha_00001_.png",
+      "prepared": "art-migration/references/body-070/attack.png",
+      "foot": [
+        384.31,
+        700
+      ],
+      "size": [
+        476,
+        560
+      ],
+      "sha256": "d5e17d89fd6ed621b34e20f089345757c84792ef1373c4d54138a788edb12eab"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero070-skill-v2/hero070_skill_alpha_00001_.png",
+      "prepared": "art-migration/references/body-070/skill.png",
+      "foot": [
+        383.81,
+        700
+      ],
+      "size": [
+        413,
+        560
+      ],
+      "sha256": "6fd1206f0d15fd5efeb088af119411239d4b175ea954d2cdb70fe3827bf52994"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H070-ATK",
+        "heroId": 70,
+        "name": "三叉戟将军",
+        "originalName": "董卓",
+        "slot": "普攻",
+        "skillId": 550690110,
+        "skillName": "普通攻击",
+        "newSkillName": "普通攻击",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "近身攻击",
+        "movement": "移到目标前出手",
+        "weapon": "待素材确认",
+        "weaponObservation": "当前角色表无可用立绘；名称为三叉戟将军",
+        "effectClass": "目标位置特效、命中/生效附着特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "待立绘核对后选动作，不按名称补造武器",
+        "rootPolicy": "引擎负责接近与返回；视频固定根位置，只做出手",
+        "batch": "B08",
+        "status": "需复核：当前角色映射没有可用立绘，暂不锁定武器；角色换皮映射未匹配；当前图与目标形象待核对",
+        "reviewReasons": [
+          "当前角色映射没有可用立绘，暂不锁定武器",
+          "角色换皮映射未匹配；当前图与目标形象待核对"
+        ],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_tianfeng_01",
+        "model": "hero_070_01",
+        "action": "gongji",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1000.0,
+        "fps": 30,
+        "durationFrames": 30,
+        "rawEvents": [
+          {
+            "frame0": 14,
+            "timeMs": 466.667,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@466.7ms（角色事件）",
+        "impactMs": [
+          466.667
+        ],
+        "impactStatus": "角色pia直接回调；待游戏内验收",
+        "performance": {
+          "effectsPiaEnemy": [
+            {
+              "posType": 0,
+              "src": [
+                "common_skill_tianfeng_01_2"
+              ]
+            }
+          ],
+          "effectsTarEnemy": [
+            {
+              "delay": 0,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 0,
+              "src": [
+                "common_skill_tianfeng_01_1"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            2,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_tianfeng_01_1",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_tianfeng_01_1_bfb0613e.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_tianfeng_01_1",
+                  "name": "common_skill_tianfeng_01_1",
+                  "fps": 24,
+                  "durationFrames": 9,
+                  "durationMs": 375.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_tianfeng_01_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_tianfeng_01_2_6075313b.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_tianfeng_01_2",
+                  "name": "common_skill_tianfeng_01_2",
+                  "fps": 24,
+                  "durationFrames": 13,
+                  "durationMs": 541.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_tianfeng_01_1 delay=0 dt=None speed=1\neffectsPiaEnemy: common_skill_tianfeng_01_2 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_tianfeng_01"
+        ],
+        "portrait": ""
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H070-ULT",
+        "heroId": 70,
+        "name": "三叉戟将军",
+        "originalName": "董卓",
+        "slot": "大招",
+        "skillId": 550690210,
+        "skillName": "铁口直言",
+        "newSkillName": "铁口直言",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "原地远程作用",
+        "movement": "原站位出手",
+        "weapon": "待素材确认",
+        "weaponObservation": "当前角色表无可用立绘；名称为三叉戟将军",
+        "effectClass": "目标位置特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "待立绘核对后选动作，不按名称补造武器",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B08",
+        "status": "需复核：原包共用田丰大招表现/技能；保留实际配置，角色专属设计待核定；当前角色映射没有可用立绘，暂不锁定武器；角色换皮映射未匹配；当前图与目标形象待核对",
+        "reviewReasons": [
+          "原包共用田丰大招表现/技能；保留实际配置，角色专属设计待核定",
+          "当前角色映射没有可用立绘，暂不锁定武器",
+          "角色换皮映射未匹配；当前图与目标形象待核对"
+        ],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_tianfeng_02",
+        "model": "hero_070_01",
+        "action": "jineng",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1666.667,
+        "fps": 30,
+        "durationFrames": 50,
+        "rawEvents": [
+          {
+            "frame0": 0,
+            "timeMs": 0.0,
+            "ints": [
+              7
+            ],
+            "type": 10,
+            "name": "count"
+          },
+          {
+            "frame0": 33,
+            "timeMs": 1100.0,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 35,
+            "timeMs": 1166.667,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 37,
+            "timeMs": 1233.333,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 39,
+            "timeMs": 1300.0,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 41,
+            "timeMs": 1366.667,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 43,
+            "timeMs": 1433.333,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 45,
+            "timeMs": 1500.0,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@1100.0ms（角色事件）；pia@1166.7ms（角色事件）；pia@1233.3ms（角色事件）；pia@1300.0ms（角色事件）；pia@1366.7ms（角色事件）；pia@1433.3ms（角色事件）；pia@1500.0ms（角色事件）",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "effectsTarEnemy": [
+            {
+              "delay": 500,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_tianfeng_02"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_tianfeng_02",
+            "delay": 500,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_tianfeng_02_24d07109.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_tianfeng_02",
+                  "name": "common_skill_tianfeng_02",
+                  "fps": 24,
+                  "durationFrames": 40,
+                  "durationMs": 1666.667,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        1
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 7,
+                      "timeMs": 291.667,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_tianfeng_02 delay=500 dt=None speed=1 事件=pia@291.7",
+        "variants": [
+          "common_skill_tianfeng_02"
+        ],
+        "portrait": ""
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false
+}

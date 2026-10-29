@@ -1,3 +1,5 @@
+param([string]$Version = '0.42.0')
+$taskTag = 'v' + $Version.Split('.')[1]
 $ErrorActionPreference = 'Stop'
 $taskRoot = (Resolve-Path -LiteralPath '.').Path
 $taskPython = Join-Path $taskRoot '.tools/python/python.exe'
@@ -21,7 +23,7 @@ foreach ($taskPort in ($taskSaves.Keys | Sort-Object)) {
 foreach ($taskRow in $taskRows) { Stop-Process -Id $taskRow.oldPid }
 foreach ($taskRow in $taskRows) {
  $taskArguments = @(('"'+$taskServer+'"'),'--port',[string]$taskRow.port,'--save',('"'+$taskRow.save+'"'))
- $taskNew = Start-Process -FilePath $taskPython -ArgumentList $taskArguments -WorkingDirectory $taskRoot -WindowStyle Hidden -PassThru -RedirectStandardOutput (Join-Path $taskLogDir ('v42-'+$taskRow.port+'.log')) -RedirectStandardError (Join-Path $taskLogDir ('v42-'+$taskRow.port+'-error.log'))
+ $taskNew = Start-Process -FilePath $taskPython -ArgumentList $taskArguments -WorkingDirectory $taskRoot -WindowStyle Hidden -PassThru -RedirectStandardOutput (Join-Path $taskLogDir ($taskTag+'-'+$taskRow.port+'.log')) -RedirectStandardError (Join-Path $taskLogDir ($taskTag+'-'+$taskRow.port+'-error.log'))
  $taskRow | Add-Member -NotePropertyName newPid -NotePropertyValue $taskNew.Id
 }
 foreach ($taskRow in $taskRows) {
@@ -34,5 +36,5 @@ foreach ($taskRow in $taskRows) {
  if ($taskAfter -ne $taskRow.shaBefore) { throw "Save changed on restart $($taskRow.port)" }
  $taskRow | Add-Member -NotePropertyName savePreserved -NotePropertyValue $true
 }
-$taskRows | ConvertTo-Json -Depth 4 | Set-Content -Encoding UTF8 'art-migration/versions/0.42.0/server-restart.json'
+$taskRows | ConvertTo-Json -Depth 4 | Set-Content -Encoding UTF8 (Join-Path ('art-migration/versions/'+$Version) 'server-restart.json')
 $taskRows | Select-Object port,newPid,savePreserved | ConvertTo-Json
