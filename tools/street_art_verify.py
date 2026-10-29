@@ -37,6 +37,26 @@ def verify():
       assert [(e['name'],e['frame0']) for e in seq.get('nativeEvents',[])]==[(e['name'],e['frame0']) for e in native['events'] if e['name'] in ['pia','zd']],'native event metadata differs';nativeChecks+=1
    characters.append({'hero':cfg['id'],'frames':len(cfg['frames']),'distinctFrames':len(hashes),'actions':list(cfg['actions'])})
   except Exception as e:errors.append({'hero':cfg['id'],'error':str(e)})
- return {'images':images,'bodyAtlasFrames':frames,'bodyCharacters':characters,'nativeModelActionsChecked':nativeChecks,'errors':errors}
+ effects=[]
+ effectFile=GAME/'street-effects-data.js'
+ for cfg in loadjs(effectFile)['effects'] if effectFile.exists() else []:
+  try:
+   assert hashlib.sha256((GAME/cfg['atlas']).read_bytes()).hexdigest()==cfg['atlasSha256'],'effect atlas digest mismatch'
+   assert len(cfg['frames'])==len(cfg['sampling'])==cfg['frameCount']==cfg['sourceOriginalFrames'],'effect native frame count differs'
+   assert cfg['nativeTimelineRetained'] and cfg['fps']>0
+   assert cfg['sampling']==sorted(cfg['sampling']) and all(0<=n<cfg['sourceGeneratedFrames'] for n in cfg['sampling']),'effect source order/index invalid'
+   if cfg.get('originalPeakFrame') is not None:assert cfg['sampling'][cfg['originalPeakFrame']]==cfg['generatedPeakFrame'],'effect peak phase mismatch'
+   hashes=set();nonempty=0
+   with Image.open(GAME/cfg['atlas']) as im:
+    assert list(im.size)==cfg['atlasSize']
+    for f in cfg['frames']:
+     assert min(f['x'],f['y'])>=0 and f['x']+f['w']<=im.width and f['y']+f['h']<=im.height,'effect tile outside atlas'
+     tile=im.crop((f['x'],f['y'],f['x']+f['w'],f['y']+f['h']));hashes.add(hashlib.sha256(tile.tobytes()).hexdigest());nonempty+=bool(tile.convert('RGB').getbbox())
+   assert nonempty>3 and len(hashes)>4,'effect motion empty/static'
+   source=ROOT/cfg['generationJob'];qa=source/'effect-qa.json'
+   if qa.exists():review=json.loads(qa.read_text('utf8'));assert review['manualReview']=='approved' and not review['croppedFrames'],'unapproved/cropped effect'
+   effects.append({'id':cfg['id'],'models':len(cfg['models']),'nativeFrames':cfg['frameCount'],'nonemptyFrames':nonempty,'distinctFrames':len(hashes)})
+  except Exception as e:errors.append({'effect':cfg['id'],'error':str(e)})
+ return {'images':images,'bodyAtlasFrames':frames,'bodyCharacters':characters,'nativeModelActionsChecked':nativeChecks,'effects':effects,'errors':errors}
 if __name__=='__main__':
  r=verify();print(json.dumps(r));raise SystemExit(bool(r['errors']))

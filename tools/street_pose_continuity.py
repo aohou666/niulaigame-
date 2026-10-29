@@ -2,7 +2,7 @@
 import argparse,json
 from PIL import Image,ImageOps
 from street_comfy import ROOT,qwen,submit
-p=argparse.ArgumentParser();p.add_argument('ids',nargs='+',type=int);p.add_argument('--actions',nargs='+',choices=['attack','skill'],default=['attack','skill']);p.add_argument('--square',action='store_true');p.add_argument('--revision',type=int,default=3);a=p.parse_args();base=ROOT/'art-migration/generation';overrides=json.loads((ROOT/'art-migration/prop-continuity-overrides.json').read_text('utf8'))
+p=argparse.ArgumentParser();p.add_argument('ids',nargs='+',type=int);p.add_argument('--actions',nargs='+',choices=['attack','skill'],default=['attack','skill']);p.add_argument('--square',action='store_true');p.add_argument('--revision',type=int,default=3);p.add_argument('--queue-tail',action='store_true');a=p.parse_args();base=ROOT/'art-migration/generation';overrides=json.loads((ROOT/'art-migration/prop-continuity-overrides.json').read_text('utf8'))
 for hid in a.ids:
  detail=overrides[str(hid)]
  for kind in a.actions:
@@ -14,4 +14,4 @@ for hid in a.ids:
   if a.square:
    target=ROOT/f'art-migration/references/hero{hid:03}-square.png';im=Image.open(reference).convert('RGBA');im=im.crop(im.getchannel('A').point(lambda v:255 if v>16 else 0).getbbox());im.thumbnail((640,640),Image.Resampling.LANCZOS);canvas=Image.new('RGBA',(768,768));canvas.alpha_composite(im,((768-im.width)//2,(768-im.height)//2));canvas.save(target);reference=target
   g=qwen(prompt,reference,768,28,202610290000+a.revision*1000+hid*2+(kind=='skill'));g['11']={'class_type':'SplitImageWithAlpha','inputs':{'image':['6',0]}};g['9']={'class_type':'easy imageRemBg','inputs':{'images':['11',0],'rem_mode':'RMBG-1.4','image_output':'Hide','save_prefix':'street-reskin/matte','add_background':'none','torchscript_jit':False,'refine_foreground':False}};g['10']={'class_type':'SaveImage','inputs':{'images':['9',0],'filename_prefix':f'street-reskin/hero{hid:03}_{kind}_continuity_alpha'}}
-  folder=submit(g,name,front=True);d=json.loads((old/'design.json').read_text('utf8'));d['revisionReason']='actual-reference prop/color continuity';d['actualReferenceOverride']=detail;(folder/'design.json').write_text(json.dumps(d,ensure_ascii=False,indent=2),'utf8')
+  folder=submit(g,name,front=not a.queue_tail);d=json.loads((old/'design.json').read_text('utf8'));d['revisionReason']='actual-reference prop/color continuity';d['actualReferenceOverride']=detail;(folder/'design.json').write_text(json.dumps(d,ensure_ascii=False,indent=2),'utf8')

@@ -1,0 +1,543 @@
+{
+  "promptId": "149a5bb5-3b45-46d0-a9a8-750ebf04697c",
+  "submittedUtc": "2026-10-29T07:38:04Z",
+  "status": "generated-unreviewed",
+  "provider": "local-comfyui",
+  "workflowSha256": "b40c7463e9790c0b81d01489e1bd9abfd750519f87dd2d8a092ce1bcd8d08586",
+  "response": {
+    "prompt_id": "149a5bb5-3b45-46d0-a9a8-750ebf04697c",
+    "number": -533,
+    "node_errors": {}
+  },
+  "comfyStatus": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "149a5bb5-3b45-46d0-a9a8-750ebf04697c",
+          "timestamp": 1793259488495
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "1",
+            "2",
+            "3",
+            "6"
+          ],
+          "prompt_id": "149a5bb5-3b45-46d0-a9a8-750ebf04697c",
+          "timestamp": 1793259488508
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "149a5bb5-3b45-46d0-a9a8-750ebf04697c",
+          "timestamp": 1793259586958
+        }
+      ]
+    ]
+  },
+  "outputs": [
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00074_.png",
+      "sha256": "222e002d5778c6150d389757e24d4501c607f9ec94dcc04f9f823e351fb68fa3"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00075_.png",
+      "sha256": "433d1a99afe1b75816d2209ef9aeec7f1710b2b96dd2ff68afeebd00fdd5cc87"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00076_.png",
+      "sha256": "75d6de3951552660708fb5929356f1f2f55c0d832b636f5042d7d29e3f17706d"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00077_.png",
+      "sha256": "9221bbdfe4551f00af4042e8e1a0d6b1edde2637e5a085c5b8342a590161c1db"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00078_.png",
+      "sha256": "626dd093924d2fb0b5293490349cb7b84aa537194529a7a2a7f991cff98caa4e"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00079_.png",
+      "sha256": "af88589d67ff29de7e24789bcd9379940b796c71377d739c46c6beb088f319bd"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00080_.png",
+      "sha256": "d506f4036d9e6634cfcf05ea4d03926fb4b5c4b3f2933109239c6ac58fd65915"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00081_.png",
+      "sha256": "8845e810cc4873fe03b605bc005a2fef533535e1a84f92edbe895ba7dd630efc"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00082_.png",
+      "sha256": "eab3a4db057c2ea61c765b3881c44ef5c5eb1720e2c296903205e550ee4cd043"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00083_.png",
+      "sha256": "1809ae5461e26f2557d38e9ac9b13dd92a2d07ab7cfa27f5022872980db9264a"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00084_.png",
+      "sha256": "f3c43686192f612488af59d53bbe4314c80b61646957fb26b02f79a85cd85202"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00085_.png",
+      "sha256": "db20024af39d199d26f51ab116b7c864cb7ab289e03bac3aa729e81664a28b63"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00086_.png",
+      "sha256": "51c4b252e1907300b8bff278e27611dad04fc70c2944625264e8009127b7c9bf"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00087_.png",
+      "sha256": "1d52d4f9f06670deaa7aca313175a04a758eca1ad95c544a1cfe76e31dc42c55"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00088_.png",
+      "sha256": "f3333c57123b597e124b2f9b8d6d9cea77dee6f734d101353b0e56d747ac2ff9"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00089_.png",
+      "sha256": "2870cc226beeb7d1bccac28ef8208ae5555901a6496a1e49b176ce2e658dc624"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00090_.png",
+      "sha256": "d56e72ce1f839e2134f0732e32b1635e0e3153c5eb2d415d3f1ec5285570760a"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00091_.png",
+      "sha256": "6dc9bce9746f671523621baf6c74906bcddac32393f6168cbbf05e12ea03c6a7"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00092_.png",
+      "sha256": "fabc88ae0f03414b36c9a0c1b1b6787ad77a064ec3a8157eb356177d54402542"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00093_.png",
+      "sha256": "9cb1f69650ba5dd71441636de73e3923e09a30c639e82d40b84ac1ef67e5c0a0"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00094_.png",
+      "sha256": "172abd77409694ddc8ca0a95b3d69b116ddfdf43b710cedd8073e4966653083c"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00095_.png",
+      "sha256": "b5a59d3f6d159aec0f308c6d6b187e01832033bde50924bad285be67e6974d29"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00096_.png",
+      "sha256": "2622cd78673af0fb30fb1ea347d1a3cbf8365bd97ef0c30cc22b22c6a7d6abc5"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00097_.png",
+      "sha256": "b94b5964cd943c1040e3197fc14784629b3f2b35d179867de3a9290e4e378e44"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00098_.png",
+      "sha256": "7cda7bb299c71c639960607f7308acb92e1b50927c3d8fd103579d7271f2c95a"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00099_.png",
+      "sha256": "f456e26c95b59fd00755169eef08cf80f85ace6b8a09eaac6f364f178b94da25"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00100_.png",
+      "sha256": "c8eb258ba76d30613030636aaa99c3ba5736725208d68cdbbf36f87651f4d346"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00101_.png",
+      "sha256": "301bfa29bf4f03b1ed8b37332a83a5b04e64df13d205a9cdcdf544c0a549ba9f"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00102_.png",
+      "sha256": "8aaec420e1ddb7d91e37ff6f4d8847f44f00f567a651888e796ca872f9c74ed1"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00103_.png",
+      "sha256": "3128cce4b4ae0e86b56d924ddaccb3f520c27b12ccb3bcda1e0445e20d5bf9f5"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00104_.png",
+      "sha256": "3fd69207da0eec007a66cd31e3281809f95a605329e9e5673cce6a68ec36d4ed"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00105_.png",
+      "sha256": "8ba7d1c0add0d04065565bebc68f051f56c4c96a2457842ea186e4fa30383f3b"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00106_.png",
+      "sha256": "71de78eaef7ed15959aab0279e8779fa735a6a282472545de10abeaac4271385"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00107_.png",
+      "sha256": "c8f76bbc6ca5af65089c27535c967020eafa3a625dd057a59d6be713f8df3bdf"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00108_.png",
+      "sha256": "ec04b349528b6c91813ee12d48cd3834f95cc028d39a98f8e6c9de036f141426"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00109_.png",
+      "sha256": "b182194e2cee8b8833fb1e0c38c3c1dcd9cae97c95cf5e7fe816fe99df2a1949"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00110_.png",
+      "sha256": "53cad94c52e47946e77878582a0b4376d0a0c8ecd84abc22ec71752dc98c6b44"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00111_.png",
+      "sha256": "04c146de892e7fd620406ccf3a1fc4edccf866845bef6c7461c0c97657ff43f6"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00112_.png",
+      "sha256": "2cbda1b532e76c62ca6d1bf2f1a65fbe95edfd4b7d7fd90c30598db7e1319c78"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00113_.png",
+      "sha256": "b1bbdc2b5780a6d8c6870a84e3ef8fbddae7dcc312b257357d6d71cb0c415155"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00114_.png",
+      "sha256": "c49682d6ea1dce7ebb2b4cf2954734d83a893213547db17422af4c8bca41ff2d"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00115_.png",
+      "sha256": "70f2b2f7d172b3327ddfa07ffdda9ef0645a5c0e73198128b6e2c9dbbf421a14"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00116_.png",
+      "sha256": "0d973f2be8cab2b04e1f96ded07a696a64cbc9b85f6feaed1ca1cb089dabc5b6"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00117_.png",
+      "sha256": "121169957b467d038636792e8fc28837c505300fd77215602090980480ac82d1"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00118_.png",
+      "sha256": "85568d15e8015764e7d6e9ed6ab2df28cda5f26924dae41a15dd17ade9605166"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00119_.png",
+      "sha256": "9ae6400a0f1e712debdc50d96c96834e89ca89cc1112d719e2eff76ed245485a"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00120_.png",
+      "sha256": "4782656bf2ff383d721d5c2f60a5db5bbf724203150df244feb1d95e40036442"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00121_.png",
+      "sha256": "e15a17b99bf02664eb4f63f9f3fd7435cf68f0ee8c394b1fcc7af7d40ea3597c"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00122_.png",
+      "sha256": "103e0e5cdf8424efaf4d6186c5e67e97ec47c3636504f3a90fb94f5550c9e08d"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00123_.png",
+      "sha256": "1972f2d6c794ded62a2555c283ff3051b453da74fd6ed8553b53753cbf2c76a7"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00124_.png",
+      "sha256": "1ef9e227c7c5bbdbc3901ecea98023fa375378156a75e4e223bc948d0dc9fce9"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00125_.png",
+      "sha256": "e9c0a75337e3ea3c8be5cc5e35be6e9a708b3e27a2d2a082b318afbfb9dcde5d"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00126_.png",
+      "sha256": "4866fcd37a7d82ffc2aed13682bcf8f7b48d9a4d3655b8ddd79fd2e9c7676118"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00127_.png",
+      "sha256": "9b8fe143c0d78bdf46023bb44f26f8713b0ba5a36c95f72776980d8cb4d3907d"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00128_.png",
+      "sha256": "2c8da77e70f4cbe353ce7a24a955e6d3f4f413a48c9940dce7b11cf7852ed3ca"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00129_.png",
+      "sha256": "907c6cb1a556d533a9eb6a7a6c66d7fca02b347e784438886eb03a930692d1b5"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00130_.png",
+      "sha256": "c2952e0cbfa61c68b485432b365c6e3e698ed4795ac36083c9c68bcfd5c75d4d"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00131_.png",
+      "sha256": "afc108a2b387d7f1479e41317f377193045c1b2319644510ff82ba7a8e44ebc7"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00132_.png",
+      "sha256": "ad5ccdf554f531f3d867be40185d67565379f59eec58a16baad40892cb426851"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00133_.png",
+      "sha256": "810b3fd7ded714b4c63f52725d556c4f0b2c28c84df74bb777d1d5e6cfc7f495"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00134_.png",
+      "sha256": "67d5cf94c74b221f8fb2b8baad67b4c719952e8b5fe5dcc8104a44fedb63862c"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00135_.png",
+      "sha256": "ba1263c186bf5f71b282e6815db0b1b3141fd3bd6a9b86b590af2a383fd19ce8"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00136_.png",
+      "sha256": "34209f884c942b6a6b94f5b838ba0852e77a2bf80cd3c6d6950246afd2f51e81"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00137_.png",
+      "sha256": "b113b27124e8e25b3550a8630fbc82bf95a0d739872228c85776ae66020a3e19"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00138_.png",
+      "sha256": "04e292abbf2428b73ffa7d4f171423b15e97d5b67e8ee589e3d350c5eeca9ae7"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00139_.png",
+      "sha256": "08fd35119abf026d7b742eb85fc66dcc1737787d88578357d614ba92ca7696b0"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00140_.png",
+      "sha256": "dd6bd65301d7886f4186f651fc239ab2e89d778b049d340cca3ccbe9de2c4fdd"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00141_.png",
+      "sha256": "8f72b1ccd6b1c2b8a219284565ee1f229dfd69538ed9f5d93ab547c218d55052"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00142_.png",
+      "sha256": "d32c64d38683b8764e031392d19ae3c490e5a205673821de9735412f607d6d54"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00143_.png",
+      "sha256": "6bbea1b2f2df9761fc0df45e0be6ac8a6a3f2c8e0f4de3f86db1a2b944747ccf"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00144_.png",
+      "sha256": "d22e106655885aa0dce9d28b8120faf3d292e184ce42907a594d114992eebb69"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00145_.png",
+      "sha256": "12ef6cb38993c2b9964758ed85518c607b44fb4e35590746d1b2a4c4b36a8bab"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00146_.png",
+      "sha256": "fc81f4e2fea9a168c682c21f6bac25986823edb616f8bad139bf81c151d566da"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00147_.png",
+      "sha256": "1ca1edff94c0c6a6220c313de8a15b428dcbd9894e14391a581fba1cd785ac74"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00148_.png",
+      "sha256": "b99b3392086be25c2f11e3034ac8520343b79ea81145f6d64e7dbaec301e12db"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00149_.png",
+      "sha256": "10999cd8eb521c24451fa30af81b0989c1e43e3d8de672f95ccda8849c702370"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00150_.png",
+      "sha256": "5b2808a93f881b3ce3e100a8bfd5704a9441b2cfc03f4d8065159685e4083597"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00151_.png",
+      "sha256": "66bcd083531357955ac4d5ab7a7dac48715d5a6703a6872a61c16347407d3f43"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00152_.png",
+      "sha256": "77ad803a8aa83bdce962adc5ace6349032d64093e0b327bb2cd990e1381c2bdd"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00153_.png",
+      "sha256": "fc5d23001fc97b32397ee83604852e5e5644a735f991346bd62067090e50cc00"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00154_.png",
+      "sha256": "4d063d0f5213372a56d8551674d08c96c68f26ed5542b939c1c4b79c9a964e2c"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00155_.png",
+      "sha256": "a380dac95bebeeba4d4035838f8b4d9ac880aaedf80244bba46169c8e64319db"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00156_.png",
+      "sha256": "a5c64abe8859c14c2d87864c299fabe8262bf9179dbdb2c6b1f7b862d6cac571"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00157_.png",
+      "sha256": "621a7b748050eb27cc9dd037398d00dfa03207e4d8b211828f7d52367bd7e51c"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00158_.png",
+      "sha256": "f15a2a1ad559f9e8b64ccfc64b7ebd90abfa185a7d2269c18c16f97395aa2b73"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00159_.png",
+      "sha256": "c0dc2e4e8ce2ca38d0e4d308843346aa3c30c0b2a13c4b1b640f696255319d16"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00160_.png",
+      "sha256": "693dae8053b30a725b0099a16a164033e8b0bd4ca013efc29a765165e508a18d"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00161_.png",
+      "sha256": "523976ee0d7f91490febecb4aa5b9f8484c41568f5cfa4571f5fad8a22e7d075"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00162_.png",
+      "sha256": "88e1d1833f16c7e5aa8a3f5097084d6cf316e2cfa1e49ef2be1a4e2080057621"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00163_.png",
+      "sha256": "8dd2938d90fafb180c8ce7a8714231cb705747fc7b639678c683cf6449f16eed"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00164_.png",
+      "sha256": "c59e2804a1fe1adbcfb0504d7760d76e67f192081778d3f412ea1b338b966b7f"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00165_.png",
+      "sha256": "cf4d05e72b6493c674d670361d453ee8e25ece3ae977b6c880207d1302ae85a0"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00166_.png",
+      "sha256": "d6b5cc18a9ea259b6517c13798050093ec4f18ecd4c0a60e008e1948a4eda2e1"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00167_.png",
+      "sha256": "b23c784fa08cffb9c9ef47d0eb0e8d4ccd40e177e23237402ab2d1f8570af4cb"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00168_.png",
+      "sha256": "33bdc0cdcc5d995812f57d62c28312253844d86de00465d2b19ea7a7e49ee7be"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00169_.png",
+      "sha256": "09cd44fb2d805e2a35ccfab5ed8106d649d69d28b3ea1e77b1ad72091047f07a"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00170_.png",
+      "sha256": "7455a06082e674f254f6b41246e674de6a6ce8ea05b5bd0cca1cb43cd8b97993"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00171_.png",
+      "sha256": "a17e87985a13002a5ad7dacc36fc3bbce1338c859e81437ad419f29458aafbca"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00172_.png",
+      "sha256": "99219c9364d72704d0bd407628b859718c0b363467bbbc65e9272dcd1621872a"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00173_.png",
+      "sha256": "ee0fdce4c8896e8bf01ec3f40d11fcec0654d2ed6d9ff50bb10011728b160946"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00174_.png",
+      "sha256": "7e4e2980f6d9bcb4b81dc9361d090b342d13ecac4178cc3d79b8a16c36e9521e"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00175_.png",
+      "sha256": "de4bd10e273ccf19ec4ca438e018ed3477b6d1e5f05e6ba8da94188746d84a17"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00176_.png",
+      "sha256": "05c24a2cf1792241cc3c44fd03e920fb18d3806a068d67854456f6d81bb0cb0c"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00177_.png",
+      "sha256": "8afc2ac30807ef14c723219b991c18632cace6b024a965ec3dccb9d8abc0184b"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00178_.png",
+      "sha256": "b6f9b22582a28c9769021d306be282f240599d23a275cd2bb29eb1dca6258c64"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00179_.png",
+      "sha256": "2c8f868f8d251f579a79d2ffe415bea1a22d4ed8051574a04f8838bd93ae534a"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00180_.png",
+      "sha256": "10e1e25b0add7236a803f5aae9293f0c33526ed1fa8b27fc387b33e07ae7eadb"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00181_.png",
+      "sha256": "03ed1ad6f17c3da4409539140f4091a827c2aec6b08ffe8b2fdefdaa3a9c9c9c"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00182_.png",
+      "sha256": "59b7e0f55b51b401e09fd82c780a7fc878181739514818e6c7b4b41593aeaf6e"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00183_.png",
+      "sha256": "dc111857bd59fa0fd09c9f8697ded39c2b39c5b9009769e6396a7ca53f66babe"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00184_.png",
+      "sha256": "fd94d9898cfde7e84743166f923622b984b06a6c046493a204d1fb36b33e0853"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00185_.png",
+      "sha256": "bd0f1d6795cc2bd0e39f268dd23916f70c15bd8a08ef65f5e9da64590817839c"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00186_.png",
+      "sha256": "f517513c32514da0bcd3b53176e0e4055a9f4a8171b129da80c04b50b00202a0"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00187_.png",
+      "sha256": "fd272811e1b88d068979b08c27a01950553f455a222889ff27eb41806813c0aa"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00188_.png",
+      "sha256": "a7e04c408d0b08cc3a11384c32af608dfe191dd44619fbac1a3af0f040cf4b19"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00189_.png",
+      "sha256": "8986086b12036be1ec7f7f6d2b21fe9d35c749d19a2d995e66c10adfa3e0d6c6"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00190_.png",
+      "sha256": "8986086b12036be1ec7f7f6d2b21fe9d35c749d19a2d995e66c10adfa3e0d6c6"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00191_.png",
+      "sha256": "8986086b12036be1ec7f7f6d2b21fe9d35c749d19a2d995e66c10adfa3e0d6c6"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00192_.png",
+      "sha256": "8986086b12036be1ec7f7f6d2b21fe9d35c749d19a2d995e66c10adfa3e0d6c6"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00193_.png",
+      "sha256": "8986086b12036be1ec7f7f6d2b21fe9d35c749d19a2d995e66c10adfa3e0d6c6"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00194_.png",
+      "sha256": "8986086b12036be1ec7f7f6d2b21fe9d35c749d19a2d995e66c10adfa3e0d6c6"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00195_.png",
+      "sha256": "8986086b12036be1ec7f7f6d2b21fe9d35c749d19a2d995e66c10adfa3e0d6c6"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00196_.png",
+      "sha256": "8986086b12036be1ec7f7f6d2b21fe9d35c749d19a2d995e66c10adfa3e0d6c6"
+    },
+    {
+      "path": "art-migration/generation/street-spark-hit-minimax-v2/street-spark-hit_00197_.png",
+      "sha256": "8986086b12036be1ec7f7f6d2b21fe9d35c749d19a2d995e66c10adfa3e0d6c6"
+    }
+  ]
+}

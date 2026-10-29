@@ -140,3 +140,18 @@
 - 原effectpack硬编码hero001单条会覆盖effects表，不能直接拿来批量跑。应新建通用打包器保留existingrecords、读真实native时间和anchors；source参考视频用原导出帧ffmpeg编码到Comfy input，然后MiniMax ref2va模板hero001-cast-minimax-v2。当前模板124帧5秒4steps；可以合理改73/512但必须真实生成审查。新工具还没创建。
 - 额外13已官方生成v2三姿势但未抠图/接入；源路径exec-d921af9b-e80e-47de-a285-99f6369d8fd8.png在generated_images当前session；现有013pose-source-v1被裁头拒绝，不能用。需单独RMBG3cells+生成body73和独立idle73，不能拿attack前9帧循环冒充新idle。不要改变85目标集合。
 - 本heartbeat最终应通知重要v35上传完成，下一次继续到20:00。deadline12UTC，不要提前宣称全替换或零bug；所有move/hit/death和独立skins未完成。Goal保持active。
+
+
+## 2026-10-29 16:03 v0.36 最新，必须接着做
+- v35已push核对remote main=6131446353cf6e66fc16de65b77b634607cda2d6；next push after38（36/37/38）。v36准备本地提交，当前22角色1606帧4134映射88动作，新增20/21/26全帧+alpha+实战截图已看通过；65UI绑定未变。全部角色完整数仍0，动作death/hit/move和独立125skins未完成。
+- v36新增street-spark-hit特效，替换common_skinskill02_jinjishushi_01_2/base+ez，124帧新MiniMax→原32@24；官方6设计参考source local_game/assets/street/effects/neighborhood-six-guides.png。新1FX全124+16放大看过，旧蓝云没有保留。初次实战切入镜头会放大到覆盖全屏，已修runtime cfg.maxScreenDiagonal=240按屏幕变换限大小，保留原本位置/clock/events/伤害；3个Point复用，缩放0.2/1/4/12测试通过，之后实战3实例33trace和截图已看，变小且不中断战斗。before/after在versions/0.36.0，初版结构测试pass不等于美术通过，visual-diagnostics明确。
+- street_effect_promote.py现在通用不覆盖旧表，读人工approved effect-qa且不裁边，保持native fps/count/峰值，用固定union裁小quad，source sampling单调。street-effects-roster-test4模型170帧原生时钟/显示/销毁缓存0，effectslive单独8792测试通过。8791三身体战斗通过并恢复save；所有服务器当前空闲。
+- 其他5FX v2全有原图重建：heal0–25原绿色柱、impact49后原白斩、grapple57后原橙环、shield74后原蓝罩且爆炸/裁边/不闭合、cleanse54后原蓝球。全reject不接入。cleansev3把VAE参考去掉但仍66–82蓝尾光，亦拒。现在5新job（heal/impact/grapple/shield v3,cleanse v4）通过tools/street_effect_image_only.py已排最前。用ONLY官方新图VAE/CLIP条件，不喂原视频（referenceVideoRole明确仅离线动作分析），仍用原生metadata和phase映射；不能说此轮原视频像素条件。注意护盾必须首尾一致持续循环不能衰退/爆炸。所有新FX都124帧，review工具两all页就全124+16。
+- 当前GPU后续还有30+body/Qwen任务，无人审自动不上线。19/23v2dense已队尾；22/27/28/29/32v2denseheight520最后也排队。原19/23多出一拳/踢腿，27草束碎，28/32自带flash，29越界，22胸灯复制，已分别拒。20/21/26待提交源folder v1，26bodybattle单独备份后重测20/21合并，最后reports3全通过。
+- 新导图50/51/57/61/63/69/81 v3与idle对照批准，两手/物件现在正确，bodyv1排queue-tail。46v3鱼竿/桶都保留，尚未批准，需要解决长杆导致归一化主体大小不一致：body_batch当前按全alpha bbox缩放，须给各idle/attack/skill标主体头脚landmark计算scale，再把长杆连同全画布放进去，cfg.bodyHeight也取主体高度。别直接promote导致小人/跳大小。79attackv3刀在前已批准，skillv3仍刀在后是windup，待改。48/67手持物还需细看。
+- 12原图实际褐条纹，旧override错误写gray导致v3灰白，现已改暖taupe brown+chocolate，v4排最后。31原脸charcoal但衣服尘灰而不是漆黑，胫骨暗黄铜不是镀铬，v4太黑已拒并用修正override排v5。不要反过来再改原肖像来匹配错误导图。
+- 额外13官方v2三姿势仍未处理！源在当前session generated_images/exec-d921af9b-e80e-47de-a285-99f6369d8fd8.png；v1裁头不能用。先3cell matte，审核后做body+独立idle，补supplemental绑定且85目标表不变。原13人类和原NPC907、独立皮肤仍实战可见。
+- 所有native6效果metadata/reference视频与官方6裁图保存在art-migration/references/vfx-native和vfx-guides；生成export工具不要设置_characterIdleSuppressNative否则黑图。tools/street-effects-export-batch支持多个name实际加载并逐帧截1024，native.json有foregroundBox/peak/fps/origin；aabb有时0但像素bbox非空已验证。
+- 20:00=12UTC截止，停本任务新生成/新改动、核对停止ownpending、真实盘点、最后push、停automation和20，不归档，不因deadline设goalcomplete。
+
+- 实测get_goal于16:04返回后台status=blocked（此前摘要active不准确），此轮没有调用update_goal设置blocked或暂停。继续用户已授权的heartbeat工作；API不支持自行resume，不要伪造active或另建重复goal，也不要因此停掉仍有效的10小时工作窗口。session-control记录实际observed状态。

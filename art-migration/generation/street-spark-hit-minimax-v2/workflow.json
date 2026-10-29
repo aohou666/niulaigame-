@@ -1,0 +1,177 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "minimax_h3_ref2va_pruned_w4a8_mixed.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_32b_minimax_h3_int4_convrot.safetensors",
+      "type": "minimax",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "VHS_LoadVideo",
+    "inputs": {
+      "video": "street_street-spark-hit_native_v2.mp4",
+      "force_rate": 24,
+      "custom_width": 512,
+      "custom_height": 512,
+      "frame_load_cap": 60,
+      "skip_first_frames": 0,
+      "select_every_nth": 1,
+      "format": "None"
+    }
+  },
+  "5": {
+    "class_type": "MiniMaxH3ReferenceToVideo",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "prompt": "Use <Image 1> as the EXACT new visual design, palette and small central composition. Use <Video 1> only for the old motion purpose, never copy old graphics. Keep this new effect within central35% of the black frame at EVERY instant; all particles stay within central40%, no long jets or expanding debris field. Generate a completely NEW isolated game VFX animation using <Video 1> ONLY as motion rhythm, spatial silhouette and purpose guidance. New production2.5D semi-realistic semi-cartoon absurd contemporary neighborhood art. One compact tangerine-and-teal electrical short-circuit spark, tiny angular warning-stripe fragments and a brief ivory contact flash. Single readable impact at center, then sparse sparks fade; no blue smoke cloud, no large explosion, no opaque ball. Fixed locked camera, one centered isolated foreground effect, solid pure BLACK RGB0,0,0 background, no floor or environment, no text or watermark, no character. Keep ALL particles and effect inside central75% of canvas and generous safe margins. Premium tactile enamel-like light edges with restrained physically readable sparks; no fantasy historical seal, no ancient weapons or original copied shapes. Five-second animation at24fps. Exactly ONE impact event, no repeated bursts; initial anticipation, single peak, then complete fade to black.",
+      "width": 512,
+      "height": 512,
+      "length": 124,
+      "ref_image_size": "match",
+      "ref_videos.ref_video_1": [
+        "4",
+        0
+      ],
+      "ref_images.ref_image_1": [
+        "30",
+        0
+      ]
+    }
+  },
+  "6": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "lora_name": "minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors",
+      "strength_model": 1
+    }
+  },
+  "8": {
+    "class_type": "MiniMaxH3DualClockSamplerT8",
+    "inputs": {
+      "model": [
+        "6",
+        0
+      ],
+      "av_latent": [
+        "5",
+        1
+      ],
+      "steps": 4,
+      "shift_video": 12,
+      "shift_audio": 3,
+      "sampler_name": "dual_clock_euler",
+      "scheduler": "native_flow"
+    }
+  },
+  "9": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "8",
+        0
+      ],
+      "conditioning": [
+        "5",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 202610305954
+    }
+  },
+  "11": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "10",
+        0
+      ],
+      "guider": [
+        "9",
+        0
+      ],
+      "sampler": [
+        "8",
+        1
+      ],
+      "sigmas": [
+        "8",
+        2
+      ],
+      "latent_image": [
+        "5",
+        1
+      ]
+    }
+  },
+  "12": {
+    "class_type": "LTXVSeparateAVLatent",
+    "inputs": {
+      "av_latent": [
+        "11",
+        0
+      ]
+    }
+  },
+  "13": {
+    "class_type": "VAEDecodeTiled",
+    "inputs": {
+      "samples": [
+        "12",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "tile_size": 512,
+      "overlap": 64,
+      "temporal_size": 32,
+      "temporal_overlap": 4
+    }
+  },
+  "14": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "13",
+        0
+      ],
+      "filename_prefix": "street-reskin/street-spark-hit"
+    }
+  },
+  "30": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "street_street-spark-hit_art_guide.png"
+    }
+  }
+}

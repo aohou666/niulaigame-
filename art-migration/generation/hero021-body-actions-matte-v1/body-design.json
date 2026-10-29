@@ -1,0 +1,557 @@
+{
+  "heroId": 21,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/021/portrait.png",
+      "prepared": "art-migration/references/body-021/idle.png",
+      "foot": [
+        384.02,
+        700
+      ],
+      "size": [
+        344,
+        620
+      ],
+      "sha256": "14f42504f08bb719a3cbf6533fd50a6ce3d52e28db4d4f2738b9eb1b6aa31e16"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero021-attack-v2/hero021_attack_alpha_00001_.png",
+      "prepared": "art-migration/references/body-021/attack.png",
+      "foot": [
+        384.09,
+        700
+      ],
+      "size": [
+        401,
+        620
+      ],
+      "sha256": "1a49acc4881bf07d29e1de082b47dd1227b7cf5f13caf209aacd2913083a78b3"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero021-skill-v2/hero021_skill_alpha_00001_.png",
+      "prepared": "art-migration/references/body-021/skill.png",
+      "foot": [
+        384.44,
+        700
+      ],
+      "size": [
+        334,
+        620
+      ],
+      "sha256": "29e4bed8dacddde1653d10ef07849f4272e5df5925ccf854db451f8452bbd347"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H021-ATK",
+        "heroId": 21,
+        "name": "顶甄",
+        "originalName": "刘备",
+        "slot": "普攻",
+        "skillId": 550210110,
+        "skillName": "普通攻击",
+        "newSkillName": "岚歌轻击",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "原地远程作用",
+        "movement": "原站位出手",
+        "weapon": "徒手／手势",
+        "weaponObservation": "未见手持武器",
+        "effectClass": "目标位置特效",
+        "semantic": "眩晕",
+        "bodyDesign": "收臂蓄力→拳/掌/肘击→回到待机",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B03",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_liubei_02",
+        "model": "hero_021_01",
+        "action": "gongji",
+        "effectiveDesc": "普通攻击转化为：对敌方前排单体造成110%伤害,并有65%几率造成<眩晕>,持续2回合。",
+        "classificationStage": "被动改写生效后；解锁前仍用基础普攻",
+        "passiveRewrite": "550210310 手足之情：普通攻击转化为：对敌方前排单体造成110%伤害,并有65%几率造成<眩晕>,持续2回合。",
+        "passiveNotes": "550210310 手足之情：普通攻击转化为：对敌方前排单体造成110%伤害,并有65%几率造成<眩晕>,持续2回合。",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1000.0,
+        "fps": 30,
+        "durationFrames": 30,
+        "rawEvents": [
+          {
+            "frame0": 15,
+            "timeMs": 500.0,
+            "type": 10,
+            "name": "zd"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "zd@500.0ms（发射/启动特效）",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "effectsTarEnemy": [
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 0,
+              "src": [
+                "common_skill_liubei_02"
+              ],
+              "type": 0
+            }
+          ],
+          "effectsTarUs": [
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 0,
+              "src": [
+                "common_skill_liubei_02"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_liubei_02",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_liubei_02_93af72f0.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_liubei_02",
+                  "name": "common_skill_liubei_02",
+                  "fps": 24,
+                  "durationFrames": 13,
+                  "durationMs": 541.667,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        1
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 4,
+                      "timeMs": 166.667,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsTarUs",
+            "resource": "common_skill_liubei_02",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_liubei_02_93af72f0.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_liubei_02",
+                  "name": "common_skill_liubei_02",
+                  "fps": 24,
+                  "durationFrames": 13,
+                  "durationMs": 541.667,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        1
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 4,
+                      "timeMs": 166.667,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_liubei_02 delay=0 dt=None speed=1 事件=pia@166.7\neffectsTarUs: common_skill_liubei_02 delay=0 dt=None speed=1 事件=pia@166.7",
+        "variants": [
+          "common_skill_liubei_02"
+        ],
+        "portrait": "reskin/hero_021.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H021-ULT",
+        "heroId": 21,
+        "name": "顶甄",
+        "originalName": "刘备",
+        "slot": "大招",
+        "skillId": 550210210,
+        "skillName": "桃园结义",
+        "newSkillName": "岚兮相扶",
+        "purpose": "辅助",
+        "targetSide": "友方",
+        "scope": "单体",
+        "delivery": "赴友方辅助",
+        "movement": "移到目标前出手",
+        "weapon": "徒手／手势",
+        "weaponObservation": "未见手持武器",
+        "effectClass": "目标位置特效",
+        "semantic": "治疗/吸血、降低",
+        "bodyDesign": "收手蓄力→摊掌/抬手释放→收手待机",
+        "rootPolicy": "引擎负责接近与返回；视频固定根位置，只做出手",
+        "batch": "B04",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "为我方攻击最高单体回复300%生命,并使其受到的伤害降低10%,持续2回合。（不可叠加）",
+        "skillModel": "common_skill_liubei_01",
+        "model": "hero_021_01",
+        "action": "jineng",
+        "effectiveDesc": "为我方攻击最高单体回复300%生命,并使其受到的伤害降低10%,持续2回合。（不可叠加）",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "550210310 手足之情：普通攻击转化为：对敌方前排单体造成110%伤害,并有65%几率造成<眩晕>,持续2回合。",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 2133.333,
+        "fps": 30,
+        "durationFrames": 64,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "__attackDoneDelay": 1000,
+          "attackFrameDelay": 1200,
+          "effectsTarEnemy": [
+            {
+              "delay": 0,
+              "posType": 0,
+              "src": [
+                "common_skill_liubei_01_1"
+              ],
+              "type": 0
+            },
+            {
+              "delay": 0,
+              "posType": 0,
+              "src": [
+                "common_skill_liubei_01_2"
+              ],
+              "type": 0
+            },
+            {
+              "delay": 600,
+              "posType": 0,
+              "src": [
+                "common_skill_liubei_01_3"
+              ],
+              "type": 0
+            }
+          ],
+          "effectsTarUs": [
+            {
+              "delay": 0,
+              "posType": 0,
+              "src": [
+                "common_skill_liubei_01_1"
+              ],
+              "type": 0
+            },
+            {
+              "delay": 0,
+              "posType": 0,
+              "src": [
+                "common_skill_liubei_01_2"
+              ],
+              "type": 0
+            },
+            {
+              "delay": 600,
+              "posType": 0,
+              "src": [
+                "common_skill_liubei_01_3"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            2,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_liubei_01_1",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_liubei_01_1_9f3ba7d3.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_liubei_01_1",
+                  "name": "common_skill_liubei_01_1",
+                  "fps": 24,
+                  "durationFrames": 24,
+                  "durationMs": 1000.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_liubei_01_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_liubei_01_2_58aeb44a.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_liubei_01_2",
+                  "name": "common_skill_liubei_01_2",
+                  "fps": 24,
+                  "durationFrames": 24,
+                  "durationMs": 1000.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_liubei_01_3",
+            "delay": 600,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_liubei_01_3_819db027.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_liubei_01_3",
+                  "name": "common_skill_liubei_01_3",
+                  "fps": 24,
+                  "durationFrames": 17,
+                  "durationMs": 708.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsTarUs",
+            "resource": "common_skill_liubei_01_1",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_liubei_01_1_9f3ba7d3.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_liubei_01_1",
+                  "name": "common_skill_liubei_01_1",
+                  "fps": 24,
+                  "durationFrames": 24,
+                  "durationMs": 1000.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsTarUs",
+            "resource": "common_skill_liubei_01_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_liubei_01_2_58aeb44a.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_liubei_01_2",
+                  "name": "common_skill_liubei_01_2",
+                  "fps": 24,
+                  "durationFrames": 24,
+                  "durationMs": 1000.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsTarUs",
+            "resource": "common_skill_liubei_01_3",
+            "delay": 600,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_liubei_01_3_819db027.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_liubei_01_3",
+                  "name": "common_skill_liubei_01_3",
+                  "fps": 24,
+                  "durationFrames": 17,
+                  "durationMs": 708.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_liubei_01_1 delay=0 dt=None speed=1\neffectsTarEnemy: common_skill_liubei_01_2 delay=0 dt=None speed=1\neffectsTarEnemy: common_skill_liubei_01_3 delay=600 dt=None speed=1\neffectsTarUs: common_skill_liubei_01_1 delay=0 dt=None speed=1\neffectsTarUs: common_skill_liubei_01_2 delay=0 dt=None speed=1\neffectsTarUs: common_skill_liubei_01_3 delay=600 dt=None speed=1",
+        "variants": [
+          "common_skill_liubei_01"
+        ],
+        "portrait": "reskin/hero_021.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "approved-for-matting",
+  "runtimeIntegrated": false,
+  "sourceBodyJob": "art-migration/generation/hero021-body-actions-minimax-v1",
+  "sourceFrameOrder": [
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00001_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00002_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00003_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00004_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00005_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00006_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00007_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00008_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00009_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00010_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00011_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00012_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00013_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00014_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00015_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00016_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00017_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00018_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00019_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00020_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00021_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00022_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00023_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00024_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00025_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00026_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00027_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00028_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00029_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00030_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00031_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00032_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00033_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00034_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00035_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00036_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00037_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00038_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00039_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00040_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00041_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00042_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00043_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00044_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00045_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00046_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00047_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00048_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00049_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00050_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00051_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00052_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00053_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00054_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00055_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00056_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00057_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00058_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00059_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00060_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00061_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00062_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00063_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00064_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00065_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00066_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00067_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00068_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00069_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00070_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00071_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00072_.png",
+    "art-migration/generation/hero021-body-actions-minimax-v1/hero021_body_00073_.png"
+  ]
+}

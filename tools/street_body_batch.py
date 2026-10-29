@@ -3,7 +3,7 @@ import argparse,hashlib,json,shutil
 from pathlib import Path
 from PIL import Image
 from street_comfy import ROOT,COMFY,submit
-p=argparse.ArgumentParser();p.add_argument('ids',nargs='+',type=int);p.add_argument('--revision',type=int,default=1);p.add_argument('--height',type=int,default=560);p.add_argument('--dense-guides',action='store_true');a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('ids',nargs='+',type=int);p.add_argument('--revision',type=int,default=1);p.add_argument('--height',type=int,default=560);p.add_argument('--dense-guides',action='store_true');p.add_argument('--queue-tail',action='store_true');a=p.parse_args()
 base=ROOT/'art-migration/generation'
 plan=json.loads((ROOT/'outputs/combat-action-plan-20261022/combat-action-plan.json').read_text('utf8'))['rows']
 template=json.loads((base/'hero001-body-actions-minimax-v3-fastdecode/workflow.json').read_text('utf8'))
@@ -53,7 +53,7 @@ for hid in reversed(a.ids):
    kind='attack' if 12<=frame<=24 else 'skill' if 48<=frame<=64 else 'idle';node=str(n)
    g[node]={'class_type':'MiniMaxH3AddGuide','inputs':{'positive':[prior,0],'latent':['7',1],'frame_idx':frame,'vae':['3',0],'image':[{'idle':'4','attack':'5','skill':'6'}[kind],0]}};prior=node;guideSchedule.append({'frame':frame,'image':kind})
   g['13']['inputs']['conditioning']=[prior,0]
- folder=submit(g,name,front=True)
+ folder=submit(g,name,front=not a.queue_tail)
  (folder/'body-design.json').write_text(json.dumps({'heroId':hid,'inputs':inputs,'actions':{k:{'sourceFrames':[0,35] if k=='attack' else [36,72],'guideImpactFrame':16 if k=='attack' else 54,'native':rows[k]} for k in rows},'length':73,'nativeClockMustBeRetained':True,'manualVideoReview':'pending','runtimeIntegrated':False},ensure_ascii=False,indent=2),'utf8')
  if a.dense_guides:
   file=folder/'body-design.json';record=json.loads(file.read_text('utf8'));record['denseGuideSchedule']=guideSchedule;file.write_text(json.dumps(record,ensure_ascii=False,indent=2),'utf8')

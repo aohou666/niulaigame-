@@ -27,13 +27,19 @@
         if(!clock||!state.cache.ready){state.bitmap.visible=false;return;}
         var cfg=state.cfg,frame=Math.min(cfg.frameCount-1,Math.max(0,Math.floor(clock.currentTime*cfg.fps+0.0001)));
         if(state.frame!==frame){state.bitmap.texture=state.cache.textures[frame];state.frame=frame;audit.framesPresented++;}
-        state.bitmap.x=cfg.render.x;state.bitmap.y=cfg.render.y;state.bitmap.width=cfg.render.width;state.bitmap.height=cfg.render.height;state.bitmap.alpha=cfg.render.alpha===undefined?1:cfg.render.alpha;state.bitmap.visible=true;
+        var scale=1;
+        if(cfg.maxScreenDiagonal){
+            var origin=player.localToGlobal(0,0,state.origin),axisX=player.localToGlobal(1,0,state.axisX),axisY=player.localToGlobal(0,1,state.axisY);
+            var sx=Math.hypot(axisX.x-origin.x,axisX.y-origin.y),sy=Math.hypot(axisY.x-origin.x,axisY.y-origin.y);
+            scale=Math.min(1,cfg.maxScreenDiagonal/Math.max(1,Math.hypot(cfg.render.width*sx,cfg.render.height*sy)));
+        }
+        state.renderScale=scale;state.bitmap.x=cfg.render.x*scale;state.bitmap.y=cfg.render.y*scale;state.bitmap.width=cfg.render.width*scale;state.bitmap.height=cfg.render.height*scale;state.bitmap.alpha=cfg.render.alpha===undefined?1:cfg.render.alpha;state.bitmap.visible=true;
     }
     function attach(player,name){
         var cfg=byModel[String(name)];if(!cfg){detach(player);return;}
         if(player._streetEffect&&player._streetEffect.cfg===cfg)return;
         detach(player);var bitmap=new egret.Bitmap();bitmap.name='generatedStreetEffect';bitmap.touchEnabled=false;bitmap.blendMode=egret.BlendMode.ADD;bitmap.visible=false;player.addChild(bitmap);
-        var state={cfg:cfg,cache:acquire(cfg),bitmap:bitmap,frame:-1,tick:null,removed:null};state.tick=function(){render(player);};state.removed=function(){detach(player);};
+        var state={cfg:cfg,cache:acquire(cfg),bitmap:bitmap,frame:-1,tick:null,removed:null,origin:new egret.Point(),axisX:new egret.Point(),axisY:new egret.Point()};state.tick=function(){render(player);};state.removed=function(){detach(player);};
         player._streetEffect=state;player.addEventListener(egret.Event.ENTER_FRAME,state.tick,player);player.addEventListener(egret.Event.REMOVED_FROM_STAGE,state.removed,player);players.push(player);
         audit.models[name]=(audit.models[name]||0)+1;render(player);
     }

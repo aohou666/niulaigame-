@@ -1,0 +1,64 @@
+{
+  "id": "street-spark-hit",
+  "models": [
+    "common_skinskill02_jinjishushi_01_2",
+    "common_skinskill02_jinjishushi_01_2_ez"
+  ],
+  "kind": "pulse",
+  "native": {
+    "name": "common_skinskill02_jinjishushi_01_2",
+    "action": "common_skinskill02_jinjishushi_01_2",
+    "frames": 32,
+    "fps": 24,
+    "aabb": {
+      "x": -123.07,
+      "y": -92.64,
+      "width": 247,
+      "height": 186
+    },
+    "scale": 1,
+    "origin": [
+      511.57,
+      511.64
+    ],
+    "foregroundBox": [
+      307,
+      358,
+      718,
+      668
+    ],
+    "peakFrame": 4,
+    "allFramesNonempty": true
+  },
+  "referenceVideo": "G:\\comfylight\\ComfyUI_windows_portable_nvidia\\ComfyUI_windows_portable\\ComfyUI\\input\\street_street-spark-hit_native_v2.mp4",
+  "referenceVideoSha256": "742c3e49d7220c014207185239510c418328b521e86f17ae4e1211a844d6b78b",
+  "referenceCrop": [
+    -63,
+    -62,
+    1088,
+    1089
+  ],
+  "render": {
+    "x": -574.5699999999999,
+    "y": -573.64,
+    "width": 1151.0,
+    "height": 1151.0,
+    "alpha": 1
+  },
+  "prompt": "Use <Image 1> as the EXACT new visual design, palette and small central composition. Use <Video 1> only for the old motion purpose, never copy old graphics. Keep this new effect within central35% of the black frame at EVERY instant; all particles stay within central40%, no long jets or expanding debris field. Generate a completely NEW isolated game VFX animation using <Video 1> ONLY as motion rhythm, spatial silhouette and purpose guidance. New production2.5D semi-realistic semi-cartoon absurd contemporary neighborhood art. One compact tangerine-and-teal electrical short-circuit spark, tiny angular warning-stripe fragments and a brief ivory contact flash. Single readable impact at center, then sparse sparks fade; no blue smoke cloud, no large explosion, no opaque ball. Fixed locked camera, one centered isolated foreground effect, solid pure BLACK RGB0,0,0 background, no floor or environment, no text or watermark, no character. Keep ALL particles and effect inside central75% of canvas and generous safe margins. Premium tactile enamel-like light edges with restrained physically readable sparks; no fantasy historical seal, no ancient weapons or original copied shapes. Five-second animation at24fps. Exactly ONE impact event, no repeated bursts; initial anticipation, single peak, then complete fade to black.",
+  "sourceFrames": 124,
+  "referenceMotionRetimedSeconds": 2.5,
+  "newArtGuide": "local_game/assets/street/effects/neighborhood-six-guides.png",
+  "manualReview": "pending",
+  "runtimeIntegrated": false,
+  "referenceVideoSourcePath": "art-migration/references/vfx-native/street_street-spark-hit_native_v2.mp4",
+  "referenceNativeMetadataPath": "art-migration/references/vfx-native/street-spark-hit-native.json",
+  "imageGuide": "art-migration/references/vfx-guides/street-spark-hit.png",
+  "imageGuideSha256": "61d2e8c92e775275cb6a2f1a086eabe06cdf2026113101c4176cc85819e92b24",
+  "newArtGuideSha256": "15da9d4afd9f1dfc1424031084398a0836cfb0e664b7c3bf6cc6878291be46bc",
+  "newArtGuideCell": [
+    2,
+    1
+  ],
+  "officialImagePrompt": "art-migration/prompts/vfx-neighborhood-six.txt"
+}
