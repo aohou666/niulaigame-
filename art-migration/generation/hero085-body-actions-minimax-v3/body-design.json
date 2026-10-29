@@ -1,0 +1,489 @@
+{
+  "heroId": 85,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/085/portrait.png",
+      "prepared": "art-migration/references/body-085-v3/idle.png",
+      "foot": [
+        383.85,
+        700
+      ],
+      "size": [
+        306,
+        500
+      ],
+      "sha256": "9a75f7588dfc4764594a1a3e010f9b04c54081431fa37b2231aa44320d754721"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero085-attack-v2/hero085_attack_alpha_00001_.png",
+      "prepared": "art-migration/references/body-085-v3/attack.png",
+      "foot": [
+        383.89,
+        700
+      ],
+      "size": [
+        387,
+        500
+      ],
+      "sha256": "c185d06e677cd26115baf2c988cedef86ce31f11892f3c545bbeacace399731f"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero085-skill-v2/hero085_skill_alpha_00001_.png",
+      "prepared": "art-migration/references/body-085-v3/skill.png",
+      "foot": [
+        384.36,
+        700
+      ],
+      "size": [
+        295,
+        500
+      ],
+      "sha256": "979c017ef0fb5a034d255abf844f41af55ab181a150d1228015b8589e37d4967"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H085-ATK",
+        "heroId": 85,
+        "name": "猴",
+        "originalName": "马超",
+        "slot": "普攻",
+        "skillId": 550850110,
+        "skillName": "普通攻击",
+        "newSkillName": "灵桃快击",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "远程弹道/连线",
+        "movement": "原站位出手",
+        "weapon": "食物道具",
+        "weaponObservation": "桃子",
+        "effectClass": "飞行弹道、命中/生效附着特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "现有道具蓄势→挥动或释放能量→复位；不自动丢失道具",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B03",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_machao_02",
+        "model": "hero_085_01",
+        "action": "gongji",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1666.667,
+        "fps": 30,
+        "durationFrames": 50,
+        "rawEvents": [
+          {
+            "frame0": 0,
+            "timeMs": 0.0,
+            "type": 10,
+            "name": "eventName"
+          },
+          {
+            "frame0": 25,
+            "timeMs": 833.333,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@833.3ms（角色事件）",
+        "impactMs": [
+          833.333
+        ],
+        "impactStatus": "角色pia直接回调；待游戏内验收",
+        "performance": {
+          "effectsPiaEnemy": [
+            {
+              "posType": 0,
+              "src": [
+                "common_skill_machao_02_2"
+              ]
+            }
+          ],
+          "effectsTarEnemy": [
+            {
+              "dt": 50,
+              "fixedWidth": 50,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 0,
+              "src": [
+                "common_skill_machao_02_1"
+              ],
+              "type": 1
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_machao_02_1",
+            "delay": 0,
+            "dt": 50,
+            "timeScale": 1,
+            "type": 1,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_machao_02_1_2f0cd502.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_machao_02_1",
+                  "name": "common_skill_machao_02_1",
+                  "fps": 24,
+                  "durationFrames": 5,
+                  "durationMs": 208.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_machao_02_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_machao_02_2_6a26aeba.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_machao_02_2",
+                  "name": "common_skill_machao_02_2",
+                  "fps": 24,
+                  "durationFrames": 17,
+                  "durationMs": 708.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_machao_02_1 delay=0 dt=50 speed=1\neffectsPiaEnemy: common_skill_machao_02_2 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_machao_02"
+        ],
+        "portrait": "reskin/hero_085.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H085-ULT",
+        "heroId": 85,
+        "name": "猴",
+        "originalName": "马超",
+        "slot": "大招",
+        "skillId": 550850210,
+        "skillName": "飒沓流星",
+        "newSkillName": "桃影流星",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "随机4目标",
+        "delivery": "中场释放（远近待回放）",
+        "movement": "移到场地中部释放",
+        "weapon": "食物道具",
+        "weaponObservation": "桃子",
+        "effectClass": "场景/范围特效、目标位置特效",
+        "semantic": "眩晕、秒杀",
+        "bodyDesign": "现有道具蓄势→挥动或释放能量→复位；不自动丢失道具；命中覆盖由独立目标特效控制",
+        "rootPolicy": "引擎移到中场后播出手；视频不自行横穿战场",
+        "batch": "B06",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方随机4人造成250%伤害，对生命比例高于10%的目标有25%几率造成<眩晕>,持续2回合；并对生命比例低于10%的目标直接秒杀,有35%几率无视复活和免死（BOSS无法直接击杀）。",
+        "skillModel": "common_skill_machao_01",
+        "model": "hero_085_01",
+        "action": "jineng",
+        "effectiveDesc": "对敌方随机4人造成250%伤害，对生命比例高于10%的目标有25%几率造成<眩晕>,持续2回合；并对生命比例低于10%的目标直接秒杀,有35%几率无视复活和免死（BOSS无法直接击杀）。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 2200.0,
+        "fps": 30,
+        "durationFrames": 66,
+        "rawEvents": [
+          {
+            "frame0": 0,
+            "timeMs": 0.0,
+            "type": 10,
+            "name": "eventName"
+          },
+          {
+            "frame0": 32,
+            "timeMs": 1066.667,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@1066.7ms（角色事件）",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "effectsTarEnemy": [
+            {
+              "delay": 100,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_machao_01_2"
+              ],
+              "type": 0
+            },
+            {
+              "delay": 200,
+              "offset": [
+                0,
+                0
+              ],
+              "z": 0,
+              "posType": 1,
+              "src": [
+                "common_skill_machao_01_3"
+              ],
+              "type": 0
+            }
+          ],
+          "effectQP": [
+            {
+              "delay": 0,
+              "offset": [
+                -100,
+                0
+              ],
+              "src": [
+                "common_skill_machao_01_1"
+              ],
+              "timeScale": 1
+            }
+          ],
+          "meFlyConfig": [
+            1,
+            100,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectQP",
+            "resource": "common_skill_machao_01_1",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_machao_01_1_c627fff.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_machao_01_1",
+                  "name": "common_skill_machao_01_1",
+                  "fps": 24,
+                  "durationFrames": 27,
+                  "durationMs": 1125.0,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_machao_01_xzd",
+                  "name": "common_skill_machao_01_xzd",
+                  "fps": 24,
+                  "durationFrames": 3,
+                  "durationMs": 125.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_machao_01_2",
+            "delay": 100,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_machao_01_2_dea7ed59.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_machao_01_2",
+                  "name": "common_skill_machao_01_2",
+                  "fps": 24,
+                  "durationFrames": 27,
+                  "durationMs": 1125.0,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        6
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 4,
+                      "timeMs": 166.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 9,
+                      "timeMs": 375.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 13,
+                      "timeMs": 541.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 15,
+                      "timeMs": 625.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 17,
+                      "timeMs": 708.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 20,
+                      "timeMs": 833.333,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                },
+                {
+                  "armature": "common_skill_machao_01_j",
+                  "name": "common_skill_machao_01_j",
+                  "fps": 24,
+                  "durationFrames": 27,
+                  "durationMs": 1125.0,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_machao_01_jwz",
+                  "name": "common_skill_machao_01_jwz",
+                  "fps": 24,
+                  "durationFrames": 4,
+                  "durationMs": 166.667,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_machao_01_sd2",
+                  "name": "common_skill_machao_01_sd2",
+                  "fps": 24,
+                  "durationFrames": 11,
+                  "durationMs": 458.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_machao_01_3",
+            "delay": 200,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_machao_01_3_ad96a9f3.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_machao_01_3",
+                  "name": "common_skill_machao_01_3",
+                  "fps": 24,
+                  "durationFrames": 30,
+                  "durationMs": 1250.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectQP: common_skill_machao_01_1 delay=0 dt=None speed=1\neffectsTarEnemy: common_skill_machao_01_2 delay=100 dt=None speed=1 事件=pia@166.7,pia@375.0,pia@541.7,pia@625.0,pia@708.3,pia@833.3\neffectsTarEnemy: common_skill_machao_01_3 delay=200 dt=None speed=1",
+        "variants": [
+          "common_skill_machao_01"
+        ],
+        "portrait": "reskin/hero_085.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false,
+  "sparseGuideSchedule": [
+    {
+      "frame": 0,
+      "image": "idle"
+    },
+    {
+      "frame": 16,
+      "image": "attack"
+    },
+    {
+      "frame": 36,
+      "image": "idle"
+    },
+    {
+      "frame": 54,
+      "image": "skill"
+    },
+    {
+      "frame": 72,
+      "image": "idle"
+    }
+  ],
+  "temporalReviewRequired": true
+}

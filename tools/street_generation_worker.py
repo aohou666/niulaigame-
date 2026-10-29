@@ -4,8 +4,8 @@ import argparse,datetime,json,time,traceback
 from pathlib import Path
 from street_comfy import ROOT,request,collect
 from street_candidate_qa import run as candidate_qa
-p=argparse.ArgumentParser();p.add_argument('--until-utc',required=True);a=p.parse_args()
-deadline=datetime.datetime.fromisoformat(a.until_utc);base=ROOT/'art-migration/generation';out=ROOT/'outputs/street-reskin'
+p=argparse.ArgumentParser();p.add_argument('--until-utc',help='Optional explicit deadline; omit for a user-resumed session without a new deadline.');a=p.parse_args()
+deadline=datetime.datetime.fromisoformat(a.until_utc) if a.until_utc else None;base=ROOT/'art-migration/generation';out=ROOT/'outputs/street-reskin'
 while True:
  try:
   records={}
@@ -13,7 +13,7 @@ while True:
    f=folder/'job.json'
    if f.exists():records[json.loads(f.read_text('utf8'))['promptId']]=(folder,json.loads(f.read_text('utf8')))
   now=datetime.datetime.now(datetime.timezone.utc)
-  if now>=deadline:
+  if deadline is not None and now>=deadline:
    q=request('/queue');pending=[r[1] for r in q['queue_pending'] if r[1] in records];running=[r[1] for r in q['queue_running'] if r[1] in records]
    if pending:request('/queue',{'delete':pending})
    if running:request('/interrupt',{})
@@ -33,8 +33,8 @@ while True:
   counts={}
   for folder,job in records.values():
    current=json.loads((folder/'job.json').read_text('utf8'));counts[current['status']]=counts.get(current['status'],0)+1
-  status={'checkedUtc':now.isoformat(),'deadlineUtc':deadline.isoformat(),'jobs':counts,'running':[r[1] for r in q['queue_running']],'pending':len(q['queue_pending']),'status':'active'}
-  if now>=deadline:
+  status={'checkedUtc':now.isoformat(),'deadlineUtc':deadline.isoformat() if deadline else None,'jobs':counts,'running':[r[1] for r in q['queue_running']],'pending':len(q['queue_pending']),'status':'active'}
+  if deadline is not None and now>=deadline:
    ours=[r[1] for r in q['queue_pending'] if r[1] in records]
    if ours:request('/queue',{'delete':ours})
    if any(r[1] in records for r in q['queue_running']):request('/interrupt',{})

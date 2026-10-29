@@ -8,6 +8,8 @@ p=argparse.ArgumentParser();p.add_argument('name');p.add_argument('--attack-anch
 reviewedAnchors=json.loads(Path(a.event_anchors).read_text('utf8')) if a.event_anchors else {}
 job=json.loads((folder/'job.json').read_text('utf8'));design=json.loads((folder/'body-design.json').read_text('utf8'));hid=design['heroId'];source=ROOT/design['sourceBodyJob'];qa=json.loads((source/'body-qa.json').read_text('utf8'))
 assert qa['manualVideoReview']=='approved-for-matting' and qa['automaticChecksPassed'];assert len(job['outputs'])==len(design['sourceFrameOrder'])==73
+assert qa.get('manualTemporalReview')=='approved-continuous','Continuous motion must be manually reviewed; distinct PNG hashes and guide poses are insufficient'
+assert not qa.get('temporalScreening',{}).get('requiresTemporalReview',True),'Pose-jump screening needs a corrected generated source before promotion'
 images=[];bounds=[]
 for raw,entry in zip(design['sourceFrameOrder'],job['outputs']):
  im=Image.open(ROOT/raw).convert('RGB').convert('RGBA');alpha=Image.open(ROOT/entry['path']).getchannel('A').point(lambda v:0 if v<9 else v);im.putalpha(alpha);box=alpha.point(lambda v:255 if v>16 else 0).getbbox();assert box
@@ -50,6 +52,8 @@ for model in models[1:]:
 out.mkdir(parents=True,exist_ok=True);atlas.save(out/'body.webp',lossless=True,method=6)
 cfg={'id':hid,'models':[design['actions']['attack']['native']['model'],design['actions']['attack']['native']['model']+'_ez'],'atlas':(out/'body.webp').relative_to(GAME).as_posix(),'frames':rects,'crop':box,'root':[256,466.7],'bodyHeight':design['inputs']['idle']['size'][1]*512/768,'actions':actions,'source':folder.relative_to(ROOT).as_posix()}
 cfg['nativeEventAuditSha256']=hashlib.sha256(auditFile.read_bytes()).hexdigest()
+cfg['temporalQuality']='approved-continuous'
+cfg['temporalReviewSourceSignature']=qa['sourceSignature']
 if modelActionOverrides:cfg['modelActionOverrides']=modelActionOverrides
 cfg['atlasSha256']=hashlib.sha256((out/'body.webp').read_bytes()).hexdigest()
 p=GAME/'street-body-data.js';d=json.loads(p.read_text('utf8').split('=',1)[1].strip().rstrip(';'));d['version']=a.version;d['characters']=[r for r in d['characters'] if r['id']!=hid]+[cfg];d['characters'].sort(key=lambda r:r['id']);atomic_write_text(p,'window.StreetBodyData='+json.dumps(d,separators=(',',':'))+';\n')

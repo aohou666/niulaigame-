@@ -3,6 +3,7 @@ import argparse,hashlib,json,math
 from pathlib import Path
 import numpy as np
 from PIL import Image,ImageDraw
+from street_motion_continuity import measure
 ROOT=Path(__file__).resolve().parents[1]
 p=argparse.ArgumentParser();p.add_argument('name');a=p.parse_args();folder=ROOT/'art-migration/generation'/a.name
 job=json.loads((folder/'job.json').read_text('utf8'));design=json.loads((folder/('body-design.json' if (folder/'body-design.json').exists() else 'idle-design.json')).read_text('utf8'));files=[ROOT/r['path'] for r in job.get('outputs',[])]
@@ -33,5 +34,7 @@ for kind in (['attack','skill'] if 'actions' in design else []):
  anchors[kind]={'closestGuidePoseFrame':closest,'requestedGuideFrame':design['actions'][kind]['guideImpactFrame'],'guideDistance':min(distances)}
 previous=json.loads((folder/'body-qa.json').read_text('utf8')) if (folder/'body-qa.json').exists() else {}
 report={'frames':len(files),'allFramesContactPages':math.ceil(len(files)/64),'poseAnchors':anchors,'bounds':bounds,'croppedFrames':cropped,'emptyFrames':empty,'automaticChecksPassed':not cropped and not empty,'sourceSignature':hashlib.sha256(''.join(r['sha256'] for r in job['outputs']).encode()).hexdigest(),'manualVideoReview':previous.get('manualVideoReview','pending'),'runtimeIntegrated':previous.get('runtimeIntegrated',False)}
+report['temporalScreening']=measure(folder)
+report['manualTemporalReview']=previous.get('manualTemporalReview','pending')
 if 'manualNotes' in previous:report['manualNotes']=previous['manualNotes']
 (folder/'body-qa.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n','utf8');print(json.dumps({k:v for k,v in report.items() if k!='bounds'}))

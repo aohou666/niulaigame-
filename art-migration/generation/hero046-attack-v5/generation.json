@@ -1,0 +1,14 @@
+{
+  "provider": "official-image-tool",
+  "purpose": "independent identity/pose guide only; not a complete animation",
+  "args": {
+    "referenced_image_paths": [
+      "C:/Users/dongdong/.codex/generated_images/01a18561-3b52-7601-a12f-4e916cbcf8a5/exec-76810b72-e631-4f38-ab77-3924e14d0834.png"
+    ],
+    "transparent_background": true,
+    "prompt": "Edit ONLY the background/alpha matte. Remove absolutely ALL of the blurry colored glow, black background, shadow field and background pixels. Output a clean transparent cutout of this exact single game character and every held prop. Preserve EXACTLY the actor, outfit, pose, facial expression, bucket, entire long thin DARK graphite fishing rod, its red wraps, thin fishing line and the single red-gray bobber. Preserve full image framing and safe margins. No colored halo, no backdrop, no ground shadow. The empty space between and around all objects MUST have alpha exactly zero. Actor/rod/bucket/bobber interiors should be opaque, with only natural thin antialiasing edges. Do not recolor, redraw, shorten, brighten or add rods. This is production sprite background removal."
+  },
+  "outputHint": "Generated images are saved to C:\\Users\\dongdong\\.codex\\generated_images\\01a18561-3b52-7601-a12f-4e916cbcf8a5 as C:\\Users\\dongdong\\.codex\\generated_images\\01a18561-3b52-7601-a12f-4e916cbcf8a5\\exec-eda223ea-7234-4db0-8cec-0c365697cc49.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "manualReview": "approved-guide-only",
+  "reviewNotes": "Full long dark fishing rod, line, single bobber, right bucket and left rod retained. Alpha must be composited for inspection; invisible RGB background is not visible art."
+}

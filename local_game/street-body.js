@@ -21,6 +21,9 @@
  function render(player){
   var s=player._streetBody;if(!s)return;
   var action=player.action||player._action,seq=(s.cfg.modelActionOverrides&&s.cfg.modelActionOverrides[player._dbName]&&s.cfg.modelActionOverrides[player._dbName][action])||s.cfg.actions[action],display=player._armature,clock=display&&display.animation&&display.animation.lastAnimationState;
+  if(!player._characterIdleSuppressNative&&display&&(s.cfg.qualityQuarantineActions||[]).indexOf(action)>=0){
+   restore(player,s);var idle=player._characterIdleState;if(idle){idle.bitmap.visible=false;idle.hidden=false;}display.visible=true;return;
+  }
   if(player._characterIdleSuppressNative||!seq||!clock||!s.cache.ready){restore(player,s);return;}
   var nativeFrame=Math.min(seq.frameMap.length-1,Math.max(0,Math.floor(clock.currentTime*seq.fps+.0001))),frame=seq.frameMap[nativeFrame];
   if(s.frame!==frame||s.action!==action){s.bitmap.texture=s.cache.textures[frame];s.frame=frame;s.action=action;audit.framesPresented++;audit.actions[action]=(audit.actions[action]||0)+1;}
