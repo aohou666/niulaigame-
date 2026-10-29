@@ -1,0 +1,128 @@
+{
+  "pass": true,
+  "saveIsolation": "outputs/street-reskin/effect-test-save.json",
+  "reports": [
+    {
+      "hero": 3,
+      "pass": true,
+      "active": {
+        "installed": true,
+        "framesPresented": 7,
+        "actions": {
+          "gongji": 7
+        },
+        "errors": [],
+        "caches": [
+          {
+            "id": "3",
+            "users": 1,
+            "ready": true
+          }
+        ],
+        "active": [
+          {
+            "model": "hero_003_01_ez",
+            "action": "gongji",
+            "frame": 16,
+            "nativeFrame": 6,
+            "visible": true,
+            "nativeVisible": false,
+            "ready": true,
+            "onStage": true
+          }
+        ]
+      },
+      "after": {
+        "installed": true,
+        "framesPresented": 21,
+        "actions": {
+          "gongji": 17,
+          "jineng": 4
+        },
+        "errors": [],
+        "caches": [
+          {
+            "id": "3",
+            "users": 1,
+            "ready": true
+          }
+        ],
+        "active": [
+          {
+            "model": "hero_003_01_ez",
+            "action": "jineng",
+            "frame": 39,
+            "nativeFrame": 4,
+            "visible": true,
+            "nativeVisible": false,
+            "ready": true,
+            "onStage": true
+          }
+        ]
+      },
+      "errors": [],
+      "scenario": "Isolated save; solo hero level50 with reference hero1 stats, 4 normal wei enemies, battles0/stage1, supports cleared"
+    },
+    {
+      "hero": 8,
+      "pass": true,
+      "active": {
+        "installed": true,
+        "framesPresented": 19,
+        "actions": {
+          "gongji": 19
+        },
+        "errors": [],
+        "caches": [
+          {
+            "id": "8",
+            "users": 1,
+            "ready": true
+          }
+        ],
+        "active": [
+          {
+            "model": "hero_008_01_ez",
+            "action": "gongji",
+            "frame": 19,
+            "nativeFrame": 18,
+            "visible": true,
+            "nativeVisible": false,
+            "ready": true,
+            "onStage": true
+          }
+        ]
+      },
+      "after": {
+        "installed": true,
+        "framesPresented": 30,
+        "actions": {
+          "gongji": 26,
+          "jineng": 4
+        },
+        "errors": [],
+        "caches": [
+          {
+            "id": "8",
+            "users": 1,
+            "ready": true
+          }
+        ],
+        "active": [
+          {
+            "model": "hero_008_01_ez",
+            "action": "jineng",
+            "frame": 39,
+            "nativeFrame": 3,
+            "visible": true,
+            "nativeVisible": false,
+            "ready": true,
+            "onStage": true
+          }
+        ]
+      },
+      "errors": [],
+      "scenario": "Isolated save; solo hero level50 with reference hero1 stats, 4 normal wei enemies, battles0/stage1, supports cleared"
+    }
+  ]
+}

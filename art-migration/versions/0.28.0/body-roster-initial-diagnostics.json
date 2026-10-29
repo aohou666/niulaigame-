@@ -1,0 +1,7 @@
+{
+  "status": "resolved-test-setup-error",
+  "attempts": 2,
+  "error": "body not ready 3: base ready, EZ destroyed after missing armature lookup",
+  "cause": "Test passed resource name hero_003_01_ez as both DB filename and armature name. EZ payload armature retains base name hero_003_01.",
+  "fix": "Use DBPlayer.init(resourceName, resourceName without _ez), matching native view behavior. No game artwork or native armature altered to force the check."
+}

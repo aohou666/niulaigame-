@@ -1,0 +1,496 @@
+{
+  "heroId": 2,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/002/portrait.png",
+      "prepared": "art-migration/references/body-002-v2/idle.png",
+      "foot": [
+        383.95,
+        700
+      ],
+      "size": [
+        362,
+        620
+      ],
+      "sha256": "58091332232ae636a6ccd4a1d0a37ab6cbbddafb4110ffed1bc451f47b366418"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero002-attack-v3/hero002_attack_continuity_alpha_00001_.png",
+      "prepared": "art-migration/references/body-002-v2/attack.png",
+      "foot": [
+        384.37,
+        700
+      ],
+      "size": [
+        398,
+        620
+      ],
+      "sha256": "60e19f20117f3750a0ca38df8d8c4fd67e025d21561ea40c78e656e834954aa7"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero002-skill-v3/hero002_skill_continuity_alpha_00001_.png",
+      "prepared": "art-migration/references/body-002-v2/skill.png",
+      "foot": [
+        383.52,
+        700
+      ],
+      "size": [
+        398,
+        620
+      ],
+      "sha256": "d854d99dfb990e1fc7e262d05723e5ab30cde33422d1400fe13216dff4df1303"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H002-ATK",
+        "heroId": 2,
+        "name": "老八",
+        "originalName": "司马懿",
+        "slot": "普攻",
+        "skillId": 550020110,
+        "skillName": "普通攻击",
+        "newSkillName": "追魂探隙",
+        "purpose": "进攻＋自身增益",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "远程弹道/连线",
+        "movement": "原站位出手",
+        "weapon": "食物道具",
+        "weaponObservation": "手持食物",
+        "effectClass": "飞行弹道、命中/生效附着特效",
+        "semantic": "治疗/吸血",
+        "bodyDesign": "现有道具蓄势→挥动或释放能量→复位；不自动丢失道具",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B03",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_simayi_01",
+        "model": "hero_002_01",
+        "action": "gongji",
+        "effectiveDesc": "普通攻击转化为：攻击敌方生命比例最低单体,并回复自身30%攻击力的生命。",
+        "classificationStage": "被动改写生效后；解锁前仍用基础普攻",
+        "passiveRewrite": "550020310 择敌速袭：普通攻击转化为：攻击敌方生命比例最低单体,并回复自身30%攻击力的生命。",
+        "passiveNotes": "550020310 择敌速袭：普通攻击转化为：攻击敌方生命比例最低单体,并回复自身30%攻击力的生命。",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1066.667,
+        "fps": 30,
+        "durationFrames": 32,
+        "rawEvents": [
+          {
+            "frame0": 16,
+            "timeMs": 533.333,
+            "type": 10,
+            "name": "zd"
+          },
+          {
+            "frame0": 17,
+            "timeMs": 566.667,
+            "type": 10,
+            "name": "zd"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "zd@533.3ms（发射/启动特效）；zd@566.7ms（发射/启动特效）",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "effectsPiaEnemy": [
+            {
+              "posType": 0,
+              "src": [
+                "common_skill_simayi_01_2"
+              ],
+              "type": 0
+            }
+          ],
+          "effectsPiaUs": [
+            {
+              "posType": 0,
+              "src": [
+                "common_skill_simayi_01_2"
+              ],
+              "type": 0
+            }
+          ],
+          "effectsTarEnemy": [
+            {
+              "dt": 200,
+              "fixedWidth": 50,
+              "offset": [
+                40,
+                -80
+              ],
+              "posType": 0,
+              "src": [
+                "common_skill_simayi_01_1"
+              ],
+              "type": 1
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_simayi_01_1",
+            "delay": 0,
+            "dt": 200,
+            "timeScale": 1,
+            "type": 1,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_simayi_01_1_58146618.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_simayi_01_1",
+                  "name": "common_skill_simayi_01_1",
+                  "fps": 24,
+                  "durationFrames": 1,
+                  "durationMs": 41.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_simayi_01_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_simayi_01_2_848cafd4.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_simayi_01_2",
+                  "name": "common_skill_simayi_01_2",
+                  "fps": 24,
+                  "durationFrames": 19,
+                  "durationMs": 791.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaUs",
+            "resource": "common_skill_simayi_01_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_simayi_01_2_848cafd4.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_simayi_01_2",
+                  "name": "common_skill_simayi_01_2",
+                  "fps": 24,
+                  "durationFrames": 19,
+                  "durationMs": 791.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_simayi_01_1 delay=0 dt=200 speed=1\neffectsPiaEnemy: common_skill_simayi_01_2 delay=0 dt=None speed=1\neffectsPiaUs: common_skill_simayi_01_2 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_simayi_01"
+        ],
+        "portrait": "reskin/hero_002.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H002-ULT",
+        "heroId": 2,
+        "name": "老八",
+        "originalName": "司马懿",
+        "slot": "大招",
+        "skillId": 550020210,
+        "skillName": "蝮蛇之吻",
+        "newSkillName": "勾魂终局",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "中场释放（远近待回放）",
+        "movement": "移到场地中部释放",
+        "weapon": "食物道具",
+        "weaponObservation": "手持食物",
+        "effectClass": "场景/范围特效、目标位置特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "现有道具蓄势→挥动或释放能量→复位；不自动丢失道具",
+        "rootPolicy": "引擎移到中场后播出手；视频不自行横穿战场",
+        "batch": "B05",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方生命比例最低单体造成400%伤害,击杀敌人时,永久提高20%攻击,最多提高200%,若本次攻击可击杀目标,则有10%几率无视所有免疫状态立即击杀目标。",
+        "skillModel": "common_skill_simayi_02",
+        "model": "hero_002_01",
+        "action": "jineng",
+        "effectiveDesc": "对敌方生命比例最低单体造成400%伤害,击杀敌人时,永久提高20%攻击,最多提高200%,若本次攻击可击杀目标,则有10%几率无视所有免疫状态立即击杀目标。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "550020310 择敌速袭：普通攻击转化为：攻击敌方生命比例最低单体,并回复自身30%攻击力的生命。",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1733.333,
+        "fps": 30,
+        "durationFrames": 52,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "effectQP": [
+            {
+              "delay": 800,
+              "offset": [
+                200,
+                0
+              ],
+              "src": [
+                "common_skill_simayi_02_1"
+              ],
+              "timeScale": 1
+            }
+          ],
+          "effectsTarEnemy": [
+            {
+              "delay": 2800,
+              "posType": 0,
+              "src": [
+                "common_skill_simayi_02_2"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            1,
+            200,
+            100
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectQP",
+            "resource": "common_skill_simayi_02_1",
+            "delay": 800,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_simayi_02_1_d557e6a4.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_simayi_02_1",
+                  "name": "common_skill_simayi_02_1",
+                  "fps": 24,
+                  "durationFrames": 41,
+                  "durationMs": 1708.333,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        8
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 4,
+                      "timeMs": 166.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 4,
+                      "timeMs": 166.667,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 8,
+                      "timeMs": 333.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 8,
+                      "timeMs": 333.333,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 14,
+                      "timeMs": 583.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 14,
+                      "timeMs": 583.333,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 21,
+                      "timeMs": 875.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 21,
+                      "timeMs": 875.0,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 26,
+                      "timeMs": 1083.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 26,
+                      "timeMs": 1083.333,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 30,
+                      "timeMs": 1250.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 30,
+                      "timeMs": 1250.0,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 37,
+                      "timeMs": 1541.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 37,
+                      "timeMs": 1541.667,
+                      "type": 10,
+                      "name": "pz"
+                    }
+                  ]
+                },
+                {
+                  "armature": "common_skill_simayi_q",
+                  "name": "common_skill_simayi_01_q",
+                  "fps": 24,
+                  "durationFrames": 2,
+                  "durationMs": 83.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_simayi_02_2",
+            "delay": 2800,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_simayi_02_2_b029a014.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_simayi_02_2",
+                  "name": "common_skill_simayi_02_2",
+                  "fps": 24,
+                  "durationFrames": 19,
+                  "durationMs": 791.667,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 3,
+                      "timeMs": 125.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 3,
+                      "timeMs": 125.0,
+                      "type": 10,
+                      "name": "pz"
+                    }
+                  ]
+                },
+                {
+                  "armature": "common_skill_simayi_cjbxz",
+                  "name": "common_dishu_skill_01_cjbxz",
+                  "fps": 24,
+                  "durationFrames": 29,
+                  "durationMs": 1208.333,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_simayi_q",
+                  "name": "common_skill_simayi_01_q",
+                  "fps": 24,
+                  "durationFrames": 2,
+                  "durationMs": 83.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectQP: common_skill_simayi_02_1 delay=800 dt=None speed=1 事件=pia@166.7,pia@333.3,pia@583.3,pia@875.0,pia@1083.3,pia@1250.0,pia@1541.7\neffectsTarEnemy: common_skill_simayi_02_2 delay=2800 dt=None speed=1 事件=pia@125.0",
+        "variants": [
+          "common_skill_simayi_02"
+        ],
+        "portrait": "reskin/hero_002.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false
+}

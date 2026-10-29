@@ -1,0 +1,563 @@
+{
+  "heroId": 20,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/020/portrait.png",
+      "prepared": "art-migration/references/body-020/idle.png",
+      "foot": [
+        383.95,
+        700
+      ],
+      "size": [
+        312,
+        620
+      ],
+      "sha256": "5fb8bd00babc9d3b9fc0a1c349a28b0b629a1c471fc034bf6a734940a5bf4a7f"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero020-attack-v2/hero020_attack_alpha_00001_.png",
+      "prepared": "art-migration/references/body-020/attack.png",
+      "foot": [
+        384.18,
+        700
+      ],
+      "size": [
+        402,
+        620
+      ],
+      "sha256": "cd3bf85047525582bdf1fb4d68d1a7eb89a14cff2282a0edbb08148c185f74b3"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero020-skill-v2/hero020_skill_alpha_00001_.png",
+      "prepared": "art-migration/references/body-020/skill.png",
+      "foot": [
+        384.32,
+        700
+      ],
+      "size": [
+        320,
+        620
+      ],
+      "sha256": "15b3e6955421bc2c4513c2418351be253a9d798d828a0e987ba2ea917004dc97"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H020-ATK",
+        "heroId": 20,
+        "name": "卧龙羽客",
+        "originalName": "诸葛亮",
+        "slot": "普攻",
+        "skillId": 550200110,
+        "skillName": "普通攻击",
+        "newSkillName": "羽扇点星",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "原地远程作用",
+        "movement": "原站位出手",
+        "weapon": "扇",
+        "weaponObservation": "羽扇",
+        "effectClass": "目标位置特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "收扇/引扇蓄力→挥扇释放→归位",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B03",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_zhugeliang_01",
+        "model": "hero_020_01",
+        "action": "gongji",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1033.333,
+        "fps": 30,
+        "durationFrames": 31,
+        "rawEvents": [
+          {
+            "frame0": 16,
+            "timeMs": 533.333,
+            "type": 10,
+            "name": "zd"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "zd@533.3ms（发射/启动特效）",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "__attackDoneDelay": 1000,
+          "effectsTarEnemy": [
+            {
+              "delay": 0,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_zhugeliang_01"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_zhugeliang_01",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhugeliang_01_d40ae1c9.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhugeliang_01",
+                  "name": "common_skill_zhugeliang_01",
+                  "fps": 24,
+                  "durationFrames": 41,
+                  "durationMs": 1708.333,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        3
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 6,
+                      "timeMs": 250.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 12,
+                      "timeMs": 500.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 20,
+                      "timeMs": 833.333,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_zhugeliang_01 delay=0 dt=None speed=1 事件=pia@250.0,pia@500.0,pia@833.3",
+        "variants": [
+          "common_skill_zhugeliang_01"
+        ],
+        "portrait": "reskin/hero_020.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H020-ULT",
+        "heroId": 20,
+        "name": "卧龙羽客",
+        "originalName": "诸葛亮",
+        "slot": "大招",
+        "skillId": 550200210,
+        "skillName": "奇门遁甲",
+        "newSkillName": "梦泽借风",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "指定3目标",
+        "delivery": "中场释放（远近待回放）",
+        "movement": "移到场地中部释放",
+        "weapon": "扇",
+        "weaponObservation": "羽扇",
+        "effectClass": "场景/范围特效、目标位置特效",
+        "semantic": "眩晕",
+        "bodyDesign": "收扇/引扇蓄力→挥扇释放→归位；命中覆盖由独立目标特效控制",
+        "rootPolicy": "引擎移到中场后播出手；视频不自行横穿战场",
+        "batch": "B06",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对攻击力最高的3个敌人造成300%伤害,有25%几率附加<眩晕>效果,持续2回合。",
+        "skillModel": "common_skill_zhugeliang_02",
+        "model": "hero_020_01",
+        "action": "jineng",
+        "effectiveDesc": "对攻击力最高的3个敌人造成300%伤害,有25%几率附加<眩晕>效果,持续2回合。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 2033.333,
+        "fps": 30,
+        "durationFrames": 61,
+        "rawEvents": [],
+        "modelSpeed": 2,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "effectQP": [
+            {
+              "delay": 0,
+              "offset": [
+                0,
+                -800
+              ],
+              "src": [
+                "common_skill_zhugeliang_02_1"
+              ],
+              "timeScale": 2
+            }
+          ],
+          "effectsTarEnemy": [
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "randomSrc": 1,
+              "src": [
+                "common_skill_zhugeliang_02_2",
+                "common_skill_zhugeliang_02_4"
+              ],
+              "timeScale": 2,
+              "type": 0
+            },
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "randomSrc": 1,
+              "src": [
+                "common_skill_zhugeliang_02_3",
+                "common_skill_zhugeliang_02_5"
+              ],
+              "timeScale": 2,
+              "type": 0,
+              "z": 0
+            }
+          ],
+          "meFlyConfig": [
+            1,
+            300,
+            0
+          ],
+          "modelActSpeedUp": 2
+        },
+        "effectDetails": [
+          {
+            "layer": "effectQP",
+            "resource": "common_skill_zhugeliang_02_1",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 2,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhugeliang_02_1_4bfabaec.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhugeliang_02_1",
+                  "name": "common_skill_zhugeliang_02_1",
+                  "fps": 24,
+                  "durationFrames": 18,
+                  "durationMs": 750.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_zhugeliang_02_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 2,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhugeliang_02_2_40d7628d.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhugeliang_02_2",
+                  "name": "common_skill_zhugeliang_02_2",
+                  "fps": 24,
+                  "durationFrames": 22,
+                  "durationMs": 916.667,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        1
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 12,
+                      "timeMs": 500.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 12,
+                      "timeMs": 500.0,
+                      "type": 10,
+                      "name": "pz"
+                    }
+                  ]
+                },
+                {
+                  "armature": "common_skill_zhugeliang_02_hc",
+                  "name": "common_skill_zhugeliang_02_hc",
+                  "fps": 24,
+                  "durationFrames": 8,
+                  "durationMs": 333.333,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_zhugeliang_02_tw",
+                  "name": "common_skill_zhugeliang_02_tw",
+                  "fps": 24,
+                  "durationFrames": 5,
+                  "durationMs": 208.333,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_zhugeliang_02_xx",
+                  "name": "common_skill_zhugeliang_02_xx",
+                  "fps": 24,
+                  "durationFrames": 8,
+                  "durationMs": 333.333,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_zhugeliang_02_ys",
+                  "name": "common_skill_zhugeliang_02_ys",
+                  "fps": 24,
+                  "durationFrames": 14,
+                  "durationMs": 583.333,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_zhugeliang_02_yssthy",
+                  "name": "common_skill_zhugeliang_02_yssthy",
+                  "fps": 24,
+                  "durationFrames": 5,
+                  "durationMs": 208.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_zhugeliang_02_4",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 2,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhugeliang_02_4_1ac18a0.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhugeliang_02_4",
+                  "name": "common_skill_zhugeliang_02_4",
+                  "fps": 24,
+                  "durationFrames": 22,
+                  "durationMs": 916.667,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        1
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 12,
+                      "timeMs": 500.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 12,
+                      "timeMs": 500.0,
+                      "type": 10,
+                      "name": "pz"
+                    }
+                  ]
+                },
+                {
+                  "armature": "common_skill_zhugeliang_02_hjtw",
+                  "name": "unnamed",
+                  "fps": 24,
+                  "durationFrames": 3,
+                  "durationMs": 125.0,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_zhugeliang_02_hc2",
+                  "name": "common_skill_zhugeliang_02_hc2",
+                  "fps": 24,
+                  "durationFrames": 8,
+                  "durationMs": 333.333,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_zhugeliang_02_tw2",
+                  "name": "common_skill_zhugeliang_02_tw",
+                  "fps": 24,
+                  "durationFrames": 5,
+                  "durationMs": 208.333,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_zhugeliang_02_xx2",
+                  "name": "common_skill_zhugeliang_02_xx",
+                  "fps": 24,
+                  "durationFrames": 8,
+                  "durationMs": 333.333,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_zhugeliang_02_ys2",
+                  "name": "common_skill_zhugeliang_02_ys",
+                  "fps": 24,
+                  "durationFrames": 14,
+                  "durationMs": 583.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_zhugeliang_02_3",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 2,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhugeliang_02_3_ffab09b5.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhugeliang_02_3",
+                  "name": "common_skill_zhugeliang_02_3",
+                  "fps": 24,
+                  "durationFrames": 26,
+                  "durationMs": 1083.333,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_zhugeliang_02_xz",
+                  "name": "common_skill_zhugeliang_02_xz",
+                  "fps": 24,
+                  "durationFrames": 30,
+                  "durationMs": 1250.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_zhugeliang_02_5",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 2,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhugeliang_02_5_186199ec.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhugeliang_02_5",
+                  "name": "common_skill_zhugeliang_02_5",
+                  "fps": 24,
+                  "durationFrames": 26,
+                  "durationMs": 1083.333,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_zhugeliang_02_xz2",
+                  "name": "common_skill_zhugeliang_02_xz",
+                  "fps": 24,
+                  "durationFrames": 30,
+                  "durationMs": 1250.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectQP: common_skill_zhugeliang_02_1 delay=0 dt=None speed=2\neffectsTarEnemy: common_skill_zhugeliang_02_2 delay=0 dt=None speed=2 事件=pia@500.0\neffectsTarEnemy: common_skill_zhugeliang_02_4 delay=0 dt=None speed=2 事件=pia@500.0\neffectsTarEnemy: common_skill_zhugeliang_02_3 delay=0 dt=None speed=2\neffectsTarEnemy: common_skill_zhugeliang_02_5 delay=0 dt=None speed=2",
+        "variants": [
+          "common_skill_zhugeliang_02"
+        ],
+        "portrait": "reskin/hero_020.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false
+}

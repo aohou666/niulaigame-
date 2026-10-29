@@ -1,0 +1,321 @@
+{
+  "heroId": 27,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/027/portrait.png",
+      "prepared": "art-migration/references/body-027/idle.png",
+      "foot": [
+        383.58,
+        700
+      ],
+      "size": [
+        338,
+        620
+      ],
+      "sha256": "8c1261cf5aec1029b0a82e655b18c2d1966b8ce54af8aee154a7d2493c088e26"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero027-attack-v2/hero027_attack_alpha_00001_.png",
+      "prepared": "art-migration/references/body-027/attack.png",
+      "foot": [
+        384.09,
+        700
+      ],
+      "size": [
+        519,
+        620
+      ],
+      "sha256": "76a3389f844a07726c02e25b37b2321d1e4e19cbc89092a2a61e7d6205e8a4a7"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero027-skill-v2/hero027_skill_alpha_00001_.png",
+      "prepared": "art-migration/references/body-027/skill.png",
+      "foot": [
+        384.02,
+        700
+      ],
+      "size": [
+        430,
+        620
+      ],
+      "sha256": "f7c86ab93d455a44bfaf7cfa7c334db255e899fb7b4d17bf3036ad317a464807"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H027-ATK",
+        "heroId": 27,
+        "name": "牛",
+        "originalName": "廖化",
+        "slot": "普攻",
+        "skillId": 550270110,
+        "skillName": "普通攻击",
+        "newSkillName": "行野踏步",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "近身攻击",
+        "movement": "移到目标前出手",
+        "weapon": "生活道具",
+        "weaponObservation": "稻穗／草束",
+        "effectClass": "目标位置特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "现有道具蓄势→挥动或释放能量→复位；不自动丢失道具",
+        "rootPolicy": "引擎负责接近与返回；视频固定根位置，只做出手",
+        "batch": "B02",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_guanyu_02",
+        "model": "hero_027_01",
+        "action": "gongji",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "wuqi2",
+        "rawDurationMs": 1133.333,
+        "fps": 30,
+        "durationFrames": 34,
+        "rawEvents": [
+          {
+            "frame0": 14,
+            "timeMs": 466.667,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@466.7ms（角色事件）",
+        "impactMs": [
+          466.667
+        ],
+        "impactStatus": "角色pia直接回调；待游戏内验收",
+        "performance": {
+          "effectsTarEnemy": [
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_guanyu_02"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            2,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_guanyu_02",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_guanyu_02_14b09498.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_guanyu_02",
+                  "name": "common_skill_guanyu_02",
+                  "fps": 24,
+                  "durationFrames": 12,
+                  "durationMs": 500.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_guanyu_02 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_guanyu_02"
+        ],
+        "portrait": "reskin/hero_027.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H027-ULT",
+        "heroId": 27,
+        "name": "牛",
+        "originalName": "廖化",
+        "slot": "大招",
+        "skillId": 550270210,
+        "skillName": "老骥伏枥",
+        "newSkillName": "老路先行",
+        "purpose": "攻辅兼备",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "特殊移动",
+        "movement": "中线预备＋自定义冲刺＋自定义移动",
+        "weapon": "生活道具",
+        "weaponObservation": "稻穗／草束",
+        "effectClass": "命中/生效附着特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "现有道具蓄势→挥动或释放能量→复位；不自动丢失道具",
+        "rootPolicy": "移动/分身单独轨道，需逐条回放",
+        "batch": "B07",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成335%伤害,并提高友方全体8%速度,持续2回合。",
+        "skillModel": "common_skill_liaohua_02",
+        "model": "hero_027_01",
+        "action": "jineng",
+        "effectiveDesc": "对敌方前排单体造成335%伤害,并提高友方全体8%速度,持续2回合。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "wuqi2",
+        "rawDurationMs": 466.667,
+        "fps": 30,
+        "durationFrames": 14,
+        "rawEvents": [
+          {
+            "frame0": 0,
+            "timeMs": 0.0,
+            "ints": [
+              2
+            ],
+            "type": 10,
+            "name": "count"
+          },
+          {
+            "frame0": 2,
+            "timeMs": 66.667,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 8,
+            "timeMs": 266.667,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@66.7ms（角色事件）；pia@266.7ms（角色事件）",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "customAct": [
+            {
+              "delay": 100,
+              "dt": 1000,
+              "timeScale": 1,
+              "type": "customFly"
+            }
+          ],
+          "effectsPiaEnemy": [
+            {
+              "posType": 0,
+              "src": [
+                "common_skill_liaohua_02_2"
+              ],
+              "type": 0
+            }
+          ],
+          "forceExtraPlayTimes": 3,
+          "forcePiaCount": 8,
+          "meFlyConfig": [
+            4,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_liaohua_02_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_liaohua_02_2_fe45e347.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_liaohua_02_2",
+                  "name": "common_skill_liaohua_02_2",
+                  "fps": 24,
+                  "durationFrames": 16,
+                  "durationMs": 666.667,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        2
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 2,
+                      "timeMs": 83.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 2,
+                      "timeMs": 83.333,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 5,
+                      "timeMs": 208.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 5,
+                      "timeMs": 208.333,
+                      "type": 10,
+                      "name": "pz"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsPiaEnemy: common_skill_liaohua_02_2 delay=0 dt=None speed=1 事件=pia@83.3,pia@208.3",
+        "variants": [
+          "common_skill_liaohua_02"
+        ],
+        "portrait": "reskin/hero_027.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false
+}

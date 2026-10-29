@@ -62,3 +62,13 @@
 - ID7 bodyv1白刀光13/14、45–47越出画面，已拒绝；v2 height500而非620、紧凑刺剑，不要误用v1。body_batch新增--revision、--height，并使用版本化输入文件和参考文件夹，保留旧输入。
 - 7/8/10/11/12 bodyv1已排队，7/8完成；4/5/6仍后部排队。其余有批准guide的16/17/18/19/20/21/22/23/26/27/28/29/32尚未提交body，可适度扩展，但必须全帧看完后再matte/接入。
 - 0.27源prompts/repair-captain.txt保存原生成、裁切修订、独立全身生成三次prompt。全身source有光晕，最终PNG使用原RGB+RMBGalpha，原源保留。
+
+## 最新0.28完成待提交
+- ID3/8身体已通过新通用street-body-roster-test.mjs（--version=0.28.0；ID1/3/8两种模型474帧位+严格native totalTime+时点+缓存生命周期）和street-body-battle-roster-test.mjs实际隔离战斗。真实截图已看。ID3 pia6源16、ID8 pia17源18。新版测试传DBPlayer.init(name,name.replace(/_ez$/,''))，EZ payload armature名不带ez；早期错误诊断已存。
+- street_body_promote.py已泛化，接受matte作业、--attack-anchor、--version，保留已有其他人物数据，使用metadata中各自原生动作长度/事件；多重命中需明确源锚点，不允许自动当成单击。
+- street_art_verify.py现进入street_review.py，验证全部新图片digest/尺寸、每个身体tile非空/边界/不同帧及命中map。一共26张新图+219 body帧，0错误；0.28复查85/85通过。
+- 新菜单背景已接入wujiang_bg_js_jpg；源workshop-courtyard-source.png、目标workshop-courtyard-menu.jpg、prompt已保存。独立street_environment.py能逐个背景按精确key处理，不批量覆盖语义不同场景。
+- ID2新攻/技v3逐原图查看核桃手持一致并批准，bodyv2已排队；ID7 bodyv2更小身高和紧凑刺剑排队/已生成待查；ID8matte完成并接入。10/11/12已body_review结构检查，其中11的13/46/47边缘可疑，必须看全帧；尚未人工批准10/11/12。
+- 已额外提交16/17/18/19/20/21/22/23/26/27/28/29/32身体v1，当前串行生成。这些guide已看过与idle并排图。9/14/15/24/25/30/31修正guide仍排队，勿用旧已拒绝图。
+- 连续同模型实测body8为51.649秒、body10为52.488秒；首个/冷切换body7为241.928秒。只能报告具体样本，不承诺整批固定时间。
+- 0.27已本地提交1025f20；0.28完后下一个0.29再按三版push。当前GitHub main仍31def49。session-control已更新。
