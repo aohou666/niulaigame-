@@ -14,6 +14,8 @@
     "observed": "One85detail audit emitted two unhandled null Promise rejections (four browser/CDP records); all85 detail checks themselves passed.",
     "evidence": "versions/0.34.0/detail-null-rejection-attempt1.json",
     "rechecks": "Promise origin instrumentation yielded no null traces; subsequent full85detail rerun passed with zero browser exceptions. Intermittent cause not established.",
-    "next": "Retain failure evidence; capture asynchronous Promise origin in repeated detail navigation without suppressing rejections."
+    "next": "Capture RESOURCE ITEM_LOAD_ERROR name/url plus network/request failures before any intermittent null rejection; do not suppress null errors or claim root cause fixed.",
+    "additionalObservation": "v0.40 hero6 random8hell battle also emitted two null Promise rejections. Exact recorded enemy setup recheck passed;12 new12second samples passed with0 errors/HTTP/resource-event failures. RES legacy callback APIs statically reject(null) on resource failure, but original failing resource not captured: causal link unproven.",
+    "additionalEvidence": "versions/0.40.0/body-battle-lane2-null-attempt.json; versions/0.40.0/null-stress-summary.json"
   }
 ]

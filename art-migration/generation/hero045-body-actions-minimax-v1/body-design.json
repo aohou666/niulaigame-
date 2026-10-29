@@ -1,0 +1,314 @@
+{
+  "heroId": 45,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/045/portrait.png",
+      "prepared": "art-migration/references/body-045/idle.png",
+      "foot": [
+        383.98,
+        700
+      ],
+      "size": [
+        306,
+        560
+      ],
+      "sha256": "e35c16479f0604ad1189af4112b8408e12a9ff7d292ca475ef1eef8b9bb9da41"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero045-attack-v2/hero045_attack_alpha_00001_.png",
+      "prepared": "art-migration/references/body-045/attack.png",
+      "foot": [
+        383.86,
+        700
+      ],
+      "size": [
+        407,
+        560
+      ],
+      "sha256": "8a18c8c154e322add7d74959972bca284d0b2621f36ebca246919b45e0ea6266"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero045-skill-v2/hero045_skill_alpha_00001_.png",
+      "prepared": "art-migration/references/body-045/skill.png",
+      "foot": [
+        384.27,
+        700
+      ],
+      "size": [
+        348,
+        560
+      ],
+      "sha256": "42133594d97152f50b0201cdecdab00aad60188f054c1e4ae1b9252cc1768411"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H045-ATK",
+        "heroId": 45,
+        "name": "僵尸牛",
+        "originalName": "程普",
+        "slot": "普攻",
+        "skillId": 550450110,
+        "skillName": "普通攻击",
+        "newSkillName": "双掌轻扑",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "近身攻击",
+        "movement": "移到目标前出手",
+        "weapon": "符咒／徒手",
+        "weaponObservation": "额头符纸、僵尸前伸手",
+        "effectClass": "命中/生效附着特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "收臂蓄力→拳/掌/肘击→回到待机",
+        "rootPolicy": "引擎负责接近与返回；视频固定根位置，只做出手",
+        "batch": "B02",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_zhaoyun_01",
+        "model": "hero_045_01",
+        "action": "gongji",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1166.667,
+        "fps": 30,
+        "durationFrames": 35,
+        "rawEvents": [
+          {
+            "frame0": 8,
+            "timeMs": 266.667,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@266.7ms（角色事件）",
+        "impactMs": [
+          266.667
+        ],
+        "impactStatus": "角色pia直接回调；待游戏内验收",
+        "performance": {
+          "__attackDoneDelay": 700,
+          "effectsPiaEnemy": [
+            {
+              "posType": 0,
+              "src": [
+                "common_skill_zhaoyun_01"
+              ]
+            }
+          ],
+          "meFlyConfig": [
+            2,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_zhaoyun_01",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhaoyun_01_3bee13d0.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhaoyun_01",
+                  "name": "common_skill_zhaoyun_01",
+                  "fps": 24,
+                  "durationFrames": 17,
+                  "durationMs": 708.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsPiaEnemy: common_skill_zhaoyun_01 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_zhaoyun_01"
+        ],
+        "portrait": "reskin/hero_045.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H045-ULT",
+        "heroId": 45,
+        "name": "僵尸牛",
+        "originalName": "程普",
+        "slot": "大招",
+        "skillId": 550450210,
+        "skillName": "攻坚轧敌",
+        "newSkillName": "伐桂重扑",
+        "purpose": "进攻＋自身增益",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "近身攻击",
+        "movement": "移到目标所在排前出手",
+        "weapon": "符咒／徒手",
+        "weaponObservation": "额头符纸、僵尸前伸手",
+        "effectClass": "命中/生效附着特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "收臂蓄力→拳/掌/肘击→回到待机",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B07",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成330%伤害,且本次攻击期间提高自身50%暴击。",
+        "skillModel": "common_skill_chengpu_02",
+        "model": "hero_045_01",
+        "action": "jineng",
+        "effectiveDesc": "对敌方前排单体造成330%伤害,且本次攻击期间提高自身50%暴击。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 2666.667,
+        "fps": 30,
+        "durationFrames": 80,
+        "rawEvents": [
+          {
+            "frame0": 0,
+            "timeMs": 0.0,
+            "ints": [
+              9
+            ],
+            "type": 10,
+            "name": "count"
+          },
+          {
+            "frame0": 29,
+            "timeMs": 966.667,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 34,
+            "timeMs": 1133.333,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 39,
+            "timeMs": 1300.0,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 44,
+            "timeMs": 1466.667,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 49,
+            "timeMs": 1633.333,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 54,
+            "timeMs": 1800.0,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 59,
+            "timeMs": 1966.667,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 64,
+            "timeMs": 2133.333,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 69,
+            "timeMs": 2300.0,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@966.7ms（角色事件）；pia@1133.3ms（角色事件）；pia@1300.0ms（角色事件）；pia@1466.7ms（角色事件）；pia@1633.3ms（角色事件）；pia@1800.0ms（角色事件）；pia@1966.7ms（角色事件）；pia@2133.3ms（角色事件）；pia@2300.0ms（角色事件）",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "effectsPiaEnemy": [
+            {
+              "posType": 0,
+              "src": [
+                "common_skill_chengpu_02_1"
+              ]
+            }
+          ],
+          "meFlyConfig": [
+            5,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_chengpu_02_1",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_chengpu_02_1_e379a25e.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_chengpu_02_1",
+                  "name": "common_skill_chengpu_02_1",
+                  "fps": 24,
+                  "durationFrames": 11,
+                  "durationMs": 458.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsPiaEnemy: common_skill_chengpu_02_1 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_chengpu_02"
+        ],
+        "portrait": "reskin/hero_045.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false
+}

@@ -1,0 +1,421 @@
+{
+  "heroId": 6,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/006/portrait.png",
+      "prepared": "art-migration/references/body-006-v2/idle.png",
+      "foot": [
+        384.44,
+        700
+      ],
+      "size": [
+        354,
+        500
+      ],
+      "sha256": "a900ee7f585eab8786a517864ad3a8f379cdc1301457ab677499ecf25b1e2c9f"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero006-attack-v2/hero006_attack_alpha_00001_.png",
+      "prepared": "art-migration/references/body-006-v2/attack.png",
+      "foot": [
+        383.6,
+        700
+      ],
+      "size": [
+        381,
+        500
+      ],
+      "sha256": "f27f51eb31025f284040b49e80e1ed5e30a0cc2a469f59222955294da080cf08"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero006-skill-v2/hero006_skill_alpha_00001_.png",
+      "prepared": "art-migration/references/body-006-v2/skill.png",
+      "foot": [
+        383.85,
+        700
+      ],
+      "size": [
+        406,
+        500
+      ],
+      "sha256": "023998cbe4776be12d833e633cc12f7ff0a32c20f730284b26a4638756c41f46"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H006-ATK",
+        "heroId": 6,
+        "name": "刀盾牛",
+        "originalName": "曹仁",
+        "slot": "普攻",
+        "skillId": 550060110,
+        "skillName": "普通攻击",
+        "newSkillName": "镇岳横刃",
+        "purpose": "辅助",
+        "targetSide": "自身",
+        "scope": "自身",
+        "delivery": "原位自身辅助",
+        "movement": "自身目标原位（引擎跳过接近）",
+        "weapon": "刀盾",
+        "weaponObservation": "短刀、盾牌",
+        "effectClass": "命中/生效附着特效",
+        "semantic": "护盾",
+        "bodyDesign": "收手蓄力→摊掌/抬手释放→收手待机",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B04",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_lusu_02",
+        "model": "hero_006_01",
+        "action": "gongji",
+        "effectiveDesc": "普通攻击转化为：为自身附加8%生命上限的<护盾>（不可叠加）",
+        "classificationStage": "被动改写生效后；解锁前仍用基础普攻",
+        "passiveRewrite": "550060310 固若金汤：普通攻击转化为：为自身附加8%生命上限的<护盾>（不可叠加）",
+        "passiveNotes": "550060310 固若金汤：普通攻击转化为：为自身附加8%生命上限的<护盾>（不可叠加）",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 833.333,
+        "fps": 30,
+        "durationFrames": 25,
+        "rawEvents": [
+          {
+            "frame0": 13,
+            "timeMs": 433.333,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@433.3ms（角色事件）",
+        "impactMs": [
+          433.333
+        ],
+        "impactStatus": "角色pia直接回调；待游戏内验收",
+        "performance": {
+          "effectsPiaEnemy": [
+            {
+              "delay": 0,
+              "posType": 1,
+              "src": [
+                "common_skill_lusu_02"
+              ],
+              "type": 0
+            }
+          ],
+          "effectsPiaUs": [
+            {
+              "delay": 0,
+              "posType": 1,
+              "src": [
+                "common_skill_lusu_02"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            2,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_lusu_02",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_lusu_02_7582971c.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_lusu_02",
+                  "name": "common_skill_lusu_02",
+                  "fps": 24,
+                  "durationFrames": 12,
+                  "durationMs": 500.0,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_lusu_02_ljqyj",
+                  "name": "common_skill_mengmaxiang_skill_01_ljyj6",
+                  "fps": 24,
+                  "durationFrames": 8,
+                  "durationMs": 333.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaUs",
+            "resource": "common_skill_lusu_02",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_lusu_02_7582971c.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_lusu_02",
+                  "name": "common_skill_lusu_02",
+                  "fps": 24,
+                  "durationFrames": 12,
+                  "durationMs": 500.0,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_lusu_02_ljqyj",
+                  "name": "common_skill_mengmaxiang_skill_01_ljyj6",
+                  "fps": 24,
+                  "durationFrames": 8,
+                  "durationMs": 333.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsPiaEnemy: common_skill_lusu_02 delay=0 dt=None speed=1\neffectsPiaUs: common_skill_lusu_02 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_lusu_02"
+        ],
+        "portrait": "reskin/hero_006.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H006-ULT",
+        "heroId": 6,
+        "name": "刀盾牛",
+        "originalName": "曹仁",
+        "slot": "大招",
+        "skillId": 550060210,
+        "skillName": "浴血励战",
+        "newSkillName": "玄甲励战",
+        "purpose": "进攻＋自身增益",
+        "targetSide": "敌方",
+        "scope": "全体",
+        "delivery": "中场释放（远近待回放）",
+        "movement": "移到场地中部释放",
+        "weapon": "刀盾",
+        "weaponObservation": "短刀、盾牌",
+        "effectClass": "角色动作/特殊机制（未列独立特效）",
+        "semantic": "直接伤害",
+        "bodyDesign": "持刃蓄力→定向斩击→回收武器；盾牌与持握保持一致；命中覆盖由独立目标特效控制",
+        "rootPolicy": "引擎移到中场后播出手；视频不自行横穿战场",
+        "batch": "B06",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方全体造成155%伤害,提高自身15%防御,持续2回合。",
+        "skillModel": "common_skill_caoren_02",
+        "model": "hero_006_01",
+        "action": "jineng",
+        "effectiveDesc": "对敌方全体造成155%伤害,提高自身15%防御,持续2回合。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "550060310 固若金汤：普通攻击转化为：为自身附加8%生命上限的<护盾>（不可叠加）",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 2333.333,
+        "fps": 30,
+        "durationFrames": 70,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "attackFrameDelay": 500,
+          "meFlyConfig": [
+            1,
+            200,
+            0
+          ]
+        },
+        "effectDetails": [],
+        "effectText": "",
+        "variants": [
+          "common_skill_caoren_02"
+        ],
+        "portrait": "reskin/hero_006.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "approved-for-matting",
+  "runtimeIntegrated": false,
+  "denseGuideSchedule": [
+    {
+      "frame": 4,
+      "image": "idle"
+    },
+    {
+      "frame": 8,
+      "image": "idle"
+    },
+    {
+      "frame": 12,
+      "image": "attack"
+    },
+    {
+      "frame": 16,
+      "image": "attack"
+    },
+    {
+      "frame": 20,
+      "image": "attack"
+    },
+    {
+      "frame": 24,
+      "image": "attack"
+    },
+    {
+      "frame": 28,
+      "image": "idle"
+    },
+    {
+      "frame": 32,
+      "image": "idle"
+    },
+    {
+      "frame": 36,
+      "image": "idle"
+    },
+    {
+      "frame": 40,
+      "image": "idle"
+    },
+    {
+      "frame": 44,
+      "image": "idle"
+    },
+    {
+      "frame": 48,
+      "image": "skill"
+    },
+    {
+      "frame": 52,
+      "image": "skill"
+    },
+    {
+      "frame": 56,
+      "image": "skill"
+    },
+    {
+      "frame": 60,
+      "image": "skill"
+    },
+    {
+      "frame": 64,
+      "image": "skill"
+    },
+    {
+      "frame": 68,
+      "image": "idle"
+    },
+    {
+      "frame": 72,
+      "image": "idle"
+    }
+  ],
+  "sourceBodyJob": "art-migration/generation/hero006-body-actions-minimax-v2",
+  "sourceFrameOrder": [
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00074_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00075_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00076_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00077_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00078_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00079_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00080_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00081_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00082_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00083_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00084_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00085_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00086_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00087_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00088_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00089_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00090_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00091_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00092_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00093_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00094_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00095_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00096_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00097_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00098_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00099_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00100_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00101_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00102_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00103_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00104_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00105_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00106_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00107_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00108_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00109_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00110_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00111_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00112_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00113_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00114_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00115_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00116_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00117_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00118_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00119_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00120_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00121_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00122_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00123_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00124_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00125_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00126_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00127_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00128_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00129_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00130_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00131_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00132_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00133_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00134_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00135_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00136_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00137_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00138_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00139_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00140_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00141_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00142_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00143_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00144_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00145_.png",
+    "art-migration/generation/hero006-body-actions-minimax-v2/hero006_body_00146_.png"
+  ]
+}

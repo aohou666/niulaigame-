@@ -1,0 +1,619 @@
+{
+  "heroId": 4,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/004/portrait.png",
+      "prepared": "art-migration/references/body-004-v2/idle.png",
+      "foot": [
+        384.15,
+        700
+      ],
+      "size": [
+        222,
+        500
+      ],
+      "sha256": "4afa7aaf5f4fceeebf7ea9deaa9385cf3ecc4ec1326bf99b6b49073a1472060b"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero004-attack-v2/hero004_attack_alpha_00001_.png",
+      "prepared": "art-migration/references/body-004-v2/attack.png",
+      "foot": [
+        383.96,
+        700
+      ],
+      "size": [
+        266,
+        500
+      ],
+      "sha256": "abe5909e2fa0ab71d72ac346b2c0a153befde8535a5627b8d5dff93cc27e70ce"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero004-skill-v2/hero004_skill_alpha_00001_.png",
+      "prepared": "art-migration/references/body-004-v2/skill.png",
+      "foot": [
+        384.07,
+        700
+      ],
+      "size": [
+        258,
+        500
+      ],
+      "sha256": "0049b5aa7c87d3006f5265800444e9b8e8bbded678ba39812abf5afcf14280ec"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H004-ATK",
+        "heroId": 4,
+        "name": "带派姐",
+        "originalName": "甄姬",
+        "slot": "普攻",
+        "skillId": 550040110,
+        "skillName": "普通攻击",
+        "newSkillName": "灵歌慰问",
+        "purpose": "辅助",
+        "targetSide": "友方",
+        "scope": "单体",
+        "delivery": "辅助施法",
+        "movement": "原站位出手",
+        "weapon": "徒手／手势",
+        "weaponObservation": "双手合于胸前",
+        "effectClass": "目标位置特效",
+        "semantic": "治疗/吸血",
+        "bodyDesign": "收手蓄力→摊掌/抬手释放→收手待机",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B04",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_zhenji_02",
+        "model": "hero_004_01",
+        "action": "gongji",
+        "effectiveDesc": "普通攻击转化为:回复生命比例最低的友方单位10%生命上限的生命,最高不超过甄姬攻击的500%,并解除其受到的<控制效果>。",
+        "classificationStage": "被动改写生效后；解锁前仍用基础普攻",
+        "passiveRewrite": "550040310 温婉：普通攻击转化为:回复生命比例最低的友方单位10%生命上限的生命,最高不超过甄姬攻击的500%,并解除其受到的<控制效果>。",
+        "passiveNotes": "550040310 温婉：普通攻击转化为:回复生命比例最低的友方单位10%生命上限的生命,最高不超过甄姬攻击的500%,并解除其受到的<控制效果>。",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "shanzi3、shanzi5、shanzi4",
+        "rawDurationMs": 1333.333,
+        "fps": 30,
+        "durationFrames": 40,
+        "rawEvents": [
+          {
+            "frame0": 22,
+            "timeMs": 733.333,
+            "type": 10,
+            "name": "zd"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "zd@733.3ms（发射/启动特效）",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "effectsTarEnemy": [
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_zhenji_02"
+              ],
+              "type": 0
+            }
+          ],
+          "effectsTarUs": [
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_zhenji_02"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_zhenji_02",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhenji_02_5e06f3e8.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhenji_02",
+                  "name": "common_skill_zhenji_02",
+                  "fps": 24,
+                  "durationFrames": 20,
+                  "durationMs": 833.333,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        3
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 5,
+                      "timeMs": 208.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 10,
+                      "timeMs": 416.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 16,
+                      "timeMs": 666.667,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                },
+                {
+                  "armature": "common_skill_zhenji_02_sz",
+                  "name": "unnamed",
+                  "fps": 24,
+                  "durationFrames": 3,
+                  "durationMs": 125.0,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_zhenji_02_yj",
+                  "name": "common_skill_zhenji_02_yj",
+                  "fps": 24,
+                  "durationFrames": 6,
+                  "durationMs": 250.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsTarUs",
+            "resource": "common_skill_zhenji_02",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhenji_02_5e06f3e8.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhenji_02",
+                  "name": "common_skill_zhenji_02",
+                  "fps": 24,
+                  "durationFrames": 20,
+                  "durationMs": 833.333,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        3
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 5,
+                      "timeMs": 208.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 10,
+                      "timeMs": 416.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 16,
+                      "timeMs": 666.667,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                },
+                {
+                  "armature": "common_skill_zhenji_02_sz",
+                  "name": "unnamed",
+                  "fps": 24,
+                  "durationFrames": 3,
+                  "durationMs": 125.0,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_zhenji_02_yj",
+                  "name": "common_skill_zhenji_02_yj",
+                  "fps": 24,
+                  "durationFrames": 6,
+                  "durationMs": 250.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_zhenji_02 delay=0 dt=None speed=1 事件=pia@208.3,pia@416.7,pia@666.7\neffectsTarUs: common_skill_zhenji_02 delay=0 dt=None speed=1 事件=pia@208.3,pia@416.7,pia@666.7",
+        "variants": [
+          "common_skill_zhenji_02"
+        ],
+        "portrait": "reskin/hero_004.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H004-ULT",
+        "heroId": 4,
+        "name": "带派姐",
+        "originalName": "甄姬",
+        "slot": "大招",
+        "skillId": 550040210,
+        "skillName": "翩若惊鸿",
+        "newSkillName": "青丘合声",
+        "purpose": "辅助",
+        "targetSide": "友方",
+        "scope": "全体",
+        "delivery": "辅助施法",
+        "movement": "原站位出手",
+        "weapon": "徒手／手势",
+        "weaponObservation": "双手合于胸前",
+        "effectClass": "场景/范围特效、命中/生效附着特效",
+        "semantic": "治疗/吸血",
+        "bodyDesign": "收手蓄力→摊掌/抬手释放→收手待机；命中覆盖由独立目标特效控制",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B01",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "回复我方全体110%攻击生命,并有30%几率解除我方单位受到的<控制效果>。",
+        "skillModel": "common_skill_zhenji_01",
+        "model": "hero_004_01",
+        "action": "jineng",
+        "effectiveDesc": "回复我方全体110%攻击生命,并有30%几率解除我方单位受到的<控制效果>。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "550040310 温婉：普通攻击转化为:回复生命比例最低的友方单位10%生命上限的生命,最高不超过甄姬攻击的500%,并解除其受到的<控制效果>。",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "shanzi3、shanzi5、shanzi4",
+        "rawDurationMs": 3266.667,
+        "fps": 30,
+        "durationFrames": 98,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "__attackDoneDelay": 1200,
+          "effectQP": [
+            {
+              "delay": 500,
+              "offset": [
+                -200,
+                0
+              ],
+              "src": [
+                "common_skill_zhenji_01_2"
+              ],
+              "z": 0
+            },
+            {
+              "delay": 200,
+              "offset": [
+                -200,
+                0
+              ],
+              "src": [
+                "common_skill_zhenji_01_1"
+              ]
+            }
+          ],
+          "effectsPiaUs": [
+            {
+              "delay": 0,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 0,
+              "src": [
+                "common_skill_huifu"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectQP",
+            "resource": "common_skill_zhenji_01_2",
+            "delay": 500,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhenji_01_2_3fab7ffe.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhenji_01_2",
+                  "name": "common_skill_zhenji_01_2",
+                  "fps": 24,
+                  "durationFrames": 70,
+                  "durationMs": 2916.667,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_zhenji_01_sb",
+                  "name": "common_skill_zhenji_01_sb",
+                  "fps": 24,
+                  "durationFrames": 19,
+                  "durationMs": 791.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectQP",
+            "resource": "common_skill_zhenji_01_1",
+            "delay": 200,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhenji_01_1_aa48680d.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhenji_01_1",
+                  "name": "common_skill_zhenji_01_1",
+                  "fps": 24,
+                  "durationFrames": 69,
+                  "durationMs": 2875.0,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        4
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 28,
+                      "timeMs": 1166.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 40,
+                      "timeMs": 1666.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 50,
+                      "timeMs": 2083.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 62,
+                      "timeMs": 2583.333,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                },
+                {
+                  "armature": "common_skill_zhenji_01_pq",
+                  "name": "common_skill_zhenji_01_pq",
+                  "fps": 24,
+                  "durationFrames": 30,
+                  "durationMs": 1250.0,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_zhenji_01_xx",
+                  "name": "common_skill_zhenji_01_xx",
+                  "fps": 24,
+                  "durationFrames": 10,
+                  "durationMs": 416.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaUs",
+            "resource": "common_skill_huifu",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_huifu_f19ae876.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_huifu",
+                  "name": "common_skill_huifu",
+                  "fps": 24,
+                  "durationFrames": 28,
+                  "durationMs": 1166.667,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        3
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 6,
+                      "timeMs": 250.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 12,
+                      "timeMs": 500.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 18,
+                      "timeMs": 750.0,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectQP: common_skill_zhenji_01_2 delay=500 dt=None speed=1\neffectQP: common_skill_zhenji_01_1 delay=200 dt=None speed=1 事件=pia@1166.7,pia@1666.7,pia@2083.3,pia@2583.3\neffectsPiaUs: common_skill_huifu delay=0 dt=None speed=1 事件=pia@250.0,pia@500.0,pia@750.0",
+        "variants": [
+          "common_skill_zhenji_01"
+        ],
+        "portrait": "reskin/hero_004.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false,
+  "denseGuideSchedule": [
+    {
+      "frame": 4,
+      "image": "idle"
+    },
+    {
+      "frame": 8,
+      "image": "idle"
+    },
+    {
+      "frame": 12,
+      "image": "attack"
+    },
+    {
+      "frame": 16,
+      "image": "attack"
+    },
+    {
+      "frame": 20,
+      "image": "attack"
+    },
+    {
+      "frame": 24,
+      "image": "attack"
+    },
+    {
+      "frame": 28,
+      "image": "idle"
+    },
+    {
+      "frame": 32,
+      "image": "idle"
+    },
+    {
+      "frame": 36,
+      "image": "idle"
+    },
+    {
+      "frame": 40,
+      "image": "idle"
+    },
+    {
+      "frame": 44,
+      "image": "idle"
+    },
+    {
+      "frame": 48,
+      "image": "skill"
+    },
+    {
+      "frame": 52,
+      "image": "skill"
+    },
+    {
+      "frame": 56,
+      "image": "skill"
+    },
+    {
+      "frame": 60,
+      "image": "skill"
+    },
+    {
+      "frame": 64,
+      "image": "skill"
+    },
+    {
+      "frame": 68,
+      "image": "idle"
+    },
+    {
+      "frame": 72,
+      "image": "idle"
+    }
+  ]
+}

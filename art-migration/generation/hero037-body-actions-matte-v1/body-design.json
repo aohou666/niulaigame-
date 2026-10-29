@@ -1,0 +1,449 @@
+{
+  "heroId": 37,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/037/portrait.png",
+      "prepared": "art-migration/references/body-037/idle.png",
+      "foot": [
+        384.16,
+        700
+      ],
+      "size": [
+        324,
+        560
+      ],
+      "sha256": "3367420510dc86b0fe760369f8ce6e7bec1c7e573bcc7e8785ce6eec00e4a3bc"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero037-attack-v2/hero037_attack_alpha_00001_.png",
+      "prepared": "art-migration/references/body-037/attack.png",
+      "foot": [
+        384.05,
+        700
+      ],
+      "size": [
+        398,
+        560
+      ],
+      "sha256": "eff49ba14a01179ff5b59bbe8b242c53aae0287d6a2d15d18824c62a4a2b94ae"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero037-skill-v2/hero037_skill_alpha_00001_.png",
+      "prepared": "art-migration/references/body-037/skill.png",
+      "foot": [
+        384.41,
+        700
+      ],
+      "size": [
+        313,
+        560
+      ],
+      "sha256": "65bf19d319487b38e6e956e635c58fa3f753df89a944f3087308a963da564dc1"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H037-ATK",
+        "heroId": 37,
+        "name": "辛巴巴巴",
+        "originalName": "周瑜",
+        "slot": "普攻",
+        "skillId": 550370110,
+        "skillName": "普通攻击",
+        "newSkillName": "曜日清音",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "近身攻击",
+        "movement": "移到目标前出手",
+        "weapon": "生活道具",
+        "weaponObservation": "耳机、摊掌",
+        "effectClass": "命中/生效附着特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "现有道具蓄势→挥动或释放能量→复位；不自动丢失道具",
+        "rootPolicy": "引擎负责接近与返回；视频固定根位置，只做出手",
+        "batch": "B02",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_tongyongjz_01",
+        "model": "hero_037_01",
+        "action": "gongji",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1800.0,
+        "fps": 30,
+        "durationFrames": 54,
+        "rawEvents": [
+          {
+            "frame0": 21,
+            "timeMs": 700.0,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@700.0ms（角色事件）",
+        "impactMs": [
+          700.0
+        ],
+        "impactStatus": "角色pia直接回调；待游戏内验收",
+        "performance": {
+          "effectsPiaEnemy": [
+            {
+              "delay": 0,
+              "posType": 1,
+              "src": [
+                "common_skill_tongyongjz_01_2"
+              ],
+              "type": 0
+            }
+          ],
+          "effectsPiaUs": [
+            {
+              "delay": 0,
+              "posType": 1,
+              "src": [
+                "common_skill_tongyongjz_01_2"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            2,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_tongyongjz_01_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_tongyongjz_01_2_89b47fee.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_tongyongjz_01_2",
+                  "name": "common_skill_tongyongjz_01_2",
+                  "fps": 24,
+                  "durationFrames": 8,
+                  "durationMs": 333.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaUs",
+            "resource": "common_skill_tongyongjz_01_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_tongyongjz_01_2_89b47fee.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_tongyongjz_01_2",
+                  "name": "common_skill_tongyongjz_01_2",
+                  "fps": 24,
+                  "durationFrames": 8,
+                  "durationMs": 333.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsPiaEnemy: common_skill_tongyongjz_01_2 delay=0 dt=None speed=1\neffectsPiaUs: common_skill_tongyongjz_01_2 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_tongyongjz_01"
+        ],
+        "portrait": "reskin/hero_037.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H037-ULT",
+        "heroId": 37,
+        "name": "辛巴巴巴",
+        "originalName": "周瑜",
+        "slot": "大招",
+        "skillId": 550370210,
+        "skillName": "红莲业炎",
+        "newSkillName": "燃台高歌",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "随机3目标",
+        "delivery": "中场释放（远近待回放）",
+        "movement": "移到场地中部释放",
+        "weapon": "生活道具",
+        "weaponObservation": "耳机、摊掌",
+        "effectClass": "场景/范围特效",
+        "semantic": "灼烧",
+        "bodyDesign": "现有道具蓄势→挥动或释放能量→复位；不自动丢失道具；命中覆盖由独立目标特效控制",
+        "rootPolicy": "引擎移到中场后播出手；视频不自行横穿战场",
+        "batch": "B06",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "消耗最大生命值30%,对敌方随机3个敌人造成250%伤害并附加消耗生命值70%的<灼烧>平摊到各个目标上,持续2回合。",
+        "skillModel": "common_skill_zhouyu_02",
+        "model": "hero_037_01",
+        "action": "jineng",
+        "effectiveDesc": "消耗最大生命值30%,对敌方随机3个敌人造成250%伤害并附加消耗生命值70%的<灼烧>平摊到各个目标上,持续2回合。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 2833.333,
+        "fps": 30,
+        "durationFrames": 85,
+        "rawEvents": [
+          {
+            "frame0": 45,
+            "timeMs": 1500.0,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@1500.0ms（角色事件）",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "__attackDoneDelay": 1000,
+          "effectQP": [
+            {
+              "delay": 1000,
+              "offset": [
+                200,
+                0
+              ],
+              "src": [
+                "common_skill_zhouyu_02_2"
+              ],
+              "z": 0
+            },
+            {
+              "delay": 2200,
+              "offset": [
+                200,
+                0
+              ],
+              "src": [
+                "common_skill_zhouyu_02_1"
+              ]
+            }
+          ],
+          "meFlyConfig": [
+            1,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectQP",
+            "resource": "common_skill_zhouyu_02_2",
+            "delay": 1000,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhouyu_02_2_44caea67.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhouyu_02_2",
+                  "name": "common_skill_zhouyu_02_2",
+                  "fps": 24,
+                  "durationFrames": 62,
+                  "durationMs": 2583.333,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_xuetan",
+                  "name": "xuetan",
+                  "fps": 24,
+                  "durationFrames": 54,
+                  "durationMs": 2250.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectQP",
+            "resource": "common_skill_zhouyu_02_1",
+            "delay": 2200,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhouyu_02_1_98db6372.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhouyu_02_1",
+                  "name": "common_skill_zhouyu_02_1",
+                  "fps": 24,
+                  "durationFrames": 40,
+                  "durationMs": 1666.667,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        4
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 7,
+                      "timeMs": 291.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 13,
+                      "timeMs": 541.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 20,
+                      "timeMs": 833.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 27,
+                      "timeMs": 1125.0,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectQP: common_skill_zhouyu_02_2 delay=1000 dt=None speed=1\neffectQP: common_skill_zhouyu_02_1 delay=2200 dt=None speed=1 事件=pia@291.7,pia@541.7,pia@833.3,pia@1125.0",
+        "variants": [
+          "common_skill_zhouyu_02"
+        ],
+        "portrait": "reskin/hero_037.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "approved-for-matting",
+  "runtimeIntegrated": false,
+  "sourceBodyJob": "art-migration/generation/hero037-body-actions-minimax-v1",
+  "sourceFrameOrder": [
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00001_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00002_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00003_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00004_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00005_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00006_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00007_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00008_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00009_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00010_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00011_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00012_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00013_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00014_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00015_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00016_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00017_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00018_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00019_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00020_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00021_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00022_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00023_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00024_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00025_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00026_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00027_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00028_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00029_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00030_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00031_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00032_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00033_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00034_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00035_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00036_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00037_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00038_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00039_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00040_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00041_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00042_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00043_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00044_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00045_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00046_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00047_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00048_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00049_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00050_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00051_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00052_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00053_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00054_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00055_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00056_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00057_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00058_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00059_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00060_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00061_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00062_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00063_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00064_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00065_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00066_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00067_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00068_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00069_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00070_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00071_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00072_.png",
+    "art-migration/generation/hero037-body-actions-minimax-v1/hero037_body_00073_.png"
+  ]
+}
