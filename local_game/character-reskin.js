@@ -117,7 +117,8 @@
         var skillGet = config.SkillBaseLO.Get;
         config.SkillBaseLO.Get = function (id) {
             var row = skillGet.call(this, id), context = uiHero || visibleHeroContext();
-            var display = context && context.skills[String(id)];
+            var displayId=global.OfflineSkillReferences?OfflineSkillReferences.resolve(id):id;
+            var display = context && context.skills[String(displayId)];
             return row && display ? Object.assign({}, row, {name:display.name,desc:display.desc}) : row;
         };
         var heroDifferences = [], skillDifferences = [];

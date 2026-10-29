@@ -49,14 +49,15 @@
 
 <script src="offline-ui.js"></script>
 <script src="offline-read-rpc.js?v=20261029-22"></script>
-<script src="character-reskin-data.js"></script>
+<script src="offline-skill-references.js?v=20261029-30"></script>
+<script src="character-reskin-data.js?v=20261029-30"></script>
 <script src="character-art-data.js?v=20261029-23"></script>
 <script src="character-art.js?v=20261029-21"></script>
 <script src="street-art-data.js?v=20261029-29"></script>
 <script src="street-art.js?v=20261029-29"></script>
 <script src="street-effects-data.js?v=20261029-24"></script>
 <script src="street-effects.js?v=20261029-29"></script>
-<script src="character-reskin.js?v=20261029-23"></script>
+<script src="character-reskin.js?v=20261029-30"></script>
 <script src="character-idle-data.js?v=20261021-clean2"></script>
 <script src="character-idle-atlas-data.js?v=20261029-23"></script>
 <script src="character-idle.js?v=20261029-23"></script>
@@ -436,9 +437,11 @@
                         });
                         RES._offlineAliasPatched = true;
                     }
+                    if (window.OfflineSkillReferences) window.OfflineSkillReferences.install();
                     if (window.CharacterReskin) window.CharacterReskin.apply();
                     var offlineSave;
                     offlineSave = loadOfflineSaveData();
+                    if(window.OfflineSkillReferences)OfflineSkillReferences.normalizeSave(offlineSave);
                     if(window.OfflineReadRPC)OfflineReadRPC.setSave(function(){return offlineSave;});
                     if (!offlineSave || !offlineSave.summoner || !offlineSave.player || !offlineSave.heroes || !offlineSave.formation) {
                         // Older phone shells could persist configuration before

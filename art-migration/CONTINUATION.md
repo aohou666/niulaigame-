@@ -83,3 +83,11 @@
 - street_prioritize_jobs.py只取消尚未开始的本任务job并front重新排入，记录queueRevisions，已把默认6角色12姿势提升。其他角色未漏删。当前角色76实际手持白色饭团，旧plan说无手持武器但遗漏饭团；82手里是眼镜、79左手握背上大刃且无盾、77手捧莲花、94右手手机。后续guide复查须按真实图，不盲信旧plan。
 - 待做明显文本问题：character-reskin-data.js中的definition/story仍混原作历史和旧别名（例82杰哥讲狐主转生，77佛系牛讲汉末军师），下一版应将85人的definition+三故事+synopsis逐人重写成现代离谱街区；不要只做搜索替换换名字。heroFields已有保护逻辑允许改这些文案，数值/技能机制不许动。
 - 0.28 commitad07d4a，0.27commit1025f20。0.29提交后马上按三版规则push delivery HEAD:main并ls-remote核对。当前远端仍31def49，推完更新session-control。截止仍20:00，当前约12:28。
+
+## 最新0.30已验收准备提交（本地13:18）
+- 已push0.27/28/29，远端main=38a6a2e1c198e800650fd0ee58358e9e9ea66e2f，nextPush=0.32。
+- v30新增85人255章独立现代街区故事、425独特技能标题、968有效显示记录；70/71/72 matched修复。source-mapping保留旧称与初始22孤儿显示记录；numericDescriptionChanges=[]。
+- offline-skill-references.js修复294缺失等级引用并包装lookup，缺失rank3回落同家族已有rank2，不创造属性。normalizeSave只处理hero.skillList[].code；备份outputs/street-reskin/save-before-skill-reference-normalization.json，哈希save-repair-scope.json。不要触碰原用户untracked character-skill-repair.js（禁用stub）。
+- world-text-runtime85/5085/20094通过，保护差异空；高阶41420014实际jineng和旧保存invalidcode兼容通过。85详情/所有新图资源复查通过。v30源码、stories、baseline、2runtime-test与exporter单独提交，不git add用户文件或未完成动作队列。
+- body11v2全部73帧和16放大看完，无前版灰trail/出界，红T恤方格短裤及空手保留，已批准抠像，job hero011-body-actions-matte-v2 front排入。需看alpha并接入v31。
+- 2v3/7v3及默认77/76/82/94v2身体73帧现已生成，尚未看全帧；不能直接批准。其他队列继续生成。当前本地约13:18，10小时截止20:00。
