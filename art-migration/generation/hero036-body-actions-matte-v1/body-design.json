@@ -1,0 +1,474 @@
+{
+  "heroId": 36,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/036/portrait.png",
+      "prepared": "art-migration/references/body-036/idle.png",
+      "foot": [
+        384.16,
+        700
+      ],
+      "size": [
+        335,
+        560
+      ],
+      "sha256": "df90d751e87d4c75847e623f710ca09cfae9ce4f06dcf4ad760ed1eb19df4c67"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero036-attack-v2/hero036_attack_alpha_00001_.png",
+      "prepared": "art-migration/references/body-036/attack.png",
+      "foot": [
+        384.29,
+        700
+      ],
+      "size": [
+        352,
+        560
+      ],
+      "sha256": "2e018c54193bfa9a3405d72bbb3329368c3bc87d230aa956035b1e9346fbb5b5"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero036-skill-v2/hero036_skill_alpha_00001_.png",
+      "prepared": "art-migration/references/body-036/skill.png",
+      "foot": [
+        383.94,
+        700
+      ],
+      "size": [
+        273,
+        560
+      ],
+      "sha256": "cab32c39da69ae409f1b99c71f22b3eb9a059cfa36e06453fcea265ca00d4ffa"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H036-ATK",
+        "heroId": 36,
+        "name": "回眸牛",
+        "originalName": "孙权",
+        "slot": "普攻",
+        "skillId": 550360110,
+        "skillName": "普通攻击",
+        "newSkillName": "厚土重踏",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "远程弹道/连线",
+        "movement": "原站位出手",
+        "weapon": "徒手／拳脚",
+        "weaponObservation": "拳击站姿",
+        "effectClass": "飞行弹道、命中/生效附着特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "收臂蓄力→拳/掌/肘击→回到待机",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B03",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_sunquan_02",
+        "model": "hero_036_01",
+        "action": "gongji",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1666.667,
+        "fps": 30,
+        "durationFrames": 50,
+        "rawEvents": [
+          {
+            "frame0": 29,
+            "timeMs": 966.667,
+            "type": 10,
+            "name": "zd"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "zd@966.7ms（发射/启动特效）",
+        "impactMs": [
+          1266.667
+        ],
+        "impactStatus": "发射事件＋弹道delay/dt推导；待游戏内验收",
+        "performance": {
+          "effectsPiaEnemy": [
+            {
+              "posType": 0,
+              "src": [
+                "common_skill_sunquan_02_2"
+              ]
+            }
+          ],
+          "effectsTarEnemy": [
+            {
+              "dt": 300,
+              "fixedWidth": 50,
+              "offset": [
+                0,
+                -100
+              ],
+              "posType": 0,
+              "src": [
+                "common_skill_sunquan_02_1"
+              ],
+              "type": 1
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_sunquan_02_1",
+            "delay": 0,
+            "dt": 300,
+            "timeScale": 1,
+            "type": 1,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_sunquan_02_1_14361155.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_sunquan_02_1",
+                  "name": "common_skill_sunquan_02_1",
+                  "fps": 24,
+                  "durationFrames": 2,
+                  "durationMs": 83.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_sunquan_02_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_sunquan_02_2_e269564c.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_sunquan_02_2",
+                  "name": "common_skill_sunquan_02_2",
+                  "fps": 24,
+                  "durationFrames": 14,
+                  "durationMs": 583.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_sunquan_02_1 delay=0 dt=300 speed=1\neffectsPiaEnemy: common_skill_sunquan_02_2 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_sunquan_02"
+        ],
+        "portrait": "reskin/hero_036.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H036-ULT",
+        "heroId": 36,
+        "name": "回眸牛",
+        "originalName": "孙权",
+        "slot": "大招",
+        "skillId": 550360210,
+        "skillName": "吴帝诏令",
+        "newSkillName": "镇界号令",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "近身攻击",
+        "movement": "移到目标前出手",
+        "weapon": "徒手／拳脚",
+        "weaponObservation": "拳击站姿",
+        "effectClass": "施法者特效、目标位置特效",
+        "semantic": "眩晕",
+        "bodyDesign": "收臂蓄力→拳/掌/肘击→回到待机",
+        "rootPolicy": "引擎负责接近与返回；视频固定根位置，只做出手",
+        "batch": "B05",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成380%伤害,并有50%几率附加<眩晕>,持续2回合。",
+        "skillModel": "common_skill_sunquan_01",
+        "model": "hero_036_01",
+        "action": "jineng",
+        "effectiveDesc": "对敌方前排单体造成380%伤害,并有50%几率附加<眩晕>,持续2回合。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 2666.667,
+        "fps": 30,
+        "durationFrames": 80,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "__attackDoneDelay": 500,
+          "effectSrc": [
+            {
+              "delay": 0,
+              "noflipXByCamp": 1,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_sunquan_01_2"
+              ],
+              "timeScale": 1
+            }
+          ],
+          "effectsTarEnemy": [
+            {
+              "delay": 1200,
+              "posType": 0,
+              "src": [
+                "common_skill_sunquan_01"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            2,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectSrc",
+            "resource": "common_skill_sunquan_01_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_sunquan_01_2_ab0a215f.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_sunquan_01_2",
+                  "name": "common_skill_sunquan_01_2",
+                  "fps": 24,
+                  "durationFrames": 25,
+                  "durationMs": 1041.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_sunquan_01",
+            "delay": 1200,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_sunquan_01_de9e0162.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_sunquan_01",
+                  "name": "common_skill_sunquan_01",
+                  "fps": 24,
+                  "durationFrames": 32,
+                  "durationMs": 1333.333,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        5
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 5,
+                      "timeMs": 208.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 5,
+                      "timeMs": 208.333,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 10,
+                      "timeMs": 416.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 10,
+                      "timeMs": 416.667,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 15,
+                      "timeMs": 625.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 15,
+                      "timeMs": 625.0,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 22,
+                      "timeMs": 916.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 22,
+                      "timeMs": 916.667,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 27,
+                      "timeMs": 1125.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 27,
+                      "timeMs": 1125.0,
+                      "type": 10,
+                      "name": "pz"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectSrc: common_skill_sunquan_01_2 delay=0 dt=None speed=1\neffectsTarEnemy: common_skill_sunquan_01 delay=1200 dt=None speed=1 事件=pia@208.3,pia@416.7,pia@625.0,pia@916.7,pia@1125.0",
+        "variants": [
+          "common_skill_sunquan_01"
+        ],
+        "portrait": "reskin/hero_036.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "approved-for-matting",
+  "runtimeIntegrated": false,
+  "sourceBodyJob": "art-migration/generation/hero036-body-actions-minimax-v1",
+  "sourceFrameOrder": [
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00001_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00002_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00003_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00004_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00005_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00006_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00007_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00008_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00009_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00010_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00011_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00012_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00013_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00014_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00015_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00016_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00017_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00018_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00019_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00020_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00021_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00022_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00023_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00024_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00025_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00026_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00027_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00028_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00029_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00030_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00031_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00032_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00033_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00034_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00035_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00036_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00037_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00038_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00039_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00040_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00041_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00042_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00043_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00044_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00045_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00046_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00047_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00048_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00049_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00050_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00051_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00052_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00053_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00054_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00055_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00056_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00057_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00058_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00059_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00060_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00061_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00062_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00063_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00064_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00065_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00066_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00067_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00068_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00069_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00070_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00071_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00072_.png",
+    "art-migration/generation/hero036-body-actions-minimax-v1/hero036_body_00073_.png"
+  ]
+}

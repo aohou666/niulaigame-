@@ -1,0 +1,597 @@
+{
+  "heroId": 19,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/019/portrait.png",
+      "prepared": "art-migration/references/body-019-v2/idle.png",
+      "foot": [
+        383.73,
+        700
+      ],
+      "size": [
+        400,
+        560
+      ],
+      "sha256": "6d7d2dfe1192f19c4bf7b360f882e8438fd451268d0ebbbc7304fd0ff23d14e8"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero019-attack-v2/hero019_attack_alpha_00001_.png",
+      "prepared": "art-migration/references/body-019-v2/attack.png",
+      "foot": [
+        384.3,
+        700
+      ],
+      "size": [
+        395,
+        560
+      ],
+      "sha256": "e8071df55b6d3fce3ef5cdfcb54e4ab0763c4a4a71306b55a2a78b23ea069dbb"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero019-skill-v2/hero019_skill_alpha_00001_.png",
+      "prepared": "art-migration/references/body-019-v2/skill.png",
+      "foot": [
+        384.38,
+        700
+      ],
+      "size": [
+        410,
+        560
+      ],
+      "sha256": "df6c2bcec2685e079b88b890d80d697a840d9f4100c3a8d427bbb9672e7ad82f"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H019-ATK",
+        "heroId": 19,
+        "name": "马宝果",
+        "originalName": "关羽",
+        "slot": "普攻",
+        "skillId": 550190110,
+        "skillName": "普通攻击",
+        "newSkillName": "怒涛摆式",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "近身攻击",
+        "movement": "移到目标前出手",
+        "weapon": "徒手／掌法",
+        "weaponObservation": "掌法站姿",
+        "effectClass": "目标位置特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "收臂蓄力→拳/掌/肘击→回到待机",
+        "rootPolicy": "引擎负责接近与返回；视频固定根位置，只做出手",
+        "batch": "B02",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_guanyu_02",
+        "model": "hero_019_01",
+        "action": "gongji",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "550190310 青龙偃月：释放技能或普攻时,使自身获得1层<战意>,每层<战意>提高8%攻击,最高20层。(无法驱散)\n550190510 冷艳锯：敌方释放技能或普攻时,有20%几率为自身附加1层<战意>,最高20层。(无法驱散)",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "wuqibing、wuqi、wuqi1、biaoqing",
+        "rawDurationMs": 1333.333,
+        "fps": 30,
+        "durationFrames": 40,
+        "rawEvents": [
+          {
+            "frame0": 15,
+            "timeMs": 500.0,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@500.0ms（角色事件）",
+        "impactMs": [
+          500.0
+        ],
+        "impactStatus": "角色pia直接回调；待游戏内验收",
+        "performance": {
+          "effectsTarEnemy": [
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_guanyu_02"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            2,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_guanyu_02",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_guanyu_02_14b09498.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_guanyu_02",
+                  "name": "common_skill_guanyu_02",
+                  "fps": 24,
+                  "durationFrames": 12,
+                  "durationMs": 500.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_guanyu_02 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_guanyu_02"
+        ],
+        "portrait": "reskin/hero_019.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H019-ULT",
+        "heroId": 19,
+        "name": "马宝果",
+        "originalName": "关羽",
+        "slot": "大招",
+        "skillId": 550190210,
+        "skillName": "青龙绽芒",
+        "newSkillName": "五鞭镇阵",
+        "purpose": "进攻＋自身增益",
+        "targetSide": "敌方",
+        "scope": "全体",
+        "delivery": "中场释放（远近待回放）",
+        "movement": "移到场地中部释放",
+        "weapon": "徒手／掌法",
+        "weaponObservation": "掌法站姿",
+        "effectClass": "场景/范围特效、命中/生效附着特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "收臂蓄力→拳/掌/肘击→回到待机；命中覆盖由独立目标特效控制",
+        "rootPolicy": "引擎移到中场后播出手；视频不自行横穿战场",
+        "batch": "B06",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方全体造成180%伤害,并回复自身2点怒气。",
+        "skillModel": "common_skill_guanyu_1",
+        "model": "hero_019_01",
+        "action": "jineng",
+        "effectiveDesc": "对敌方全体造成180%伤害,并回复自身2点怒气。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "550190310 青龙偃月：释放技能或普攻时,使自身获得1层<战意>,每层<战意>提高8%攻击,最高20层。(无法驱散)\n550190510 冷艳锯：敌方释放技能或普攻时,有20%几率为自身附加1层<战意>,最高20层。(无法驱散)",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "wuqibing、wuqi、wuqi1、biaoqing",
+        "rawDurationMs": 2500.0,
+        "fps": 30,
+        "durationFrames": 75,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "__attackDoneDelay": 1500,
+          "effectQP": [
+            {
+              "delay": 1200,
+              "offset": [
+                200,
+                0
+              ],
+              "src": [
+                "common_skill_guanyu_1_01"
+              ]
+            },
+            {
+              "delay": 1750,
+              "offset": [
+                200,
+                0
+              ],
+              "src": [
+                "common_skill_guanyu_1_02"
+              ]
+            },
+            {
+              "delay": 1650,
+              "offset": [
+                200,
+                0
+              ],
+              "src": [
+                "common_skill_guanyu_1_04"
+              ]
+            },
+            {
+              "delay": 3000,
+              "offset": [
+                200,
+                0
+              ],
+              "timeScale": 2,
+              "src": [
+                "common_skill_guanyu_1_05"
+              ],
+              "z": 0
+            }
+          ],
+          "effectsPiaEnemy": [
+            {
+              "posType": 0,
+              "src": [
+                "common_skill_guanyu_1_03"
+              ]
+            }
+          ],
+          "meFlyConfig": [
+            1,
+            170,
+            20
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectQP",
+            "resource": "common_skill_guanyu_1_01",
+            "delay": 1200,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_guanyu_1_01_9c517852.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_guanyu_1_01",
+                  "name": "common_skill_guanyu_1_01",
+                  "fps": 24,
+                  "durationFrames": 50,
+                  "durationMs": 2083.333,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        6
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 37,
+                      "timeMs": 1541.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 37,
+                      "timeMs": 1541.667,
+                      "ints": [
+                        30
+                      ],
+                      "type": 10,
+                      "name": "pz"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectQP",
+            "resource": "common_skill_guanyu_1_02",
+            "delay": 1750,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_guanyu_1_02_55c1e6ff.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_guanyu_1_02",
+                  "name": "common_skill_guanyu_1_02",
+                  "fps": 24,
+                  "durationFrames": 20,
+                  "durationMs": 833.333,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 1,
+                      "timeMs": 41.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 3,
+                      "timeMs": 125.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 5,
+                      "timeMs": 208.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 7,
+                      "timeMs": 291.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 9,
+                      "timeMs": 375.0,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectQP",
+            "resource": "common_skill_guanyu_1_04",
+            "delay": 1650,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_guanyu_1_04_a08b3be2.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_guanyu_1_04",
+                  "name": "common_skill_guanyu_1_04",
+                  "fps": 24,
+                  "durationFrames": 17,
+                  "durationMs": 708.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectQP",
+            "resource": "common_skill_guanyu_1_05",
+            "delay": 3000,
+            "dt": null,
+            "timeScale": 2,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_guanyu_1_05_f754c4d.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_guanyu_1_05",
+                  "name": "common_skill_guanyu_1_05",
+                  "fps": 24,
+                  "durationFrames": 35,
+                  "durationMs": 1458.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_guanyu_1_03",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_guanyu_1_03_eeea7cfc.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_guanyu_1_03",
+                  "name": "common_skill_guanyu_1_03",
+                  "fps": 24,
+                  "durationFrames": 15,
+                  "durationMs": 625.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectQP: common_skill_guanyu_1_01 delay=1200 dt=None speed=1 事件=pia@1541.7\neffectQP: common_skill_guanyu_1_02 delay=1750 dt=None speed=1 事件=pia@41.7,pia@125.0,pia@208.3,pia@291.7,pia@375.0\neffectQP: common_skill_guanyu_1_04 delay=1650 dt=None speed=1\neffectQP: common_skill_guanyu_1_05 delay=3000 dt=None speed=2\neffectsPiaEnemy: common_skill_guanyu_1_03 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_guanyu_1"
+        ],
+        "portrait": "reskin/hero_019.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "approved-for-matting",
+  "runtimeIntegrated": false,
+  "denseGuideSchedule": [
+    {
+      "frame": 4,
+      "image": "idle"
+    },
+    {
+      "frame": 8,
+      "image": "idle"
+    },
+    {
+      "frame": 12,
+      "image": "attack"
+    },
+    {
+      "frame": 16,
+      "image": "attack"
+    },
+    {
+      "frame": 20,
+      "image": "attack"
+    },
+    {
+      "frame": 24,
+      "image": "attack"
+    },
+    {
+      "frame": 28,
+      "image": "idle"
+    },
+    {
+      "frame": 32,
+      "image": "idle"
+    },
+    {
+      "frame": 36,
+      "image": "idle"
+    },
+    {
+      "frame": 40,
+      "image": "idle"
+    },
+    {
+      "frame": 44,
+      "image": "idle"
+    },
+    {
+      "frame": 48,
+      "image": "skill"
+    },
+    {
+      "frame": 52,
+      "image": "skill"
+    },
+    {
+      "frame": 56,
+      "image": "skill"
+    },
+    {
+      "frame": 60,
+      "image": "skill"
+    },
+    {
+      "frame": 64,
+      "image": "skill"
+    },
+    {
+      "frame": 68,
+      "image": "idle"
+    },
+    {
+      "frame": 72,
+      "image": "idle"
+    }
+  ],
+  "sourceBodyJob": "art-migration/generation/hero019-body-actions-minimax-v2",
+  "sourceFrameOrder": [
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00074_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00075_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00076_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00077_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00078_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00079_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00080_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00081_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00082_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00083_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00084_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00085_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00086_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00087_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00088_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00089_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00090_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00091_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00092_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00093_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00094_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00095_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00096_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00097_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00098_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00099_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00100_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00101_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00102_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00103_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00104_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00105_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00106_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00107_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00108_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00109_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00110_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00111_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00112_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00113_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00114_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00115_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00116_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00117_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00118_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00119_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00120_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00121_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00122_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00123_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00124_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00125_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00126_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00127_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00128_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00129_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00130_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00131_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00132_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00133_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00134_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00135_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00136_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00137_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00138_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00139_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00140_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00141_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00142_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00143_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00144_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00145_.png",
+    "art-migration/generation/hero019-body-actions-minimax-v2/hero019_body_00146_.png"
+  ]
+}

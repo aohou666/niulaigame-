@@ -1,0 +1,458 @@
+{
+  "heroId": 23,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/023/portrait.png",
+      "prepared": "art-migration/references/body-023-v2/idle.png",
+      "foot": [
+        384.25,
+        700
+      ],
+      "size": [
+        353,
+        560
+      ],
+      "sha256": "d1f2e9ae2f4a311480c601c0bd37bd7553aeac4cab59578cfed004ca18e8b9fe"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero023-attack-v2/hero023_attack_alpha_00001_.png",
+      "prepared": "art-migration/references/body-023-v2/attack.png",
+      "foot": [
+        384.21,
+        700
+      ],
+      "size": [
+        325,
+        560
+      ],
+      "sha256": "e8688089df9b10ca8dc80ba46439bbc0440f7c0d99f185f104a565063170c69e"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero023-skill-v2/hero023_skill_alpha_00001_.png",
+      "prepared": "art-migration/references/body-023-v2/skill.png",
+      "foot": [
+        383.73,
+        700
+      ],
+      "size": [
+        314,
+        560
+      ],
+      "sha256": "e76e51312c354951a5418eb9021bf075306a1d58d18323846144bd65215b19bc"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H023-ATK",
+        "heroId": 23,
+        "name": "冬泳牛",
+        "originalName": "张飞",
+        "slot": "普攻",
+        "skillId": 550230110,
+        "skillName": "普通攻击",
+        "newSkillName": "破浪挥拳",
+        "purpose": "进攻＋自身增益",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "近身攻击",
+        "movement": "移到目标前出手",
+        "weapon": "徒手／拳脚",
+        "weaponObservation": "举拳姿势",
+        "effectClass": "命中/生效附着特效",
+        "semantic": "治疗/吸血",
+        "bodyDesign": "收臂蓄力→拳/掌/肘击→回到待机",
+        "rootPolicy": "引擎负责接近与返回；视频固定根位置，只做出手",
+        "batch": "B02",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_zhangfei_01",
+        "model": "hero_023_01",
+        "action": "gongji",
+        "effectiveDesc": "普通攻击转化为：对敌方单体造成80%伤害,并回复自身50%攻击的生命。",
+        "classificationStage": "被动改写生效后；解锁前仍用基础普攻",
+        "passiveRewrite": "550230310 据水断桥：普通攻击转化为：对敌方单体造成80%伤害,并回复自身50%攻击的生命。",
+        "passiveNotes": "550230310 据水断桥：普通攻击转化为：对敌方单体造成80%伤害,并回复自身50%攻击的生命。",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "wuqi1",
+        "rawDurationMs": 966.667,
+        "fps": 30,
+        "durationFrames": 29,
+        "rawEvents": [
+          {
+            "frame0": 12,
+            "timeMs": 400.0,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@400.0ms（角色事件）",
+        "impactMs": [
+          400.0
+        ],
+        "impactStatus": "角色pia直接回调；待游戏内验收",
+        "performance": {
+          "effectsPiaEnemy": [
+            {
+              "delay": 0,
+              "offset": [
+                0,
+                50
+              ],
+              "posType": 0,
+              "src": [
+                "common_skill_zhangfei_01"
+              ],
+              "type": 0
+            }
+          ],
+          "effectsPiaUs": [
+            {
+              "delay": 0,
+              "offset": [
+                0,
+                50
+              ],
+              "posType": 0,
+              "src": [
+                "common_skill_zhangfei_01"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            2,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_zhangfei_01",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhangfei_01_4a84a43.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhangfei_01",
+                  "name": "common_skill_zhangfei_01",
+                  "fps": 24,
+                  "durationFrames": 15,
+                  "durationMs": 625.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaUs",
+            "resource": "common_skill_zhangfei_01",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhangfei_01_4a84a43.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhangfei_01",
+                  "name": "common_skill_zhangfei_01",
+                  "fps": 24,
+                  "durationFrames": 15,
+                  "durationMs": 625.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsPiaEnemy: common_skill_zhangfei_01 delay=0 dt=None speed=1\neffectsPiaUs: common_skill_zhangfei_01 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_zhangfei_01"
+        ],
+        "portrait": "reskin/hero_023.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H023-ULT",
+        "heroId": 23,
+        "name": "冬泳牛",
+        "originalName": "张飞",
+        "slot": "大招",
+        "skillId": 550230210,
+        "skillName": "长坂战吼",
+        "newSkillName": "冬泳战吼",
+        "purpose": "进攻＋自身增益",
+        "targetSide": "敌方",
+        "scope": "全体",
+        "delivery": "中场释放（远近待回放）",
+        "movement": "移到场地中部释放",
+        "weapon": "徒手／拳脚",
+        "weaponObservation": "举拳姿势",
+        "effectClass": "场景/范围特效、命中/生效附着特效",
+        "semantic": "挑衅、降低",
+        "bodyDesign": "收臂蓄力→拳/掌/肘击→回到待机；命中覆盖由独立目标特效控制",
+        "rootPolicy": "引擎移到中场后播出手；视频不自行横穿战场",
+        "batch": "B07",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方全体造成160%伤害并有30%几率进行<挑衅>,并使自身受到伤害降低10%,持续2回合。",
+        "skillModel": "common_skill_zhangfei_02",
+        "model": "hero_023_01",
+        "action": "jineng",
+        "effectiveDesc": "对敌方全体造成160%伤害并有30%几率进行<挑衅>,并使自身受到伤害降低10%,持续2回合。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "550230310 据水断桥：普通攻击转化为：对敌方单体造成80%伤害,并回复自身50%攻击的生命。",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "wuqi1",
+        "rawDurationMs": 1500.0,
+        "fps": 30,
+        "durationFrames": 45,
+        "rawEvents": [
+          {
+            "frame0": 0,
+            "timeMs": 0.0,
+            "ints": [
+              6
+            ],
+            "type": 10,
+            "name": "count"
+          },
+          {
+            "frame0": 5,
+            "timeMs": 166.667,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 9,
+            "timeMs": 300.0,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 12,
+            "timeMs": 400.0,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 14,
+            "timeMs": 466.667,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 16,
+            "timeMs": 533.333,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 24,
+            "timeMs": 800.0,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 24,
+            "timeMs": 800.0,
+            "ints": [
+              15
+            ],
+            "type": 10,
+            "name": "pz"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@166.7ms（角色事件）；pia@300.0ms（角色事件）；pia@400.0ms（角色事件）；pia@466.7ms（角色事件）；pia@533.3ms（角色事件）；pia@800.0ms（角色事件）",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "effectQP": [
+            {
+              "delay": 250,
+              "offset": [
+                200,
+                0
+              ],
+              "src": [
+                "common_skill_zhangfei_02_1"
+              ]
+            }
+          ],
+          "effectsPiaEnemy": [
+            {
+              "delay": 0,
+              "posType": 0,
+              "src": [
+                "common_skill_zhangfei_01"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            1,
+            150,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectQP",
+            "resource": "common_skill_zhangfei_02_1",
+            "delay": 250,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhangfei_02_1_dc52a2fd.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhangfei_02_1",
+                  "name": "common_skill_zhangfei_02_1",
+                  "fps": 24,
+                  "durationFrames": 24,
+                  "durationMs": 1000.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_zhangfei_01",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhangfei_01_4a84a43.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhangfei_01",
+                  "name": "common_skill_zhangfei_01",
+                  "fps": 24,
+                  "durationFrames": 15,
+                  "durationMs": 625.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectQP: common_skill_zhangfei_02_1 delay=250 dt=None speed=1\neffectsPiaEnemy: common_skill_zhangfei_01 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_zhangfei_02"
+        ],
+        "portrait": "reskin/hero_023.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false,
+  "denseGuideSchedule": [
+    {
+      "frame": 4,
+      "image": "idle"
+    },
+    {
+      "frame": 8,
+      "image": "idle"
+    },
+    {
+      "frame": 12,
+      "image": "attack"
+    },
+    {
+      "frame": 16,
+      "image": "attack"
+    },
+    {
+      "frame": 20,
+      "image": "attack"
+    },
+    {
+      "frame": 24,
+      "image": "attack"
+    },
+    {
+      "frame": 28,
+      "image": "idle"
+    },
+    {
+      "frame": 32,
+      "image": "idle"
+    },
+    {
+      "frame": 36,
+      "image": "idle"
+    },
+    {
+      "frame": 40,
+      "image": "idle"
+    },
+    {
+      "frame": 44,
+      "image": "idle"
+    },
+    {
+      "frame": 48,
+      "image": "skill"
+    },
+    {
+      "frame": 52,
+      "image": "skill"
+    },
+    {
+      "frame": 56,
+      "image": "skill"
+    },
+    {
+      "frame": 60,
+      "image": "skill"
+    },
+    {
+      "frame": 64,
+      "image": "skill"
+    },
+    {
+      "frame": 68,
+      "image": "idle"
+    },
+    {
+      "frame": 72,
+      "image": "idle"
+    }
+  ]
+}

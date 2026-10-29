@@ -1,0 +1,395 @@
+{
+  "heroId": 27,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/027/portrait.png",
+      "prepared": "art-migration/references/body-027-v2/idle.png",
+      "foot": [
+        383.57,
+        700
+      ],
+      "size": [
+        283,
+        520
+      ],
+      "sha256": "de7fe04d66c118139caefa5c89a47bf96985befa880162713ce61e825ae4c8d1"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero027-attack-v2/hero027_attack_alpha_00001_.png",
+      "prepared": "art-migration/references/body-027-v2/attack.png",
+      "foot": [
+        384.34,
+        700
+      ],
+      "size": [
+        435,
+        520
+      ],
+      "sha256": "da5f7c4a02d4cf90331fc351aaed16eda207f29e78494a9dce2f6bdcc5baf735"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero027-skill-v2/hero027_skill_alpha_00001_.png",
+      "prepared": "art-migration/references/body-027-v2/skill.png",
+      "foot": [
+        384.49,
+        700
+      ],
+      "size": [
+        361,
+        520
+      ],
+      "sha256": "909c78b038e073d0085086901fcee07ba330fcc201fb53e695ae7a39c5d05d0b"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H027-ATK",
+        "heroId": 27,
+        "name": "牛",
+        "originalName": "廖化",
+        "slot": "普攻",
+        "skillId": 550270110,
+        "skillName": "普通攻击",
+        "newSkillName": "行野踏步",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "近身攻击",
+        "movement": "移到目标前出手",
+        "weapon": "生活道具",
+        "weaponObservation": "tan horse costume hood, purple hands and hooves; ONE tightly bound coherent straw bundle held in BOTH hands, no loose tufts or extra straw objects",
+        "effectClass": "目标位置特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "Both hands stay together gripping the SAME bound bundle, one compact10cm forward offering. No high windup or straw shake, never separate hands.",
+        "rootPolicy": "引擎负责接近与返回；视频固定根位置，只做出手",
+        "batch": "B02",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_guanyu_02",
+        "model": "hero_027_01",
+        "action": "gongji",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "wuqi2",
+        "rawDurationMs": 1133.333,
+        "fps": 30,
+        "durationFrames": 34,
+        "rawEvents": [
+          {
+            "frame0": 14,
+            "timeMs": 466.667,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@466.7ms（角色事件）",
+        "impactMs": [
+          466.667
+        ],
+        "impactStatus": "角色pia直接回调；待游戏内验收",
+        "performance": {
+          "effectsTarEnemy": [
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_guanyu_02"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            2,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_guanyu_02",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_guanyu_02_14b09498.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_guanyu_02",
+                  "name": "common_skill_guanyu_02",
+                  "fps": 24,
+                  "durationFrames": 12,
+                  "durationMs": 500.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_guanyu_02 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_guanyu_02"
+        ],
+        "portrait": "reskin/hero_027.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H027-ULT",
+        "heroId": 27,
+        "name": "牛",
+        "originalName": "廖化",
+        "slot": "大招",
+        "skillId": 550270210,
+        "skillName": "老骥伏枥",
+        "newSkillName": "老路先行",
+        "purpose": "攻辅兼备",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "特殊移动",
+        "movement": "中线预备＋自定义冲刺＋自定义移动",
+        "weapon": "生活道具",
+        "weaponObservation": "tan horse costume hood, purple hands and hooves; ONE tightly bound coherent straw bundle held in BOTH hands, no loose tufts or extra straw objects",
+        "effectClass": "命中/生效附着特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "Both hands together lift SAME tightly tied straw bundle slightly at chest then recover. No detached tufts, no broom fragments.",
+        "rootPolicy": "移动/分身单独轨道，需逐条回放",
+        "batch": "B07",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成335%伤害,并提高友方全体8%速度,持续2回合。",
+        "skillModel": "common_skill_liaohua_02",
+        "model": "hero_027_01",
+        "action": "jineng",
+        "effectiveDesc": "对敌方前排单体造成335%伤害,并提高友方全体8%速度,持续2回合。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "wuqi2",
+        "rawDurationMs": 466.667,
+        "fps": 30,
+        "durationFrames": 14,
+        "rawEvents": [
+          {
+            "frame0": 0,
+            "timeMs": 0.0,
+            "ints": [
+              2
+            ],
+            "type": 10,
+            "name": "count"
+          },
+          {
+            "frame0": 2,
+            "timeMs": 66.667,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 8,
+            "timeMs": 266.667,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@66.7ms（角色事件）；pia@266.7ms（角色事件）",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "customAct": [
+            {
+              "delay": 100,
+              "dt": 1000,
+              "timeScale": 1,
+              "type": "customFly"
+            }
+          ],
+          "effectsPiaEnemy": [
+            {
+              "posType": 0,
+              "src": [
+                "common_skill_liaohua_02_2"
+              ],
+              "type": 0
+            }
+          ],
+          "forceExtraPlayTimes": 3,
+          "forcePiaCount": 8,
+          "meFlyConfig": [
+            4,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_liaohua_02_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_liaohua_02_2_fe45e347.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_liaohua_02_2",
+                  "name": "common_skill_liaohua_02_2",
+                  "fps": 24,
+                  "durationFrames": 16,
+                  "durationMs": 666.667,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        2
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 2,
+                      "timeMs": 83.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 2,
+                      "timeMs": 83.333,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 5,
+                      "timeMs": 208.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 5,
+                      "timeMs": 208.333,
+                      "type": 10,
+                      "name": "pz"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsPiaEnemy: common_skill_liaohua_02_2 delay=0 dt=None speed=1 事件=pia@83.3,pia@208.3",
+        "variants": [
+          "common_skill_liaohua_02"
+        ],
+        "portrait": "reskin/hero_027.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false,
+  "denseGuideSchedule": [
+    {
+      "frame": 4,
+      "image": "idle"
+    },
+    {
+      "frame": 8,
+      "image": "idle"
+    },
+    {
+      "frame": 12,
+      "image": "attack"
+    },
+    {
+      "frame": 16,
+      "image": "attack"
+    },
+    {
+      "frame": 20,
+      "image": "attack"
+    },
+    {
+      "frame": 24,
+      "image": "attack"
+    },
+    {
+      "frame": 28,
+      "image": "idle"
+    },
+    {
+      "frame": 32,
+      "image": "idle"
+    },
+    {
+      "frame": 36,
+      "image": "idle"
+    },
+    {
+      "frame": 40,
+      "image": "idle"
+    },
+    {
+      "frame": 44,
+      "image": "idle"
+    },
+    {
+      "frame": 48,
+      "image": "skill"
+    },
+    {
+      "frame": 52,
+      "image": "skill"
+    },
+    {
+      "frame": 56,
+      "image": "skill"
+    },
+    {
+      "frame": 60,
+      "image": "skill"
+    },
+    {
+      "frame": 64,
+      "image": "skill"
+    },
+    {
+      "frame": 68,
+      "image": "idle"
+    },
+    {
+      "frame": 72,
+      "image": "idle"
+    }
+  ]
+}

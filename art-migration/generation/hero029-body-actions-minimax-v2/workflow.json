@@ -1,0 +1,788 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "minimax_h3_fl2va_pruned_w4a8_mixed.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_32b_minimax_h3_int4_convrot.safetensors",
+      "type": "minimax",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "street_body029_idle_v2.png"
+    }
+  },
+  "5": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "street_body029_attack_v2.png"
+    }
+  },
+  "6": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "street_body029_skill_v2.png"
+    }
+  },
+  "7": {
+    "class_type": "MiniMaxH3ImageToVideo",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "prompt": "One fixed-camera production sprite animation of the EXACT character shown in the guide images. Same identity, face, horns, hair, outfit, colors, anatomy and ALL held props throughout. Premium tactile 2.5D semi-realistic semi-cartoon absurd neighborhood game style. Full body, head, feet and weapon visible with generous safe margins on all sides. Pure black featureless background. No camera movement, no environment, no other person, no duplicate limbs, no invented weapon, no VFX; never lose a held prop.\n The three-second clip has exactly TWO separate coherent actions. Frames0-35: start in provided idle, perform ONE normal attack matching the attack guide around frame16, smoothly recover to idle at frame36. Normal action intent: One VERY SMALL empty left-palm stop within chest silhouette. Keep both elbows near ribs, no reaching, stretching, lunging or second strike.; prop/body observation: round yellow bull mascot with cream belly, big green eyes, small horns and empty hands. Frames36-72: perform ONE distinct special-skill gesture matching the skill guide around frame54, recover to original idle by frame72. Skill physical movement: Briefly raise both empty palms near chest; body root fixed and entire silhouette safely centered, no extension outside central60%.; actual prop observation: round yellow bull mascot with cream belly, big green eyes, small horns and empty hands. Respect the provided props: if playing an instrument, animate playing it; if casting or supporting, animate the gesture rather than inventing a melee punch. No repeated attacks. The game handles travel separately: keep foot/root position fixed; no walking, sliding, or body scale drift. Natural shoulder/elbow mechanics and cloth follow-through; crisp readable silhouette without motion blur.\nThis is a NONMAGICAL motion-capture rehearsal of body mechanics only. The separate game layer renders all energy. No visible light, flame, smoke, particles, slash trail, shockwave, glow, energy ball or secondary animation may appear. Maintain physical props at constant length. After reaching each guide pose, HOLD it briefly and then recover exactly to idle; do not add a second strike. Movements stay inside central70% of the canvas.",
+      "width": 512,
+      "height": 512,
+      "length": 73,
+      "first_frame": [
+        "4",
+        0
+      ],
+      "last_frame": [
+        "4",
+        0
+      ]
+    }
+  },
+  "8": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "21",
+        0
+      ],
+      "latent": [
+        "7",
+        1
+      ],
+      "frame_idx": 16,
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "5",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "23",
+        0
+      ],
+      "latent": [
+        "7",
+        1
+      ],
+      "frame_idx": 36,
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "4",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "24",
+        0
+      ],
+      "latent": [
+        "7",
+        1
+      ],
+      "frame_idx": 54,
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "6",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "lora_name": "minimax_h3_fl2v_lightx2v_turbo_8step_v1.0_resized_avg_rank_24_bf16.safetensors",
+      "strength_model": 1
+    }
+  },
+  "12": {
+    "class_type": "MiniMaxH3DualClockSamplerT8",
+    "inputs": {
+      "model": [
+        "19",
+        0
+      ],
+      "av_latent": [
+        "7",
+        1
+      ],
+      "steps": 8,
+      "shift_video": 12,
+      "shift_audio": 3,
+      "sampler_name": "dual_clock_euler",
+      "scheduler": "native_flow"
+    }
+  },
+  "13": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "12",
+        0
+      ],
+      "conditioning": [
+        "117",
+        0
+      ]
+    }
+  },
+  "14": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 202610310029
+    }
+  },
+  "15": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "14",
+        0
+      ],
+      "guider": [
+        "13",
+        0
+      ],
+      "sampler": [
+        "12",
+        1
+      ],
+      "sigmas": [
+        "12",
+        2
+      ],
+      "latent_image": [
+        "7",
+        1
+      ]
+    }
+  },
+  "16": {
+    "class_type": "LTXVSeparateAVLatent",
+    "inputs": {
+      "av_latent": [
+        "15",
+        0
+      ]
+    }
+  },
+  "17": {
+    "class_type": "VAEDecodeTiled",
+    "inputs": {
+      "samples": [
+        "20",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "tile_size": 512,
+      "overlap": 64,
+      "temporal_size": 32,
+      "temporal_overlap": 4
+    }
+  },
+  "18": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "17",
+        0
+      ],
+      "filename_prefix": "street-reskin/hero029_body"
+    }
+  },
+  "19": {
+    "class_type": "MiniMaxH3MemoryEfficientSageAttentionPatch",
+    "inputs": {
+      "model": [
+        "11",
+        0
+      ]
+    }
+  },
+  "20": {
+    "class_type": "SaveLatent",
+    "inputs": {
+      "samples": [
+        "16",
+        0
+      ],
+      "filename_prefix": "street-reskin/hero029_body_video"
+    }
+  },
+  "21": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "7",
+        0
+      ],
+      "latent": [
+        "7",
+        1
+      ],
+      "frame_idx": 8,
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "4",
+        0
+      ]
+    }
+  },
+  "22": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "8",
+        0
+      ],
+      "latent": [
+        "7",
+        1
+      ],
+      "frame_idx": 24,
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "5",
+        0
+      ]
+    }
+  },
+  "23": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "22",
+        0
+      ],
+      "latent": [
+        "7",
+        1
+      ],
+      "frame_idx": 30,
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "4",
+        0
+      ]
+    }
+  },
+  "24": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "9",
+        0
+      ],
+      "latent": [
+        "7",
+        1
+      ],
+      "frame_idx": 44,
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "4",
+        0
+      ]
+    }
+  },
+  "25": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "10",
+        0
+      ],
+      "latent": [
+        "7",
+        1
+      ],
+      "frame_idx": 62,
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "6",
+        0
+      ]
+    }
+  },
+  "26": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "25",
+        0
+      ],
+      "latent": [
+        "7",
+        1
+      ],
+      "frame_idx": 68,
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "4",
+        0
+      ]
+    }
+  },
+  "100": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "7",
+        0
+      ],
+      "latent": [
+        "7",
+        1
+      ],
+      "frame_idx": 4,
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "4",
+        0
+      ]
+    }
+  },
+  "101": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "100",
+        0
+      ],
+      "latent": [
+        "7",
+        1
+      ],
+      "frame_idx": 8,
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "4",
+        0
+      ]
+    }
+  },
+  "102": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "101",
+        0
+      ],
+      "latent": [
+        "7",
+        1
+      ],
+      "frame_idx": 12,
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "5",
+        0
+      ]
+    }
+  },
+  "103": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "102",
+        0
+      ],
+      "latent": [
+        "7",
+        1
+      ],
+      "frame_idx": 16,
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "5",
+        0
+      ]
+    }
+  },
+  "104": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "103",
+        0
+      ],
+      "latent": [
+        "7",
+        1
+      ],
+      "frame_idx": 20,
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "5",
+        0
+      ]
+    }
+  },
+  "105": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "104",
+        0
+      ],
+      "latent": [
+        "7",
+        1
+      ],
+      "frame_idx": 24,
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "5",
+        0
+      ]
+    }
+  },
+  "106": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "105",
+        0
+      ],
+      "latent": [
+        "7",
+        1
+      ],
+      "frame_idx": 28,
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "4",
+        0
+      ]
+    }
+  },
+  "107": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "106",
+        0
+      ],
+      "latent": [
+        "7",
+        1
+      ],
+      "frame_idx": 32,
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "4",
+        0
+      ]
+    }
+  },
+  "108": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "107",
+        0
+      ],
+      "latent": [
+        "7",
+        1
+      ],
+      "frame_idx": 36,
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "4",
+        0
+      ]
+    }
+  },
+  "109": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "108",
+        0
+      ],
+      "latent": [
+        "7",
+        1
+      ],
+      "frame_idx": 40,
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "4",
+        0
+      ]
+    }
+  },
+  "110": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "109",
+        0
+      ],
+      "latent": [
+        "7",
+        1
+      ],
+      "frame_idx": 44,
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "4",
+        0
+      ]
+    }
+  },
+  "111": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "110",
+        0
+      ],
+      "latent": [
+        "7",
+        1
+      ],
+      "frame_idx": 48,
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "6",
+        0
+      ]
+    }
+  },
+  "112": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "111",
+        0
+      ],
+      "latent": [
+        "7",
+        1
+      ],
+      "frame_idx": 52,
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "6",
+        0
+      ]
+    }
+  },
+  "113": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "112",
+        0
+      ],
+      "latent": [
+        "7",
+        1
+      ],
+      "frame_idx": 56,
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "6",
+        0
+      ]
+    }
+  },
+  "114": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "113",
+        0
+      ],
+      "latent": [
+        "7",
+        1
+      ],
+      "frame_idx": 60,
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "6",
+        0
+      ]
+    }
+  },
+  "115": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "114",
+        0
+      ],
+      "latent": [
+        "7",
+        1
+      ],
+      "frame_idx": 64,
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "6",
+        0
+      ]
+    }
+  },
+  "116": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "115",
+        0
+      ],
+      "latent": [
+        "7",
+        1
+      ],
+      "frame_idx": 68,
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "4",
+        0
+      ]
+    }
+  },
+  "117": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "116",
+        0
+      ],
+      "latent": [
+        "7",
+        1
+      ],
+      "frame_idx": 72,
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "4",
+        0
+      ]
+    }
+  }
+}
