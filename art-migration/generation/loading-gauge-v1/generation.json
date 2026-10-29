@@ -1,0 +1,15 @@
+{
+  "provider": "official-built-in-image_gen",
+  "args": {
+    "prompt": "Generate a transparent production UI asset sheet containing exactly THREE separate horizontal loading-bar elements in THREE evenly spaced rows, no words or labels. Cohesive 2.5D semi-realistic semi-cartoon absurd-neighborhood game UI, tactile enamel-painted metal and industrial copper, designed to sit on a teal shop shutter. Whole canvas landscape approximately1536x1024, transparent outside the isolated elements, large clean gaps between rows, no background, no extra items. ROW1 centered near25% canvas height: a VERY LONG THIN industrial progress-bar housing, about1300px wide and100px tall (13:1 shape), crisp rounded rectangular dark-teal enamel casing, restrained warm copper edging, four small flat screw heads at ends, just two tiny yellow safety stripe accents at its two outer endcaps, softly shaded bevel. Its inner EMPTY gauge well is a perfectly straight dark charcoal-teal horizontal rectangle with very subtle rounded corners, about92.5% housing width and51% housing height, centered precisely; no fill, no glowing highlights in the empty well. This is one continuous sleek physical casing, no fantasy columns, dragons, curls, paper banners, stones or inscriptions. ROW2 centered near50% canvas height: one separate plain horizontal filled progress-bar strip, about1200px wide and55px tall (22:1 shape), solid warm apricot-orange enamel with a gentle continuous left-to-right light variation, straight clean silhouette, tiny rounded corners, no marks, no icons, no gaps, no outer frame. It should remain readable when clipped to a few percent width. ROW3 centered near75% canvas height: one separate softly feathered charcoal-teal translucent horizontal shadow/backplate, about1300px wide and74px tall, clean flat unmarked center and softly faded long outer ends, subtle opacity for white progress text placed over it by the game. No lettering anywhere; no arrows, percent numbers, labels, logos, watermarks, stars, sparks or objects. Preserve each element completely with at least60px clear margins to all canvas edges and row boundaries. The supplied three images only indicate the three UI roles; create genuinely new industrial street-neighborhood artwork for each, no copying original ornaments.",
+    "referenced_image_paths": [
+      "C:/Users/dongdong/Documents/ChatGPT/安装/local_game/resource/assets/ui/login/denglu_img_jindudi_7cf569.png",
+      "C:/Users/dongdong/Documents/ChatGPT/安装/local_game/resource/assets/ui/login/denglu_img_jindutiao_dbaa5ed6.png",
+      "C:/Users/dongdong/Documents/ChatGPT/安装/local_game/resource/assets/ui/login/denglu_img_heitiao_9d20987b.png"
+    ],
+    "transparent_background": true
+  },
+  "generatedFile": "C:/Users/dongdong/.codex/generated_images/01a18561-3b52-7601-a12f-4e916cbcf8a5/exec-04fc5c2f-6e43-44fe-99cb-8b8188910018.png",
+  "manualReview": "approved-source",
+  "notes": "Actual alpha composited on grey and all three distinct rows inspected. Technical cropping/scaling/padding only; housing split at inner well boundaries to fit fixed native x206/y17/546x23 fill geometry."
+}
