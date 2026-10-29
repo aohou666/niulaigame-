@@ -37,7 +37,7 @@ def main():
  ui_file=OUT/'ui-regions.jsonl';ui_rows=[json.loads(line) for line in ui_file.read_text('utf8').splitlines()] if ui_file.exists() else []
  report['uiSheetRegionsNotYetReplaced']=sum(r['status']!='complete' for r in ui_rows)
  report['promotedStreetArtVerification']=verify_street_art()
- issues=OUT/'open-issues.json';report['knownOpenIssues']=json.loads(issues.read_text('utf8')) if issues.exists() else []
+ issues=OUT/'open-issues.json';report['knownOpenIssues']=[r for r in json.loads(issues.read_text('utf8')) if r.get('status')!='resolved'] if issues.exists() else []
  folder=OUT/'versions'/a.version;folder.mkdir(parents=True,exist_ok=True)
  (folder/'review.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n','utf8')
  font=ImageFont.truetype('C:/Windows/Fonts/msyh.ttc',20)

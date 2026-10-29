@@ -1,0 +1,270 @@
+{
+  "pass": true,
+  "errors": [],
+  "initial": {
+    "id": 12101,
+    "life": 12000,
+    "atk": 1000,
+    "skills": [
+      550750160
+    ]
+  },
+  "guarded": {
+    "ownerLife": 9937,
+    "summonLife": 11973,
+    "enemyLife": 997750,
+    "record": {
+      "ownerId": 11100,
+      "targetId": 11100,
+      "entityId": 12101,
+      "incoming": 90,
+      "transferred": 27,
+      "remaining": 63,
+      "mitigation": 0
+    }
+  },
+  "replacement": {
+    "oldDead": true,
+    "newId": 13101,
+    "life": 14400,
+    "atk": 1200,
+    "detonations": 1
+  },
+  "ids": [
+    12101,
+    13101,
+    14101,
+    15101,
+    16101,
+    17101,
+    18101,
+    19101,
+    12102,
+    13102
+  ],
+  "renderSummons": 10,
+  "buffReferences": [
+    {
+      "type": 131,
+      "value": 12101,
+      "exists": true
+    },
+    {
+      "type": 131,
+      "value": 13101,
+      "exists": true
+    },
+    {
+      "type": 131,
+      "value": 14101,
+      "exists": true
+    },
+    {
+      "type": 142,
+      "value": 13101,
+      "exists": true
+    },
+    {
+      "type": 131,
+      "value": 15101,
+      "exists": true
+    },
+    {
+      "type": 131,
+      "value": 16101,
+      "exists": true
+    },
+    {
+      "type": 131,
+      "value": 17101,
+      "exists": true
+    },
+    {
+      "type": 142,
+      "value": 16101,
+      "exists": true
+    },
+    {
+      "type": 131,
+      "value": 18101,
+      "exists": true
+    },
+    {
+      "type": 131,
+      "value": 19101,
+      "exists": true
+    },
+    {
+      "type": 131,
+      "value": 12102,
+      "exists": true
+    },
+    {
+      "type": 131,
+      "value": 13102,
+      "exists": true
+    }
+  ],
+  "audit": {
+    "installed": true,
+    "created": [
+      {
+        "ownerId": 11100,
+        "entityId": 12101,
+        "code": 41050907,
+        "sourceBuffId": 550750210,
+        "lifeMax": 12000,
+        "atk": 1000,
+        "replaced": false
+      },
+      {
+        "ownerId": 11100,
+        "entityId": 13101,
+        "code": 41050907,
+        "sourceBuffId": 550750210,
+        "lifeMax": 14400,
+        "atk": 1200,
+        "replaced": true
+      },
+      {
+        "ownerId": 11100,
+        "entityId": 14101,
+        "code": 41050907,
+        "sourceBuffId": 550750210,
+        "lifeMax": 14400,
+        "atk": 1200,
+        "replaced": true
+      },
+      {
+        "ownerId": 11100,
+        "entityId": 15101,
+        "code": 41050907,
+        "sourceBuffId": 550750210,
+        "lifeMax": 14400,
+        "atk": 1200,
+        "replaced": true
+      },
+      {
+        "ownerId": 11100,
+        "entityId": 16101,
+        "code": 41050907,
+        "sourceBuffId": 550750210,
+        "lifeMax": 14400,
+        "atk": 1200,
+        "replaced": true
+      },
+      {
+        "ownerId": 11100,
+        "entityId": 17101,
+        "code": 41050907,
+        "sourceBuffId": 550750210,
+        "lifeMax": 14400,
+        "atk": 1200,
+        "replaced": true
+      },
+      {
+        "ownerId": 11100,
+        "entityId": 18101,
+        "code": 41050907,
+        "sourceBuffId": 550750210,
+        "lifeMax": 14400,
+        "atk": 1200,
+        "replaced": true
+      },
+      {
+        "ownerId": 11100,
+        "entityId": 19101,
+        "code": 41050907,
+        "sourceBuffId": 550750210,
+        "lifeMax": 14400,
+        "atk": 1200,
+        "replaced": true
+      },
+      {
+        "ownerId": 11100,
+        "entityId": 12102,
+        "code": 41050907,
+        "sourceBuffId": 550750210,
+        "lifeMax": 14400,
+        "atk": 1200,
+        "replaced": true
+      },
+      {
+        "ownerId": 11100,
+        "entityId": 13102,
+        "code": 41050907,
+        "sourceBuffId": 550750210,
+        "lifeMax": 14400,
+        "atk": 1200,
+        "replaced": true
+      }
+    ],
+    "detonations": [
+      {
+        "oldId": 12101,
+        "ownerId": 11100,
+        "newId": 13101
+      },
+      {
+        "oldId": 13101,
+        "ownerId": 11100,
+        "newId": 14101
+      },
+      {
+        "oldId": 14101,
+        "ownerId": 11100,
+        "newId": 15101
+      },
+      {
+        "oldId": 15101,
+        "ownerId": 11100,
+        "newId": 16101
+      },
+      {
+        "oldId": 16101,
+        "ownerId": 11100,
+        "newId": 17101
+      },
+      {
+        "oldId": 17101,
+        "ownerId": 11100,
+        "newId": 18101
+      },
+      {
+        "oldId": 18101,
+        "ownerId": 11100,
+        "newId": 19101
+      },
+      {
+        "oldId": 19101,
+        "ownerId": 11100,
+        "newId": 12102
+      },
+      {
+        "oldId": 12102,
+        "ownerId": 11100,
+        "newId": 13102
+      }
+    ],
+    "guards": [
+      {
+        "ownerId": 11100,
+        "targetId": 11100,
+        "entityId": 12101,
+        "incoming": 90,
+        "transferred": 27,
+        "remaining": 63,
+        "mitigation": 0
+      }
+    ],
+    "rendererLinks": [],
+    "copiedBuffValues": 12,
+    "totals": {
+      "created": 10,
+      "detonations": 9,
+      "guards": 1,
+      "rendererLinks": 0
+    }
+  },
+  "authoredTablesChanged": false
+}

@@ -1,0 +1,49 @@
+{
+  "errors": [],
+  "audit": {
+    "installed": true,
+    "created": [
+      {
+        "ownerId": 21200,
+        "entityId": 22201,
+        "code": 41050907,
+        "sourceBuffId": 550750210,
+        "lifeMax": 14918400000,
+        "atk": 1385650000,
+        "replaced": false
+      }
+    ],
+    "detonations": [],
+    "guards": [
+      {
+        "ownerId": 21200,
+        "targetId": 21200,
+        "entityId": 22201,
+        "incoming": 232833600000,
+        "transferred": 69850080000,
+        "remaining": 162983520000,
+        "mitigation": 0
+      }
+    ],
+    "rendererLinks": [
+      {
+        "type": 131,
+        "entityId": 22201,
+        "linkedId": 0,
+        "completed": true,
+        "elapsedMs": 651
+      }
+    ],
+    "copiedBuffValues": 4
+  },
+  "renderedSummons": [
+    {
+      "id": 22201,
+      "visible": true,
+      "onStage": false,
+      "life": 0,
+      "appearType": 1
+    }
+  ],
+  "scope": "45-second live fight with enemy75 from previously failing roster.131 renderer animation completed; battle advanced to round6. Not a complete victory or142 visual certification."
+}

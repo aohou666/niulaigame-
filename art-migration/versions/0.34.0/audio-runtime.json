@@ -1,0 +1,18 @@
+{
+  "pass": true,
+  "checks": [
+    "resume blocked background on gesture",
+    "discard stale short effects",
+    "do not resume paused audio",
+    "do not replay changed source",
+    "pause before rejection stays stopped",
+    "bound pending queue to16"
+  ],
+  "snapshot": {
+    "blocked": 25,
+    "resumed": 17,
+    "discarded": 6,
+    "pending": 0,
+    "failures": []
+  }
+}

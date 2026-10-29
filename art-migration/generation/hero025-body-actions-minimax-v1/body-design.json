@@ -1,0 +1,263 @@
+{
+  "heroId": 25,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/025/portrait.png",
+      "prepared": "art-migration/references/body-025/idle.png",
+      "foot": [
+        384.35,
+        700
+      ],
+      "size": [
+        295,
+        560
+      ],
+      "sha256": "538480939bb830c813c78b2d565bb79d643e79f192b52ef9446e417db9b60ce1"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero025-attack-v3/hero025_attack_continuity_alpha_00001_.png",
+      "prepared": "art-migration/references/body-025/attack.png",
+      "foot": [
+        383.68,
+        700
+      ],
+      "size": [
+        293,
+        560
+      ],
+      "sha256": "1284502439540a31a3f11ec08059efc3668ce6e97e9b106f8bb85136139cf4c2"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero025-skill-v3/hero025_skill_continuity_alpha_00001_.png",
+      "prepared": "art-migration/references/body-025/skill.png",
+      "foot": [
+        383.64,
+        700
+      ],
+      "size": [
+        301,
+        560
+      ],
+      "sha256": "8649ac970149c8098450b8da3f8a22a14c9219dc6c936ebe76fae00fef270af0"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H025-ATK",
+        "heroId": 25,
+        "name": "强子",
+        "originalName": "法正",
+        "slot": "普攻",
+        "skillId": 550250110,
+        "skillName": "普通攻击",
+        "newSkillName": "洛水轻掠",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "随机2目标",
+        "delivery": "原地远程作用",
+        "movement": "原站位出手",
+        "weapon": "短刃",
+        "weaponObservation": "one small silver kitchen knife in his anatomical RIGHT hand (viewer LEFT), black zip jacket and trousers; EMPTY LEFT hand; NO shield",
+        "effectClass": "目标位置特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "Make one short careful forward knife swipe with RIGHT hand, empty LEFT hand stays visible. Never switch knife hand or add a shield.",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B03",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_fazheng_02",
+        "model": "hero_025_01",
+        "action": "gongji",
+        "effectiveDesc": "普通攻击转化为：对随机2个敌人造成80%伤害。",
+        "classificationStage": "被动改写生效后；解锁前仍用基础普攻",
+        "passiveRewrite": "550250410 辅翼：普通攻击转化为：对随机2个敌人造成80%伤害。",
+        "passiveNotes": "550250410 辅翼：普通攻击转化为：对随机2个敌人造成80%伤害。",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1666.667,
+        "fps": 30,
+        "durationFrames": 50,
+        "rawEvents": [
+          {
+            "frame0": 16,
+            "timeMs": 533.333,
+            "type": 10,
+            "name": "zd"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "zd@533.3ms（发射/启动特效）",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "effectsTarEnemy": [
+            {
+              "delay": 500,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_fazheng_02"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_fazheng_02",
+            "delay": 500,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_fazheng_02_cf5633ea.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_fazheng_02",
+                  "name": "common_skill_fazheng_02",
+                  "fps": 24,
+                  "durationFrames": 12,
+                  "durationMs": 500.0,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        1
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 3,
+                      "timeMs": 125.0,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_fazheng_02 delay=500 dt=None speed=1 事件=pia@125.0",
+        "variants": [
+          "common_skill_fazheng_02"
+        ],
+        "portrait": "reskin/hero_025.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H025-ULT",
+        "heroId": 25,
+        "name": "强子",
+        "originalName": "法正",
+        "slot": "大招",
+        "skillId": 550250210,
+        "skillName": "因果律",
+        "newSkillName": "沉波因果",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "随机2目标",
+        "delivery": "原地远程作用",
+        "movement": "原站位出手",
+        "weapon": "短刃",
+        "weaponObservation": "one small silver kitchen knife in his anatomical RIGHT hand (viewer LEFT), black zip jacket and trousers; EMPTY LEFT hand; NO shield",
+        "effectClass": "目标位置特效",
+        "semantic": "沉默",
+        "bodyDesign": "Lift the SAME RIGHT-hand knife diagonally while the EMPTY LEFT hand stays open for balance; no shield or new weapon.",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B06",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方随机2人造成260%伤害,并有45%几率附加<沉默>,持续2回合。",
+        "skillModel": "common_skill_fazheng_01",
+        "model": "hero_025_01",
+        "action": "jineng",
+        "effectiveDesc": "对敌方随机2人造成260%伤害,并有45%几率附加<沉默>,持续2回合。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "550250410 辅翼：普通攻击转化为：对随机2个敌人造成80%伤害。",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1666.667,
+        "fps": 30,
+        "durationFrames": 50,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "effectsTarEnemy": [
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 0,
+              "src": [
+                "common_skill_fazheng_01"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_fazheng_01",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "error": "'duration'"
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_fazheng_01 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_fazheng_01"
+        ],
+        "portrait": "reskin/hero_025.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false
+}

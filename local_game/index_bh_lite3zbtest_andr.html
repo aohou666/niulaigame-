@@ -47,11 +47,13 @@
     <div id="gameDiv" style="margin: auto;width: 100%;height: 100%;" class="egret-player" data-entry-class="Main" data-orientation="portrait" data-scale-mode="fixedWidth" data-frame-rate="60" data-content-width="720" data-content-height="1280" data-multi-fingered="2" data-show-fps="false" data-show-log="false" data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
 </div>
 
+<script src="offline-audio.js?v=20261029-34"></script>
 <script src="offline-ui.js"></script>
 <script src="offline-read-rpc.js?v=20261029-22"></script>
 <script src="offline-skill-references.js?v=20261029-30"></script>
 <script src="offline-hit-events.js?v=20261029-32"></script>
 <script src="offline-navigation-state.js?v=20261029-33"></script>
+<script src="offline-summons.js?v=20261029-34"></script>
 <script src="character-reskin-data.js?v=20261029-30"></script>
 <script src="character-art-data.js?v=20261029-23"></script>
 <script src="character-art.js?v=20261029-21"></script>
@@ -63,7 +65,7 @@
 <script src="character-idle-data.js?v=20261021-clean2"></script>
 <script src="character-idle-atlas-data.js?v=20261029-23"></script>
 <script src="character-idle.js?v=20261029-23"></script>
-<script src="street-body-data.js?v=20261029-33"></script>
+<script src="street-body-data.js?v=20261029-34"></script>
 <script src="street-body.js?v=20261029-33"></script>
 <script src="character-regression.js?v=20261022-1"></script>
 <script>
@@ -442,6 +444,7 @@
                     if (window.OfflineSkillReferences) window.OfflineSkillReferences.install();
                     if (window.OfflineHitEvents) window.OfflineHitEvents.install();
                     if (window.OfflineNavigationState) window.OfflineNavigationState.install();
+                    if (window.OfflineSummons) window.OfflineSummons.install();
                     if (window.CharacterReskin) window.CharacterReskin.apply();
                     var offlineSave;
                     offlineSave = loadOfflineSaveData();
@@ -3928,6 +3931,7 @@
                                 aiTicks++;
                             }
                             if (!aiServer.world.isEnd || !aiRounds.length) throw new Error("原包 BattleAI 未生成完整战报");
+                            if(window.OfflineSummons)OfflineSummons.collect(aiServer.world,demoBattle);
                             demoBattle.battleInfo.rounds = aiRounds;
                             if (aiEndResult && Number(aiEndResult.result)) demoBattle.result = Number(aiEndResult.result);
                             var aiStats = {};

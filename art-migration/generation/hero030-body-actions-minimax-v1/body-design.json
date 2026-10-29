@@ -1,0 +1,325 @@
+{
+  "heroId": 30,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/030/portrait.png",
+      "prepared": "art-migration/references/body-030/idle.png",
+      "foot": [
+        384.46,
+        700
+      ],
+      "size": [
+        351,
+        560
+      ],
+      "sha256": "cfbf3150339b8bd6b7db02033036387f5901c07b6538be1833bea7a5f3a3bcaf"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero030-attack-v3/hero030_attack_continuity_alpha_00001_.png",
+      "prepared": "art-migration/references/body-030/attack.png",
+      "foot": [
+        384.45,
+        700
+      ],
+      "size": [
+        390,
+        560
+      ],
+      "sha256": "3bdd7bf50c8f4e1971bd6d746bb1accb032d77c6a1382bcc268033d85129879f"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero030-skill-v3/hero030_skill_continuity_alpha_00001_.png",
+      "prepared": "art-migration/references/body-030/skill.png",
+      "foot": [
+        384.45,
+        700
+      ],
+      "size": [
+        369,
+        560
+      ],
+      "sha256": "01c05ad753c37b26ce017564b4e58ed6a01dd5cf004d8fdb58d99e56e6e82ab8"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H030-ATK",
+        "heroId": 30,
+        "name": "牛大妈",
+        "originalName": "周仓",
+        "slot": "普攻",
+        "skillId": 550300110,
+        "skillName": "普通攻击",
+        "newSkillName": "暖邻提袋",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "近身攻击",
+        "movement": "移到目标前出手",
+        "weapon": "生活道具",
+        "weaponObservation": "a white grocery shopping bag held in RIGHT hand (viewer LEFT), a small calculator held in LEFT hand (viewer RIGHT), gray hair, blue cardigan, blue-white check apron",
+        "effectClass": "命中/生效附着特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "Keep BOTH props in their original hands throughout. Do one short forward KICK, both grocery bag and calculator clearly visible, no empty-hand punch.",
+        "rootPolicy": "引擎负责接近与返回；视频固定根位置，只做出手",
+        "batch": "B02",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_tongyonghuiji",
+        "model": "hero_030_01",
+        "action": "gongji",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "wuqi",
+        "rawDurationMs": 1133.333,
+        "fps": 30,
+        "durationFrames": 34,
+        "rawEvents": [
+          {
+            "frame0": 13,
+            "timeMs": 433.333,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@433.3ms（角色事件）",
+        "impactMs": [
+          433.333
+        ],
+        "impactStatus": "角色pia直接回调；待游戏内验收",
+        "performance": {
+          "effectsPiaEnemy": [
+            {
+              "delay": 0,
+              "posType": 1,
+              "src": [
+                "common_skill_tongyonghuiji"
+              ],
+              "type": 0
+            }
+          ],
+          "effectsPiaUs": [
+            {
+              "delay": 0,
+              "posType": 1,
+              "src": [
+                "common_skill_tongyonghuiji"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            2,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_tongyonghuiji",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_tongyonghuiji_4eb6f288.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_tongyonghuiji",
+                  "name": "common_skill_tongyonghuiji",
+                  "fps": 24,
+                  "durationFrames": 9,
+                  "durationMs": 375.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaUs",
+            "resource": "common_skill_tongyonghuiji",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_tongyonghuiji_4eb6f288.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_tongyonghuiji",
+                  "name": "common_skill_tongyonghuiji",
+                  "fps": 24,
+                  "durationFrames": 9,
+                  "durationMs": 375.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsPiaEnemy: common_skill_tongyonghuiji delay=0 dt=None speed=1\neffectsPiaUs: common_skill_tongyonghuiji delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_tongyonghuiji"
+        ],
+        "portrait": "reskin/hero_030.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H030-ULT",
+        "heroId": 30,
+        "name": "牛大妈",
+        "originalName": "周仓",
+        "slot": "大招",
+        "skillId": 550300210,
+        "skillName": "奋勇镇敌",
+        "newSkillName": "护邻镇阵",
+        "purpose": "攻辅兼备",
+        "targetSide": "敌方",
+        "scope": "前排",
+        "delivery": "中场释放（远近待回放）",
+        "movement": "移到场地中部释放",
+        "weapon": "生活道具",
+        "weaponObservation": "a white grocery shopping bag held in RIGHT hand (viewer LEFT), a small calculator held in LEFT hand (viewer RIGHT), gray hair, blue cardigan, blue-white check apron",
+        "effectClass": "目标位置特效",
+        "semantic": "治疗/吸血",
+        "bodyDesign": "Keep grocery bag in RIGHT hand, raise calculator in LEFT hand for a decisive comic price-announcement gesture. Never lose either prop.",
+        "rootPolicy": "引擎移到中场后播出手；视频不自行横穿战场",
+        "batch": "B04",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排造成200%伤害,并回复生命比例最低的2个友方单位80%攻击力的生命。",
+        "skillModel": "common_skill_zhoucang_02",
+        "model": "hero_030_01",
+        "action": "jineng",
+        "effectiveDesc": "对敌方前排造成200%伤害,并回复生命比例最低的2个友方单位80%攻击力的生命。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "wuqi",
+        "rawDurationMs": 1166.667,
+        "fps": 30,
+        "durationFrames": 35,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "__attackDoneDelay": 2000,
+          "effectsTarEnemy": [
+            {
+              "delay": 500,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_zhoucang_02"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            1,
+            0,
+            100
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_zhoucang_02",
+            "delay": 500,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhoucang_02_f2957ea6.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhoucang_02",
+                  "name": "common_skill_zhoucang_02",
+                  "fps": 24,
+                  "durationFrames": 50,
+                  "durationMs": 2083.333,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        2
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 13,
+                      "timeMs": 541.667,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 13,
+                      "timeMs": 541.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 35,
+                      "timeMs": 1458.333,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 35,
+                      "timeMs": 1458.333,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_zhoucang_02 delay=500 dt=None speed=1 事件=pia@541.7,pia@1458.3",
+        "variants": [
+          "common_skill_zhoucang_02"
+        ],
+        "portrait": "reskin/hero_030.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false
+}

@@ -1,0 +1,9 @@
+import fs from 'node:fs/promises';import vm from 'node:vm';import assert from 'node:assert/strict';
+const listeners={},now={value:0};let allowed=false;
+class Media{constructor(src,duration=1){this.src=src;this.duration=duration;this.calls=0;}play(){this.calls++;return allowed?Promise.resolve():Promise.reject(Object.assign(new Error('gesture required'),{name:'NotAllowedError'}));}pause(){this.paused=true;}}
+const sandbox={HTMLMediaElement:Media,WeakSet,Date:{now:()=>now.value},document:{addEventListener:(event,fn)=>listeners[event]=fn}};sandbox.window=sandbox;vm.runInNewContext(await fs.readFile('local_game/offline-audio.js','utf8'),sandbox);
+const bg=new Media('bg',60),stale=new Media('old-effect'),stopped=new Media('stopped',30),changed=new Media('before',30),cancelRace=new Media('cancel-race',30);
+await bg.play();await stale.play();await stopped.play();stopped.pause();await changed.play();changed.src='after';const race=cancelRace.play();cancelRace.pause();await race;
+now.value=2000;allowed=true;listeners.pointerdown();await new Promise(r=>setImmediate(r));assert.equal(bg.calls,2);assert.equal(stale.calls,1);assert.equal(stopped.calls,1);assert.equal(changed.calls,1);assert.equal(cancelRace.calls,1);assert.equal(sandbox.OfflineAudio.snapshot().pending,0);
+allowed=false;for(let i=0;i<20;i++)await new Media('unique'+i,60).play();assert.equal(sandbox.OfflineAudio.snapshot().pending,16);allowed=true;listeners.keydown();await new Promise(r=>setImmediate(r));assert.equal(sandbox.OfflineAudio.snapshot().pending,0);
+const report={pass:true,checks:['resume blocked background on gesture','discard stale short effects','do not resume paused audio','do not replay changed source','pause before rejection stays stopped','bound pending queue to16'],snapshot:sandbox.OfflineAudio.snapshot()};await fs.writeFile('art-migration/versions/0.34.0/audio-runtime.json',JSON.stringify(report,null,2));console.log(JSON.stringify(report));

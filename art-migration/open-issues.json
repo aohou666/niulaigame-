@@ -1,10 +1,19 @@
 [
   {
     "id": "BATTLE-014-FIGHTMODEL",
-    "status": "investigating",
+    "status": "resolved",
     "observed": "One random eight-hell-enemy battle emitted Cannot read properties of undefined (reading fightModelInfo). First harness only captured message. Later harness captures stack and actual battle teams.",
-    "evidence": "versions/0.33.0/body-roster-battle-attempt1.json",
-    "rechecks": "Single rerun and two repeated random runs passed; third repeated run missed attack window and timed out. Final9/14/15 battle run passed with requested first enemy subtype1 and actual remaining enemy roster recorded. This is not proof that the random exception is fixed.",
-    "next": "Run isolated full-lifetime random battles, capture full pageerror stack and OfflineLastBattlePayload. Repair concrete stale target/owner path once identified."
+    "evidence": "versions/0.34.0/stress-summary.json; versions/0.34.0/summon-mechanics.json",
+    "rechecks": "Four independent lanes reproduced original FB_131 failure; after fix96 fresh-page20second battle samples passed with no exceptions or failed responses. Native AI integration verified10 summons,9 detonations and guard transfer. Live renderer131 completed651/652ms. Renderer142 repeated chain still needs a dedicated visual check.",
+    "next": "Continue long-lifetime coverage; track any new exception separately.",
+    "rootCause": "Native offline BattleAI had no buff131 summon parser and emitted renderer buff without value/entity. Implemented authored summon, forwarding, detonation and renderer DTO transfer."
+  },
+  {
+    "id": "DETAIL-NULL-REJECTION",
+    "status": "investigating",
+    "observed": "One85detail audit emitted two unhandled null Promise rejections (four browser/CDP records); all85 detail checks themselves passed.",
+    "evidence": "versions/0.34.0/detail-null-rejection-attempt1.json",
+    "rechecks": "Promise origin instrumentation yielded no null traces; subsequent full85detail rerun passed with zero browser exceptions. Intermittent cause not established.",
+    "next": "Retain failure evidence; capture asynchronous Promise origin in repeated detail navigation without suppressing rejections."
   }
 ]
