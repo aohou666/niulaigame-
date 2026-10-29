@@ -4,14 +4,29 @@ from pathlib import Path
 from PIL import Image
 from street_comfy import ROOT,COMFY,submit
 from street_motion_preflight import check_single_gesture
-p=argparse.ArgumentParser();p.add_argument('ids',nargs='+',type=int);p.add_argument('--revision',type=int,default=1);p.add_argument('--height',type=int,default=560);p.add_argument('--length',type=int,choices=[73,124],default=73);p.add_argument('--base-steps',type=int,choices=[16,24,32]);p.add_argument('--landmarks',type=Path);guides=p.add_mutually_exclusive_group();guides.add_argument('--dense-guides',action='store_true');guides.add_argument('--sparse-guides',action='store_true');p.add_argument('--queue-tail',action='store_true');p.add_argument('--retain-lit-prop',action='store_true');a=p.parse_args()
+from street_multihit_plan import validate as validate_choreography, apply_choreography
+p=argparse.ArgumentParser();p.add_argument('ids',nargs='+',type=int);p.add_argument('--revision',type=int,default=1);p.add_argument('--height',type=int,default=560);p.add_argument('--root-y',type=int,default=700);p.add_argument('--length',type=int,choices=[73,124],default=73);p.add_argument('--base-steps',type=int,choices=[16,24,32]);p.add_argument('--landmarks',type=Path);p.add_argument('--idle-reference-qa',type=Path);p.add_argument('--choreography',type=Path);guides=p.add_mutually_exclusive_group();guides.add_argument('--dense-guides',action='store_true');guides.add_argument('--sparse-guides',action='store_true');p.add_argument('--queue-tail',action='store_true');p.add_argument('--retain-lit-prop',action='store_true');a=p.parse_args()
+assert 550<=a.root_y<=700, 'Root must retain top and bottom safety margins'
 assert a.length==73 or a.sparse_guides,'Longer trained-range pilot uses sparse guides only'
 base=ROOT/'art-migration/generation'
-check_single_gesture(a.ids, ROOT/'art-migration/native-action-events.json')
+choreography=json.loads(a.choreography.read_text('utf8')) if a.choreography else None
+if choreography:
+ assert a.ids==[choreography['heroId']] and a.length==choreography['length'] and a.sparse_guides
+ validate_choreography(choreography,json.loads((ROOT/'art-migration/native-action-events.json').read_text('utf8')))
+ assert choreography.get('status')=='ready-for-generation', 'Choreography still awaits reviewed guides'
+else:
+ check_single_gesture(a.ids, ROOT/'art-migration/native-action-events.json')
 plan=json.loads((ROOT/'outputs/combat-action-plan-20261022/combat-action-plan.json').read_text('utf8'))['rows']
 template=json.loads((base/'hero001-body-actions-minimax-v3-fastdecode/workflow.json').read_text('utf8'))
 overrides=json.loads((ROOT/'art-migration/prop-continuity-overrides.json').read_text('utf8'))
 landmarks=json.loads(a.landmarks.read_text('utf8')) if a.landmarks else None
+idleReference=None
+if a.idle_reference_qa:
+ reference=json.loads(a.idle_reference_qa.read_text('utf8'))
+ assert len(a.ids)==1 and reference['heroId']==a.ids[0], 'Reference must belong to this one character'
+ assert reference['manualReview']=='approved', 'Reference requires visual approval'
+ idleReference=ROOT/reference['image']
+ assert hashlib.sha256(idleReference.read_bytes()).hexdigest()==reference['sha256'], 'Reference changed after review'
 def normalize(source,out,name,hid):
  if landmarks:
   assert landmarks['heroId']==hid,'Landmarks belong to one manually inspected character only'
@@ -19,19 +34,19 @@ def normalize(source,out,name,hid):
   with Image.open(source) as original:
    image=original.convert('RGBA');box=image.getchannel('A').point(lambda v:255 if v>16 else 0).getbbox();image=image.crop(box)
    rootX=landmarks['rootX'];footX=mark['footX']-box[0];footY=mark['footY']-box[1];subjectHeight=mark['footY']-mark['headY'];assert subjectHeight>0
-   scale=min(a.height/subjectHeight,(rootX-20)/max(1,footX),(748-rootX)/max(1,image.width-footX),680/max(1,footY),48/max(1,image.height-footY))
+   scale=min(a.height/subjectHeight,(rootX-20)/max(1,footX),(748-rootX)/max(1,image.width-footX),(a.root_y-20)/max(1,footY),(748-a.root_y)/max(1,image.height-footY))
    image=image.resize((round(image.width*scale),round(image.height*scale)),Image.Resampling.LANCZOS)
-   x=round(rootX-footX*scale);y=round(700-footY*scale);assert x>=18 and y>=18 and x+image.width<=750 and y+image.height<=750
+   x=round(rootX-footX*scale);y=round(a.root_y-footY*scale);assert x>=18 and y>=18 and x+image.width<=750 and y+image.height<=750
    canvas=Image.new('RGBA',(768,768));canvas.alpha_composite(image,(x,y));target=out/(name+'.png');canvas.save(target)
    inputname=f'street_body{hid:03}_{name}_v{a.revision}.png';shutil.copy2(target,COMFY/'input'/inputname)
-   return inputname,{'source':source.relative_to(ROOT).as_posix(),'prepared':target.relative_to(ROOT).as_posix(),'sourceSha256':digest,'foot':[rootX,700],'size':image.size,'subjectHeight':round(subjectHeight*scale,3),'normalization':'manually inspected head/feet landmarks; full prop bbox retained','sha256':hashlib.sha256(target.read_bytes()).hexdigest()}
+   return inputname,{'source':source.relative_to(ROOT).as_posix(),'prepared':target.relative_to(ROOT).as_posix(),'sourceSha256':digest,'foot':[rootX,a.root_y],'size':image.size,'subjectHeight':round(subjectHeight*scale,3),'normalization':'manually inspected head/feet landmarks; full prop bbox retained','sha256':hashlib.sha256(target.read_bytes()).hexdigest()}
  with Image.open(source) as image:
   image=image.convert('RGBA');box=image.getchannel('A').point(lambda v:255 if v>16 else 0).getbbox();image=image.crop(box)
   scale=min(normalHeight/image.height,560/image.width);image=image.resize((round(image.width*scale),round(image.height*scale)),Image.Resampling.LANCZOS)
   foot=image.getchannel('A').crop((0,int(image.height*.88),image.width,image.height));pixels=list(foot.getdata());anchor=sum((i%image.width)*v for i,v in enumerate(pixels))/max(1,sum(pixels))
-  x=max(12,min(756-image.width,round(384-anchor)));canvas=Image.new('RGBA',(768,768));canvas.alpha_composite(image,(x,700-image.height));target=out/(name+'.png');canvas.save(target)
+  x=max(12,min(756-image.width,round(384-anchor)));canvas=Image.new('RGBA',(768,768));canvas.alpha_composite(image,(x,a.root_y-image.height));target=out/(name+'.png');canvas.save(target)
   inputname=f'street_body{hid:03}_{name}_v{a.revision}.png';shutil.copy2(target,COMFY/'input'/inputname)
-  return inputname,{'source':source.relative_to(ROOT).as_posix(),'prepared':target.relative_to(ROOT).as_posix(),'foot':[round(x+anchor,2),700],'size':image.size,'sha256':hashlib.sha256(target.read_bytes()).hexdigest()}
+  return inputname,{'source':source.relative_to(ROOT).as_posix(),'prepared':target.relative_to(ROOT).as_posix(),'foot':[round(x+anchor,2),a.root_y],'size':image.size,'sha256':hashlib.sha256(target.read_bytes()).hexdigest()}
 for hid in reversed(a.ids):
  name=f'hero{hid:03}-body-actions-minimax-v{a.revision}'
  if (base/name).exists():continue
@@ -43,7 +58,7 @@ for hid in reversed(a.ids):
   poses[kind]=ROOT/json.loads((folder/'qa.json').read_text('utf8'))['image']
  out=ROOT/(f'art-migration/references/body-{hid:03}'+(f'-v{a.revision}' if a.revision>1 else ''));out.mkdir(parents=True,exist_ok=True)
  inputs={};files={}
- sourceImages={'idle':ROOT/f'local_game/assets/street/characters/{hid:03}/portrait.png',**poses};limits=[]
+ sourceImages={'idle':idleReference or ROOT/f'local_game/assets/street/characters/{hid:03}/portrait.png',**poses};limits=[]
  for sourceImage in sourceImages.values():
   with Image.open(sourceImage) as image:
    box=image.getchannel('A').point(lambda v:255 if v>16 else 0).getbbox();limits.append(560*(box[3]-box[1])/(box[2]-box[0]))
@@ -93,9 +108,13 @@ for hid in reversed(a.ids):
    g['7']['inputs']['length']=124
    for node,frame in [('8',28),('9',62),('10',92)]:g[node]['inputs']['frame_idx']=frame
    g['7']['inputs']['prompt']+=' Both actions face viewer RIGHT only. Never turn or strike toward viewer LEFT. Anticipation is a small backward elbow/body compression, never a mirrored opposite-facing reference pose. No second face, no blended duplicate eyes, horns or muzzle.'
+ if choreography:g=apply_choreography(g,choreography,rows)
  folder=submit(g,name,front=not a.queue_tail)
  (folder/'body-design.json').write_text(json.dumps({'heroId':hid,'inputs':inputs,'actions':{k:{'sourceFrames':([0,35] if k=='attack' else [36,72]) if a.length==73 else ([0,61] if k=='attack' else [62,123]),'guideImpactFrame':(16 if k=='attack' else 54) if a.length==73 else (28 if k=='attack' else 92),'native':rows[k]} for k in rows},'length':a.length,'nativeClockMustBeRetained':True,'manualVideoReview':'pending','runtimeIntegrated':False},ensure_ascii=False,indent=2),'utf8')
  if a.dense_guides:
   file=folder/'body-design.json';record=json.loads(file.read_text('utf8'));record['denseGuideSchedule']=guideSchedule;file.write_text(json.dumps(record,ensure_ascii=False,indent=2),'utf8')
  if a.sparse_guides:
   file=folder/'body-design.json';record=json.loads(file.read_text('utf8'));schedule=[(0,'idle'),(16,'attack'),(36,'idle'),(54,'skill'),(72,'idle')] if a.length==73 else [(0,'idle'),(28,'attack'),(62,'idle'),(92,'skill'),(123,'idle')];record['sparseGuideSchedule']=[{'frame':n,'image':k} for n,k in schedule];record['temporalReviewRequired']=True;file.write_text(json.dumps(record,ensure_ascii=False,indent=2),'utf8')
+
+ if choreography:
+  file=folder/'body-design.json';record=json.loads(file.read_text('utf8'));record['choreography']=choreography;record['sparseGuideSchedule']=choreography['guideSchedule'];record['choreographyVisualReviewRequired']=True;file.write_text(json.dumps(record,ensure_ascii=False,indent=2),'utf8')

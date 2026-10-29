@@ -35,7 +35,7 @@
         }
     }
     function acquire(cfg,mode){
-        var atlasHero=atlasData&&atlasData.heroes[String(cfg.id)],atlasProfile=mode==='detail'?'detail':'battle';
+        var atlasHero=Object.prototype.hasOwnProperty.call(cfg,'atlas')?cfg.atlas:atlasData&&atlasData.heroes[String(cfg.id)],atlasProfile=mode==='detail'?'detail':'battle';
         var pack=atlasHero&&atlasHero.profiles[atlasProfile],key=cfg.id+(pack?':'+atlasProfile:'');
         var c=caches[key];if(!c){c={key:key,cfg:cfg,atlas:pack,sheets:[],loadedPages:{},users:0,textures:{},pending:{},dead:false};caches[key]=c;}c.users++;return c;
     }

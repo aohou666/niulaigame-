@@ -1,0 +1,366 @@
+{
+  "heroId": 64,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/064/portrait.png",
+      "prepared": "art-migration/references/body-064-v9/idle.png",
+      "foot": [
+        383.55,
+        640
+      ],
+      "size": [
+        280,
+        400
+      ],
+      "sha256": "27d3b8b0ce802a2e02a9d94d2b8db398995de8bd94a2eb3cac903ec35ea41888"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero064-attack-v2/hero064_attack_alpha_00001_.png",
+      "prepared": "art-migration/references/body-064-v9/attack.png",
+      "foot": [
+        383.88,
+        640
+      ],
+      "size": [
+        311,
+        400
+      ],
+      "sha256": "982565f8fc59824f208f0e3f1ae9ed51da5691860d7720b241f7d74a5405518e"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero064-skill-v2/hero064_skill_alpha_00001_.png",
+      "prepared": "art-migration/references/body-064-v9/skill.png",
+      "foot": [
+        384.48,
+        640
+      ],
+      "size": [
+        301,
+        400
+      ],
+      "sha256": "dafaaa344c0f9b69d640cf9f6d8b5363ceabac5352201033010237b58381f3f1"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        61
+      ],
+      "guideImpactFrame": 28,
+      "native": {
+        "taskId": "H064-ATK",
+        "heroId": 64,
+        "name": "扫地僧",
+        "originalName": "卢植",
+        "slot": "普攻",
+        "skillId": 550640110,
+        "skillName": "普通攻击",
+        "newSkillName": "拂尘轻扫",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "原地远程作用",
+        "movement": "原站位出手",
+        "weapon": "生活长柄道具",
+        "weaponObservation": "ONE original stiff wooden broom with straw bristles, held by BOTH hands. This is a broom, no fishing rod, line or flexible whip.",
+        "effectClass": "目标位置特效",
+        "semantic": "降低",
+        "bodyDesign": "Both hands retain original broom shaft, push broom bristles forward near ground as a short sweeping stroke, then recover.",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B03",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_luzhi_02",
+        "model": "hero_064_01",
+        "action": "gongji",
+        "effectiveDesc": "普通攻击转化为：对敌方前排单体造成100%伤害,并降低其25%暴击,25%精准,持续2回合。",
+        "classificationStage": "被动改写生效后；解锁前仍用基础普攻",
+        "passiveRewrite": "550640310 制约：普通攻击转化为：对敌方前排单体造成100%伤害,并降低其25%暴击,25%精准,持续2回合。",
+        "passiveNotes": "550640310 制约：普通攻击转化为：对敌方前排单体造成100%伤害,并降低其25%暴击,25%精准,持续2回合。",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1100.0,
+        "fps": 30,
+        "durationFrames": 33,
+        "rawEvents": [
+          {
+            "frame0": 15,
+            "timeMs": 500.0,
+            "type": 10,
+            "name": "zd"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "zd@500.0ms（发射/启动特效）",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "effectsTarEnemy": [
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 0,
+              "src": [
+                "common_skill_luzhi_02"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_luzhi_02",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_luzhi_02_fa3a450f.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_luzhi_02",
+                  "name": "common_skill_luzhi_02",
+                  "fps": 24,
+                  "durationFrames": 21,
+                  "durationMs": 875.0,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        1
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 12,
+                      "timeMs": 500.0,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_luzhi_02 delay=0 dt=None speed=1 事件=pia@500.0",
+        "variants": [
+          "common_skill_luzhi_02"
+        ],
+        "portrait": "reskin/hero_064.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        62,
+        123
+      ],
+      "guideImpactFrame": 92,
+      "native": {
+        "taskId": "H064-ULT",
+        "heroId": 64,
+        "name": "扫地僧",
+        "originalName": "卢植",
+        "slot": "大招",
+        "skillId": 550640210,
+        "skillName": "名师训诫",
+        "newSkillName": "一帚训诫",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "近身攻击",
+        "movement": "移到目标所在排前出手",
+        "weapon": "生活长柄道具",
+        "weaponObservation": "ONE original stiff wooden broom with straw bristles, held by BOTH hands. This is a broom, no fishing rod, line or flexible whip.",
+        "effectClass": "施法者特效",
+        "semantic": "驱散",
+        "bodyDesign": "Lift same broom diagonally a little with both hands, draw it toward chest and settle bristles back. Never lose straw head or change shaft length.",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B05",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对攻击最高的敌方单体造成380%伤害,并随机<驱散>目标的1个增益效果",
+        "skillModel": "common_skill_luzhi_01",
+        "model": "hero_064_01",
+        "action": "jineng",
+        "effectiveDesc": "对攻击最高的敌方单体造成380%伤害,并随机<驱散>目标的1个增益效果",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "550640310 制约：普通攻击转化为：对敌方前排单体造成100%伤害,并降低其25%暴击,25%精准,持续2回合。",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1866.667,
+        "fps": 30,
+        "durationFrames": 56,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "effectSrc": [
+            {
+              "delay": 0,
+              "posType": 0,
+              "offset": [
+                200,
+                0
+              ],
+              "src": [
+                "common_skill_luzhi_01"
+              ]
+            }
+          ],
+          "meFlyConfig": [
+            5,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectSrc",
+            "resource": "common_skill_luzhi_01",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_luzhi_01_44ecc4b3.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_luzhi_01",
+                  "name": "common_skill_luzhi_01",
+                  "fps": 24,
+                  "durationFrames": 37,
+                  "durationMs": 1541.667,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        5
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 5,
+                      "timeMs": 208.333,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 5,
+                      "timeMs": 208.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 11,
+                      "timeMs": 458.333,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 11,
+                      "timeMs": 458.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 17,
+                      "timeMs": 708.333,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 17,
+                      "timeMs": 708.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 24,
+                      "timeMs": 1000.0,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 24,
+                      "timeMs": 1000.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 32,
+                      "timeMs": 1333.333,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 32,
+                      "timeMs": 1333.333,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectSrc: common_skill_luzhi_01 delay=0 dt=None speed=1 事件=pia@208.3,pia@458.3,pia@708.3,pia@1000.0,pia@1333.3",
+        "variants": [
+          "common_skill_luzhi_01"
+        ],
+        "portrait": "reskin/hero_064.png"
+      }
+    }
+  },
+  "length": 124,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false,
+  "sparseGuideSchedule": [
+    {
+      "frame": 0,
+      "image": "idle"
+    },
+    {
+      "frame": 28,
+      "image": "attack"
+    },
+    {
+      "frame": 62,
+      "image": "idle"
+    },
+    {
+      "frame": 92,
+      "image": "skill"
+    },
+    {
+      "frame": 123,
+      "image": "idle"
+    }
+  ],
+  "temporalReviewRequired": true
+}

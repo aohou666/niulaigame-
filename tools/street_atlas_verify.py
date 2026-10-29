@@ -3,6 +3,9 @@ from pathlib import Path
 from PIL import Image
 ROOT=Path(__file__).resolve().parents[1];GAME=ROOT/'local_game'
 d=json.loads((GAME/'character-idle-atlas-data.js').read_text('utf8').split('=',1)[1].strip().rstrip(';'))
+idle=json.loads((GAME/'character-idle-data.js').read_text('utf8').split('=',1)[1].strip().rstrip(';'))
+for hid,cfg in idle['heroes'].items():
+ if cfg.get('atlas') is not None:d['heroes'][hid]=cfg['atlas']
 errors=[];checked=0;pages=0
 for hid,h in d['heroes'].items():
  for profile,pack in h['profiles'].items():

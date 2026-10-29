@@ -1,0 +1,96 @@
+{
+  "heroId": 61,
+  "length": 124,
+  "status": "plan-only-awaiting-reviewed-right-facing-guide",
+  "models": {
+    "hero_061_01": {
+      "gongji": {
+        "sourceFrames": [
+          0,
+          61
+        ],
+        "eventAnchors": {
+          "12": 12,
+          "25": 32,
+          "39": 52
+        },
+        "recoveryFrames": [
+          22,
+          42
+        ]
+      },
+      "jineng": {
+        "sourceFrames": [
+          62,
+          123
+        ],
+        "eventAnchors": {},
+        "recoveryFrames": []
+      }
+    },
+    "hero_061_01_ez": {
+      "gongji": {
+        "sourceFrames": [
+          0,
+          61
+        ],
+        "eventAnchors": {
+          "12": 12,
+          "25": 32,
+          "39": 52
+        },
+        "recoveryFrames": [
+          22,
+          42
+        ]
+      },
+      "jineng": {
+        "sourceFrames": [
+          62,
+          123
+        ],
+        "eventAnchors": {},
+        "recoveryFrames": []
+      }
+    }
+  },
+  "guideSchedule": [
+    {
+      "frame": 0,
+      "image": "idle"
+    },
+    {
+      "frame": 12,
+      "image": "attack"
+    },
+    {
+      "frame": 22,
+      "image": "idle"
+    },
+    {
+      "frame": 32,
+      "image": "attack"
+    },
+    {
+      "frame": 42,
+      "image": "idle"
+    },
+    {
+      "frame": 52,
+      "image": "attack"
+    },
+    {
+      "frame": 62,
+      "image": "idle"
+    },
+    {
+      "frame": 92,
+      "image": "skill"
+    },
+    {
+      "frame": 123,
+      "image": "idle"
+    }
+  ],
+  "physicalSequence": "Three distinct empty-RIGHT-hand extensions and recoveries, LEFT hand continuously holds original chicken drumstick; then one separate skill gesture. No reused or interpolated output frames."
+}

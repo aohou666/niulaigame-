@@ -1,0 +1,273 @@
+{
+  "heroId": 49,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/049/portrait.png",
+      "prepared": "art-migration/references/body-049-v8/idle.png",
+      "foot": [
+        383.98,
+        700
+      ],
+      "size": [
+        302,
+        500
+      ],
+      "sha256": "4c5455b805a68462c71dc47c27e43c70eb2ae6bd5900e320a738d9350529de1e"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero049-attack-v2/hero049_attack_alpha_00001_.png",
+      "prepared": "art-migration/references/body-049-v8/attack.png",
+      "foot": [
+        384.38,
+        700
+      ],
+      "size": [
+        387,
+        500
+      ],
+      "sha256": "d25f8b3fa925a76c9cd68b1abec67e37011b2901e042d7d62bc0eb68e59d201b"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero049-skill-v2/hero049_skill_alpha_00001_.png",
+      "prepared": "art-migration/references/body-049-v8/skill.png",
+      "foot": [
+        384.5,
+        700
+      ],
+      "size": [
+        290,
+        500
+      ],
+      "sha256": "86b23ac2e55f97db0fa295263f243913802210d20f3a36ae21f3e44760abb056"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        61
+      ],
+      "guideImpactFrame": 28,
+      "native": {
+        "taskId": "H049-ATK",
+        "heroId": 49,
+        "name": "羊",
+        "originalName": "徐盛",
+        "slot": "普攻",
+        "skillId": 550490110,
+        "skillName": "普通攻击",
+        "newSkillName": "和角轻击",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "近身攻击",
+        "movement": "移到目标前出手",
+        "weapon": "植物道具",
+        "weaponObservation": "ONE bundle of green onions held with BOTH hands at belly; same sheep suit.",
+        "effectClass": "目标位置特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "Both hands gently present the SAME onion bundle forward at chest height, short elbow extension, then return to belly.",
+        "rootPolicy": "引擎负责接近与返回；视频固定根位置，只做出手",
+        "batch": "B02",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_xusheng_02",
+        "model": "hero_049_01",
+        "action": "gongji",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1033.333,
+        "fps": 30,
+        "durationFrames": 31,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "effectsTarEnemy": [
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 0,
+              "src": [
+                "common_skill_xusheng_02"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            2,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_xusheng_02",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_xusheng_02_c1e5a812.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_xusheng_02",
+                  "name": "common_skill_xusheng_02",
+                  "fps": 24,
+                  "durationFrames": 15,
+                  "durationMs": 625.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_xusheng_02 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_xusheng_02"
+        ],
+        "portrait": "reskin/hero_049.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        62,
+        123
+      ],
+      "guideImpactFrame": 92,
+      "native": {
+        "taskId": "H049-ULT",
+        "heroId": 49,
+        "name": "羊",
+        "originalName": "徐盛",
+        "slot": "大招",
+        "skillId": 550490210,
+        "skillName": "雄豪致果",
+        "newSkillName": "和角守锋",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "近身攻击",
+        "movement": "移到目标前出手",
+        "weapon": "植物道具",
+        "weaponObservation": "ONE bundle of green onions held with BOTH hands at belly; same sheep suit.",
+        "effectClass": "目标位置特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "Keep SAME onion bundle supported in both hands, lift slightly toward chest and nod once, then lower. Do not throw or duplicate vegetables.",
+        "rootPolicy": "引擎负责接近与返回；视频固定根位置，只做出手",
+        "batch": "B05",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_xusheng_01",
+        "model": "hero_049_01",
+        "action": "jineng",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1333.333,
+        "fps": 30,
+        "durationFrames": 40,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "effectsTarEnemy": [
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_xusheng_01"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            2,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_xusheng_01",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_xusheng_01_9b955d0f.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_xusheng_01",
+                  "name": "common_skill_xusheng_01",
+                  "fps": 24,
+                  "durationFrames": 12,
+                  "durationMs": 500.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_xusheng_01 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_xusheng_01"
+        ],
+        "portrait": "reskin/hero_049.png"
+      }
+    }
+  },
+  "length": 124,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false,
+  "sparseGuideSchedule": [
+    {
+      "frame": 0,
+      "image": "idle"
+    },
+    {
+      "frame": 28,
+      "image": "attack"
+    },
+    {
+      "frame": 62,
+      "image": "idle"
+    },
+    {
+      "frame": 92,
+      "image": "skill"
+    },
+    {
+      "frame": 123,
+      "image": "idle"
+    }
+  ],
+  "temporalReviewRequired": true
+}

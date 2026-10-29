@@ -11,8 +11,13 @@ def dependencies():
   elif isinstance(value,list):
    for v in value:collect(v)
   elif isinstance(value,str) and value.startswith('assets/street/'):result.add('local_game/'+value)
- for name in ['character-art-data.js','character-idle-atlas-data.js','street-art-data.js','street-body-data.js','street-effects-data.js']:
+ for name in ['character-art-data.js','character-idle-data.js','character-idle-atlas-data.js','street-art-data.js','street-body-data.js','street-effects-data.js']:
   collect(js(name));result.add('local_game/'+name)
+ for cfg in js('character-idle-data.js')['heroes'].values():
+  if cfg.get('baseUrl','').startswith('assets/street/'):
+   result.update('local_game/'+cfg['baseUrl']+name for name in cfg['files'])
+ # baseUrl is a directory, not a standalone dependency.
+ result={p for p in result if not p.endswith('/')}
  html=GAME/'index_bh_lite3zbtest_andr.html';result.add(html.relative_to(ROOT).as_posix())
  for url in re.findall(r'(?:src|href)=["\']([^"\']+)',html.read_text('utf8')):
   path=url.split('?',1)[0]

@@ -1,0 +1,549 @@
+{
+  "promptId": "0a7ddc8d-a99f-4be1-8368-841f8692793b",
+  "submittedUtc": "2026-10-29T16:19:03Z",
+  "status": "generated-unreviewed",
+  "provider": "local-comfyui",
+  "workflowSha256": "204baee96c574768138a22c663ed6ca2c5acb0cf1b9d56de632f5508c16e3f99",
+  "response": {
+    "prompt_id": "0a7ddc8d-a99f-4be1-8368-841f8692793b",
+    "number": 713,
+    "node_errors": {}
+  },
+  "comfyStatus": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "0a7ddc8d-a99f-4be1-8368-841f8692793b",
+          "timestamp": 1793291076500
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "1",
+            "2",
+            "3",
+            "19"
+          ],
+          "prompt_id": "0a7ddc8d-a99f-4be1-8368-841f8692793b",
+          "timestamp": 1793291076526
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "0a7ddc8d-a99f-4be1-8368-841f8692793b",
+          "timestamp": 1793291234554
+        }
+      ]
+    ]
+  },
+  "latents": [
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_video_00001_.latent",
+      "sha256": "0ce5fa64e3a8f7799d86872d2ac93c5177061c3e093612c8210e8f0727194777"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00001_.png",
+      "sha256": "6131db7e60e05b2002085bc53772a37c8b485c124d05d52055c3a376da4ae556"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00002_.png",
+      "sha256": "7821523011b2e4dae3b6368211d7c8b423acd77f61f88e547a20da5b05c87b2e"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00003_.png",
+      "sha256": "519ae7e6512731a40d2cd9eea60781c239559d006b77d3cf5829938119e5a574"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00004_.png",
+      "sha256": "2c85e0d8f9627e5f86b5d429108d45f9b91392e6d00abc3f4b80cc71c8e1e63e"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00005_.png",
+      "sha256": "7dc84cf623cfb517718da53f5cfd25e25ed39814b461d9575c97ac41105a2c88"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00006_.png",
+      "sha256": "b969833f6a9c3457b4977697fe93cc6ffcd2503ca4acd4725dc15b8a7e3a4de0"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00007_.png",
+      "sha256": "29189ba58d4699090a55f0632da187cc638e8a475419c934cdeff7d0c6b3621e"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00008_.png",
+      "sha256": "c04a4656ebfa38c00b7da32f0f4467e2a06cdd7e7f3e8e11d524d21cc28ba46c"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00009_.png",
+      "sha256": "2bea20929f8bddf57d8cf2552164a0cc7b4e5f0c184b3bc438b9a34b41066d43"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00010_.png",
+      "sha256": "bef0a9c5b9e4474c61e01dbec5bbf4b450b1f4e08b655cfaec60d6b65e72b63e"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00011_.png",
+      "sha256": "964ba26c54b8f8f66c78622a88068dec143c7276342ede4e73df19565fdd8430"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00012_.png",
+      "sha256": "0b9505f8844c4786ed5639fb54880789e30dd381140b8cceac38cf5c9252b373"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00013_.png",
+      "sha256": "101ca09946afc04b333c38dd79effa4486aa35e7c45939aeb09f97588a1135f3"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00014_.png",
+      "sha256": "f6a95e994b6ddeb7778d8133a3548ef12d3080653a8d2b3e207548bbc847746d"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00015_.png",
+      "sha256": "cbba94e6f8ba11773a4c4ec6cb7730878f5ebfd71f3507ea20710abaa5971e1a"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00016_.png",
+      "sha256": "dfdedf5bd07e50db9a1d640ff324084349c1e29a4c8e4ef475f6c941077ada61"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00017_.png",
+      "sha256": "9e4ac8286d26ba45192351cc93b0aeb16b528e10b83525d9d42912cb6049b477"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00018_.png",
+      "sha256": "76fe60110a3c0e5977b27e753b84814d9bada6b9cedd442a4021eae15d0312fd"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00019_.png",
+      "sha256": "44eb8151cf43795b5e24704959929ca06b2f7e805f1721143d6443bca5fc300f"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00020_.png",
+      "sha256": "482d788ea7c9af51548324820017ba5c2f60331580016889edc0cd7bdb66f868"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00021_.png",
+      "sha256": "e18563207f1065d85929d388b26fb3413256b2cd14cb5de6330c252811961062"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00022_.png",
+      "sha256": "eae0b8c08c3b77fe0938e7b1ad949e3423beb6ca178f7c348211abc603bc7314"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00023_.png",
+      "sha256": "ebed951c208b047ee057affac2a7bd39872ece9eda21e6d24df66949052e5d51"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00024_.png",
+      "sha256": "b2577b6e266d4ee5e781a643f87f32f8a360173c94c7bb5ec98b26d2deffb001"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00025_.png",
+      "sha256": "9fc7dc87026d401797e8ddcb3151b6d78aa570d8fa21539a0010619dfa66fa55"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00026_.png",
+      "sha256": "3198bf885062bcd088be591ad339803cc0c11613a4ce7965b6a84cb2b97d4f5c"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00027_.png",
+      "sha256": "19d4617e31669e72070df33332480ea9d59f9648bef882532ee42841f1cac620"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00028_.png",
+      "sha256": "7ef4423595dc11a4835601fade1d4a47d990de913adddd0a9823b9b686b60064"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00029_.png",
+      "sha256": "ff0bec5453787c210e92e484564281710dd986deb520e4c8984943eede3e6c41"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00030_.png",
+      "sha256": "d11c19f442a004c43ea7ccf6a6048ea509040abed8d9908f8142b11519797fde"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00031_.png",
+      "sha256": "528e28ddd096a10ab81583fdb6a20c2fb1c9db33702712d0555cf532e4e35488"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00032_.png",
+      "sha256": "72aafd26c86de40ec0d6763644fcd35e90b0ea43f65c06bc44fe3c6e746f59e8"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00033_.png",
+      "sha256": "f5188a5cd1be09456783655e46586e26d3f5a680c3c74259007a51a0357f985f"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00034_.png",
+      "sha256": "6c11d14b9cf14fa9a7a0b443f3f4678c817e2f998e05f2c6f4fed28185ba747a"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00035_.png",
+      "sha256": "87dbbfbb31d546d5314ed256db01cd9a6ae51e617c1d3379ea023299fa894fba"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00036_.png",
+      "sha256": "0437c6d86653bb6b7a0ebc74fba93c0c2d01dd897772d247dcf7cb1f344b3b27"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00037_.png",
+      "sha256": "402e6f14dc8999e5391a1922c1fdb6cd153fb3796c527f0d867f1ec1f4cdee5b"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00038_.png",
+      "sha256": "31cb34e2174f32806beef635d500ae7e9b9bd161d3ef8890ff436b71ccdace25"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00039_.png",
+      "sha256": "1df18376ebc3ff25ff95dcd61428002d2c4f709ecb762dc507af48b30a5329d5"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00040_.png",
+      "sha256": "54f64c094254e04f7688c46340dec316577fa4c64daa75af679a177770ea63eb"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00041_.png",
+      "sha256": "0ad6a7c5b17ab460192d7189b1c517f3ef5f71bd298ac316581712fcace9acfc"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00042_.png",
+      "sha256": "e71f3c605e39cfc7d9c6232d99c495fad95f2e7d15742ec3d045723fe9edfda0"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00043_.png",
+      "sha256": "8166b59885e6413b6e03fff709429474477772becf67dd8dbd11291fc28c68e2"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00044_.png",
+      "sha256": "01bb5232f35fee3b10ab95100e1f31dfbc5a41451bf1f091e38b65ace9570a5e"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00045_.png",
+      "sha256": "b6ed570d0c9fc87b993cd9887807144e1108412c4243a6e9ef7fbc5fe8d44aa0"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00046_.png",
+      "sha256": "36616a98eea85d85a223ff11dcb1a81f8bcf46e3d5fed042a466cd028c98c4f1"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00047_.png",
+      "sha256": "f171cf7439113c87c72e125649581ea5ecc5a2a2d64c1ed32cde00612a83b3de"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00048_.png",
+      "sha256": "56b05ca48c736544136aa72a2b5d33b193120065b60662ef1ca59a46543f86d8"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00049_.png",
+      "sha256": "2db4185daab9994363e3c740a58580e9693715762442f1408bab895443843c43"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00050_.png",
+      "sha256": "4522367c9dfa558aba516ae04f51079553ea4625bb05d1b8566de30abed0198b"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00051_.png",
+      "sha256": "e86be8cb2496d72af25034096ca8599c6a6954bd9442205344c69d9ed0b7fad9"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00052_.png",
+      "sha256": "45ca977acb75a0bdf6bba4db9f771c4c0e3c16ae9878922ed49c8571583efc97"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00053_.png",
+      "sha256": "5ad121355863223f485db7440801caa0a3083cd3cbf649126f5e40bd6eab0f9d"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00054_.png",
+      "sha256": "fc945e36110f8b42d7fcd667dc88171f6ad71e7e78928191db5934f61f9bff4e"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00055_.png",
+      "sha256": "432a8f6e2a41b32c975d2b55e51509b4b8bf9dd0b81ae86d5aeae69efcf896e2"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00056_.png",
+      "sha256": "8671b71faed81f002fad5fa83754243b50dc0514efcf57193256b31c0bc313a4"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00057_.png",
+      "sha256": "413219d651ca4b3d94824a6e24667be415c9170e4fedaf1ca09efc5194558eb2"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00058_.png",
+      "sha256": "f4972ea1cc30c1392a9313314a5887fd5719a58ca4190e5aa4e01ae182ec76da"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00059_.png",
+      "sha256": "5d591d8f7f62b1e2f522ed23a2d42d23b9e2e0cdf47ed9679d7e7d128bc7c839"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00060_.png",
+      "sha256": "8123dffc9a206a0f538742bd7c67cb94211b68dea8085a9a17face4cd3cb8017"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00061_.png",
+      "sha256": "3b89715661dd2393ed412f4b793e8af3229cdfac6ce951db4bfa0d01c2f474ea"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00062_.png",
+      "sha256": "bee3e206c2cc49cb33f2c8a42fd308423255ac210af097e04df3e5c61b4295bd"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00063_.png",
+      "sha256": "7f328a80b4f230d3ebd6918e75491cd57162b28c4382a4a61cda023411aef4ee"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00064_.png",
+      "sha256": "b8ce56758742363b12727b54d2cd969f70c5c8a934d02b4d4a71bd242dc0236b"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00065_.png",
+      "sha256": "702991807008240f68818c2694d30713f75d3e9758e96a00f61195be327639f9"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00066_.png",
+      "sha256": "7dd476d9e29a2ff475577c98e624e0510780bbd79b3ef316dd5959d440393ab3"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00067_.png",
+      "sha256": "6f43f8506364e10be99cd202fbf7cdaaec3874187d4b4fb7fb9c522d9fde161f"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00068_.png",
+      "sha256": "4a34dfb0f3784f99db17e6082303a279cb334524c18191ac0e5f4c3b2d4d54ae"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00069_.png",
+      "sha256": "31eabb3fdb854993c9c24f354143a83e1935abfd14de5d07388cdb8151da19f0"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00070_.png",
+      "sha256": "a9b66a1a7631a24b9933bdbe688e895cd4c8d9c8c23d69502b5bb1b546f30c78"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00071_.png",
+      "sha256": "eb8f5b6bbf9fd0ae386896622ac66aaa465d6ff6f5a3ebcd04bd8cdc0b0b13d7"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00072_.png",
+      "sha256": "216eb735fc278d5d8fee3dc478745f815a11dc91b0a1dca995ac67c7b1948d55"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00073_.png",
+      "sha256": "5ccd315e7d7714d959971a94b954dec468cb617b83ceae1dfe710f44a9cf7120"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00074_.png",
+      "sha256": "a5d99e6ed16fbc82133801001d6f5a2b46bbee15277de85bb7b7fbc160534880"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00075_.png",
+      "sha256": "9b52fd2d31190bd27b786e04f92af5b4f62a8597055c1c585c8f36b334e43690"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00076_.png",
+      "sha256": "8adb1140fe0749837e0aa585af04aa18961899243051877e75d3a52e3c254e5a"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00077_.png",
+      "sha256": "ca83a651fed2c1a6886b962d490c697735a2f53e3fffcdd4daebe48ab954d7c5"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00078_.png",
+      "sha256": "f36bab0a8288cdbc9392441c95fe703fdf6df069134efea5e9e43f818281d345"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00079_.png",
+      "sha256": "2c1a5106f268de810fa2b79e6b91456876aff10aec4ffd3b077ec30349bfe80c"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00080_.png",
+      "sha256": "ba298c1eb17ee0008ed4eb79e752e151939033a7e42bf415df99bbdafb329f65"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00081_.png",
+      "sha256": "56f7dc37e8dc56d56d8dbe2bde0efb6a73dbc1d90ad46131c5700023cbaf03a6"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00082_.png",
+      "sha256": "7c4798e646a6d869957fd3920d742a5d4b89f58959f857153100dc09cdea5e7a"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00083_.png",
+      "sha256": "91bf58c3a3f876082d21e14426323dc5562137d1b435aecd205c2bc30ad574e6"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00084_.png",
+      "sha256": "af4df7eee19dd2ae39d84fbaa2cbc08902bf3004bb3b1fa86a5ebd2dac3d7a0f"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00085_.png",
+      "sha256": "921bb275f76fe4eec364034f3c445f8da4ca89e8b35ee805b642c6df2456ce11"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00086_.png",
+      "sha256": "025b9ef6c0c4c8390ae584d0bbea159713c56eb7aa22e2ec6db5d48236064269"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00087_.png",
+      "sha256": "9fcb6f5385877ec1236aac43ec54276d940d243ff1c1622fd22a626dd79b27bf"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00088_.png",
+      "sha256": "d80f1db431a619c9ab3eb44e81613e21515544f8d59c6fe0382ce4a6717b5b0a"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00089_.png",
+      "sha256": "0a9df12ce0f932a9f78ba0e481942de50844cbe0020c858bc7ab35703bc1603b"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00090_.png",
+      "sha256": "8662bc44804cbf6d470a7d46a8e21436ad858320ae35ce6102fa0ce9e3c6f109"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00091_.png",
+      "sha256": "2c7f2df0315be834f6935f0257c135b15a88e7e502f9caf2bd4e352dd42be242"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00092_.png",
+      "sha256": "93806d9ed2031021292df897b0b0cc9a32f3bf182b9503035c27a9260883dcdc"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00093_.png",
+      "sha256": "be60c6f6ba5fa9a7c612d019caa0af0f987cf07f9a8123d38aa0dfe7afbf9020"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00094_.png",
+      "sha256": "cb338aa6267f0aceb9d033ea9ca2770bbb53003d0a748196b1fdf637947f22df"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00095_.png",
+      "sha256": "78c3146e6d9a3b14df8b930376baba8cb262c0b50ab57df7a724b8aa9d58efc0"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00096_.png",
+      "sha256": "8f4fb4821f9b262a2567351a45d640d4cb08d122b88ab9a0327efe259b82408d"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00097_.png",
+      "sha256": "518a821807f062ce83c43f20c772988f7ca89d747e20f4b82e1200297127a470"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00098_.png",
+      "sha256": "aa2c273beba324d7ec712a997a2f9887da2121c169c384c1d8430a85e87175aa"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00099_.png",
+      "sha256": "39993f37e164e39ceb4f0bc87a1dc5f109df545a77668e4827202e75daafb14f"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00100_.png",
+      "sha256": "1d9b238045d6622693f0fcf4fcf2a21b8156ce62fcb9a00fe90b0b14aee82587"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00101_.png",
+      "sha256": "9fc7a0026a6bdeee1626f69030b491d5509715c4f6b5a40bfe4415b53da7320c"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00102_.png",
+      "sha256": "a9e25a4de29bf19c0471de62819784427f707b4e5fac9b5c644c9a023f4949bc"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00103_.png",
+      "sha256": "586b8a4bc47458c34c9b7add7fa40a0554286ce5404dda22fc6a86ff69a91cab"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00104_.png",
+      "sha256": "790d068af956d103ae164016e9e865ad576310953ece1e635d6c676eea3a62a5"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00105_.png",
+      "sha256": "0e40f2bc1432ed0c10e0ff10a80799497fd1f4ec4a41276a36f8dbaaa18d6fe0"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00106_.png",
+      "sha256": "387dd8ad0427371bf753e54177f251bcb032a53288738b665971d03c327a8064"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00107_.png",
+      "sha256": "de46de6bd6d2f3d10826e708fbd57f7e49b209187c5d7cb6cdcb015700ec028a"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00108_.png",
+      "sha256": "3071e7518fa054960640c9227f18cb2f1426cf7ef0de90e9d6acec727b2d6c9e"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00109_.png",
+      "sha256": "15ad4dd2f48d3e543c61dfb61fa22479f6399e25b71a67710eb55d57b2f63394"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00110_.png",
+      "sha256": "6302514077400ae97cdb9252cd1c073e9d42e75dccd253a7925ba143d0506c65"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00111_.png",
+      "sha256": "c279edc00a360f950c5926fe697cb731a59cf2bd9a116ee0778e97ec2d13acaf"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00112_.png",
+      "sha256": "3c3f069638cb4a916f3d807f963df07f3bcb61c51e6444e1f0c75bf11e8bbd95"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00113_.png",
+      "sha256": "8990a28bc6462425ca6b16f61e21632e25b91e1345e1904e664c72c1b95414bd"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00114_.png",
+      "sha256": "ed49b867c3eadf15b05828873e1cd4e8d05730608ef78bcfed7631944429cf42"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00115_.png",
+      "sha256": "53eeb5906ae74244796070a6f873c102ae4f7c01458820aafccb25f2e025c424"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00116_.png",
+      "sha256": "68f53f854625e390971dfebcb3e479326dea3f630b42e22a3087ffb839a1caaf"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00117_.png",
+      "sha256": "4654bcdc3d0e7df17207c6e95ed6b9086416af6bb2d5bb7ed24668d58838b053"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00118_.png",
+      "sha256": "6d550dd760eeecda72a493f1209cc481075d4310af89feef1a32e523908bcef6"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00119_.png",
+      "sha256": "a5d858e66ba6c687170a70977bdac6684ccc0f676fb8dbe890dc87a7248757c4"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00120_.png",
+      "sha256": "d107d46c978363c1ed5e9ed5921ffa18a6d41742534399413ce030dffec0eaf6"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00121_.png",
+      "sha256": "da589bdabd77d45dd2a8f2be54567fdbb3cef6405ce0fb6169b51bf8ad84a233"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00122_.png",
+      "sha256": "e42f11737d67c8558da041acdcd7daf7b4e2a2370da7da3f01e43f2db1a840d0"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00123_.png",
+      "sha256": "d3db6d0110be5584e5b6c4dbc4fc36ff3ea575aa44d4f2c20dc2d498212e273f"
+    },
+    {
+      "path": "art-migration/generation/hero060-idle-minimax-v9/hero060_idle_candidate_00124_.png",
+      "sha256": "434560ec76a400b933620ec74efc4b0de85df195cb8b76653afa7f949c5baeca"
+    }
+  ]
+}
