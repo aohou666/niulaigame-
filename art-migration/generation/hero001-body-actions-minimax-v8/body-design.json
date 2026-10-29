@@ -1,0 +1,438 @@
+{
+  "heroId": 1,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/001/portrait.png",
+      "prepared": "art-migration/references/body-001-v8/idle.png",
+      "foot": [
+        384.12,
+        650
+      ],
+      "size": [
+        226,
+        420
+      ],
+      "sha256": "1aef1e6207c5abe8230513f73aaaac9b1b7638473ed54158ded5e88fe64f9d95"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero001-attack-v3/hero001_attack_alpha_00002_.png",
+      "prepared": "art-migration/references/body-001-v8/attack.png",
+      "foot": [
+        383.92,
+        650
+      ],
+      "size": [
+        271,
+        420
+      ],
+      "sha256": "ecb1e042d014e26f0dc69ecf67cfb86e6659051e81518355ed88175e122c3747"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero001-skill-v3/official-guide.png",
+      "prepared": "art-migration/references/body-001-v8/skill.png",
+      "foot": [
+        384.03,
+        650
+      ],
+      "size": [
+        242,
+        420
+      ],
+      "sha256": "a31e83961f0cce564589869ecddae853ce6c6785d66d9645c00c4f865dcd8f87"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        61
+      ],
+      "guideImpactFrame": 28,
+      "native": {
+        "taskId": "H001-ATK",
+        "heroId": 1,
+        "name": "懂子",
+        "originalName": "曹操",
+        "slot": "普攻",
+        "skillId": 550010110,
+        "skillName": "普通攻击",
+        "newSkillName": "胜言点锋",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "近身攻击",
+        "movement": "移到目标前出手",
+        "weapon": "徒手／手势",
+        "weaponObservation": "No held props. Yellow bull, dark horns, swept blond hair, navy suit, white shirt, red tie, black shoes and lavender bare hands.",
+        "effectClass": "命中/生效附着特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "Make ONE short rightward arm extension with closed hand, then promptly retract to original relaxed index-raised posture. No prolonged extended-arm freeze, no repeated jab.",
+        "rootPolicy": "引擎负责接近与返回；视频固定根位置，只做出手",
+        "batch": "B02",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_tongyongjz_01",
+        "model": "hero_001_01",
+        "action": "gongji",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "yuxi1、wuqi、yuxi",
+        "rawDurationMs": 1400.0,
+        "fps": 30,
+        "durationFrames": 42,
+        "rawEvents": [
+          {
+            "frame0": 12,
+            "timeMs": 400.0,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@400.0ms（角色事件）",
+        "impactMs": [
+          400.0
+        ],
+        "impactStatus": "角色pia直接回调；待游戏内验收",
+        "performance": {
+          "effectsPiaEnemy": [
+            {
+              "delay": 0,
+              "posType": 1,
+              "src": [
+                "common_skill_tongyongjz_01_2"
+              ],
+              "type": 0
+            }
+          ],
+          "effectsPiaUs": [
+            {
+              "delay": 0,
+              "posType": 1,
+              "src": [
+                "common_skill_tongyongjz_01_2"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            2,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_tongyongjz_01_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_tongyongjz_01_2_89b47fee.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_tongyongjz_01_2",
+                  "name": "common_skill_tongyongjz_01_2",
+                  "fps": 24,
+                  "durationFrames": 8,
+                  "durationMs": 333.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaUs",
+            "resource": "common_skill_tongyongjz_01_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_tongyongjz_01_2_89b47fee.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_tongyongjz_01_2",
+                  "name": "common_skill_tongyongjz_01_2",
+                  "fps": 24,
+                  "durationFrames": 8,
+                  "durationMs": 333.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsPiaEnemy: common_skill_tongyongjz_01_2 delay=0 dt=None speed=1\neffectsPiaUs: common_skill_tongyongjz_01_2 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_tongyongjz_01"
+        ],
+        "portrait": "reskin/hero_001.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        62,
+        123
+      ],
+      "guideImpactFrame": 92,
+      "native": {
+        "taskId": "H001-ULT",
+        "heroId": 1,
+        "name": "懂子",
+        "originalName": "曹操",
+        "slot": "大招",
+        "skillId": 550010210,
+        "skillName": "天下归心",
+        "newSkillName": "归心宣言",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "全体",
+        "delivery": "中场释放（远近待回放）",
+        "movement": "移到场地中部释放",
+        "weapon": "徒手／手势",
+        "weaponObservation": "No held props. Yellow bull, dark horns, swept blond hair, navy suit, white shirt, red tie, black shoes and lavender bare hands.",
+        "effectClass": "场景/范围特效",
+        "semantic": "降低",
+        "bodyDesign": "Open the hand on viewerRIGHT and extend it toward viewerRIGHT in a friendly presentation gesture, other hand near abdomen; smoothly return. Never extend toward viewerLEFT, never turn back. No added magic shapes or objects.",
+        "rootPolicy": "引擎移到中场后播出手；视频不自行横穿战场",
+        "batch": "B06",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方全体造成160%伤害,并有20%几率降低目标2点怒气。",
+        "skillModel": "common_skill_caocao_02",
+        "model": "hero_001_01",
+        "action": "jineng",
+        "effectiveDesc": "对敌方全体造成160%伤害,并有20%几率降低目标2点怒气。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "yuxi1、wuqi、yuxi",
+        "rawDurationMs": 1600.0,
+        "fps": 30,
+        "durationFrames": 48,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "effectQP": [
+            {
+              "delay": 1000,
+              "offset": [
+                200,
+                0
+              ],
+              "src": [
+                "common_skill_caocao_02_3"
+              ],
+              "timeScale": 3.5,
+              "z": 1
+            },
+            {
+              "delay": 0,
+              "offset": [
+                200,
+                0
+              ],
+              "src": [
+                "common_skill_caocao_02_1"
+              ],
+              "timeScale": 1.5,
+              "z": 10000
+            },
+            {
+              "delay": 500,
+              "offset": [
+                200,
+                0
+              ],
+              "src": [
+                "common_skill_caocao_02_2"
+              ],
+              "timeScale": 2.5,
+              "z": 0
+            }
+          ],
+          "meFlyConfig": [
+            1,
+            0,
+            100
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectQP",
+            "resource": "common_skill_caocao_02_3",
+            "delay": 1000,
+            "dt": null,
+            "timeScale": 3.5,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_caocao_02_3_a5229b6e.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_caocao_02_3",
+                  "name": "common_skill_caocao_02_3",
+                  "fps": 24,
+                  "durationFrames": 35,
+                  "durationMs": 1458.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectQP",
+            "resource": "common_skill_caocao_02_1",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1.5,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_caocao_02_1_122fff66.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_caocao_02_1",
+                  "name": "common_skill_caocao_02_1",
+                  "fps": 24,
+                  "durationFrames": 53,
+                  "durationMs": 2208.333,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        3
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 6,
+                      "timeMs": 250.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 6,
+                      "timeMs": 250.0,
+                      "ints": [
+                        10
+                      ],
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 18,
+                      "timeMs": 750.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 18,
+                      "timeMs": 750.0,
+                      "ints": [
+                        10
+                      ],
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 31,
+                      "timeMs": 1291.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 31,
+                      "timeMs": 1291.667,
+                      "ints": [
+                        10
+                      ],
+                      "type": 10,
+                      "name": "pz"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectQP",
+            "resource": "common_skill_caocao_02_2",
+            "delay": 500,
+            "dt": null,
+            "timeScale": 2.5,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_caocao_02_2_cbd063e9.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_caocao_02_2",
+                  "name": "common_skill_caocao_02_2",
+                  "fps": 24,
+                  "durationFrames": 38,
+                  "durationMs": 1583.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectQP: common_skill_caocao_02_3 delay=1000 dt=None speed=3.5\neffectQP: common_skill_caocao_02_1 delay=0 dt=None speed=1.5 事件=pia@250.0,pia@750.0,pia@1291.7\neffectQP: common_skill_caocao_02_2 delay=500 dt=None speed=2.5",
+        "variants": [
+          "common_skill_caocao_02"
+        ],
+        "portrait": "reskin/hero_001.png"
+      }
+    }
+  },
+  "length": 124,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false,
+  "sparseGuideSchedule": [
+    {
+      "frame": 0,
+      "image": "idle"
+    },
+    {
+      "frame": 28,
+      "image": "attack"
+    },
+    {
+      "frame": 62,
+      "image": "idle"
+    },
+    {
+      "frame": 92,
+      "image": "skill"
+    },
+    {
+      "frame": 123,
+      "image": "idle"
+    }
+  ],
+  "temporalReviewRequired": true
+}

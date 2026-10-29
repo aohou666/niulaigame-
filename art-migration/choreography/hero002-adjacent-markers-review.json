@@ -1,0 +1,83 @@
+{
+  "heroId": 2,
+  "status": "reviewed-single-gesture-event-cluster",
+  "nativeAuditSha256": "d2be923208224a32e36a4dee9b7c2ee1d9c1cc1d4206affabbafda270a723ae6",
+  "models": [
+    "hero_002_01",
+    "hero_002_01_ez"
+  ],
+  "action": "gongji",
+  "events": [
+    {
+      "name": "zd",
+      "frame0": 16
+    },
+    {
+      "name": "zd",
+      "frame0": 17
+    }
+  ],
+  "nativeVisualFramesViewed": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31
+  ],
+  "enlargedFramesViewed": [
+    15,
+    16,
+    17,
+    18
+  ],
+  "observation": "Original character performs one preparation and one forward open-hand release. Frames16/17 continue same hand position with hair/cloth follow-through, no intervening reset or second strike. Both native events must remain unchanged. Once callback observed once per model. EZ32frames separately captured/viewed; same single release phase despite nonidentical numerical bone samples.",
+  "evidence": "outputs/street-reskin/hero002-adjacent-events/native-audit.json",
+  "visualEvidence": "outputs/street-reskin/hero002-native-frames/all32.jpg",
+  "modelBoneTrajectoriesIdentical": false,
+  "runtimeEventsMayBeRemoved": false,
+  "modelsVisuallyReviewed": [
+    "hero_002_01",
+    "hero_002_01_ez"
+  ],
+  "evidenceFiles": [
+    {
+      "path": "art-migration/choreography/hero002-adjacent-evidence/ordinary-all32.jpg",
+      "sha256": "3c59def34f7a6f3a5e25df5bf56fb752ceb7e7374fd8abd39a9adf7ca7eedb11"
+    },
+    {
+      "path": "art-migration/choreography/hero002-adjacent-evidence/ez-all32.jpg",
+      "sha256": "bf95b4d853bc5e0dd07a6c0566388270a5af8b809a0503b758a510dcdcb2ea8d"
+    },
+    {
+      "path": "art-migration/choreography/hero002-adjacent-evidence/native-audit.json",
+      "sha256": "889467b686aced60ea2b25c98f8ae3fe1948bd41617341282947344d39a52b6b"
+    }
+  ]
+}
