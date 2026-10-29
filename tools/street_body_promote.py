@@ -25,6 +25,7 @@ for kind,action in [('attack','gongji'),('skill','jineng')]:
  else:impact=None;anchor=None;frameMap=[begin+round(n*(end-begin)/(count-1)) for n in range(count)]
  actions[action]={'fps':plan['fps'],'frameMap':frameMap,'nativeEvents':events,'nativeImpactFrame':impact,'sourceImpactFrame':anchor,'nativeDurationFrames':count}
 cfg={'id':hid,'models':[design['actions']['attack']['native']['model'],design['actions']['attack']['native']['model']+'_ez'],'atlas':(out/'body.webp').relative_to(GAME).as_posix(),'frames':rects,'crop':box,'root':[256,466.7],'bodyHeight':design['inputs']['idle']['size'][1]*512/768,'actions':actions,'source':folder.relative_to(ROOT).as_posix()}
+cfg['atlasSha256']=hashlib.sha256((out/'body.webp').read_bytes()).hexdigest()
 p=GAME/'street-body-data.js';d=json.loads(p.read_text('utf8').split('=',1)[1].strip().rstrip(';'));d['version']=a.version;d['characters']=[r for r in d['characters'] if r['id']!=hid]+[cfg];d['characters'].sort(key=lambda r:r['id']);p.write_text('window.StreetBodyData='+json.dumps(d,separators=(',',':'))+';\n','utf8')
 contact=Image.new('RGB',(1024,1024),'#53676e');draw=ImageDraw.Draw(contact)
 for i in range(16):

@@ -36,6 +36,6 @@ try{
  for(const r of timing.events){assert.equal(r.completionCallbacks,1);assert(r.elapsedMs>1800&&r.elapsedMs<4000);}
  assert.equal(timing.after.active.length,0);assert.equal(timing.after.caches.length,0);assert.equal(errors.length,0);
  const report={pass:true,errors,timing,sourceFrames:53,sourceFps:24,sourceTimelineChanged:false};
- const version=path.resolve('art-migration/versions/0.24.0');await fs.mkdir(version,{recursive:true});await fs.writeFile(path.join(version,'effect-runtime.json'),JSON.stringify(report,null,2));
+ const version=path.resolve('art-migration/versions/'+(process.argv.find(v=>v.startsWith('--version='))?.slice(10)||'0.24.0'));await fs.mkdir(version,{recursive:true});await fs.writeFile(path.join(version,'effect-runtime.json'),JSON.stringify(report,null,2));
  console.log(JSON.stringify({pass:true,events:timing.events,framesPresented:timing.before.framesPresented,cachesAfterDestroy:timing.after.caches.length}));
 }finally{await browser.close();}

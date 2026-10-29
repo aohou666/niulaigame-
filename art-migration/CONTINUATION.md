@@ -72,3 +72,14 @@
 - 已额外提交16/17/18/19/20/21/22/23/26/27/28/29/32身体v1，当前串行生成。这些guide已看过与idle并排图。9/14/15/24/25/30/31修正guide仍排队，勿用旧已拒绝图。
 - 连续同模型实测body8为51.649秒、body10为52.488秒；首个/冷切换body7为241.928秒。只能报告具体样本，不承诺整批固定时间。
 - 0.27已本地提交1025f20；0.28完后下一个0.29再按三版push。当前GitHub main仍31def49。session-control已更新。
+
+## 最新0.29已验收待提交/推送
+- 新8货币道具映射15资源（含tongbi实际顶部/升级按钮），官方source=assets/street/ui/currency-source.png，组定义ui-groups/currency.json、reference、cells，prompt/currency.txt。新通用street_ui_group_reference.py和street_ui_group_promote.py显式逐键裁切/原尺寸/变体，不把8图案说成15独创图案。
+- ID10身体接入，原gongji/jineng各36帧，pia24→source16。四名1/3/8/10 body-roster 618帧位通过，实际10战斗图已看；0.29版本证据齐全，85详情通过。
+- StreetArt/Body/Effects加载现在使用内容hash查询参数，防同名新文件沿用旧缓存；Android AssetHttpServer第118行已剥query。street_art_verify检查atlasSha；旧street_body_atlas.py现在保留其他人物而非覆盖整个data。
+- 新street-resource-runtime-test.mjs验证全部RES/AssetAdapter/变体/额外别名及原生可见纹理；41bindings、13visible通过。效果专项测试已支持--version；主角专项和UI专项也支持，勿覆盖早版本证据。
+- body2v2、7v2、11v1已看全部73及16放大图退回；12v1同样退回灰白→棕色漂移。10v1已看全帧/alpha并接入。2/7v3、11v2加入中途hold和回idle锚点并更小560/480归一化、无光效排练提示，已排队/生成待查。
+- body_batch现在以实际override替换错误bodyDesign/weaponObservation，不再仅把override附在矛盾旧描述之后；每组guide共用安全高度和560最大宽度，参考输入版本化。更密锚点8idle/16attack/24attack/30idle/36idle/44idle/54skill/62skill/68idle/72idle；所有帧仍真正MiniMax生成，不是拼静帧。
+- street_prioritize_jobs.py只取消尚未开始的本任务job并front重新排入，记录queueRevisions，已把默认6角色12姿势提升。其他角色未漏删。当前角色76实际手持白色饭团，旧plan说无手持武器但遗漏饭团；82手里是眼镜、79左手握背上大刃且无盾、77手捧莲花、94右手手机。后续guide复查须按真实图，不盲信旧plan。
+- 待做明显文本问题：character-reskin-data.js中的definition/story仍混原作历史和旧别名（例82杰哥讲狐主转生，77佛系牛讲汉末军师），下一版应将85人的definition+三故事+synopsis逐人重写成现代离谱街区；不要只做搜索替换换名字。heroFields已有保护逻辑允许改这些文案，数值/技能机制不许动。
+- 0.28 commitad07d4a，0.27commit1025f20。0.29提交后马上按三版规则push delivery HEAD:main并ls-remote核对。当前远端仍31def49，推完更新session-control。截止仍20:00，当前约12:28。

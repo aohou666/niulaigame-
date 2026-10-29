@@ -1,12 +1,63 @@
 {
-  "promptId": "3ed69d42-0f5c-47c8-b0d9-c018375ef8d7",
+  "promptId": "92ef91a8-22bd-4808-868f-5ad025885f12",
   "submittedUtc": "2026-10-29T02:20:59Z",
-  "status": "submitted",
+  "status": "generated-unreviewed",
   "provider": "local-comfyui",
   "workflowSha256": "b9d99b542f5bb3b3d9bf02ce067e11062905f70ee1d8398cf880dcfe240dff15",
   "response": {
-    "prompt_id": "3ed69d42-0f5c-47c8-b0d9-c018375ef8d7",
-    "number": 341,
+    "prompt_id": "92ef91a8-22bd-4808-868f-5ad025885f12",
+    "number": -403,
     "node_errors": {}
-  }
+  },
+  "queueRevisions": [
+    {
+      "previousPromptId": "3ed69d42-0f5c-47c8-b0d9-c018375ef8d7",
+      "reason": "Prioritize the six actual default formation heroes while preserving every other queued character",
+      "utc": "2026-10-29T04:17:13Z",
+      "newPromptId": "92ef91a8-22bd-4808-868f-5ad025885f12"
+    }
+  ],
+  "comfyStatus": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "92ef91a8-22bd-4808-868f-5ad025885f12",
+          "timestamp": 1793247954096
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "1",
+            "2",
+            "3",
+            "8"
+          ],
+          "prompt_id": "92ef91a8-22bd-4808-868f-5ad025885f12",
+          "timestamp": 1793247954102
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "92ef91a8-22bd-4808-868f-5ad025885f12",
+          "timestamp": 1793247991779
+        }
+      ]
+    ]
+  },
+  "outputs": [
+    {
+      "path": "art-migration/generation/hero094-skill-v2/qwen_00078_.png",
+      "sha256": "147879e113a2183710a4972239253f6e71c5df9ff56397a9a4df68ee548340c2"
+    },
+    {
+      "path": "art-migration/generation/hero094-skill-v2/hero094_skill_alpha_00001_.png",
+      "sha256": "a9927a96dbd66e2dc618c9cece4d4fa88852b5505f5590ed10dc44b24e586ae4"
+    }
+  ]
 }

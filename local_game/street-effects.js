@@ -4,7 +4,7 @@
     function acquire(cfg){
         var c=caches[cfg.id];if(c){c.users++;return c;}
         c={cfg:cfg,users:1,dead:false,textures:[],sheet:null,ready:false};caches[cfg.id]=c;
-        fetch(cfg.atlas,{cache:'force-cache'}).then(function(r){if(!r.ok)throw Error(r.status+' '+cfg.atlas);return r.blob();})
+        fetch(cfg.atlas+'?v='+(cfg.atlasSha256||StreetEffectsData.version),{cache:'force-cache'}).then(function(r){if(!r.ok)throw Error(r.status+' '+cfg.atlas);return r.blob();})
         .then(function(blob){return createImageBitmap(blob);}).then(function(image){
             if(c.dead){image.close();return;}
             var canvas=document.createElement('canvas');canvas.width=image.width;canvas.height=image.height;canvas.getContext('2d').drawImage(image,0,0);image.close();

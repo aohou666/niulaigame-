@@ -32,6 +32,10 @@ def attack(n):
  if n<=18:return round(10+(n-12)*14/6)
  return round(24+(n-18)*11/23)
 cfg={'version':'0.25.0','characters':[{'id':1,'models':['hero_001_01','hero_001_01_ez'],'atlas':'assets/street/characters/001/actions/body.webp','frames':rects,'crop':list(box),'root':[256,466.7],'bodyHeight':413.3,'actions':{'gongji':{'fps':30,'frameMap':[attack(n) for n in range(42)],'nativeImpactFrame':12,'sourceImpactFrame':10},'jineng':{'fps':30,'frameMap':[36+round(n*36/47) for n in range(48)]}},'source':folder.relative_to(ROOT).as_posix()}]}
-(ROOT/'local_game/street-body-data.js').write_text('window.StreetBodyData='+json.dumps(cfg,separators=(',',':'))+';\n','utf8')
+cfg['characters'][0]['atlasSha256']=hashlib.sha256((out/'body.webp').read_bytes()).hexdigest()
+datafile=ROOT/'local_game/street-body-data.js'
+if datafile.exists():
+ old=json.loads(datafile.read_text('utf8').split('=',1)[1].strip().rstrip(';'));cfg['characters']+= [r for r in old['characters'] if r['id']!=1];cfg['characters'].sort(key=lambda r:r['id']);cfg['version']=max([cfg['version'],old['version']],key=lambda s:tuple(map(int,s.split('.'))))
+datafile.write_text('window.StreetBodyData='+json.dumps(cfg,separators=(',',':'))+';\n','utf8')
 (folder/'integration.json').write_text(json.dumps({'status':'prepared-runtime-validation-pending','crop':box,'tileSize':size,'nativeClocksRetained':True,'sha256':hashlib.sha256((out/'body.webp').read_bytes()).hexdigest()},indent=2)+'\n','utf8')
 print(json.dumps({'frames':len(frames),'crop':box,'atlasSize':atlas.size,'bytes':(out/'body.webp').stat().st_size}))

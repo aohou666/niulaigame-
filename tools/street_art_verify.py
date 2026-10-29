@@ -15,6 +15,7 @@ def verify():
  body=loadjs(GAME/'street-body-data.js') if (GAME/'street-body-data.js').exists() else {'characters':[]}
  for cfg in body['characters']:
   try:
+   if cfg.get('atlasSha256'):assert hashlib.sha256((GAME/cfg['atlas']).read_bytes()).hexdigest()==cfg['atlasSha256'],'atlas digest mismatch'
    with Image.open(GAME/cfg['atlas']) as im:
     assert im.mode=='RGBA','atlas must have alpha';hashes=set()
     for f in cfg['frames']:

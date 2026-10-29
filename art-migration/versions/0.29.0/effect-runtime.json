@@ -1,0 +1,55 @@
+{
+  "pass": true,
+  "errors": [],
+  "timing": {
+    "events": [
+      {
+        "trial": 0,
+        "completionCallbacks": 1,
+        "elapsedMs": 2263
+      },
+      {
+        "trial": 1,
+        "completionCallbacks": 1,
+        "elapsedMs": 2260.5
+      }
+    ],
+    "before": {
+      "installed": true,
+      "framesPresented": 112,
+      "errors": [],
+      "models": {
+        "common_skill_caocao_02_1": 1
+      },
+      "caches": [
+        {
+          "id": "hero001-cast",
+          "users": 1,
+          "ready": true
+        }
+      ],
+      "active": [
+        {
+          "model": "common_skill_caocao_02_1",
+          "frame": 52,
+          "ready": true,
+          "onStage": true,
+          "nativeVisible": false
+        }
+      ]
+    },
+    "after": {
+      "installed": true,
+      "framesPresented": 112,
+      "errors": [],
+      "models": {
+        "common_skill_caocao_02_1": 1
+      },
+      "caches": [],
+      "active": []
+    }
+  },
+  "sourceFrames": 53,
+  "sourceFps": 24,
+  "sourceTimelineChanged": false
+}

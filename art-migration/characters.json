@@ -228,9 +228,9 @@
     "missingIdleFrames": [],
     "actions": {
       "idle": "integrated-verified",
-      "attack": "original",
+      "attack": "integrated-verified",
       "hit": "original",
-      "skill": "original",
+      "skill": "integrated-verified",
       "move": "original",
       "death": "original"
     },
@@ -238,7 +238,8 @@
     "skinVariants": "requires-inventory",
     "avatar": "requires-review",
     "complete": false,
-    "imageReferencesVerified": 12
+    "imageReferencesVerified": 12,
+    "bodyMotionEvidence": "versions/0.29.0/body-roster.json"
   },
   {
     "id": 11,
