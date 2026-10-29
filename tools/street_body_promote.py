@@ -3,7 +3,8 @@ import argparse,hashlib,json,math
 from pathlib import Path
 from PIL import Image,ImageDraw
 ROOT=Path(__file__).resolve().parents[1];GAME=ROOT/'local_game';BASE=ROOT/'art-migration/generation'
-p=argparse.ArgumentParser();p.add_argument('name');p.add_argument('--attack-anchor',required=True,type=int);p.add_argument('--version',required=True);a=p.parse_args();folder=BASE/a.name
+p=argparse.ArgumentParser();p.add_argument('name');p.add_argument('--attack-anchor',required=True,type=int);p.add_argument('--event-anchors');p.add_argument('--version',required=True);a=p.parse_args();folder=BASE/a.name
+reviewedAnchors=json.loads(Path(a.event_anchors).read_text('utf8')) if a.event_anchors else {}
 job=json.loads((folder/'job.json').read_text('utf8'));design=json.loads((folder/'body-design.json').read_text('utf8'));hid=design['heroId'];source=ROOT/design['sourceBodyJob'];qa=json.loads((source/'body-qa.json').read_text('utf8'))
 assert qa['manualVideoReview']=='approved-for-matting' and qa['automaticChecksPassed'];assert len(job['outputs'])==len(design['sourceFrameOrder'])==73
 images=[];bounds=[]
@@ -19,11 +20,22 @@ out=GAME/f'assets/street/characters/{hid:03}/actions';out.mkdir(parents=True,exi
 actions={}
 for kind,action in [('attack','gongji'),('skill','jineng')]:
  plan=design['actions'][kind]['native'];count=plan['durationFrames'];begin,end=design['actions'][kind]['sourceFrames'];events=[e for e in plan['rawEvents'] if e.get('name') in ['pia','zd']]
- if kind=='attack' and events:
+ if action in reviewedAnchors:
+  marks=reviewedAnchors[action];assert set(map(int,marks))==set(e['frame0'] for e in events),'Every native event frame requires an explicit reviewed source anchor'
+  knots=sorted({0:begin,count-1:end,**{int(n):int(v) for n,v in marks.items()}}.items());assert all(begin<=v<=end for _,v in knots)
+  assert all(x[1]<=y[1] for x,y in zip(knots,knots[1:])),'Source motion must remain chronological'
+  frameMap=[]
+  for n in range(count):
+   left,right=next((x,y) for x,y in zip(knots,knots[1:]) if x[0]<=n<=y[0]);frameMap.append(round(left[1]+(right[1]-left[1])*(n-left[0])/(right[0]-left[0])))
+  impact=events[0]['frame0'] if events else None;anchor=int(marks[str(impact)]) if impact is not None else None
+ elif kind=='attack' and events:
   assert len(events)==1,'Multiple strikes require reviewed multiple source anchors';impact=events[0]['frame0'];anchor=a.attack_anchor;assert begin<=anchor<=end and 0<impact<count-1
   frameMap=[round(begin+(anchor-begin)*n/impact) if n<=impact else round(anchor+(end-anchor)*(n-impact)/(count-1-impact)) for n in range(count)]
- else:impact=None;anchor=None;frameMap=[begin+round(n*(end-begin)/(count-1)) for n in range(count)]
+ else:
+  assert not events,'Skill impact events require reviewed source anchors'
+  impact=None;anchor=None;frameMap=[begin+round(n*(end-begin)/(count-1)) for n in range(count)]
  actions[action]={'fps':plan['fps'],'frameMap':frameMap,'nativeEvents':events,'nativeImpactFrame':impact,'sourceImpactFrame':anchor,'nativeDurationFrames':count}
+ if action in reviewedAnchors:actions[action]['eventAnchors']=[{'nativeFrame':int(n),'sourceFrame':int(v)} for n,v in reviewedAnchors[action].items()]
 cfg={'id':hid,'models':[design['actions']['attack']['native']['model'],design['actions']['attack']['native']['model']+'_ez'],'atlas':(out/'body.webp').relative_to(GAME).as_posix(),'frames':rects,'crop':box,'root':[256,466.7],'bodyHeight':design['inputs']['idle']['size'][1]*512/768,'actions':actions,'source':folder.relative_to(ROOT).as_posix()}
 cfg['atlasSha256']=hashlib.sha256((out/'body.webp').read_bytes()).hexdigest()
 p=GAME/'street-body-data.js';d=json.loads(p.read_text('utf8').split('=',1)[1].strip().rstrip(';'));d['version']=a.version;d['characters']=[r for r in d['characters'] if r['id']!=hid]+[cfg];d['characters'].sort(key=lambda r:r['id']);p.write_text('window.StreetBodyData='+json.dumps(d,separators=(',',':'))+';\n','utf8')

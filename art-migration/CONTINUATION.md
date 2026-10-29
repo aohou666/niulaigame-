@@ -91,3 +91,9 @@
 - world-text-runtime85/5085/20094通过，保护差异空；高阶41420014实际jineng和旧保存invalidcode兼容通过。85详情/所有新图资源复查通过。v30源码、stories、baseline、2runtime-test与exporter单独提交，不git add用户文件或未完成动作队列。
 - body11v2全部73帧和16放大看完，无前版灰trail/出界，红T恤方格短裤及空手保留，已批准抠像，job hero011-body-actions-matte-v2 front排入。需看alpha并接入v31。
 - 2v3/7v3及默认77/76/82/94v2身体73帧现已生成，尚未看全帧；不能直接批准。其他队列继续生成。当前本地约13:18，10小时截止20:00。
+
+## 最新0.31验收准备提交（本地13:24）
+- 0.30已提交5a598eb，尚未push，按规则0.32结束再统一push30/31/32。v31已接入2v3/7v3/11v2，七名1268frameChecks全通过，实际三名战斗通过，七名511frame图集。
+- street_body_promote.py新增--event-anchors JSON：多normal事件及任何skill事件需要每个原生eventframe明确对应源frame。2normal16/17=>16/17；7skill5/11/13/32/47=>54/56/58/62/64（持续施技姿势，原生伤害/VFX事件不改）。street_art_verify核对全部eventAnchors，roster-test同名事件按次数/顺序逐时点检查。
+- 77/82/94v2全部73帧+放大已看，通过待matte77/82/94；76v2饭团消失13-15/49-52退回，已更严格手球连体约束生成76v3，当前worker正在运行，不能当作完成。
+- 官方新生成六种品质list底板source: assets/street/ui/hero-list-cards-source.png（6竖排，绿色/蓝/紫/橙/红/金），已看source，还未裁切接入，计划v32。原尺寸690x134，_hero_m_json.common_img_liebiao_1至6，bare同名_png。源边缘有一些alpha浮点，处理前需检查深浅底；不能直接说验收。参考outputs/street-reskin/hero-list-cards-reference.jpg。

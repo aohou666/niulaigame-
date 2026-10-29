@@ -1,0 +1,572 @@
+{
+  "heroId": 2,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/002/portrait.png",
+      "prepared": "art-migration/references/body-002-v3/idle.png",
+      "foot": [
+        383.85,
+        700
+      ],
+      "size": [
+        280,
+        480
+      ],
+      "sha256": "0b54cc81823031189d3e16d6c2dc182a5cc06af4ab8f6c96c3ab64039bc02376"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero002-attack-v3/hero002_attack_continuity_alpha_00001_.png",
+      "prepared": "art-migration/references/body-002-v3/attack.png",
+      "foot": [
+        384.09,
+        700
+      ],
+      "size": [
+        308,
+        480
+      ],
+      "sha256": "2fbce4bcf302249ea76d15850a5abc7608124b3a360d0964bf728a5aae75df67"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero002-skill-v3/hero002_skill_continuity_alpha_00001_.png",
+      "prepared": "art-migration/references/body-002-v3/skill.png",
+      "foot": [
+        384.38,
+        700
+      ],
+      "size": [
+        308,
+        480
+      ],
+      "sha256": "bdf591931b25a90c170c786a04814332704aa7d7fd7ae5d0f2974f5f381d76eb"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H002-ATK",
+        "heroId": 2,
+        "name": "老八",
+        "originalName": "司马懿",
+        "slot": "普攻",
+        "skillId": 550020110,
+        "skillName": "普通攻击",
+        "newSkillName": "追魂探隙",
+        "purpose": "进攻＋自身增益",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "远程弹道/连线",
+        "movement": "原站位出手",
+        "weapon": "食物道具",
+        "weaponObservation": "one walnut held in anatomical RIGHT hand, always on viewer LEFT side, black mask and dark-brown sweater with wood bead necklace",
+        "effectClass": "飞行弹道、命中/生效附着特效",
+        "semantic": "治疗/吸血",
+        "bodyDesign": "Keep RIGHT-hand walnut raised by shoulder; use empty LEFT palm for one forward strike, never pass or duplicate the walnut.",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B03",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_simayi_01",
+        "model": "hero_002_01",
+        "action": "gongji",
+        "effectiveDesc": "普通攻击转化为：攻击敌方生命比例最低单体,并回复自身30%攻击力的生命。",
+        "classificationStage": "被动改写生效后；解锁前仍用基础普攻",
+        "passiveRewrite": "550020310 择敌速袭：普通攻击转化为：攻击敌方生命比例最低单体,并回复自身30%攻击力的生命。",
+        "passiveNotes": "550020310 择敌速袭：普通攻击转化为：攻击敌方生命比例最低单体,并回复自身30%攻击力的生命。",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1066.667,
+        "fps": 30,
+        "durationFrames": 32,
+        "rawEvents": [
+          {
+            "frame0": 16,
+            "timeMs": 533.333,
+            "type": 10,
+            "name": "zd"
+          },
+          {
+            "frame0": 17,
+            "timeMs": 566.667,
+            "type": 10,
+            "name": "zd"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "zd@533.3ms（发射/启动特效）；zd@566.7ms（发射/启动特效）",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "effectsPiaEnemy": [
+            {
+              "posType": 0,
+              "src": [
+                "common_skill_simayi_01_2"
+              ],
+              "type": 0
+            }
+          ],
+          "effectsPiaUs": [
+            {
+              "posType": 0,
+              "src": [
+                "common_skill_simayi_01_2"
+              ],
+              "type": 0
+            }
+          ],
+          "effectsTarEnemy": [
+            {
+              "dt": 200,
+              "fixedWidth": 50,
+              "offset": [
+                40,
+                -80
+              ],
+              "posType": 0,
+              "src": [
+                "common_skill_simayi_01_1"
+              ],
+              "type": 1
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_simayi_01_1",
+            "delay": 0,
+            "dt": 200,
+            "timeScale": 1,
+            "type": 1,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_simayi_01_1_58146618.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_simayi_01_1",
+                  "name": "common_skill_simayi_01_1",
+                  "fps": 24,
+                  "durationFrames": 1,
+                  "durationMs": 41.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_simayi_01_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_simayi_01_2_848cafd4.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_simayi_01_2",
+                  "name": "common_skill_simayi_01_2",
+                  "fps": 24,
+                  "durationFrames": 19,
+                  "durationMs": 791.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaUs",
+            "resource": "common_skill_simayi_01_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_simayi_01_2_848cafd4.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_simayi_01_2",
+                  "name": "common_skill_simayi_01_2",
+                  "fps": 24,
+                  "durationFrames": 19,
+                  "durationMs": 791.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_simayi_01_1 delay=0 dt=200 speed=1\neffectsPiaEnemy: common_skill_simayi_01_2 delay=0 dt=None speed=1\neffectsPiaUs: common_skill_simayi_01_2 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_simayi_01"
+        ],
+        "portrait": "reskin/hero_002.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H002-ULT",
+        "heroId": 2,
+        "name": "老八",
+        "originalName": "司马懿",
+        "slot": "大招",
+        "skillId": 550020210,
+        "skillName": "蝮蛇之吻",
+        "newSkillName": "勾魂终局",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "中场释放（远近待回放）",
+        "movement": "移到场地中部释放",
+        "weapon": "食物道具",
+        "weaponObservation": "one walnut held in anatomical RIGHT hand, always on viewer LEFT side, black mask and dark-brown sweater with wood bead necklace",
+        "effectClass": "场景/范围特效、目标位置特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "RIGHT hand keeps holding walnut throughout; empty LEFT hand sweeps outward in an open-palm casting gesture, no hand swap.",
+        "rootPolicy": "引擎移到中场后播出手；视频不自行横穿战场",
+        "batch": "B05",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方生命比例最低单体造成400%伤害,击杀敌人时,永久提高20%攻击,最多提高200%,若本次攻击可击杀目标,则有10%几率无视所有免疫状态立即击杀目标。",
+        "skillModel": "common_skill_simayi_02",
+        "model": "hero_002_01",
+        "action": "jineng",
+        "effectiveDesc": "对敌方生命比例最低单体造成400%伤害,击杀敌人时,永久提高20%攻击,最多提高200%,若本次攻击可击杀目标,则有10%几率无视所有免疫状态立即击杀目标。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "550020310 择敌速袭：普通攻击转化为：攻击敌方生命比例最低单体,并回复自身30%攻击力的生命。",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1733.333,
+        "fps": 30,
+        "durationFrames": 52,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "effectQP": [
+            {
+              "delay": 800,
+              "offset": [
+                200,
+                0
+              ],
+              "src": [
+                "common_skill_simayi_02_1"
+              ],
+              "timeScale": 1
+            }
+          ],
+          "effectsTarEnemy": [
+            {
+              "delay": 2800,
+              "posType": 0,
+              "src": [
+                "common_skill_simayi_02_2"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            1,
+            200,
+            100
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectQP",
+            "resource": "common_skill_simayi_02_1",
+            "delay": 800,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_simayi_02_1_d557e6a4.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_simayi_02_1",
+                  "name": "common_skill_simayi_02_1",
+                  "fps": 24,
+                  "durationFrames": 41,
+                  "durationMs": 1708.333,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        8
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 4,
+                      "timeMs": 166.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 4,
+                      "timeMs": 166.667,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 8,
+                      "timeMs": 333.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 8,
+                      "timeMs": 333.333,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 14,
+                      "timeMs": 583.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 14,
+                      "timeMs": 583.333,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 21,
+                      "timeMs": 875.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 21,
+                      "timeMs": 875.0,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 26,
+                      "timeMs": 1083.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 26,
+                      "timeMs": 1083.333,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 30,
+                      "timeMs": 1250.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 30,
+                      "timeMs": 1250.0,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 37,
+                      "timeMs": 1541.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 37,
+                      "timeMs": 1541.667,
+                      "type": 10,
+                      "name": "pz"
+                    }
+                  ]
+                },
+                {
+                  "armature": "common_skill_simayi_q",
+                  "name": "common_skill_simayi_01_q",
+                  "fps": 24,
+                  "durationFrames": 2,
+                  "durationMs": 83.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_simayi_02_2",
+            "delay": 2800,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_simayi_02_2_b029a014.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_simayi_02_2",
+                  "name": "common_skill_simayi_02_2",
+                  "fps": 24,
+                  "durationFrames": 19,
+                  "durationMs": 791.667,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 3,
+                      "timeMs": 125.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 3,
+                      "timeMs": 125.0,
+                      "type": 10,
+                      "name": "pz"
+                    }
+                  ]
+                },
+                {
+                  "armature": "common_skill_simayi_cjbxz",
+                  "name": "common_dishu_skill_01_cjbxz",
+                  "fps": 24,
+                  "durationFrames": 29,
+                  "durationMs": 1208.333,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_simayi_q",
+                  "name": "common_skill_simayi_01_q",
+                  "fps": 24,
+                  "durationFrames": 2,
+                  "durationMs": 83.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectQP: common_skill_simayi_02_1 delay=800 dt=None speed=1 事件=pia@166.7,pia@333.3,pia@583.3,pia@875.0,pia@1083.3,pia@1250.0,pia@1541.7\neffectsTarEnemy: common_skill_simayi_02_2 delay=2800 dt=None speed=1 事件=pia@125.0",
+        "variants": [
+          "common_skill_simayi_02"
+        ],
+        "portrait": "reskin/hero_002.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "approved-for-matting",
+  "runtimeIntegrated": false,
+  "sourceBodyJob": "art-migration/generation/hero002-body-actions-minimax-v3",
+  "sourceFrameOrder": [
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00147_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00148_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00149_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00150_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00151_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00152_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00153_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00154_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00155_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00156_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00157_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00158_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00159_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00160_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00161_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00162_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00163_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00164_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00165_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00166_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00167_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00168_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00169_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00170_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00171_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00172_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00173_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00174_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00175_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00176_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00177_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00178_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00179_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00180_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00181_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00182_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00183_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00184_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00185_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00186_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00187_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00188_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00189_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00190_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00191_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00192_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00193_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00194_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00195_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00196_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00197_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00198_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00199_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00200_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00201_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00202_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00203_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00204_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00205_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00206_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00207_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00208_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00209_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00210_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00211_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00212_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00213_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00214_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00215_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00216_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00217_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00218_.png",
+    "art-migration/generation/hero002-body-actions-minimax-v3/hero002_body_00219_.png"
+  ]
+}

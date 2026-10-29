@@ -1,0 +1,532 @@
+{
+  "heroId": 7,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/007/portrait.png",
+      "prepared": "art-migration/references/body-007-v3/idle.png",
+      "foot": [
+        383.84,
+        700
+      ],
+      "size": [
+        317,
+        480
+      ],
+      "sha256": "64924468027ff7e3db70f08ee045bedb88511dba310babd33ea80e4c63456cd0"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero007-attack-v2/hero007_attack_alpha_00001_.png",
+      "prepared": "art-migration/references/body-007-v3/attack.png",
+      "foot": [
+        384.24,
+        700
+      ],
+      "size": [
+        376,
+        480
+      ],
+      "sha256": "14e973fa2d7a45a299d54e0b3638198eabf561bc754eb8b13bdbfeb9955f4705"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero007-skill-v2/hero007_skill_alpha_00001_.png",
+      "prepared": "art-migration/references/body-007-v3/skill.png",
+      "foot": [
+        383.76,
+        700
+      ],
+      "size": [
+        312,
+        480
+      ],
+      "sha256": "c7be5e935fcedd789fd90e10c7df99595a61bf0bed700295bdc4a67de7787c74"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H007-ATK",
+        "heroId": 7,
+        "name": "血月",
+        "originalName": "张郃",
+        "slot": "普攻",
+        "skillId": 550070110,
+        "skillName": "普通攻击",
+        "newSkillName": "赤刃试锋",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "近身攻击",
+        "movement": "移到目标前出手",
+        "weapon": "单手剑",
+        "weaponObservation": "exact short silver sword held in RIGHT hand, red modern martial costume and headband; sword stays constant solid length",
+        "effectClass": "命中/生效附着特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "One compact waist-level forward THRUST, not a wide sweep. Keep sword and all motion inside central70% of image. No white slash trail, no glow, no streak, no motion blur.",
+        "rootPolicy": "引擎负责接近与返回；视频固定根位置，只做出手",
+        "batch": "B01",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_zhanghe_02",
+        "model": "hero_007_01",
+        "action": "gongji",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1233.333,
+        "fps": 30,
+        "durationFrames": 37,
+        "rawEvents": [
+          {
+            "frame0": 7,
+            "timeMs": 233.333,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@233.3ms（角色事件）",
+        "impactMs": [
+          233.333
+        ],
+        "impactStatus": "角色pia直接回调；待游戏内验收",
+        "performance": {
+          "effectsPiaEnemy": [
+            {
+              "delay": 0,
+              "posType": 0,
+              "src": [
+                "common_skill_zhanghe_02"
+              ],
+              "type": 0
+            }
+          ],
+          "effectsPiaUs": [
+            {
+              "delay": 0,
+              "posType": 0,
+              "src": [
+                "common_skill_zhanghe_02"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            2,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_zhanghe_02",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhanghe_02_69dea0ec.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhanghe_02",
+                  "name": "common_skill_zhanghe_02",
+                  "fps": 24,
+                  "durationFrames": 12,
+                  "durationMs": 500.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaUs",
+            "resource": "common_skill_zhanghe_02",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhanghe_02_69dea0ec.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhanghe_02",
+                  "name": "common_skill_zhanghe_02",
+                  "fps": 24,
+                  "durationFrames": 12,
+                  "durationMs": 500.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsPiaEnemy: common_skill_zhanghe_02 delay=0 dt=None speed=1\neffectsPiaUs: common_skill_zhanghe_02 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_zhanghe_02"
+        ],
+        "portrait": "reskin/hero_007.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H007-ULT",
+        "heroId": 7,
+        "name": "血月",
+        "originalName": "张郃",
+        "slot": "大招",
+        "skillId": 550070210,
+        "skillName": "裂体百击",
+        "newSkillName": "残月追斩",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "近身攻击",
+        "movement": "移到目标前出手",
+        "weapon": "单手剑",
+        "weaponObservation": "exact short silver sword held in RIGHT hand, red modern martial costume and headband; sword stays constant solid length",
+        "effectClass": "施法者特效、命中/生效附着特效",
+        "semantic": "流血",
+        "bodyDesign": "One compact controlled diagonal guard-to-thrust gesture, sword stays below head height. No large arcs, no VFX, no slash trail or white blur; all sword tips stay safely inside frame.",
+        "rootPolicy": "引擎负责接近与返回；视频固定根位置，只做出手",
+        "batch": "B07",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方生命比例最低单体造成310%伤害,并附加<流血>效果,每回合造成55%伤害,持续3回合。",
+        "skillModel": "common_skill_zhanghe_01",
+        "model": "hero_007_01",
+        "action": "jineng",
+        "effectiveDesc": "对敌方生命比例最低单体造成310%伤害,并附加<流血>效果,每回合造成55%伤害,持续3回合。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 3633.333,
+        "fps": 30,
+        "durationFrames": 109,
+        "rawEvents": [
+          {
+            "frame0": 0,
+            "timeMs": 0.0,
+            "type": 10,
+            "name": "count"
+          },
+          {
+            "frame0": 5,
+            "timeMs": 166.667,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 11,
+            "timeMs": 366.667,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 13,
+            "timeMs": 433.333,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 32,
+            "timeMs": 1066.667,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 47,
+            "timeMs": 1566.667,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@166.7ms（角色事件）；pia@366.7ms（角色事件）；pia@433.3ms（角色事件）；pia@1066.7ms（角色事件）；pia@1566.7ms（角色事件）",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "effectSrc": [
+            {
+              "delay": 2000,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_zhanghe_01_1"
+              ]
+            }
+          ],
+          "effectsPiaEnemy": [
+            {
+              "posType": 0,
+              "src": [
+                "common_skill_zhanghe_01_2"
+              ]
+            }
+          ],
+          "effectsPiaUs": [
+            {
+              "posType": 0,
+              "src": [
+                "common_skill_zhanghe_01_2"
+              ]
+            }
+          ],
+          "forcePiaCount": 8,
+          "meFlyConfig": [
+            2,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectSrc",
+            "resource": "common_skill_zhanghe_01_1",
+            "delay": 2000,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhanghe_01_1_efc085ac.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhanghe_01_1",
+                  "name": "common_skill_zhanghe_01_1",
+                  "fps": 24,
+                  "durationFrames": 24,
+                  "durationMs": 1000.0,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        4
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 6,
+                      "timeMs": 250.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 6,
+                      "timeMs": 250.0,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 11,
+                      "timeMs": 458.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 11,
+                      "timeMs": 458.333,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 15,
+                      "timeMs": 625.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 15,
+                      "timeMs": 625.0,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 19,
+                      "timeMs": 791.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 19,
+                      "timeMs": 791.667,
+                      "type": 10,
+                      "name": "pz"
+                    }
+                  ]
+                },
+                {
+                  "armature": "common_skill_zhanghe_ljf",
+                  "name": "common_skill_zhanghe_ljf",
+                  "fps": 24,
+                  "durationFrames": 24,
+                  "durationMs": 1000.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_zhanghe_01_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhanghe_01_2_12d98ca7.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhanghe_01_2",
+                  "name": "common_skill_zhanghe_01_2",
+                  "fps": 24,
+                  "durationFrames": 12,
+                  "durationMs": 500.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaUs",
+            "resource": "common_skill_zhanghe_01_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhanghe_01_2_12d98ca7.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhanghe_01_2",
+                  "name": "common_skill_zhanghe_01_2",
+                  "fps": 24,
+                  "durationFrames": 12,
+                  "durationMs": 500.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectSrc: common_skill_zhanghe_01_1 delay=2000 dt=None speed=1 事件=pia@250.0,pia@458.3,pia@625.0,pia@791.7\neffectsPiaEnemy: common_skill_zhanghe_01_2 delay=0 dt=None speed=1\neffectsPiaUs: common_skill_zhanghe_01_2 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_zhanghe_01"
+        ],
+        "portrait": "reskin/hero_007.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "approved-for-matting",
+  "runtimeIntegrated": false,
+  "sourceBodyJob": "art-migration/generation/hero007-body-actions-minimax-v3",
+  "sourceFrameOrder": [
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00147_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00148_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00149_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00150_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00151_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00152_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00153_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00154_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00155_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00156_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00157_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00158_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00159_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00160_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00161_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00162_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00163_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00164_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00165_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00166_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00167_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00168_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00169_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00170_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00171_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00172_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00173_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00174_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00175_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00176_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00177_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00178_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00179_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00180_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00181_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00182_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00183_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00184_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00185_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00186_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00187_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00188_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00189_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00190_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00191_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00192_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00193_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00194_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00195_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00196_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00197_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00198_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00199_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00200_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00201_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00202_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00203_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00204_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00205_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00206_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00207_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00208_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00209_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00210_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00211_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00212_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00213_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00214_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00215_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00216_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00217_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00218_.png",
+    "art-migration/generation/hero007-body-actions-minimax-v3/hero007_body_00219_.png"
+  ]
+}

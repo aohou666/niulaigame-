@@ -30,7 +30,7 @@ try{
    for(const p of players)p.trigger('daiji',null,0);await new Promise(r=>setTimeout(r,120));const idle=players.map(p=>({body:p._streetBody.bitmap.visible,native:p._armature.visible,idle:p._characterIdleState.bitmap.visible}));const shared={sameCache:players[0]._streetBody.cache===players[1]._streetBody.cache,users:players[0]._streetBody.cache.users};
    for(const p of players)p.destroy();container.parent.removeChild(container);return {events,idle,shared,after:StreetBody.snapshot()};
   },cfg);
-  for(const e of timing.events){assert.equal(e.calls,1);assert(Math.abs(e.elapsedMs-e.expected)<180,JSON.stringify(e));for(const event of e.expectedEvents){const hits=e.native.filter(n=>n.name===event.name);assert.equal(hits.length,1,JSON.stringify(e));assert(Math.abs(hits[0].elapsedMs-event.frame0/cfg.actions[e.action].fps*1000)<100,JSON.stringify(e));}}
+  for(const e of timing.events){assert.equal(e.calls,1);assert(Math.abs(e.elapsedMs-e.expected)<180,JSON.stringify(e));for(const name of new Set(e.expectedEvents.map(v=>v.name))){const expected=e.expectedEvents.filter(v=>v.name===name),hits=e.native.filter(n=>n.name===name);assert.equal(hits.length,expected.length,JSON.stringify(e));for(let i=0;i<expected.length;i++)assert(Math.abs(hits[i].elapsedMs-expected[i].frame0/cfg.actions[e.action].fps*1000)<100,JSON.stringify(e));}}
   assert(timing.idle.every(r=>!r.body&&!r.native&&r.idle));assert(timing.shared.sameCache&&timing.shared.users===2);assert.equal(timing.after.caches.length,0);assert.equal(timing.after.errors.length,0);
   const report={hero:cfg.id,pass:true,frameChecks:frames.checks.length,clocks:frames.clocks,timing};reports.push(report);console.log(JSON.stringify({hero:cfg.id,pass:true,frameChecks:report.frameChecks}));
  }

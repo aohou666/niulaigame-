@@ -27,6 +27,7 @@ def verify():
     assert seq['fps']>0 and len(seq['frameMap'])>1
     assert all(isinstance(n,int) and 0<=n<len(cfg['frames']) for n in seq['frameMap']),'bad source frame index'
     if seq.get('nativeImpactFrame') is not None:assert seq['frameMap'][seq['nativeImpactFrame']]==seq['sourceImpactFrame'],'impact mapping mismatch'
+    for mark in seq.get('eventAnchors',[]):assert seq['frameMap'][mark['nativeFrame']]==mark['sourceFrame'],'multi-event mapping mismatch'
    characters.append({'hero':cfg['id'],'frames':len(cfg['frames']),'distinctFrames':len(hashes),'actions':list(cfg['actions'])})
   except Exception as e:errors.append({'hero':cfg['id'],'error':str(e)})
  return {'images':images,'bodyAtlasFrames':frames,'bodyCharacters':characters,'errors':errors}
