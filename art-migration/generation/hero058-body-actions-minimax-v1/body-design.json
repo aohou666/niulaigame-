@@ -1,0 +1,322 @@
+{
+  "heroId": 58,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/058/portrait.png",
+      "prepared": "art-migration/references/body-058/idle.png",
+      "foot": [
+        384.02,
+        700
+      ],
+      "size": [
+        362,
+        560
+      ],
+      "sha256": "a7b590b3eab28597a0dc5e3f9f6b5f5e9c6aa89d8b0419eb8b9b2057537aa708"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero058-attack-v2/hero058_attack_alpha_00001_.png",
+      "prepared": "art-migration/references/body-058/attack.png",
+      "foot": [
+        383.83,
+        700
+      ],
+      "size": [
+        456,
+        560
+      ],
+      "sha256": "0e13408df878cf4d6d5b824060315a3cb8337a4b9373d65aa930c256d2dd5235"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero058-skill-v2/hero058_skill_alpha_00001_.png",
+      "prepared": "art-migration/references/body-058/skill.png",
+      "foot": [
+        384.42,
+        700
+      ],
+      "size": [
+        425,
+        560
+      ],
+      "sha256": "fadda8245f07af27f7fa9e14cee8ac4b5ad1ea31cc157dd2a584185e5e071bdc"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H058-ATK",
+        "heroId": 58,
+        "name": "鲨鲨",
+        "originalName": "文丑",
+        "slot": "普攻",
+        "skillId": 550580110,
+        "skillName": "普通攻击",
+        "newSkillName": "鲨套轻撞",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "远程弹道/连线",
+        "movement": "原站位出手",
+        "weapon": "兽爪／拳脚",
+        "weaponObservation": "鲨鱼装角色，无手持武器",
+        "effectClass": "飞行弹道、命中/生效附着特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "躯干蓄力→爪击/扑击上身姿势→回收",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B03",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_wenchou_02",
+        "model": "hero_058_01",
+        "action": "gongji",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "wuqi",
+        "rawDurationMs": 1000.0,
+        "fps": 30,
+        "durationFrames": 30,
+        "rawEvents": [
+          {
+            "frame0": 12,
+            "timeMs": 400.0,
+            "type": 10,
+            "name": "zd"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "zd@400.0ms（发射/启动特效）",
+        "impactMs": [
+          650.0
+        ],
+        "impactStatus": "发射事件＋弹道delay/dt推导；待游戏内验收",
+        "performance": {
+          "__attackDoneDelay": 150,
+          "effectsPiaEnemy": [
+            {
+              "posType": 0,
+              "src": [
+                "common_skill_wenchou_02_2"
+              ]
+            }
+          ],
+          "effectsTarEnemy": [
+            {
+              "dt": 250,
+              "fixedWidth": 50,
+              "offset": [
+                0,
+                -100
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_wenchou_02_1"
+              ],
+              "type": 1
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_wenchou_02_1",
+            "delay": 0,
+            "dt": 250,
+            "timeScale": 1,
+            "type": 1,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_wenchou_02_1_249a999a.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_wenchou_02_1",
+                  "name": "common_skill_wenchou_02_1",
+                  "fps": 24,
+                  "durationFrames": 7,
+                  "durationMs": 291.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_wenchou_02_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_wenchou_02_2_8384fa5a.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_wenchou_02_2",
+                  "name": "common_skill_wenchou_02_2",
+                  "fps": 24,
+                  "durationFrames": 15,
+                  "durationMs": 625.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_wenchou_02_1 delay=0 dt=250 speed=1\neffectsPiaEnemy: common_skill_wenchou_02_2 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_wenchou_02"
+        ],
+        "portrait": "reskin/hero_058.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H058-ULT",
+        "heroId": 58,
+        "name": "鲨鲨",
+        "originalName": "文丑",
+        "slot": "大招",
+        "skillId": 550580210,
+        "skillName": "绝命虎吻",
+        "newSkillName": "镇狱拦锋",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "近身攻击",
+        "movement": "移到目标前出手",
+        "weapon": "兽爪／拳脚",
+        "weaponObservation": "鲨鱼装角色，无手持武器",
+        "effectClass": "目标位置特效",
+        "semantic": "嘲讽",
+        "bodyDesign": "躯干蓄力→爪击/扑击上身姿势→回收",
+        "rootPolicy": "引擎负责接近与返回；视频固定根位置，只做出手",
+        "batch": "B05",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成335%伤害,并有50%几率附加<嘲讽>,持续2回合。",
+        "skillModel": "common_skill_wenchou_01",
+        "model": "hero_058_01",
+        "action": "jineng",
+        "effectiveDesc": "对敌方前排单体造成335%伤害,并有50%几率附加<嘲讽>,持续2回合。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "wuqi",
+        "rawDurationMs": 2400.0,
+        "fps": 30,
+        "durationFrames": 72,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "effectsTarEnemy": [
+            {
+              "delay": 0,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_wenchou_01"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            2,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_wenchou_01",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_wenchou_01_dab3c915.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_wenchou_01",
+                  "name": "common_skill_wenchou_01",
+                  "fps": 24,
+                  "durationFrames": 22,
+                  "durationMs": 916.667,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        3
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 5,
+                      "timeMs": 208.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 10,
+                      "timeMs": 416.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 15,
+                      "timeMs": 625.0,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_wenchou_01 delay=0 dt=None speed=1 事件=pia@208.3,pia@416.7,pia@625.0",
+        "variants": [
+          "common_skill_wenchou_01"
+        ],
+        "portrait": "reskin/hero_058.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false
+}

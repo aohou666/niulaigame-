@@ -1,0 +1,471 @@
+{
+  "heroId": 59,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/059/portrait.png",
+      "prepared": "art-migration/references/body-059/idle.png",
+      "foot": [
+        384.09,
+        700
+      ],
+      "size": [
+        291,
+        560
+      ],
+      "sha256": "ccfb85bd99395973c51db178574c8d597842836067c20f7396da176d199a1893"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero059-attack-v2/hero059_attack_alpha_00001_.png",
+      "prepared": "art-migration/references/body-059/attack.png",
+      "foot": [
+        383.81,
+        700
+      ],
+      "size": [
+        342,
+        560
+      ],
+      "sha256": "aec48f892ccc683161760cc029a970aca026bcf8cfca5dc6d156d140bb2fdabb"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero059-skill-v2/hero059_skill_alpha_00001_.png",
+      "prepared": "art-migration/references/body-059/skill.png",
+      "foot": [
+        383.88,
+        700
+      ],
+      "size": [
+        303,
+        560
+      ],
+      "sha256": "243ef35817c86a83113d6226053bb63edc81618392891b1f6335134f67db146f"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H059-ATK",
+        "heroId": 59,
+        "name": "牛新娘",
+        "originalName": "贾诩",
+        "slot": "普攻",
+        "skillId": 550590110,
+        "skillName": "普通攻击",
+        "newSkillName": "幽灯引影",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "随机3目标",
+        "delivery": "远程弹道/连线",
+        "movement": "原站位出手",
+        "weapon": "徒手／手势",
+        "weaponObservation": "新娘造型，无手持武器",
+        "effectClass": "飞行弹道、命中/生效附着特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "收臂蓄力→拳/掌/肘击→回到待机；命中覆盖由独立目标特效控制",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B03",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_chengong_02",
+        "model": "hero_059_01",
+        "action": "gongji",
+        "effectiveDesc": "普通攻击转化为：对随机3个敌人造成60%伤害。",
+        "classificationStage": "被动改写生效后；解锁前仍用基础普攻",
+        "passiveRewrite": "550590310 乱武：普通攻击转化为：对随机3个敌人造成60%伤害。",
+        "passiveNotes": "550590310 乱武：普通攻击转化为：对随机3个敌人造成60%伤害。",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "shanzi31、shanzi32",
+        "rawDurationMs": 1333.333,
+        "fps": 30,
+        "durationFrames": 40,
+        "rawEvents": [
+          {
+            "frame0": 21,
+            "timeMs": 700.0,
+            "type": 10,
+            "name": "zd"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "zd@700.0ms（发射/启动特效）",
+        "impactMs": [
+          950.0
+        ],
+        "impactStatus": "发射事件＋弹道delay/dt推导；待游戏内验收",
+        "performance": {
+          "__attackDoneDelay": 500,
+          "effectsPiaEnemy": [
+            {
+              "posType": 0,
+              "src": [
+                "common_skill_chengong_02_2"
+              ]
+            }
+          ],
+          "effectsTarEnemy": [
+            {
+              "dt": 250,
+              "fixedWidth": 50,
+              "offset": [
+                0,
+                -100
+              ],
+              "posType": 0,
+              "src": [
+                "common_skill_chengong_02_1"
+              ],
+              "type": 1
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_chengong_02_1",
+            "delay": 0,
+            "dt": 250,
+            "timeScale": 1,
+            "type": 1,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_chengong_02_1_f92ce9f.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_chengong_02_1",
+                  "name": "common_skill_chengong_02_1",
+                  "fps": 24,
+                  "durationFrames": 7,
+                  "durationMs": 291.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_chengong_02_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_chengong_02_2_ec79b9fe.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_chengong_02_2",
+                  "name": "common_skill_chengong_02_2",
+                  "fps": 24,
+                  "durationFrames": 13,
+                  "durationMs": 541.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_chengong_02_1 delay=0 dt=250 speed=1\neffectsPiaEnemy: common_skill_chengong_02_2 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_chengong_02"
+        ],
+        "portrait": "reskin/hero_059.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H059-ULT",
+        "heroId": 59,
+        "name": "牛新娘",
+        "originalName": "贾诩",
+        "slot": "大招",
+        "skillId": 550590210,
+        "skillName": "算无遗策",
+        "newSkillName": "灯下毒局",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "后排",
+        "delivery": "中场释放（远近待回放）",
+        "movement": "移到场地中部释放",
+        "weapon": "徒手／手势",
+        "weaponObservation": "新娘造型，无手持武器",
+        "effectClass": "场景/范围特效、命中/生效附着特效",
+        "semantic": "中毒",
+        "bodyDesign": "收臂蓄力→拳/掌/肘击→回到待机；命中覆盖由独立目标特效控制",
+        "rootPolicy": "引擎移到中场后播出手；视频不自行横穿战场",
+        "batch": "B05",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方后排造成100%伤害,并附加<中毒>效果,每回合造成100%伤害,持续2回合。",
+        "skillModel": "common_skill_jiaxu_02",
+        "model": "hero_059_01",
+        "action": "jineng",
+        "effectiveDesc": "对敌方后排造成100%伤害,并附加<中毒>效果,每回合造成100%伤害,持续2回合。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "550590310 乱武：普通攻击转化为：对随机3个敌人造成60%伤害。",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "shanzi31、shanzi32",
+        "rawDurationMs": 1666.667,
+        "fps": 30,
+        "durationFrames": 50,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "__attackDoneDelay": 500,
+          "effectQP": [
+            {
+              "delay": 0,
+              "offset": [
+                -150,
+                0
+              ],
+              "src": [
+                "common_skill_jiaxu_02_1"
+              ],
+              "timeScale": 1
+            }
+          ],
+          "effectsPiaEnemy": [
+            {
+              "posType": 0,
+              "src": [
+                "common_skill_jiaxu_02_2"
+              ]
+            }
+          ],
+          "meFlyConfig": [
+            1,
+            200,
+            50
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectQP",
+            "resource": "common_skill_jiaxu_02_1",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_jiaxu_02_1_d3683730.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_jiaxu_02_1",
+                  "name": "common_skill_jiaxu_02_1",
+                  "fps": 24,
+                  "durationFrames": 44,
+                  "durationMs": 1833.333,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        5
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 2,
+                      "timeMs": 83.333,
+                      "type": 10,
+                      "name": "pia123"
+                    },
+                    {
+                      "frame0": 4,
+                      "timeMs": 166.667,
+                      "type": 10,
+                      "name": "pia123"
+                    },
+                    {
+                      "frame0": 4,
+                      "timeMs": 166.667,
+                      "type": 10,
+                      "name": "pia456"
+                    },
+                    {
+                      "frame0": 8,
+                      "timeMs": 333.333,
+                      "type": 10,
+                      "name": "pia123"
+                    },
+                    {
+                      "frame0": 8,
+                      "timeMs": 333.333,
+                      "type": 10,
+                      "name": "pia456"
+                    },
+                    {
+                      "frame0": 12,
+                      "timeMs": 500.0,
+                      "type": 10,
+                      "name": "pia123"
+                    },
+                    {
+                      "frame0": 12,
+                      "timeMs": 500.0,
+                      "type": 10,
+                      "name": "pia456"
+                    },
+                    {
+                      "frame0": 16,
+                      "timeMs": 666.667,
+                      "type": 10,
+                      "name": "pia123"
+                    },
+                    {
+                      "frame0": 16,
+                      "timeMs": 666.667,
+                      "type": 10,
+                      "name": "pia456"
+                    },
+                    {
+                      "frame0": 20,
+                      "timeMs": 833.333,
+                      "type": 10,
+                      "name": "pia456"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_jiaxu_02_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_jiaxu_02_2_e91592b7.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_jiaxu_02_2",
+                  "name": "common_skill_jiaxu_02_2",
+                  "fps": 24,
+                  "durationFrames": 23,
+                  "durationMs": 958.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectQP: common_skill_jiaxu_02_1 delay=0 dt=None speed=1 事件=pia123@83.3,pia123@166.7,pia456@166.7,pia123@333.3,pia456@333.3,pia123@500.0,pia456@500.0,pia123@666.7,pia456@666.7,pia456@833.3\neffectsPiaEnemy: common_skill_jiaxu_02_2 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_jiaxu_02"
+        ],
+        "portrait": "reskin/hero_059.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "approved-for-matting",
+  "runtimeIntegrated": false,
+  "sourceBodyJob": "art-migration/generation/hero059-body-actions-minimax-v1",
+  "sourceFrameOrder": [
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00001_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00002_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00003_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00004_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00005_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00006_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00007_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00008_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00009_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00010_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00011_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00012_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00013_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00014_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00015_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00016_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00017_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00018_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00019_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00020_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00021_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00022_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00023_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00024_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00025_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00026_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00027_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00028_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00029_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00030_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00031_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00032_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00033_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00034_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00035_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00036_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00037_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00038_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00039_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00040_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00041_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00042_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00043_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00044_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00045_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00046_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00047_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00048_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00049_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00050_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00051_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00052_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00053_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00054_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00055_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00056_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00057_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00058_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00059_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00060_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00061_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00062_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00063_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00064_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00065_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00066_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00067_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00068_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00069_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00070_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00071_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00072_.png",
+    "art-migration/generation/hero059-body-actions-minimax-v1/hero059_body_00073_.png"
+  ]
+}

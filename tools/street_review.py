@@ -3,6 +3,7 @@ import argparse,collections,hashlib,json,time
 from pathlib import Path
 from PIL import Image,ImageDraw,ImageFont
 from street_art_verify import verify as verify_street_art
+from street_runtime_tracking import verify as verify_runtime_tracking
 ROOT=Path(__file__).resolve().parents[1];GAME=ROOT/'local_game';OUT=ROOT/'art-migration'
 def loadjs(p):return json.loads(p.read_text('utf8').split('=',1)[1].strip().rstrip(';'))
 def main():
@@ -37,6 +38,7 @@ def main():
  ui_file=OUT/'ui-regions.jsonl';ui_rows=[json.loads(line) for line in ui_file.read_text('utf8').splitlines()] if ui_file.exists() else []
  report['uiSheetRegionsNotYetReplaced']=sum(r['status']!='complete' for r in ui_rows)
  report['promotedStreetArtVerification']=verify_street_art()
+ report['generatedRuntimeGitTracking']=verify_runtime_tracking()
  issues=OUT/'open-issues.json';report['knownOpenIssues']=[r for r in json.loads(issues.read_text('utf8')) if r.get('status')!='resolved'] if issues.exists() else []
  folder=OUT/'versions'/a.version;folder.mkdir(parents=True,exist_ok=True)
  (folder/'review.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n','utf8')
@@ -52,6 +54,6 @@ def main():
    draw.text((x+10,y+282),hid+' '+h['name'][:7],font=font,fill='#f1e8d1')
   sheet.save(ROOT/f'outputs/street-reskin/characters-review-{start//24+1}.jpg',quality=90)
  print(json.dumps({k:v for k,v in report.items() if k not in ['detailRuntime','originalArtNotYetFullyReplaced']},ensure_ascii=False))
- if errors or missing or report['promotedStreetArtVerification']['errors']:raise SystemExit(1)
+ if errors or missing or report['promotedStreetArtVerification']['errors'] or not report['generatedRuntimeGitTracking']['pass']:raise SystemExit(1)
 
 if __name__=='__main__':main()

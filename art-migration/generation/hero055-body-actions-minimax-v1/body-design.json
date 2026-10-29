@@ -1,0 +1,353 @@
+{
+  "heroId": 55,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/055/portrait.png",
+      "prepared": "art-migration/references/body-055/idle.png",
+      "foot": [
+        383.75,
+        700
+      ],
+      "size": [
+        185,
+        560
+      ],
+      "sha256": "d757b031b6a3db37a9934bb3ce4f294b55d836bbdfa63a1a57a787d2562140f2"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero055-attack-v2/hero055_attack_alpha_00001_.png",
+      "prepared": "art-migration/references/body-055/attack.png",
+      "foot": [
+        384.47,
+        700
+      ],
+      "size": [
+        200,
+        560
+      ],
+      "sha256": "9f1022d338070eedec35b641c60d827015621b229ffaaded68c9b6e9f5cd7d08"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero055-skill-v2/hero055_skill_alpha_00001_.png",
+      "prepared": "art-migration/references/body-055/skill.png",
+      "foot": [
+        383.99,
+        700
+      ],
+      "size": [
+        172,
+        560
+      ],
+      "sha256": "a032c43a930d3322d1a49184604319ea28c4f031f1e7bf53f62f5b5c1fc650a6"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H055-ATK",
+        "heroId": 55,
+        "name": "嬛嬛",
+        "originalName": "貂蝉",
+        "slot": "普攻",
+        "skillId": 550550110,
+        "skillName": "普通攻击",
+        "newSkillName": "绮袖轻点",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "原地远程作用",
+        "movement": "原站位出手",
+        "weapon": "徒手／手势",
+        "weaponObservation": "宫装，无手持武器",
+        "effectClass": "目标位置特效",
+        "semantic": "降低",
+        "bodyDesign": "收臂蓄力→拳/掌/肘击→回到待机",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B03",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_diaochan_02",
+        "model": "hero_055_01",
+        "action": "gongji",
+        "effectiveDesc": "普通攻击转化为:对场上随机男性单体造成110%伤害,并降低其20%抗暴,20%格挡,持续2回合。",
+        "classificationStage": "被动改写生效后；解锁前仍用基础普攻",
+        "passiveRewrite": "550550310 娇媚：普通攻击转化为:对场上随机男性单体造成110%伤害,并降低其20%抗暴,20%格挡,持续2回合。",
+        "passiveNotes": "550550310 娇媚：普通攻击转化为:对场上随机男性单体造成110%伤害,并降低其20%抗暴,20%格挡,持续2回合。",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "shanzi",
+        "rawDurationMs": 1133.333,
+        "fps": 30,
+        "durationFrames": 34,
+        "rawEvents": [
+          {
+            "frame0": 10,
+            "timeMs": 333.333,
+            "type": 10,
+            "name": "zd"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "zd@333.3ms（发射/启动特效）",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "effectsTarEnemy": [
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_diaochan_02"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_diaochan_02",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_diaochan_02_233f20c3.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_diaochan_02",
+                  "name": "common_skill_diaochan_02",
+                  "fps": 24,
+                  "durationFrames": 14,
+                  "durationMs": 583.333,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        1
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 4,
+                      "timeMs": 166.667,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_diaochan_02 delay=0 dt=None speed=1 事件=pia@166.7",
+        "variants": [
+          "common_skill_diaochan_02"
+        ],
+        "portrait": "reskin/hero_055.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H055-ULT",
+        "heroId": 55,
+        "name": "嬛嬛",
+        "originalName": "貂蝉",
+        "slot": "大招",
+        "skillId": 550550210,
+        "skillName": "美人心计",
+        "newSkillName": "袖底心计",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "原地远程作用",
+        "movement": "原站位出手",
+        "weapon": "徒手／手势",
+        "weaponObservation": "宫装，无手持武器",
+        "effectClass": "目标位置特效",
+        "semantic": "窃取",
+        "bodyDesign": "收臂蓄力→拳/掌/肘击→回到待机",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B05",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方攻击最高单体造成500%伤害,并窃取其10%攻击（最高不超过貂蝉攻击的100%）,持续2回合。",
+        "skillModel": "common_skill_diaochan_01",
+        "model": "hero_055_01",
+        "action": "jineng",
+        "effectiveDesc": "对敌方攻击最高单体造成500%伤害,并窃取其10%攻击（最高不超过貂蝉攻击的100%）,持续2回合。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "550550310 娇媚：普通攻击转化为:对场上随机男性单体造成110%伤害,并降低其20%抗暴,20%格挡,持续2回合。",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "shanzi",
+        "rawDurationMs": 2000.0,
+        "fps": 30,
+        "durationFrames": 60,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "__attackDoneDelay": 150,
+          "effectsTarEnemy": [
+            {
+              "delay": 500,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_diaochan_01_1"
+              ],
+              "timeScale": 1,
+              "type": 0
+            },
+            {
+              "delay": 500,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_diaochan_01_2"
+              ],
+              "timeScale": 1,
+              "type": 0,
+              "z": 0
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            100
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_diaochan_01_1",
+            "delay": 500,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_diaochan_01_1_69ab7952.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_diaochan_01_1",
+                  "name": "common_skill_diaochan_01_1",
+                  "fps": 24,
+                  "durationFrames": 27,
+                  "durationMs": 1125.0,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        1
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 16,
+                      "timeMs": 666.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 16,
+                      "timeMs": 666.667,
+                      "type": 10,
+                      "name": "pz"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_diaochan_01_2",
+            "delay": 500,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_diaochan_01_2_c1ac6dc7.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_diaochan_01_2",
+                  "name": "common_skill_diaochan_01_2",
+                  "fps": 24,
+                  "durationFrames": 28,
+                  "durationMs": 1166.667,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_diaochan_01_xz",
+                  "name": "common_skill_diaochan_01_xz",
+                  "fps": 24,
+                  "durationFrames": 16,
+                  "durationMs": 666.667,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_diaochan_01_xzz",
+                  "name": "common_skill_diaochan_01_xzz",
+                  "fps": 24,
+                  "durationFrames": 40,
+                  "durationMs": 1666.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_diaochan_01_1 delay=500 dt=None speed=1 事件=pia@666.7\neffectsTarEnemy: common_skill_diaochan_01_2 delay=500 dt=None speed=1",
+        "variants": [
+          "common_skill_diaochan_01"
+        ],
+        "portrait": "reskin/hero_055.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false
+}

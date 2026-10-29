@@ -1,0 +1,366 @@
+{
+  "heroId": 54,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/054/portrait.png",
+      "prepared": "art-migration/references/body-054/idle.png",
+      "foot": [
+        383.66,
+        700
+      ],
+      "size": [
+        348,
+        560
+      ],
+      "sha256": "1f7935b357bcf6ab43ed8122b3df176579f5a529309ee663f92f319db4d96447"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero054-attack-v2/hero054_attack_alpha_00001_.png",
+      "prepared": "art-migration/references/body-054/attack.png",
+      "foot": [
+        383.88,
+        700
+      ],
+      "size": [
+        364,
+        560
+      ],
+      "sha256": "98eafbe61a0c857cb11535acd57fefadeac6cd2ffa977c098b45792620971462"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero054-skill-v2/hero054_skill_alpha_00001_.png",
+      "prepared": "art-migration/references/body-054/skill.png",
+      "foot": [
+        384.4,
+        700
+      ],
+      "size": [
+        323,
+        560
+      ],
+      "sha256": "d419ddd493c57e679722eab225d92d5547cd832e9b9094c494347ea4cec95884"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H054-ATK",
+        "heroId": 54,
+        "name": "驱鬼道长",
+        "originalName": "张角",
+        "slot": "普攻",
+        "skillId": 550540110,
+        "skillName": "普通攻击",
+        "newSkillName": "赤符轻击",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "随机3目标",
+        "delivery": "原地远程作用",
+        "movement": "原站位出手",
+        "weapon": "符咒／法器",
+        "weaponObservation": "符纸、背负剑",
+        "effectClass": "目标位置特效",
+        "semantic": "麻痹",
+        "bodyDesign": "结印/举符→释放符光→收势；背负剑不自动出鞘；命中覆盖由独立目标特效控制",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B03",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_zhangjiao_01",
+        "model": "hero_054_01",
+        "action": "gongji",
+        "effectiveDesc": "普通攻击转化为:对敌方随机3人造成60%伤害,并有25%几率造成<麻痹>,持续2回合。",
+        "classificationStage": "被动改写生效后；解锁前仍用基础普攻",
+        "passiveRewrite": "550540310 雷音慑敌：普通攻击转化为:对敌方随机3人造成60%伤害,并有25%几率造成<麻痹>,持续2回合。",
+        "passiveNotes": "550540310 雷音慑敌：普通攻击转化为:对敌方随机3人造成60%伤害,并有25%几率造成<麻痹>,持续2回合。",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1666.667,
+        "fps": 30,
+        "durationFrames": 50,
+        "rawEvents": [
+          {
+            "frame0": 12,
+            "timeMs": 400.0,
+            "type": 10,
+            "name": "zd"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "zd@400.0ms（发射/启动特效）",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "effectsTarEnemy": [
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 0,
+              "src": [
+                "common_skill_zhangjiao_01"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_zhangjiao_01",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhangjiao_01_9695fa56.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhangjiao_01",
+                  "name": "common_skill_zhangjiao_01",
+                  "fps": 24,
+                  "durationFrames": 22,
+                  "durationMs": 916.667,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        2
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 6,
+                      "timeMs": 250.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 13,
+                      "timeMs": 541.667,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_zhangjiao_01 delay=0 dt=None speed=1 事件=pia@250.0,pia@541.7",
+        "variants": [
+          "common_skill_zhangjiao_01"
+        ],
+        "portrait": "reskin/hero_054.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H054-ULT",
+        "heroId": 54,
+        "name": "驱鬼道长",
+        "originalName": "张角",
+        "slot": "大招",
+        "skillId": 550540210,
+        "skillName": "黄天雷极",
+        "newSkillName": "符云雷判",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "随机2目标",
+        "delivery": "原地远程作用",
+        "movement": "原站位出手",
+        "weapon": "符咒／法器",
+        "weaponObservation": "符纸、背负剑",
+        "effectClass": "场景/范围特效",
+        "semantic": "麻痹",
+        "bodyDesign": "结印/举符→释放符光→收势；背负剑不自动出鞘；命中覆盖由独立目标特效控制",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B06",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "在随机2个敌方单位头上生成<雷云>,并立即判断硬币正反,正则造成220%伤害并有65%几率附加<麻痹>,持续2回合；反则造成380%伤害。",
+        "skillModel": "common_skill_zhangjiao_02",
+        "model": "hero_054_01",
+        "action": "jineng",
+        "effectiveDesc": "在随机2个敌方单位头上生成<雷云>,并立即判断硬币正反,正则造成220%伤害并有65%几率附加<麻痹>,持续2回合；反则造成380%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "550540310 雷音慑敌：普通攻击转化为:对敌方随机3人造成60%伤害,并有25%几率造成<麻痹>,持续2回合。",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1666.667,
+        "fps": 30,
+        "durationFrames": 50,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "attackFrameDelay": 10,
+          "attackDoneDelay": 2000,
+          "effectQP": [
+            {
+              "offset": [
+                200,
+                0
+              ],
+              "src": [
+                "common_skill_zhangjiao_baguazhen"
+              ],
+              "timeScale": 2,
+              "z": 0
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectQP",
+            "resource": "common_skill_zhangjiao_baguazhen",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 2,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhangjiao_baguazhen_d0c584d4.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhangjiao_baguazhen",
+                  "name": "common_skill_zhangjiao_baguazhen",
+                  "fps": 24,
+                  "durationFrames": 41,
+                  "durationMs": 1708.333,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "baguazhen",
+                  "name": "bagua",
+                  "fps": 24,
+                  "durationFrames": 110,
+                  "durationMs": 4583.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectQP: common_skill_zhangjiao_baguazhen delay=0 dt=None speed=2",
+        "variants": [
+          "common_skill_zhangjiao_02"
+        ],
+        "portrait": "reskin/hero_054.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "approved-for-matting",
+  "runtimeIntegrated": false,
+  "sourceBodyJob": "art-migration/generation/hero054-body-actions-minimax-v1",
+  "sourceFrameOrder": [
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00001_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00002_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00003_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00004_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00005_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00006_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00007_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00008_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00009_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00010_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00011_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00012_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00013_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00014_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00015_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00016_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00017_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00018_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00019_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00020_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00021_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00022_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00023_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00024_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00025_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00026_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00027_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00028_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00029_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00030_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00031_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00032_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00033_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00034_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00035_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00036_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00037_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00038_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00039_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00040_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00041_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00042_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00043_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00044_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00045_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00046_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00047_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00048_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00049_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00050_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00051_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00052_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00053_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00054_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00055_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00056_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00057_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00058_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00059_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00060_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00061_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00062_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00063_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00064_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00065_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00066_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00067_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00068_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00069_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00070_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00071_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00072_.png",
+    "art-migration/generation/hero054-body-actions-minimax-v1/hero054_body_00073_.png"
+  ]
+}
