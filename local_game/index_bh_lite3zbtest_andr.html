@@ -47,6 +47,7 @@
 </div>
 
 <script src="offline-ui.js"></script>
+<script src="offline-read-rpc.js?v=20261029-22"></script>
 <script src="character-reskin-data.js"></script>
 <script src="character-art-data.js?v=20261029-21"></script>
 <script src="character-art.js?v=20261029-21"></script>
@@ -99,6 +100,7 @@
                  * }
                  **/
                 nodeRecord(3);
+                if(window.OfflineReadRPC)OfflineReadRPC.installEarly();
                 egret.runEgret({
                     renderMode: "webgl", audioType: 0, calculateCanvasScaleFactor: function (context) {
                         var backingStore = context.backingStorePixelRatio ||
@@ -429,6 +431,7 @@
                     if (window.CharacterReskin) window.CharacterReskin.apply();
                     var offlineSave;
                     offlineSave = loadOfflineSaveData();
+                    if(window.OfflineReadRPC)OfflineReadRPC.setSave(function(){return offlineSave;});
                     if (!offlineSave || !offlineSave.summoner || !offlineSave.player || !offlineSave.heroes || !offlineSave.formation) {
                         // Older phone shells could persist configuration before
                         // creating a complete profile. Preserve their settings
@@ -1638,18 +1641,8 @@
                     if (Utils.Socket && !Utils.Socket._offlineTrainRpcPatched) {
                         var originalOfflineSocketSend = Utils.Socket.send.bind(Utils.Socket);
                         Utils.Socket.send = function (module, action, data) {
-                            if (module === "worldEmpires" && action === "GetWorldEmpiresCurDt") {
-                                // The offline world is available for the current local day.
-                                // Sending this to the disabled server rejected with undefined,
-                                // leaving SLG open-info uninitialized on every hero view.
-                                var localDay = new Date(); localDay.setHours(0, 0, 0, 0);
-                                var nextDay = new Date(localDay.getTime()); nextDay.setDate(nextDay.getDate() + 1);
-                                return Promise.resolve({ err: 0, startDt: Math.floor(localDay.getTime() / 1000), endDt: Math.floor(nextDay.getTime() / 1000) });
-                            }
-                            if (module === "guildDefence" && action === "GetGuildDefenceInfo") {
-                                var defenceState = offlineSave.guildDefence || { code: 0, stageInfos: [] };
-                                return Promise.resolve({ err: 0, playerInfo: { code: Number(defenceState.code) || 0 }, stageInfos: defenceState.stageInfos || [] });
-                            }
+                            var localReadReply = window.OfflineReadRPC && OfflineReadRPC.read(module, action);
+                            if(localReadReply)return localReadReply;
                             if (!offlineTrainRpcModules[module]) {
                                 window.OfflineMissingRpcAudit = window.OfflineMissingRpcAudit || [];
                                 if (window.OfflineMissingRpcAudit.length < 100) window.OfflineMissingRpcAudit.push({ module: module, action: action, stack: new Error().stack });
@@ -1678,6 +1671,7 @@
                             });
                         };
                         Utils.Socket._offlineTrainRpcPatched = true;
+                        if(window.OfflineReadRPC)OfflineReadRPC.setTrainingRead(function(module,action){return Utils.Socket.send(module,action,{});});
                     }
                     var offlineTrainNames = {
                         champion: "通天塔", newChampion: "通天塔", seasonArena: "竞技场",

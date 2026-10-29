@@ -30,10 +30,10 @@ def qwen(prompt,reference=None,resolution=768,steps=28,seed=2026102901):
         graph['4']['inputs']['images.image_1']=['8',0]
     return graph
 
-def submit(graph,name):
+def submit(graph,name,front=False):
     folder=ROOT/'art-migration/generation'/name;folder.mkdir(parents=True,exist_ok=False)
     (folder/'workflow.json').write_text(json.dumps(graph,ensure_ascii=False,indent=2),'utf8')
-    result=request('/prompt',{'prompt':graph,'client_id':'oldniulai-street-reskin'})
+    result=request('/prompt',{'prompt':graph,'client_id':'oldniulai-street-reskin','front':front})
     record={'promptId':result['prompt_id'],'submittedUtc':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'status':'submitted','provider':'local-comfyui','workflowSha256':hashlib.sha256((folder/'workflow.json').read_bytes()).hexdigest(),'response':result}
     (folder/'job.json').write_text(json.dumps(record,ensure_ascii=False,indent=2),'utf8')
     print(json.dumps({'job':str(folder),'result':result},ensure_ascii=False),flush=True)
@@ -46,7 +46,9 @@ def collect(folder):
     (folder/'history.json').write_text(json.dumps(history,ensure_ascii=False,indent=2),'utf8')
     record['comfyStatus']=history.get('status')
     if history.get('status',{}).get('status_str')!='success':
-        record['status']='failed';(folder/'job.json').write_text(json.dumps(record,ensure_ascii=False,indent=2),'utf8');print(json.dumps(record));return False
+        record['status']='failed';(folder/'job.json').write_text(json.dumps(record,ensure_ascii=False,indent=2),'utf8')
+        error=next((v for k,v in history['status'].get('messages',[]) if k=='execution_error'),{})
+        print(json.dumps({'job':str(folder),'status':'failed','node':error.get('node_type'),'error':error.get('exception_message','')[:500]}));return False
     files=[]
     for node,out in history['outputs'].items():
         for item in out.get('images',[]):
@@ -54,7 +56,7 @@ def collect(folder):
             dest=folder/item['filename'];shutil.copy2(source,dest)
             files.append({'path':str(dest.relative_to(ROOT).as_posix()),'sha256':hashlib.sha256(dest.read_bytes()).hexdigest()})
     record.update(status='generated-unreviewed',outputs=files)
-    (folder/'job.json').write_text(json.dumps(record,ensure_ascii=False,indent=2),'utf8');print(json.dumps(record,ensure_ascii=False));return True
+    (folder/'job.json').write_text(json.dumps(record,ensure_ascii=False,indent=2),'utf8');print(json.dumps({'job':str(folder),'status':record['status'],'files':len(files)},ensure_ascii=False));return True
 
 def main():
     p=argparse.ArgumentParser();sub=p.add_subparsers(dest='mode',required=True)
