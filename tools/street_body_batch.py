@@ -1,5 +1,5 @@
 """Generate motion only from manually reviewed identity poses. No automatic art approval."""
-import argparse,hashlib,json,shutil
+import argparse,hashlib,json,re,shutil
 from pathlib import Path
 from PIL import Image
 from street_comfy import ROOT,COMFY,submit
@@ -35,7 +35,7 @@ for hid in reversed(a.ids):
  if (base/name).exists():continue
  poses={};rows={kind:next(r for r in plan if r['heroId']==hid and r['slot']==slot) for kind,slot in [('attack','普攻'),('skill','大招')]}
  for kind in ['attack','skill']:
-  candidates=sorted(base.glob(f'hero{hid:03}-{kind}-v*'),reverse=True)
+  candidates=sorted(base.glob(f'hero{hid:03}-{kind}-v*'),key=lambda f:int(re.search(r'-v(\d+)',f.name).group(1)),reverse=True)
   folder=next((f for f in candidates if (f/'qa.json').exists() and json.loads((f/'qa.json').read_text('utf8'))['manualReview']=='approved'),None)
   if not folder:raise RuntimeError(f'{hid} {kind} has no manually approved pose')
   poses[kind]=ROOT/json.loads((folder/'qa.json').read_text('utf8'))['image']
@@ -50,12 +50,17 @@ for hid in reversed(a.ids):
  if str(hid) in overrides:
   actual=overrides[str(hid)]
   for kind in rows:rows[kind]=dict(rows[kind],bodyDesign=actual[kind],weaponObservation=actual['prop'])
- prompt=f'''One fixed-camera production sprite animation of the EXACT character shown in the guide images. Same identity, face, horns, hair, outfit, colors, anatomy and ALL held props throughout. Premium tactile 2.5D semi-realistic semi-cartoon absurd neighborhood game style. Full body, head, feet and weapon visible with generous safe margins on all sides. Pure black featureless background. No camera movement, no environment, no other person, no duplicate limbs, no invented weapon, no VFX; never lose a held prop.
- The three-second clip has exactly TWO separate coherent actions. Frames0-35: start in provided idle, perform ONE normal attack matching the attack guide around frame16, smoothly recover to idle at frame36. Normal action intent: {rows['attack']['bodyDesign']}; prop/body observation: {rows['attack']['weaponObservation']}. Frames36-72: perform ONE distinct special-skill gesture matching the skill guide around frame54, recover to original idle by frame72. Skill physical movement: {rows['skill']['bodyDesign']}; actual prop observation: {rows['skill']['weaponObservation']}. Respect the provided props: if playing an instrument, animate playing it; if casting or supporting, animate the gesture rather than inventing a melee punch. No repeated attacks. The game handles travel separately: keep foot/root position fixed; no walking, sliding, or body scale drift. Natural shoulder/elbow mechanics and cloth follow-through; crisp readable silhouette without motion blur.'''
- prompt+='\nThis is a NONMAGICAL motion-capture rehearsal of body mechanics only. The separate game layer renders all energy. No visible light, flame, smoke, particles, slash trail, shockwave, glow, energy ball or secondary animation may appear. Maintain physical props at constant length. After reaching each guide pose, HOLD it briefly and then recover exactly to idle; do not add a second strike. Movements stay inside central70% of the canvas.'
+ else:raise RuntimeError(f'{hid} needs individually observed physical action/prop overrides before new generation')
+ for kind in rows:
+  assert not any(text in rows[kind]['bodyDesign'] for text in ['蓄能','释放能量','能量收束','待立绘核对']),'Body action description still contains an unreviewed effect/placeholder instruction'
+ split,peakA,peakB=(36,16,54) if a.length==73 else (62,28,92)
+ prompt=f'''One locked-camera studio rehearsal showing the EXACT single costumed character in the reference images. Same face, horns, hair, outfit, fabric, colors, anatomy and all original held objects in every frame. Tactile 2.5D semi-realistic semi-cartoon absurd neighborhood production style. Entire character, head, hands, feet, tail and complete objects remain fully visible with safe blank margins. Matte black featureless studio background and constant soft neutral illumination.
+ Two physical pantomime exercises, each performed ONCE through natural intermediate joint positions. Exercise A, frames0-{split-1}: start in the relaxed reference posture, prepare the movement, reach the second reference posture near frame{peakA}, then recover continuously to the relaxed posture by frame{split}. Exact physical movement: {rows['attack']['bodyDesign']}. Observed real objects and hand assignment: {rows['attack']['weaponObservation']}.
+ Exercise B, frames{split}-{a.length-1}: start relaxed, prepare and perform this distinct physical gesture, reach the third reference posture near frame{peakB}, then recover to the original relaxed posture by frame{a.length-1}. Exact physical movement: {rows['skill']['bodyDesign']}. Observed objects: {rows['skill']['weaponObservation']}.
+ Keep both feet/root in their original location. Animate grounded knees, shoulders, elbows and wrists with natural cloth follow-through. Maintain one coherent body and constant object lengths/hand assignments. Crisp clean silhouette and continuous movement through preparation, extension and recovery; only a brief natural pause. No walking, sliding, zoom, camera movement, duplicated anatomy, invented objects, secondary light effects, streaks, particles, sparks, motion-blur shapes or backdrop changes. This is a quiet physical studio rehearsal, with only the original character and physical costume/objects visible.'''
  if a.retain_lit_prop:
   assert hid==83,'Only83 has a manually reviewed luminous orb as part of its persistent identity'
-  prompt=prompt.replace('This is a NONMAGICAL motion-capture rehearsal of body mechanics only. The separate game layer renders all energy. No visible light, flame, smoke, particles, slash trail, shockwave, glow, energy ball or secondary animation may appear.','This is a physical rehearsal without added combat effects. Preserve the ONE existing luminous fire orb continuously in the original RIGHT palm; LEFT palm may support it in the attack guide. Preserve its original warm core/rim and the original costume mane/tail-tip appearance. The held reference orb is an identity prop, not an outgoing attack effect. Never extinguish, multiply, throw or detach this existing orb. Do not add beams, trails, smoke, particles, flashes, explosions or any second orb.')
+  prompt+=' Preserve the ONE existing luminous fire orb continuously in the original RIGHT palm; LEFT palm may support this same orb. Preserve original warm core/rim and costume mane/tail tip. This existing held identity object must never be extinguished, multiplied, thrown or detached. No extra light shapes or second orb.'
  g=json.loads(json.dumps(template));g['4']['inputs']['image']=files['idle'];g['5']['inputs']['image']=files['attack'];g['6']['inputs']['image']=files['skill'];g['7']['inputs']['prompt']=prompt
  if a.base_steps:
   g['19']['inputs']['model']=['1',0];del g['11'];g['12']['inputs']['steps']=a.base_steps
@@ -82,7 +87,6 @@ for hid in reversed(a.ids):
   g['7']['inputs']['prompt']+=' Every transition must be continuously animated through intermediate anatomy. Never cut, dissolve, teleport or switch instantly between held reference stills. Show anticipation, extension, follow-through and continuous recovery for each action.'
   if a.length==124:
    g['7']['inputs']['length']=124
-   g['7']['inputs']['prompt']=g['7']['inputs']['prompt'].replace('three-second','five-second').replace('Frames0-35','Frames0-61').replace('frame16','frame28').replace('frame36','frame62').replace('Frames36-72','Frames62-123').replace('frame54','frame92').replace('frame72','frame123')
    for node,frame in [('8',28),('9',62),('10',92)]:g[node]['inputs']['frame_idx']=frame
    g['7']['inputs']['prompt']+=' Both actions face viewer RIGHT only. Never turn or strike toward viewer LEFT. Anticipation is a small backward elbow/body compression, never a mirrored opposite-facing reference pose. No second face, no blended duplicate eyes, horns or muzzle.'
  folder=submit(g,name,front=not a.queue_tail)

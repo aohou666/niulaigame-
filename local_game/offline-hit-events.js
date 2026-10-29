@@ -1,11 +1,11 @@
 (function(global){
  'use strict';
  var installed=false,audit={installed:false,ignoredStartupMarkers:[],forwardedImpactEvents:0};
- // Recovered 082_03 has an immediate pia marker and a second actual gesture pia.
+ // Recovered 082_03 and084_01 have an immediate pia marker and a second actual gesture pia.
  // The once-trigger battle callback previously consumed the immediate marker and
  // returned to idle around native frame10, before the authored frame28/31 gesture.
  // Keep the native event stream intact; only defer this battle callback.
- var paired={hero_082_03:{gongji:28,jineng:31},hero_082_03_ez:{gongji:28,jineng:31}};
+ var paired={hero_082_03:{gongji:28,jineng:31},hero_082_03_ez:{gongji:28,jineng:31},hero_084_01:{gongji:24,jineng:31},hero_084_01_ez:{gongji:24,jineng:31}};
  function install(){
   if(installed||!global.DBPlayer)return;
   var p=DBPlayer.prototype,original=p.frameHandler;

@@ -1,0 +1,87 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "model": "hero_084_01",
+      "action": "jineng",
+      "native": [
+        {
+          "name": "pia",
+          "time": 0
+        },
+        {
+          "name": "pia",
+          "time": 1.0333333333333334
+        }
+      ],
+      "callbacks": [
+        {
+          "elapsedMs": 1027.7000000029802,
+          "key": "pia",
+          "nativeFrame": 31,
+          "sourceFrame": 78
+        }
+      ],
+      "authored": [
+        {
+          "name": "pia",
+          "timeMs": 0,
+          "frame0": 0
+        },
+        {
+          "name": "pia",
+          "timeMs": 1033.3333333333335,
+          "frame0": 31
+        }
+      ],
+      "expectedMs": 1033.3333333333335,
+      "fps": 30
+    },
+    {
+      "model": "hero_084_01_ez",
+      "action": "jineng",
+      "native": [
+        {
+          "name": "pia",
+          "time": 0
+        },
+        {
+          "name": "pia",
+          "time": 1.0333333333333334
+        }
+      ],
+      "callbacks": [
+        {
+          "elapsedMs": 1038.5,
+          "key": "pia",
+          "nativeFrame": 31,
+          "sourceFrame": 78
+        }
+      ],
+      "authored": [
+        {
+          "name": "pia",
+          "timeMs": 0,
+          "frame0": 0
+        },
+        {
+          "name": "pia",
+          "timeMs": 1033.3333333333335,
+          "frame0": 31
+        }
+      ],
+      "expectedMs": 1033.3333333333335,
+      "fps": 30
+    }
+  ],
+  "after": {
+    "installed": true,
+    "framesPresented": 110,
+    "actions": {
+      "jineng": 110
+    },
+    "errors": [],
+    "caches": [],
+    "active": []
+  }
+}

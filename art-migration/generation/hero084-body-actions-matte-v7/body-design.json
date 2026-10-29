@@ -1,0 +1,404 @@
+{
+  "heroId": 84,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/084/portrait.png",
+      "prepared": "art-migration/references/body-084-v7/idle.png",
+      "foot": [
+        383.55,
+        700
+      ],
+      "size": [
+        275,
+        500
+      ],
+      "sha256": "a22b44be89d237c63c002804c0cb73aabb2e4b5c7a1b63fb59a56b2c2e92e8fe"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero084-attack-v7/official-guide.png",
+      "prepared": "art-migration/references/body-084-v7/attack.png",
+      "foot": [
+        384.08,
+        700
+      ],
+      "size": [
+        368,
+        500
+      ],
+      "sha256": "210702ae30cfd8528510c62602c495c3bc5aa4ba3e7fc7d2ea79eab63ae90d5c"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero084-skill-v7/official-guide.png",
+      "prepared": "art-migration/references/body-084-v7/skill.png",
+      "foot": [
+        384.39,
+        700
+      ],
+      "size": [
+        361,
+        500
+      ],
+      "sha256": "f2972d7ff4036113d52afde493b378623214dccf1aa467aa071528e5ce4d783c"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        61
+      ],
+      "guideImpactFrame": 28,
+      "native": {
+        "taskId": "H084-ATK",
+        "heroId": 84,
+        "name": "蛇",
+        "originalName": "魔贾诩",
+        "slot": "普攻",
+        "skillId": 550840110,
+        "skillName": "普通攻击",
+        "newSkillName": "蛇影轻探",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "待确认",
+        "movement": "未解析（运行时可能使用无特效兜底）",
+        "weapon": "徒手／能量",
+        "weaponObservation": "Empty purple hands in same green snake/crocodile suit, cream belly, hood tongue, horns and curled tail unchanged.",
+        "effectClass": "角色动作/特殊机制（未列独立特效）",
+        "semantic": "直接伤害",
+        "bodyDesign": "Unfold arms, make ONE compact anatomical LEFT empty-hand fist punch toward viewer RIGHT matching guide; RIGHT fist guards chest. Recover smoothly to crossed-arm idle.",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B08",
+        "status": "需复核：原表现键在g_skill中不存在，需验证兜底路径",
+        "reviewReasons": [
+          "原表现键在g_skill中不存在，需验证兜底路径"
+        ],
+        "skillDesc": "对敌方前排单体造成150%伤害。",
+        "skillModel": "common_skinskill_jiaxu_pg",
+        "model": "hero_084_01",
+        "action": "gongji",
+        "effectiveDesc": "对敌方前排单体造成150%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1733.333,
+        "fps": 30,
+        "durationFrames": 52,
+        "rawEvents": [
+          {
+            "frame0": 0,
+            "timeMs": 0.0,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 24,
+            "timeMs": 800.0,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@0.0ms（角色事件）；pia@800.0ms（角色事件）",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {},
+        "effectDetails": [],
+        "effectText": "",
+        "variants": [
+          "common_skinskill_jiaxu_pg"
+        ],
+        "portrait": "reskin/hero_084.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        62,
+        123
+      ],
+      "guideImpactFrame": 92,
+      "native": {
+        "taskId": "H084-ULT",
+        "heroId": 84,
+        "name": "蛇",
+        "originalName": "魔贾诩",
+        "slot": "大招",
+        "skillId": 550690210,
+        "skillName": "铁口直言",
+        "newSkillName": "幽影直言",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "原地远程作用",
+        "movement": "原站位出手",
+        "weapon": "徒手／能量",
+        "weaponObservation": "Empty purple hands in same green snake/crocodile suit, cream belly, hood tongue, horns and curled tail unchanged.",
+        "effectClass": "目标位置特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "Unfold both arms and present BOTH EMPTY OPEN PALMS forward at chest height matching guide, then fold back to original idle. No held object.",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B08",
+        "status": "需复核：原包共用田丰大招表现/技能；保留实际配置，角色专属设计待核定",
+        "reviewReasons": [
+          "原包共用田丰大招表现/技能；保留实际配置，角色专属设计待核定"
+        ],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_tianfeng_02",
+        "model": "hero_084_01",
+        "action": "jineng",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 2333.333,
+        "fps": 30,
+        "durationFrames": 70,
+        "rawEvents": [
+          {
+            "frame0": 0,
+            "timeMs": 0.0,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 31,
+            "timeMs": 1033.333,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@0.0ms（角色事件）；pia@1033.3ms（角色事件）",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "effectsTarEnemy": [
+            {
+              "delay": 500,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_tianfeng_02"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_tianfeng_02",
+            "delay": 500,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_tianfeng_02_24d07109.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_tianfeng_02",
+                  "name": "common_skill_tianfeng_02",
+                  "fps": 24,
+                  "durationFrames": 40,
+                  "durationMs": 1666.667,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        1
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 7,
+                      "timeMs": 291.667,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_tianfeng_02 delay=500 dt=None speed=1 事件=pia@291.7",
+        "variants": [
+          "common_skill_tianfeng_02"
+        ],
+        "portrait": "reskin/hero_084.png"
+      }
+    }
+  },
+  "length": 124,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "approved-for-matting",
+  "runtimeIntegrated": false,
+  "sparseGuideSchedule": [
+    {
+      "frame": 0,
+      "image": "idle"
+    },
+    {
+      "frame": 28,
+      "image": "attack"
+    },
+    {
+      "frame": 62,
+      "image": "idle"
+    },
+    {
+      "frame": 92,
+      "image": "skill"
+    },
+    {
+      "frame": 123,
+      "image": "idle"
+    }
+  ],
+  "temporalReviewRequired": true,
+  "sourceBodyJob": "art-migration/generation/hero084-body-actions-minimax-v7",
+  "sourceFrameOrder": [
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00271_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00272_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00273_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00274_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00275_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00276_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00277_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00278_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00279_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00280_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00281_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00282_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00283_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00284_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00285_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00286_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00287_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00288_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00289_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00290_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00291_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00292_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00293_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00294_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00295_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00296_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00297_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00298_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00299_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00300_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00301_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00302_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00303_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00304_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00305_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00306_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00307_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00308_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00309_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00310_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00311_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00312_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00313_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00314_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00315_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00316_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00317_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00318_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00319_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00320_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00321_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00322_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00323_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00324_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00325_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00326_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00327_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00328_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00329_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00330_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00331_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00332_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00333_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00334_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00335_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00336_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00337_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00338_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00339_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00340_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00341_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00342_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00343_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00344_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00345_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00346_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00347_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00348_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00349_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00350_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00351_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00352_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00353_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00354_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00355_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00356_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00357_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00358_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00359_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00360_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00361_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00362_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00363_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00364_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00365_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00366_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00367_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00368_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00369_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00370_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00371_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00372_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00373_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00374_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00375_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00376_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00377_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00378_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00379_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00380_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00381_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00382_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00383_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00384_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00385_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00386_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00387_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00388_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00389_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00390_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00391_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00392_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00393_.png",
+    "art-migration/generation/hero084-body-actions-minimax-v7/hero084_body_00394_.png"
+  ]
+}

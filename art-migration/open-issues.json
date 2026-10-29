@@ -32,5 +32,14 @@
     "evidence": "versions/0.48.0/motion-quality-audit.json; versions/0.48.0/motion-quarantine-runtime.json",
     "mitigation": "32 high-concentration clips conservatively quarantined for attack/skill and original native actions restored; all68 target attack/skill completeness approvals withdrawn pending continuous-motion review. No generated image or native event timing evidence counted as full motion approval.",
     "next": "Validate sparse trained-range124-frame generation without turbo LoRA in one pilot before further batches; visually re-review all existing body actions and regenerate failures."
+  },
+  {
+    "id": "HIT-084-STARTUP-MARKER",
+    "status": "resolved",
+    "observed": "Actual basic/EZ once-trigger callbacks fired at3.4/12.3ms on original pia0 while visible movement impact is authored pia24 at800ms; later skill marker pia31 at1033ms.",
+    "rootCause": "Recovered084 paired startup marker was absent from existing narrowly scoped082 startup deferral list.",
+    "fix": "Defer only084 basic/EZ callback at0; keep native event stream, timings and authored markers unchanged.",
+    "evidence": "versions/0.50.0/hero84-startup-impact-before-fix.json; versions/0.50.0/hero84-attack-hit-runtime.json; versions/0.50.0/hero84-skill-hit-runtime.json; versions/0.50.0/hero84-battle.json",
+    "rechecks": "Both models actual attack callback at authored24/source18; both actual skill callback31/source78; native event stream and completed timing checked; target8enemy battle passed."
   }
 ]

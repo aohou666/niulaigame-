@@ -1,0 +1,85 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "model": "hero_084_01",
+      "native": [
+        {
+          "name": "pia",
+          "time": 0
+        },
+        {
+          "name": "pia",
+          "time": 0.8
+        }
+      ],
+      "callbacks": [
+        {
+          "elapsedMs": 795.8999999985099,
+          "key": "pia",
+          "nativeFrame": 24,
+          "sourceFrame": 18
+        }
+      ],
+      "authored": [
+        {
+          "name": "pia",
+          "timeMs": 0,
+          "frame0": 0
+        },
+        {
+          "name": "pia",
+          "timeMs": 800,
+          "frame0": 24
+        }
+      ],
+      "expectedMs": 800,
+      "fps": 30
+    },
+    {
+      "model": "hero_084_01_ez",
+      "native": [
+        {
+          "name": "pia",
+          "time": 0
+        },
+        {
+          "name": "pia",
+          "time": 0.8
+        }
+      ],
+      "callbacks": [
+        {
+          "elapsedMs": 804.8999999985099,
+          "key": "pia",
+          "nativeFrame": 24,
+          "sourceFrame": 18
+        }
+      ],
+      "authored": [
+        {
+          "name": "pia",
+          "timeMs": 0,
+          "frame0": 0
+        },
+        {
+          "name": "pia",
+          "timeMs": 800,
+          "frame0": 24
+        }
+      ],
+      "expectedMs": 800,
+      "fps": 30
+    }
+  ],
+  "after": {
+    "installed": true,
+    "framesPresented": 92,
+    "actions": {
+      "gongji": 92
+    },
+    "errors": [],
+    "caches": [],
+    "active": []
+  }
+}

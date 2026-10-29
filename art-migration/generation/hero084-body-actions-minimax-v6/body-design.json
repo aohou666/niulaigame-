@@ -1,0 +1,277 @@
+{
+  "heroId": 84,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/084/portrait.png",
+      "prepared": "art-migration/references/body-084-v6/idle.png",
+      "foot": [
+        383.55,
+        700
+      ],
+      "size": [
+        275,
+        500
+      ],
+      "sha256": "a22b44be89d237c63c002804c0cb73aabb2e4b5c7a1b63fb59a56b2c2e92e8fe"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero084-attack-v2/hero084_attack_alpha_00001_.png",
+      "prepared": "art-migration/references/body-084-v6/attack.png",
+      "foot": [
+        383.51,
+        700
+      ],
+      "size": [
+        312,
+        500
+      ],
+      "sha256": "9212193a09981262cb9968aaa663f25a297d48ebf6215ea2e537c14aaf13c575"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero084-skill-v2/hero084_skill_alpha_00001_.png",
+      "prepared": "art-migration/references/body-084-v6/skill.png",
+      "foot": [
+        384.37,
+        700
+      ],
+      "size": [
+        286,
+        500
+      ],
+      "sha256": "bd6c63a9a14ddb70efc98faad2b49468307dab2f750c2112182bcd8a6ed0c894"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        61
+      ],
+      "guideImpactFrame": 28,
+      "native": {
+        "taskId": "H084-ATK",
+        "heroId": 84,
+        "name": "蛇",
+        "originalName": "魔贾诩",
+        "slot": "普攻",
+        "skillId": 550840110,
+        "skillName": "普通攻击",
+        "newSkillName": "蛇影轻探",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "待确认",
+        "movement": "未解析（运行时可能使用无特效兜底）",
+        "weapon": "徒手／能量",
+        "weaponObservation": "蛇装角色，双臂交叉",
+        "effectClass": "角色动作/特殊机制（未列独立特效）",
+        "semantic": "直接伤害",
+        "bodyDesign": "核心/手部蓄能→定向释放→能量收束",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B08",
+        "status": "需复核：原表现键在g_skill中不存在，需验证兜底路径",
+        "reviewReasons": [
+          "原表现键在g_skill中不存在，需验证兜底路径"
+        ],
+        "skillDesc": "对敌方前排单体造成150%伤害。",
+        "skillModel": "common_skinskill_jiaxu_pg",
+        "model": "hero_084_01",
+        "action": "gongji",
+        "effectiveDesc": "对敌方前排单体造成150%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1733.333,
+        "fps": 30,
+        "durationFrames": 52,
+        "rawEvents": [
+          {
+            "frame0": 0,
+            "timeMs": 0.0,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 24,
+            "timeMs": 800.0,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@0.0ms（角色事件）；pia@800.0ms（角色事件）",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {},
+        "effectDetails": [],
+        "effectText": "",
+        "variants": [
+          "common_skinskill_jiaxu_pg"
+        ],
+        "portrait": "reskin/hero_084.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        62,
+        123
+      ],
+      "guideImpactFrame": 92,
+      "native": {
+        "taskId": "H084-ULT",
+        "heroId": 84,
+        "name": "蛇",
+        "originalName": "魔贾诩",
+        "slot": "大招",
+        "skillId": 550690210,
+        "skillName": "铁口直言",
+        "newSkillName": "幽影直言",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "原地远程作用",
+        "movement": "原站位出手",
+        "weapon": "徒手／能量",
+        "weaponObservation": "蛇装角色，双臂交叉",
+        "effectClass": "目标位置特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "核心/手部蓄能→定向释放→能量收束",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B08",
+        "status": "需复核：原包共用田丰大招表现/技能；保留实际配置，角色专属设计待核定",
+        "reviewReasons": [
+          "原包共用田丰大招表现/技能；保留实际配置，角色专属设计待核定"
+        ],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_tianfeng_02",
+        "model": "hero_084_01",
+        "action": "jineng",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 2333.333,
+        "fps": 30,
+        "durationFrames": 70,
+        "rawEvents": [
+          {
+            "frame0": 0,
+            "timeMs": 0.0,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 31,
+            "timeMs": 1033.333,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@0.0ms（角色事件）；pia@1033.3ms（角色事件）",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "effectsTarEnemy": [
+            {
+              "delay": 500,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_tianfeng_02"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_tianfeng_02",
+            "delay": 500,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_tianfeng_02_24d07109.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_tianfeng_02",
+                  "name": "common_skill_tianfeng_02",
+                  "fps": 24,
+                  "durationFrames": 40,
+                  "durationMs": 1666.667,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        1
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 7,
+                      "timeMs": 291.667,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_tianfeng_02 delay=500 dt=None speed=1 事件=pia@291.7",
+        "variants": [
+          "common_skill_tianfeng_02"
+        ],
+        "portrait": "reskin/hero_084.png"
+      }
+    }
+  },
+  "length": 124,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false,
+  "sparseGuideSchedule": [
+    {
+      "frame": 0,
+      "image": "idle"
+    },
+    {
+      "frame": 28,
+      "image": "attack"
+    },
+    {
+      "frame": 62,
+      "image": "idle"
+    },
+    {
+      "frame": 92,
+      "image": "skill"
+    },
+    {
+      "frame": 123,
+      "image": "idle"
+    }
+  ],
+  "temporalReviewRequired": true
+}

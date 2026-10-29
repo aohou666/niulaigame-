@@ -1,0 +1,342 @@
+{
+  "heroId": 80,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/080/portrait.png",
+      "prepared": "art-migration/references/body-080-v6/idle.png",
+      "foot": [
+        384.39,
+        700
+      ],
+      "size": [
+        225,
+        500
+      ],
+      "sha256": "37fd2b3be881eb48f4b749fa90dddfb11d3ec3887ea973394920d95b333d5526"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero080-attack-v2/hero080_attack_alpha_00001_.png",
+      "prepared": "art-migration/references/body-080-v6/attack.png",
+      "foot": [
+        384.08,
+        700
+      ],
+      "size": [
+        272,
+        500
+      ],
+      "sha256": "369f831158450bf159bb4bcb9570ea55cb84b318282537464d8a1651f00917c6"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero080-skill-v2/hero080_skill_alpha_00001_.png",
+      "prepared": "art-migration/references/body-080-v6/skill.png",
+      "foot": [
+        384.37,
+        700
+      ],
+      "size": [
+        249,
+        500
+      ],
+      "sha256": "77c169972083d06cbdd08f4bfe2d531947c145ec5251401a7d8cb0e06b78ff25"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        61
+      ],
+      "guideImpactFrame": 28,
+      "native": {
+        "taskId": "H080-ATK",
+        "heroId": 80,
+        "name": "舞狮牛",
+        "originalName": "神张飞",
+        "slot": "普攻",
+        "skillId": 550800110,
+        "skillName": "普通攻击",
+        "newSkillName": "醒狮踏步",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "近身攻击",
+        "movement": "移到目标前出手",
+        "weapon": "徒手／舞狮",
+        "weaponObservation": "舞狮造型",
+        "effectClass": "目标位置特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "收臂蓄力→拳/掌/肘击→回到待机",
+        "rootPolicy": "引擎负责接近与返回；视频固定根位置，只做出手",
+        "batch": "B02",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_shenzhangfei_01",
+        "model": "hero_080_03",
+        "action": "gongji",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "wuqi",
+        "rawDurationMs": 1233.333,
+        "fps": 30,
+        "durationFrames": 37,
+        "rawEvents": [
+          {
+            "frame0": 13,
+            "timeMs": 433.333,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@433.3ms（角色事件）",
+        "impactMs": [
+          433.333
+        ],
+        "impactStatus": "角色pia直接回调；待游戏内验收",
+        "performance": {
+          "__tag": "神张飞普攻",
+          "effectsTarEnemy": [
+            {
+              "delay": 0,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_shenzhangfei_01"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            2,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_shenzhangfei_01",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_shenzhangfei_01_76cc1e17.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_shenzhangfei_01",
+                  "name": "common_skill_shenzhangfei_01",
+                  "fps": 24,
+                  "durationFrames": 15,
+                  "durationMs": 625.0,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_shenzhangfei_01_cjb",
+                  "name": "common_skill_shenzhangfei_01_cjb",
+                  "fps": 24,
+                  "durationFrames": 8,
+                  "durationMs": 333.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_shenzhangfei_01 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_shenzhangfei_01"
+        ],
+        "portrait": "reskin/hero_080.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        62,
+        123
+      ],
+      "guideImpactFrame": 92,
+      "native": {
+        "taskId": "H080-ULT",
+        "heroId": 80,
+        "name": "舞狮牛",
+        "originalName": "神张飞",
+        "slot": "大招",
+        "skillId": 550800210,
+        "skillName": "煞星神愤",
+        "newSkillName": "破浪狮愤",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "全体",
+        "delivery": "原地远程作用",
+        "movement": "原站位出手",
+        "weapon": "徒手／舞狮",
+        "weaponObservation": "舞狮造型",
+        "effectClass": "施法者特效",
+        "semantic": "暴怒",
+        "bodyDesign": "收臂蓄力→拳/掌/肘击→回到待机；命中覆盖由独立目标特效控制",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B06",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "怒气值上限变为8点,满怒气时立即进入<暴怒>状态,解除自身所有控制,提高30%攻击和15%免伤,持续2回合；对敌方全体造成200%伤害。",
+        "skillModel": "common_skill_shenzhangfei_03",
+        "model": "hero_080_03",
+        "action": "jineng",
+        "effectiveDesc": "怒气值上限变为8点,满怒气时立即进入<暴怒>状态,解除自身所有控制,提高30%攻击和15%免伤,持续2回合；对敌方全体造成200%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "wuqi",
+        "rawDurationMs": 2266.667,
+        "fps": 30,
+        "durationFrames": 68,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "__tag": "神张飞主动",
+          "effectSrc": [
+            {
+              "delay": 0,
+              "notFollowParent": 1,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "timeScale": 1.5,
+              "src": [
+                "common_skill_shenzhangfei_03_1"
+              ]
+            },
+            {
+              "delay": 0,
+              "notFollowParent": 1,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "timeScale": 1.5,
+              "z": 0,
+              "src": [
+                "common_skill_shenzhangfei_03_2"
+              ]
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectSrc",
+            "resource": "common_skill_shenzhangfei_03_1",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1.5,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_shenzhangfei_03_1_50ce8a5e.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_shenzhangfei_03_1",
+                  "name": "common_skill_shenzhangfei_03_1",
+                  "fps": 24,
+                  "durationFrames": 40,
+                  "durationMs": 1666.667,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_shenzhangfei_03_sd",
+                  "name": "common_skill_shenzhangfei_03_sd",
+                  "fps": 24,
+                  "durationFrames": 27,
+                  "durationMs": 1125.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectSrc",
+            "resource": "common_skill_shenzhangfei_03_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1.5,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_shenzhangfei_03_2_58bbd207.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_shenzhangfei_03_2",
+                  "name": "common_skill_shenzhangfei_03_2",
+                  "fps": 24,
+                  "durationFrames": 40,
+                  "durationMs": 1666.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectSrc: common_skill_shenzhangfei_03_1 delay=0 dt=None speed=1.5\neffectSrc: common_skill_shenzhangfei_03_2 delay=0 dt=None speed=1.5",
+        "variants": [
+          "common_skill_shenzhangfei_03"
+        ],
+        "portrait": "reskin/hero_080.png"
+      }
+    }
+  },
+  "length": 124,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false,
+  "sparseGuideSchedule": [
+    {
+      "frame": 0,
+      "image": "idle"
+    },
+    {
+      "frame": 28,
+      "image": "attack"
+    },
+    {
+      "frame": 62,
+      "image": "idle"
+    },
+    {
+      "frame": 92,
+      "image": "skill"
+    },
+    {
+      "frame": 123,
+      "image": "idle"
+    }
+  ],
+  "temporalReviewRequired": true
+}

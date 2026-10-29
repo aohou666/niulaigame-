@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {createRequire} from 'node:module';
 const require=createRequire(import.meta.url);
 const {chromium}=require('C:/Users/dongdong/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const version=process.argv.find(v=>v.startsWith('--version='))?.split('=')[1]||'0.48.0',expectedCount=Number(process.argv.find(v=>v.startsWith('--expected-count='))?.split('=')[1]||32);
 const browser=await chromium.launch({channel:'chrome',headless:true});
 const report={pass:false,errors:[],rows:[]};
 try {
@@ -11,7 +12,7 @@ try {
  await page.goto('http://127.0.0.1:8787/index_bh_lite3zbtest_andr.html?mode=heroes');
  await page.waitForFunction(()=>window.StreetBody?.snapshot().installed);
  const configs=await page.evaluate(()=>StreetBodyData.characters.filter(c=>c.qualityQuarantineActions?.length));
- assert.equal(configs.length,32);
+ assert.equal(configs.length,expectedCount);
  for(const cfg of configs){
   const row=await page.evaluate(async cfg=>{
    const container=new egret.DisplayObjectContainer();egret.MainContext.instance.stage.addChild(container);
@@ -44,7 +45,7 @@ try {
  }
  assert.equal(report.errors.length,0);report.pass=true;
 } finally {
- await fs.mkdir('art-migration/versions/0.48.0',{recursive:true});
- await fs.writeFile('art-migration/versions/0.48.0/motion-quarantine-runtime.json',JSON.stringify(report,null,2));
+ await fs.mkdir('art-migration/versions/'+version,{recursive:true});
+ await fs.writeFile('art-migration/versions/'+version+'/motion-quarantine-runtime.json',JSON.stringify(report,null,2));
  await browser.close();
 }
