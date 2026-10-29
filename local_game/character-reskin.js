@@ -144,6 +144,7 @@
             };
         }
         if(global.CharacterArt)global.CharacterArt.install();
+        if(global.StreetArt)global.StreetArt.install();
         ready = true;
         installCatalog();
         console.log('[RESKIN] protected configuration verified', JSON.stringify(global.CharacterReskinAudit));

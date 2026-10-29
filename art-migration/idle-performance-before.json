@@ -1,0 +1,1689 @@
+{
+  "idle": {
+    "roster": {
+      "expected": 86,
+      "owned": 86,
+      "added": [],
+      "missing": []
+    },
+    "nativeOwned": 86,
+    "installed": true,
+    "mappedHeroes": 85,
+    "framesPresented": 1311,
+    "modelRequests": {
+      "hero_077_03_ez": 1,
+      "hero_075_03_ez": 1,
+      "hero_094_03_ez": 1,
+      "hero_079_03_ez": 1,
+      "hero_076_03_ez": 1,
+      "hero_082_03_ez": 1,
+      "hero_069_01_ez": 1,
+      "hero_009_01_ez": 1,
+      "hero_066_01_ez": 1,
+      "hero_022_01_ez": 1,
+      "hero_016_01_ez": 1,
+      "hero_015_01_ez": 1,
+      "hero_027_01_ez": 1,
+      "hero_035_01_ez": 1,
+      "common_zhandoukaishi": 1,
+      "common_skill_huangyueying_01_1_ez": 1,
+      "common_skill_huangyueying_01_2_ez": 1,
+      "common_skill_zhaoyun_01_ez": 1,
+      "common_skill_guanyu_02_ez": 1,
+      "common_skill_tongyongjz_01_2_ez": 2,
+      "common_skill_hejin_01_1_ez": 1,
+      "common_skill_hejin_01_2_ez": 1
+    },
+    "actionRestores": 7,
+    "lastUnbound": {
+      "name": "common_skill_hejin_01_2_ez"
+    },
+    "attachedHeroes": {
+      "9": "waimainiu_外卖牛",
+      "15": "gonglueniu_攻略牛",
+      "16": "chuiwang_锤王",
+      "22": "jiqiniu_机器牛",
+      "27": "niu_牛",
+      "35": "saiboniu_赛博牛",
+      "66": "zhu_猪",
+      "69": "pingdanniu_平淡牛",
+      "75": "bianyiniu_变异牛",
+      "76": "hu_虎",
+      "77": "foxiniu_佛系牛",
+      "79": "chuanqiniu_传奇牛",
+      "82": "jiege_杰哥",
+      "94": "xulao_许老"
+    },
+    "modelKeys": [
+      [
+        "hero_001_01",
+        0
+      ],
+      [
+        "hero_002_01",
+        2
+      ],
+      [
+        "hero_003_01",
+        3
+      ],
+      [
+        "hero_004_01",
+        4
+      ]
+    ],
+    "errors": [],
+    "active": [
+      {
+        "hero": 77,
+        "material": "foxiniu_佛系牛",
+        "frame": 17,
+        "frames": 73,
+        "fps": 24,
+        "nativeVisible": false,
+        "action": "daiji",
+        "visible": true,
+        "onStage": true,
+        "fit": {
+          "mode": "battle",
+          "width": 170.58823529411308,
+          "height": 158.82352941176046,
+          "scale": 0.1597676107479986,
+          "x": -32.27305737109572,
+          "y": -131.00944081335885,
+          "drawWidth": 64.54611474219143,
+          "drawHeight": 131.00944081335885,
+          "bodyHeight": 129.41176470587888,
+          "ui": false
+        },
+        "fitRange": {
+          "min": 0.08875978374889208,
+          "max": 0.17751956749778416,
+          "samples": 405
+        },
+        "cache": {
+          "dead": false,
+          "users": 1,
+          "loaded": 73,
+          "pending": 0,
+          "atlas": false,
+          "pages": 0,
+          "decodedBytes": 37675008
+        },
+        "bitmapStage": true,
+        "textureSize": [
+          252,
+          512
+        ],
+        "renderBounds": {
+          "$hashCode": 32089,
+          "x": 237,
+          "y": 383,
+          "width": 56,
+          "height": 112
+        },
+        "ancestors": [
+          {
+            "type": "egret.Bitmap",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 0.2561353759610771
+          },
+          {
+            "type": "DBActor",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "customui.HeroDynamicModel",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "customui.FightModelBG1",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 0.85
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "game.FightUI",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          }
+        ]
+      },
+      {
+        "hero": 75,
+        "material": "bianyiniu_变异牛",
+        "frame": 1,
+        "frames": 54,
+        "fps": 24,
+        "nativeVisible": false,
+        "action": "daiji",
+        "visible": true,
+        "onStage": true,
+        "fit": {
+          "mode": "battle",
+          "width": 170.5882352941188,
+          "height": 158.82352941176046,
+          "scale": 0.15898251192368412,
+          "x": -36.24801271859998,
+          "y": -140.85850556438413,
+          "drawWidth": 72.49602543719996,
+          "drawHeight": 140.85850556438413,
+          "bodyHeight": 129.41176470587888,
+          "ui": false
+        },
+        "fitRange": {
+          "min": 0.08832361773538401,
+          "max": 0.17664723547076802,
+          "samples": 405
+        },
+        "cache": {
+          "dead": false,
+          "users": 1,
+          "loaded": 54,
+          "pending": 0,
+          "atlas": false,
+          "pages": 0,
+          "decodedBytes": 29196288
+        },
+        "bitmapStage": true,
+        "textureSize": [
+          264,
+          512
+        ],
+        "renderBounds": {
+          "$hashCode": 32092,
+          "x": 214,
+          "y": 575,
+          "width": 62,
+          "height": 120
+        },
+        "ancestors": [
+          {
+            "type": "egret.Bitmap",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 0.27460615695909074
+          },
+          {
+            "type": "DBActor",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "customui.HeroDynamicModel",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "customui.FightModelBG1",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 0.85
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "game.FightUI",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          }
+        ]
+      },
+      {
+        "hero": 94,
+        "material": "xulao_许老",
+        "frame": 51,
+        "frames": 56,
+        "fps": 24,
+        "nativeVisible": false,
+        "action": "daiji",
+        "visible": true,
+        "onStage": true,
+        "fit": {
+          "mode": "battle",
+          "width": 170.5882352941188,
+          "height": 158.82352941176046,
+          "scale": 0.1685049019607798,
+          "x": -32.85845588235206,
+          "y": -130.085784313722,
+          "drawWidth": 65.71691176470412,
+          "drawHeight": 130.085784313722,
+          "bodyHeight": 129.41176470587888,
+          "ui": false
+        },
+        "fitRange": {
+          "min": 0.09361383442265962,
+          "max": 0.18722766884531925,
+          "samples": 405
+        },
+        "cache": {
+          "dead": false,
+          "users": 1,
+          "loaded": 56,
+          "pending": 0,
+          "atlas": false,
+          "pages": 0,
+          "decodedBytes": 29704192
+        },
+        "bitmapStage": true,
+        "textureSize": [
+          259,
+          512
+        ],
+        "renderBounds": {
+          "$hashCode": 32094,
+          "x": 197,
+          "y": 804,
+          "width": 56,
+          "height": 111
+        },
+        "ancestors": [
+          {
+            "type": "egret.Bitmap",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 0.25373325005677266
+          },
+          {
+            "type": "DBActor",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "customui.HeroDynamicModel",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "customui.FightModelBG1",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 0.85
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "game.FightUI",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          }
+        ]
+      },
+      {
+        "hero": 79,
+        "material": "chuanqiniu_传奇牛",
+        "frame": 51,
+        "frames": 56,
+        "fps": 24,
+        "nativeVisible": false,
+        "action": "daiji",
+        "visible": true,
+        "onStage": true,
+        "fit": {
+          "mode": "battle",
+          "width": 170.5882352941188,
+          "height": 158.82352941176046,
+          "scale": 0.16938712657837549,
+          "x": -51.154912226669396,
+          "y": -133.81582999691662,
+          "drawWidth": 102.30982445333879,
+          "drawHeight": 133.81582999691662,
+          "bodyHeight": 129.41176470587888,
+          "ui": false
+        },
+        "fitRange": {
+          "min": 0.0941039592102128,
+          "max": 0.1882079184204256,
+          "samples": 405
+        },
+        "cache": {
+          "dead": false,
+          "users": 1,
+          "loaded": 56,
+          "pending": 0,
+          "atlas": false,
+          "pages": 0,
+          "decodedBytes": 44843008
+        },
+        "bitmapStage": true,
+        "textureSize": [
+          391,
+          512
+        ],
+        "renderBounds": {
+          "$hashCode": 32096,
+          "x": 76,
+          "y": 381,
+          "width": 88,
+          "height": 114
+        },
+        "ancestors": [
+          {
+            "type": "egret.Bitmap",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 0.2616619551236286
+          },
+          {
+            "type": "DBActor",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "customui.HeroDynamicModel",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "customui.FightModelBG1",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 0.85
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "game.FightUI",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          }
+        ]
+      },
+      {
+        "hero": 76,
+        "material": "hu_虎",
+        "frame": 72,
+        "frames": 91,
+        "fps": 24,
+        "nativeVisible": false,
+        "action": "daiji",
+        "visible": true,
+        "onStage": true,
+        "fit": {
+          "mode": "battle",
+          "width": 170.5882352941188,
+          "height": 158.82352941176046,
+          "scale": 0.1870112206732354,
+          "x": -47.87487249234826,
+          "y": -134.8350901054027,
+          "drawWidth": 95.74974498469652,
+          "drawHeight": 134.8350901054027,
+          "bodyHeight": 129.41176470587888,
+          "ui": false
+        },
+        "fitRange": {
+          "min": 0.10389512259624652,
+          "max": 0.20779024519249303,
+          "samples": 405
+        },
+        "cache": {
+          "dead": false,
+          "users": 1,
+          "loaded": 91,
+          "pending": 0,
+          "atlas": false,
+          "pages": 0,
+          "decodedBytes": 67837952
+        },
+        "bitmapStage": true,
+        "textureSize": [
+          364,
+          512
+        ],
+        "renderBounds": {
+          "$hashCode": 32098,
+          "x": 59,
+          "y": 580,
+          "width": 82,
+          "height": 115
+        },
+        "ancestors": [
+          {
+            "type": "egret.Bitmap",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 0.26304874995795746
+          },
+          {
+            "type": "DBActor",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "customui.HeroDynamicModel",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "customui.FightModelBG1",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 0.85
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "game.FightUI",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          }
+        ]
+      },
+      {
+        "hero": 82,
+        "material": "jiege_杰哥",
+        "frame": 51,
+        "frames": 56,
+        "fps": 24,
+        "nativeVisible": false,
+        "action": "daiji",
+        "visible": true,
+        "onStage": true,
+        "fit": {
+          "mode": "battle",
+          "width": 170.5882352941188,
+          "height": 158.82352941176046,
+          "scale": 0.1691657054978809,
+          "x": -34.594386774316646,
+          "y": -130.59592464436406,
+          "drawWidth": 69.18877354863329,
+          "drawHeight": 130.59592464436406,
+          "bodyHeight": 129.41176470587888,
+          "ui": false
+        },
+        "fitRange": {
+          "min": 0.0939809474988269,
+          "max": 0.1879618949976538,
+          "samples": 405
+        },
+        "cache": {
+          "dead": false,
+          "users": 1,
+          "loaded": 56,
+          "pending": 0,
+          "atlas": false,
+          "pages": 0,
+          "decodedBytes": 31080448
+        },
+        "bitmapStage": true,
+        "textureSize": [
+          271,
+          512
+        ],
+        "renderBounds": {
+          "$hashCode": 32100,
+          "x": 50,
+          "y": 803,
+          "width": 60,
+          "height": 112
+        },
+        "ancestors": [
+          {
+            "type": "egret.Bitmap",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 0.2553091274857317
+          },
+          {
+            "type": "DBActor",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "customui.HeroDynamicModel",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "customui.FightModelBG1",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 0.85
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "game.FightUI",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          }
+        ]
+      },
+      {
+        "hero": 69,
+        "material": "pingdanniu_平淡牛",
+        "frame": 55,
+        "frames": 104,
+        "fps": 24,
+        "nativeVisible": false,
+        "action": "daiji",
+        "visible": true,
+        "onStage": true,
+        "fit": {
+          "mode": "battle",
+          "width": 170.58823529411308,
+          "height": 158.82352941176046,
+          "scale": 0.19607843137254377,
+          "x": -54.50980392156717,
+          "y": -138.0392156862708,
+          "drawWidth": 109.01960784313434,
+          "drawHeight": 138.0392156862708,
+          "bodyHeight": 129.41176470587888,
+          "ui": false
+        },
+        "fitRange": {
+          "min": 0.19607843137254377,
+          "max": 0.21786492374728056,
+          "samples": 395
+        },
+        "cache": {
+          "dead": false,
+          "users": 1,
+          "loaded": 104,
+          "pending": 0,
+          "atlas": false,
+          "pages": 0,
+          "decodedBytes": 86048768
+        },
+        "bitmapStage": true,
+        "textureSize": [
+          404,
+          512
+        ],
+        "renderBounds": {
+          "$hashCode": 32102,
+          "x": 418,
+          "y": 377,
+          "width": 94,
+          "height": 118
+        },
+        "ancestors": [
+          {
+            "type": "egret.Bitmap",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 0.2698505144632038
+          },
+          {
+            "type": "DBActor",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "customui.HeroDynamicModel",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": -1
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "customui.FightModelBG1",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 0.85
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "game.FightUI",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          }
+        ]
+      },
+      {
+        "hero": 9,
+        "material": "waimainiu_外卖牛",
+        "frame": 24,
+        "frames": 53,
+        "fps": 24,
+        "nativeVisible": false,
+        "action": "daiji",
+        "visible": true,
+        "onStage": true,
+        "fit": {
+          "mode": "battle",
+          "width": 170.58823529411308,
+          "height": 158.82352941176046,
+          "scale": 0.10590160777895162,
+          "x": -33.83556368537504,
+          "y": -136.93077885818445,
+          "drawWidth": 67.67112737075009,
+          "drawHeight": 136.93077885818445,
+          "bodyHeight": 129.41176470587888,
+          "ui": false
+        },
+        "fitRange": {
+          "min": 0.10590160777895162,
+          "max": 0.11766845308772927,
+          "samples": 357
+        },
+        "cache": {
+          "dead": false,
+          "users": 1,
+          "loaded": 53,
+          "pending": 0,
+          "atlas": false,
+          "pages": 0,
+          "decodedBytes": 27461632
+        },
+        "bitmapStage": true,
+        "textureSize": [
+          253,
+          512
+        ],
+        "renderBounds": {
+          "$hashCode": 32104,
+          "x": 456,
+          "y": 578,
+          "width": 58,
+          "height": 117
+        },
+        "ancestors": [
+          {
+            "type": "egret.Bitmap",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 0.2674748117420952
+          },
+          {
+            "type": "DBActor",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "customui.HeroDynamicModel",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": -1
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "customui.FightModelBG1",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 0.85
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "game.FightUI",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          }
+        ]
+      },
+      {
+        "hero": 66,
+        "material": "zhu_猪",
+        "frame": 6,
+        "frames": 54,
+        "fps": 24,
+        "nativeVisible": false,
+        "action": "daiji",
+        "visible": true,
+        "onStage": true,
+        "fit": {
+          "mode": "battle",
+          "width": 170.58823529411308,
+          "height": 158.82352941176046,
+          "scale": 0.1273737841593296,
+          "x": -34.008800370541,
+          "y": -135.65308012968603,
+          "drawWidth": 68.017600741082,
+          "drawHeight": 135.65308012968603,
+          "bodyHeight": 129.41176470587888,
+          "ui": false
+        },
+        "fitRange": {
+          "min": 0.07076321342185293,
+          "max": 0.14152642684370587,
+          "samples": 356
+        },
+        "cache": {
+          "dead": false,
+          "users": 1,
+          "loaded": 54,
+          "pending": 0,
+          "atlas": false,
+          "pages": 0,
+          "decodedBytes": 28422144
+        },
+        "bitmapStage": true,
+        "textureSize": [
+          257,
+          512
+        ],
+        "renderBounds": {
+          "$hashCode": 32106,
+          "x": 476,
+          "y": 799,
+          "width": 58,
+          "height": 116
+        },
+        "ancestors": [
+          {
+            "type": "egret.Bitmap",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 0.2646599250625759
+          },
+          {
+            "type": "DBActor",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "customui.HeroDynamicModel",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": -1
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "customui.FightModelBG1",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 0.85
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "game.FightUI",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          }
+        ]
+      },
+      {
+        "hero": 22,
+        "material": "jiqiniu_机器牛",
+        "frame": 42,
+        "frames": 56,
+        "fps": 24,
+        "nativeVisible": false,
+        "action": "daiji",
+        "visible": true,
+        "onStage": true,
+        "fit": {
+          "mode": "battle",
+          "width": 170.58823529411308,
+          "height": 158.82352941176046,
+          "scale": 0.16938712657837549,
+          "x": -36.41823221435073,
+          "y": -130.42808746534914,
+          "drawWidth": 72.83646442870146,
+          "drawHeight": 130.42808746534914,
+          "bodyHeight": 129.41176470587888,
+          "ui": false
+        },
+        "fitRange": {
+          "min": 0.0941039592102128,
+          "max": 0.1882079184204256,
+          "samples": 347
+        },
+        "cache": {
+          "dead": false,
+          "users": 1,
+          "loaded": 56,
+          "pending": 0,
+          "atlas": false,
+          "pages": 0,
+          "decodedBytes": 32800768
+        },
+        "bitmapStage": true,
+        "textureSize": [
+          286,
+          512
+        ],
+        "renderBounds": {
+          "$hashCode": 32108,
+          "x": 579,
+          "y": 384,
+          "width": 62,
+          "height": 111
+        },
+        "ancestors": [
+          {
+            "type": "egret.Bitmap",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 0.2546729525479072
+          },
+          {
+            "type": "DBActor",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "customui.HeroDynamicModel",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": -1
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "customui.FightModelBG1",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 0.85
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "game.FightUI",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          }
+        ]
+      },
+      {
+        "hero": 16,
+        "material": "chuiwang_锤王",
+        "frame": 42,
+        "frames": 50,
+        "fps": 24,
+        "nativeVisible": false,
+        "action": "daiji",
+        "visible": true,
+        "onStage": true,
+        "fit": {
+          "mode": "battle",
+          "width": 170.58823529411308,
+          "height": 158.82352941176046,
+          "scale": 0.1559177888022637,
+          "x": -36.09496810772405,
+          "y": -129.7236002834834,
+          "drawWidth": 72.1899362154481,
+          "drawHeight": 129.7236002834834,
+          "bodyHeight": 129.41176470587888,
+          "ui": false
+        },
+        "fitRange": {
+          "min": 0.08662099377903926,
+          "max": 0.17324198755807851,
+          "samples": 365
+        },
+        "cache": {
+          "dead": false,
+          "users": 1,
+          "loaded": 50,
+          "pending": 0,
+          "atlas": false,
+          "pages": 0,
+          "decodedBytes": 29184000
+        },
+        "bitmapStage": true,
+        "textureSize": [
+          285,
+          512
+        ],
+        "renderBounds": {
+          "$hashCode": 32110,
+          "x": 599,
+          "y": 584,
+          "width": 62,
+          "height": 111
+        },
+        "ancestors": [
+          {
+            "type": "egret.Bitmap",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 0.25329802180858985
+          },
+          {
+            "type": "DBActor",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "customui.HeroDynamicModel",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": -1
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "customui.FightModelBG1",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 0.85
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "game.FightUI",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          }
+        ]
+      },
+      {
+        "hero": 15,
+        "material": "gonglueniu_攻略牛",
+        "frame": 52,
+        "frames": 54,
+        "fps": 24,
+        "nativeVisible": true,
+        "action": "gongji",
+        "visible": false,
+        "onStage": true,
+        "fit": {
+          "mode": "battle",
+          "width": 170.58823529411308,
+          "height": 158.82352941176046,
+          "scale": 0.10624939631024538,
+          "x": -37.29353810489613,
+          "y": -137.38046942914727,
+          "drawWidth": 74.58707620979226,
+          "drawHeight": 137.38046942914727,
+          "bodyHeight": 129.41176470587888,
+          "ui": false
+        },
+        "fitRange": {
+          "min": 0.05902744239458341,
+          "max": 0.11805488478916681,
+          "samples": 399
+        },
+        "cache": {
+          "dead": false,
+          "users": 1,
+          "loaded": 54,
+          "pending": 0,
+          "atlas": false,
+          "pages": 0,
+          "decodedBytes": 30744576
+        },
+        "bitmapStage": true,
+        "textureSize": [
+          278,
+          512
+        ],
+        "renderBounds": {
+          "$hashCode": 32112,
+          "x": 618,
+          "y": 798,
+          "width": 64,
+          "height": 117
+        },
+        "ancestors": [
+          {
+            "type": "egret.Bitmap",
+            "visible": false,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 0.26829883528702253
+          },
+          {
+            "type": "DBActor",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "customui.HeroDynamicModel",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": -1
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "customui.FightModelBG1",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 0.85
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "game.FightUI",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          }
+        ]
+      },
+      {
+        "hero": 27,
+        "material": "niu_牛",
+        "frame": 59,
+        "frames": 69,
+        "fps": 24,
+        "nativeVisible": false,
+        "action": "daiji",
+        "visible": true,
+        "onStage": true,
+        "fit": {
+          "mode": "battle",
+          "width": 170.58823529411308,
+          "height": 158.8235294117817,
+          "scale": 0.18782549304193932,
+          "x": -39.6311790318492,
+          "y": -132.60479808760917,
+          "drawWidth": 79.2623580636984,
+          "drawHeight": 132.60479808760917,
+          "bodyHeight": 129.4117647058962,
+          "ui": false
+        },
+        "fitRange": {
+          "min": 0.10434749613440143,
+          "max": 0.20869499226877183,
+          "samples": 365
+        },
+        "cache": {
+          "dead": false,
+          "users": 1,
+          "loaded": 69,
+          "pending": 0,
+          "atlas": false,
+          "pages": 0,
+          "decodedBytes": 43241472
+        },
+        "bitmapStage": true,
+        "textureSize": [
+          306,
+          512
+        ],
+        "renderBounds": {
+          "$hashCode": 32114,
+          "x": 451,
+          "y": 1002,
+          "width": 68,
+          "height": 113
+        },
+        "ancestors": [
+          {
+            "type": "egret.Bitmap",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 0.2590273139336549
+          },
+          {
+            "type": "DBActor",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "customui.HeroDynamicModel",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": -1
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "customui.FightModelBG1",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 0.85
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "game.FightUI",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          }
+        ]
+      },
+      {
+        "hero": 35,
+        "material": "saiboniu_赛博牛",
+        "frame": 27,
+        "frames": 56,
+        "fps": 24,
+        "nativeVisible": false,
+        "action": "daiji",
+        "visible": true,
+        "onStage": true,
+        "fit": {
+          "mode": "battle",
+          "width": 170.58823529411308,
+          "height": 158.8235294117817,
+          "scale": 0.16872459544445395,
+          "x": -42.8560472428913,
+          "y": -130.93028606489628,
+          "drawWidth": 85.7120944857826,
+          "drawHeight": 130.93028606489628,
+          "bodyHeight": 129.4117647058962,
+          "ui": false
+        },
+        "fitRange": {
+          "min": 0.09373588635802163,
+          "max": 0.1874717727160154,
+          "samples": 370
+        },
+        "cache": {
+          "dead": false,
+          "users": 1,
+          "loaded": 56,
+          "pending": 0,
+          "atlas": false,
+          "pages": 0,
+          "decodedBytes": 38420480
+        },
+        "bitmapStage": true,
+        "textureSize": [
+          335,
+          512
+        ],
+        "renderBounds": {
+          "$hashCode": 32116,
+          "x": 593,
+          "y": 1003,
+          "width": 74,
+          "height": 112
+        },
+        "ancestors": [
+          {
+            "type": "egret.Bitmap",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 0.2558569984650227
+          },
+          {
+            "type": "DBActor",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "customui.HeroDynamicModel",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": -1
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "customui.FightModelBG1",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 0.85
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "eui.Group",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          },
+          {
+            "type": "game.FightUI",
+            "visible": true,
+            "alpha": 1,
+            "cache": false,
+            "scroll": null,
+            "scale": 1
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "prompt": "Generate ONE transparent RGBA game sprite, reference image is the identity and existing outfit reference for character 懂子, ID 1. Preserve his golden anthropomorphic bull head, short swept golden hair, small black horns, purple muzzle, navy suit, white shirt and red tie. Change the pose into a readable three-quarter side facing RIGHT strong forward punch, left foot planted, right fist striking forward, suit fabric stretching, comic exaggerated confidence. Entire body and both shoes visible, all limbs anatomically connected, single character, no duplicate body or panels. 2.5D semi-realistic semi-cartoon absurd modern street-block game art, physically shaded fabric, broad readable silhouette, soft warm key light. Plain transparent background, no environment, no text, no watermark. Keep identity exactly consistent with the reference. No medieval costume or Chinese historical armor. Maintain clean edges and some space around the whole figure.\n",
+      "negative_prompt": "blurry, cropped body, duplicate character, watermark, unreadable text, medieval armor, ancient Chinese costume",
+      "resolution": 768,
+      "images.image_1": [
+        "8",
+        0
+      ]
+    }
+  },
+  "5": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "seed": 2026102901,
+      "steps": 28,
+      "cfg": 4,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "4",
+        1
+      ],
+      "latent_image": [
+        "4",
+        2
+      ],
+      "denoise": 1
+    }
+  },
+  "6": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "5",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "7": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "6",
+        0
+      ],
+      "filename_prefix": "street-reskin/qwen"
+    }
+  },
+  "8": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "street_90959129fe913420.png"
+    }
+  }
+}

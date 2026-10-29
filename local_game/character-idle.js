@@ -1,19 +1,28 @@
 (function (global) {
     'use strict';
     var data=global.CharacterIdleData, caches={}, modelIds={}, installed=false, queue=[], loading=0;
+    var atlasData=global.CharacterIdleAtlasData;
     var audit={version:data&&data.version,excluded:[13],framesPresented:0,errors:[],players:[],attachedHeroes:{},modelRequests:{}};
     function config(id){return data&&data.heroes[String(id)];}
     function releaseTexture(texture){if(texture){texture.disposeBitmapData=true;texture.dispose();}}
     function pump(){
         while(loading<6&&queue.length){
-            var job=queue.shift();if(job.cache.dead){delete job.cache.pending[job.index];continue;}
+            var job=queue.shift();if(job.cache.dead){delete job.cache.pending[job.pendingKey||job.index];continue;}
             loading++;
             (function(job){
-                var c=job.cache, cfg=c.cfg, url=encodeURI(cfg.baseUrl+cfg.files[job.index]);
+                var c=job.cache, cfg=c.cfg, url=encodeURI(c.atlas?c.atlas.pages[job.page].url:cfg.baseUrl+cfg.files[job.index]);
                 fetch(url,{cache:'force-cache'}).then(function(r){if(!r.ok)throw Error(r.status+' '+url);return r.blob();})
                 .then(function(blob){return createImageBitmap(blob);})
                 .then(function(image){
                     if(c.dead){image.close();return;}
+                    if(c.atlas){
+                        var page=c.atlas.pages[job.page],atlasCanvas=document.createElement('canvas');atlasCanvas.width=page.width;atlasCanvas.height=page.height;
+                        atlasCanvas.getContext('2d').drawImage(image,0,0);image.close();
+                        var baseTexture=new egret.Texture();baseTexture.disposeBitmapData=true;baseTexture.bitmapData=new egret.BitmapData(atlasCanvas);
+                        var sheet=new egret.SpriteSheet(baseTexture);c.sheets.push(sheet);c.loadedPages[job.page]=true;
+                        c.atlas.frames.forEach(function(frame,index){if(frame.page===job.page)c.textures[index]=sheet.createTexture(String(index),frame.x,frame.y,frame.w,frame.h);});
+                        return;
+                    }
                     var box=cfg.crop, canvas=document.createElement('canvas'),resolution=Math.min(1,512/Math.max(box[2],box[3]));canvas.width=Math.max(1,Math.round(box[2]*resolution));canvas.height=Math.max(1,Math.round(box[3]*resolution));
                     var context=canvas.getContext('2d');context.drawImage(image,box[0],box[1],box[2],box[3],0,0,canvas.width,canvas.height);image.close();
                     var pixels=context.getImageData(0,0,canvas.width,canvas.height),rgba=pixels.data;
@@ -21,22 +30,26 @@
                     context.putImageData(pixels,0,0);
                     var texture=new egret.Texture();texture.bitmapData=new egret.BitmapData(canvas);c.textures[job.index]=texture;
                 }).catch(function(e){if(audit.errors.length<50)audit.errors.push({hero:cfg.id,frame:job.index,error:String(e)});})
-                .then(function(){delete c.pending[job.index];loading--;pump();});
+                .then(function(){delete c.pending[job.pendingKey||job.index];loading--;pump();});
             })(job);
         }
     }
-    function acquire(cfg){
-        var c=caches[cfg.id];if(!c){c={cfg:cfg,users:0,textures:{},pending:{},dead:false};caches[cfg.id]=c;}c.users++;return c;
+    function acquire(cfg,mode){
+        var atlasHero=atlasData&&atlasData.heroes[String(cfg.id)],atlasProfile=mode==='detail'?'detail':'battle';
+        var pack=atlasHero&&atlasHero.profiles[atlasProfile],key=cfg.id+(pack?':'+atlasProfile:'');
+        var c=caches[key];if(!c){c={key:key,cfg:cfg,atlas:pack,sheets:[],loadedPages:{},users:0,textures:{},pending:{},dead:false};caches[key]=c;}c.users++;return c;
     }
     function request(c,index,urgent){
-        if(c.dead||c.textures[index]||c.pending[index])return;c.pending[index]=true;
-        var job={cache:c,index:index};urgent?queue.unshift(job):queue.push(job);pump();
+        if(c.dead||c.textures[index])return;
+        var frame=c.atlas&&c.atlas.frames[index],pendingKey=frame?'atlas:'+frame.page:index;
+        if(c.pending[pendingKey])return;c.pending[pendingKey]=true;
+        var job={cache:c,index:index,pendingKey:pendingKey,page:frame&&frame.page};urgent?queue.unshift(job):queue.push(job);pump();
     }
     function trim(c,current){
         // A live loop keeps its frames. Dispose the whole cache on final release,
         // rather than deleting upcoming/displayed frames while asynchronous decode lags.
     }
-    function release(c){if(--c.users>0)return;c.dead=true;Object.keys(c.textures).forEach(function(k){releaseTexture(c.textures[k]);});delete caches[c.cfg.id];}
+    function release(c){if(--c.users>0)return;c.dead=true;if(c.atlas)c.sheets.forEach(function(sheet){sheet.dispose();});else Object.keys(c.textures).forEach(function(k){releaseTexture(c.textures[k]);});delete caches[c.key];}
     function restore(player,state){if(state.hidden&&player._armature){player._armature.visible=true;state.hidden=false;audit.actionRestores=(audit.actionRestores||0)+1;}if(state.bitmap)state.bitmap.visible=false;}
     function hideNative(player,state){if(player._armature)player._armature.visible=false;state.hidden=true;}
     function profile(view){
@@ -80,7 +93,7 @@
         var cfg=config(id);if(!cfg){audit.lastUnbound={name:player._dbName,id:id};detach(player);return;}
         var old=player._characterIdleState;if(old&&old.cfg.id===cfg.id)return;detach(player);
         var bitmap=new egret.Bitmap();bitmap.name='canonicalCharacterIdle';bitmap.touchEnabled=false;bitmap.visible=false;player.addChild(bitmap);
-        var s={cfg:cfg,cache:acquire(cfg),bitmap:bitmap,start:egret.getTimer(),frame:-1,hidden:false,tick:null,removed:null};
+        var s={cfg:cfg,cache:acquire(cfg,player._characterIdleLayout?profile(player._characterIdleLayout.view):'battle'),bitmap:bitmap,start:egret.getTimer(),frame:-1,hidden:false,tick:null,removed:null};
         hideNative(player,s);request(s.cache,0,true);
         s.tick=function(){
             if(!player.stage)return;
@@ -174,6 +187,6 @@
             },650);
         };
     }
-    function snapshot(){return {roster:global.CharacterRosterAudit,nativeOwned:global.game&&game.GameMVC&&game.GameMVC.heroPy&&game.GameMVC.heroPy.heroBag?game.GameMVC.heroPy.heroBag.getItems().length:0,installed:installed,mappedHeroes:audit.mappedHeroes,framesPresented:audit.framesPresented,modelRequests:audit.modelRequests,actionRestores:audit.actionRestores||0,lastUnbound:audit.lastUnbound,attachedHeroes:audit.attachedHeroes,modelKeys:Object.keys(modelIds).slice(0,4).map(function(k){return [k,modelIds[k]];}),errors:audit.errors.slice(),active:audit.players.map(function(p){var s=p._characterIdleState;return {hero:s.cfg.id,material:s.cfg.materialId,frame:s.frame,frames:s.cfg.frameCount,fps:s.cfg.fps,nativeVisible:!!(p._armature&&p._armature.visible),action:p.action||p._action,visible:s.bitmap.visible,onStage:!!p.stage,fit:s.fit,fitRange:s.fitRange,cache:{dead:s.cache.dead,users:s.cache.users,loaded:Object.keys(s.cache.textures).length,pending:Object.keys(s.cache.pending).length},bitmapStage:!!s.bitmap.stage,textureSize:s.bitmap.texture?[s.bitmap.texture.textureWidth,s.bitmap.texture.textureHeight]:null,renderBounds:s.bitmap.getTransformedBounds?s.bitmap.getTransformedBounds(egret.MainContext.instance.stage):null,ancestors:(function(){var a=[];for(var node=s.bitmap;node&&a.length<8;node=node.parent)a.push({type:node.__class__,visible:node.visible,alpha:node.alpha,cache:node.cacheAsBitmap,scroll:node.scrollRect,scale:node.scaleX});return a;})()};})};}
+    function snapshot(){return {cacheCount:Object.keys(caches).length,queued:queue.length,loading:loading,atlasVersion:atlasData&&atlasData.version,roster:global.CharacterRosterAudit,nativeOwned:global.game&&game.GameMVC&&game.GameMVC.heroPy&&game.GameMVC.heroPy.heroBag?game.GameMVC.heroPy.heroBag.getItems().length:0,installed:installed,mappedHeroes:audit.mappedHeroes,framesPresented:audit.framesPresented,modelRequests:audit.modelRequests,actionRestores:audit.actionRestores||0,lastUnbound:audit.lastUnbound,attachedHeroes:audit.attachedHeroes,modelKeys:Object.keys(modelIds).slice(0,4).map(function(k){return [k,modelIds[k]];}),errors:audit.errors.slice(),active:audit.players.map(function(p){var s=p._characterIdleState;return {hero:s.cfg.id,material:s.cfg.materialId,frame:s.frame,frames:s.cfg.frameCount,fps:s.cfg.fps,nativeVisible:!!(p._armature&&p._armature.visible),action:p.action||p._action,visible:s.bitmap.visible,onStage:!!p.stage,fit:s.fit,fitRange:s.fitRange,cache:{dead:s.cache.dead,users:s.cache.users,loaded:Object.keys(s.cache.textures).length,pending:Object.keys(s.cache.pending).length,atlas:!!s.cache.atlas,pages:Object.keys(s.cache.loadedPages).length,decodedBytes:s.cache.atlas?Object.keys(s.cache.loadedPages).reduce(function(total,key){var page=s.cache.atlas.pages[key];return total+page.width*page.height*4;},0):Object.keys(s.cache.textures).reduce(function(total,key){var t=s.cache.textures[key];return total+t.textureWidth*t.textureHeight*4;},0)},bitmapStage:!!s.bitmap.stage,textureSize:s.bitmap.texture?[s.bitmap.texture.textureWidth,s.bitmap.texture.textureHeight]:null,renderBounds:s.bitmap.getTransformedBounds?s.bitmap.getTransformedBounds(egret.MainContext.instance.stage):null,ancestors:(function(){var a=[];for(var node=s.bitmap;node&&a.length<8;node=node.parent)a.push({type:node.__class__,visible:node.visible,alpha:node.alpha,cache:node.cacheAsBitmap,scroll:node.scrollRect,scale:node.scaleX});return a;})()};})};}
     global.CharacterIdle={install:install,has:function(id){return !!config(id);},bindView:bindView,snapshot:snapshot,data:data};
 })(window);

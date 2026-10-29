@@ -1,0 +1,46 @@
+{
+  "promptId": "736b75a0-a1cd-472b-94fc-81d6f90dd456",
+  "submittedUtc": "2026-10-29T02:08:16Z",
+  "status": "generated-unreviewed",
+  "provider": "local-comfyui",
+  "workflowSha256": "e88ecd6c2fef2a503b6c324b926226b4ffafbb2aac79772417461a4f39fc0fdd",
+  "response": {
+    "prompt_id": "736b75a0-a1cd-472b-94fc-81d6f90dd456",
+    "number": 1,
+    "node_errors": {}
+  },
+  "comfyStatus": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "736b75a0-a1cd-472b-94fc-81d6f90dd456",
+          "timestamp": 1793239696630
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [],
+          "prompt_id": "736b75a0-a1cd-472b-94fc-81d6f90dd456",
+          "timestamp": 1793239696633
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "736b75a0-a1cd-472b-94fc-81d6f90dd456",
+          "timestamp": 1793239715526
+        }
+      ]
+    ]
+  },
+  "outputs": [
+    {
+      "path": "art-migration/generation/hero001-attack-matte-v1/hero001_attack_alpha_00001_.png",
+      "sha256": "0c23d3f27682e1d0d26c7bc84b2fe82efbdb07c638dd02b41b87403bbd7a85a7"
+    }
+  ]
+}

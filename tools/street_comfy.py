@@ -11,7 +11,8 @@ def request(endpoint,data=None):
     body=None if data is None else json.dumps(data).encode()
     req=urllib.request.Request(API+endpoint,data=body,headers={'Content-Type':'application/json'})
     try:
-        with urllib.request.urlopen(req,timeout=45) as r:return json.load(r)
+        with urllib.request.urlopen(req,timeout=45) as r:
+            payload=r.read();return json.loads(payload) if payload else {}
     except urllib.error.HTTPError as e:raise RuntimeError(e.read().decode()) from e
 
 def qwen(prompt,reference=None,resolution=768,steps=28,seed=2026102901):

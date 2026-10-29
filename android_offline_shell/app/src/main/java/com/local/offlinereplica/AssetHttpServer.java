@@ -523,6 +523,7 @@ final class AssetHttpServer {
         if (lower.endsWith(".js")) return "application/javascript; charset=utf-8";
         if (lower.endsWith(".json")) return "application/json; charset=utf-8";
         if (lower.endsWith(".png")) return "image/png";
+        if (lower.endsWith(".webp")) return "image/webp";
         if (lower.endsWith(".jpg") || lower.endsWith(".jpeg")) return "image/jpeg";
         if (lower.endsWith(".mp3")) return "audio/mpeg";
         if (lower.endsWith(".ttf")) return "font/ttf";

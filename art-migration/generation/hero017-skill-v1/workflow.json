@@ -1,0 +1,124 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "prompt": "Create ONE production key pose for character 仔仔, ID 17. The attached image is the exact identity/outfit reference. Preserve species, face, horns/ears, hair, body proportions, clothing and the existing held props. Change the pose into a strong readable skill key pose, three-quarter view facing RIGHT, full body with both feet inside frame. Follow this specific action design: 举笛→吹奏释放→落手；声波独立. Observed prop/weapon: 横持吹奏道具; weapon category: 笛／吹奏道具. Purpose: 进攻. Keep the body centered, do not translate across the battlefield, the game handles root movement. This is a pose sprite, do not render the target, battlefield or screen UI. 2.5D semi-realistic semi-cartoon absurd modern neighborhood street-block game aesthetic, tactile materials, broad readable silhouette, warm soft studio light. A single character only, plain solid white background for clean alpha matting. No text, no watermark, no ancient armor unless the reference actually contains it. No extra weapons or unrequested props. Keep the pose distinctive to this character and its action. No motion blur obscuring limbs. Do not include enormous VFX; effects are a separate asset.",
+      "negative_prompt": "blurry, cropped body, duplicate character, watermark, unreadable text, medieval armor, ancient Chinese costume",
+      "resolution": 768,
+      "images.image_1": [
+        "8",
+        0
+      ]
+    }
+  },
+  "5": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "seed": 2026102935,
+      "steps": 28,
+      "cfg": 4,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "4",
+        1
+      ],
+      "latent_image": [
+        "4",
+        2
+      ],
+      "denoise": 1
+    }
+  },
+  "6": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "5",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "7": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "6",
+        0
+      ],
+      "filename_prefix": "street-reskin/qwen"
+    }
+  },
+  "8": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "street_0b5533b0818069bb.png"
+    }
+  },
+  "9": {
+    "class_type": "easy imageRemBg",
+    "inputs": {
+      "images": [
+        "6",
+        0
+      ],
+      "rem_mode": "RMBG-1.4",
+      "image_output": "Hide",
+      "save_prefix": "street-reskin/matte",
+      "add_background": "none",
+      "torchscript_jit": false,
+      "refine_foreground": false
+    }
+  },
+  "10": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "9",
+        0
+      ],
+      "filename_prefix": "street-reskin/hero017_skill_alpha"
+    }
+  }
+}
