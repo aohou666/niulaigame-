@@ -57,8 +57,8 @@
 <script src="character-reskin-data.js?v=0.38.0"></script>
 <script src="character-art-data.js?v=0.38.0"></script>
 <script src="character-art.js?v=0.38.0"></script>
-<script src="street-art-data.js?v=0.54.0"></script>
-<script src="street-art.js?v=20261029-29"></script>
+<script src="street-art-data.js?v=0.55.0"></script>
+<script src="street-art.js?v=0.55.0"></script>
 <script src="street-effects-data.js?v=20261029-37"></script>
 <script src="street-effects.js?v=20261029-37"></script>
 <script src="character-reskin.js?v=0.38.0"></script>
@@ -114,6 +114,7 @@
                  **/
                 nodeRecord(3);
                 if(window.OfflineReadRPC)OfflineReadRPC.installEarly();
+                if(window.StreetArt)StreetArt.prepareEarly();
                 egret.runEgret({
                     renderMode: "webgl", audioType: 0, calculateCanvasScaleFactor: function (context) {
                         var backingStore = context.backingStorePixelRatio ||

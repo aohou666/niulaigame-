@@ -1,0 +1,111 @@
+{
+  "pass": true,
+  "fixture": "Native default fight theme selects existing dk_01_bg_01 arena; no model/position/gameplay change.",
+  "theme": "dk_01_bg_01",
+  "sameAlias": true,
+  "size": [
+    960,
+    1560
+  ],
+  "visible": [
+    {
+      "type": "i",
+      "source": "dk_01_bg_01_jpg",
+      "bounds": {
+        "$hashCode": 7564,
+        "x": -216,
+        "y": -261,
+        "width": 1152,
+        "height": 1872
+      }
+    }
+  ],
+  "body": {
+    "installed": true,
+    "framesPresented": 15,
+    "actions": {
+      "gongji": 15
+    },
+    "atlasRequests": 5,
+    "suppressedViewsDetached": 0,
+    "errors": [],
+    "caches": [
+      {
+        "id": "1",
+        "users": 1,
+        "ready": true
+      },
+      {
+        "id": "15",
+        "users": 1,
+        "ready": true
+      },
+      {
+        "id": "18",
+        "users": 1,
+        "ready": true
+      },
+      {
+        "id": "34",
+        "users": 1,
+        "ready": true
+      },
+      {
+        "id": "62",
+        "users": 1,
+        "ready": true
+      }
+    ],
+    "active": [
+      {
+        "model": "hero_001_01_ez",
+        "action": "gongji",
+        "frame": 19,
+        "nativeFrame": 16,
+        "visible": true,
+        "nativeVisible": false,
+        "ready": true,
+        "onStage": true
+      },
+      {
+        "model": "hero_034_01_ez",
+        "action": "shouji",
+        "frame": -1,
+        "visible": false,
+        "nativeVisible": true,
+        "ready": true,
+        "onStage": true
+      },
+      {
+        "model": "hero_062_01_ez",
+        "action": "daiji",
+        "frame": -1,
+        "visible": false,
+        "nativeVisible": false,
+        "ready": true,
+        "onStage": true
+      },
+      {
+        "model": "hero_018_01_ez",
+        "action": "daiji",
+        "frame": -1,
+        "visible": false,
+        "nativeVisible": false,
+        "ready": true,
+        "onStage": true
+      },
+      {
+        "model": "hero_015_01_ez",
+        "action": "daiji",
+        "frame": -1,
+        "visible": false,
+        "nativeVisible": false,
+        "ready": true,
+        "onStage": true
+      }
+    ]
+  },
+  "artErrors": [],
+  "errors": [],
+  "failed": []
+}
