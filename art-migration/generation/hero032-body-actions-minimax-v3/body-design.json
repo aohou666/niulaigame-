@@ -1,0 +1,416 @@
+{
+  "heroId": 32,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/032/portrait.png",
+      "prepared": "art-migration/references/body-032-v3/idle.png",
+      "foot": [
+        384.33,
+        700
+      ],
+      "size": [
+        286,
+        480
+      ],
+      "sha256": "8727197b59876ebc57d8f3cf3b505a8773509cc2d4a74eeaee4c25a0ac4e872c"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero032-attack-v2/hero032_attack_alpha_00001_.png",
+      "prepared": "art-migration/references/body-032-v3/attack.png",
+      "foot": [
+        384.23,
+        700
+      ],
+      "size": [
+        337,
+        480
+      ],
+      "sha256": "eafe5147975090d77c2f9e4da1ff45dafed55593f81dfc77d3f6c0f81d3c3571"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero032-skill-v2/hero032_skill_alpha_00001_.png",
+      "prepared": "art-migration/references/body-032-v3/skill.png",
+      "foot": [
+        383.87,
+        700
+      ],
+      "size": [
+        312,
+        480
+      ],
+      "sha256": "55944177df0c4ca1201d862d7ef3627258cdb8ba41b0e70f3593297e0142535a"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H032-ATK",
+        "heroId": 32,
+        "name": "咏春牛",
+        "originalName": "关兴",
+        "slot": "普攻",
+        "skillId": 550320110,
+        "skillName": "普通攻击",
+        "newSkillName": "寸劲探掌",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "近身攻击",
+        "movement": "移到目标前出手",
+        "weapon": "徒手／拳掌",
+        "weaponObservation": "black-haired yellow bull in long black martial-arts coat and black shoes, empty hands",
+        "effectClass": "目标位置特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "One small empty-hand push in front of chest, then recover. Absolutely no white flash, star, impact drawing, glow, beam or other VFX.",
+        "rootPolicy": "引擎负责接近与返回；视频固定根位置，只做出手",
+        "batch": "B02",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_guanyu_02",
+        "model": "hero_032_01",
+        "action": "gongji",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1033.333,
+        "fps": 30,
+        "durationFrames": 31,
+        "rawEvents": [
+          {
+            "frame0": 13,
+            "timeMs": 433.333,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@433.3ms（角色事件）",
+        "impactMs": [
+          433.333
+        ],
+        "impactStatus": "角色pia直接回调；待游戏内验收",
+        "performance": {
+          "effectsTarEnemy": [
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_guanyu_02"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            2,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_guanyu_02",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_guanyu_02_14b09498.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_guanyu_02",
+                  "name": "common_skill_guanyu_02",
+                  "fps": 24,
+                  "durationFrames": 12,
+                  "durationMs": 500.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_guanyu_02 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_guanyu_02"
+        ],
+        "portrait": "reskin/hero_032.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H032-ULT",
+        "heroId": 32,
+        "name": "咏春牛",
+        "originalName": "关兴",
+        "slot": "大招",
+        "skillId": 550320210,
+        "skillName": "青龙刀法",
+        "newSkillName": "寸步连锋",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "全体",
+        "delivery": "原地远程作用",
+        "movement": "原站位出手",
+        "weapon": "徒手／拳掌",
+        "weaponObservation": "black-haired yellow bull in long black martial-arts coat and black shoes, empty hands",
+        "effectClass": "场景/范围特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "Raise both empty palms into a short guard near chest, no flash, no second strike, no glow.",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B06",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方全体造成175%伤害。",
+        "skillModel": "common_skill_guanxing_02",
+        "model": "hero_032_01",
+        "action": "jineng",
+        "effectiveDesc": "对敌方全体造成175%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1166.667,
+        "fps": 30,
+        "durationFrames": 35,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "__attackDoneDelay": 800,
+          "attackFrameDelay": 800,
+          "effectQP": [
+            {
+              "delay": 0,
+              "scaleX": -1,
+              "offset": [
+                230,
+                100
+              ],
+              "src": [
+                "common_skill_guanxing_02_1"
+              ]
+            },
+            {
+              "delay": 0,
+              "scaleX": -1,
+              "offset": [
+                230,
+                100
+              ],
+              "z": 0,
+              "src": [
+                "common_skill_guanxing_02_2"
+              ]
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectQP",
+            "resource": "common_skill_guanxing_02_1",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_guanxing_02_1_552ff8ee.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_guanxing_02_1",
+                  "name": "common_skill_guanxing_02_1",
+                  "fps": 30,
+                  "durationFrames": 72,
+                  "durationMs": 2400.0,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        3
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 4,
+                      "timeMs": 133.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 4,
+                      "timeMs": 133.333,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 21,
+                      "timeMs": 700.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 21,
+                      "timeMs": 700.0,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 46,
+                      "timeMs": 1533.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 46,
+                      "timeMs": 1533.333,
+                      "type": 10,
+                      "name": "pz"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectQP",
+            "resource": "common_skill_guanxing_02_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_guanxing_02_2_71ccc926.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_guanxing_02_2",
+                  "name": "common_skill_guanxing_02_2",
+                  "fps": 30,
+                  "durationFrames": 73,
+                  "durationMs": 2433.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectQP: common_skill_guanxing_02_1 delay=0 dt=None speed=1 事件=pia@133.3,pia@700.0,pia@1533.3\neffectQP: common_skill_guanxing_02_2 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_guanxing_02"
+        ],
+        "portrait": "reskin/hero_032.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false,
+  "denseGuideSchedule": [
+    {
+      "frame": 4,
+      "image": "idle"
+    },
+    {
+      "frame": 8,
+      "image": "idle"
+    },
+    {
+      "frame": 12,
+      "image": "attack"
+    },
+    {
+      "frame": 16,
+      "image": "attack"
+    },
+    {
+      "frame": 20,
+      "image": "attack"
+    },
+    {
+      "frame": 24,
+      "image": "attack"
+    },
+    {
+      "frame": 28,
+      "image": "idle"
+    },
+    {
+      "frame": 32,
+      "image": "idle"
+    },
+    {
+      "frame": 36,
+      "image": "idle"
+    },
+    {
+      "frame": 40,
+      "image": "idle"
+    },
+    {
+      "frame": 44,
+      "image": "idle"
+    },
+    {
+      "frame": 48,
+      "image": "skill"
+    },
+    {
+      "frame": 52,
+      "image": "skill"
+    },
+    {
+      "frame": 56,
+      "image": "skill"
+    },
+    {
+      "frame": 60,
+      "image": "skill"
+    },
+    {
+      "frame": 64,
+      "image": "skill"
+    },
+    {
+      "frame": 68,
+      "image": "idle"
+    },
+    {
+      "frame": 72,
+      "image": "idle"
+    }
+  ]
+}

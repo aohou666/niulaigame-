@@ -4,7 +4,7 @@ const version=process.argv.find(v=>v.startsWith('--version='))?.slice(10)||'0.28
 const browser=await chromium.launch({channel:'chrome',headless:true});
 try{
  const page=await browser.newPage({viewport:{width:480,height:900}}),errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('http://127.0.0.1:8787/index_bh_lite3zbtest_andr.html?mode=heroes');await page.waitForFunction(()=>window.StreetBody?.snapshot().installed);
- const configs=await page.evaluate(ids=>StreetBodyData.characters.filter(c=>!ids.length||ids.includes(c.id)),ids),reports=[];
+ const configs=await page.evaluate(ids=>StreetBodyData.characters.filter(c=>!ids.length||ids.includes(c.id)),ids),reports=[];if(ids.length)assert.deepEqual(configs.map(c=>c.id).sort((a,b)=>a-b),[...new Set(ids)].sort((a,b)=>a-b),'Every requested hero must be integrated before runtime verification');
  for(const cfg of configs){
   await page.evaluate(async cfg=>{
    const container=new egret.DisplayObjectContainer(),bg=new egret.Shape();bg.graphics.beginFill(0x52646a);bg.graphics.drawRect(0,0,512,512);bg.graphics.endFill();container.addChild(bg);egret.MainContext.instance.stage.addChild(container);

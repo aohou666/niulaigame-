@@ -2,6 +2,7 @@
 import argparse,hashlib,json,math
 from pathlib import Path
 from PIL import Image,ImageDraw
+from street_atomic import atomic_write_text
 ROOT=Path(__file__).resolve().parents[1];GAME=ROOT/'local_game';BASE=ROOT/'art-migration/generation'
 p=argparse.ArgumentParser();p.add_argument('name');p.add_argument('--attack-anchor',required=True,type=int);p.add_argument('--event-anchors');p.add_argument('--fallback-impact',type=int);p.add_argument('--version',required=True);a=p.parse_args();folder=BASE/a.name
 reviewedAnchors=json.loads(Path(a.event_anchors).read_text('utf8')) if a.event_anchors else {}
@@ -51,7 +52,7 @@ cfg={'id':hid,'models':[design['actions']['attack']['native']['model'],design['a
 cfg['nativeEventAuditSha256']=hashlib.sha256(auditFile.read_bytes()).hexdigest()
 if modelActionOverrides:cfg['modelActionOverrides']=modelActionOverrides
 cfg['atlasSha256']=hashlib.sha256((out/'body.webp').read_bytes()).hexdigest()
-p=GAME/'street-body-data.js';d=json.loads(p.read_text('utf8').split('=',1)[1].strip().rstrip(';'));d['version']=a.version;d['characters']=[r for r in d['characters'] if r['id']!=hid]+[cfg];d['characters'].sort(key=lambda r:r['id']);p.write_text('window.StreetBodyData='+json.dumps(d,separators=(',',':'))+';\n','utf8')
+p=GAME/'street-body-data.js';d=json.loads(p.read_text('utf8').split('=',1)[1].strip().rstrip(';'));d['version']=a.version;d['characters']=[r for r in d['characters'] if r['id']!=hid]+[cfg];d['characters'].sort(key=lambda r:r['id']);atomic_write_text(p,'window.StreetBodyData='+json.dumps(d,separators=(',',':'))+';\n')
 contact=Image.new('RGB',(1024,1024),'#53676e');draw=ImageDraw.Draw(contact)
 for i in range(16):
  n=round(i*72/15);im=images[n].copy();im.thumbnail((250,230));contact.paste(im,((i%4)*256,(i//4)*256),im);draw.text(((i%4)*256,(i//4)*256+233),str(n),fill='white')

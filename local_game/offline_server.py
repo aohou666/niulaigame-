@@ -42,11 +42,51 @@ TRAIN_NON_MUTATING_ACTIONS = {
 }
 
 
+def open_static_file(path: Path):
+    """Allow short Windows sharing locks during atomic artwork publication."""
+    for attempt in range(16):
+        try:
+            return path.open("rb")
+        except OSError as error:
+            transient = error.errno in (13, 22) or getattr(error, "winerror", None) in (5, 32, 33, 1224)
+            if not transient or attempt == 15:
+                raise
+            time.sleep(0.02)
+
+
 class OfflineHandler(SimpleHTTPRequestHandler):
     server_version = "OfflineReplica/0.17"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=str(ROOT), **kwargs)
+
+    def send_head(self):
+        path = Path(self.translate_path(self.path))
+        try:
+            relative = path.resolve().relative_to(ROOT.resolve()).as_posix()
+        except ValueError:
+            return super().send_head()
+        if not (relative.startswith("assets/street/") or path.name.endswith("-data.js")):
+            return super().send_head()
+        try:
+            stream = open_static_file(path)
+        except FileNotFoundError:
+            self.send_error(404, "File not found")
+            return None
+        except OSError:
+            self.send_error(503, "Artwork temporarily busy")
+            return None
+        try:
+            stat = os.fstat(stream.fileno())
+            self.send_response(200)
+            self.send_header("Content-Type", self.guess_type(str(path)))
+            self.send_header("Content-Length", str(stat.st_size))
+            self.send_header("Last-Modified", self.date_time_string(stat.st_mtime))
+            self.end_headers()
+            return stream
+        except Exception:
+            stream.close()
+            raise
 
     @property
     def save_path(self) -> Path:

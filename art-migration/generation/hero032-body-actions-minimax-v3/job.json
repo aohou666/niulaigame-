@@ -1,0 +1,346 @@
+{
+  "promptId": "602d3031-9c09-4324-9959-0eadf3509270",
+  "submittedUtc": "2026-10-29T09:33:36Z",
+  "status": "generated-unreviewed",
+  "provider": "local-comfyui",
+  "workflowSha256": "4d3d206ecdb1e08a57f5a8e599e30c9da77da57298d6e42fdefc78fd00e68c29",
+  "response": {
+    "prompt_id": "602d3031-9c09-4324-9959-0eadf3509270",
+    "number": 587,
+    "node_errors": {}
+  },
+  "comfyStatus": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "602d3031-9c09-4324-9959-0eadf3509270",
+          "timestamp": 1793267560635
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "1",
+            "2",
+            "3",
+            "11",
+            "19"
+          ],
+          "prompt_id": "602d3031-9c09-4324-9959-0eadf3509270",
+          "timestamp": 1793267560698
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "602d3031-9c09-4324-9959-0eadf3509270",
+          "timestamp": 1793267637024
+        }
+      ]
+    ]
+  },
+  "latents": [
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_video_00003_.latent",
+      "sha256": "e7102828afa3183500022bc7fd60dd90bc0b56e8b3e1e5383345cca1447a802d"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00147_.png",
+      "sha256": "74236a296a02147741376c2ac6635f4ca24881836a4245265a596d05f98c21f2"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00148_.png",
+      "sha256": "0f3ed81b5ede4787804df8c22ee555316f79ea1b669d6b27c42a7efd1a74697b"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00149_.png",
+      "sha256": "5f13003affddc273a2d59c2127207ecb83da434b95d2f064471baf788fd851b5"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00150_.png",
+      "sha256": "b3241874b19de58919b36430b566a2cc38d1e611a9a56b425dc0637577890345"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00151_.png",
+      "sha256": "004238dcd17699da9d146b175e2a18f469be2ebe181f044c9fb619887c1d2398"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00152_.png",
+      "sha256": "ffa4344b75ed81a8bc50e5fb4d941f1868c48d27d3238de6faebd741e4c817c4"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00153_.png",
+      "sha256": "5436f097c39881bf105a2d91cf4a0f4a5d07f6594714cac3b6f73c7037c91c3d"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00154_.png",
+      "sha256": "9c2d112a978a9114d27596f0ea7f00067eb37008b5e1ab9a4fa0c757d769f409"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00155_.png",
+      "sha256": "713c4d1a7bf54958caaa2a1ed714205f3b6013909aebc217b25b773e11ba273a"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00156_.png",
+      "sha256": "2c383348cb6ed938e36352d0b607b346e5526097a3fc15093351cd9bdc8d3e36"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00157_.png",
+      "sha256": "6ceda1dd00c4c117fcb3035562f5ed53eb5592b2891752d30cbe9916ebe182eb"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00158_.png",
+      "sha256": "b76d3f59a00245361efd0b894145192a646a833b6f2677c7385b28da97adf0d5"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00159_.png",
+      "sha256": "f6aef8faf9cf210dc45c1a342bfbd99069dd42f40e515926f0f0de7a1d81cf04"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00160_.png",
+      "sha256": "1695265ed670631157ba4ade2dc57880e177ef7b0c91f91c1c545e079feda4e0"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00161_.png",
+      "sha256": "f08e0db258d846a6d796ac9dd256464ddf2cee42d8755878590b8d48c6d7674a"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00162_.png",
+      "sha256": "0fbde9c63ce0dca78edd044ef27513f9a7b88ec685d245031a3d38eb38494b68"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00163_.png",
+      "sha256": "5675e13f939c9f6a7d0a4951aefc55239dd4fc5cc6598b2e2eb670b873393d86"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00164_.png",
+      "sha256": "49a20f1027d2d04733e6cbd45f4c93fc0b85983eb00dcb999426da94c768b207"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00165_.png",
+      "sha256": "d0361c822ff3c92b89b90f138b736c39b45a7fd9eabb751d137ce3752429a4b5"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00166_.png",
+      "sha256": "b7d48bae62f9945bf427921ae4e943b4e5291b0cf9fea88ff6f736542229459f"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00167_.png",
+      "sha256": "28357cf1575b1f65bc57688772bf4ac555ff98602052747f6d1b4cfe73ba440c"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00168_.png",
+      "sha256": "e07a180a9fdb333c862b45927ef0c1e482103aa12d8d75e746863ec3e6cc2487"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00169_.png",
+      "sha256": "f6f8dea06cf734ed1878c2c7731a2011b1ab71d8d4c96c549ac484de1a633ed3"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00170_.png",
+      "sha256": "1b91f66ae792d446c6b64978a04723bd7549daf5217bc96fb92851a9f494d2af"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00171_.png",
+      "sha256": "9ffd4e074c843b7ed42c03f8573feaadb0ef69c82321b69ec976a282acbbd364"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00172_.png",
+      "sha256": "b6270ba5f62ba9cc9ca39d8ac67bffe8d0f1d95e73a90d0150dba014c7f11c87"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00173_.png",
+      "sha256": "fd8e4e15a0e7e8a7e78694bfb0c5d1acd118ebce3043b85c8cc7a46db8211f97"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00174_.png",
+      "sha256": "a5b2bde9318149b5a26f3d24b884a19fe5d3029b429dbb3b037e56acb0ecd1db"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00175_.png",
+      "sha256": "10561db7f3485f988f22082068ccc289c980301ed424a7898a5300cbb98fc3c1"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00176_.png",
+      "sha256": "d2affac0ed226c5b1f9048a365b5a33c276b533ec73d62f7e2a68640a7f50b4f"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00177_.png",
+      "sha256": "57d09fcf2ec43fd27366bf7b9eee98ea9f2ea16e48b87bfb21089f007c2af09b"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00178_.png",
+      "sha256": "924b2dd939bcb3a8102d957de35ec9e389cb2bf9316b758160e434b80297e75a"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00179_.png",
+      "sha256": "5a2e77aabf889a9b2e68d2e927a0931b30c9e591c4953a794bcb2cc0e3be4e13"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00180_.png",
+      "sha256": "8ec8d01113badf1027a0d5f08a5f2847f25f033e9e5e511bf082596b5b8648a2"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00181_.png",
+      "sha256": "b97c05699f0686157daea8fcc466666a6c873c32f2b7483add380715678c78d4"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00182_.png",
+      "sha256": "669354324ac1c933557d44be103524b93ce2b6e73e6ec2afe920f41ffac10a83"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00183_.png",
+      "sha256": "49d4f8470e4190c6212618c29375b800dd7645c7a48ef1c7a1c019d5e44afe93"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00184_.png",
+      "sha256": "4c08130c5ccd59ff18d8062ec8c877557ab93003a8c604975b73911977f4572a"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00185_.png",
+      "sha256": "7b30645beb156c92bcf5e5bb9248358ea70f372cd6c3476cee132976a1712a1a"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00186_.png",
+      "sha256": "a060c39c29a0ec1f62796158708d9bc3cc9e4166543e6e1d569c9059b7891d57"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00187_.png",
+      "sha256": "748f2b26a71c8154ca4f2f73d823357040a34d92af088aeb5aa8378fce719f07"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00188_.png",
+      "sha256": "1b923df8183da5192e3b71396acee605dcf290dd216bb56323ea43f86d0a06db"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00189_.png",
+      "sha256": "b6da30957e907789d53fd753381cbca2f4fc310bf7935232d92708e3a0e4c2ec"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00190_.png",
+      "sha256": "8787b3af1cd3191859764dae7a27c38355baa15718f3b6a0bcdbd980cb2154a3"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00191_.png",
+      "sha256": "d2a657d735e8750a05779d59e28d41ed0c5fe4f43863bb84519b657803fcb10c"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00192_.png",
+      "sha256": "20816081fb32b5eb134cc40736982ce31a266d4e7e9e4c243599317dbe6ec5a6"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00193_.png",
+      "sha256": "4c0fe28002367671a8e27baf19366483ae28beff058c7a53d5b16e43ef8e0333"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00194_.png",
+      "sha256": "caa39f61fb7d45f4a379b63795438d144ff09b712125bbdfe6705b51a32a1e6e"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00195_.png",
+      "sha256": "ee2660d1148bba4653a5fead472330d81b0ec0e8b03be595a97412025be82c20"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00196_.png",
+      "sha256": "cbd4cda3e20425725c931b475ec3e012158be46301282505dd2d592858c54afd"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00197_.png",
+      "sha256": "69069439b8dff756cfce4d46929be9ae6e7f9536d9dc5f046e2b09800c5b841a"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00198_.png",
+      "sha256": "2616e668fae030a11fc77e73c57f9f3ac4046f6fb5014e21a9f745165befd29c"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00199_.png",
+      "sha256": "b91113dd4d6782f878a5417e7d5f5767e572c520bcb0bc94b2afb92f9baf1a27"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00200_.png",
+      "sha256": "9bbc4feba854d8711b83a9dc755a13f2dc7947752940193cd71428d151557374"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00201_.png",
+      "sha256": "c453eb08f51f48a41f5254ac1aa27d254293c01d4b457b9ab951ba54f16f37ef"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00202_.png",
+      "sha256": "a8adceed181020e056d70f7ea381852d05281a692f6da677b525d9b0e497be8d"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00203_.png",
+      "sha256": "95c726ab81de41b23ea1bc6c2d8a97be2e6708b3390d244f0ec3e69caa1c4fe0"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00204_.png",
+      "sha256": "2aa83d12e3ee63ac6a971472ab77bc7c0bb93a598318f897dbde416e2a588343"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00205_.png",
+      "sha256": "324a8666a5c759085592fc7849abe6a07172b966168920a72c632d68732fa0cf"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00206_.png",
+      "sha256": "22aae20dd1b7fda3c384e50cd6e2a3b20042323745a29f879c6dfe89cb3404aa"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00207_.png",
+      "sha256": "c0c49d1687c6d9ccd3f2044285cf8581af4820c2df53f3c0be4b8f7ce447ba3c"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00208_.png",
+      "sha256": "b73659082b96f1153657877fd7f42cd2232e73eb30076959dc58f7dff4ae7a8d"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00209_.png",
+      "sha256": "09764d2f84911e11dcbc7e58db22c54a74b795849438d74b78fd61c7911b696a"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00210_.png",
+      "sha256": "87d0b1f29f7fbbcaa2f870d35bef921463a28bc69b7d6e9531ea48de1bc4d06c"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00211_.png",
+      "sha256": "1ce1fc74b6784dde4d85d66aa86ef332bff79a8297a01b67affa2c80270ff1f8"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00212_.png",
+      "sha256": "afe3707dd85b1723d7583ee9855028753312aeca87511297493c2d172d946c7d"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00213_.png",
+      "sha256": "fa06645fbe5fbfe7475e20091e7942a3fcad234d0d1f55dc0b30ac3d642a80c1"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00214_.png",
+      "sha256": "8acc7bed0e26abf1c786b68a884e44eebbb083f588617e5e66b740c9a4f9c78d"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00215_.png",
+      "sha256": "443f6dacbb734c41c81c6cafc70cde294f473a1d4fa5dcfe5e5078e3fcdd82e5"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00216_.png",
+      "sha256": "bce83960582d6c6848784e66eb78229cad99a50442d2de8b6c4276af57c2a51e"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00217_.png",
+      "sha256": "7952876ba5da720c3c7fd789e6787e5678b2cd00fcef34a6604f2d8010e8472d"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00218_.png",
+      "sha256": "144bd4eba50ff92b70ceab4911a2f1c14b7c2c78b7192a5227a3ea740dc6d8e8"
+    },
+    {
+      "path": "art-migration/generation/hero032-body-actions-minimax-v3/hero032_body_00219_.png",
+      "sha256": "0a21a8c5757bc702f1aca2e66c6f0acb87a85ac49de8d60655d129f1ee62dae7"
+    }
+  ]
+}

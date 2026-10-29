@@ -1,0 +1,514 @@
+{
+  "heroId": 42,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/042/portrait.png",
+      "prepared": "art-migration/references/body-042-v2/idle.png",
+      "foot": [
+        383.96,
+        700
+      ],
+      "size": [
+        241,
+        500
+      ],
+      "sha256": "4d22eed30d55e58a041eb530bece51e36d235d67a3900f237b8eb8f7f516ab46"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero042-attack-v2/hero042_attack_alpha_00001_.png",
+      "prepared": "art-migration/references/body-042-v2/attack.png",
+      "foot": [
+        383.76,
+        700
+      ],
+      "size": [
+        336,
+        500
+      ],
+      "sha256": "a5e312d097ac6f654573600fab6ec811906bbfa772df7e9414f65b8957868230"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero042-skill-v2/hero042_skill_alpha_00001_.png",
+      "prepared": "art-migration/references/body-042-v2/skill.png",
+      "foot": [
+        384.35,
+        700
+      ],
+      "size": [
+        294,
+        500
+      ],
+      "sha256": "9150f7e4187637bba2cfa2dea5a3ebd87ac565c4df6994c0a0591d652777faa3"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H042-ATK",
+        "heroId": 42,
+        "name": "小可爱",
+        "originalName": "太史慈",
+        "slot": "普攻",
+        "skillId": 550420110,
+        "skillName": "普通攻击",
+        "newSkillName": "寄心轻投",
+        "purpose": "辅助",
+        "targetSide": "自身＋友方",
+        "scope": "自身＋友方全体",
+        "delivery": "原位自身辅助",
+        "movement": "自身目标原位（引擎跳过接近）",
+        "weapon": "手枪",
+        "weaponObservation": "单手短枪",
+        "effectClass": "命中/生效附着特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "收手蓄力→摊掌/抬手释放→收手待机",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B04",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_taishici_01",
+        "model": "hero_042_01",
+        "action": "gongji",
+        "effectiveDesc": "普通攻击转化为:回复自身2点怒气,并立即进入<蓄力>状态,每次<蓄力>时,永久提高我方全体2%增伤。",
+        "classificationStage": "被动改写生效后；解锁前仍用基础普攻",
+        "passiveRewrite": "550420310 登阶立志：普通攻击转化为:回复自身2点怒气,并立即进入<蓄力>状态,每次<蓄力>时,永久提高我方全体2%增伤。",
+        "passiveNotes": "550420310 登阶立志：普通攻击转化为:回复自身2点怒气,并立即进入<蓄力>状态,每次<蓄力>时,永久提高我方全体2%增伤。",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "wuqi51、wuqi5、wuqi4、wuqi21、wuqi11、wuqi3、wuqi2、wuqi41、wuqi31、wuqi1",
+        "rawDurationMs": 2266.667,
+        "fps": 30,
+        "durationFrames": 68,
+        "rawEvents": [
+          {
+            "frame0": 10,
+            "timeMs": 333.333,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@333.3ms（角色事件）",
+        "impactMs": [
+          333.333
+        ],
+        "impactStatus": "角色pia直接回调；待游戏内验收",
+        "performance": {
+          "__attackDoneDelay": 500,
+          "effectsPiaEnemy": [
+            {
+              "delay": 0,
+              "posType": 0,
+              "src": [
+                "common_skill_taishici_01"
+              ],
+              "type": 0
+            }
+          ],
+          "effectsPiaUs": [
+            {
+              "delay": 0,
+              "posType": 0,
+              "src": [
+                "common_skill_taishici_01"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            2,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_taishici_01",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_taishici_01_e809ba1c.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_taishici_01",
+                  "name": "common_skill_taishici_01",
+                  "fps": 24,
+                  "durationFrames": 15,
+                  "durationMs": 625.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaUs",
+            "resource": "common_skill_taishici_01",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_taishici_01_e809ba1c.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_taishici_01",
+                  "name": "common_skill_taishici_01",
+                  "fps": 24,
+                  "durationFrames": 15,
+                  "durationMs": 625.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsPiaEnemy: common_skill_taishici_01 delay=0 dt=None speed=1\neffectsPiaUs: common_skill_taishici_01 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_taishici_01"
+        ],
+        "portrait": "reskin/hero_042.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H042-ULT",
+        "heroId": 42,
+        "name": "小可爱",
+        "originalName": "太史慈",
+        "slot": "大招",
+        "skillId": 550420210,
+        "skillName": "志存高远",
+        "newSkillName": "守信蓄发",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "纵排",
+        "delivery": "近身攻击",
+        "movement": "移到目标所在排前出手",
+        "weapon": "手枪",
+        "weaponObservation": "单手短枪",
+        "effectClass": "施法者特效、命中/生效附着特效、移动伴随特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "举枪瞄准→开火后坐→复位；弹道独立；命中覆盖由独立目标特效控制",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B05",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方纵排造成350%伤害,并结束<蓄力>状态。",
+        "skillModel": "common_skill_taishici_02",
+        "model": "hero_042_01",
+        "action": "jineng",
+        "effectiveDesc": "对敌方纵排造成350%伤害,并结束<蓄力>状态。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "550420310 登阶立志：普通攻击转化为:回复自身2点怒气,并立即进入<蓄力>状态,每次<蓄力>时,永久提高我方全体2%增伤。",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "wuqi51、wuqi5、wuqi4、wuqi21、wuqi11、wuqi3、wuqi2、wuqi41、wuqi31、wuqi1",
+        "rawDurationMs": 2466.667,
+        "fps": 30,
+        "durationFrames": 74,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "allAttkDelayOffset": -550,
+          "__attackDoneDelay": 1000,
+          "effectFly": [
+            {
+              "delay": 0,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 0,
+              "src": [
+                "common_skill_taishici_02_3"
+              ],
+              "timeScale": 1.7
+            }
+          ],
+          "effectSrc": [
+            {
+              "delay": 550,
+              "notFollowParent": 1,
+              "offset": [
+                0,
+                -100
+              ],
+              "src": [
+                "common_skill_taishici_02_1"
+              ],
+              "timeScale": 1
+            }
+          ],
+          "effectsPiaEnemy": [
+            {
+              "posType": 0,
+              "src": [
+                "common_skill_taishici_02_2"
+              ],
+              "type": 0
+            }
+          ],
+          "effectsPiaUs": [
+            {
+              "posType": 0,
+              "src": [
+                "common_skill_taishici_02_2"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            5,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectSrc",
+            "resource": "common_skill_taishici_02_1",
+            "delay": 550,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_taishici_02_1_6d60917.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_taishici_02_1",
+                  "name": "common_skill_taishici_02_1",
+                  "fps": 24,
+                  "durationFrames": 14,
+                  "durationMs": 583.333,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        3
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 2,
+                      "timeMs": 83.333,
+                      "type": 10,
+                      "name": "pia123"
+                    },
+                    {
+                      "frame0": 4,
+                      "timeMs": 166.667,
+                      "type": 10,
+                      "name": "pia123"
+                    },
+                    {
+                      "frame0": 4,
+                      "timeMs": 166.667,
+                      "type": 10,
+                      "name": "pia456"
+                    },
+                    {
+                      "frame0": 6,
+                      "timeMs": 250.0,
+                      "type": 10,
+                      "name": "pia123"
+                    },
+                    {
+                      "frame0": 6,
+                      "timeMs": 250.0,
+                      "type": 10,
+                      "name": "pia456"
+                    },
+                    {
+                      "frame0": 8,
+                      "timeMs": 333.333,
+                      "type": 10,
+                      "name": "pia456"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_taishici_02_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_taishici_02_2_6b4e37b7.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_taishici_02_2",
+                  "name": "common_skill_taishici_02_2",
+                  "fps": 24,
+                  "durationFrames": 15,
+                  "durationMs": 625.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaUs",
+            "resource": "common_skill_taishici_02_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_taishici_02_2_6b4e37b7.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_taishici_02_2",
+                  "name": "common_skill_taishici_02_2",
+                  "fps": 24,
+                  "durationFrames": 15,
+                  "durationMs": 625.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectFly",
+            "resource": "common_skill_taishici_02_3",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1.7,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_taishici_02_3_a52fe357.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_taishici_02_3",
+                  "name": "common_skill_taishici_02_3",
+                  "fps": 24,
+                  "durationFrames": 27,
+                  "durationMs": 1125.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectSrc: common_skill_taishici_02_1 delay=550 dt=None speed=1 事件=pia123@83.3,pia123@166.7,pia456@166.7,pia123@250.0,pia456@250.0,pia456@333.3\neffectsPiaEnemy: common_skill_taishici_02_2 delay=0 dt=None speed=1\neffectsPiaUs: common_skill_taishici_02_2 delay=0 dt=None speed=1\neffectFly: common_skill_taishici_02_3 delay=0 dt=None speed=1.7",
+        "variants": [
+          "common_skill_taishici_02"
+        ],
+        "portrait": "reskin/hero_042.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false,
+  "denseGuideSchedule": [
+    {
+      "frame": 4,
+      "image": "idle"
+    },
+    {
+      "frame": 8,
+      "image": "idle"
+    },
+    {
+      "frame": 12,
+      "image": "attack"
+    },
+    {
+      "frame": 16,
+      "image": "attack"
+    },
+    {
+      "frame": 20,
+      "image": "attack"
+    },
+    {
+      "frame": 24,
+      "image": "attack"
+    },
+    {
+      "frame": 28,
+      "image": "idle"
+    },
+    {
+      "frame": 32,
+      "image": "idle"
+    },
+    {
+      "frame": 36,
+      "image": "idle"
+    },
+    {
+      "frame": 40,
+      "image": "idle"
+    },
+    {
+      "frame": 44,
+      "image": "idle"
+    },
+    {
+      "frame": 48,
+      "image": "skill"
+    },
+    {
+      "frame": 52,
+      "image": "skill"
+    },
+    {
+      "frame": 56,
+      "image": "skill"
+    },
+    {
+      "frame": 60,
+      "image": "skill"
+    },
+    {
+      "frame": 64,
+      "image": "skill"
+    },
+    {
+      "frame": 68,
+      "image": "idle"
+    },
+    {
+      "frame": 72,
+      "image": "idle"
+    }
+  ]
+}

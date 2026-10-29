@@ -1,0 +1,418 @@
+{
+  "heroId": 40,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/040/portrait.png",
+      "prepared": "art-migration/references/body-040-v2/idle.png",
+      "foot": [
+        384.05,
+        700
+      ],
+      "size": [
+        326,
+        500
+      ],
+      "sha256": "ca85a9257712dc72341b66d1dd7057626861ac5730b66297682f475ea9d76ca8"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero040-attack-v2/hero040_attack_alpha_00001_.png",
+      "prepared": "art-migration/references/body-040-v2/attack.png",
+      "foot": [
+        384.03,
+        700
+      ],
+      "size": [
+        330,
+        500
+      ],
+      "sha256": "b8e82f90b4629b9bdb36d0259cb1af877d3e40f563d9ea4827dc7f4a56f88004"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero040-skill-v2/hero040_skill_alpha_00001_.png",
+      "prepared": "art-migration/references/body-040-v2/skill.png",
+      "foot": [
+        384.11,
+        700
+      ],
+      "size": [
+        291,
+        500
+      ],
+      "sha256": "8647504c89acabe72347698de41321023869e682965cc0f7b18150e7573085a9"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H040-ATK",
+        "heroId": 40,
+        "name": "包租牛",
+        "originalName": "鲁肃",
+        "slot": "普攻",
+        "skillId": 550400110,
+        "skillName": "普通攻击",
+        "newSkillName": "钥声轻点",
+        "purpose": "辅助",
+        "targetSide": "自身",
+        "scope": "自身",
+        "delivery": "原位自身辅助",
+        "movement": "自身目标原位（引擎跳过接近）",
+        "weapon": "生活道具",
+        "weaponObservation": "钥匙串",
+        "effectClass": "命中/生效附着特效",
+        "semantic": "治疗/吸血",
+        "bodyDesign": "收手蓄力→摊掌/抬手释放→收手待机",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B04",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_lusu_02",
+        "model": "hero_040_01",
+        "action": "gongji",
+        "effectiveDesc": "普通攻击转化为：回复自身100%攻击力的生命。",
+        "classificationStage": "被动改写生效后；解锁前仍用基础普攻",
+        "passiveRewrite": "550400310 自保：普通攻击转化为：回复自身100%攻击力的生命。",
+        "passiveNotes": "550400310 自保：普通攻击转化为：回复自身100%攻击力的生命。",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1166.667,
+        "fps": 30,
+        "durationFrames": 35,
+        "rawEvents": [
+          {
+            "frame0": 16,
+            "timeMs": 533.333,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@533.3ms（角色事件）",
+        "impactMs": [
+          533.333
+        ],
+        "impactStatus": "角色pia直接回调；待游戏内验收",
+        "performance": {
+          "effectsPiaEnemy": [
+            {
+              "delay": 0,
+              "posType": 1,
+              "src": [
+                "common_skill_lusu_02"
+              ],
+              "type": 0
+            }
+          ],
+          "effectsPiaUs": [
+            {
+              "delay": 0,
+              "posType": 1,
+              "src": [
+                "common_skill_lusu_02"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            2,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_lusu_02",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_lusu_02_7582971c.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_lusu_02",
+                  "name": "common_skill_lusu_02",
+                  "fps": 24,
+                  "durationFrames": 12,
+                  "durationMs": 500.0,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_lusu_02_ljqyj",
+                  "name": "common_skill_mengmaxiang_skill_01_ljyj6",
+                  "fps": 24,
+                  "durationFrames": 8,
+                  "durationMs": 333.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaUs",
+            "resource": "common_skill_lusu_02",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_lusu_02_7582971c.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_lusu_02",
+                  "name": "common_skill_lusu_02",
+                  "fps": 24,
+                  "durationFrames": 12,
+                  "durationMs": 500.0,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_lusu_02_ljqyj",
+                  "name": "common_skill_mengmaxiang_skill_01_ljyj6",
+                  "fps": 24,
+                  "durationFrames": 8,
+                  "durationMs": 333.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsPiaEnemy: common_skill_lusu_02 delay=0 dt=None speed=1\neffectsPiaUs: common_skill_lusu_02 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_lusu_02"
+        ],
+        "portrait": "reskin/hero_040.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H040-ULT",
+        "heroId": 40,
+        "name": "包租牛",
+        "originalName": "鲁肃",
+        "slot": "大招",
+        "skillId": 550400210,
+        "skillName": "合纵连横",
+        "newSkillName": "十年免租",
+        "purpose": "辅助",
+        "targetSide": "友方",
+        "scope": "全体",
+        "delivery": "辅助施法",
+        "movement": "原站位出手",
+        "weapon": "生活道具",
+        "weaponObservation": "钥匙串",
+        "effectClass": "目标位置特效",
+        "semantic": "治疗/吸血",
+        "bodyDesign": "收手蓄力→摊掌/抬手释放→收手待机；命中覆盖由独立目标特效控制",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B04",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "回复友方全体105%攻击的生命,并提升15%抗暴,15%韧性,持续2回合。",
+        "skillModel": "common_skill_lusu_03",
+        "model": "hero_040_01",
+        "action": "jineng",
+        "effectiveDesc": "回复友方全体105%攻击的生命,并提升15%抗暴,15%韧性,持续2回合。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "550400310 自保：普通攻击转化为：回复自身100%攻击力的生命。",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1166.667,
+        "fps": 30,
+        "durationFrames": 35,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "attackFrameDelay": 850,
+          "effectsTarEnemy": [
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_lusu_03"
+              ],
+              "type": 0
+            }
+          ],
+          "effectsTarUs": [
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_lusu_03"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_lusu_03",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_lusu_03_b7d65f62.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_lusu_03",
+                  "name": "common_skill_lusu_03",
+                  "fps": 24,
+                  "durationFrames": 46,
+                  "durationMs": 1916.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsTarUs",
+            "resource": "common_skill_lusu_03",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_lusu_03_b7d65f62.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_lusu_03",
+                  "name": "common_skill_lusu_03",
+                  "fps": 24,
+                  "durationFrames": 46,
+                  "durationMs": 1916.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_lusu_03 delay=0 dt=None speed=1\neffectsTarUs: common_skill_lusu_03 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_lusu_03"
+        ],
+        "portrait": "reskin/hero_040.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false,
+  "denseGuideSchedule": [
+    {
+      "frame": 4,
+      "image": "idle"
+    },
+    {
+      "frame": 8,
+      "image": "idle"
+    },
+    {
+      "frame": 12,
+      "image": "attack"
+    },
+    {
+      "frame": 16,
+      "image": "attack"
+    },
+    {
+      "frame": 20,
+      "image": "attack"
+    },
+    {
+      "frame": 24,
+      "image": "attack"
+    },
+    {
+      "frame": 28,
+      "image": "idle"
+    },
+    {
+      "frame": 32,
+      "image": "idle"
+    },
+    {
+      "frame": 36,
+      "image": "idle"
+    },
+    {
+      "frame": 40,
+      "image": "idle"
+    },
+    {
+      "frame": 44,
+      "image": "idle"
+    },
+    {
+      "frame": 48,
+      "image": "skill"
+    },
+    {
+      "frame": 52,
+      "image": "skill"
+    },
+    {
+      "frame": 56,
+      "image": "skill"
+    },
+    {
+      "frame": 60,
+      "image": "skill"
+    },
+    {
+      "frame": 64,
+      "image": "skill"
+    },
+    {
+      "frame": 68,
+      "image": "idle"
+    },
+    {
+      "frame": 72,
+      "image": "idle"
+    }
+  ]
+}

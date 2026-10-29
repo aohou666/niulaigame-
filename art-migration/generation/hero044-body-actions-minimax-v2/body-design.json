@@ -1,0 +1,521 @@
+{
+  "heroId": 44,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/044/portrait.png",
+      "prepared": "art-migration/references/body-044-v2/idle.png",
+      "foot": [
+        383.57,
+        700
+      ],
+      "size": [
+        285,
+        500
+      ],
+      "sha256": "05b6094239a9d7c94c868405c051cb56f9ad6ca5798fdfd610ba36b7229d66d7"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero044-attack-v2/hero044_attack_alpha_00001_.png",
+      "prepared": "art-migration/references/body-044-v2/attack.png",
+      "foot": [
+        383.86,
+        700
+      ],
+      "size": [
+        375,
+        500
+      ],
+      "sha256": "69f30fb26800fd87f9a965f13f1e999672bceddbef8c435ccbdff26c74de0f45"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero044-skill-v2/hero044_skill_alpha_00001_.png",
+      "prepared": "art-migration/references/body-044-v2/skill.png",
+      "foot": [
+        384.32,
+        700
+      ],
+      "size": [
+        377,
+        500
+      ],
+      "sha256": "5ce2ee5a46c3b045efb0b0bd2469cf96f61a9dbd4e56260f64f4e514ffda99b7"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H044-ATK",
+        "heroId": 44,
+        "name": "煎饼师傅",
+        "originalName": "张昭",
+        "slot": "普攻",
+        "skillId": 550440110,
+        "skillName": "普通攻击",
+        "newSkillName": "锅边轻拍",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "近身攻击",
+        "movement": "移到目标前出手",
+        "weapon": "炊具",
+        "weaponObservation": "平底锅／煎饼铛",
+        "effectClass": "命中/生效附着特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "举锅蓄力→拍击/推送→回收",
+        "rootPolicy": "引擎负责接近与返回；视频固定根位置，只做出手",
+        "batch": "B02",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_lusu_02",
+        "model": "hero_044_01",
+        "action": "gongji",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "550440310 先声夺人：普攻有30%几率对敌方造成<眩晕>,持续2回合",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1166.667,
+        "fps": 30,
+        "durationFrames": 35,
+        "rawEvents": [
+          {
+            "frame0": 14,
+            "timeMs": 466.667,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@466.7ms（角色事件）",
+        "impactMs": [
+          466.667
+        ],
+        "impactStatus": "角色pia直接回调；待游戏内验收",
+        "performance": {
+          "effectsPiaEnemy": [
+            {
+              "delay": 0,
+              "posType": 1,
+              "src": [
+                "common_skill_lusu_02"
+              ],
+              "type": 0
+            }
+          ],
+          "effectsPiaUs": [
+            {
+              "delay": 0,
+              "posType": 1,
+              "src": [
+                "common_skill_lusu_02"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            2,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_lusu_02",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_lusu_02_7582971c.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_lusu_02",
+                  "name": "common_skill_lusu_02",
+                  "fps": 24,
+                  "durationFrames": 12,
+                  "durationMs": 500.0,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_lusu_02_ljqyj",
+                  "name": "common_skill_mengmaxiang_skill_01_ljyj6",
+                  "fps": 24,
+                  "durationFrames": 8,
+                  "durationMs": 333.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaUs",
+            "resource": "common_skill_lusu_02",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_lusu_02_7582971c.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_lusu_02",
+                  "name": "common_skill_lusu_02",
+                  "fps": 24,
+                  "durationFrames": 12,
+                  "durationMs": 500.0,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_lusu_02_ljqyj",
+                  "name": "common_skill_mengmaxiang_skill_01_ljyj6",
+                  "fps": 24,
+                  "durationFrames": 8,
+                  "durationMs": 333.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsPiaEnemy: common_skill_lusu_02 delay=0 dt=None speed=1\neffectsPiaUs: common_skill_lusu_02 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_lusu_02"
+        ],
+        "portrait": "reskin/hero_044.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H044-ULT",
+        "heroId": 44,
+        "name": "煎饼师傅",
+        "originalName": "张昭",
+        "slot": "大招",
+        "skillId": 550440210,
+        "skillName": "诤言直谏",
+        "newSkillName": "暖饼直谏",
+        "purpose": "攻辅兼备",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "近身攻击",
+        "movement": "移到目标前出手",
+        "weapon": "炊具",
+        "weaponObservation": "平底锅／煎饼铛",
+        "effectClass": "施法者特效、目标位置特效、命中/生效附着特效",
+        "semantic": "治疗/吸血",
+        "bodyDesign": "举锅蓄力→拍击/推送→回收",
+        "rootPolicy": "引擎负责接近与返回；视频固定根位置，只做出手",
+        "batch": "B07",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成350%伤害,并回复我方全体25%张昭本次攻击造成伤害的生命。",
+        "skillModel": "common_skill_zhangzhao_01",
+        "model": "hero_044_01",
+        "action": "jineng",
+        "effectiveDesc": "对敌方前排单体造成350%伤害,并回复我方全体25%张昭本次攻击造成伤害的生命。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "550440310 先声夺人：普攻有30%几率对敌方造成<眩晕>,持续2回合",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 3666.667,
+        "fps": 30,
+        "durationFrames": 110,
+        "rawEvents": [
+          {
+            "frame0": 0,
+            "timeMs": 0.0,
+            "ints": [
+              10
+            ],
+            "type": 10,
+            "name": "count"
+          },
+          {
+            "frame0": 15,
+            "timeMs": 500.0,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 26,
+            "timeMs": 866.667,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 36,
+            "timeMs": 1200.0,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 42,
+            "timeMs": 1400.0,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 47,
+            "timeMs": 1566.667,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 49,
+            "timeMs": 1633.333,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 52,
+            "timeMs": 1733.333,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 78,
+            "timeMs": 2600.0,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 79,
+            "timeMs": 2633.333,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 80,
+            "timeMs": 2666.667,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@500.0ms（角色事件）；pia@866.7ms（角色事件）；pia@1200.0ms（角色事件）；pia@1400.0ms（角色事件）；pia@1566.7ms（角色事件）；pia@1633.3ms（角色事件）；pia@1733.3ms（角色事件）；pia@2600.0ms（角色事件）；pia@2633.3ms（角色事件）；pia@2666.7ms（角色事件）",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "__attackDoneDelay": 1000,
+          "effectSrc": [
+            {
+              "delay": 2000,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_zhangzhao_04_2"
+              ]
+            }
+          ],
+          "effectsPiaEnemy": [
+            {
+              "posType": 0,
+              "src": [
+                "common_skill_zhangzhao_04_3"
+              ]
+            }
+          ],
+          "effectsTarEnemy": [],
+          "effectsTarUs": [
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 0,
+              "src": [
+                "common_skill_zhangzhao_02"
+              ],
+              "timeScale": 1,
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            2,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectSrc",
+            "resource": "common_skill_zhangzhao_04_2",
+            "delay": 2000,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhangzhao_04_2_f848818f.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhangzhao_04_2",
+                  "name": "common_skill_zhangzhao_04_2",
+                  "fps": 24,
+                  "durationFrames": 19,
+                  "durationMs": 791.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsTarUs",
+            "resource": "common_skill_zhangzhao_02",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhangzhao_02_3258e7ee.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhangzhao_02",
+                  "name": "common_skill_zhangzhao_02",
+                  "fps": 24,
+                  "durationFrames": 70,
+                  "durationMs": 2916.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_zhangzhao_04_3",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhangzhao_04_3_18762dc8.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhangzhao_04_3",
+                  "name": "common_skill_zhangzhao_04_3",
+                  "fps": 24,
+                  "durationFrames": 17,
+                  "durationMs": 708.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectSrc: common_skill_zhangzhao_04_2 delay=2000 dt=None speed=1\neffectsTarUs: common_skill_zhangzhao_02 delay=0 dt=None speed=1\neffectsPiaEnemy: common_skill_zhangzhao_04_3 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_zhangzhao_01"
+        ],
+        "portrait": "reskin/hero_044.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false,
+  "denseGuideSchedule": [
+    {
+      "frame": 4,
+      "image": "idle"
+    },
+    {
+      "frame": 8,
+      "image": "idle"
+    },
+    {
+      "frame": 12,
+      "image": "attack"
+    },
+    {
+      "frame": 16,
+      "image": "attack"
+    },
+    {
+      "frame": 20,
+      "image": "attack"
+    },
+    {
+      "frame": 24,
+      "image": "attack"
+    },
+    {
+      "frame": 28,
+      "image": "idle"
+    },
+    {
+      "frame": 32,
+      "image": "idle"
+    },
+    {
+      "frame": 36,
+      "image": "idle"
+    },
+    {
+      "frame": 40,
+      "image": "idle"
+    },
+    {
+      "frame": 44,
+      "image": "idle"
+    },
+    {
+      "frame": 48,
+      "image": "skill"
+    },
+    {
+      "frame": 52,
+      "image": "skill"
+    },
+    {
+      "frame": 56,
+      "image": "skill"
+    },
+    {
+      "frame": 60,
+      "image": "skill"
+    },
+    {
+      "frame": 64,
+      "image": "skill"
+    },
+    {
+      "frame": 68,
+      "image": "idle"
+    },
+    {
+      "frame": 72,
+      "image": "idle"
+    }
+  ]
+}

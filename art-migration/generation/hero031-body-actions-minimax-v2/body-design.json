@@ -1,0 +1,418 @@
+{
+  "heroId": 31,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/031/portrait.png",
+      "prepared": "art-migration/references/body-031-v2/idle.png",
+      "foot": [
+        384.02,
+        700
+      ],
+      "size": [
+        257,
+        500
+      ],
+      "sha256": "c4147fc7fa16d7d9e8b5ec0078e683e56a0c9d519596d72b1eb76b23cfa53bc0"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero031-attack-v5/hero031_attack_continuity_alpha_00003_.png",
+      "prepared": "art-migration/references/body-031-v2/attack.png",
+      "foot": [
+        383.77,
+        700
+      ],
+      "size": [
+        240,
+        500
+      ],
+      "sha256": "748961c9309d1a766f2208419a26e1fdc24e49f6e1e029a0594da69a496a0ebe"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero031-skill-v5/hero031_skill_continuity_alpha_00003_.png",
+      "prepared": "art-migration/references/body-031-v2/skill.png",
+      "foot": [
+        383.56,
+        700
+      ],
+      "size": [
+        272,
+        500
+      ],
+      "sha256": "b5f617c7d76f8c9cab50ad15b0e05546de9cad574ea2d4eb32142232cbf81186"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H031-ATK",
+        "heroId": 31,
+        "name": "丧尸牛",
+        "originalName": "张苞",
+        "slot": "普攻",
+        "skillId": 550310110,
+        "skillName": "普通攻击",
+        "newSkillName": "墨影腐咬",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "近身攻击",
+        "movement": "移到目标前出手",
+        "weapon": "兽爪／拳脚",
+        "weaponObservation": "Zombie bull with charcoal black-green skin matching reference (#292b29), dusty weathered MEDIUM charcoal GRAY torn suit matching reference (#55525b), muted brown-red loose striped tie, black disheveled hair, tongue hanging out, bare dark hoof feet, exposed dull BRASS mechanical LEFT shin visible through torn trouser. No shiny chrome shin, no pitch-black suit, no healthy yellow skin.",
+        "effectClass": "命中/生效附着特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "One compact claw swipe; preserve dusty gray tattered jacket/trousers, dark skin, hanging tongue, dull brass exposed shin. Do not turn suit pitch black or metal chrome.",
+        "rootPolicy": "引擎负责接近与返回；视频固定根位置，只做出手",
+        "batch": "B02",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_tongyonghuiji",
+        "model": "hero_031_01",
+        "action": "gongji",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 966.667,
+        "fps": 30,
+        "durationFrames": 29,
+        "rawEvents": [
+          {
+            "frame0": 13,
+            "timeMs": 433.333,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@433.3ms（角色事件）",
+        "impactMs": [
+          433.333
+        ],
+        "impactStatus": "角色pia直接回调；待游戏内验收",
+        "performance": {
+          "effectsPiaEnemy": [
+            {
+              "delay": 0,
+              "posType": 1,
+              "src": [
+                "common_skill_tongyonghuiji"
+              ],
+              "type": 0
+            }
+          ],
+          "effectsPiaUs": [
+            {
+              "delay": 0,
+              "posType": 1,
+              "src": [
+                "common_skill_tongyonghuiji"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            2,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_tongyonghuiji",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_tongyonghuiji_4eb6f288.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_tongyonghuiji",
+                  "name": "common_skill_tongyonghuiji",
+                  "fps": 24,
+                  "durationFrames": 9,
+                  "durationMs": 375.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaUs",
+            "resource": "common_skill_tongyonghuiji",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_tongyonghuiji_4eb6f288.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_tongyonghuiji",
+                  "name": "common_skill_tongyonghuiji",
+                  "fps": 24,
+                  "durationFrames": 9,
+                  "durationMs": 375.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsPiaEnemy: common_skill_tongyonghuiji delay=0 dt=None speed=1\neffectsPiaUs: common_skill_tongyonghuiji delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_tongyonghuiji"
+        ],
+        "portrait": "reskin/hero_031.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H031-ULT",
+        "heroId": 31,
+        "name": "丧尸牛",
+        "originalName": "张苞",
+        "slot": "大招",
+        "skillId": 550310210,
+        "skillName": "冠勇一击",
+        "newSkillName": "噬心扑击",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "原地远程作用",
+        "movement": "原站位出手",
+        "weapon": "兽爪／拳脚",
+        "weaponObservation": "Zombie bull with charcoal black-green skin matching reference (#292b29), dusty weathered MEDIUM charcoal GRAY torn suit matching reference (#55525b), muted brown-red loose striped tie, black disheveled hair, tongue hanging out, bare dark hoof feet, exposed dull BRASS mechanical LEFT shin visible through torn trouser. No shiny chrome shin, no pitch-black suit, no healthy yellow skin.",
+        "effectClass": "目标位置特效",
+        "semantic": "中毒",
+        "bodyDesign": "Raise both claw hands, one compact zombie roar; same dusty gray suit and charcoal dark skin, hanging tongue and dull brass shin.",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B05",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成300%伤害,并附加<中毒>,每回合造成100%伤害,持续2回合。",
+        "skillModel": "common_skill_zhangbao_02",
+        "model": "hero_031_01",
+        "action": "jineng",
+        "effectiveDesc": "对敌方前排单体造成300%伤害,并附加<中毒>,每回合造成100%伤害,持续2回合。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1100.0,
+        "fps": 30,
+        "durationFrames": 33,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "__attackDoneDelay": 1000,
+          "attackFrameDelay": 1500,
+          "effectsTarEnemy": [
+            {
+              "delay": 0,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_zhangbao_02"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_zhangbao_02",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhangbao_02_7292678.bin",
+              "timelines": [
+                {
+                  "armature": "shouji",
+                  "name": "shouji",
+                  "fps": 24,
+                  "durationFrames": 18,
+                  "durationMs": 750.0,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_zhangbao_02",
+                  "name": "common_skill_zhangbao_02",
+                  "fps": 24,
+                  "durationFrames": 57,
+                  "durationMs": 2375.0,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        4
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 8,
+                      "timeMs": 333.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 14,
+                      "timeMs": 583.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 21,
+                      "timeMs": 875.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 31,
+                      "timeMs": 1291.667,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                },
+                {
+                  "armature": "xunhuanyanwu",
+                  "name": "xunhuanyanwu",
+                  "fps": 24,
+                  "durationFrames": 14,
+                  "durationMs": 583.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_zhangbao_02 delay=0 dt=None speed=1 事件=pia@333.3,pia@583.3,pia@875.0,pia@1291.7",
+        "variants": [
+          "common_skill_zhangbao_02"
+        ],
+        "portrait": "reskin/hero_031.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false,
+  "denseGuideSchedule": [
+    {
+      "frame": 4,
+      "image": "idle"
+    },
+    {
+      "frame": 8,
+      "image": "idle"
+    },
+    {
+      "frame": 12,
+      "image": "attack"
+    },
+    {
+      "frame": 16,
+      "image": "attack"
+    },
+    {
+      "frame": 20,
+      "image": "attack"
+    },
+    {
+      "frame": 24,
+      "image": "attack"
+    },
+    {
+      "frame": 28,
+      "image": "idle"
+    },
+    {
+      "frame": 32,
+      "image": "idle"
+    },
+    {
+      "frame": 36,
+      "image": "idle"
+    },
+    {
+      "frame": 40,
+      "image": "idle"
+    },
+    {
+      "frame": 44,
+      "image": "idle"
+    },
+    {
+      "frame": 48,
+      "image": "skill"
+    },
+    {
+      "frame": 52,
+      "image": "skill"
+    },
+    {
+      "frame": 56,
+      "image": "skill"
+    },
+    {
+      "frame": 60,
+      "image": "skill"
+    },
+    {
+      "frame": 64,
+      "image": "skill"
+    },
+    {
+      "frame": 68,
+      "image": "idle"
+    },
+    {
+      "frame": 72,
+      "image": "idle"
+    }
+  ]
+}
