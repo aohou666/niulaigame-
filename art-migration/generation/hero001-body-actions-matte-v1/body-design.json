@@ -1,0 +1,141 @@
+{
+  "heroId": 1,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/001/portrait.png",
+      "prepared": "art-migration/references/body-001/idle.png",
+      "foot": [
+        384.36,
+        700
+      ],
+      "size": [
+        334,
+        620
+      ],
+      "sha256": "99aed28845edcdc3b145854780c4e58719e1f02b8ef2000343d62c28d354fd05"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero001-attack-v3/hero001_attack_alpha_00002_.png",
+      "prepared": "art-migration/references/body-001/attack.png",
+      "foot": [
+        383.91,
+        700
+      ],
+      "size": [
+        400,
+        620
+      ],
+      "sha256": "be9ebd9b68981ef5d63213b9f776ab2c7f88d26e5e07c3fe17e25d67454f5102"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero001-skill-v2/hero001_skill_alpha_00001_.png",
+      "prepared": "art-migration/references/body-001/skill.png",
+      "foot": [
+        383.57,
+        700
+      ],
+      "size": [
+        347,
+        620
+      ],
+      "sha256": "a7f932f726b7c83f875811fad1ea9c876300d3675d47a84a5f5b946d592da58c"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54
+    }
+  },
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "approved-for-matting",
+  "runtimeIntegrated": false,
+  "length": 73,
+  "acceleration": "SageAttention after matching official Python dev headers/libs repair",
+  "sourceBodyJob": "art-migration/generation/hero001-body-actions-minimax-v2-short-sage",
+  "sourceFrameOrder": [
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00001_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00002_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00003_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00004_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00005_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00006_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00007_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00008_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00009_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00010_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00011_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00012_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00013_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00014_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00015_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00016_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00017_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00018_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00019_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00020_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00021_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00022_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00023_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00024_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00025_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00026_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00027_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00028_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00029_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00030_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00031_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00032_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00033_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00034_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00035_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00036_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00037_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00038_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00039_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00040_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00041_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00042_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00043_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00044_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00045_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00046_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00047_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00048_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00049_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00050_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00051_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00052_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00053_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00054_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00055_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00056_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00057_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00058_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00059_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00060_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00061_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00062_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00063_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00064_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00065_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00066_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00067_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00068_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00069_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00070_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00071_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00072_.png",
+    "art-migration/generation/hero001-body-actions-minimax-v2-short-sage/hero001_body_short_sage_00073_.png"
+  ]
+}

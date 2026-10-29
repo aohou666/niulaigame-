@@ -1,0 +1,65 @@
+{
+  "heroId": 1,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/001/portrait.png",
+      "prepared": "art-migration/references/body-001/idle.png",
+      "foot": [
+        384.36,
+        700
+      ],
+      "size": [
+        334,
+        620
+      ],
+      "sha256": "99aed28845edcdc3b145854780c4e58719e1f02b8ef2000343d62c28d354fd05"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero001-attack-v3/hero001_attack_alpha_00002_.png",
+      "prepared": "art-migration/references/body-001/attack.png",
+      "foot": [
+        383.91,
+        700
+      ],
+      "size": [
+        400,
+        620
+      ],
+      "sha256": "be9ebd9b68981ef5d63213b9f776ab2c7f88d26e5e07c3fe17e25d67454f5102"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero001-skill-v2/hero001_skill_alpha_00001_.png",
+      "prepared": "art-migration/references/body-001/skill.png",
+      "foot": [
+        383.57,
+        700
+      ],
+      "size": [
+        347,
+        620
+      ],
+      "sha256": "a7f932f726b7c83f875811fad1ea9c876300d3675d47a84a5f5b946d592da58c"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54
+    }
+  },
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false,
+  "length": 73,
+  "acceleration": "SageAttention after matching official Python dev headers/libs repair"
+}

@@ -46,6 +46,12 @@ def collect(folder):
     if history is None:print('PENDING',record['promptId']);return False
     (folder/'history.json').write_text(json.dumps(history,ensure_ascii=False,indent=2),'utf8')
     record['comfyStatus']=history.get('status')
+    latents=[]
+    for output in history.get('outputs',{}).values():
+        for item in output.get('latents',[]):
+            source=COMFY/'output'/item.get('subfolder','')/item['filename'];dest=folder/item['filename'];shutil.copy2(source,dest)
+            latents.append({'path':dest.relative_to(ROOT).as_posix(),'sha256':hashlib.sha256(dest.read_bytes()).hexdigest()})
+    if latents:record['latents']=latents
     if history.get('status',{}).get('status_str')!='success':
         record['status']='failed';(folder/'job.json').write_text(json.dumps(record,ensure_ascii=False,indent=2),'utf8')
         error=next((v for k,v in history['status'].get('messages',[]) if k=='execution_error'),{})

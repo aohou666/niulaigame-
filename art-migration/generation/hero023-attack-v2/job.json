@@ -1,12 +1,54 @@
 {
   "promptId": "e7f54cc4-d86d-48cd-bfe1-120935d31399",
   "submittedUtc": "2026-10-29T02:20:58Z",
-  "status": "submitted",
+  "status": "generated-unreviewed",
   "provider": "local-comfyui",
   "workflowSha256": "04afd83576d20e2fd18e43283651568ebbff3ed9ea2854358868e1ae374b6470",
   "response": {
     "prompt_id": "e7f54cc4-d86d-48cd-bfe1-120935d31399",
     "number": 214,
     "node_errors": {}
-  }
+  },
+  "comfyStatus": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "e7f54cc4-d86d-48cd-bfe1-120935d31399",
+          "timestamp": 1793243462308
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "1",
+            "2",
+            "3"
+          ],
+          "prompt_id": "e7f54cc4-d86d-48cd-bfe1-120935d31399",
+          "timestamp": 1793243462322
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "e7f54cc4-d86d-48cd-bfe1-120935d31399",
+          "timestamp": 1793243515448
+        }
+      ]
+    ]
+  },
+  "outputs": [
+    {
+      "path": "art-migration/generation/hero023-attack-v2/qwen_00044_.png",
+      "sha256": "e5185ba8ec381381dde0a220766431eaf11a21b5f5c3dc139f08589f088cb446"
+    },
+    {
+      "path": "art-migration/generation/hero023-attack-v2/hero023_attack_alpha_00001_.png",
+      "sha256": "2a5be9b253e61c935149475454260ab62cc3da3fd9489f8660fb1732e1233413"
+    }
+  ]
 }

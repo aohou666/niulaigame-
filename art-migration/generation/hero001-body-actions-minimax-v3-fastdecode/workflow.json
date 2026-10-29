@@ -1,0 +1,260 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "minimax_h3_fl2va_pruned_w4a8_mixed.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_32b_minimax_h3_int4_convrot.safetensors",
+      "type": "minimax",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "street_body001_idle.png"
+    }
+  },
+  "5": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "street_body001_attack.png"
+    }
+  },
+  "6": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "street_body001_skill.png"
+    }
+  },
+  "7": {
+    "class_type": "MiniMaxH3ImageToVideo",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "prompt": "Create one73-frame, three-second fixed-camera production sprite clip at24fps of the EXACT golden anthropomorphic bull in the guide images. Same golden swept hair, black horns, purple muzzle, navy suit, white shirt and red tie throughout. Pure black background. Entire body, horns, hands and both feet remain inside the canvas at every frame, including in-between frames. Keep15percent empty margin beyond each fist; never extend an arm to the image border. Fixed foot/root position; no camera motion, no travel across the canvas, no other characters, environment, text, weapons or VFX.\nTWO distinct movements, with an idle reset between them. Frames0-35: smoothly wind up once, perform one clean rightward straight punch matching the attack guide around frame16, then recover to the starting idle by frame35. Frames36-72: smoothly wind up one emphatic fist casting gesture, match the skill guide around frame54, then recover to the exact starting idle by frame72. No extra punch before the casting gesture, no repeated attacks. Natural shoulder/elbow/wrist mechanics and small weight shifts, coherent cloth follow-through, stable face and proportions. Premium tactile2.5D semi-realistic semi-cartoon neighborhood mobile-game art. Avoid motion blur hiding limbs.",
+      "width": 512,
+      "height": 512,
+      "length": 73,
+      "first_frame": [
+        "4",
+        0
+      ],
+      "last_frame": [
+        "4",
+        0
+      ]
+    }
+  },
+  "8": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "7",
+        0
+      ],
+      "latent": [
+        "7",
+        1
+      ],
+      "frame_idx": 16,
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "5",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "8",
+        0
+      ],
+      "latent": [
+        "7",
+        1
+      ],
+      "frame_idx": 36,
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "4",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "9",
+        0
+      ],
+      "latent": [
+        "7",
+        1
+      ],
+      "frame_idx": 54,
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "6",
+        0
+      ]
+    }
+  },
+  "11": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "lora_name": "minimax_h3_fl2v_lightx2v_turbo_8step_v1.0_resized_avg_rank_24_bf16.safetensors",
+      "strength_model": 1
+    }
+  },
+  "12": {
+    "class_type": "MiniMaxH3DualClockSamplerT8",
+    "inputs": {
+      "model": [
+        "19",
+        0
+      ],
+      "av_latent": [
+        "7",
+        1
+      ],
+      "steps": 8,
+      "shift_video": 12,
+      "shift_audio": 3,
+      "sampler_name": "dual_clock_euler",
+      "scheduler": "native_flow"
+    }
+  },
+  "13": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "12",
+        0
+      ],
+      "conditioning": [
+        "10",
+        0
+      ]
+    }
+  },
+  "14": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 202610290101
+    }
+  },
+  "15": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "14",
+        0
+      ],
+      "guider": [
+        "13",
+        0
+      ],
+      "sampler": [
+        "12",
+        1
+      ],
+      "sigmas": [
+        "12",
+        2
+      ],
+      "latent_image": [
+        "7",
+        1
+      ]
+    }
+  },
+  "16": {
+    "class_type": "LTXVSeparateAVLatent",
+    "inputs": {
+      "av_latent": [
+        "15",
+        0
+      ]
+    }
+  },
+  "17": {
+    "class_type": "VAEDecodeTiled",
+    "inputs": {
+      "samples": [
+        "20",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "tile_size": 512,
+      "overlap": 64,
+      "temporal_size": 32,
+      "temporal_overlap": 4
+    }
+  },
+  "18": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "17",
+        0
+      ],
+      "filename_prefix": "street-reskin/hero001_body_short_fastdecode"
+    }
+  },
+  "19": {
+    "class_type": "MiniMaxH3MemoryEfficientSageAttentionPatch",
+    "inputs": {
+      "model": [
+        "11",
+        0
+      ]
+    }
+  },
+  "20": {
+    "class_type": "SaveLatent",
+    "inputs": {
+      "samples": [
+        "16",
+        0
+      ],
+      "filename_prefix": "street-reskin/hero001_body_short_video"
+    }
+  }
+}
