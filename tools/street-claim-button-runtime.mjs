@@ -34,6 +34,15 @@ try {
  assert(duel.found.some(r=>r.replacement&&r.size[0]===292&&r.size[1]===87),'Native PvP button must show new duel texture');
  await page.screenshot({path:out+'/duel-native.png'});
  await fs.writeFile(out+'/duel-native.json',JSON.stringify({pass:true,scope:'Native skin component only; not matchmaking transaction',duel},null,2));
+ const campaign=await page.evaluate(async()=>{
+  const h=__claimFixture.host,b=h.btn_pve;let n=b;while(n){n.visible=true;n.alpha=1;n=n.parent;}b.validateNow();
+  await new Promise(r=>setTimeout(r,500));const target=RES.getRes('street_neighborhood_campaign_png'),found=[];
+  function walk(n){if(n.source==='fhqp_btn_zhanyi_png')found.push({source:n.source,replacement:!!target&&n.texture===target,size:n.texture?[n.texture.textureWidth,n.texture.textureHeight]:null});for(let i=0;i<(n.numChildren||0);i++)walk(n.getChildAt(i));}walk(b);
+  return {part:'btn_pve',found,bounds:b.getTransformedBounds(egret.MainContext.instance.stage)};
+ });
+ assert(campaign.found.some(r=>r.replacement&&r.size[0]===292&&r.size[1]===87),'Native PvE button must show new campaign texture');
+ await page.screenshot({path:out+'/campaign-native.png'});
+ await fs.writeFile(out+'/campaign-native.json',JSON.stringify({pass:true,scope:'Native skin component only; not matchmaking transaction',campaign},null,2));
  assert.equal(errors.length,0);
  const scene=await page.evaluate(()=>{
   const h=__claimFixture.host;
