@@ -1,0 +1,418 @@
+{
+  "errors": [],
+  "failed": [],
+  "requestFailures": [],
+  "resourceEvents": [],
+  "logs": [
+    {
+      "type": "log",
+      "text": ">===================<"
+    },
+    {
+      "type": "log",
+      "text": "{\"AgentCode\":\"lite3zbtest\",\"BuildTime\":\"20260323 16:05:44\",\"ClientVer\":\"49784\",\"CodeVersion\":\"1.0.0.0\",\"DataVer\":\"49784\",\"EnableConsoleLog\":true,\"HttpCB\":\"\",\"HttpSerever\":\"127.0.0.1:8787/offline-api\",\"HttpUnitServer\":\"127.0.0.1:8787/offline-api\",\"IsDebug\":true,\"ProjectName\":\"sglite\",\"PtId\":9,\"RsyncConfig\":{\"buildType\":\"release\",\"name\":\"bh\"},\"__KEY\":\"bh_lite3zbtest_andr\",\"__agents\":[\"bh_lite3zbtest_h5\",\"hide\",\"bh_lite3zbtest_andr\"],\"__gameUrl\":\"h5.bhsg.lintey.com/sglite_web/lite3zbtest/index_bh_lite3zbtest_andr.html\",\"__serverKEY\":\"lite3zbtest\",\"bookmark\":\"冰狐lite3安卓包，新调的数值的版本\",\"email\":\" \",\"emailTitle\":\" \",\"ext\":{\"COUPON\":1,\"HIDE_ACCOUNT_BTN\":true,\"HIDE_FIGHT_SKIP_BUTTON_BATTLE_TYPES\":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69],\"HIDE_LOGIN_LOGO\":1,\"HIDING_NOTICE_TITLE\":1,\"LOGIN_BG_RES\":\"login13_bg_jpg\",\"LOGIN_EZ_LOADING_BG_RES\":\"login"
+    },
+    {
+      "type": "log",
+      "text": ">===================<"
+    },
+    {
+      "type": "log",
+      "text": "Egret Engine Version: 5.4.1"
+    },
+    {
+      "type": "log",
+      "text": "当前stage尺寸 720 1350 480 900"
+    },
+    {
+      "type": "log",
+      "text": "x: 20, y: 0"
+    },
+    {
+      "type": "log",
+      "text": "x: 388, y: 0"
+    },
+    {
+      "type": "log",
+      "text": "x: 20, y: 22"
+    },
+    {
+      "type": "log",
+      "text": "x: 388, y: 22"
+    },
+    {
+      "type": "log",
+      "text": "x: 20, y: 44"
+    },
+    {
+      "type": "log",
+      "text": "x: 388, y: 44"
+    },
+    {
+      "type": "log",
+      "text": "===========Utils init info=========="
+    },
+    {
+      "type": "log",
+      "text": "getPlatform: undefined"
+    },
+    {
+      "type": "log",
+      "text": "getBrowser: "
+    },
+    {
+      "type": "log",
+      "text": "runtimeType: web"
+    },
+    {
+      "type": "log",
+      "text": "egretnative: "
+    },
+    {
+      "type": "log",
+      "text": "href: http://127.0.0.1:8787/index_bh_lite3zbtest_andr.html?mode=heroes&heroaudit=1"
+    },
+    {
+      "type": "log",
+      "text": "getUrlKV: {}"
+    },
+    {
+      "type": "log",
+      "text": "【Main】 : 使用客户端版本号拼接"
+    },
+    {
+      "type": "info",
+      "text": "DragonBones: 5.7.000\nWebsite: http://dragonbones.com/\nSource and Demo: https://github.com/DragonBones/"
+    },
+    {
+      "type": "log",
+      "text": "使用默认内存策略"
+    },
+    {
+      "type": "log",
+      "text": "【Main】 : startUp"
+    },
+    {
+      "type": "warning",
+      "text": "【LoginMediator】： 当前模块没有指定moduleCode，将影响到等级解锁及配置表跳转，使用临时值 500001"
+    },
+    {
+      "type": "warning",
+      "text": "【MainMediator】： 当前模块没有指定moduleCode，将影响到等级解锁及配置表跳转，使用临时值 500002"
+    },
+    {
+      "type": "warning",
+      "text": "【FightMediator】： 当前模块没有指定moduleCode，将影响到等级解锁及配置表跳转，使用临时值 500003"
+    },
+    {
+      "type": "warning",
+      "text": "【RankMediator】： 当前模块没有指定moduleCode，将影响到等级解锁及配置表跳转，使用临时值 500004"
+    },
+    {
+      "type": "warning",
+      "text": "【CommonMediator】： 当前模块没有指定moduleCode，将影响到等级解锁及配置表跳转，使用临时值 500005"
+    },
+    {
+      "type": "warning",
+      "text": "【PlayerMediator】： 当前模块没有指定moduleCode，将影响到等级解锁及配置表跳转，使用临时值 500006"
+    },
+    {
+      "type": "warning",
+      "text": "【HandBookMediator】： 当前模块没有指定moduleCode，将影响到等级解锁及配置表跳转，使用临时值 500007"
+    },
+    {
+      "type": "warning",
+      "text": "【ModuleOpenMediator】： 当前模块没有指定moduleCode，将影响到等级解锁及配置表跳转，使用临时值 500008"
+    },
+    {
+      "type": "warning",
+      "text": "【PeakWarMed】： 当前模块没有指定moduleCode，将影响到等级解锁及配置表跳转，使用临时值 500009"
+    },
+    {
+      "type": "warning",
+      "text": "【ArticlesMediator】： 当前模块没有指定moduleCode，将影响到等级解锁及配置表跳转，使用临时值 500010"
+    },
+    {
+      "type": "warning",
+      "text": "【FormationMed】： 当前模块没有指定moduleCode，将影响到等级解锁及配置表跳转，使用临时值 500011"
+    },
+    {
+      "type": "warning",
+      "text": "【BraveBookMediator】： 当前模块没有指定moduleCode，将影响到等级解锁及配置表跳转，使用临时值 500012"
+    },
+    {
+      "type": "warning",
+      "text": "【OfficialGuidelineMediator】： 当前模块没有指定moduleCode，将影响到等级解锁及配置表跳转，使用临时值 500013"
+    },
+    {
+      "type": "warning",
+      "text": "【EightDiagramMediator】： 当前模块没有指定moduleCode，将影响到等级解锁及配置表跳转，使用临时值 500014"
+    },
+    {
+      "type": "warning",
+      "text": "【SevenValentineEDMediator】： 当前模块没有指定moduleCode，将影响到等级解锁及配置表跳转，使用临时值 500015"
+    },
+    {
+      "type": "warning",
+      "text": "【PowerSaveMed】： 当前模块没有指定moduleCode，将影响到等级解锁及配置表跳转，使用临时值 500016"
+    },
+    {
+      "type": "warning",
+      "text": "【SoulSealLinkMediator】： 当前模块没有指定moduleCode，将影响到等级解锁及配置表跳转，使用临时值 500017"
+    },
+    {
+      "type": "log",
+      "text": "打开 i"
+    },
+    {
+      "type": "warning",
+      "text": "sheet资源被覆盖! origin: '_main_m_json.jingjichang_icon_yhzttl' current: _slg_m_json.jingjichang_icon_yhzttl"
+    },
+    {
+      "type": "warning",
+      "text": "sheet资源被覆盖! origin: '_main_m_json.lzbh_img_di' current: _stormWar_m_json.lzbh_img_di"
+    },
+    {
+      "type": "warning",
+      "text": "sheet资源被覆盖! origin: '_main_m_json.common_img_touxiangkuang' current: _border_m_json.common_img_touxiangkuang"
+    },
+    {
+      "type": "log",
+      "text": "[RESKIN] protected configuration verified {\"version\":\"0.58.0\",\"heroRows\":5136,\"heroSlots\":86,\"portraits\":85,\"protectedHeroDifferences\":[],\"protectedSkillDifferences\":[]}"
+    },
+    {
+      "type": "log",
+      "text": "玩家数据 t"
+    },
+    {
+      "type": "log",
+      "text": "玩家数据 t"
+    },
+    {
+      "type": "log",
+      "text": "玩家数据 t"
+    },
+    {
+      "type": "log",
+      "text": "玩家数据 t"
+    },
+    {
+      "type": "log",
+      "text": "玩家数据 t"
+    },
+    {
+      "type": "log",
+      "text": "[CHARACTER-IDLE] 85 full sequences; original ID13 excluded"
+    },
+    {
+      "type": "log",
+      "text": "打开 a"
+    },
+    {
+      "type": "log",
+      "text": "打开 a"
+    },
+    {
+      "type": "log",
+      "text": "[OFFLINE] mode opened heroes"
+    },
+    {
+      "type": "log",
+      "text": "【HeroMediator】： BaseMediator:updateView HeroMediator 5 no show"
+    },
+    {
+      "type": "log",
+      "text": "【UpstarAltarMed】： BaseMediator:updateView UpstarAltarMed 3 no show"
+    },
+    {
+      "type": "log",
+      "text": "【ChampionMediator】： BaseMediator:updateView ChampionMediator 1 no show"
+    },
+    {
+      "type": "log",
+      "text": "【ChampionMediator】： BaseMediator:updateView ChampionMediator 3 no show"
+    },
+    {
+      "type": "log",
+      "text": "【BeautyMediator】： BaseMediator:updateView BeautyMediator 0 no show"
+    },
+    {
+      "type": "log",
+      "text": "【NewChampionMediator】： BaseMediator:updateView NewChampionMediator 1 no show"
+    },
+    {
+      "type": "log",
+      "text": "【SlgMediator】： BaseMediator:updateView SlgMediator 16 no show"
+    },
+    {
+      "type": "log",
+      "text": "【GuildDefenceMediator】： BaseMediator:updateView GuildDefenceMediator 1 no show"
+    },
+    {
+      "type": "log",
+      "text": "[OFFLINE][TRAIN-RPC] abyssMazeHero.GetAbyssMazeHeroInfo {\"progress\":0,\"attempts\":0,\"claims\":{},\"actions\":{\"ClearHeroList\":1,\"ChangeFormation\":1,\"Resurrection\":3},\"wins\":0,\"losses\":0,\"passed\":[],\"completedBattles\":{}}"
+    },
+    {
+      "type": "log",
+      "text": "[OFFLINE][TRAIN-RPC] abyssMaze.GetAbyssMazeInfo {\"progress\":1,\"attempts\":1,\"claims\":{},\"actions\":{\"StartGame\":1},\"wins\":1,\"losses\":0,\"passed\":[],\"completedBattles\":{}}"
+    },
+    {
+      "type": "log",
+      "text": "[OFFLINE][TRAIN-RPC] dojo.GetDojoInfo {\"progress\":7,\"attempts\":7,\"claims\":{},\"actions\":{\"GetDojoInfo\":55,\"Challenge\":7},\"wins\":7,\"losses\":0,\"passed\":[{\"progress\":6,\"battleId\":\"codex-dojo-win-1\",\"at\":1791203318},{\"progress\":7,\"battleId\":\"offline-battle-1791206735664-1054\",\"at\":1791206758}],\"completedBattles\":{\"codex-dojo-win-1\":{\"won\":true,\"at\":1791203318},\"offline-battle-1791206735664-1054\":{\"won\":true,\"at\":1791206758}}}"
+    },
+    {
+      "type": "log",
+      "text": "[OFFLINE][TRAIN-RPC] teamExpedition.GetTeamExpeditionInfo {\"progress\":3,\"attempts\":3,\"claims\":{},\"actions\":{\"GetTeamExpeditionInfo\":56,\"Challenge\":3},\"wins\":3,\"losses\":0,\"passed\":[],\"completedBattles\":{}}"
+    },
+    {
+      "type": "log",
+      "text": "[OFFLINE][TRAIN-RPC] raceTower.GetRaceTowerInfo {\"progress\":1,\"attempts\":1,\"claims\":{},\"actions\":{\"GetRaceTowerInfo\":54,\"Challenge\":1},\"wins\":1,\"losses\":0,\"passed\":[],\"completedBattles\":{}}"
+    },
+    {
+      "type": "log",
+      "text": "[OFFLINE][TRAIN-RPC] worldKing.GetInfo {\"progress\":1,\"attempts\":1,\"claims\":{},\"actions\":{\"GetInfo\":261,\"JoinMatching\":3},\"wins\":1,\"losses\":0,\"passed\":[{\"progress\":1,\"battleId\":\"offline-battle-1791206804721-1055\",\"at\":1791206831}],\"completedBattles\":{\"offline-battle-1791206804721-1055\":{\"won\":true,\"at\":1791206831}}}"
+    },
+    {
+      "type": "log",
+      "text": "【WorldKingPy】： 获取排位赛数据   GetInfoR {err: 0, ok: true, local: true, module: worldKing, action: GetInfo}"
+    },
+    {
+      "type": "log",
+      "text": "[OFFLINE][TRAIN-RPC] peakWar.GetPeakWarFreedomInfo {\"progress\":1,\"attempts\":1,\"claims\":{},\"actions\":{\"GetPeakWarFreedomInfo\":28,\"FreedomChallenge\":1,\"GetPeakWarHighLadderInfo\":4},\"wins\":1,\"losses\":0,\"passed\":[],\"completedBattles\":{}}"
+    },
+    {
+      "type": "log",
+      "text": "玩家数据 t"
+    },
+    {
+      "type": "log",
+      "text": "玩家数据 t"
+    },
+    {
+      "type": "log",
+      "text": "玩家数据 t"
+    },
+    {
+      "type": "log",
+      "text": "玩家数据 t"
+    },
+    {
+      "type": "log",
+      "text": "玩家数据 t"
+    },
+    {
+      "type": "log",
+      "text": "[OFFLINE][TRAIN-RPC] spectralTower.GetSpectralTowerInfo {\"progress\":5,\"attempts\":5,\"claims\":{},\"actions\":{\"GetSpectralTowerInfo\":23,\"EnterInto\":2,\"ChooseGuider\":2,\"TriggerEvent\":2,\"MopUp\":3},\"wins\":5,\"losses\":0,\"passed\":[],\"completedBattles\":{}}"
+    },
+    {
+      "type": "log",
+      "text": "【TeamExpeMediator】： BaseMediator:updateView TeamExpeMediator 1 no show"
+    },
+    {
+      "type": "log",
+      "text": "【TeamExpeMediator】： BaseMediator:updateView TeamExpeMediator 3 no show"
+    },
+    {
+      "type": "log",
+      "text": "【TeamExpeMediator】： BaseMediator:updateView TeamExpeMediator 4 no show"
+    },
+    {
+      "type": "log",
+      "text": "【WorldKingMediator】： BaseMediator:updateView WorldKingMediator 1 no show"
+    },
+    {
+      "type": "log",
+      "text": "【RankMediator】： BaseMediator:updateView RankMediator 2 no show"
+    },
+    {
+      "type": "log",
+      "text": "【PeakWarMed】： BaseMediator:updateView PeakWarMed 1 no show"
+    },
+    {
+      "type": "log",
+      "text": "strMd5 action=game_notice&game_notice=0&os_code=undefined&platform=lite3zbtest&project=sglite&pt_id=9&serVer=1.0.0.0&subPlatform=&time=1793294105079507310f58a0ac8e3d8ad8f60c8b85b46sglite"
+    },
+    {
+      "type": "log",
+      "text": "toGet http://127.0.0.1:8787/offline-api?action=game_notice&game_notice=0&os_code=undefined&platform=lite3zbtest&project=sglite&pt_id=9&serVer=1.0.0.0&subPlatform=&time=1793294105079&sign=2007321442ec11fac534f554d83bcc95"
+    },
+    {
+      "type": "log",
+      "text": "[OFFLINE][TRAIN-RPC] worldKing.GetInfo {\"progress\":1,\"attempts\":1,\"claims\":{},\"actions\":{\"GetInfo\":261,\"JoinMatching\":3},\"wins\":1,\"losses\":0,\"passed\":[{\"progress\":1,\"battleId\":\"offline-battle-1791206804721-1055\",\"at\":1791206831}],\"completedBattles\":{\"offline-battle-1791206804721-1055\":{\"won\":true,\"at\":1791206831}}}"
+    },
+    {
+      "type": "log",
+      "text": "【WorldKingPy】： 获取排位赛数据   GetInfoR {err: 0, ok: true, local: true, module: worldKing, action: GetInfo}"
+    },
+    {
+      "type": "log",
+      "text": "【WorldKingMediator】： BaseMediator:updateView WorldKingMediator 1 no show"
+    },
+    {
+      "type": "log",
+      "text": "【RankMediator】： BaseMediator:updateView RankMediator 2 no show"
+    }
+  ],
+  "images": [
+    "http://127.0.0.1:8787/assets/street/characters/001/avatar.png",
+    "http://127.0.0.1:8787/assets/street/ui/loading/courier-shutter-v1.jpg?v=f51ede56a398a84e",
+    "http://127.0.0.1:8787/assets/street/ui/loading/industrial-gauge-housing-v1.png?v=efe29070639145b5",
+    "http://127.0.0.1:8787/assets/street/ui/loading/industrial-gauge-fill-v1.png?v=104e11a8c9ff7bcb",
+    "http://127.0.0.1:8787/assets/street/ui/loading/industrial-gauge-shadow-v1.png?v=6e3fc624c7722ec7",
+    "http://127.0.0.1:8787/resource/assets/ui/login/common_denglu_bg_01_35d6c6f1.jpg",
+    "http://127.0.0.1:8787/resource/assets/ui/login/common_denglu_bg_02_ef7ba7b4.png",
+    "http://127.0.0.1:8787/resource/assets/ui/login/_login_m_5860d256.png",
+    "http://127.0.0.1:8787/resource/assets/ui/common/_btn_lb/_btn_lb_m_54b18acb.png",
+    "http://127.0.0.1:8787/resource/assets/ui/common/btn/beibao_img_gouxuankuang_d4c48260.png",
+    "http://127.0.0.1:8787/assets/street/ui/sheet-variants/_main_m_json.common_btn_huang.png?v=46bb9e82873a3432",
+    "http://127.0.0.1:8787/resource/assets/font/white_black_5eb767cc.png",
+    "http://127.0.0.1:8787/assets/street/ui/controls/beibao_img_gou_png.png?v=0054c4155dc7acb5",
+    "http://127.0.0.1:8787/resource/assets/ui/hangUpSystem/_hangUpSystem_m_4710a7de.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/icon/common_icon_gztb_01_960c9841.png",
+    "http://127.0.0.1:8787/assets/street/ui/controls/wujiang_icon_xiangqing_png.png?v=5fe2466545934498",
+    "http://127.0.0.1:8787/resource/assets/ui/stormWar/_stormWar_m_929ad2be.png",
+    "http://127.0.0.1:8787/resource/assets/ui/main/_main_m_8eeb9227.png",
+    "http://127.0.0.1:8787/resource/assets/font/gold_num_1285e620.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/icon/common_icon_guanzhidi_deb06694.png",
+    "http://127.0.0.1:8787/resource/assets/ui/activity/first_recharge/xs_img_xinxitiao_e4db9893.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/icon/common_icon_yydf2_ea7660a2.png",
+    "http://127.0.0.1:8787/resource/assets/ui/common/scale/common_bg_toumingdi_ef16947a.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/icon/common_icon_sanguozhi_27bd5b36.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/icon/common_icon_sanguowushuang_f7af138a.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/icon/common_icon_qunyingge2_f2301455.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/icon/common_icon_pimodian2_d5650b23.png",
+    "http://127.0.0.1:8787/resource/assets/font/sgz_city_num_fca1d541.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/icon/wsg_cc81154d.png",
+    "http://127.0.0.1:8787/resource/assets/ui/common/img/sldb_img_jiantou2_752c4260.png",
+    "http://127.0.0.1:8787/assets/street/ui/navigation/_hangUpSystem_m_json.main_img_tubiaodik.png?v=f5c2b53f1c80db31",
+    "http://127.0.0.1:8787/assets/street/ui/navigation/_main_m_json.main_icon_wujiang.png?v=6a29511428a4d86c",
+    "http://127.0.0.1:8787/assets/street/ui/navigation/_main_m_json.main_icon_ybd.png?v=1578295d77f14de9",
+    "http://127.0.0.1:8787/assets/street/ui/navigation/_main_m_json.main_icon_lilian.png?v=9bd97c21fc2466fc",
+    "http://127.0.0.1:8787/assets/street/ui/navigation/_main_m_json.main_icon_zhuangbei.png?v=021829d6b65416dc",
+    "http://127.0.0.1:8787/assets/street/ui/navigation/_main_m_json.main_icon_gonghui.png?v=28084788984c314c",
+    "http://127.0.0.1:8787/assets/street/ui/navigation/_main_m_json.main_icon_zhandou.png?v=e2bee045cb65f1ea",
+    "http://127.0.0.1:8787/assets/street/ui/navigation/_main_m_json.main_icon_baoxiang.png?v=222fbf91d0335416",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/head1/head1_zhu_10_fdf764b.png",
+    "http://127.0.0.1:8787/resource/assets/ui/common/img/zzq_img_jjjdtd_99e86eba.png",
+    "http://127.0.0.1:8787/resource/assets/ui/common/img/zzq_img_jjjdt_bc88ebd3.png",
+    "http://127.0.0.1:8787/assets/street/environments/workshop-courtyard-menu.jpg?v=cd76228e114ba3f0",
+    "http://127.0.0.1:8787/assets/street/ui/_hero_m_json.wujiang_img_renwu.png?v=298a243d17d8bead",
+    "http://127.0.0.1:8787/assets/street/ui/controls/common_btn_hong_png.png?v=0c5fb62a9b9fe44b",
+    "http://127.0.0.1:8787/resource/assets/ui/hero/_hero_m_91e6b479.png",
+    "http://127.0.0.1:8787/resource/assets/ui/transform/wujiang_btn_wjtp1_edd6b652.png",
+    "http://127.0.0.1:8787/resource/assets/ui/hero/sgws_img_renwu_e4562bdd.png",
+    "http://127.0.0.1:8787/assets/street/ui/currency/common_icon_tongbi_png.png?v=37c9b4b8a7087d39",
+    "http://127.0.0.1:8787/resource/assets/font/hero_level_num_3746d426.png",
+    "http://127.0.0.1:8787/assets/street/ui/controls/common_btn_tianjia_png.png?v=0b151eb87da059a4",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/icon/common_icon_danyao1_753dc941.png",
+    "http://127.0.0.1:8787/assets/street/ui/hero-list-cards/common_img_liebiao_5_png.png?v=69077da9ef022d95",
+    "http://127.0.0.1:8787/assets/street/characters/077/bind_half_skin_077_1_png.png",
+    "http://127.0.0.1:8787/assets/street/ui/controls/common_btn_an_png.png?v=d5b04ee2860f6bd5",
+    "http://127.0.0.1:8787/assets/street/characters/075/bind_half_hero_075_1_png.png",
+    "http://127.0.0.1:8787/resource/assets/ui/common/_border/_border_m_40c0a74f.png",
+    "http://127.0.0.1:8787/resource/assets/font/sgz_reward_num_de199144.png",
+    "http://127.0.0.1:8787/assets/street/characters/082/bind_half_hero_082_1_png.png",
+    "http://127.0.0.1:8787/assets/street/characters/079/bind_half_skin_079_1_png.png",
+    "http://127.0.0.1:8787/assets/street/characters/076/bind_half_hero_076_1_png.png"
+  ]
+}

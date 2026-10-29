@@ -157,6 +157,15 @@ class OfflineHandler(SimpleHTTPRequestHandler):
 
     def do_GET(self):
         parsed = urlsplit(self.path)
+        if parsed.path == "/offline-api":
+            action = parse_qs(parsed.query).get("action", [""])[0]
+            if action in ("game_notice", "game_whNotice"):
+                # Native notice panels accept status=false as no notice. The
+                # offline edition has no remote announcement/maintenance feed.
+                self.send_json({"status": False, "notice": "", "title": "", "local": True})
+            else:
+                self.send_json({"ok": False, "error": "unsupported offline action", "action": action}, 404)
+            return
         if parsed.path == "/":
             # The launcher script advertises the server root as the website.
             # Serve the actual launcher there instead of a directory listing.

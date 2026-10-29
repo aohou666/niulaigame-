@@ -1,0 +1,35 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "action": "game_notice",
+      "status": 200,
+      "body": {
+        "status": false,
+        "notice": "",
+        "title": "",
+        "local": true
+      }
+    },
+    {
+      "action": "game_whNotice",
+      "status": 200,
+      "body": {
+        "status": false,
+        "notice": "",
+        "title": "",
+        "local": true
+      }
+    },
+    {
+      "action": "unsupported_action",
+      "status": 404,
+      "body": {
+        "ok": false,
+        "error": "unsupported offline action",
+        "action": "unsupported_action"
+      }
+    }
+  ],
+  "saveUnchanged": true
+}

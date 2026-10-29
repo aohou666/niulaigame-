@@ -80,6 +80,12 @@
         xhr.open('GET', agentUrl + '?v=' + now, true);
         xhr.addEventListener("load", function () {
             agentConfig = JSON.parse(xhr.response);
+            // Keep the local API on this server, including alternate test ports.
+            ["HttpSerever", "HttpUnitServer"].forEach(function (key) {
+                if (/^127\.0\.0\.1:8787\/offline-api$/.test(agentConfig[key])) {
+                    agentConfig[key] = window.location.host + "/offline-api";
+                }
+            });
 
             nodeRecord(1);
             console.log('>===================<')
@@ -197,10 +203,7 @@
     }
 
     function isHttps() {
-        return true
-        // if (document && document.location && document.location.protocol){
-        //     return document.location.protocol == "https:" ? true : false
-        // }
+        return window.location.protocol === "https:"
     }
 
     function getProtocolPrefix() {

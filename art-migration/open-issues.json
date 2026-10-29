@@ -42,5 +42,14 @@
     "fix": "Defer only084 basic/EZ callback at0; keep native event stream, timings and authored markers unchanged.",
     "evidence": "versions/0.50.0/hero84-startup-impact-before-fix.json; versions/0.50.0/hero84-attack-hit-runtime.json; versions/0.50.0/hero84-skill-hit-runtime.json; versions/0.50.0/hero84-battle.json",
     "rechecks": "Both models actual attack callback at authored24/source18; both actual skill callback31/source78; native event stream and completed timing checked; target8enemy battle passed."
+  },
+  {
+    "id": "LOCAL-NOTICE-PROTOCOL-060",
+    "status": "resolved",
+    "observed": "Strict requestfailed audit captured HTTPS request to HTTP local server; fixing protocol exposed missing offline-api notice endpoint and hardcoded port8787.",
+    "fix": "Use page protocol and host for local agent API, serve explicit empty local notices for game_notice/game_whNotice only. Other actions remain404.",
+    "evidence": "versions/0.60.0/notice-endpoints.json; versions/0.60.0/protocol-startup-clean.json",
+    "scope": "Not claimed as cause of historical intermittent null Promise rejection.",
+    "rechecks": "Isolated8796 native normal/maintenance callbacks and85/85 details pass, zero browser/HTTP/network/RES failures. Main8787 restarted PID6944 with unchanged save SHA; startup strict audit passes."
   }
 ]
