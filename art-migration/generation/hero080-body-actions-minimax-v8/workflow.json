@@ -1,0 +1,249 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "minimax_h3_fl2va_pruned_w4a8_mixed.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_32b_minimax_h3_int4_convrot.safetensors",
+      "type": "minimax",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "street_body080_idle_v8.png"
+    }
+  },
+  "5": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "street_body080_attack_v8.png"
+    }
+  },
+  "6": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "street_body080_skill_v8.png"
+    }
+  },
+  "7": {
+    "class_type": "MiniMaxH3ImageToVideo",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "prompt": "One locked-camera studio rehearsal showing the EXACT single costumed character in the reference images. Same face, horns, hair, outfit, fabric, colors, anatomy and all original held objects in every frame. Tactile 2.5D semi-realistic semi-cartoon absurd neighborhood production style. Entire character, head, hands, feet, tail and complete objects remain fully visible with safe blank margins. Matte black featureless studio background and constant soft neutral illumination.\n Two physical pantomime exercises, each performed ONCE through natural intermediate joint positions. Exercise A, frames0-61: start in the relaxed reference posture, prepare the movement, reach the second reference posture near frame28, then recover continuously to the relaxed posture by frame62. Exact physical movement: Small knee dip and shoulder lift of the same two-handed lion head, then stand back. No fist punch or loose head.. Observed real objects and hand assignment: ONE complete original lion-dance head continuously supported by BOTH hands above bull head. Never remove either supporting hand or detach the lion head..\n Exercise B, frames62-123: start relaxed, prepare and perform this distinct physical gesture, reach the third reference posture near frame92, then recover to the original relaxed posture by frame123. Exact physical movement: Both hands lift SAME lion head slightly higher while shoulders tilt, then lower gently to original position. Keep face and both head silhouettes intact.. Observed objects: ONE complete original lion-dance head continuously supported by BOTH hands above bull head. Never remove either supporting hand or detach the lion head..\n Keep both feet/root in their original location. Animate grounded knees, shoulders, elbows and wrists with natural cloth follow-through. Maintain one coherent body and constant object lengths/hand assignments. Crisp clean silhouette and continuous movement through preparation, extension and recovery; only a brief natural pause. No walking, sliding, zoom, camera movement, duplicated anatomy, invented objects, secondary light effects, streaks, particles, sparks, motion-blur shapes or backdrop changes. This is a quiet physical studio rehearsal, with only the original character and physical costume/objects visible. Every transition must be continuously animated through intermediate anatomy. Never cut, dissolve, teleport or switch instantly between held reference stills. Show anticipation, extension, follow-through and continuous recovery for each action. Both actions face viewer RIGHT only. Never turn or strike toward viewer LEFT. Anticipation is a small backward elbow/body compression, never a mirrored opposite-facing reference pose. No second face, no blended duplicate eyes, horns or muzzle.",
+      "width": 512,
+      "height": 512,
+      "length": 124,
+      "first_frame": [
+        "4",
+        0
+      ],
+      "last_frame": [
+        "4",
+        0
+      ]
+    }
+  },
+  "8": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "7",
+        0
+      ],
+      "latent": [
+        "7",
+        1
+      ],
+      "frame_idx": 28,
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "5",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "8",
+        0
+      ],
+      "latent": [
+        "7",
+        1
+      ],
+      "frame_idx": 62,
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "4",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "9",
+        0
+      ],
+      "latent": [
+        "7",
+        1
+      ],
+      "frame_idx": 92,
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "6",
+        0
+      ]
+    }
+  },
+  "12": {
+    "class_type": "MiniMaxH3DualClockSamplerT8",
+    "inputs": {
+      "model": [
+        "19",
+        0
+      ],
+      "av_latent": [
+        "7",
+        1
+      ],
+      "steps": 24,
+      "shift_video": 12,
+      "shift_audio": 3,
+      "sampler_name": "dual_clock_euler",
+      "scheduler": "native_flow"
+    }
+  },
+  "13": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "12",
+        0
+      ],
+      "conditioning": [
+        "10",
+        0
+      ]
+    }
+  },
+  "14": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 202610370080
+    }
+  },
+  "15": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "14",
+        0
+      ],
+      "guider": [
+        "13",
+        0
+      ],
+      "sampler": [
+        "12",
+        1
+      ],
+      "sigmas": [
+        "12",
+        2
+      ],
+      "latent_image": [
+        "7",
+        1
+      ]
+    }
+  },
+  "16": {
+    "class_type": "LTXVSeparateAVLatent",
+    "inputs": {
+      "av_latent": [
+        "15",
+        0
+      ]
+    }
+  },
+  "17": {
+    "class_type": "VAEDecodeTiled",
+    "inputs": {
+      "samples": [
+        "20",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "tile_size": 512,
+      "overlap": 64,
+      "temporal_size": 32,
+      "temporal_overlap": 4
+    }
+  },
+  "18": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "17",
+        0
+      ],
+      "filename_prefix": "street-reskin/hero080_body"
+    }
+  },
+  "19": {
+    "class_type": "MiniMaxH3MemoryEfficientSageAttentionPatch",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "20": {
+    "class_type": "SaveLatent",
+    "inputs": {
+      "samples": [
+        "16",
+        0
+      ],
+      "filename_prefix": "street-reskin/hero080_body_video"
+    }
+  }
+}

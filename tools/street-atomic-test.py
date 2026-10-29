@@ -2,7 +2,8 @@
 import json,sys,tempfile,threading,hashlib,importlib.util,urllib.request
 from pathlib import Path
 from unittest.mock import patch
-sys.path.insert(0,str(Path(__file__).resolve().parent));from street_atomic import atomic_write_text
+sys.path.insert(0,str(Path(__file__).resolve().parent));from street_atomic import atomic_write_text,atomic_write_bytes
+version=next((a.split('=',1)[1] for a in sys.argv[1:] if a.startswith('--version=')),'0.42.0')
 spec=importlib.util.spec_from_file_location('street_server_io',Path(__file__).resolve().parents[1]/'local_game/offline_server.py');module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
 errors=[];reads=[0];stop=threading.Event()
 with tempfile.TemporaryDirectory(prefix='street-atomic-test-') as td:
@@ -45,4 +46,4 @@ with tempfile.TemporaryDirectory(prefix='street-atomic-test-') as td:
     value=json.loads(response.read());assert response.status==200 and len(value['padding'])==131072;httpReads.append(value['version'])
  finally:server.shutdown();serverThread.join();server.server_close()
  report={'pass':True,'httpReads':httpReads,'readerRetryAttempts':openCalls[0],'concurrentReaderParses':reads[0],'publications':20,'partialReads':errors,'injectedTransientFailures':2,'replaceAttempts':calls[0],'temporaryFilesRemain':len(list(Path(td).glob('*.tmp')))};assert report['temporaryFilesRemain']==0
-Path('art-migration/versions/0.42.0/atomic-runtime.json').write_text(json.dumps(report,indent=2)+'\n','utf8');print(json.dumps(report))
+folder=Path('art-migration/versions')/version;folder.mkdir(parents=True,exist_ok=True);(folder/'atomic-runtime.json').write_text(json.dumps(report,indent=2)+'\n','utf8');print(json.dumps(report))

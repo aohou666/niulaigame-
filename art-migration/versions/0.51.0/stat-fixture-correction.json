@@ -1,0 +1,12 @@
+{
+  "version": "0.51.0",
+  "scope": "Correction of attempted save-stat fixture metadata, not a gameplay balance change",
+  "reportsPreserved": [
+    "hero80-battle.json",
+    "hero80-hard-battle.json",
+    "hero80-low-damage-battle.json"
+  ],
+  "finding": "Page initialization recalculates hero.attr from the native hero configuration and level. Assigning the reference hero1 saved attr or multiplying that saved field did not change the effective BattleAI input. The attempted scale0.01 is a requested fixture setting only, NOT an applied scale. Actual input is recorded in battleSetup.",
+  "actualObservation": "All three runs observe target80 jineng native frames0 through47 and no target80 gongji; target wins with its opening skill. No browser/resource errors. Full two-action strict battle predicate timed out because no normal attack was scheduled.",
+  "validationLimit": "These runs do not prove a damage-reduced battle or target80 basic attack in battle. Basic/EZ full native frames and real basic callbacks are independently tested. Existing historical action-observation successes remain observations, not controlled equal-stat comparisons."
+}

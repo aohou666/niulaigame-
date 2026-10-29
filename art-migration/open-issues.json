@@ -31,7 +31,8 @@
     "observed": "Full source-frame temporal audit found long static pose holds and abrupt changes in installed body clips. Distinct PNG hashes/native event timing did not establish continuous animation. New85/84 dense clips and old5 explicitly visually confirmed.",
     "evidence": "versions/0.48.0/motion-quality-audit.json; versions/0.48.0/motion-quarantine-runtime.json",
     "mitigation": "32 high-concentration clips conservatively quarantined for attack/skill and original native actions restored; all68 target attack/skill completeness approvals withdrawn pending continuous-motion review. No generated image or native event timing evidence counted as full motion approval.",
-    "next": "Validate sparse trained-range124-frame generation without turbo LoRA in one pilot before further batches; visually re-review all existing body actions and regenerate failures."
+    "next": "Validate sparse trained-range124-frame generation without turbo LoRA in one pilot before further batches; visually re-review all existing body actions and regenerate failures.",
+    "latestAudit": "v0.51:4/85 target attack/skill continuous approvals,33 quarantined. Full characters0/85. See versions/0.51.0/motion-quality-audit.json."
   },
   {
     "id": "HIT-084-STARTUP-MARKER",

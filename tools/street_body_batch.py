@@ -47,6 +47,8 @@ for hid in reversed(a.ids):
    box=image.getchannel('A').point(lambda v:255 if v>16 else 0).getbbox();limits.append(560*(box[3]-box[1])/(box[2]-box[0]))
  normalHeight=min(a.height,*limits)
  for kind,source in sourceImages.items():files[kind],inputs[kind]=normalize(source,out,kind,hid)
+ if landmarks:
+  heights=[r['subjectHeight'] for r in inputs.values()];assert max(heights)-min(heights)<1.5,'Full prop margins would rescale actors differently; lower shared --height before submission'
  if str(hid) in overrides:
   actual=overrides[str(hid)]
   for kind in rows:rows[kind]=dict(rows[kind],bodyDesign=actual[kind],weaponObservation=actual['prop'])

@@ -1,0 +1,69 @@
+{
+  "pass": false,
+  "checks": [
+    {
+      "model": "hero_080_03",
+      "action": "gongji",
+      "native": [
+        {
+          "name": "pia",
+          "time": 0.43333333333333335
+        }
+      ],
+      "callbacks": [
+        {
+          "elapsedMs": 417.40000000596046,
+          "key": "pia",
+          "nativeFrame": 13,
+          "sourceFrame": 24
+        }
+      ],
+      "authored": [
+        {
+          "name": "pia",
+          "timeMs": 433.33333333333337,
+          "frame0": 13
+        }
+      ],
+      "expectedMs": 433.33333333333337,
+      "fps": 30
+    },
+    {
+      "model": "hero_080_03_ez",
+      "action": "gongji",
+      "native": [
+        {
+          "name": "pia",
+          "time": 0.43333333333333335
+        }
+      ],
+      "callbacks": [
+        {
+          "elapsedMs": 437.8999999985099,
+          "key": "pia",
+          "nativeFrame": 13,
+          "sourceFrame": 24
+        }
+      ],
+      "authored": [
+        {
+          "name": "pia",
+          "timeMs": 433.33333333333337,
+          "frame0": 13
+        }
+      ],
+      "expectedMs": 433.33333333333337,
+      "fps": 30
+    }
+  ],
+  "after": {
+    "installed": true,
+    "framesPresented": 74,
+    "actions": {
+      "gongji": 74
+    },
+    "errors": [],
+    "caches": [],
+    "active": []
+  }
+}

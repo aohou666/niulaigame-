@@ -1,8 +1,8 @@
 """Package a reviewed character sequence; native frame events remain authoritative."""
-import argparse,hashlib,json,math
+import argparse,hashlib,io,json,math
 from pathlib import Path
 from PIL import Image,ImageDraw
-from street_atomic import atomic_write_text
+from street_atomic import atomic_write_text,atomic_write_bytes
 ROOT=Path(__file__).resolve().parents[1];GAME=ROOT/'local_game';BASE=ROOT/'art-migration/generation'
 p=argparse.ArgumentParser();p.add_argument('name');p.add_argument('--attack-anchor',required=True,type=int);p.add_argument('--event-anchors');p.add_argument('--fallback-impact',type=int);p.add_argument('--version',required=True);a=p.parse_args();folder=BASE/a.name
 reviewedAnchors=json.loads(Path(a.event_anchors).read_text('utf8')) if a.event_anchors else {}
@@ -49,16 +49,18 @@ models=[design['actions']['attack']['native']['model'],design['actions']['attack
 for model in models[1:]:
  variant=build_actions(model);different={action:seq for action,seq in variant.items() if seq!=actions[action]}
  if different:modelActionOverrides[model]=different
-out.mkdir(parents=True,exist_ok=True);atlas.save(out/'body.webp',lossless=True,method=6)
-cfg={'id':hid,'models':[design['actions']['attack']['native']['model'],design['actions']['attack']['native']['model']+'_ez'],'atlas':(out/'body.webp').relative_to(GAME).as_posix(),'frames':rects,'crop':box,'root':[design['inputs']['idle']['foot'][0]*512/768,design['inputs']['idle']['foot'][1]*512/768],'bodyHeight':design['inputs']['idle'].get('subjectHeight',design['inputs']['idle']['size'][1])*512/768,'actions':actions,'source':folder.relative_to(ROOT).as_posix()}
+out.mkdir(parents=True,exist_ok=True);encoded=io.BytesIO();atlas.save(encoded,format='WEBP',lossless=True,method=6);payload=encoded.getvalue();digest=hashlib.sha256(payload).hexdigest();atlasFile=out/f'body-{digest[:16]}.webp'
+if atlasFile.exists():assert hashlib.sha256(atlasFile.read_bytes()).hexdigest()==digest,'Immutable atlas name collision'
+else:atomic_write_bytes(atlasFile,payload)
+cfg={'id':hid,'models':[design['actions']['attack']['native']['model'],design['actions']['attack']['native']['model']+'_ez'],'atlas':atlasFile.relative_to(GAME).as_posix(),'frames':rects,'crop':box,'root':[design['inputs']['idle']['foot'][0]*512/768,design['inputs']['idle']['foot'][1]*512/768],'bodyHeight':design['inputs']['idle'].get('subjectHeight',design['inputs']['idle']['size'][1])*512/768,'actions':actions,'source':folder.relative_to(ROOT).as_posix()}
 cfg['nativeEventAuditSha256']=hashlib.sha256(auditFile.read_bytes()).hexdigest()
 cfg['temporalQuality']='approved-continuous'
 cfg['temporalReviewSourceSignature']=qa['sourceSignature']
 if modelActionOverrides:cfg['modelActionOverrides']=modelActionOverrides
-cfg['atlasSha256']=hashlib.sha256((out/'body.webp').read_bytes()).hexdigest()
+cfg['atlasSha256']=digest
 p=GAME/'street-body-data.js';d=json.loads(p.read_text('utf8').split('=',1)[1].strip().rstrip(';'));d['version']=a.version;d['characters']=[r for r in d['characters'] if r['id']!=hid]+[cfg];d['characters'].sort(key=lambda r:r['id']);atomic_write_text(p,'window.StreetBodyData='+json.dumps(d,separators=(',',':'))+';\n')
 contact=Image.new('RGB',(1024,1024),'#53676e');draw=ImageDraw.Draw(contact)
 for i in range(16):
  n=round(i*(len(images)-1)/15);im=images[n].copy();im.thumbnail((250,230));contact.paste(im,((i%4)*256,(i//4)*256),im);draw.text(((i%4)*256,(i//4)*256+233),str(n),fill='white')
 contact.save(ROOT/f'outputs/street-reskin/body-{hid:03}-final-alpha.jpg',quality=95)
-(folder/'integration.json').write_text(json.dumps({'status':'prepared-runtime-validation-pending','heroId':hid,'crop':box,'tileSize':size,'nativeClocksRetained':True,'sha256':hashlib.sha256((out/'body.webp').read_bytes()).hexdigest()},indent=2)+'\n','utf8');print(json.dumps({'hero':hid,'bytes':(out/'body.webp').stat().st_size,'actions':{k:{'nativeFrames':v['nativeDurationFrames'],'nativeImpact':v['nativeImpactFrame'],'sourceImpact':v['sourceImpactFrame']} for k,v in actions.items()}}))
+(folder/'integration.json').write_text(json.dumps({'status':'prepared-runtime-validation-pending','heroId':hid,'crop':box,'tileSize':size,'nativeClocksRetained':True,'atlas':atlasFile.relative_to(GAME).as_posix(),'sha256':digest},indent=2)+'\n','utf8');print(json.dumps({'hero':hid,'bytes':atlasFile.stat().st_size,'atlas':atlasFile.relative_to(GAME).as_posix(),'actions':{k:{'nativeFrames':v['nativeDurationFrames'],'nativeImpact':v['nativeImpactFrame'],'sourceImpact':v['sourceImpactFrame']} for k,v in actions.items()}}))
