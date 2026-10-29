@@ -97,3 +97,11 @@
 - street_body_promote.py新增--event-anchors JSON：多normal事件及任何skill事件需要每个原生eventframe明确对应源frame。2normal16/17=>16/17；7skill5/11/13/32/47=>54/56/58/62/64（持续施技姿势，原生伤害/VFX事件不改）。street_art_verify核对全部eventAnchors，roster-test同名事件按次数/顺序逐时点检查。
 - 77/82/94v2全部73帧+放大已看，通过待matte77/82/94；76v2饭团消失13-15/49-52退回，已更严格手球连体约束生成76v3，当前worker正在运行，不能当作完成。
 - 官方新生成六种品质list底板source: assets/street/ui/hero-list-cards-source.png（6竖排，绿色/蓝/紫/橙/红/金），已看source，还未裁切接入，计划v32。原尺寸690x134，_hero_m_json.common_img_liebiao_1至6，bare同名_png。源边缘有一些alpha浮点，处理前需检查深浅底；不能直接说验收。参考outputs/street-reskin/hero-list-cards-reference.jpg。
+
+## 最新0.32验收准备提交与三版推送（本地13:36）
+- 0.31commit448a891。0.32新增77/82/94 bodyv2（matte已完成），三名实际8hell敌人战斗通过；全十人1902帧位base/EZ原时钟/事件/缓存通过。新的eventAnchors82normal0=>0,28=>16;skill0=>36,31=>54。打包器nativeImpact选第一个正帧事件，0仍保留单独映射。
+- 82实战先两次失败，attempt1/2报告保留。trace每段只到native10就回idle。offline-hit-events.js窄修复两个82_03 base/EZ的gongji/jineng启动pia@time0抢先触发once回调问题；保留原事件流和数值，frameHandler仅跳过启动标记的战斗回调。paired-hit-runtime-test4case通过，原生仍2pia、回调一次933/1033ms、缓存清0。之后实际77/82/94全部通过。不要移除诊断失败报告或把它们写成成功。
+- 六列表板官方生成+官方清理仍有白边，最终六格本地RMBG抠像完成并看图、street_ui_region_group.py按配置源格/alpha和精确sheet/bare映射。47资源18可见纹理通过，游戏原列表已看无碎边。ui-regions六条complete，其余2297pending。
+- 0.32提交后立即push30/31/32 delivery HEAD:main并lsremote核对，nextPush0.35。
+- tools/street-visible-assets.mjs新诊断输出visible-assets-heroes.json，已确认底部七导航实际语义：main_icon_wujiang居民、zhuangbei装备、ybd背包、zhandou战斗、baoxiang宝箱、lilian历练、gonghui公会。第八可生成main_img_tubiaodik_png圆底盘，准备下一批官方8图。无需把ybd误当商店。
+- 9/14/15/24/25/30的v3姿势已与idle并排批准（道具手持正确），新bodyv1正在队列。31v3灰度仍太亮退回，新增--revision=4生成更深charcoal-black肤色/破西装（未看完不能批准）；76v3饭团严格持续双手握持已生成待全帧复查。当前约13:36，还有6h24，继续自主工作到20:00。

@@ -5,7 +5,7 @@ try{
  const report=await page.evaluate(async()=>{
   const checks=[],adapter=new AssetAdapter(),changes=AssetAdapter.getSrcChangeConfig()||{},sheetMap=AssetAdapter.getSpiteSheetMap(),expected={};
   for(const r of StreetArtData.resources){
-   const texture=await RES.getResAsync(r.originalKey),target=await RES.getResAsync(r.targetKey),actualName=sheetMap[changes[r.originalKey]||r.originalKey]||changes[r.originalKey]||r.originalKey;const adapted=await new Promise(resolve=>adapter.getAsset(r.originalKey,resolve,null)),actual=await RES.getResAsync(actualName);expected[r.originalKey]=actual;
+   const texture=await RES.getResAsync(r.originalKey),target=await RES.getResAsync(r.targetKey),actualName=sheetMap[changes[r.originalKey]||r.originalKey]||changes[r.originalKey]||r.originalKey;const adapted=await new Promise(resolve=>adapter.getAsset(r.originalKey,resolve,null)),actual=await RES.getResAsync(actualName);expected[r.originalKey]=actual;for(const alias of r.extraAliases||[])expected[alias]=RES.getRes(alias);
    checks.push({key:r.originalKey,sameDirect:texture===target,dimensions:[texture.textureWidth,texture.textureHeight],expected:r.size,adapterUsesMappedResource:adapted===actual,actualName,aliases:(r.extraAliases||[]).map(key=>({key,same:RES.getRes(key)===target}))});
   }
   const visible=[];function walk(n){if(!n.visible)return;if(typeof n.source==='string'&&expected[n.source]&&n.texture)visible.push({source:n.source,same:n.texture===expected[n.source],bounds:n.getTransformedBounds(egret.MainContext.instance.stage)});for(let i=0;i<(n.numChildren||0);i++)walk(n.getChildAt(i));}walk(egret.MainContext.instance.stage);return {checks,visible,audit:StreetArt.audit};

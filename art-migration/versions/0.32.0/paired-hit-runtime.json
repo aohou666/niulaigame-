@@ -1,0 +1,131 @@
+{
+  "pass": true,
+  "errors": [],
+  "reports": [
+    {
+      "model": "hero_082_03",
+      "action": "gongji",
+      "native": [
+        {
+          "name": "pia",
+          "time": 0
+        },
+        {
+          "name": "pia",
+          "time": 0.9333333333333333
+        }
+      ],
+      "callbacks": [
+        {
+          "elapsed": 948.4000000003725,
+          "keyFrame": "pia"
+        }
+      ],
+      "expectedImpactMs": 933.3333333333334
+    },
+    {
+      "model": "hero_082_03",
+      "action": "jineng",
+      "native": [
+        {
+          "name": "pia",
+          "time": 0
+        },
+        {
+          "name": "pia",
+          "time": 1.0333333333333334
+        }
+      ],
+      "callbacks": [
+        {
+          "elapsed": 1046.4000000003725,
+          "keyFrame": "pia"
+        }
+      ],
+      "expectedImpactMs": 1033.3333333333335
+    },
+    {
+      "model": "hero_082_03_ez",
+      "action": "gongji",
+      "native": [
+        {
+          "name": "pia",
+          "time": 0
+        },
+        {
+          "name": "pia",
+          "time": 0.9333333333333333
+        }
+      ],
+      "callbacks": [
+        {
+          "elapsed": 942,
+          "keyFrame": "pia"
+        }
+      ],
+      "expectedImpactMs": 933.3333333333334
+    },
+    {
+      "model": "hero_082_03_ez",
+      "action": "jineng",
+      "native": [
+        {
+          "name": "pia",
+          "time": 0
+        },
+        {
+          "name": "pia",
+          "time": 1.0333333333333334
+        }
+      ],
+      "callbacks": [
+        {
+          "elapsed": 1017.9000000003725,
+          "keyFrame": "pia"
+        }
+      ],
+      "expectedImpactMs": 1033.3333333333335
+    }
+  ],
+  "audit": {
+    "installed": true,
+    "ignoredStartupMarkers": [
+      {
+        "model": "hero_082_03",
+        "action": "gongji",
+        "markerTime": 0,
+        "impactFrame": 28
+      },
+      {
+        "model": "hero_082_03",
+        "action": "jineng",
+        "markerTime": 0,
+        "impactFrame": 31
+      },
+      {
+        "model": "hero_082_03_ez",
+        "action": "gongji",
+        "markerTime": 0,
+        "impactFrame": 28
+      },
+      {
+        "model": "hero_082_03_ez",
+        "action": "jineng",
+        "markerTime": 0,
+        "impactFrame": 31
+      }
+    ],
+    "forwardedImpactEvents": 4
+  },
+  "body": {
+    "installed": true,
+    "framesPresented": 146,
+    "actions": {
+      "gongji": 72,
+      "jineng": 74
+    },
+    "errors": [],
+    "caches": [],
+    "active": []
+  }
+}

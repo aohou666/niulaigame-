@@ -27,7 +27,7 @@ for kind,action in [('attack','gongji'),('skill','jineng')]:
   frameMap=[]
   for n in range(count):
    left,right=next((x,y) for x,y in zip(knots,knots[1:]) if x[0]<=n<=y[0]);frameMap.append(round(left[1]+(right[1]-left[1])*(n-left[0])/(right[0]-left[0])))
-  impact=events[0]['frame0'] if events else None;anchor=int(marks[str(impact)]) if impact is not None else None
+  impact=next((e['frame0'] for e in events if e['frame0']>0),events[0]['frame0'] if events else None);anchor=int(marks[str(impact)]) if impact is not None else None
  elif kind=='attack' and events:
   assert len(events)==1,'Multiple strikes require reviewed multiple source anchors';impact=events[0]['frame0'];anchor=a.attack_anchor;assert begin<=anchor<=end and 0<impact<count-1
   frameMap=[round(begin+(anchor-begin)*n/impact) if n<=impact else round(anchor+(end-anchor)*(n-impact)/(count-1-impact)) for n in range(count)]

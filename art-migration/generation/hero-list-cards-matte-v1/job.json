@@ -1,0 +1,66 @@
+{
+  "promptId": "c81012d5-f679-4321-a6f8-e4b99be1db17",
+  "submittedUtc": "2026-10-29T05:25:06Z",
+  "status": "generated-unreviewed",
+  "provider": "local-comfyui",
+  "workflowSha256": "4aa0fb98e06aa4096c05329dd9cdf516ecaa19df7181c7fd4794cf4f4f0a9db6",
+  "response": {
+    "prompt_id": "c81012d5-f679-4321-a6f8-e4b99be1db17",
+    "number": -427,
+    "node_errors": {}
+  },
+  "comfyStatus": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "c81012d5-f679-4321-a6f8-e4b99be1db17",
+          "timestamp": 1793251585910
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [],
+          "prompt_id": "c81012d5-f679-4321-a6f8-e4b99be1db17",
+          "timestamp": 1793251585911
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "c81012d5-f679-4321-a6f8-e4b99be1db17",
+          "timestamp": 1793251587434
+        }
+      ]
+    ]
+  },
+  "outputs": [
+    {
+      "path": "art-migration/generation/hero-list-cards-matte-v1/hero_list_card_alpha_00001_.png",
+      "sha256": "add0aef44eb48117fb6ea4f34fd42ae6bc59ab184c52b5e5db65184472c6b0ba"
+    },
+    {
+      "path": "art-migration/generation/hero-list-cards-matte-v1/hero_list_card_alpha_00002_.png",
+      "sha256": "e2766f312485b4cb87f31d7b5302ea790c6706299b85fd0aabbbffd6b70eb7c7"
+    },
+    {
+      "path": "art-migration/generation/hero-list-cards-matte-v1/hero_list_card_alpha_00003_.png",
+      "sha256": "577a61483aed4ab6c30486bb3caf22803e4bbd756c7306088076830464b0c7a8"
+    },
+    {
+      "path": "art-migration/generation/hero-list-cards-matte-v1/hero_list_card_alpha_00004_.png",
+      "sha256": "8ac5ab51304f3b090e6143b4e7aeeaa54a330adcb1f1ef0c589b8d6129147c50"
+    },
+    {
+      "path": "art-migration/generation/hero-list-cards-matte-v1/hero_list_card_alpha_00005_.png",
+      "sha256": "e7ab2990df727431662574643dbd6bf37e0a47c56c72f4b72532d7cfa88ac519"
+    },
+    {
+      "path": "art-migration/generation/hero-list-cards-matte-v1/hero_list_card_alpha_00006_.png",
+      "sha256": "c19a1be0941c245aef588bf8ebad6f7f3927b48124d1fb7e35338743952944bc"
+    }
+  ]
+}

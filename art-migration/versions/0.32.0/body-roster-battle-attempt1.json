@@ -1,0 +1,130 @@
+{
+  "pass": false,
+  "saveIsolation": "outputs/street-reskin/effect-test-save.json",
+  "reports": [
+    {
+      "hero": 77,
+      "pass": true,
+      "active": {
+        "installed": true,
+        "framesPresented": 18,
+        "actions": {
+          "gongji": 18
+        },
+        "errors": [],
+        "caches": [
+          {
+            "id": "8",
+            "users": 1,
+            "ready": true
+          },
+          {
+            "id": "77",
+            "users": 1,
+            "ready": true
+          }
+        ],
+        "active": [
+          {
+            "model": "hero_077_03_ez",
+            "action": "gongji",
+            "frame": 17,
+            "nativeFrame": 20,
+            "visible": true,
+            "nativeVisible": false,
+            "ready": true,
+            "onStage": true
+          },
+          {
+            "model": "hero_008_01_ez",
+            "action": "daiji",
+            "frame": -1,
+            "visible": false,
+            "nativeVisible": false,
+            "ready": true,
+            "onStage": true
+          }
+        ]
+      },
+      "after": {
+        "installed": true,
+        "framesPresented": 55,
+        "actions": {
+          "gongji": 51,
+          "jineng": 4
+        },
+        "errors": [],
+        "caches": [
+          {
+            "id": "8",
+            "users": 1,
+            "ready": true
+          },
+          {
+            "id": "77",
+            "users": 1,
+            "ready": true
+          }
+        ],
+        "active": [
+          {
+            "model": "hero_077_03_ez",
+            "action": "jineng",
+            "frame": 39,
+            "nativeFrame": 5,
+            "visible": true,
+            "nativeVisible": false,
+            "ready": true,
+            "onStage": true
+          },
+          {
+            "model": "hero_008_01_ez",
+            "action": "daiji",
+            "frame": 26,
+            "nativeFrame": 28,
+            "visible": false,
+            "nativeVisible": false,
+            "ready": true,
+            "onStage": true
+          }
+        ]
+      },
+      "errors": [],
+      "scenario": "Isolated save; solo hero level50 with reference hero1 stats, 4 normal wei enemies, battles0/stage1, supports cleared"
+    },
+    {
+      "hero": 82,
+      "pass": false,
+      "error": "page.waitForFunction: Timeout 90000ms exceeded.",
+      "errors": [],
+      "state": {
+        "installed": true,
+        "framesPresented": 14,
+        "actions": {
+          "gongji": 7,
+          "jineng": 7
+        },
+        "errors": [],
+        "caches": [
+          {
+            "id": "82",
+            "users": 1,
+            "ready": true
+          }
+        ],
+        "active": [
+          {
+            "model": "hero_082_03_ez",
+            "action": "daiji",
+            "frame": 42,
+            "nativeFrame": 10,
+            "visible": false,
+            "nativeVisible": false,
+            "ready": true,
+            "onStage": true
+          }
+        ]
+      }
+    }
+  ]
+}
