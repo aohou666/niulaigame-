@@ -1,0 +1,65 @@
+{
+  "pass": true,
+  "scope": "Actual NightDemonPvpViewSkin component fixture; no reward transaction or full activity flow tested",
+  "errors": [],
+  "checks": [
+    {
+      "enabled": true,
+      "size": [
+        79,
+        81
+      ],
+      "replacementTextureFound": true,
+      "bounds": {
+        "$hashCode": 4125,
+        "x": 276,
+        "y": 986,
+        "width": 79,
+        "height": 81
+      }
+    },
+    {
+      "enabled": false,
+      "size": [
+        79,
+        81
+      ],
+      "replacementTextureFound": true,
+      "bounds": {
+        "$hashCode": 4134,
+        "x": 276,
+        "y": 986,
+        "width": 79,
+        "height": 81
+      }
+    }
+  ],
+  "scene": [
+    {
+      "part": "img_bg",
+      "source": "fhqp_bg_ditu_png",
+      "replacementBound": true,
+      "visible": true,
+      "bounds": {
+        "$hashCode": 4135,
+        "x": -120,
+        "y": -140,
+        "width": 960,
+        "height": 1560
+      }
+    },
+    {
+      "part": "img_title",
+      "source": "fhqp_img_wushuangdoupai_png",
+      "replacementBound": true,
+      "visible": true,
+      "bounds": {
+        "$hashCode": 4137,
+        "x": 114,
+        "y": 0,
+        "width": 492,
+        "height": 132
+      }
+    }
+  ]
+}

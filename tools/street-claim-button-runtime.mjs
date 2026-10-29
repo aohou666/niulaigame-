@@ -26,6 +26,11 @@ try {
   await page.screenshot({path:out+'/claim-'+(enabled?'enabled':'disabled')+'.png'});
  }
  assert.equal(errors.length,0);
- await fs.writeFile(out+'/claim-native-skin.json',JSON.stringify({pass:true,scope:'Actual NightDemonPvpViewSkin component fixture; no reward transaction or full activity flow tested',errors,checks},null,2));
+ const scene=await page.evaluate(()=>{
+  const h=__claimFixture.host;
+  return ['img_bg','img_title'].map(part=>{const n=h[part],r=StreetArtData.resources.find(r=>r.originalKey===n.source);return{part,source:n.source,replacementBound:!!r&&n.texture===RES.getRes(r.targetKey),visible:n.visible,bounds:n.getTransformedBounds(egret.MainContext.instance.stage)};});
+ });
+ assert(scene.every(r=>r.replacementBound&&r.visible),'Lobby background/title must actually use their replacements');
+ await fs.writeFile(out+'/claim-native-skin.json',JSON.stringify({pass:true,scope:'Actual NightDemonPvpViewSkin component fixture; no reward transaction or full activity flow tested',errors,checks,scene},null,2));
  console.log(JSON.stringify({pass:true,checks}));
 } finally {await browser.close();}
