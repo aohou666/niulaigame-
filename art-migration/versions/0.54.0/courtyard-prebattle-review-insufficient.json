@@ -1,0 +1,94 @@
+{
+  "pass": true,
+  "fixture": "Native default fight theme selects existing dk_01_bg_01 arena; no model/position/gameplay change.",
+  "theme": "dk_01_bg_01",
+  "sameAlias": true,
+  "size": [
+    960,
+    1560
+  ],
+  "visible": [
+    {
+      "type": "i",
+      "source": "dk_01_bg_01_jpg",
+      "bounds": {
+        "$hashCode": 1501,
+        "x": -159,
+        "y": -168,
+        "width": 1038,
+        "height": 1686
+      }
+    }
+  ],
+  "body": {
+    "installed": true,
+    "framesPresented": 0,
+    "actions": {},
+    "atlasRequests": 4,
+    "suppressedViewsDetached": 0,
+    "errors": [],
+    "caches": [
+      {
+        "id": "1",
+        "users": 1,
+        "ready": false
+      },
+      {
+        "id": "13",
+        "users": 1,
+        "ready": false
+      },
+      {
+        "id": "25",
+        "users": 1,
+        "ready": false
+      },
+      {
+        "id": "41",
+        "users": 1,
+        "ready": false
+      }
+    ],
+    "active": [
+      {
+        "model": "hero_001_01_ez",
+        "action": "daiji",
+        "frame": -1,
+        "visible": false,
+        "nativeVisible": false,
+        "ready": false,
+        "onStage": true
+      },
+      {
+        "model": "hero_025_01_ez",
+        "action": "daiji",
+        "frame": -1,
+        "visible": false,
+        "nativeVisible": false,
+        "ready": false,
+        "onStage": true
+      },
+      {
+        "model": "hero_013_01_ez",
+        "action": "daiji",
+        "frame": -1,
+        "visible": false,
+        "nativeVisible": false,
+        "ready": false,
+        "onStage": true
+      },
+      {
+        "model": "hero_041_01_ez",
+        "action": "daiji",
+        "frame": -1,
+        "visible": false,
+        "nativeVisible": false,
+        "ready": false,
+        "onStage": true
+      }
+    ]
+  },
+  "artErrors": [],
+  "errors": [],
+  "failed": []
+}

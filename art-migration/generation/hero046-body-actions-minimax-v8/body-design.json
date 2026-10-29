@@ -1,0 +1,402 @@
+{
+  "heroId": 46,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/046/portrait.png",
+      "prepared": "art-migration/references/body-046-v8/idle.png",
+      "sourceSha256": "da4bc399ccac323d09643c021d7e899f4961199f1579c743a45e1c588be77e4a",
+      "foot": [
+        200,
+        700
+      ],
+      "size": [
+        478,
+        397
+      ],
+      "subjectHeight": 360.0,
+      "normalization": "manually inspected head/feet landmarks; full prop bbox retained",
+      "sha256": "296dd3e18101e15ede73413d504a3498840c60bc32b110ea0b758be9797a63df"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero046-attack-v5/official-guide.png",
+      "prepared": "art-migration/references/body-046-v8/attack.png",
+      "sourceSha256": "d0e6a0f269c67825bd5c6c16e0afa527e3f53120db4fde1012ddae23816eaafc",
+      "foot": [
+        200,
+        700
+      ],
+      "size": [
+        635,
+        415
+      ],
+      "subjectHeight": 360.0,
+      "normalization": "manually inspected head/feet landmarks; full prop bbox retained",
+      "sha256": "4fd89e23ff191d75a9dbed4222c667d6d13fbdbb1fa08f193e38db72a408e956"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero046-skill-v5/official-guide.png",
+      "prepared": "art-migration/references/body-046-v8/skill.png",
+      "sourceSha256": "f98e9e46fc232f31b4e8815ffd9e6e62f972440266143661827151a51e9eec0b",
+      "foot": [
+        200,
+        700
+      ],
+      "size": [
+        610,
+        419
+      ],
+      "subjectHeight": 360.0,
+      "normalization": "manually inspected head/feet landmarks; full prop bbox retained",
+      "sha256": "4173c454da5a33efc17188efe92a9666c8bc0524dcdc6c27d006304edacabfaa"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        61
+      ],
+      "guideImpactFrame": 28,
+      "native": {
+        "taskId": "H046-ATK",
+        "heroId": 46,
+        "name": "钓鱼佬",
+        "originalName": "诸葛瑾",
+        "slot": "普攻",
+        "skillId": 550460110,
+        "skillName": "普通攻击",
+        "newSkillName": "霜华抛线",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "远程弹道/连线",
+        "movement": "原站位出手",
+        "weapon": "生活长柄道具",
+        "weaponObservation": "RIGHT hand holds ONE blue bucket, LEFT holds ONE original long DARK curved fishing rod; retain complete rod, line and single bobber.",
+        "effectClass": "飞行弹道、命中/生效附着特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "Keep bucket at right hip, lift left rod wrist slightly as a gentle fishing tug, then recover. No cast, strike, throw, rod shortening, extra rod or prop swap.",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B03",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_zhugejin_021",
+        "model": "hero_046_01",
+        "action": "gongji",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1000.0,
+        "fps": 30,
+        "durationFrames": 30,
+        "rawEvents": [
+          {
+            "frame0": 12,
+            "timeMs": 400.0,
+            "type": 10,
+            "name": "zd"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "zd@400.0ms（发射/启动特效）",
+        "impactMs": [
+          650.0
+        ],
+        "impactStatus": "发射事件＋弹道delay/dt推导；待游戏内验收",
+        "performance": {
+          "__attackDoneDelay": 150,
+          "effectsPiaEnemy": [
+            {
+              "posType": 0,
+              "src": [
+                "common_skill_zhugejin_02_4"
+              ]
+            }
+          ],
+          "effectsTarEnemy": [
+            {
+              "dt": 250,
+              "fixedWidth": 50,
+              "offset": [
+                0,
+                -100
+              ],
+              "posType": 0,
+              "src": [
+                "common_skill_zhugejin_02_2"
+              ],
+              "type": 1
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_zhugejin_02_2",
+            "delay": 0,
+            "dt": 250,
+            "timeScale": 1,
+            "type": 1,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhugejin_02_2_260af755.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhugejin_02_2",
+                  "name": "common_skill_zhugejin_02_2",
+                  "fps": 24,
+                  "durationFrames": 5,
+                  "durationMs": 208.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_zhugejin_02_4",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhugejin_02_4_7a06ddd4.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhugejin_02_4",
+                  "name": "common_skill_zhugejin_02_4",
+                  "fps": 24,
+                  "durationFrames": 11,
+                  "durationMs": 458.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_zhugejin_02_2 delay=0 dt=250 speed=1\neffectsPiaEnemy: common_skill_zhugejin_02_4 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_zhugejin_021"
+        ],
+        "portrait": "reskin/hero_046.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        62,
+        123
+      ],
+      "guideImpactFrame": 92,
+      "native": {
+        "taskId": "H046-ULT",
+        "heroId": 46,
+        "name": "钓鱼佬",
+        "originalName": "诸葛瑾",
+        "slot": "大招",
+        "skillId": 550460210,
+        "skillName": "心傀制乱",
+        "newSkillName": "缓流入阵",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "前排",
+        "delivery": "中场释放（远近待回放）",
+        "movement": "移到场地中部释放",
+        "weapon": "生活长柄道具",
+        "weaponObservation": "RIGHT hand holds ONE blue bucket, LEFT holds ONE original long DARK curved fishing rod; retain complete rod, line and single bobber.",
+        "effectClass": "场景/范围特效",
+        "semantic": "降低",
+        "bodyDesign": "Bend knees slightly, raise same right bucket a little and draw left rod handle closer to chest, then recover. Same original graphite rod stays complete.",
+        "rootPolicy": "引擎移到中场后播出手；视频不自行横穿战场",
+        "batch": "B05",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排造成255%伤害,并降低目标8%速度,持续3回合。",
+        "skillModel": "common_skill_zhugejin_01",
+        "model": "hero_046_01",
+        "action": "jineng",
+        "effectiveDesc": "对敌方前排造成255%伤害,并降低目标8%速度,持续3回合。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1000.0,
+        "fps": 30,
+        "durationFrames": 30,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "__attackDoneDelay": 1150,
+          "effectQP": [
+            {
+              "delay": 500,
+              "offset": [
+                200,
+                0
+              ],
+              "src": [
+                "common_skill_zhugejin_01"
+              ],
+              "timeScale": 1
+            }
+          ],
+          "meFlyConfig": [
+            1,
+            250,
+            80
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectQP",
+            "resource": "common_skill_zhugejin_01",
+            "delay": 500,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhugejin_01_11ca6be.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhugejin_01",
+                  "name": "common_skill_zhugejin_01",
+                  "fps": 24,
+                  "durationFrames": 34,
+                  "durationMs": 1416.667,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        5
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 6,
+                      "timeMs": 250.0,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 13,
+                      "timeMs": 541.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 13,
+                      "timeMs": 541.667,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 17,
+                      "timeMs": 708.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 17,
+                      "timeMs": 708.333,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 20,
+                      "timeMs": 833.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 20,
+                      "timeMs": 833.333,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 24,
+                      "timeMs": 1000.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 24,
+                      "timeMs": 1000.0,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 28,
+                      "timeMs": 1166.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 28,
+                      "timeMs": 1166.667,
+                      "type": 10,
+                      "name": "pz"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectQP: common_skill_zhugejin_01 delay=500 dt=None speed=1 事件=pia@541.7,pia@708.3,pia@833.3,pia@1000.0,pia@1166.7",
+        "variants": [
+          "common_skill_zhugejin_01"
+        ],
+        "portrait": "reskin/hero_046.png"
+      }
+    }
+  },
+  "length": 124,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false,
+  "sparseGuideSchedule": [
+    {
+      "frame": 0,
+      "image": "idle"
+    },
+    {
+      "frame": 28,
+      "image": "attack"
+    },
+    {
+      "frame": 62,
+      "image": "idle"
+    },
+    {
+      "frame": 92,
+      "image": "skill"
+    },
+    {
+      "frame": 123,
+      "image": "idle"
+    }
+  ],
+  "temporalReviewRequired": true
+}
