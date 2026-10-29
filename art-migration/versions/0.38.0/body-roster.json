@@ -1,0 +1,185 @@
+{
+  "pass": true,
+  "errors": [],
+  "reports": [
+    {
+      "hero": 13,
+      "pass": true,
+      "frameChecks": 228,
+      "clocks": [
+        {
+          "model": "hero_013_01",
+          "action": "gongji",
+          "totalTime": 0.9,
+          "expected": 0.9
+        },
+        {
+          "model": "hero_013_01",
+          "action": "jineng",
+          "totalTime": 0.9,
+          "expected": 0.9
+        },
+        {
+          "model": "hero_013_01",
+          "action": "daiji",
+          "totalTime": 2,
+          "expected": 2
+        },
+        {
+          "model": "hero_013_01_ez",
+          "action": "gongji",
+          "totalTime": 0.9,
+          "expected": 0.9
+        },
+        {
+          "model": "hero_013_01_ez",
+          "action": "jineng",
+          "totalTime": 0.9,
+          "expected": 0.9
+        },
+        {
+          "model": "hero_013_01_ez",
+          "action": "daiji",
+          "totalTime": 2,
+          "expected": 2
+        }
+      ],
+      "timing": {
+        "events": [
+          {
+            "model": "hero_013_01",
+            "action": "gongji",
+            "expected": 900,
+            "calls": 1,
+            "elapsedMs": 895.6000000014901,
+            "native": [
+              {
+                "name": "zd",
+                "elapsedMs": 462
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "zd",
+                "timeMs": 466.6666666666667,
+                "frame0": 14
+              }
+            ],
+            "fps": 30
+          },
+          {
+            "model": "hero_013_01",
+            "action": "jineng",
+            "expected": 900,
+            "calls": 1,
+            "elapsedMs": 916.5999999977648,
+            "native": [],
+            "expectedEvents": [],
+            "fps": 30
+          },
+          {
+            "model": "hero_013_01",
+            "action": "gongji",
+            "expected": 900,
+            "calls": 1,
+            "elapsedMs": 916.6000000014901,
+            "native": [
+              {
+                "name": "zd",
+                "elapsedMs": 466.30000000074506
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "zd",
+                "timeMs": 466.6666666666667,
+                "frame0": 14
+              }
+            ],
+            "fps": 30
+          },
+          {
+            "model": "hero_013_01_ez",
+            "action": "gongji",
+            "expected": 900,
+            "calls": 1,
+            "elapsedMs": 916.8000000007451,
+            "native": [
+              {
+                "name": "zd",
+                "elapsedMs": 466.30000000074506
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "zd",
+                "timeMs": 466.6666666666667,
+                "frame0": 14
+              }
+            ],
+            "fps": 30
+          },
+          {
+            "model": "hero_013_01_ez",
+            "action": "jineng",
+            "expected": 900,
+            "calls": 1,
+            "elapsedMs": 900.3000000007451,
+            "native": [],
+            "expectedEvents": [],
+            "fps": 30
+          },
+          {
+            "model": "hero_013_01_ez",
+            "action": "gongji",
+            "expected": 900,
+            "calls": 1,
+            "elapsedMs": 915.9000000022352,
+            "native": [
+              {
+                "name": "zd",
+                "elapsedMs": 482.30000000074506
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "zd",
+                "timeMs": 466.6666666666667,
+                "frame0": 14
+              }
+            ],
+            "fps": 30
+          }
+        ],
+        "idle": [
+          {
+            "body": true,
+            "native": false,
+            "idle": false
+          },
+          {
+            "body": true,
+            "native": false,
+            "idle": false
+          }
+        ],
+        "shared": {
+          "sameCache": true,
+          "users": 2
+        },
+        "after": {
+          "installed": true,
+          "framesPresented": 400,
+          "actions": {
+            "gongji": 164,
+            "jineng": 108,
+            "daiji": 128
+          },
+          "errors": [],
+          "caches": [],
+          "active": []
+        }
+      }
+    }
+  ]
+}

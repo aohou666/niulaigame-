@@ -1,0 +1,462 @@
+{
+  "heroId": 13,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/013/portrait.png",
+      "prepared": "art-migration/references/body-013-v2/idle.png",
+      "foot": [
+        383.97,
+        700
+      ],
+      "size": [
+        329,
+        560
+      ],
+      "sha256": "c8c07aeeab3fe659ff632152add2fa20cd8f5651183e373195674d937530e9cf"
+    },
+    "attack": {
+      "source": "art-migration/generation/extra013-poses-matte-v1/extra013_pose_alpha_00002_.png",
+      "prepared": "art-migration/references/body-013-v2/attack.png",
+      "foot": [
+        384.02,
+        700
+      ],
+      "size": [
+        392,
+        560
+      ],
+      "sha256": "9a11d4ee916f81162012b0c1187e4b60996e4d0e2fd8ffd73ec4912b423bfffd"
+    },
+    "skill": {
+      "source": "art-migration/generation/extra013-poses-matte-v1/extra013_pose_alpha_00003_.png",
+      "prepared": "art-migration/references/body-013-v2/skill.png",
+      "foot": [
+        383.76,
+        700
+      ],
+      "size": [
+        485,
+        560
+      ],
+      "sha256": "7e474a813ba1664b9d8b361f6b74e22e5f1a06e413222be00db28e27efbc805c"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H013-ATK",
+        "heroId": 13,
+        "name": "于禁",
+        "originalName": "于禁",
+        "slot": "普攻",
+        "skillId": 550130110,
+        "skillName": "普通攻击",
+        "newSkillName": "普通攻击",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "原地远程作用",
+        "movement": "原站位出手",
+        "weapon": "警棍",
+        "weaponObservation": "supplemental safety marshal bull, full WHITE hardhat with horn cutouts, ORANGE reflective vest over NAVY blue workwear, pale gloves, BROWN boots; RED walkie-talkie always in anatomical RIGHT hand on viewer LEFT",
+        "effectClass": "目标位置特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "RIGHT hand retains red radio at hip, EMPTY LEFT hand makes one compact palm stop gesture. No weapon, light or flash.",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B08",
+        "status": "需复核：角色换皮映射未匹配；当前图与目标形象待核对",
+        "reviewReasons": [
+          "角色换皮映射未匹配；当前图与目标形象待核对"
+        ],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_yujin_02",
+        "model": "hero_013_01",
+        "action": "gongji",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 900.0,
+        "fps": 30,
+        "durationFrames": 27,
+        "rawEvents": [
+          {
+            "frame0": 14,
+            "timeMs": 466.667,
+            "type": 10,
+            "name": "zd"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "zd@466.7ms（发射/启动特效）",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "effectsTarEnemy": [
+            {
+              "posType": 0,
+              "src": [
+                "common_skill_yujin_03"
+              ],
+              "timeScale": 1,
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_yujin_03",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_yujin_03_b088bd87.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_yujin_03",
+                  "name": "common_skill_yujin_03",
+                  "fps": 24,
+                  "durationFrames": 36,
+                  "durationMs": 1500.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_yujin_03 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_yujin_02"
+        ],
+        "portrait": ""
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H013-ULT",
+        "heroId": 13,
+        "name": "于禁",
+        "originalName": "于禁",
+        "slot": "大招",
+        "skillId": 550130210,
+        "skillName": "摧锋夺锐",
+        "newSkillName": "摧锋夺锐",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "原地远程作用",
+        "movement": "原站位出手",
+        "weapon": "警棍",
+        "weaponObservation": "supplemental safety marshal bull, full WHITE hardhat with horn cutouts, ORANGE reflective vest over NAVY blue workwear, pale gloves, BROWN boots; RED walkie-talkie always in anatomical RIGHT hand on viewer LEFT",
+        "effectClass": "目标位置特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "RIGHT hand lifts SAME radio to mouth briefly, LEFT index points forward-right then recovers. Preserve radio and hand assignment throughout.",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B08",
+        "status": "需复核：角色换皮映射未匹配；当前图与目标形象待核对",
+        "reviewReasons": [
+          "角色换皮映射未匹配；当前图与目标形象待核对"
+        ],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_yujin_01",
+        "model": "hero_013_01",
+        "action": "jineng",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 900.0,
+        "fps": 30,
+        "durationFrames": 27,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "__attackFrameDelay": 400,
+          "effectsTarEnemy": [
+            {
+              "delay": 500,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_yujin_01_1"
+              ],
+              "type": 0
+            },
+            {
+              "delay": 500,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_yujin_01_2"
+              ],
+              "type": 0,
+              "z": 0
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_yujin_01_1",
+            "delay": 500,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_yujin_01_1_3a69f368.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_yujin_01_1",
+                  "name": "common_skill_yujin_01_1",
+                  "fps": 24,
+                  "durationFrames": 18,
+                  "durationMs": 750.0,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        1
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 9,
+                      "timeMs": 375.0,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_yujin_01_2",
+            "delay": 500,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_yujin_01_2_630620b8.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_yujin_01_2",
+                  "name": "common_skill_yujin_01_2",
+                  "fps": 24,
+                  "durationFrames": 20,
+                  "durationMs": 833.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_yujin_01_1 delay=500 dt=None speed=1 事件=pia@375.0\neffectsTarEnemy: common_skill_yujin_01_2 delay=500 dt=None speed=1",
+        "variants": [
+          "common_skill_yujin_01"
+        ],
+        "portrait": ""
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "approved-for-matting",
+  "runtimeIntegrated": false,
+  "denseGuideSchedule": [
+    {
+      "frame": 4,
+      "image": "idle"
+    },
+    {
+      "frame": 8,
+      "image": "idle"
+    },
+    {
+      "frame": 12,
+      "image": "attack"
+    },
+    {
+      "frame": 16,
+      "image": "attack"
+    },
+    {
+      "frame": 20,
+      "image": "attack"
+    },
+    {
+      "frame": 24,
+      "image": "attack"
+    },
+    {
+      "frame": 28,
+      "image": "idle"
+    },
+    {
+      "frame": 32,
+      "image": "idle"
+    },
+    {
+      "frame": 36,
+      "image": "idle"
+    },
+    {
+      "frame": 40,
+      "image": "idle"
+    },
+    {
+      "frame": 44,
+      "image": "idle"
+    },
+    {
+      "frame": 48,
+      "image": "skill"
+    },
+    {
+      "frame": 52,
+      "image": "skill"
+    },
+    {
+      "frame": 56,
+      "image": "skill"
+    },
+    {
+      "frame": 60,
+      "image": "skill"
+    },
+    {
+      "frame": 64,
+      "image": "skill"
+    },
+    {
+      "frame": 68,
+      "image": "idle"
+    },
+    {
+      "frame": 72,
+      "image": "idle"
+    }
+  ],
+  "sourceBodyJob": "art-migration/generation/hero013-body-actions-minimax-v2",
+  "sourceFrameOrder": [
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00074_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00075_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00076_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00077_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00078_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00079_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00080_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00081_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00082_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00083_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00084_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00085_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00086_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00087_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00088_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00089_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00090_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00091_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00092_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00093_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00094_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00095_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00096_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00097_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00098_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00099_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00100_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00101_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00102_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00103_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00104_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00105_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00106_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00107_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00108_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00109_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00110_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00111_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00112_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00113_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00114_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00115_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00116_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00117_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00118_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00119_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00120_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00121_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00122_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00123_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00124_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00125_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00126_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00127_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00128_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00129_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00130_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00131_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00132_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00133_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00134_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00135_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00136_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00137_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00138_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00139_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00140_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00141_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00142_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00143_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00144_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00145_.png",
+    "art-migration/generation/hero013-body-actions-minimax-v2/hero013_body_00146_.png"
+  ]
+}

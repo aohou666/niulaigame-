@@ -31,11 +31,14 @@ def verify():
     for mark in seq.get('eventAnchors',[]):assert seq['frameMap'][mark['nativeFrame']]==mark['sourceFrame'],'multi-event mapping mismatch'
    if cfg.get('nativeEventAuditSha256'):
     assert nativeAudit['complete'] and hashlib.sha256(auditPath.read_bytes()).hexdigest()==cfg['nativeEventAuditSha256'],'native event audit provenance mismatch'
+    supplementalRows={}
+    if cfg.get('supplementalNativeActionAuditPath'):
+     supplementalPath=ROOT/cfg['supplementalNativeActionAuditPath'];assert hashlib.sha256(supplementalPath.read_bytes()).hexdigest()==cfg['supplementalNativeActionAuditSha256'],'supplemental audit provenance mismatch';supplementalAudit=json.loads(supplementalPath.read_text('utf8'));assert supplementalAudit['complete'];supplementalRows={(r['model'],r['action']):r for r in supplementalAudit['records']}
     for model in cfg['models']:
      for action,base in cfg['actions'].items():
-      seq=cfg.get('modelActionOverrides',{}).get(model,{}).get(action,base);native=nativeRows[(model,action)];assert len(seq['frameMap'])==native['durationFrames'] and abs(seq['fps']-native['fps'])<.0001,'native clock differs'
+      seq=cfg.get('modelActionOverrides',{}).get(model,{}).get(action,base);native=(supplementalRows if (model,action) in supplementalRows else nativeRows)[(model,action)];assert len(seq['frameMap'])==native['durationFrames'] and abs(seq['fps']-native['fps'])<.0001,'native clock differs'
       assert [(e['name'],e['frame0']) for e in seq.get('nativeEvents',[])]==[(e['name'],e['frame0']) for e in native['events'] if e['name'] in ['pia','zd']],'native event metadata differs';nativeChecks+=1
-   characters.append({'hero':cfg['id'],'frames':len(cfg['frames']),'distinctFrames':len(hashes),'actions':list(cfg['actions'])})
+   characters.append({'hero':cfg['id'],'frames':len(cfg['frames']),'distinctFrames':len(hashes),'actions':list(cfg['actions']),'supplemental':cfg.get('supplemental',False)})
   except Exception as e:errors.append({'hero':cfg['id'],'error':str(e)})
  effects=[]
  effectFile=GAME/'street-effects-data.js'

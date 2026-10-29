@@ -1,0 +1,54 @@
+{
+  "promptId": "481fcc90-8642-41a2-9f81-a296eddb070b",
+  "submittedUtc": "2026-10-29T08:19:35Z",
+  "status": "generated-unreviewed",
+  "provider": "local-comfyui",
+  "workflowSha256": "580e49b925f05cbc224b66a9285ee04f36b1eb3d8b37802e06d80a74f93c74de",
+  "response": {
+    "prompt_id": "481fcc90-8642-41a2-9f81-a296eddb070b",
+    "number": -546,
+    "node_errors": {}
+  },
+  "comfyStatus": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "481fcc90-8642-41a2-9f81-a296eddb070b",
+          "timestamp": 1793261976795
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [],
+          "prompt_id": "481fcc90-8642-41a2-9f81-a296eddb070b",
+          "timestamp": 1793261976796
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "481fcc90-8642-41a2-9f81-a296eddb070b",
+          "timestamp": 1793261979028
+        }
+      ]
+    ]
+  },
+  "outputs": [
+    {
+      "path": "art-migration/generation/extra013-poses-matte-v1/extra013_pose_alpha_00001_.png",
+      "sha256": "6f43ba61d88b7a65dbb828c7a9791ec94b5a381029863d4918417c399436028d"
+    },
+    {
+      "path": "art-migration/generation/extra013-poses-matte-v1/extra013_pose_alpha_00002_.png",
+      "sha256": "c603d140deb6de8a36d7e836d9dc5ae9ebacfd0413dcbb2197e6b625f51d7d38"
+    },
+    {
+      "path": "art-migration/generation/extra013-poses-matte-v1/extra013_pose_alpha_00003_.png",
+      "sha256": "78797ca3c7da8616a237fa442656497f02b0beaaea94a92b1b549c476901e57b"
+    }
+  ]
+}

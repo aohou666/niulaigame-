@@ -25,7 +25,9 @@
   var nativeFrame=Math.min(seq.frameMap.length-1,Math.max(0,Math.floor(clock.currentTime*seq.fps+.0001))),frame=seq.frameMap[nativeFrame];
   if(s.frame!==frame||s.action!==action){s.bitmap.texture=s.cache.textures[frame];s.frame=frame;s.action=action;audit.framesPresented++;audit.actions[action]=(audit.actions[action]||0)+1;}
   var origin=player.localToGlobal(0,0),unit=player.localToGlobal(0,1),sy=Math.max(.01,Math.hypot(unit.x-origin.x,unit.y-origin.y));
-  var cfg=s.cfg,box=cfg.crop,scale=110/(cfg.bodyHeight*sy),b=s.bitmap;
+  var cfg=s.cfg,box=cfg.crop,targetHeight=110;
+  if(cfg.supplemental)for(var node=player.parent;node;node=node.parent)if(node._streetBodyViewHeroId===cfg.id){targetHeight=250;break;}
+  var scale=targetHeight/(cfg.bodyHeight*sy),b=s.bitmap;
   b.x=(box[0]-cfg.root[0])*scale;b.y=(box[1]-cfg.root[1])*scale;b.width=(box[2]-box[0])*scale;b.height=(box[3]-box[1])*scale;b.visible=true;
   if(player._characterIdleState)player._characterIdleState.bitmap.visible=false;
   display.visible=false;s.hidden=true;s.nativeFrame=nativeFrame;

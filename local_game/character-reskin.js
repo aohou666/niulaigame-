@@ -1,6 +1,7 @@
 (function (global) {
     'use strict';
     var data = global.CharacterReskinData, uiHero = null, ready = false, visibleHeroView = null, visibleHeroCode = null;
+    var heroLookup = Object.assign({},data && data.heroes,data && data.supplementalHeroes);
     var heroFields = ['name','definition','activeSkillDesc','storyTitle1','storyTitle2','storyTitle3','storyDesc1','storyDesc2','storyDesc3'];
     function protectedRow(row, fields) {
         var out = {};
@@ -9,7 +10,7 @@
     }
     function forCode(code) {
         var cfg = global.config && config.HeroLO.Get(Number(code));
-        return cfg && data.heroes[String(cfg.subType)];
+        return cfg && heroLookup[String(cfg.subType)];
     }
     function withHero(code, callback, owner, args) {
         var previous = uiHero; uiHero = forCode(code);
@@ -40,6 +41,7 @@
     function showPortrait(view, model, code) {
         var h = forCode(code);
         if (!model || !model.parent) return;
+        model._streetBodyViewHeroId=h&&h.id;
         if (!h) {
             model.visible = true;
             if (view._reskinPortrait) view._reskinPortrait.visible = false;
@@ -87,7 +89,7 @@
         var heroStore = game.Config.pack.t_hero, skillStore = game.Config.pack.t_skill_base;
         var beforeHeroes = {}, beforeSkills = {}, owners = {}, changed = 0;
         Object.keys(heroStore).forEach(function (code) {
-            var row = heroStore[code], h = data.heroes[String(row.subType)];
+            var row = heroStore[code], h = heroLookup[String(row.subType)];
             beforeHeroes[code] = protectedRow(row, heroFields);
             ['normalSkill','actSkill','posSkill1','posSkill2','posSkill3'].forEach(function (slot) {
                 if (!row[slot]) return;
@@ -104,8 +106,8 @@
             }
         });
         Object.keys(skillStore).forEach(function (id) { beforeSkills[id] = protectedRow(skillStore[id], ['name','desc']); });
-        Object.keys(data.heroes).forEach(function (id) {
-            var h = data.heroes[id];
+        Object.keys(heroLookup).forEach(function (id) {
+            var h = heroLookup[id];
             Object.keys(h.skills).forEach(function (skillId) {
                 var row = skillStore[skillId], s = h.skills[skillId];
                 if (row && owners[skillId] && Object.keys(owners[skillId]).length === 1) {

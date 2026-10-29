@@ -1,0 +1,52 @@
+{
+  "heroId": 13,
+  "kind": "skill",
+  "supplemental": true,
+  "source": {
+    "heroId": 13,
+    "supplemental": true,
+    "targetRoster85": false,
+    "sourceOfficialImage": "local_game/assets/street/characters/013/pose-source-v2.png",
+    "sourceSha256": "8e10874a5eb04dbf15bb417760dbe4901b1aa8a8c0322a9bcf538ec38801ec31",
+    "prompt": [
+      "art-migration/prompts/extra-013-safety-marshal.txt",
+      "art-migration/prompts/extra-013-safety-marshal-edit.txt"
+    ],
+    "entries": [
+      {
+        "kind": "idle",
+        "sourceBox": [
+          0,
+          0,
+          723,
+          725
+        ],
+        "prepared": "art-migration/references/extra013-poses/idle.png",
+        "sha256": "e2e709357e77b5d282fd7606f8e1dc975bc4e2ca60d8ef93db51ff6a1fbf9ea1"
+      },
+      {
+        "kind": "attack",
+        "sourceBox": [
+          723,
+          0,
+          1445,
+          725
+        ],
+        "prepared": "art-migration/references/extra013-poses/attack.png",
+        "sha256": "b69d9fcb8ca3020d88fe3fbd2b3c8ff1513d33ed2c59f28b85b6ecac252da79a"
+      },
+      {
+        "kind": "skill",
+        "sourceBox": [
+          1445,
+          0,
+          2168,
+          725
+        ],
+        "prepared": "art-migration/references/extra013-poses/skill.png",
+        "sha256": "98486d2f51f36d62c4ee84c8f3cff55fa4e65baf419c740e3ece1bd4ce6eea0f"
+      }
+    ],
+    "manualSourceReview": "Viewed full officialv2 sheet: full helmet/horns/boots retained, RIGHT-hand red radio stays RIGHT, empty LEFT stop/point poses. V1 head crop rejected."
+  }
+}

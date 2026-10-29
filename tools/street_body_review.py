@@ -5,7 +5,7 @@ import numpy as np
 from PIL import Image,ImageDraw
 ROOT=Path(__file__).resolve().parents[1]
 p=argparse.ArgumentParser();p.add_argument('name');a=p.parse_args();folder=ROOT/'art-migration/generation'/a.name
-job=json.loads((folder/'job.json').read_text('utf8'));design=json.loads((folder/'body-design.json').read_text('utf8'));files=[ROOT/r['path'] for r in job.get('outputs',[])]
+job=json.loads((folder/'job.json').read_text('utf8'));design=json.loads((folder/('body-design.json' if (folder/'body-design.json').exists() else 'idle-design.json')).read_text('utf8'));files=[ROOT/r['path'] for r in job.get('outputs',[])]
 if not files:raise SystemExit('No completed video frames')
 out=ROOT/'outputs/street-reskin'/a.name;out.mkdir(exist_ok=True)
 for start in range(0,len(files),64):
@@ -27,7 +27,7 @@ for path in files:
   elif box[0]<4 or box[1]<4 or box[2]>im.width-5 or box[3]>im.height-5:cropped.append(len(bounds)-1)
   arrays.append(np.asarray(im.convert('RGB').resize((128,128)),dtype=np.float32)/255)
 anchors={}
-for kind in ['attack','skill']:
+for kind in (['attack','skill'] if 'actions' in design else []):
  with Image.open(ROOT/design['inputs'][kind]['prepared']) as im:reference=np.asarray(im.convert('RGB').resize((128,128)),dtype=np.float32)/255
  begin,end=design['actions'][kind]['sourceFrames'];distances=[float(np.square(arrays[i]-reference).mean()) for i in range(begin,min(end+1,len(arrays)))];closest=begin+min(range(len(distances)),key=distances.__getitem__)
  anchors[kind]={'closestGuidePoseFrame':closest,'requestedGuideFrame':design['actions'][kind]['guideImpactFrame'],'guideDistance':min(distances)}
