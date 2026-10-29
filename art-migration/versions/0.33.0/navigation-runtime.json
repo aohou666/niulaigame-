@@ -1,0 +1,305 @@
+{
+  "pass": true,
+  "errors": [],
+  "initial": {
+    "audit": {
+      "installed": true,
+      "buttons": {
+        "1001": {
+          "allowed": true,
+          "lockVisible": false,
+          "toast": ""
+        },
+        "1201": {
+          "allowed": true,
+          "lockVisible": false,
+          "toast": ""
+        },
+        "1501": {
+          "allowed": true,
+          "lockVisible": false,
+          "toast": ""
+        },
+        "1701": {
+          "allowed": true,
+          "lockVisible": false,
+          "toast": ""
+        },
+        "4001": {
+          "allowed": true,
+          "lockVisible": false,
+          "toast": ""
+        },
+        "10100": {
+          "allowed": true,
+          "lockVisible": false,
+          "toast": ""
+        },
+        "10110": {
+          "allowed": true,
+          "lockVisible": false,
+          "toast": ""
+        }
+      }
+    },
+    "buttons": [
+      {
+        "id": "1001",
+        "allow": true,
+        "lockVisible": false,
+        "toast": "",
+        "label": "背包",
+        "hitArea": [
+          100,
+          100
+        ]
+      },
+      {
+        "id": "1201",
+        "allow": true,
+        "lockVisible": false,
+        "toast": "",
+        "label": "历练",
+        "hitArea": [
+          100,
+          100
+        ]
+      },
+      {
+        "id": "1501",
+        "allow": true,
+        "lockVisible": false,
+        "toast": "",
+        "label": "装备",
+        "hitArea": [
+          100,
+          100
+        ]
+      },
+      {
+        "id": "1701",
+        "allow": true,
+        "lockVisible": false,
+        "toast": "",
+        "label": "街坊",
+        "hitArea": [
+          100,
+          100
+        ]
+      },
+      {
+        "id": "4001",
+        "allow": true,
+        "lockVisible": false,
+        "toast": "",
+        "label": "公会",
+        "hitArea": [
+          100,
+          100
+        ]
+      },
+      {
+        "id": "10100",
+        "allow": true,
+        "lockVisible": false,
+        "toast": "",
+        "label": "战斗",
+        "hitArea": [
+          100,
+          100
+        ]
+      },
+      {
+        "id": "10110",
+        "allow": true,
+        "lockVisible": false,
+        "toast": "",
+        "label": "宝箱",
+        "hitArea": [
+          100,
+          100
+        ]
+      }
+    ]
+  },
+  "openedBag": true,
+  "views": [
+    {
+      "type": "game.BackpackUI",
+      "skin": "BackpackUISkin"
+    },
+    {
+      "type": "eui.Scroller",
+      "skin": "resource/exml/eui_skins/ScrollerSkin.exml"
+    },
+    {
+      "type": "customui.BaseTabbarItemRenderer",
+      "skin": "LabelTabbarItemSkin"
+    },
+    {
+      "type": "customui.BaseTabbarItemRenderer",
+      "skin": "LabelTabbarItemSkin"
+    },
+    {
+      "type": "customui.BaseTabbarItemRenderer",
+      "skin": "LabelTabbarItemSkin"
+    },
+    {
+      "type": "customui.BaseTabbarItemRenderer",
+      "skin": "LabelTabbarItemSkin"
+    },
+    {
+      "type": "customui.BaseTabbarItemRenderer",
+      "skin": "LabelTabbarItemSkin"
+    },
+    {
+      "type": "customui.BaseTabbarItemRenderer",
+      "skin": "LabelTabbarItemSkin"
+    },
+    {
+      "type": "customui.BaseTabbarItemRenderer",
+      "skin": "LabelTabbarItemSkin"
+    },
+    {
+      "type": "customui.BaseTabbarItemRenderer",
+      "skin": "LabelTabbarItemSkin"
+    },
+    {
+      "type": "customui.CommonDaTanChuKuang",
+      "skin": "CommonDaTanChuKuangSkin"
+    },
+    {
+      "type": "eui.Scroller",
+      "skin": "resource/exml/eui_skins/ScrollerSkin.exml"
+    },
+    {
+      "type": "game.BackpackUI_FilterItem",
+      "skin": "BackpackUI_FilterItem"
+    },
+    {
+      "type": "game.BackpackUI_FilterItem",
+      "skin": "BackpackUI_FilterItem"
+    },
+    {
+      "type": "game.BackpackUI_FilterItem",
+      "skin": "BackpackUI_FilterItem"
+    },
+    {
+      "type": "game.BackpackUI_FilterItem",
+      "skin": "BackpackUI_FilterItem"
+    },
+    {
+      "type": "game.BackpackUI_FilterItem",
+      "skin": "BackpackUI_FilterItem"
+    },
+    {
+      "type": "game.BackpackUI_FilterItem",
+      "skin": "BackpackUI_FilterItem"
+    },
+    {
+      "type": "game.BackpackUI_FilterItem",
+      "skin": "BackpackUI_FilterItem"
+    },
+    {
+      "type": "game.BackpackUI_FilterItem",
+      "skin": "BackpackUI_FilterItem"
+    },
+    {
+      "type": "customui.CommonEmpty",
+      "skin": "CommonEmptySkin"
+    },
+    {
+      "type": "eui.Button",
+      "skin": "skins.ButtonSkinIcon"
+    },
+    {
+      "type": "game.MainUI",
+      "skin": "MainUISkin"
+    },
+    {
+      "type": "MainUI_BottomBtnItem",
+      "skin": "MainUI_BottomBtnItem"
+    },
+    {
+      "type": "eui.Button"
+    },
+    {
+      "type": "game.CommonRedPointForPool",
+      "skin": "CommonRedPointSkin"
+    },
+    {
+      "type": "MainUI_BottomBtnItem",
+      "skin": "MainUI_BottomBtnItem"
+    },
+    {
+      "type": "eui.Button"
+    },
+    {
+      "type": "game.CommonRedPointForPool",
+      "skin": "CommonRedPointSkin"
+    },
+    {
+      "type": "MainUI_BottomBtnItem",
+      "skin": "MainUI_BottomBtnItem"
+    },
+    {
+      "type": "eui.Button"
+    },
+    {
+      "type": "MainUI_BottomBtnItem",
+      "skin": "MainUI_BottomBtnItem"
+    },
+    {
+      "type": "eui.Button"
+    },
+    {
+      "type": "MainUI_BottomBtnItem",
+      "skin": "MainUI_BottomBtnItem"
+    },
+    {
+      "type": "eui.Button"
+    },
+    {
+      "type": "MainUI_BottomBtnItem",
+      "skin": "MainUI_BottomBtnItem"
+    },
+    {
+      "type": "eui.Button"
+    },
+    {
+      "type": "MainUI_BottomBtnItem",
+      "skin": "MainUI_BottomBtnItem"
+    },
+    {
+      "type": "eui.Button"
+    },
+    {
+      "type": "customui.CommonFightCapItem",
+      "skin": "CommonFightCapSkin"
+    },
+    {
+      "type": "customui.ResourceItem",
+      "skin": "CommonResourceBarSkin_ResourceItem"
+    },
+    {
+      "type": "eui.Button",
+      "skin": "skins.ButtonSkinIcon"
+    },
+    {
+      "type": "customui.ResourceItem",
+      "skin": "CommonResourceBarSkin_ResourceItem"
+    },
+    {
+      "type": "eui.Button",
+      "skin": "skins.ButtonSkinIcon"
+    },
+    {
+      "type": "eui.Button",
+      "skin": "skins.ButtonSkinIcon"
+    },
+    {
+      "type": "eui.Button",
+      "skin": "skins.ButtonSkinIcon2"
+    }
+  ]
+}

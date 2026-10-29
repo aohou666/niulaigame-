@@ -105,3 +105,17 @@
 - 0.32提交后立即push30/31/32 delivery HEAD:main并lsremote核对，nextPush0.35。
 - tools/street-visible-assets.mjs新诊断输出visible-assets-heroes.json，已确认底部七导航实际语义：main_icon_wujiang居民、zhuangbei装备、ybd背包、zhandou战斗、baoxiang宝箱、lilian历练、gonghui公会。第八可生成main_img_tubiaodik_png圆底盘，准备下一批官方8图。无需把ybd误当商店。
 - 9/14/15/24/25/30的v3姿势已与idle并排批准（道具手持正确），新bodyv1正在队列。31v3灰度仍太亮退回，新增--revision=4生成更深charcoal-black肤色/破西装（未看完不能批准）；76v3饭团严格持续双手握持已生成待全帧复查。当前约13:36，还有6h24，继续自主工作到20:00。
+
+## 最新0.33验收准备提交（本地14:04；截止20:00）
+- 0.32已提交且push并核对远端main=d9e0b387c9ec135945368b1ae692aee1a6097507。0.30=5a598eb,0.31=448a891。下一次push0.35，v33本地完成待提交。
+- v33新增9/14/15各73帧身体，合计13人949帧/2492base-EZ帧位，最新roster通过；实际9/14/15战斗通过，截图已看。9技能18个pia时点用versions/0.33.0/hero009-event-anchors.json逐个映射54–64持续手势，最后117=>64，119=>72恢复。
+- v33新官方navigation-source.png八格，语义七导航+圆底盘；groups/navigation.json/reference、prompts/navigation.txt。所有图已看，58资源32实际可见通过。通用group_reference/promote支持sheet trim offX/offY、sourceW/H完整外廓。新增street_ui_bind_sheet_variants修复黄/青/升级三个漏qualified；升级whole40x37而sheet91x92，不能把同名两者混为一个尺寸；新qualified不额外覆盖已存在bare的独立原尺寸。
+- 新offline-navigation-state.js在MainUI异步children创建后用真实UnlockMgr同步gp_unlock，修复原空遮罩条盖导航；无每帧扫描。街坊标签替代导航武将。7button状态及实际dispatchTouch打开Backpack测试通过。
+- 重点实际事件校准：art-migration/native-action-events.json完整344动画、172模型（包含额外13号），首次审计工具尾部expected170错误，仅断言计数有误，完整数据已导出；修正为172后再次全量跑完exit0。发现base/EZ差异15gongji(无/zd17)、34gongji(无/zd18)、37jineng(pia45/无)、48gongji(无/pia14)、49gongji(无/pia15)、66gongji(无/zd16)、78jineng(pia32/无)、83gongji(无/count0+pia20)。后续必须实际审计优先，勿照旧计划rawEvents直接填。
+- tools/street_body_promote现在强制完整native-action-events，并按model分别构建actions，cfg.modelActionOverrides保留差异。StreetBody.render及roster/actualbattle测试按每个model选择对应映射。15base无事件使用原离线385ms补发，native11=>source16；15EZ原生zd17=>source16，两个专项均回调1次、正确姿势。误假设两模型都无事件的missing-hit-diagnostic已保留为诊断，工具已改名street-native-hit-runtime-test。legacy1只补nativeEvents元数据（pia12），原帧映射未改；全13cfg均有nativeEventAuditSha256。
+- street_art_verify核对native审计SHA、全部26模型52动作时长/帧率/事件内容，并验证modelActionOverrides。不要随意重跑native-action-audit覆写已冻结基线（运行时间/elapsed字段会变SHA）；真需重审写新文件或同步cfg provenance。
+- 重要尚未修复：一次14随机8hell战斗pageerror Cannot read properties of undefined(reading fightModelInfo)，初版test仅message所以缺stack。open-issues.json全局登记BATTLE-014-FIGHTMODEL并嵌入review；后续test已记录stack、trace、OfflineLastBattlePayload.teams和battleInfo。14独立重测及2次重复成功，第三次超过90s未捕获攻击窗口（可能控制/快速结束），不是修复证明。下一步做隔离全时长随机战斗压力采样抓stack/真实teams，修复具体原生空引用。可开8792等新server各用独立save并行，不能多测试同时改8791同一个save。
+- offline_server路径local_game/offline_server.py，CLI --port --save --config；本机8787用户save、8791隔离effect-test-save，保存后会恢复。增强的--fixed-enemies=1只是请求首个敌人1，其他敌人仍由原有构建器补入随机，已记录实际teams，不能说全8都是1。
+- 76v3全帧看完仍丢饭团13-15/45-47已退回；body_batch新增--dense-guides每4帧一个图像条件（所有73帧仍MiniMax生成，不拼静帧），76v4已排队/生成待查。9v1 alpha已看干净；14/15alpha已看并接入。24/25/30v1已生成未逐帧看；16/17/18/19/20/21/22/23/26/27/28/29/32更早bodyv1仍待复查。12v3姿势、31v4深黑肤色、75v3去光球、79v3前挥刀姿势都待看新结果。
+- Worker约14:00，generated201/submitted53/pending52，仍按45s自行收集；当前总量会变化。原13仍旧人类，在真实战斗中可见；可单独额外补新身份/动作，不能把它冒算用户85中。还未启动额外13生成。
+- 下一阶段：继续body批量逐人审查接入；处理常见巨大的旧蓝爆/龙蛇/红斩特效遮挡（MiniMax生成，非只降透明度）；主界面还剩武将/布阵/图鉴三个旧标签按钮、顶部主公牌/主角属性、VS/胜利等；所有移动/受击/死亡/独立皮肤仍未完成。

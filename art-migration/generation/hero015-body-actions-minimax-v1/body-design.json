@@ -1,0 +1,316 @@
+{
+  "heroId": 15,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/015/portrait.png",
+      "prepared": "art-migration/references/body-015/idle.png",
+      "foot": [
+        384.39,
+        700
+      ],
+      "size": [
+        302,
+        560
+      ],
+      "sha256": "435615f2bb633b213ce7fc3304532535b9a65e0fa400668f86d938405e38baba"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero015-attack-v3/hero015_attack_continuity_alpha_00001_.png",
+      "prepared": "art-migration/references/body-015/attack.png",
+      "foot": [
+        383.96,
+        700
+      ],
+      "size": [
+        319,
+        560
+      ],
+      "sha256": "f4dd174f96f2b5ae7c903c0496fb0785f29160cb5e06cb687c30d426885fcf85"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero015-skill-v3/hero015_skill_continuity_alpha_00001_.png",
+      "prepared": "art-migration/references/body-015/skill.png",
+      "foot": [
+        383.69,
+        700
+      ],
+      "size": [
+        309,
+        560
+      ],
+      "sha256": "7549b9fdf060528ceb0e9651be6982846e0e69c75fbac64432a62b9e5c3610fe"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H015-ATK",
+        "heroId": 15,
+        "name": "攻略牛",
+        "originalName": "蒋干",
+        "slot": "普攻",
+        "skillId": 550150110,
+        "skillName": "普通攻击",
+        "newSkillName": "行册试探",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "远程弹道/连线",
+        "movement": "原站位出手",
+        "weapon": "徒手／手势",
+        "weaponObservation": "folded paper map held in his anatomical LEFT hand (viewer RIGHT), glasses on cap, hiking backpack and beige explorer clothing",
+        "effectClass": "飞行弹道、命中/生效附着特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "Keep the paper map in his LEFT hand clearly visible. Point or strike outward with the EMPTY RIGHT hand; do not lose or change the map.",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B03",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_luxun_02",
+        "model": "hero_015_01",
+        "action": "gongji",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1100.0,
+        "fps": 30,
+        "durationFrames": 33,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "__attackDoneDelay": 500,
+          "effectsPiaEnemy": [
+            {
+              "posType": 0,
+              "src": [
+                "common_skill_luxun_02_3"
+              ]
+            }
+          ],
+          "effectsPiaUs": [
+            {
+              "posType": 0,
+              "src": [
+                "common_skill_luxun_02_3"
+              ]
+            }
+          ],
+          "effectsTarEnemy": [
+            {
+              "dt": 250,
+              "fixedWidth": 50,
+              "offset": [
+                0,
+                -100
+              ],
+              "posType": 0,
+              "src": [
+                "common_skill_luxun_02_2"
+              ],
+              "type": 1
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_luxun_02_2",
+            "delay": 0,
+            "dt": 250,
+            "timeScale": 1,
+            "type": 1,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_luxun_02_2_1e00ac78.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_luxun_02_2",
+                  "name": "common_skill_luxun_02_2",
+                  "fps": 24,
+                  "durationFrames": 2,
+                  "durationMs": 83.333,
+                  "scale": 5,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_luxun_02_3",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_luxun_02_3_d7d241ca.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_luxun_02_3",
+                  "name": "common_skill_luxun_02_3",
+                  "fps": 24,
+                  "durationFrames": 21,
+                  "durationMs": 875.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaUs",
+            "resource": "common_skill_luxun_02_3",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_luxun_02_3_d7d241ca.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_luxun_02_3",
+                  "name": "common_skill_luxun_02_3",
+                  "fps": 24,
+                  "durationFrames": 21,
+                  "durationMs": 875.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_luxun_02_2 delay=0 dt=250 speed=1\neffectsPiaEnemy: common_skill_luxun_02_3 delay=0 dt=None speed=1\neffectsPiaUs: common_skill_luxun_02_3 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_luxun_02"
+        ],
+        "portrait": "reskin/hero_015.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H015-ULT",
+        "heroId": 15,
+        "name": "攻略牛",
+        "originalName": "蒋干",
+        "slot": "大招",
+        "skillId": 550150210,
+        "skillName": "江表辩才",
+        "newSkillName": "攻略辩词",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "中场释放（远近待回放）",
+        "movement": "移到场地中部释放",
+        "weapon": "徒手／手势",
+        "weaponObservation": "folded paper map held in his anatomical LEFT hand (viewer RIGHT), glasses on cap, hiking backpack and beige explorer clothing",
+        "effectClass": "场景/范围特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "Keep the map in LEFT hand, gesture to a route on it with RIGHT index finger, decisive explorer command.",
+        "rootPolicy": "引擎移到中场后播出手；视频不自行横穿战场",
+        "batch": "B05",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_jianggan_02",
+        "model": "hero_015_01",
+        "action": "jineng",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1500.0,
+        "fps": 30,
+        "durationFrames": 45,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "attackFrameDelay": 1000,
+          "effectQP": [
+            {
+              "delay": 0,
+              "offset": [
+                250,
+                0
+              ],
+              "src": [
+                "common_skill_jianggan_01"
+              ],
+              "timeScale": 1
+            }
+          ],
+          "meFlyConfig": [
+            1,
+            100,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectQP",
+            "resource": "common_skill_jianggan_01",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_jianggan_01_5a08ab5d.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_jianggan_01",
+                  "name": "common_skill_jianggan_01",
+                  "fps": 24,
+                  "durationFrames": 28,
+                  "durationMs": 1166.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectQP: common_skill_jianggan_01 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_jianggan_02"
+        ],
+        "portrait": "reskin/hero_015.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false
+}

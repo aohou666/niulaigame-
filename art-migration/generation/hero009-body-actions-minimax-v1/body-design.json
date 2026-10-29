@@ -1,0 +1,449 @@
+{
+  "heroId": 9,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/009/portrait.png",
+      "prepared": "art-migration/references/body-009/idle.png",
+      "foot": [
+        384.13,
+        700
+      ],
+      "size": [
+        274,
+        560
+      ],
+      "sha256": "647c2d2730e66fd2b64ede3c454e1f02140b6da65f8c672ab627f88c30d5d9a5"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero009-attack-v3/hero009_attack_continuity_alpha_00001_.png",
+      "prepared": "art-migration/references/body-009/attack.png",
+      "foot": [
+        384.41,
+        700
+      ],
+      "size": [
+        328,
+        560
+      ],
+      "sha256": "f4538e6c2efcdce33c9fb2d0dc3b655042c3af3782c4ac7de76fa42e47415c48"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero009-skill-v3/hero009_skill_continuity_alpha_00001_.png",
+      "prepared": "art-migration/references/body-009/skill.png",
+      "foot": [
+        384.28,
+        700
+      ],
+      "size": [
+        304,
+        560
+      ],
+      "sha256": "74f08f82324b85b8fc7795015feecff04b55524931396d325bac36c28091b780"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H009-ATK",
+        "heroId": 9,
+        "name": "外卖牛",
+        "originalName": "乐进",
+        "slot": "普攻",
+        "skillId": 550090110,
+        "skillName": "普通攻击",
+        "newSkillName": "速达轻击",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "近身攻击",
+        "movement": "移到目标前出手",
+        "weapon": "生活道具",
+        "weaponObservation": "yellow takeout shopping bag held in his anatomical RIGHT hand (viewer LEFT), and large delivery backpack; helmet and yellow rain jacket",
+        "effectClass": "命中/生效附着特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "Keep the bag in the RIGHT hand hanging visibly beside his hip. Use the EMPTY LEFT hand for a forward punch, without moving or hiding the bag.",
+        "rootPolicy": "引擎负责接近与返回；视频固定根位置，只做出手",
+        "batch": "B02",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_zhaoyun_01",
+        "model": "hero_009_01",
+        "action": "gongji",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "A_wuqi1、A_wuqi、A_wuqi2、A_wuqi4、A_wuqi3",
+        "rawDurationMs": 1166.667,
+        "fps": 30,
+        "durationFrames": 35,
+        "rawEvents": [
+          {
+            "frame0": 14,
+            "timeMs": 466.667,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@466.7ms（角色事件）",
+        "impactMs": [
+          466.667
+        ],
+        "impactStatus": "角色pia直接回调；待游戏内验收",
+        "performance": {
+          "__attackDoneDelay": 700,
+          "effectsPiaEnemy": [
+            {
+              "posType": 0,
+              "src": [
+                "common_skill_zhaoyun_01"
+              ]
+            }
+          ],
+          "meFlyConfig": [
+            2,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_zhaoyun_01",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhaoyun_01_3bee13d0.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhaoyun_01",
+                  "name": "common_skill_zhaoyun_01",
+                  "fps": 24,
+                  "durationFrames": 17,
+                  "durationMs": 708.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsPiaEnemy: common_skill_zhaoyun_01 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_zhaoyun_01"
+        ],
+        "portrait": "reskin/hero_009.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H009-ULT",
+        "heroId": 9,
+        "name": "外卖牛",
+        "originalName": "乐进",
+        "slot": "大招",
+        "skillId": 550090210,
+        "skillName": "战则争先",
+        "newSkillName": "急送争先",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "特殊移动",
+        "movement": "中线预备＋自定义冲刺＋自定义移动",
+        "weapon": "生活道具",
+        "weaponObservation": "yellow takeout shopping bag held in his anatomical RIGHT hand (viewer LEFT), and large delivery backpack; helmet and yellow rain jacket",
+        "effectClass": "施法者特效、命中/生效附着特效",
+        "semantic": "流血",
+        "bodyDesign": "Keep the bag in the RIGHT hand, raise the EMPTY LEFT hand in a delivery-call gesture; bag remains clearly visible, backpack unchanged.",
+        "rootPolicy": "移动/分身单独轨道，需逐条回放",
+        "batch": "B07",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对生命比例最低的敌方单体造成285%伤害,并附加<流血>效果,每回合造成50%伤害,持续2回合。",
+        "skillModel": "common_skill_lejin_02",
+        "model": "hero_009_01",
+        "action": "jineng",
+        "effectiveDesc": "对生命比例最低的敌方单体造成285%伤害,并附加<流血>效果,每回合造成50%伤害,持续2回合。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "A_wuqi1、A_wuqi、A_wuqi2、A_wuqi4、A_wuqi3",
+        "rawDurationMs": 4000.0,
+        "fps": 30,
+        "durationFrames": 120,
+        "rawEvents": [
+          {
+            "frame0": 0,
+            "timeMs": 0.0,
+            "type": 10,
+            "name": "count"
+          },
+          {
+            "frame0": 9,
+            "timeMs": 300.0,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 15,
+            "timeMs": 500.0,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 21,
+            "timeMs": 700.0,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 27,
+            "timeMs": 900.0,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 33,
+            "timeMs": 1100.0,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 39,
+            "timeMs": 1300.0,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 46,
+            "timeMs": 1533.333,
+            "type": 10,
+            "name": "eventName"
+          },
+          {
+            "frame0": 51,
+            "timeMs": 1700.0,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 57,
+            "timeMs": 1900.0,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 63,
+            "timeMs": 2100.0,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 69,
+            "timeMs": 2300.0,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 75,
+            "timeMs": 2500.0,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 81,
+            "timeMs": 2700.0,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 87,
+            "timeMs": 2900.0,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 93,
+            "timeMs": 3100.0,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 99,
+            "timeMs": 3300.0,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 105,
+            "timeMs": 3500.0,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 111,
+            "timeMs": 3700.0,
+            "type": 10,
+            "name": "pia"
+          },
+          {
+            "frame0": 117,
+            "timeMs": 3900.0,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@300.0ms（角色事件）；pia@500.0ms（角色事件）；pia@700.0ms（角色事件）；pia@900.0ms（角色事件）；pia@1100.0ms（角色事件）；pia@1300.0ms（角色事件）；pia@1700.0ms（角色事件）；pia@1900.0ms（角色事件）；pia@2100.0ms（角色事件）；pia@2300.0ms（角色事件）；pia@2500.0ms（角色事件）；pia@2700.0ms（角色事件）；pia@2900.0ms（角色事件）；pia@3100.0ms（角色事件）；pia@3300.0ms（角色事件）；pia@3500.0ms（角色事件）；pia@3700.0ms（角色事件）；pia@3900.0ms（角色事件）",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "customAct": [
+            {
+              "delay": 500,
+              "dt": 3500,
+              "timeScale": 1,
+              "type": "customFly"
+            }
+          ],
+          "effectSrc": [
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "playTime": 6,
+              "posType": 1,
+              "src": [
+                "common_skill_lejin_02"
+              ]
+            }
+          ],
+          "effectsPiaEnemy": [
+            {
+              "posType": 0,
+              "src": [
+                "common_skill_lejin_02_1"
+              ]
+            }
+          ],
+          "meFlyConfig": [
+            4,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectSrc",
+            "resource": "common_skill_lejin_02",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_lejin_02_fd4fdf5.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_lejin_02",
+                  "name": "common_skill_lejin_02",
+                  "fps": 24,
+                  "durationFrames": 12,
+                  "durationMs": 500.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_lejin_02_1",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_lejin_02_1_20097023.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_lejin_02_1",
+                  "name": "common_skill_lejin_02_1",
+                  "fps": 24,
+                  "durationFrames": 18,
+                  "durationMs": 750.0,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        2
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 1,
+                      "timeMs": 41.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 1,
+                      "timeMs": 41.667,
+                      "type": 10,
+                      "name": "pz"
+                    },
+                    {
+                      "frame0": 4,
+                      "timeMs": 166.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 4,
+                      "timeMs": 166.667,
+                      "type": 10,
+                      "name": "pz"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectSrc: common_skill_lejin_02 delay=0 dt=None speed=1\neffectsPiaEnemy: common_skill_lejin_02_1 delay=0 dt=None speed=1 事件=pia@41.7,pia@166.7",
+        "variants": [
+          "common_skill_lejin_02"
+        ],
+        "portrait": "reskin/hero_009.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false
+}

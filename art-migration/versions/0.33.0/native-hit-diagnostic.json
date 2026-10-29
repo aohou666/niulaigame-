@@ -1,0 +1,46 @@
+{
+  "pass": false,
+  "checks": [
+    {
+      "model": "hero_015_01",
+      "native": [],
+      "callbacks": [
+        {
+          "elapsedMs": 363.9000000022352,
+          "key": "pia",
+          "nativeFrame": 11,
+          "sourceFrame": 16
+        }
+      ],
+      "expectedMs": 385
+    },
+    {
+      "model": "hero_015_01_ez",
+      "native": [
+        {
+          "name": "zd",
+          "time": 0.5666666666666667
+        }
+      ],
+      "callbacks": [
+        {
+          "elapsedMs": 564,
+          "key": "zd",
+          "nativeFrame": 17,
+          "sourceFrame": 16
+        }
+      ],
+      "expectedMs": 566.6666666666666
+    }
+  ],
+  "after": {
+    "installed": true,
+    "framesPresented": 63,
+    "actions": {
+      "gongji": 63
+    },
+    "errors": [],
+    "caches": [],
+    "active": []
+  }
+}

@@ -20,7 +20,7 @@
  function detach(player){var s=player._streetBody;if(!s)return;restore(player,s);player.removeEventListener(egret.Event.ENTER_FRAME,s.tick,player);player.removeEventListener(egret.Event.REMOVED_FROM_STAGE,s.removed,player);if(s.bitmap.parent)s.bitmap.parent.removeChild(s.bitmap);release(s.cache);player._streetBody=null;var i=players.indexOf(player);if(i>=0)players.splice(i,1);}
  function render(player){
   var s=player._streetBody;if(!s)return;
-  var action=player.action||player._action,seq=s.cfg.actions[action],display=player._armature,clock=display&&display.animation&&display.animation.lastAnimationState;
+  var action=player.action||player._action,seq=(s.cfg.modelActionOverrides&&s.cfg.modelActionOverrides[player._dbName]&&s.cfg.modelActionOverrides[player._dbName][action])||s.cfg.actions[action],display=player._armature,clock=display&&display.animation&&display.animation.lastAnimationState;
   if(player._characterIdleSuppressNative||!seq||!clock||!s.cache.ready){restore(player,s);return;}
   var nativeFrame=Math.min(seq.frameMap.length-1,Math.max(0,Math.floor(clock.currentTime*seq.fps+.0001))),frame=seq.frameMap[nativeFrame];
   if(s.frame!==frame||s.action!==action){s.bitmap.texture=s.cache.textures[frame];s.frame=frame;s.action=action;audit.framesPresented++;audit.actions[action]=(audit.actions[action]||0)+1;}

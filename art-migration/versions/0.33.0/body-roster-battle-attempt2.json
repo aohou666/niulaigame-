@@ -1,0 +1,2791 @@
+{
+  "pass": false,
+  "saveIsolation": "outputs/street-reskin/effect-test-save.json",
+  "reports": [
+    {
+      "hero": 14,
+      "pass": true,
+      "active": {
+        "installed": true,
+        "framesPresented": 77,
+        "actions": {
+          "gongji": 77
+        },
+        "errors": [],
+        "caches": [
+          {
+            "id": "11",
+            "users": 1,
+            "ready": true
+          },
+          {
+            "id": "14",
+            "users": 1,
+            "ready": true
+          },
+          {
+            "id": "94",
+            "users": 1,
+            "ready": true
+          }
+        ],
+        "active": [
+          {
+            "model": "hero_014_01_ez",
+            "action": "gongji",
+            "frame": 16,
+            "nativeFrame": 20,
+            "visible": true,
+            "nativeVisible": false,
+            "ready": true,
+            "onStage": true
+          },
+          {
+            "model": "hero_094_03_ez",
+            "action": "daiji",
+            "frame": 33,
+            "nativeFrame": 32,
+            "visible": false,
+            "nativeVisible": false,
+            "ready": true,
+            "onStage": true
+          },
+          {
+            "model": "hero_011_01_ez",
+            "action": "daiji",
+            "frame": 35,
+            "nativeFrame": 29,
+            "visible": false,
+            "nativeVisible": false,
+            "ready": true,
+            "onStage": true
+          }
+        ]
+      },
+      "after": {
+        "installed": true,
+        "framesPresented": 91,
+        "actions": {
+          "gongji": 87,
+          "jineng": 4
+        },
+        "errors": [],
+        "caches": [
+          {
+            "id": "11",
+            "users": 1,
+            "ready": true
+          },
+          {
+            "id": "14",
+            "users": 1,
+            "ready": true
+          },
+          {
+            "id": "94",
+            "users": 1,
+            "ready": true
+          }
+        ],
+        "active": [
+          {
+            "model": "hero_014_01_ez",
+            "action": "daiji",
+            "frame": 35,
+            "nativeFrame": 30,
+            "visible": false,
+            "nativeVisible": false,
+            "ready": true,
+            "onStage": true
+          },
+          {
+            "model": "hero_094_03_ez",
+            "action": "jineng",
+            "frame": 39,
+            "nativeFrame": 5,
+            "visible": true,
+            "nativeVisible": false,
+            "ready": true,
+            "onStage": true
+          },
+          {
+            "model": "hero_011_01_ez",
+            "action": "daiji",
+            "frame": 35,
+            "nativeFrame": 29,
+            "visible": false,
+            "nativeVisible": false,
+            "ready": true,
+            "onStage": true
+          }
+        ]
+      },
+      "errors": [],
+      "scenario": "Isolated save; solo hero level50 with reference hero1 stats, 8 hell wei enemies, battles0/stage1, supports cleared",
+      "trace": [
+        {
+          "ms": 47.900000002235174,
+          "active": []
+        },
+        {
+          "ms": 3151.800000000745,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "gongji",
+              "frame": 0,
+              "nativeFrame": 0,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 3183.5,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "gongji",
+              "frame": 1,
+              "nativeFrame": 1,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 3200.300000000745,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "gongji",
+              "frame": 3,
+              "nativeFrame": 2,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 3239.7000000029802,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "gongji",
+              "frame": 4,
+              "nativeFrame": 3,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 3250.400000002235,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "gongji",
+              "frame": 5,
+              "nativeFrame": 4,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 3287.300000000745,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "gongji",
+              "frame": 7,
+              "nativeFrame": 5,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 3303.300000000745,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "gongji",
+              "frame": 8,
+              "nativeFrame": 6,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 3335.60000000149,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "gongji",
+              "frame": 9,
+              "nativeFrame": 7,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 3351.400000002235,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "gongji",
+              "frame": 11,
+              "nativeFrame": 8,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 3383.300000000745,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "gongji",
+              "frame": 12,
+              "nativeFrame": 9,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 3400.2000000029802,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "gongji",
+              "frame": 13,
+              "nativeFrame": 10,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 3433.5,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "gongji",
+              "frame": 15,
+              "nativeFrame": 11,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 3455.900000002235,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "gongji",
+              "frame": 16,
+              "nativeFrame": 12,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 3487.5,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "gongji",
+              "frame": 17,
+              "nativeFrame": 13,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 3504,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "gongji",
+              "frame": 18,
+              "nativeFrame": 14,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 3535.5,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "gongji",
+              "frame": 19,
+              "nativeFrame": 15,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 3552.400000002235,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "gongji",
+              "frame": 19,
+              "nativeFrame": 16,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 3583.300000000745,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "gongji",
+              "frame": 20,
+              "nativeFrame": 17,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 3599.800000000745,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "gongji",
+              "frame": 21,
+              "nativeFrame": 18,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 3633.300000000745,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "gongji",
+              "frame": 22,
+              "nativeFrame": 19,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 3656.300000000745,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "gongji",
+              "frame": 23,
+              "nativeFrame": 20,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 3687.7000000029802,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "gongji",
+              "frame": 24,
+              "nativeFrame": 21,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 3704.60000000149,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "gongji",
+              "frame": 25,
+              "nativeFrame": 22,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 3735.300000000745,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "gongji",
+              "frame": 26,
+              "nativeFrame": 23,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 3752.2000000029802,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "gongji",
+              "frame": 26,
+              "nativeFrame": 24,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 3783.7000000029802,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "gongji",
+              "frame": 27,
+              "nativeFrame": 25,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 3800.2000000029802,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "gongji",
+              "frame": 28,
+              "nativeFrame": 26,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 3816.7000000029802,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "gongji",
+              "frame": 29,
+              "nativeFrame": 27,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 3855.900000002235,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "gongji",
+              "frame": 30,
+              "nativeFrame": 28,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 3871.60000000149,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "gongji",
+              "frame": 31,
+              "nativeFrame": 29,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 3904.400000002235,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "gongji",
+              "frame": 32,
+              "nativeFrame": 30,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 3919.5,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "gongji",
+              "frame": 32,
+              "nativeFrame": 31,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 3951.60000000149,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "gongji",
+              "frame": 33,
+              "nativeFrame": 32,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 3967.300000000745,
+          "active": []
+        },
+        {
+          "ms": 6639.800000000745,
+          "active": [
+            {
+              "model": "hero_011_01_ez",
+              "action": "gongji",
+              "frame": 0,
+              "nativeFrame": 0,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 6671.900000002235,
+          "active": [
+            {
+              "model": "hero_011_01_ez",
+              "action": "gongji",
+              "frame": 1,
+              "nativeFrame": 1,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 6687.60000000149,
+          "active": [
+            {
+              "model": "hero_011_01_ez",
+              "action": "gongji",
+              "frame": 2,
+              "nativeFrame": 2,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 6719.800000000745,
+          "active": [
+            {
+              "model": "hero_011_01_ez",
+              "action": "gongji",
+              "frame": 3,
+              "nativeFrame": 3,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 6735.70000000298,
+          "active": [
+            {
+              "model": "hero_011_01_ez",
+              "action": "gongji",
+              "frame": 5,
+              "nativeFrame": 4,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 6767.20000000298,
+          "active": [
+            {
+              "model": "hero_011_01_ez",
+              "action": "gongji",
+              "frame": 6,
+              "nativeFrame": 5,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 6784.5,
+          "active": [
+            {
+              "model": "hero_011_01_ez",
+              "action": "gongji",
+              "frame": 7,
+              "nativeFrame": 6,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 6817.70000000298,
+          "active": [
+            {
+              "model": "hero_011_01_ez",
+              "action": "gongji",
+              "frame": 8,
+              "nativeFrame": 7,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 6841.10000000149,
+          "active": [
+            {
+              "model": "hero_011_01_ez",
+              "action": "gongji",
+              "frame": 9,
+              "nativeFrame": 8,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 6872.20000000298,
+          "active": [
+            {
+              "model": "hero_011_01_ez",
+              "action": "gongji",
+              "frame": 10,
+              "nativeFrame": 9,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 6887.900000002235,
+          "active": [
+            {
+              "model": "hero_011_01_ez",
+              "action": "gongji",
+              "frame": 11,
+              "nativeFrame": 10,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 6920,
+          "active": [
+            {
+              "model": "hero_011_01_ez",
+              "action": "gongji",
+              "frame": 13,
+              "nativeFrame": 11,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 6935.300000000745,
+          "active": [
+            {
+              "model": "hero_011_01_ez",
+              "action": "gongji",
+              "frame": 14,
+              "nativeFrame": 12,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 6967.60000000149,
+          "active": [
+            {
+              "model": "hero_011_01_ez",
+              "action": "gongji",
+              "frame": 15,
+              "nativeFrame": 13,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 6984.20000000298,
+          "active": [
+            {
+              "model": "hero_011_01_ez",
+              "action": "gongji",
+              "frame": 16,
+              "nativeFrame": 14,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 7016.60000000149,
+          "active": [
+            {
+              "model": "hero_011_01_ez",
+              "action": "gongji",
+              "frame": 17,
+              "nativeFrame": 15,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 7039.800000000745,
+          "active": [
+            {
+              "model": "hero_011_01_ez",
+              "action": "gongji",
+              "frame": 19,
+              "nativeFrame": 16,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 7072,
+          "active": [
+            {
+              "model": "hero_011_01_ez",
+              "action": "gongji",
+              "frame": 20,
+              "nativeFrame": 17,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 7087.800000000745,
+          "active": [
+            {
+              "model": "hero_011_01_ez",
+              "action": "gongji",
+              "frame": 21,
+              "nativeFrame": 18,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 7120.20000000298,
+          "active": [
+            {
+              "model": "hero_011_01_ez",
+              "action": "gongji",
+              "frame": 22,
+              "nativeFrame": 19,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 7136.20000000298,
+          "active": [
+            {
+              "model": "hero_011_01_ez",
+              "action": "gongji",
+              "frame": 24,
+              "nativeFrame": 20,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 7168,
+          "active": [
+            {
+              "model": "hero_011_01_ez",
+              "action": "gongji",
+              "frame": 25,
+              "nativeFrame": 21,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 7183.400000002235,
+          "active": [
+            {
+              "model": "hero_011_01_ez",
+              "action": "gongji",
+              "frame": 26,
+              "nativeFrame": 22,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 7216.20000000298,
+          "active": [
+            {
+              "model": "hero_011_01_ez",
+              "action": "gongji",
+              "frame": 27,
+              "nativeFrame": 23,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 7239.900000002235,
+          "active": [
+            {
+              "model": "hero_011_01_ez",
+              "action": "gongji",
+              "frame": 29,
+              "nativeFrame": 24,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 7272.20000000298,
+          "active": [
+            {
+              "model": "hero_011_01_ez",
+              "action": "gongji",
+              "frame": 30,
+              "nativeFrame": 25,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 7288,
+          "active": [
+            {
+              "model": "hero_011_01_ez",
+              "action": "gongji",
+              "frame": 31,
+              "nativeFrame": 26,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 7304.900000002235,
+          "active": [
+            {
+              "model": "hero_011_01_ez",
+              "action": "gongji",
+              "frame": 32,
+              "nativeFrame": 27,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 7336.10000000149,
+          "active": [
+            {
+              "model": "hero_011_01_ez",
+              "action": "gongji",
+              "frame": 34,
+              "nativeFrame": 28,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 7351.70000000298,
+          "active": [
+            {
+              "model": "hero_011_01_ez",
+              "action": "gongji",
+              "frame": 35,
+              "nativeFrame": 29,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 7383.300000000745,
+          "active": []
+        },
+        {
+          "ms": 10816.900000002235,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 0,
+              "nativeFrame": 0,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 10849.60000000149,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 1,
+              "nativeFrame": 1,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 10871.300000000745,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 2,
+              "nativeFrame": 2,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 10904.300000000745,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 2,
+              "nativeFrame": 3,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 10920,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 3,
+              "nativeFrame": 4,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 10952,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 4,
+              "nativeFrame": 5,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 10967.300000000745,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 5,
+              "nativeFrame": 6,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 11000.10000000149,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 6,
+              "nativeFrame": 7,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 11017.10000000149,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 6,
+              "nativeFrame": 8,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 11055.60000000149,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 7,
+              "nativeFrame": 9,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 11071.20000000298,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 8,
+              "nativeFrame": 10,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 11103.800000000745,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 9,
+              "nativeFrame": 11,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 11119.800000000745,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 10,
+              "nativeFrame": 12,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 11152.60000000149,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 10,
+              "nativeFrame": 13,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 11169,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 11,
+              "nativeFrame": 14,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 11200.20000000298,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 12,
+              "nativeFrame": 15,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 11216.800000000745,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 13,
+              "nativeFrame": 16,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 11256.70000000298,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 14,
+              "nativeFrame": 17,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 11272.900000002235,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 14,
+              "nativeFrame": 18,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 11303.5,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 15,
+              "nativeFrame": 19,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 11319.60000000149,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 16,
+              "nativeFrame": 20,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 11351.400000002235,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 18,
+              "nativeFrame": 21,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 11367.60000000149,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 20,
+              "nativeFrame": 22,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 11400.20000000298,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 22,
+              "nativeFrame": 23,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 11417.10000000149,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 24,
+              "nativeFrame": 24,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 11455.60000000149,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 26,
+              "nativeFrame": 25,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 11472,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 27,
+              "nativeFrame": 26,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 11487.70000000298,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 29,
+              "nativeFrame": 27,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 11519.60000000149,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 31,
+              "nativeFrame": 28,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 11535.20000000298,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 33,
+              "nativeFrame": 29,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 11568.60000000149,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 35,
+              "nativeFrame": 30,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 11583.400000002235,
+          "active": []
+        },
+        {
+          "ms": 17650.20000000298,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "jineng",
+              "frame": 36,
+              "nativeFrame": 0,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 17687.60000000149,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "jineng",
+              "frame": 37,
+              "nativeFrame": 1,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 17703.400000002235,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "jineng",
+              "frame": 37,
+              "nativeFrame": 2,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 17736.10000000149,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "jineng",
+              "frame": 38,
+              "nativeFrame": 3,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 17751.70000000298,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "jineng",
+              "frame": 38,
+              "nativeFrame": 4,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 17783.20000000298,
+          "active": [
+            {
+              "model": "hero_094_03_ez",
+              "action": "jineng",
+              "frame": 39,
+              "nativeFrame": 5,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero": 14,
+      "pass": true,
+      "active": {
+        "installed": true,
+        "framesPresented": 49,
+        "actions": {
+          "gongji": 49
+        },
+        "errors": [],
+        "caches": [
+          {
+            "id": "2",
+            "users": 1,
+            "ready": true
+          },
+          {
+            "id": "14",
+            "users": 1,
+            "ready": true
+          }
+        ],
+        "active": [
+          {
+            "model": "hero_014_01_ez",
+            "action": "gongji",
+            "frame": 16,
+            "nativeFrame": 20,
+            "visible": true,
+            "nativeVisible": false,
+            "ready": true,
+            "onStage": true
+          },
+          {
+            "model": "hero_002_01_ez",
+            "action": "daiji",
+            "frame": 35,
+            "nativeFrame": 31,
+            "visible": false,
+            "nativeVisible": false,
+            "ready": true,
+            "onStage": true
+          }
+        ]
+      },
+      "after": {
+        "installed": true,
+        "framesPresented": 63,
+        "actions": {
+          "gongji": 59,
+          "jineng": 4
+        },
+        "errors": [],
+        "caches": [
+          {
+            "id": "2",
+            "users": 1,
+            "ready": true
+          },
+          {
+            "id": "14",
+            "users": 1,
+            "ready": true
+          }
+        ],
+        "active": [
+          {
+            "model": "hero_014_01_ez",
+            "action": "daiji",
+            "frame": 35,
+            "nativeFrame": 30,
+            "visible": false,
+            "nativeVisible": false,
+            "ready": true,
+            "onStage": true
+          },
+          {
+            "model": "hero_002_01_ez",
+            "action": "jineng",
+            "frame": 39,
+            "nativeFrame": 4,
+            "visible": true,
+            "nativeVisible": false,
+            "ready": true,
+            "onStage": true
+          }
+        ]
+      },
+      "errors": [],
+      "scenario": "Isolated save; solo hero level50 with reference hero1 stats, 8 hell wei enemies, battles0/stage1, supports cleared",
+      "trace": [
+        {
+          "ms": 33.100000001490116,
+          "active": []
+        },
+        {
+          "ms": 5575.400000002235,
+          "active": [
+            {
+              "model": "hero_002_01_ez",
+              "action": "gongji",
+              "frame": 0,
+              "nativeFrame": 0,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 5607.900000002235,
+          "active": [
+            {
+              "model": "hero_002_01_ez",
+              "action": "gongji",
+              "frame": 1,
+              "nativeFrame": 1,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 5623.60000000149,
+          "active": [
+            {
+              "model": "hero_002_01_ez",
+              "action": "gongji",
+              "frame": 2,
+              "nativeFrame": 2,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 5655.5,
+          "active": [
+            {
+              "model": "hero_002_01_ez",
+              "action": "gongji",
+              "frame": 3,
+              "nativeFrame": 3,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 5672.60000000149,
+          "active": [
+            {
+              "model": "hero_002_01_ez",
+              "action": "gongji",
+              "frame": 4,
+              "nativeFrame": 4,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 5707,
+          "active": [
+            {
+              "model": "hero_002_01_ez",
+              "action": "gongji",
+              "frame": 5,
+              "nativeFrame": 5,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 5727.60000000149,
+          "active": [
+            {
+              "model": "hero_002_01_ez",
+              "action": "gongji",
+              "frame": 6,
+              "nativeFrame": 6,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 5759.199999999255,
+          "active": [
+            {
+              "model": "hero_002_01_ez",
+              "action": "gongji",
+              "frame": 7,
+              "nativeFrame": 7,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 5776.10000000149,
+          "active": [
+            {
+              "model": "hero_002_01_ez",
+              "action": "gongji",
+              "frame": 8,
+              "nativeFrame": 8,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 5808.10000000149,
+          "active": [
+            {
+              "model": "hero_002_01_ez",
+              "action": "gongji",
+              "frame": 9,
+              "nativeFrame": 9,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 5823.199999999255,
+          "active": [
+            {
+              "model": "hero_002_01_ez",
+              "action": "gongji",
+              "frame": 10,
+              "nativeFrame": 10,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 5855.699999999255,
+          "active": [
+            {
+              "model": "hero_002_01_ez",
+              "action": "gongji",
+              "frame": 11,
+              "nativeFrame": 11,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 5871.199999999255,
+          "active": [
+            {
+              "model": "hero_002_01_ez",
+              "action": "gongji",
+              "frame": 12,
+              "nativeFrame": 12,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 5904.60000000149,
+          "active": [
+            {
+              "model": "hero_002_01_ez",
+              "action": "gongji",
+              "frame": 13,
+              "nativeFrame": 13,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 5927.60000000149,
+          "active": [
+            {
+              "model": "hero_002_01_ez",
+              "action": "gongji",
+              "frame": 14,
+              "nativeFrame": 14,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 5959.699999999255,
+          "active": [
+            {
+              "model": "hero_002_01_ez",
+              "action": "gongji",
+              "frame": 15,
+              "nativeFrame": 15,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 5976.10000000149,
+          "active": [
+            {
+              "model": "hero_002_01_ez",
+              "action": "gongji",
+              "frame": 16,
+              "nativeFrame": 16,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 6007.400000002235,
+          "active": [
+            {
+              "model": "hero_002_01_ez",
+              "action": "gongji",
+              "frame": 17,
+              "nativeFrame": 17,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 6023.300000000745,
+          "active": [
+            {
+              "model": "hero_002_01_ez",
+              "action": "gongji",
+              "frame": 18,
+              "nativeFrame": 18,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 6055.400000002235,
+          "active": [
+            {
+              "model": "hero_002_01_ez",
+              "action": "gongji",
+              "frame": 20,
+              "nativeFrame": 19,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 6071.60000000149,
+          "active": [
+            {
+              "model": "hero_002_01_ez",
+              "action": "gongji",
+              "frame": 21,
+              "nativeFrame": 20,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 6111.699999999255,
+          "active": [
+            {
+              "model": "hero_002_01_ez",
+              "action": "gongji",
+              "frame": 22,
+              "nativeFrame": 21,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 6127.699999999255,
+          "active": [
+            {
+              "model": "hero_002_01_ez",
+              "action": "gongji",
+              "frame": 23,
+              "nativeFrame": 22,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 6159.300000000745,
+          "active": [
+            {
+              "model": "hero_002_01_ez",
+              "action": "gongji",
+              "frame": 25,
+              "nativeFrame": 23,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 6175.900000002235,
+          "active": [
+            {
+              "model": "hero_002_01_ez",
+              "action": "gongji",
+              "frame": 26,
+              "nativeFrame": 24,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 6207.5,
+          "active": [
+            {
+              "model": "hero_002_01_ez",
+              "action": "gongji",
+              "frame": 27,
+              "nativeFrame": 25,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 6223.5,
+          "active": [
+            {
+              "model": "hero_002_01_ez",
+              "action": "gongji",
+              "frame": 29,
+              "nativeFrame": 26,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 6239.900000002235,
+          "active": [
+            {
+              "model": "hero_002_01_ez",
+              "action": "gongji",
+              "frame": 30,
+              "nativeFrame": 27,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 6271.800000000745,
+          "active": [
+            {
+              "model": "hero_002_01_ez",
+              "action": "gongji",
+              "frame": 31,
+              "nativeFrame": 28,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 6288.199999999255,
+          "active": [
+            {
+              "model": "hero_002_01_ez",
+              "action": "gongji",
+              "frame": 32,
+              "nativeFrame": 29,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 6321.5,
+          "active": [
+            {
+              "model": "hero_002_01_ez",
+              "action": "gongji",
+              "frame": 34,
+              "nativeFrame": 30,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 6344.300000000745,
+          "active": [
+            {
+              "model": "hero_002_01_ez",
+              "action": "gongji",
+              "frame": 35,
+              "nativeFrame": 31,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 6375.300000000745,
+          "active": []
+        },
+        {
+          "ms": 9472.10000000149,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 0,
+              "nativeFrame": 0,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 9505.199999999255,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 1,
+              "nativeFrame": 1,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 9528,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 2,
+              "nativeFrame": 2,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 9560,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 2,
+              "nativeFrame": 3,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 9575.900000002235,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 3,
+              "nativeFrame": 4,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 9607.400000002235,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 4,
+              "nativeFrame": 5,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 9624,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 5,
+              "nativeFrame": 6,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 9655.800000000745,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 6,
+              "nativeFrame": 7,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 9671.900000002235,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 6,
+              "nativeFrame": 8,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 9705.10000000149,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 7,
+              "nativeFrame": 9,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 9727.300000000745,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 8,
+              "nativeFrame": 10,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 9759.5,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 9,
+              "nativeFrame": 11,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 9776.400000002235,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 10,
+              "nativeFrame": 12,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 9807.300000000745,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 10,
+              "nativeFrame": 13,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 9823.400000002235,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 11,
+              "nativeFrame": 14,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 9856.699999999255,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 12,
+              "nativeFrame": 15,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 9871.60000000149,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 13,
+              "nativeFrame": 16,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 9905,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 14,
+              "nativeFrame": 17,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 9921.5,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 14,
+              "nativeFrame": 18,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 9959.699999999255,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 15,
+              "nativeFrame": 19,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 9976,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 16,
+              "nativeFrame": 20,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 10008,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 18,
+              "nativeFrame": 21,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 10023.5,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 20,
+              "nativeFrame": 22,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 10055.900000002235,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 22,
+              "nativeFrame": 23,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 10071.60000000149,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 24,
+              "nativeFrame": 24,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 10104.900000002235,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 26,
+              "nativeFrame": 25,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 10127.800000000745,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 27,
+              "nativeFrame": 26,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 10143.699999999255,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 29,
+              "nativeFrame": 27,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 10175.5,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 31,
+              "nativeFrame": 28,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 10191.199999999255,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 33,
+              "nativeFrame": 29,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 10224.400000002235,
+          "active": [
+            {
+              "model": "hero_014_01_ez",
+              "action": "gongji",
+              "frame": 35,
+              "nativeFrame": 30,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 10239.800000000745,
+          "active": []
+        },
+        {
+          "ms": 19744,
+          "active": [
+            {
+              "model": "hero_002_01_ez",
+              "action": "jineng",
+              "frame": 36,
+              "nativeFrame": 0,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 19776,
+          "active": [
+            {
+              "model": "hero_002_01_ez",
+              "action": "jineng",
+              "frame": 37,
+              "nativeFrame": 1,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 19791.800000000745,
+          "active": [
+            {
+              "model": "hero_002_01_ez",
+              "action": "jineng",
+              "frame": 37,
+              "nativeFrame": 2,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        },
+        {
+          "ms": 19823.900000002235,
+          "active": [
+            {
+              "model": "hero_002_01_ez",
+              "action": "jineng",
+              "frame": 38,
+              "nativeFrame": 3,
+              "visible": true,
+              "nativeVisible": false,
+              "ready": true,
+              "onStage": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hero": 14,
+      "pass": false,
+      "error": "page.waitForFunction: Timeout 90000ms exceeded.",
+      "errors": [],
+      "state": {
+        "installed": true,
+        "framesPresented": 0,
+        "actions": {},
+        "errors": [],
+        "caches": [
+          {
+            "id": "14",
+            "users": 1,
+            "ready": true
+          }
+        ],
+        "active": [
+          {
+            "model": "hero_014_01_ez",
+            "action": "daiji",
+            "frame": -1,
+            "visible": false,
+            "nativeVisible": false,
+            "ready": true,
+            "onStage": true
+          }
+        ]
+      },
+      "trace": [
+        {
+          "ms": 33.5,
+          "active": []
+        }
+      ]
+    }
+  ]
+}

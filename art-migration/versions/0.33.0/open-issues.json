@@ -1,0 +1,10 @@
+[
+  {
+    "id": "BATTLE-014-FIGHTMODEL",
+    "status": "investigating",
+    "observed": "One random eight-hell-enemy battle emitted Cannot read properties of undefined (reading fightModelInfo). First harness only captured message. Later harness captures stack and actual battle teams.",
+    "evidence": "versions/0.33.0/body-roster-battle-attempt1.json",
+    "rechecks": "Single rerun and two repeated random runs passed; third repeated run missed attack window and timed out. Final9/14/15 battle run passed with requested first enemy subtype1 and actual remaining enemy roster recorded. This is not proof that the random exception is fixed.",
+    "next": "Run isolated full-lifetime random battles, capture full pageerror stack and OfflineLastBattlePayload. Repair concrete stale target/owner path once identified."
+  }
+]
