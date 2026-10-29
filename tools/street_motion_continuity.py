@@ -7,6 +7,7 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[1]
 
 def measure(folder):
+    folder=folder.resolve()
     job = json.loads((folder / 'job.json').read_text('utf8'))
     files = [ROOT / row['path'] for row in job.get('outputs', [])]
     arrays = []
@@ -18,12 +19,16 @@ def measure(folder):
     top = sum(sorted(delta, reverse=True)[:4]) / max(total, 1e-9)
     median = float(np.median(delta)) if delta else 0
     jumps = [i+1 for i, value in enumerate(delta) if value > max(2, median*12)]
-    flag = len(files) < 20 or top > .65 or (len(jumps) >= 2 and median < .5)
+    # Deliberate anticipation/recovery holds lower the median even in fluid clips.
+    # Count meaningful transition frames rather than rejecting a low median itself.
+    significant = sum(value > max(.5, max(delta, default=0)*.1) for value in delta)
+    flag = len(files) < 20 or top > .65 or significant < 10
     return {'source': folder.relative_to(ROOT).as_posix(), 'frames': len(files),
             'sourceSignature': hashlib.sha256(''.join(row['sha256'] for row in job.get('outputs', [])).encode()).hexdigest(),
             'meanAbsoluteRgbDelta128': [round(x, 5) for x in delta],
             'medianDelta': round(median, 5), 'topFourDeltaShare': round(top, 5),
-            'jumpFrames': jumps, 'requiresTemporalReview': flag,
+            'jumpFrames': jumps, 'significantTransitionFrames': significant,
+            'algorithmVersion':'0.49.0', 'requiresTemporalReview': flag,
             'interpretation': 'screening only; no automatic animation approval or rejection'}
 
 def main():

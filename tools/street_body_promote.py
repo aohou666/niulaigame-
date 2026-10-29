@@ -7,7 +7,7 @@ ROOT=Path(__file__).resolve().parents[1];GAME=ROOT/'local_game';BASE=ROOT/'art-m
 p=argparse.ArgumentParser();p.add_argument('name');p.add_argument('--attack-anchor',required=True,type=int);p.add_argument('--event-anchors');p.add_argument('--fallback-impact',type=int);p.add_argument('--version',required=True);a=p.parse_args();folder=BASE/a.name
 reviewedAnchors=json.loads(Path(a.event_anchors).read_text('utf8')) if a.event_anchors else {}
 job=json.loads((folder/'job.json').read_text('utf8'));design=json.loads((folder/'body-design.json').read_text('utf8'));hid=design['heroId'];source=ROOT/design['sourceBodyJob'];qa=json.loads((source/'body-qa.json').read_text('utf8'))
-assert qa['manualVideoReview']=='approved-for-matting' and qa['automaticChecksPassed'];assert len(job['outputs'])==len(design['sourceFrameOrder'])==73
+assert qa['manualVideoReview']=='approved-for-matting' and qa['automaticChecksPassed'];assert len(job['outputs'])==len(design['sourceFrameOrder'])==design['length'];assert design['length'] in [73,124]
 assert qa.get('manualTemporalReview')=='approved-continuous','Continuous motion must be manually reviewed; distinct PNG hashes and guide poses are insufficient'
 assert not qa.get('temporalScreening',{}).get('requiresTemporalReview',True),'Pose-jump screening needs a corrected generated source before promotion'
 images=[];bounds=[]
@@ -50,7 +50,7 @@ for model in models[1:]:
  variant=build_actions(model);different={action:seq for action,seq in variant.items() if seq!=actions[action]}
  if different:modelActionOverrides[model]=different
 out.mkdir(parents=True,exist_ok=True);atlas.save(out/'body.webp',lossless=True,method=6)
-cfg={'id':hid,'models':[design['actions']['attack']['native']['model'],design['actions']['attack']['native']['model']+'_ez'],'atlas':(out/'body.webp').relative_to(GAME).as_posix(),'frames':rects,'crop':box,'root':[256,466.7],'bodyHeight':design['inputs']['idle']['size'][1]*512/768,'actions':actions,'source':folder.relative_to(ROOT).as_posix()}
+cfg={'id':hid,'models':[design['actions']['attack']['native']['model'],design['actions']['attack']['native']['model']+'_ez'],'atlas':(out/'body.webp').relative_to(GAME).as_posix(),'frames':rects,'crop':box,'root':[design['inputs']['idle']['foot'][0]*512/768,design['inputs']['idle']['foot'][1]*512/768],'bodyHeight':design['inputs']['idle'].get('subjectHeight',design['inputs']['idle']['size'][1])*512/768,'actions':actions,'source':folder.relative_to(ROOT).as_posix()}
 cfg['nativeEventAuditSha256']=hashlib.sha256(auditFile.read_bytes()).hexdigest()
 cfg['temporalQuality']='approved-continuous'
 cfg['temporalReviewSourceSignature']=qa['sourceSignature']
@@ -59,6 +59,6 @@ cfg['atlasSha256']=hashlib.sha256((out/'body.webp').read_bytes()).hexdigest()
 p=GAME/'street-body-data.js';d=json.loads(p.read_text('utf8').split('=',1)[1].strip().rstrip(';'));d['version']=a.version;d['characters']=[r for r in d['characters'] if r['id']!=hid]+[cfg];d['characters'].sort(key=lambda r:r['id']);atomic_write_text(p,'window.StreetBodyData='+json.dumps(d,separators=(',',':'))+';\n')
 contact=Image.new('RGB',(1024,1024),'#53676e');draw=ImageDraw.Draw(contact)
 for i in range(16):
- n=round(i*72/15);im=images[n].copy();im.thumbnail((250,230));contact.paste(im,((i%4)*256,(i//4)*256),im);draw.text(((i%4)*256,(i//4)*256+233),str(n),fill='white')
+ n=round(i*(len(images)-1)/15);im=images[n].copy();im.thumbnail((250,230));contact.paste(im,((i%4)*256,(i//4)*256),im);draw.text(((i%4)*256,(i//4)*256+233),str(n),fill='white')
 contact.save(ROOT/f'outputs/street-reskin/body-{hid:03}-final-alpha.jpg',quality=95)
 (folder/'integration.json').write_text(json.dumps({'status':'prepared-runtime-validation-pending','heroId':hid,'crop':box,'tileSize':size,'nativeClocksRetained':True,'sha256':hashlib.sha256((out/'body.webp').read_bytes()).hexdigest()},indent=2)+'\n','utf8');print(json.dumps({'hero':hid,'bytes':(out/'body.webp').stat().st_size,'actions':{k:{'nativeFrames':v['nativeDurationFrames'],'nativeImpact':v['nativeImpactFrame'],'sourceImpact':v['sourceImpactFrame']} for k,v in actions.items()}}))

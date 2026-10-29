@@ -1,0 +1,75 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "model": "hero_085_01",
+      "native": [
+        {
+          "name": "eventName",
+          "time": 0
+        },
+        {
+          "name": "pia",
+          "time": 0.8333333333333334
+        }
+      ],
+      "callbacks": [
+        {
+          "elapsedMs": 844.5,
+          "key": "pia",
+          "nativeFrame": 25,
+          "sourceFrame": 28
+        }
+      ],
+      "authored": [
+        {
+          "name": "pia",
+          "timeMs": 833.3333333333334,
+          "frame0": 25
+        }
+      ],
+      "expectedMs": 833.3333333333334,
+      "fps": 30
+    },
+    {
+      "model": "hero_085_01_ez",
+      "native": [
+        {
+          "name": "eventName",
+          "time": 0
+        },
+        {
+          "name": "pia",
+          "time": 0.8333333333333334
+        }
+      ],
+      "callbacks": [
+        {
+          "elapsedMs": 848.5,
+          "key": "pia",
+          "nativeFrame": 25,
+          "sourceFrame": 28
+        }
+      ],
+      "authored": [
+        {
+          "name": "pia",
+          "timeMs": 833.3333333333334,
+          "frame0": 25
+        }
+      ],
+      "expectedMs": 833.3333333333334,
+      "fps": 30
+    }
+  ],
+  "after": {
+    "installed": true,
+    "framesPresented": 100,
+    "actions": {
+      "gongji": 100
+    },
+    "errors": [],
+    "caches": [],
+    "active": []
+  }
+}

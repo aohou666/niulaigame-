@@ -3,13 +3,26 @@ import argparse,hashlib,json,shutil
 from pathlib import Path
 from PIL import Image
 from street_comfy import ROOT,COMFY,submit
-p=argparse.ArgumentParser();p.add_argument('ids',nargs='+',type=int);p.add_argument('--revision',type=int,default=1);p.add_argument('--height',type=int,default=560);p.add_argument('--length',type=int,choices=[73,124],default=73);p.add_argument('--base-steps',type=int,choices=[16,24,32]);guides=p.add_mutually_exclusive_group();guides.add_argument('--dense-guides',action='store_true');guides.add_argument('--sparse-guides',action='store_true');p.add_argument('--queue-tail',action='store_true');p.add_argument('--retain-lit-prop',action='store_true');a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('ids',nargs='+',type=int);p.add_argument('--revision',type=int,default=1);p.add_argument('--height',type=int,default=560);p.add_argument('--length',type=int,choices=[73,124],default=73);p.add_argument('--base-steps',type=int,choices=[16,24,32]);p.add_argument('--landmarks',type=Path);guides=p.add_mutually_exclusive_group();guides.add_argument('--dense-guides',action='store_true');guides.add_argument('--sparse-guides',action='store_true');p.add_argument('--queue-tail',action='store_true');p.add_argument('--retain-lit-prop',action='store_true');a=p.parse_args()
 assert a.length==73 or a.sparse_guides,'Longer trained-range pilot uses sparse guides only'
 base=ROOT/'art-migration/generation'
 plan=json.loads((ROOT/'outputs/combat-action-plan-20261022/combat-action-plan.json').read_text('utf8'))['rows']
 template=json.loads((base/'hero001-body-actions-minimax-v3-fastdecode/workflow.json').read_text('utf8'))
 overrides=json.loads((ROOT/'art-migration/prop-continuity-overrides.json').read_text('utf8'))
+landmarks=json.loads(a.landmarks.read_text('utf8')) if a.landmarks else None
 def normalize(source,out,name,hid):
+ if landmarks:
+  assert landmarks['heroId']==hid,'Landmarks belong to one manually inspected character only'
+  mark=landmarks['poses'][name];digest=hashlib.sha256(source.read_bytes()).hexdigest();assert digest==mark['sourceSha256'],'Landmarks are bound to the exact inspected pose image'
+  with Image.open(source) as original:
+   image=original.convert('RGBA');box=image.getchannel('A').point(lambda v:255 if v>16 else 0).getbbox();image=image.crop(box)
+   rootX=landmarks['rootX'];footX=mark['footX']-box[0];footY=mark['footY']-box[1];subjectHeight=mark['footY']-mark['headY'];assert subjectHeight>0
+   scale=min(a.height/subjectHeight,(rootX-20)/max(1,footX),(748-rootX)/max(1,image.width-footX),680/max(1,footY),48/max(1,image.height-footY))
+   image=image.resize((round(image.width*scale),round(image.height*scale)),Image.Resampling.LANCZOS)
+   x=round(rootX-footX*scale);y=round(700-footY*scale);assert x>=18 and y>=18 and x+image.width<=750 and y+image.height<=750
+   canvas=Image.new('RGBA',(768,768));canvas.alpha_composite(image,(x,y));target=out/(name+'.png');canvas.save(target)
+   inputname=f'street_body{hid:03}_{name}_v{a.revision}.png';shutil.copy2(target,COMFY/'input'/inputname)
+   return inputname,{'source':source.relative_to(ROOT).as_posix(),'prepared':target.relative_to(ROOT).as_posix(),'sourceSha256':digest,'foot':[rootX,700],'size':image.size,'subjectHeight':round(subjectHeight*scale,3),'normalization':'manually inspected head/feet landmarks; full prop bbox retained','sha256':hashlib.sha256(target.read_bytes()).hexdigest()}
  with Image.open(source) as image:
   image=image.convert('RGBA');box=image.getchannel('A').point(lambda v:255 if v>16 else 0).getbbox();image=image.crop(box)
   scale=min(normalHeight/image.height,560/image.width);image=image.resize((round(image.width*scale),round(image.height*scale)),Image.Resampling.LANCZOS)
