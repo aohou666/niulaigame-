@@ -1,7 +1,7 @@
 {
   "promptId": "bf5bdd97-8ca7-44e2-9b88-3e350350aada",
   "submittedUtc": "2026-10-29T02:11:32Z",
-  "status": "submitted",
+  "status": "failed",
   "provider": "local-comfyui",
   "workflowSha256": "bdd6fe09c27e3d5b6dd79db41ea58f881f62045f1b4c1cad0af9cc5519ca216d",
   "response": {
@@ -9,5 +9,97 @@
     "number": 4,
     "node_errors": {}
   },
-  "supersededBy": "art-migration/generation/hero002-attack-v2"
+  "supersededBy": "art-migration/generation/hero002-attack-v2",
+  "comfyStatus": {
+    "status_str": "error",
+    "completed": false,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "bf5bdd97-8ca7-44e2-9b88-3e350350aada",
+          "timestamp": 1793240383685
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [],
+          "prompt_id": "bf5bdd97-8ca7-44e2-9b88-3e350350aada",
+          "timestamp": 1793240383700
+        }
+      ],
+      [
+        "execution_error",
+        {
+          "prompt_id": "bf5bdd97-8ca7-44e2-9b88-3e350350aada",
+          "node_id": "9",
+          "node_type": "easy imageRemBg",
+          "executed": [
+            "3",
+            "4",
+            "6",
+            "2",
+            "5",
+            "8",
+            "1"
+          ],
+          "exception_message": "The size of tensor a (4) must match the size of tensor b (3) at non-singleton dimension 1\n",
+          "exception_type": "RuntimeError",
+          "traceback": [
+            "  File \"G:\\comfylight\\ComfyUI_windows_portable_nvidia\\ComfyUI_windows_portable\\ComfyUI\\execution.py\", line 547, in execute\n    output_data, output_ui, has_subgraph, has_pending_tasks = await get_output_data(prompt_id, unique_id, obj, input_data_all, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+            "  File \"G:\\comfylight\\ComfyUI_windows_portable_nvidia\\ComfyUI_windows_portable\\ComfyUI\\execution.py\", line 352, in get_output_data\n    return_values = await _async_map_node_over_list(prompt_id, unique_id, obj, input_data_all, obj.FUNCTION, allow_interrupt=True, execution_block_cb=execution_block_cb, pre_execute_cb=pre_execute_cb, v3_data=v3_data)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+            "  File \"G:\\comfylight\\ComfyUI_windows_portable_nvidia\\ComfyUI_windows_portable\\ComfyUI\\execution.py\", line 326, in _async_map_node_over_list\n    await process_inputs(input_dict, i)\n",
+            "  File \"G:\\comfylight\\ComfyUI_windows_portable_nvidia\\ComfyUI_windows_portable\\ComfyUI\\execution.py\", line 314, in process_inputs\n    result = f(**inputs)\n",
+            "  File \"G:\\comfylight\\ComfyUI_windows_portable_nvidia\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\comfyui-easy-use\\py\\nodes\\image.py\", line 926, in remove\n    image = preprocess_image(orig_im, model_input_size).to(device)\n            ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+            "  File \"G:\\comfylight\\ComfyUI_windows_portable_nvidia\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\comfyui-easy-use\\py\\modules\\briaai\\rembg.py\", line 355, in preprocess_image\n    image = normalize(image,[0.5,0.5,0.5],[1.0,1.0,1.0])\n",
+            "  File \"G:\\comfylight\\ComfyUI_windows_portable_nvidia\\ComfyUI_windows_portable\\python_embeded\\Lib\\site-packages\\torchvision\\transforms\\functional.py\", line 350, in normalize\n    return F_t.normalize(tensor, mean=mean, std=std, inplace=inplace)\n           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+            "  File \"G:\\comfylight\\ComfyUI_windows_portable_nvidia\\ComfyUI_windows_portable\\python_embeded\\Lib\\site-packages\\torchvision\\transforms\\_functional_tensor.py\", line 928, in normalize\n    return tensor.sub_(mean).div_(std)\n           ~~~~~~~~~~~^^^^^^\n"
+          ],
+          "current_inputs": {
+            "images": [
+              "tensor([[[[0.9648, 0.9609, 0.9883, 1.0000],\n          [0.9902, 1.0000, 0.9902, 1.0000],\n          [0.9883, 0.9980, 0.9922, 1.0000],\n          ...,\n          [0.9941, 0.9883, 0.9922, 1.0000],\n          [0.9980, 0.9980, 1.0000, 1.0000],\n          [0.9922, 1.0000, 1.0000, 1.0000]],\n\n         [[0.9707, 0.9785, 1.0000, 1.0000],\n          [0.9922, 0.9980, 1.0000, 1.0000],\n          [0.9922, 0.9941, 1.0000, 1.0000],\n          ...,\n          [0.9902, 0.9902, 1.0000, 1.0000],\n          [0.9922, 0.9941, 1.0000, 1.0000],\n          [0.9980, 1.0000, 1.0000, 1.0000]],\n\n         [[0.9785, 0.9883, 0.9961, 1.0000],\n          [0.9941, 0.9980, 1.0000, 1.0000],\n          [0.9961, 0.9941, 0.9961, 1.0000],\n          ...,\n          [0.9980, 0.9980, 0.9961, 1.0000],\n          [0.9961, 1.0000, 0.9941, 1.0000],\n          [0.9922, 0.9980, 1.0000, 1.0000]],\n\n         ...,\n\n         [[0.9902, 0.9980, 0.9980, 1.0000],\n          [0.9844, 0.9980, 0.9980, 1.0000],\n          [0.9844, 0.9980, 0.9941, 1.0000],\n          ...,\n          [1.0000, 1.0000, 0.9980, 1.0000],\n          [1.0000, 1.0000, 0.9941, 1.0000],\n          [0.9941, 0.9980, 1.0000, 1.0000]],\n\n         [[0.9766, 0.9746, 0.9922, 1.0000],\n          [0.9863, 0.9941, 1.0000, 1.0000],\n          [0.9922, 0.9902, 1.0000, 1.0000],\n          ...,\n          [1.0000, 0.9980, 1.0000, 1.0000],\n          [1.0000, 1.0000, 1.0000, 1.0000],\n          [1.0000, 0.9863, 1.0000, 1.0000]],\n\n         [[1.0000, 0.9922, 0.9961, 1.0000],\n          [1.0000, 1.0000, 1.0000, 1.0000],\n          [0.9883, 0.9941, 1.0000, 1.0000],\n          ...,\n          [1.0000, 1.0000, 1.0000, 1.0000],\n          [1.0000, 1.0000, 1.0000, 1.0000],\n          [1.0000, 1.0000, 1.0000, 1.0000]]]])"
+            ],
+            "rem_mode": [
+              "RMBG-1.4"
+            ],
+            "image_output": [
+              "Hide"
+            ],
+            "save_prefix": [
+              "street-reskin/matte"
+            ],
+            "add_background": [
+              "none"
+            ],
+            "torchscript_jit": [
+              false
+            ],
+            "refine_foreground": [
+              false
+            ],
+            "prompt": [
+              "{'1': {'class_type': 'UNETLoader', 'inputs': {'unet_name': 'qwen_image_2.1_int8_convrot.safetensors', 'weight_dtype': 'default'}}, '2': {'class_type': 'CLIPLoader', 'inputs': {'clip_name': 'qwen3vl_8b_int8_convrot.safetensors', 'type': 'qwen_image', 'device': 'default'}}, '3': {'class_type': 'VAELoader', 'inputs': {'vae_name': 'qwen_image_2.1_vae_bf16.safetensors'}}, '4': {'class_type': 'TextEncodeQwenImage21', 'inputs': {'clip': ['2', 0], 'vae': ['3', 0], 'prompt': 'Create ONE production key pose for character 老八, ID 2. The attached image is the exact identity/outfit reference. Preserve species, face, horns/ears, hair, body proportions, clothing and the existing held props. Change the pose into a strong readable attack key pose, three-quarter view facing RIGHT, full body with both feet inside frame. Follow this specific action design: 现有道具蓄势→挥动或释放能量→复位；不自动丢失道具. Observed prop/weapon: 手持食物; weapon category: 食物道具. Purpose: 进攻＋自身增益. Keep the body centered, do not translate across the battlefield, the game handles root movement. This is a pose sprite, do not render the target, battlefield or screen UI. 2.5D semi-realistic semi-cartoon absurd modern neighborhood street-block game aesthetic, tactile materials, broad readable silhouette, warm soft studio light. A single character only, plain solid white background for clean alpha matting. No text, no watermark, no ancient armor unless the reference actually contains it. No extra weapons or unrequested props. Keep the pose distinctive to this character and its action. No motion blur obscuring limbs. Do not include enormous VFX; effects are a separate asset.', 'negative_prompt': 'blurry, cropped body, duplicate character, watermark, unreadable text, medieval armor, ancient Chinese costume', 'resolution': 768, 'images.image_1': ['8', 0]}}, '5': {'class_type': 'KSampler', 'inputs': {'model': ['1', 0], 'seed': 2026102904, 'steps': 28, 'cfg': 4.0, 'sampler_name': 'euler', 'scheduler': 'simple', 'positive': ['4', 0], 'negative': ['4', 1], 'latent_image': ['4', 2], 'denoise': 1.0}}, '6': {'class_type': 'VAEDecode', 'inputs': {'samples': ['5', 0], 'vae': ['3', 0]}}, '7': {'class_type': 'SaveImage', 'inputs': {'images': ['6', 0], 'filename_prefix': 'street-reskin/qwen'}}, '8': {'class_type': 'LoadImage', 'inputs': {'image': 'street_f52e62f88af27709.png'}, 'is_changed': ['f52e62f88af27709029d5d694f927f5ba53c82547c1a5412f70b5cdb5023b651']}, '9': {'class_type': 'easy imageRemBg', 'inputs': {'images': ['6', 0], 'rem_mode': 'RMBG-1.4', 'image_output': 'Hide', 'save_prefix': 'street-reskin/matte', 'add_background': 'none', 'torchscript_jit': False, 'refine_foreground': False}}, '10': {'class_type': 'SaveImage', 'inputs': {'images': ['9', 0], 'filename_prefix': 'street-reskin/hero002_attack_alpha'}}}"
+            ],
+            "extra_pnginfo": [
+              null
+            ]
+          },
+          "current_outputs": [
+            "3",
+            "10",
+            "4",
+            "7",
+            "6",
+            "9",
+            "2",
+            "5",
+            "8",
+            "1"
+          ],
+          "timestamp": 1793240543753
+        }
+      ]
+    ]
+  }
 }

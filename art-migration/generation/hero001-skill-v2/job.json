@@ -1,12 +1,54 @@
 {
   "promptId": "911d2110-8ba9-4aa6-9a10-f3914b9e364c",
   "submittedUtc": "2026-10-29T02:20:57Z",
-  "status": "submitted",
+  "status": "generated-unreviewed",
   "provider": "local-comfyui",
   "workflowSha256": "4bfce678f63d33e22799c33c18c1cd706a43af08140020bb1bb7a071ce805cf0",
   "response": {
     "prompt_id": "911d2110-8ba9-4aa6-9a10-f3914b9e364c",
     "number": 173,
     "node_errors": {}
-  }
+  },
+  "comfyStatus": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "911d2110-8ba9-4aa6-9a10-f3914b9e364c",
+          "timestamp": 1793240544328
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "1",
+            "2",
+            "3"
+          ],
+          "prompt_id": "911d2110-8ba9-4aa6-9a10-f3914b9e364c",
+          "timestamp": 1793240544346
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "911d2110-8ba9-4aa6-9a10-f3914b9e364c",
+          "timestamp": 1793240596018
+        }
+      ]
+    ]
+  },
+  "outputs": [
+    {
+      "path": "art-migration/generation/hero001-skill-v2/qwen_00002_.png",
+      "sha256": "c1ea6d8f483c0816988cf57b59f7cfd2420ecf643b2e3dff1deef3f918057eb4"
+    },
+    {
+      "path": "art-migration/generation/hero001-skill-v2/hero001_skill_alpha_00001_.png",
+      "sha256": "55cb9b6b95457f705a9a638a548eaa2e47ec8fbd25bd1ffe70fba69cdb1fbf40"
+    }
+  ]
 }

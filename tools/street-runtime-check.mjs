@@ -5,6 +5,7 @@ const require=createRequire(import.meta.url);
 const {chromium}=require('C:/Users/dongdong/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const out=path.resolve('outputs/street-reskin');await fs.mkdir(out,{recursive:true});
 const mode=process.argv.find(v=>v.startsWith('--mode='))?.slice(7)||'heroes';
+const base=process.argv.find(v=>v.startsWith('--base='))?.slice(7)||'http://127.0.0.1:8787';
 const suffix=mode==='heroes'?'':`-${mode}`;
 const browser=await chromium.launch({channel:'chrome',headless:true,args:['--enable-webgl','--ignore-gpu-blocklist']});
 const page=await browser.newPage({viewport:{width:480,height:900},deviceScaleFactor:1});
@@ -16,11 +17,11 @@ await page.addInitScript(()=>{window.__streetErrors=[];addEventListener('error',
 page.on('console',m=>{if(logs.length<150)logs.push({type:m.type(),text:m.text().slice(0,1000)});});
 page.on('response',r=>{if(r.status()>=400)failed.push({status:r.status(),url:r.url()});if(/\.(png|jpg|webp)(\?|$)/i.test(r.url()))images.push(r.url());});
 try {
- await page.goto(`http://127.0.0.1:8787/index_bh_lite3zbtest_andr.html?mode=${mode}${mode==='heroes'?'&heroaudit=1':''}`,{waitUntil:'domcontentloaded'});
+ await page.goto(`${base}/index_bh_lite3zbtest_andr.html?mode=${mode}${mode==='heroes'?'&heroaudit=1':''}`,{waitUntil:'domcontentloaded'});
  await page.waitForFunction(()=>window.CharacterIdle&&CharacterIdle.snapshot().installed,{timeout:90000});
  await page.waitForTimeout(mode==='heroes'?2500:7000);
  const baseline=await page.evaluate(()=>({
-  reskin:CharacterReskinAudit,art:window.CharacterArt&&CharacterArt.audit,idle:CharacterIdle.snapshot(),windowErrors:window.__streetErrors,missingRpc:window.OfflineMissingRpcAudit,
+  reskin:CharacterReskinAudit,art:window.CharacterArt&&CharacterArt.audit,idle:CharacterIdle.snapshot(),effects:window.StreetEffects&&StreetEffects.snapshot(),windowErrors:window.__streetErrors,missingRpc:window.OfflineMissingRpcAudit,
   heroes:Object.values(game.Config.pack.t_hero).map(r=>({code:r.code,subType:r.subType,name:r.name,avatar:r.avatar,avatar2:r.avatar2,halfPic:r.halfPic,model:r.model,pictureDraw:r.pictureDraw,normalSkill:r.normalSkill,actSkill:r.actSkill})),
   skins:Object.values(config.HeroDermaLO.Store).map(r=>r),
   owned:game.GameMVC.heroPy.heroBag.getItems().map(r=>({uuid:r.uuid,code:r.code,id:r.config.subType})),

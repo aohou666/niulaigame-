@@ -54,6 +54,8 @@
 <script src="character-art.js?v=20261029-21"></script>
 <script src="street-art-data.js?v=20261029-23"></script>
 <script src="street-art.js?v=20261029-23"></script>
+<script src="street-effects-data.js?v=20261029-24"></script>
+<script src="street-effects.js?v=20261029-24"></script>
 <script src="character-reskin.js?v=20261029-23"></script>
 <script src="character-idle-data.js?v=20261021-clean2"></script>
 <script src="character-idle-atlas-data.js?v=20261029-23"></script>
@@ -2075,6 +2077,7 @@
                         if (game.GameMVC.worldKingPy) game.GameMVC.worldKingPy.GetWorldKingInfo();
                     }
                     if (window.CharacterIdle) window.CharacterIdle.install();
+                    if (window.StreetEffects) window.StreetEffects.install();
                     function mergeLocalCosts(costs) {
                         var merged = {};
                         (costs || []).forEach(function (cost) {

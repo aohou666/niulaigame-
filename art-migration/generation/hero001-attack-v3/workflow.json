@@ -1,0 +1,133 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "prompt": "One full-body game attack key pose of the EXACT golden anthropomorphic bull in this reference, same golden swept hair, small black horns, purple muzzle, navy suit, white shirt and red tie. Three-quarter view facing RIGHT, a strong straight RIGHTWARD punch. Keep the entire extended fist INSIDE the canvas with at least 12 percent empty margin beyond the knuckles. NO foreshortened giant fist towards the camera. Use a pulled-back view, subject only 65 percent of canvas height. Entire body and both shoes visible. Fixed centered feet; body must not travel across the canvas. Premium 2.5D semi-realistic semi-cartoon absurd modern neighborhood mobile-game sprite, tactile cloth, soft warm light. Solid white background for alpha matting. Single character only, no text, no extra objects, no VFX, no border clipping.",
+      "negative_prompt": "blurry, cropped body, duplicate character, watermark, unreadable text, medieval armor, ancient Chinese costume",
+      "resolution": 768,
+      "images.image_1": [
+        "8",
+        0
+      ]
+    }
+  },
+  "5": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "seed": 202610290103,
+      "steps": 28,
+      "cfg": 4,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "4",
+        1
+      ],
+      "latent_image": [
+        "4",
+        2
+      ],
+      "denoise": 1
+    }
+  },
+  "6": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "5",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "7": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "6",
+        0
+      ],
+      "filename_prefix": "street-reskin/qwen"
+    }
+  },
+  "8": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "street_3f05598180464de7.png"
+    }
+  },
+  "11": {
+    "class_type": "SplitImageWithAlpha",
+    "inputs": {
+      "image": [
+        "6",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "easy imageRemBg",
+    "inputs": {
+      "images": [
+        "11",
+        0
+      ],
+      "rem_mode": "RMBG-1.4",
+      "image_output": "Hide",
+      "save_prefix": "street-reskin/matte",
+      "add_background": "none",
+      "torchscript_jit": false,
+      "refine_foreground": false
+    }
+  },
+  "10": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "9",
+        0
+      ],
+      "filename_prefix": "street-reskin/hero001_attack_alpha"
+    }
+  }
+}
