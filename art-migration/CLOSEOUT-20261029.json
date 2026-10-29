@@ -1,0 +1,1116 @@
+{
+  "authorizedWindowShanghai": [
+    "2026-10-29T10:00:00+08:00",
+    "2026-10-29T20:00:00+08:00"
+  ],
+  "runtimeFrozenCommit": "1a675b0e8db3f130815d35346ad6b471d89510b4",
+  "allObjectivesComplete": false,
+  "portraits": {
+    "integrated": 85,
+    "total": 85,
+    "percent": 100
+  },
+  "suppliedFullIdleSequences": {
+    "integrated": 85,
+    "total": 85,
+    "percent": 100
+  },
+  "attackAndSkillBodies": {
+    "integrated": 68,
+    "total": 85,
+    "percent": 80,
+    "pendingIds": [
+      12,
+      46,
+      49,
+      51,
+      52,
+      53,
+      60,
+      61,
+      63,
+      64,
+      72,
+      73,
+      79,
+      80,
+      83,
+      84,
+      85
+    ]
+  },
+  "hurtBodies": {
+    "integrated": 2,
+    "total": 85,
+    "percent": 2.3529
+  },
+  "runBodies": {
+    "integrated": 2,
+    "total": 85,
+    "percent": 2.3529
+  },
+  "fullyCompleteCharacters": {
+    "integrated": 0,
+    "total": 85,
+    "percent": 0
+  },
+  "independentExtraSkins": {
+    "integrated": 0,
+    "total": 125,
+    "percent": 0
+  },
+  "supplemental13": "Outside85: independent portrait, idle, attack, skill, hurt integrated; no authored run slot. Not a fully completed character.",
+  "newGraphicResourceBindings": 68,
+  "effectFamilies": 7,
+  "effectModels": 14,
+  "bodyAtlasFrames": 5329,
+  "nativeModelActionsVerified": 288,
+  "idleAtlasPages": 421,
+  "idleAtlasFramesAcrossProfiles": 10402,
+  "pendingPackedRegions": 81408,
+  "pendingNativeAnimations": 6821,
+  "pendingUiSheetRegions": 2279,
+  "knownOpenIssues": [
+    {
+      "id": "DETAIL-NULL-REJECTION",
+      "status": "investigating",
+      "observed": "One85detail audit emitted two unhandled null Promise rejections (four browser/CDP records); all85 detail checks themselves passed.",
+      "evidence": "versions/0.34.0/detail-null-rejection-attempt1.json",
+      "rechecks": "Promise origin instrumentation yielded no null traces; subsequent full85detail rerun passed with zero browser exceptions. Intermittent cause not established.",
+      "next": "Capture RESOURCE ITEM_LOAD_ERROR name/url plus network/request failures before any intermittent null rejection; do not suppress null errors or claim root cause fixed.",
+      "additionalObservation": "v0.40 hero6 random8hell battle also emitted two null Promise rejections. Exact recorded enemy setup recheck passed;12 new12second samples passed with0 errors/HTTP/resource-event failures. RES legacy callback APIs statically reject(null) on resource failure, but original failing resource not captured: causal link unproven.",
+      "additionalEvidence": "versions/0.40.0/body-battle-lane2-null-attempt.json; versions/0.40.0/null-stress-summary.json"
+    },
+    {
+      "id": "RESOURCE-LOAD-015",
+      "status": "investigating",
+      "observed": "Full54 battle hero21 emitted new background image RES load failure. Exact8enemy isolated rerun had0 browser/resource errors but no target skill halfway. HTTP200/920495bytes/SHA intact.",
+      "evidence": "versions/0.44.0/full-battle-lane8794.json; versions/0.45.0/hero21-isolated-resource-recheck.json",
+      "next": "Capture requestfailed URL/net error on recurrence. Concurrent startup connection refusal was separately observed and mitigated with128listen backlog; historical RES failure causal link not established."
+    }
+  ],
+  "full85DetailAuditPassed": 85,
+  "generatedRuntimeGitDependenciesVerified": 1616,
+  "performanceScope": "15s headless Chrome sample at480x900 on this Windows PC; concurrent audit processes may still run. Not mobile/APK or universal no-stutter validation.",
+  "performance15s": {
+    "frames": 901,
+    "frameIntervalP50": 16.69999999999891,
+    "frameIntervalP95": 16.799999999999272,
+    "framesOver100ms": 0,
+    "errors": [],
+    "failed": []
+  },
+  "newApkBuilt": false,
+  "allArtReplaced": false,
+  "zeroBugsClaimed": false,
+  "zeroStutterClaimed": false,
+  "queueAtFreeze": {
+    "checkedUtc": "2026-10-29T11:59:35.896801+00:00",
+    "deadlineUtc": "2026-10-29T12:00:00+00:00",
+    "jobs": {
+      "generated-unreviewed": 448,
+      "failed": 3,
+      "superseded": 174
+    },
+    "running": [],
+    "pending": 0,
+    "status": "active"
+  },
+  "deadlineQueueShutdown": {
+    "checkedUtc": "2026-10-29T12:02:02.520537+00:00",
+    "ownPending": [],
+    "ownRunning": [],
+    "foreignPendingCount": 0,
+    "foreignRunningCount": 0,
+    "worker": {
+      "checkedUtc": "2026-10-29T12:00:21.016181+00:00",
+      "deadlineUtc": "2026-10-29T12:00:00+00:00",
+      "status": "deadline-stopped",
+      "cancelledPending": [],
+      "interruptedRunning": []
+    },
+    "automationDeleted": [
+      "automation",
+      "20"
+    ],
+    "runtimeChangesStoppedAtDeadline": true,
+    "newGenerationStoppedAtDeadline": true
+  },
+  "roster85": [
+    {
+      "id": 1,
+      "name": "懂子",
+      "portraitBindingsChecked": 16,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng",
+        "paobu",
+        "shouji"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 2,
+      "name": "老八",
+      "portraitBindingsChecked": 20,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 3,
+      "name": "西瓜摊主",
+      "portraitBindingsChecked": 16,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 4,
+      "name": "带派姐",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 5,
+      "name": "草地牛",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng",
+        "paobu",
+        "shouji"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 6,
+      "name": "刀盾牛",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 7,
+      "name": "血月",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 8,
+      "name": "耄耋",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 9,
+      "name": "外卖牛",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 53,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 10,
+      "name": "蓝色妖姬",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 11,
+      "name": "阿伟",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 73,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 12,
+      "name": "绿灯牛",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 14,
+      "name": "牛保安",
+      "portraitBindingsChecked": 4,
+      "suppliedIndependentIdleFrameCount": 55,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 15,
+      "name": "攻略牛",
+      "portraitBindingsChecked": 4,
+      "suppliedIndependentIdleFrameCount": 54,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 16,
+      "name": "锤王",
+      "portraitBindingsChecked": 4,
+      "suppliedIndependentIdleFrameCount": 50,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 17,
+      "name": "仔仔",
+      "portraitBindingsChecked": 4,
+      "suppliedIndependentIdleFrameCount": 104,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 18,
+      "name": "肘击牛",
+      "portraitBindingsChecked": 16,
+      "suppliedIndependentIdleFrameCount": 73,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 19,
+      "name": "马宝果",
+      "portraitBindingsChecked": 24,
+      "suppliedIndependentIdleFrameCount": 73,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 20,
+      "name": "卧龙羽客",
+      "portraitBindingsChecked": 20,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 21,
+      "name": "顶甄",
+      "portraitBindingsChecked": 16,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 22,
+      "name": "机器牛",
+      "portraitBindingsChecked": 16,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 23,
+      "name": "冬泳牛",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 26,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 24,
+      "name": "鸡",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 102,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 25,
+      "name": "强子",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 26,
+      "name": "香蕉牛",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 27,
+      "name": "牛",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 69,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 28,
+      "name": "秀才",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 29,
+      "name": "奶蛙",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 73,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 30,
+      "name": "牛大妈",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 52,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 31,
+      "name": "丧尸牛",
+      "portraitBindingsChecked": 4,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 32,
+      "name": "咏春牛",
+      "portraitBindingsChecked": 4,
+      "suppliedIndependentIdleFrameCount": 55,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 33,
+      "name": "双马尾",
+      "portraitBindingsChecked": 4,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 34,
+      "name": "松鼠牛",
+      "portraitBindingsChecked": 4,
+      "suppliedIndependentIdleFrameCount": 55,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 35,
+      "name": "赛博牛",
+      "portraitBindingsChecked": 4,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 36,
+      "name": "回眸牛",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 37,
+      "name": "辛巴巴巴",
+      "portraitBindingsChecked": 16,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 38,
+      "name": "戾墟咆主",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 73,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 39,
+      "name": "囡囡",
+      "portraitBindingsChecked": 16,
+      "suppliedIndependentIdleFrameCount": 73,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 40,
+      "name": "包租牛",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 71,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 41,
+      "name": "鼠",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 54,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 42,
+      "name": "小可爱",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 43,
+      "name": "赵海牛",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 53,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 44,
+      "name": "煎饼师傅",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 53,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 45,
+      "name": "僵尸牛",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 46,
+      "name": "钓鱼佬",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 47,
+      "name": "狗",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 28,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 48,
+      "name": "烤串师傅",
+      "portraitBindingsChecked": 4,
+      "suppliedIndependentIdleFrameCount": 55,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 49,
+      "name": "羊",
+      "portraitBindingsChecked": 4,
+      "suppliedIndependentIdleFrameCount": 53,
+      "nativeBodyActionsIntegrated": [],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 50,
+      "name": "风姐",
+      "portraitBindingsChecked": 4,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 51,
+      "name": "嘎子",
+      "portraitBindingsChecked": 4,
+      "suppliedIndependentIdleFrameCount": 51,
+      "nativeBodyActionsIntegrated": [],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 52,
+      "name": "鸽鸽",
+      "portraitBindingsChecked": 4,
+      "suppliedIndependentIdleFrameCount": 73,
+      "nativeBodyActionsIntegrated": [],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 53,
+      "name": "外星牛",
+      "portraitBindingsChecked": 24,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 54,
+      "name": "驱鬼道长",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 73,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 55,
+      "name": "嬛嬛",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 122,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 56,
+      "name": "鼠鼠",
+      "portraitBindingsChecked": 16,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 57,
+      "name": "油腻牛",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 58,
+      "name": "鲨鲨",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 59,
+      "name": "牛新娘",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 73,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 60,
+      "name": "算命牛",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 70,
+      "nativeBodyActionsIntegrated": [],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 61,
+      "name": "大胃王",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 62,
+      "name": "鳄鳄",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 63,
+      "name": "麻将牛爷",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 33,
+      "nativeBodyActionsIntegrated": [],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 64,
+      "name": "扫地僧",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 40,
+      "nativeBodyActionsIntegrated": [],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 65,
+      "name": "阿狸",
+      "portraitBindingsChecked": 4,
+      "suppliedIndependentIdleFrameCount": 53,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 66,
+      "name": "猪",
+      "portraitBindingsChecked": 4,
+      "suppliedIndependentIdleFrameCount": 54,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 67,
+      "name": "舞牛",
+      "portraitBindingsChecked": 4,
+      "suppliedIndependentIdleFrameCount": 72,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 68,
+      "name": "懵牛",
+      "portraitBindingsChecked": 4,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 69,
+      "name": "平淡牛",
+      "portraitBindingsChecked": 4,
+      "suppliedIndependentIdleFrameCount": 104,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 70,
+      "name": "三叉戟将军",
+      "portraitBindingsChecked": 4,
+      "suppliedIndependentIdleFrameCount": 121,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 71,
+      "name": "青衣扇牛",
+      "portraitBindingsChecked": 4,
+      "suppliedIndependentIdleFrameCount": 28,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 72,
+      "name": "花脸枪牛",
+      "portraitBindingsChecked": 4,
+      "suppliedIndependentIdleFrameCount": 21,
+      "nativeBodyActionsIntegrated": [],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 73,
+      "name": "恐龙牛",
+      "portraitBindingsChecked": 4,
+      "suppliedIndependentIdleFrameCount": 104,
+      "nativeBodyActionsIntegrated": [],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 74,
+      "name": "头套牛",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 75,
+      "name": "变异牛",
+      "portraitBindingsChecked": 5,
+      "suppliedIndependentIdleFrameCount": 54,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 76,
+      "name": "虎",
+      "portraitBindingsChecked": 4,
+      "suppliedIndependentIdleFrameCount": 91,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 77,
+      "name": "佛系牛",
+      "portraitBindingsChecked": 8,
+      "suppliedIndependentIdleFrameCount": 73,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 78,
+      "name": "咕咕嘎嘎",
+      "portraitBindingsChecked": 4,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 79,
+      "name": "传奇牛",
+      "portraitBindingsChecked": 4,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 80,
+      "name": "舞狮牛",
+      "portraitBindingsChecked": 8,
+      "suppliedIndependentIdleFrameCount": 71,
+      "nativeBodyActionsIntegrated": [],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 81,
+      "name": "兔",
+      "portraitBindingsChecked": 4,
+      "suppliedIndependentIdleFrameCount": 60,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 82,
+      "name": "杰哥",
+      "portraitBindingsChecked": 8,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 83,
+      "name": "金龙",
+      "portraitBindingsChecked": 12,
+      "suppliedIndependentIdleFrameCount": 100,
+      "nativeBodyActionsIntegrated": [],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 84,
+      "name": "蛇",
+      "portraitBindingsChecked": 4,
+      "suppliedIndependentIdleFrameCount": 54,
+      "nativeBodyActionsIntegrated": [],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 85,
+      "name": "猴",
+      "portraitBindingsChecked": 8,
+      "suppliedIndependentIdleFrameCount": 54,
+      "nativeBodyActionsIntegrated": [],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    },
+    {
+      "id": 94,
+      "name": "许老",
+      "portraitBindingsChecked": 8,
+      "suppliedIndependentIdleFrameCount": 56,
+      "nativeBodyActionsIntegrated": [
+        "gongji",
+        "jineng"
+      ],
+      "independentExtraSkinsCompleted": 0,
+      "wholeCharacterComplete": false
+    }
+  ],
+  "status": "closed-at-user-deadline-incomplete",
+  "automationStatus": "Both task heartbeat automations deleted; chat not archived."
+}
