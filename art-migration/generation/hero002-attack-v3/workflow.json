@@ -1,0 +1,133 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "prompt": "Create ONE full-body production attack pose of the EXACT bull in the attached identity reference: black eye mask, black horns, short black hair, dark brown sweater, dark jeans, white sole black sneakers, long wood-bead necklace. CRITICAL PROP CONTINUITY: the walnut remains in the SAME hand as the reference throughout: his anatomical RIGHT hand, which is on the VIEWER LEFT side when he faces us. Keep that right hand holding the walnut raised near his right shoulder on the LEFT side of the canvas. Do NOT transfer the walnut to the other hand, do NOT duplicate it. His OTHER anatomical LEFT hand (viewer RIGHT) is empty and makes a forward palm strike to the RIGHT side of the canvas. Three-quarter body turned slightly RIGHT but keep both arms and the held walnut clearly separated, no crossing hands. Same identity and outfit. Entire head, horns, all fingers and BOTH feet visible inside safe margins. Premium 2.5D semi-realistic semi-cartoon absurd modern neighborhood game art, tactile cloth and warm soft studio light, crisp readable silhouette. No VFX, no other person, no text, no watermark. Plain white background for clean alpha matting.",
+      "negative_prompt": "blurry, cropped body, duplicate character, watermark, unreadable text, medieval armor, ancient Chinese costume",
+      "resolution": 768,
+      "images.image_1": [
+        "8",
+        0
+      ]
+    }
+  },
+  "5": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "seed": 202610292020,
+      "steps": 28,
+      "cfg": 4,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "4",
+        1
+      ],
+      "latent_image": [
+        "4",
+        2
+      ],
+      "denoise": 1
+    }
+  },
+  "6": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "5",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "7": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "6",
+        0
+      ],
+      "filename_prefix": "street-reskin/qwen"
+    }
+  },
+  "8": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "street_f52e62f88af27709.png"
+    }
+  },
+  "11": {
+    "class_type": "SplitImageWithAlpha",
+    "inputs": {
+      "image": [
+        "6",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "easy imageRemBg",
+    "inputs": {
+      "images": [
+        "11",
+        0
+      ],
+      "rem_mode": "RMBG-1.4",
+      "image_output": "Hide",
+      "save_prefix": "street-reskin/matte",
+      "add_background": "none",
+      "torchscript_jit": false,
+      "refine_foreground": false
+    }
+  },
+  "10": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "9",
+        0
+      ],
+      "filename_prefix": "street-reskin/hero002_attack_continuity_alpha"
+    }
+  }
+}

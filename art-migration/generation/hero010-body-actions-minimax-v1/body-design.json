@@ -1,0 +1,395 @@
+{
+  "heroId": 10,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/010/portrait.png",
+      "prepared": "art-migration/references/body-010/idle.png",
+      "foot": [
+        384.07,
+        700
+      ],
+      "size": [
+        232,
+        620
+      ],
+      "sha256": "1dfd94dbebaf8f737dbf6d4dfc24f0aaec45de0001f2fa083826fc9afaed2a3d"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero010-attack-v2/hero010_attack_alpha_00001_.png",
+      "prepared": "art-migration/references/body-010/attack.png",
+      "foot": [
+        384.46,
+        700
+      ],
+      "size": [
+        333,
+        620
+      ],
+      "sha256": "36c4b2ba467e01fa16bcd2959863e4a0cde0849b13de93fde1b204636dd0bd7a"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero010-skill-v2/hero010_skill_alpha_00001_.png",
+      "prepared": "art-migration/references/body-010/skill.png",
+      "foot": [
+        384.34,
+        700
+      ],
+      "size": [
+        220,
+        620
+      ],
+      "sha256": "10809fcd8f90eb7851d6f943daa5e7ee6a6ad44ec9e6c7060d09cf0a948abdf4"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H010-ATK",
+        "heroId": 10,
+        "name": "蓝色妖姬",
+        "originalName": "夏侯渊",
+        "slot": "普攻",
+        "skillId": 550100110,
+        "skillName": "普通攻击",
+        "newSkillName": "幻影疾步",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "远程弹道/连线",
+        "movement": "原站位出手",
+        "weapon": "徒手／腿脚",
+        "weaponObservation": "尖头鞋",
+        "effectClass": "飞行弹道、命中/生效附着特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "收臂蓄力→拳/掌/肘击→回到待机",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B03",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_xiahouyuan_02",
+        "model": "hero_010_01",
+        "action": "gongji",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "s_wuqi_45",
+        "rawDurationMs": 1200.0,
+        "fps": 30,
+        "durationFrames": 36,
+        "rawEvents": [
+          {
+            "frame0": 24,
+            "timeMs": 800.0,
+            "type": 10,
+            "name": "zd"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "zd@800.0ms（发射/启动特效）",
+        "impactMs": [
+          1100.0
+        ],
+        "impactStatus": "发射事件＋弹道delay/dt推导；待游戏内验收",
+        "performance": {
+          "effectsPiaEnemy": [
+            {
+              "posType": 0,
+              "src": [
+                "common_skill_xiahouyuan_02_2"
+              ]
+            }
+          ],
+          "effectsTarEnemy": [
+            {
+              "dt": 300,
+              "fixedWidth": 120,
+              "offset": [
+                0,
+                -50
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_xiahouyuan_02_1"
+              ],
+              "type": 1
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_xiahouyuan_02_1",
+            "delay": 0,
+            "dt": 300,
+            "timeScale": 1,
+            "type": 1,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_xiahouyuan_02_1_4359ffbc.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_xiahouyuan_02_1",
+                  "name": "common_skill_xiahouyuan_02_1",
+                  "fps": 24,
+                  "durationFrames": 11,
+                  "durationMs": 458.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_xiahouyuan_02_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_xiahouyuan_02_2_3ca6b086.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_xiahouyuan_02_2",
+                  "name": "common_skill_xiahouyuan_02_2",
+                  "fps": 24,
+                  "durationFrames": 15,
+                  "durationMs": 625.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_xiahouyuan_02_1 delay=0 dt=300 speed=1\neffectsPiaEnemy: common_skill_xiahouyuan_02_2 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_xiahouyuan_02"
+        ],
+        "portrait": "reskin/hero_010.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H010-ULT",
+        "heroId": 10,
+        "name": "蓝色妖姬",
+        "originalName": "夏侯渊",
+        "slot": "大招",
+        "skillId": 550100210,
+        "skillName": "兵出奇疾",
+        "newSkillName": "青丘后袭",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "后排",
+        "delivery": "中场释放（远近待回放）",
+        "movement": "移到场地中部释放",
+        "weapon": "徒手／腿脚",
+        "weaponObservation": "尖头鞋",
+        "effectClass": "场景/范围特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "收臂蓄力→拳/掌/肘击→回到待机；命中覆盖由独立目标特效控制",
+        "rootPolicy": "引擎移到中场后播出手；视频不自行横穿战场",
+        "batch": "B05",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方后排造成230%伤害。",
+        "skillModel": "common_skill_xiahouyuan_01",
+        "model": "hero_010_01",
+        "action": "jineng",
+        "effectiveDesc": "对敌方后排造成230%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "s_wuqi_45",
+        "rawDurationMs": 1200.0,
+        "fps": 30,
+        "durationFrames": 36,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "__attackDoneDelay": 800,
+          "effectQP": [
+            {
+              "offset": [
+                200,
+                100
+              ],
+              "src": [
+                "common_skill_xiahouyuan_01_1"
+              ]
+            },
+            {
+              "delay": 1000,
+              "offset": [
+                200,
+                0
+              ],
+              "src": [
+                "common_skill_xiahouyuan_01_2"
+              ]
+            },
+            {
+              "delay": 1000,
+              "offset": [
+                200,
+                0
+              ],
+              "src": [
+                "common_skill_xiahouyuan_01_3"
+              ],
+              "z": 0
+            }
+          ],
+          "meFlyConfig": [
+            1,
+            300,
+            100
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectQP",
+            "resource": "common_skill_xiahouyuan_01_1",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_xiahouyuan_01_1_6e052a62.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_xiahouyuan_01_1",
+                  "name": "common_skill_xiahouyuan_01_1",
+                  "fps": 24,
+                  "durationFrames": 29,
+                  "durationMs": 1208.333,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_xiahouyuan_01_ty",
+                  "name": "common_skill_xiahouyuan_01_ty",
+                  "fps": 24,
+                  "durationFrames": 16,
+                  "durationMs": 666.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectQP",
+            "resource": "common_skill_xiahouyuan_01_2",
+            "delay": 1000,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_xiahouyuan_01_2_82b11d9a.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_xiahouyuan_01_2",
+                  "name": "common_skill_xiahouyuan_01_2",
+                  "fps": 24,
+                  "durationFrames": 21,
+                  "durationMs": 875.0,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectQP",
+            "resource": "common_skill_xiahouyuan_01_3",
+            "delay": 1000,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_xiahouyuan_01_3_739aebc4.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_xiahouyuan_01_3",
+                  "name": "common_skill_xiahouyuan_01_3",
+                  "fps": 24,
+                  "durationFrames": 20,
+                  "durationMs": 833.333,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        3
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 2,
+                      "timeMs": 83.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 6,
+                      "timeMs": 250.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 11,
+                      "timeMs": 458.333,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectQP: common_skill_xiahouyuan_01_1 delay=0 dt=None speed=1\neffectQP: common_skill_xiahouyuan_01_2 delay=1000 dt=None speed=1\neffectQP: common_skill_xiahouyuan_01_3 delay=1000 dt=None speed=1 事件=pia@83.3,pia@250.0,pia@458.3",
+        "variants": [
+          "common_skill_xiahouyuan_01"
+        ],
+        "portrait": "reskin/hero_010.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false
+}

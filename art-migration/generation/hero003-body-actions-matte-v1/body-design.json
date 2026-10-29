@@ -1,0 +1,725 @@
+{
+  "heroId": 3,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/003/portrait.png",
+      "prepared": "art-migration/references/body-003/idle.png",
+      "foot": [
+        384.38,
+        700
+      ],
+      "size": [
+        379,
+        620
+      ],
+      "sha256": "0ff37a86ea2c0a2d05299ea54535d2a246febd49f7a71d345ed5f894826e0dad"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero003-attack-v2/hero003_attack_alpha_00001_.png",
+      "prepared": "art-migration/references/body-003/attack.png",
+      "foot": [
+        383.55,
+        700
+      ],
+      "size": [
+        415,
+        620
+      ],
+      "sha256": "269a9cd04c9c3e85ba8481e7511f8dd61367ac02eabf7ecf2462f332253d7053"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero003-skill-v2/hero003_skill_alpha_00001_.png",
+      "prepared": "art-migration/references/body-003/skill.png",
+      "foot": [
+        383.8,
+        700
+      ],
+      "size": [
+        390,
+        620
+      ],
+      "sha256": "5e6f0147cd804dae417a9a922c16bd61c0032121fb8f0a07612f5ddecca97f35"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H003-ATK",
+        "heroId": 3,
+        "name": "西瓜摊主",
+        "originalName": "张辽",
+        "slot": "普攻",
+        "skillId": 550030110,
+        "skillName": "普通攻击",
+        "newSkillName": "摊前试刃",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "近身攻击",
+        "movement": "移到目标前出手",
+        "weapon": "西瓜道具",
+        "weaponObservation": "西瓜",
+        "effectClass": "命中/生效附着特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "现有道具蓄势→挥动或释放能量→复位；不自动丢失道具",
+        "rootPolicy": "引擎负责接近与返回；视频固定根位置，只做出手",
+        "batch": "B02",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_wangyun_02",
+        "model": "hero_003_01",
+        "action": "gongji",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "wuqi31、wuqi32、wuqi12、wuqi11",
+        "rawDurationMs": 666.667,
+        "fps": 30,
+        "durationFrames": 20,
+        "rawEvents": [
+          {
+            "frame0": 6,
+            "timeMs": 200.0,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@200.0ms（角色事件）",
+        "impactMs": [
+          200.0
+        ],
+        "impactStatus": "角色pia直接回调；待游戏内验收",
+        "performance": {
+          "effectsPiaEnemy": [
+            {
+              "delay": 0,
+              "posType": 0,
+              "src": [
+                "common_skill_wangyun_02"
+              ],
+              "type": 0
+            }
+          ],
+          "effectsPiaUs": [
+            {
+              "delay": 0,
+              "posType": 0,
+              "src": [
+                "common_skill_wangyun_02"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            2,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_wangyun_02",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_wangyun_02_279a9541.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_wangyun_02",
+                  "name": "common_skill_wangyun_02",
+                  "fps": 24,
+                  "durationFrames": 13,
+                  "durationMs": 541.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaUs",
+            "resource": "common_skill_wangyun_02",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_wangyun_02_279a9541.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_wangyun_02",
+                  "name": "common_skill_wangyun_02",
+                  "fps": 24,
+                  "durationFrames": 13,
+                  "durationMs": 541.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsPiaEnemy: common_skill_wangyun_02 delay=0 dt=None speed=1\neffectsPiaUs: common_skill_wangyun_02 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_wangyun_02"
+        ],
+        "portrait": "reskin/hero_003.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H003-ULT",
+        "heroId": 3,
+        "name": "西瓜摊主",
+        "originalName": "张辽",
+        "slot": "大招",
+        "skillId": 550030210,
+        "skillName": "怒意狂击",
+        "newSkillName": "震霄破强",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "近身攻击",
+        "movement": "移到目标前出手",
+        "weapon": "西瓜道具",
+        "weaponObservation": "西瓜",
+        "effectClass": "施法者特效、目标位置特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "现有道具蓄势→挥动或释放能量→复位；不自动丢失道具",
+        "rootPolicy": "引擎负责接近与返回；视频固定根位置，只做出手",
+        "batch": "B07",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方攻击力最高单体造成400%伤害,本次攻击忽视目标40%防御。",
+        "skillModel": "common_skill_zhangliao_02",
+        "model": "hero_003_01",
+        "action": "jineng",
+        "effectiveDesc": "对敌方攻击力最高单体造成400%伤害,本次攻击忽视目标40%防御。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "wuqi31、wuqi32、wuqi12、wuqi11",
+        "rawDurationMs": 1566.667,
+        "fps": 30,
+        "durationFrames": 47,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "allAttkDelayOffset": -550,
+          "effectSrc": [
+            {
+              "delay": 0,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 4,
+              "action": [
+                "common_skill_zhangliao_tiwenji_02_5"
+              ],
+              "src": [
+                "common_skill_zhangliao_tiwenji_02_1"
+              ]
+            }
+          ],
+          "effectsTarEnemy": [
+            {
+              "delay": 130,
+              "offset": [
+                -200,
+                30
+              ],
+              "posType": 0,
+              "src": [
+                "common_skill_zhangliao_03"
+              ],
+              "status2Src": {
+                "2": "common_skill_zhangliao_04"
+              },
+              "type": 0
+            },
+            {
+              "delay": 600,
+              "offset": [
+                -200,
+                30
+              ],
+              "posType": 0,
+              "src": [
+                "common_skill_zhangliao_02"
+              ],
+              "status2Src": {
+                "2": "common_skill_zhangliao_04"
+              },
+              "type": 0
+            },
+            {
+              "delay": 800,
+              "offset": [
+                -200,
+                30
+              ],
+              "posType": 0,
+              "src": [
+                "common_skill_zhangliao_03"
+              ],
+              "status2Src": {
+                "2": "common_skill_zhangliao_04"
+              },
+              "type": 0
+            },
+            {
+              "delay": 1000,
+              "offset": [
+                -200,
+                30
+              ],
+              "posType": 0,
+              "src": [
+                "common_skill_zhangliao_02"
+              ],
+              "status2Src": {
+                "2": "common_skill_zhangliao_04"
+              },
+              "type": 0
+            },
+            {
+              "delay": 1200,
+              "offset": [
+                -200,
+                30
+              ],
+              "posType": 0,
+              "src": [
+                "common_skill_zhangliao_03"
+              ],
+              "status2Src": {
+                "2": "common_skill_zhangliao_04"
+              },
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            2,
+            0,
+            0
+          ],
+          "forcePiaCount": 5
+        },
+        "effectDetails": [
+          {
+            "layer": "effectSrc",
+            "resource": "common_skill_zhangliao_tiwenji_02_1",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": [
+              "common_skill_zhangliao_tiwenji_02_5"
+            ],
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhangliao_tiwenji_02_1_adc1322f.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhangliao_tiwenji_02_1",
+                  "name": "common_skill_zhangliao_tiwenji_02_1",
+                  "fps": 24,
+                  "durationFrames": 45,
+                  "durationMs": 1875.0,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_zhangliao_tiwenji_02_1",
+                  "name": "common_skill_zhangliao_tiwenji_02_2",
+                  "fps": 24,
+                  "durationFrames": 45,
+                  "durationMs": 1875.0,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_zhangliao_tiwenji_02_1",
+                  "name": "common_skill_zhangliao_tiwenji_02_3",
+                  "fps": 24,
+                  "durationFrames": 45,
+                  "durationMs": 1875.0,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_zhangliao_tiwenji_02_1",
+                  "name": "common_skill_zhangliao_tiwenji_02_4",
+                  "fps": 24,
+                  "durationFrames": 45,
+                  "durationMs": 1875.0,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_zhangliao_tiwenji_02_1",
+                  "name": "common_skill_zhangliao_tiwenji_02_5",
+                  "fps": 24,
+                  "durationFrames": 45,
+                  "durationMs": 1875.0,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_zhangliao_tiwenji_02_1",
+                  "name": "common_skill_zhangliao_tiwenji_02_6",
+                  "fps": 24,
+                  "durationFrames": 45,
+                  "durationMs": 1875.0,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_zhangliao_tiwenji_02_1",
+                  "name": "common_skill_zhangliao_tiwenji_02_7",
+                  "fps": 24,
+                  "durationFrames": 45,
+                  "durationMs": 1875.0,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_zhangliao_tiwenji_02_1",
+                  "name": "common_skill_zhangliao_tiwenji_02_8",
+                  "fps": 24,
+                  "durationFrames": 45,
+                  "durationMs": 1875.0,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_zhangliao_tiwenji_02_1",
+                  "name": "common_skill_zhangliao_tiwenji_02_9",
+                  "fps": 24,
+                  "durationFrames": 45,
+                  "durationMs": 1875.0,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_zhangliao_yaohuan",
+                  "name": "tiwenji",
+                  "fps": 24,
+                  "durationFrames": 52,
+                  "durationMs": 2166.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_zhangliao_03",
+            "delay": 130,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhangliao_03_2c090df.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhangliao_03",
+                  "name": "common_skill_zhangliao_03",
+                  "fps": 24,
+                  "durationFrames": 18,
+                  "durationMs": 750.0,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        1
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 2,
+                      "timeMs": 83.333,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_zhangliao_02",
+            "delay": 600,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhangliao_02_e04857d2.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhangliao_02",
+                  "name": "common_skill_zhangliao_02",
+                  "fps": 24,
+                  "durationFrames": 18,
+                  "durationMs": 750.0,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        1
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 2,
+                      "timeMs": 83.333,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_zhangliao_03",
+            "delay": 800,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhangliao_03_2c090df.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhangliao_03",
+                  "name": "common_skill_zhangliao_03",
+                  "fps": 24,
+                  "durationFrames": 18,
+                  "durationMs": 750.0,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        1
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 2,
+                      "timeMs": 83.333,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_zhangliao_02",
+            "delay": 1000,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhangliao_02_e04857d2.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhangliao_02",
+                  "name": "common_skill_zhangliao_02",
+                  "fps": 24,
+                  "durationFrames": 18,
+                  "durationMs": 750.0,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        1
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 2,
+                      "timeMs": 83.333,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_zhangliao_03",
+            "delay": 1200,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_zhangliao_03_2c090df.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_zhangliao_03",
+                  "name": "common_skill_zhangliao_03",
+                  "fps": 24,
+                  "durationFrames": 18,
+                  "durationMs": 750.0,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        1
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 2,
+                      "timeMs": 83.333,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectSrc: common_skill_zhangliao_tiwenji_02_1 delay=0 dt=None speed=1\neffectsTarEnemy: common_skill_zhangliao_03 delay=130 dt=None speed=1 事件=pia@83.3\neffectsTarEnemy: common_skill_zhangliao_02 delay=600 dt=None speed=1 事件=pia@83.3\neffectsTarEnemy: common_skill_zhangliao_03 delay=800 dt=None speed=1 事件=pia@83.3\neffectsTarEnemy: common_skill_zhangliao_02 delay=1000 dt=None speed=1 事件=pia@83.3\neffectsTarEnemy: common_skill_zhangliao_03 delay=1200 dt=None speed=1 事件=pia@83.3",
+        "variants": [
+          "common_skill_zhangliao_02"
+        ],
+        "portrait": "reskin/hero_003.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "approved-for-matting",
+  "runtimeIntegrated": false,
+  "sourceBodyJob": "art-migration/generation/hero003-body-actions-minimax-v1",
+  "sourceFrameOrder": [
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00001_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00002_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00003_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00004_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00005_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00006_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00007_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00008_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00009_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00010_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00011_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00012_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00013_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00014_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00015_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00016_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00017_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00018_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00019_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00020_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00021_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00022_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00023_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00024_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00025_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00026_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00027_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00028_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00029_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00030_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00031_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00032_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00033_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00034_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00035_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00036_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00037_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00038_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00039_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00040_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00041_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00042_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00043_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00044_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00045_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00046_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00047_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00048_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00049_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00050_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00051_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00052_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00053_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00054_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00055_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00056_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00057_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00058_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00059_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00060_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00061_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00062_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00063_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00064_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00065_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00066_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00067_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00068_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00069_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00070_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00071_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00072_.png",
+    "art-migration/generation/hero003-body-actions-minimax-v1/hero003_body_00073_.png"
+  ]
+}

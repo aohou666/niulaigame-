@@ -50,3 +50,15 @@
 - 人物动作73帧压成1600×1552、1,619,346字节WebP，按原RGB加alpha防暗边。真实8791战斗查看通过，85详情/841绑定复查通过，待推送规则依然为0.26完成后。
 - 新street_body_batch.py只接受人工批准的姿势；2–6已front排队，按各自原计划bodyDesign/weaponObservation生成73帧身体。7–32姿势50张联系表看过并批准为guide，未生成身体。下一步可扩展批次，但先审2–6全帧和抠像，不自动批准。
 - v3-fastdecode实际241.999秒，与v2的242.162秒相近，无明显加速，不要误报。
+
+## 最新0.26远端与0.27
+- v0.26 commit31def49e311779676bac277de0f4866a8a154bee已push delivery HEAD:main并ls-remote核对一致；本轮0.24–0.26三版同步完成。下一次按0.27–0.29三版后推送。
+- 0.26实际替换21通用控件，官方新8图标+新按钮源8语义颜色变体，测试证据versions/0.26.0；原尺寸/九宫格/后加载图集不覆盖/真实游戏页面通过。
+- 0.27维修队长3资源含真正当前可见`_hero_m_json.wujiang_img_renwu`（只改独立main_img_zhujue_png并不影响这个页面，已纠正）。查看调整后的实际页面完整。资产street-art-data/js与UI子区域2304完整清单已增加。0.27复查已生成，待本地提交。
+- 新UI控件专项工具支持--version=0.27.0，避免覆盖已提交0.26证据；主角专项street-protagonist-runtime-test.mjs确证实际eui纹理，页面属性点击仅出现tooltip，这是预期行为。
+- ID3身体全帧/放大复查通过、matte73已完成；ID8同样通过、matte已排队。下一步用通用打包/原时钟映射接入。当前street_body_atlas.py仍只硬编码ID1，需泛化而不覆盖已有数据。
+- ID2 body被拒绝：核桃在idle右手和旧guide左手间切换。2攻/技v2批准已撤回，新的2攻/技v3实际已输出、qa pending，尚需看图，勿直接批准。之后要用body_batch --revision=2重做。
+- 并排参考对照9/14/15/24/25/30/31发现道具/皮肤错误，全部14张v2 guide退回，v3正在队列，实际修正规则art-migration/prop-continuity-overrides.json；street_pose_continuity.py可复用，body_batch已读取override。
+- ID7 bodyv1白刀光13/14、45–47越出画面，已拒绝；v2 height500而非620、紧凑刺剑，不要误用v1。body_batch新增--revision、--height，并使用版本化输入文件和参考文件夹，保留旧输入。
+- 7/8/10/11/12 bodyv1已排队，7/8完成；4/5/6仍后部排队。其余有批准guide的16/17/18/19/20/21/22/23/26/27/28/29/32尚未提交body，可适度扩展，但必须全帧看完后再matte/接入。
+- 0.27源prompts/repair-captain.txt保存原生成、裁切修订、独立全身生成三次prompt。全身source有光晕，最终PNG使用原RGB+RMBGalpha，原源保留。

@@ -33,6 +33,8 @@ def main():
   if logfile.exists():
    log=json.loads(logfile.read_text('utf8'));browser_logs[mode]={'exceptions':len(log['errors']),'failedResponses':log['failed']}
  report={'version':a.version,'reviewedUtc':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'characterImageBindings':checked,'bindingErrors':errors,'originalManifestEntriesChecked':len(manifest['resources']),'missingOriginals':missing,'detailRuntime':runtime,'browserLogs':browser_logs,'idleAtlas':atlas,'originalArtNotYetFullyReplaced':dict(pending),'packedRegionsNotYetReplaced':pending_regions,'animationsNotYetReplaced':pending_animations,'allArtReplaced':False,'zeroBugsClaimed':False,'visualReview':'Contact sheets and key game screens; this is not a visual sign-off for every original resource.'}
+ ui_file=OUT/'ui-regions.jsonl';ui_rows=[json.loads(line) for line in ui_file.read_text('utf8').splitlines()] if ui_file.exists() else []
+ report['uiSheetRegionsNotYetReplaced']=sum(r['status']!='complete' for r in ui_rows)
  folder=OUT/'versions'/a.version;folder.mkdir(parents=True,exist_ok=True)
  (folder/'review.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n','utf8')
  font=ImageFont.truetype('C:/Windows/Fonts/msyh.ttc',20)

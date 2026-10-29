@@ -1,0 +1,362 @@
+{
+  "heroId": 12,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/012/portrait.png",
+      "prepared": "art-migration/references/body-012/idle.png",
+      "foot": [
+        383.97,
+        700
+      ],
+      "size": [
+        321,
+        620
+      ],
+      "sha256": "dfa97586f35e6768e2691a0d117d826af8f4704d051da668761fed11944847ac"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero012-attack-v2/hero012_attack_alpha_00001_.png",
+      "prepared": "art-migration/references/body-012/attack.png",
+      "foot": [
+        383.67,
+        700
+      ],
+      "size": [
+        320,
+        620
+      ],
+      "sha256": "675bb1f048c7b6d8422f32802bafc18bd0034cd5042a1e4d57293b7dc1ad1b44"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero012-skill-v2/hero012_skill_alpha_00001_.png",
+      "prepared": "art-migration/references/body-012/skill.png",
+      "foot": [
+        383.92,
+        700
+      ],
+      "size": [
+        376,
+        620
+      ],
+      "sha256": "f5e2448a795ddeb6b571c771b2c5dd1c4922e9f0f748109d04302097b4931a7c"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        35
+      ],
+      "guideImpactFrame": 16,
+      "native": {
+        "taskId": "H012-ATK",
+        "heroId": 12,
+        "name": "绿灯牛",
+        "originalName": "孔融",
+        "slot": "普攻",
+        "skillId": 550120110,
+        "skillName": "普通攻击",
+        "newSkillName": "绿灯轻触",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "远程弹道/连线",
+        "movement": "原站位出手",
+        "weapon": "徒手／手势",
+        "weaponObservation": "HP标识帽，无手持武器",
+        "effectClass": "飞行弹道、命中/生效附着特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "收臂蓄力→拳/掌/肘击→回到待机",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B03",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_kongrong_01",
+        "model": "hero_012_01",
+        "action": "gongji",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 966.667,
+        "fps": 30,
+        "durationFrames": 29,
+        "rawEvents": [
+          {
+            "frame0": 16,
+            "timeMs": 533.333,
+            "type": 10,
+            "name": "zd"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "zd@533.3ms（发射/启动特效）",
+        "impactMs": [
+          733.333
+        ],
+        "impactStatus": "发射事件＋弹道delay/dt推导；待游戏内验收",
+        "performance": {
+          "effectsPiaEnemy": [
+            {
+              "posType": 0,
+              "src": [
+                "common_skill_kongrong_01_2"
+              ]
+            }
+          ],
+          "effectsPiaUs": [
+            {
+              "posType": 0,
+              "src": [
+                "common_skill_kongrong_01_2"
+              ]
+            }
+          ],
+          "effectsTarEnemy": [
+            {
+              "dt": 200,
+              "fixedWidth": 50,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 0,
+              "src": [
+                "common_skill_kongrong_01_1"
+              ],
+              "type": 1
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_kongrong_01_1",
+            "delay": 0,
+            "dt": 200,
+            "timeScale": 1,
+            "type": 1,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_kongrong_01_1_7c4f91e3.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_kongrong_01_1",
+                  "name": "common_skill_kongrong_01_1",
+                  "fps": 24,
+                  "durationFrames": 1,
+                  "durationMs": 41.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_kongrong_01_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_kongrong_01_2_c302c555.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_kongrong_01_2",
+                  "name": "common_skill_kongrong_01_2",
+                  "fps": 24,
+                  "durationFrames": 17,
+                  "durationMs": 708.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaUs",
+            "resource": "common_skill_kongrong_01_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_kongrong_01_2_c302c555.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_kongrong_01_2",
+                  "name": "common_skill_kongrong_01_2",
+                  "fps": 24,
+                  "durationFrames": 17,
+                  "durationMs": 708.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_kongrong_01_1 delay=0 dt=200 speed=1\neffectsPiaEnemy: common_skill_kongrong_01_2 delay=0 dt=None speed=1\neffectsPiaUs: common_skill_kongrong_01_2 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_kongrong_01"
+        ],
+        "portrait": "reskin/hero_012.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        36,
+        72
+      ],
+      "guideImpactFrame": 54,
+      "native": {
+        "taskId": "H012-ULT",
+        "heroId": 12,
+        "name": "绿灯牛",
+        "originalName": "孔融",
+        "slot": "大招",
+        "skillId": 550120210,
+        "skillName": "孔融让梨",
+        "newSkillName": "青藤分春",
+        "purpose": "辅助",
+        "targetSide": "友方",
+        "scope": "随机4目标",
+        "delivery": "辅助施法",
+        "movement": "原站位出手",
+        "weapon": "徒手／手势",
+        "weaponObservation": "HP标识帽，无手持武器",
+        "effectClass": "施法者特效、目标位置特效",
+        "semantic": "治疗/吸血、恢复",
+        "bodyDesign": "收手蓄力→摊掌/抬手释放→收手待机；命中覆盖由独立目标特效控制",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B04",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "立即回复随机4个友方单位120%攻击生命,并附加<恢复>,每回合回复60%攻击生命,持续2回合。",
+        "skillModel": "common_skill_kongrong_02",
+        "model": "hero_012_01",
+        "action": "jineng",
+        "effectiveDesc": "立即回复随机4个友方单位120%攻击生命,并附加<恢复>,每回合回复60%攻击生命,持续2回合。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1733.333,
+        "fps": 30,
+        "durationFrames": 52,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "attackFrameDelay": 2500,
+          "effectSrc": [
+            {
+              "delay": 0,
+              "noflipXByCamp": 1,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_kongrong_02_3"
+              ]
+            }
+          ],
+          "effectsTarUs": [
+            {
+              "delay": 1000,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_kongrong_02"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectSrc",
+            "resource": "common_skill_kongrong_02_3",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_kongrong_02_3_9582d9e8.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_kongrong_02_3",
+                  "name": "common_skill_kongrong_02_3",
+                  "fps": 24,
+                  "durationFrames": 25,
+                  "durationMs": 1041.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsTarUs",
+            "resource": "common_skill_kongrong_02",
+            "delay": 1000,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_kongrong_02_1d19275b.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_kongrong_02",
+                  "name": "common_skill_kongrong_02",
+                  "fps": 24,
+                  "durationFrames": 43,
+                  "durationMs": 1791.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectSrc: common_skill_kongrong_02_3 delay=0 dt=None speed=1\neffectsTarUs: common_skill_kongrong_02 delay=1000 dt=None speed=1",
+        "variants": [
+          "common_skill_kongrong_02"
+        ],
+        "portrait": "reskin/hero_012.png"
+      }
+    }
+  },
+  "length": 73,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false
+}
