@@ -1,10 +1,20 @@
 """Matte only explicitly reviewed body motion; raw source RGB stays separate."""
-import argparse,json,shutil
+import argparse,hashlib,json,shutil
 from pathlib import Path
 from street_comfy import ROOT,COMFY,submit
 p=argparse.ArgumentParser();p.add_argument('name');p.add_argument('--rem-mode',choices=['BEN2','RMBG-1.4'],default='BEN2');p.add_argument('--output-name');a=p.parse_args();base=ROOT/'art-migration/generation';source=base/a.name
 qa=json.loads((source/'body-qa.json').read_text('utf8'));assert qa['manualVideoReview']=='approved-for-matting'
-job=json.loads((source/'job.json').read_text('utf8'));designFile='body-design.json' if (source/'body-design.json').exists() else 'idle-design.json';design=json.loads((source/designFile).read_text('utf8'));hid=design['heroId'];inputdir=COMFY/'input'/('street_matte_'+a.name);inputdir.mkdir(exist_ok=True)
+job=json.loads((source/'job.json').read_text('utf8'))
+designFile=next((name for name in ['body-design.json','action-design.json','idle-design.json'] if (source/name).exists()),None)
+assert designFile, 'Missing explicit motion design scope'
+assert job.get('outputs'), 'No generated source frames'
+signature=hashlib.sha256(''.join(r['sha256'] for r in job['outputs']).encode()).hexdigest()
+assert qa.get('sourceSignature')==signature, 'Source sequence changed after review'
+for row in job['outputs']:
+ assert hashlib.sha256((ROOT/row['path']).read_bytes()).hexdigest()==row['sha256'], 'Source frame changed after review'
+outputName=a.output_name or a.name.replace('minimax','matte')
+assert outputName!=a.name and not (base/outputName).exists(), 'Poll existing matte job instead of resubmitting'
+design=json.loads((source/designFile).read_text('utf8'));hid=design['heroId'];inputdir=COMFY/'input'/('street_matte_'+a.name);inputdir.mkdir(exist_ok=True)
 for i,r in enumerate(job['outputs']):shutil.copy2(ROOT/r['path'],inputdir/f'{i:04}.png')
 g={'1':{'class_type':'LoadImagesFromFolderKJ','inputs':{'folder':str(inputdir),'width':512,'height':512,'keep_aspect_ratio':'pad','image_load_cap':len(job['outputs']),'start_index':0,'include_subfolders':False}},'2':{'class_type':'SplitImageWithAlpha','inputs':{'image':['1',0]}},'3':{'class_type':'easy imageRemBg','inputs':{'images':['2',0],'rem_mode':a.rem_mode,'image_output':'Hide','save_prefix':'street-reskin/matte','add_background':'none','torchscript_jit':False,'refine_foreground':False}},'4':{'class_type':'SaveImage','inputs':{'images':['3',0],'filename_prefix':f'street-reskin/hero{hid:03}_body_alpha'}}}
-folder=submit(g,a.output_name or a.name.replace('minimax','matte'),front=True);design.update(sourceBodyJob=source.relative_to(ROOT).as_posix(),sourceFrameOrder=[r['path'] for r in job['outputs']],manualVideoReview='approved-for-matting',mattingModel=a.rem_mode,manualAlphaReview='pending');(folder/designFile).write_text(json.dumps(design,ensure_ascii=False,indent=2),'utf8')
+folder=submit(g,outputName,front=True);design.update(sourceBodyJob=source.relative_to(ROOT).as_posix(),sourceFrameOrder=[r['path'] for r in job['outputs']],manualVideoReview='approved-for-matting',mattingModel=a.rem_mode,manualAlphaReview='pending');(folder/designFile).write_text(json.dumps(design,ensure_ascii=False,indent=2),'utf8')

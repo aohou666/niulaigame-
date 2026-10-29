@@ -1,0 +1,33 @@
+{
+  "heroId": 64,
+  "length": 124,
+  "scope": "gongji only; skill not generated or approved",
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/064/portrait.png",
+      "prepared": "art-migration/references/body-064-v9/idle.png",
+      "foot": [
+        383.55,
+        640
+      ],
+      "size": [
+        280,
+        400
+      ],
+      "sha256": "27d3b8b0ce802a2e02a9d94d2b8db398995de8bd94a2eb3cac903ec35ea41888"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero064-attack-v3/official-guide.png",
+      "prepared": "art-migration/references/hero064-single-attack-minimax-v10/attack.png",
+      "sourceSha256": "40fe44125024e77e8b21ede63edac23c103733bc167eddfe253251ec6738e137"
+    }
+  },
+  "motionSegments": {
+    "gongji": [
+      0,
+      123
+    ]
+  },
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false
+}

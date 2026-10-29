@@ -1,0 +1,9 @@
+{
+  "incompleteAlphaRejected": true,
+  "exitCode": 1,
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\dongdong\\Documents\\ChatGPT\\\u5b89\u88c5\\tools\\street_body_alpha_review.py\", line 9, in <module>\n    assert len(design['sourceFrameOrder'])==len(job.get('outputs',[]))>0, 'Incomplete matte sequence must not silently truncate review'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Incomplete matte sequence must not silently truncate review\n",
+  "existingReviewedSequenceHashes": [
+    "hero052-body-actions-minimax-v9:124 pass",
+    "hero060-idle-minimax-v9:124 pass"
+  ]
+}

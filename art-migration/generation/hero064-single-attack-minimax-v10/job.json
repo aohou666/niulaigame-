@@ -1,0 +1,549 @@
+{
+  "promptId": "499cea90-45c7-4aad-98b2-82176243176d",
+  "submittedUtc": "2026-10-29T17:19:40Z",
+  "status": "generated-unreviewed",
+  "provider": "local-comfyui",
+  "workflowSha256": "2cb3a754ec64d7ae4ee8e880397182bd90a253384cfe26458ee7030b7f735e0d",
+  "response": {
+    "prompt_id": "499cea90-45c7-4aad-98b2-82176243176d",
+    "number": 717,
+    "node_errors": {}
+  },
+  "comfyStatus": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "499cea90-45c7-4aad-98b2-82176243176d",
+          "timestamp": 1793294380700
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "1",
+            "2",
+            "3",
+            "19"
+          ],
+          "prompt_id": "499cea90-45c7-4aad-98b2-82176243176d",
+          "timestamp": 1793294380738
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "499cea90-45c7-4aad-98b2-82176243176d",
+          "timestamp": 1793294549666
+        }
+      ]
+    ]
+  },
+  "latents": [
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10-video_00001_.latent",
+      "sha256": "8aebf5fa12167408a314fd2f9b29aff8395f511faba96b64cab264cb48139bc2"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00001_.png",
+      "sha256": "a5ac1a8d6f356ae2538fdae4d032754d8e1aee58abd04c83d6879e160a629754"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00002_.png",
+      "sha256": "d4a2d5697170d6c462f73b7e438e853a8d95341a14d13035fba8b3ad46ea696d"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00003_.png",
+      "sha256": "8019413d9f3859ae96bbf3a8a6208a4a91212e3105963710ca4a5e48b28285ba"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00004_.png",
+      "sha256": "9fd83604b1a8ee6951e510d064bd2d9ee510bd09892f0e17133f35e7cfbd18db"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00005_.png",
+      "sha256": "edd0c69cf3e03eeb797335fd5afba8d1e5bed53d983b11a815aa230f2df10aff"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00006_.png",
+      "sha256": "83f1650447f1d9fa2082b4975310d662ffcffb13f1af39c172e82b4e15295777"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00007_.png",
+      "sha256": "26d034644873ca002eb233a21d6b0d67c0967bf1604c14ddaeab879203bbc574"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00008_.png",
+      "sha256": "13bc481951e11264ec86ecb1d206adc16a1c3cfc68827fd7ab324de418e71b5b"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00009_.png",
+      "sha256": "0078d9d621220cd28702c95283125e0d2012ce07d85bd334f35d5eb66eb33684"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00010_.png",
+      "sha256": "bf197bf7049439634a519f64c50a4bab6d2df0c5b0dc0aa259e7ff1279a3bf03"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00011_.png",
+      "sha256": "2cf412081644d53daf1f616d877d8684f3ca12ec717a1788507e2071f3783e19"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00012_.png",
+      "sha256": "81c37b0f30c9662be1612da7e9cfbb7e9beabe4c59808864ed831236a66d00ce"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00013_.png",
+      "sha256": "f033c3b6d344f4bc3ff6c98098302b61001eea23e0359294200b32106bb9ced6"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00014_.png",
+      "sha256": "16ae4e41f563da2ee7da1aad0c745de74e1a6d5729262c47e66eaae826f3a521"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00015_.png",
+      "sha256": "d211a48d125e5f073fdeb0cff79ac5335713ef3e52a90939621fb4b9bd462057"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00016_.png",
+      "sha256": "6196edece09511e523e409444770574e88fcb43d3edb4fac87023c93debd3931"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00017_.png",
+      "sha256": "baeb060418e178442804c19a51d31bb1ffd04a6544f33b368a4a7c2b62dcbec9"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00018_.png",
+      "sha256": "0135c909090fc15c810d8b75a586ffd659fcfba74802b8f1ba226b7b4fe960da"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00019_.png",
+      "sha256": "f71e51e3e33df42184d508f4061d531829f6a81923fb9c03b8d759cc853d5430"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00020_.png",
+      "sha256": "60ba9862dbbd711f1c1af2b083ac90cc4425f888c0c535b604538e95e24cd08e"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00021_.png",
+      "sha256": "425864121e1a7da2854f58bbde186ba7124156cd9a7d34d54bee3b0ae6b7d6b7"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00022_.png",
+      "sha256": "04a4080c794d3a0f0c11e18a2e47bd6860c15d48b265055ee8b4060e8008512e"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00023_.png",
+      "sha256": "545d557d63b2c3c34945fbdf97626a69b0db4510fa8b1fe131fceaf847859fde"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00024_.png",
+      "sha256": "37435f8654d551ba576d9304e7a021765c6806860c6f8cf3ea9c6eb8d6fbabb4"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00025_.png",
+      "sha256": "dfd08180817239da0eccd3f023b77e96d85e2afdd58afe9a86def1e4d9d8366a"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00026_.png",
+      "sha256": "fda19b8ae47bb3799f8c059491ee7689ecd8afcb33e0c41fbce5f7242273e5b2"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00027_.png",
+      "sha256": "dea4f7d8f5b0d6f82e11eedf157364e7ea0569d7212748acb96a11a731a2e5a6"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00028_.png",
+      "sha256": "54e170a1448c5f95341e8bce7b21426b8e3389497f5b6af901bd7fd36a28a6af"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00029_.png",
+      "sha256": "31230220b48d0b29297b473b3317acba5f74deb5d429177431f1a206d5dbf851"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00030_.png",
+      "sha256": "c10f2bf3f1f7adf7db6bf6e16b3c5ebe29a7442c021161d050b3ca6ebd6fb0e9"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00031_.png",
+      "sha256": "43247c475e74b1325d6e70a4c1435840789adfde3a77ccb3ab7491844ad41bb0"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00032_.png",
+      "sha256": "8fc3b5d986089f268f334f53fe7aa3aef002b91ff6618661b247d06c017c6e26"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00033_.png",
+      "sha256": "119431198aeebf963550974fda3a77899fbec2d9489a009a61315d511353bfa7"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00034_.png",
+      "sha256": "077bf3996a5a890da3989e921dbb0aed78faf7ebb07b4db7be96ff73e81c14c8"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00035_.png",
+      "sha256": "119b06b27bde84c0784fd2fe9a8438f404dd53903e85e61d355a5e2ff2f647c4"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00036_.png",
+      "sha256": "7f30a6401ffec2f9df8f94987d73f6d9649cb231916be650dfcf200a3848be8f"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00037_.png",
+      "sha256": "878cb9537be7437d24addbbcef9b8d9e65c0924317401ea647e50037352553e4"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00038_.png",
+      "sha256": "a58c5ad207508fe245c9a9b2c3dfdcdff38b0b0af60ec0ca34b95322b66b7188"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00039_.png",
+      "sha256": "916c3bc699f36c661028f0bbc9df7dc5c697d24deb1143936b92005181b0526b"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00040_.png",
+      "sha256": "a3286227349ec88cca7b6711182714456d8575d5c9450e650698c0187ca12527"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00041_.png",
+      "sha256": "248e0911cb24aeb019239b8339cdde812ac2582832e76f5e44947637ad6339f0"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00042_.png",
+      "sha256": "13ecea5f706e43c3584000c30d4f4f53e6c936cc5477c26d39938f37070a808a"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00043_.png",
+      "sha256": "5353343266e863eaa1d99772a21479fb29bd14c3c3afb29dc6b2eb19d2eb40e9"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00044_.png",
+      "sha256": "6115ec4e83de06bb15da187946eb4a3495241f87e96f9304e25e339f8cbcd8f9"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00045_.png",
+      "sha256": "c2e1b028de9dd90caadc7f107c10cd88b142a8bb627abc87ed53957c3cae5431"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00046_.png",
+      "sha256": "b540166a133d304c5b59dcbcc2153b0c34b8f8d76a9e5622e52056c9723f7998"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00047_.png",
+      "sha256": "aa44afa5e8e7b4b92a4f798ca6e9346ebc0df0dac96c45504ea3a153f836fb32"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00048_.png",
+      "sha256": "255840be745cc223390878aa08f255a6234b8bcb7caea6e56637fcedc796eb90"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00049_.png",
+      "sha256": "3054656f10bcf24be0883927d6097a6f220d75d5a7b9303035f1a5b61705cf4b"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00050_.png",
+      "sha256": "edaadd6cf67f45054b2214abbb1621ce5eb69c502c2dec5bf0cfa698aafa4029"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00051_.png",
+      "sha256": "5222756ea2387fa827cf9cf8fcc10a015338f68ed0c98c5082fbcaca134f4bcd"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00052_.png",
+      "sha256": "f0c5b3adadbcc38e03752badcdfce7a7a8a19521ecf52956fe899aaa2edb3425"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00053_.png",
+      "sha256": "d846aac25db62d6d9c74f42ff5369546f01713a74c3c0ac01454ba2f45260291"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00054_.png",
+      "sha256": "599db5497f089c654e9dfbabe47de0979479773613c8522d392f29cdbe7eea74"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00055_.png",
+      "sha256": "bc3003b2e2f85de4ca64eee710d142ab831ceffacddc59ba6ebd2b721ae6f098"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00056_.png",
+      "sha256": "0c9358d49481ce874d7bc03fe661e39c9457d069ce0e1762576fb16b3fe53ce4"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00057_.png",
+      "sha256": "270250df9a478ba0ede36d6c1723bc550cf3ed65cb3cb7ea6e48a0ab84de700c"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00058_.png",
+      "sha256": "3b81d33e93285a9bb316cbb8f89502c3e94a46a2a9ea6df4da784cc6080d8443"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00059_.png",
+      "sha256": "872b39f5d743937066c7bf38f42751f3f3068b298381743ec1fa66b51a566454"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00060_.png",
+      "sha256": "245f180577f888cc1025d60ed5e99031b372ed0a3bacdf5c357814fd2d2586e0"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00061_.png",
+      "sha256": "6efeef22eb8bde002e84011a8c37d053e97106ebcfc3aeb257a2995e808c0ba5"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00062_.png",
+      "sha256": "f82564d2d97977be018c3c2a038a6d3c83720789b518719a6b7fcb30b62a221f"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00063_.png",
+      "sha256": "44e06328e36c8c409cdea8b3cdff8e034cae981979457b9c0cc220b4e31de029"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00064_.png",
+      "sha256": "ec78238699c0f1eca1bd43a39c6c68e5e3627efe362195a461a96da5349649ea"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00065_.png",
+      "sha256": "23cff8e9510a5ab3c3924c8c804c49e7f20f449649ffafb04de06878961e8fdc"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00066_.png",
+      "sha256": "74d57d928080713e4de4f05fd5ed2328ee7ae6c9d44a879c4d05c4ef234c1f78"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00067_.png",
+      "sha256": "3471a06b1eb3f2cb21a8cdf362d74d969bd853479f4d7ba8635d7b881fe56783"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00068_.png",
+      "sha256": "ba54841c0e8fd12e1abc522e9ce8f2ca823060f211a87abfcaf9cb77302ba5e4"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00069_.png",
+      "sha256": "13eed4250847f974d2a414309b00bb345ff77a24d7a5231a2068876106f9ac60"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00070_.png",
+      "sha256": "1281ccaa7400cd24a44724563a77d6833ade6edc3d44144e38c07d6b8a827ee7"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00071_.png",
+      "sha256": "1dcfa144c786425a4ff7dd4eeb6f0fcf5747402844e79a17e122157ca37c670a"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00072_.png",
+      "sha256": "a8ad34a04348c99ab2643147fc7db9190113fd156b5cce13e538620fc5ea32ce"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00073_.png",
+      "sha256": "e14c4d01addf940ddaa448ec1751ad6a92a6a997390b6c9a3c357773072a1214"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00074_.png",
+      "sha256": "59b1ea8955f751b90507eb77e25ecbb4cf6dde71bf9d84989282fc03810cdef2"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00075_.png",
+      "sha256": "eabfa4587fab174589358f6bcbe7630ce0ad994e91084a7c9a8bd5c30e954661"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00076_.png",
+      "sha256": "ccd8b9c19db263371c31bb6639ea2aef8fa86cc8a991b4ad475229b914c39537"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00077_.png",
+      "sha256": "3b40ce138fbeb469765f3e7f3dd88dcde96601647a83f92473e2aa0113e1baa8"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00078_.png",
+      "sha256": "df796a8b3ffb0b79bb5fc899788d035810aa70f994fa90ede542492928668a17"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00079_.png",
+      "sha256": "f908664a5f4bf82143c70ecdce7e4a1d30f27285a8444f0c6c4fb7d6e9272998"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00080_.png",
+      "sha256": "f708037dcb1940ba5101f89e737e203d49d5a8a6c3c37ff1c44f35c383cbbae4"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00081_.png",
+      "sha256": "f4e4d5db1f1a6e437569c76870a847e18fa5b87f12d95c84fc8dc2f897479ca7"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00082_.png",
+      "sha256": "c694fe5715f88841ac57d9420338d49dc33b6c69b50adc495245703d351af53a"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00083_.png",
+      "sha256": "842443e42ae7512129dc8d8147d34afb3c759fb74920a1ade6a31bc849420093"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00084_.png",
+      "sha256": "2b4119854348a60878d51ff2e08f0123e340932f6e98590f303b992f8dd14071"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00085_.png",
+      "sha256": "da4fb8d5ad4d545be1f1c60af0aa3ebd91ceb9591dd01f64af74c9019c673f48"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00086_.png",
+      "sha256": "174d3a9abd202ad55e0177f230198bb4cbf9a81650e57e6ff9a837dd74be6237"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00087_.png",
+      "sha256": "81b543aedf837d59a32fbe3b9513af6ed11e6eacec11f05ad7a8407414f6e3e7"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00088_.png",
+      "sha256": "4d3d3b1deb2fb217fec4f8a6622ce06c21209393c6894d8e1350f832a22cb3f5"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00089_.png",
+      "sha256": "ecb6cbddf4d595d43fcc57df7a0f0e06f6502f10a92dfb3ee507e513a6c1d7d3"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00090_.png",
+      "sha256": "3833632ffa557dc384ff6be738541c4a1a95ccb423a6654c52757622ab2039ae"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00091_.png",
+      "sha256": "bfacacf3bf40c133016c5c5bffe6b7c9aa16f13c74dfa0e27073e68c68060dd0"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00092_.png",
+      "sha256": "8597ca880e7c94225a725f2782b15661e5851721e3d144541a939d8fd18017d9"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00093_.png",
+      "sha256": "cda29db1ea12ce9154639f57e23ca19214a3e3951d5b6745c0dd8c7e15a899a4"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00094_.png",
+      "sha256": "7864b20a70bf0b2d86ebfb6547fd4307440bd0493a93b58f0e44784fa69306a4"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00095_.png",
+      "sha256": "8a1a703277e1b170a77366b162148c785995f367a5b9d7746990601a510fca5e"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00096_.png",
+      "sha256": "f639ce70dc005238b0f93a18b6cc16db8247c816579e636e46c6593406c99336"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00097_.png",
+      "sha256": "9fa0c6e912d9fbc6eb675e086be72e3ba0264572e79f784e06cc5fb78f6786e7"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00098_.png",
+      "sha256": "ef48b60de48e8eea639758fc6d6caca34fd4301c75d0b65ddac9466e0bfd8961"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00099_.png",
+      "sha256": "77fd4e05c0701d25bd57e8acbda608939e28ada8d3004e68ee062e58e5da3f32"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00100_.png",
+      "sha256": "3a2f2cbdda18c7b99d79e0aaef4ce2a097c02ce6e278bc62e2e4d5e65c427f33"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00101_.png",
+      "sha256": "69ec633fba54c6a38dca5fc6a14bab09470bf9fdecca1b03b29d7ea2e95d53f8"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00102_.png",
+      "sha256": "4306839fda59aaf0f5f9ef601d9283fc085e1afc34e156ff88c1462901c65aab"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00103_.png",
+      "sha256": "ee89203668c5bea836a2fcff68a7e14e3a2df67e72a4aad5b1b2fafd2cbb776d"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00104_.png",
+      "sha256": "d3ccbed9f8f6800c4cbf9b166ae45cbd392d579b90718c0eba434397bb000ca8"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00105_.png",
+      "sha256": "ced5f088cb79267e3d621f1fc01efcfaf22c1adf135254a2a8daefcd325e4d55"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00106_.png",
+      "sha256": "82e9d66db6ebfd75f6e93da635c3b15785bb0624b15a5e79d3db9b998d9d535b"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00107_.png",
+      "sha256": "fae7d279905ed0d4d02c14a5c7df9fadf35e0b21198f15cc90643d769ebd2489"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00108_.png",
+      "sha256": "d33d25ad608018471af4d016d045b041f39c72eb5eca5080acf9d6a40bf81d88"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00109_.png",
+      "sha256": "e370a73b1b454169f6b67549d57b14c9431f278e89320ca988f3ba38a935df9d"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00110_.png",
+      "sha256": "ef569809c01842e322cb431d2139edb3934a30ea6d0e43e32dd6cbdf1b4c2b02"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00111_.png",
+      "sha256": "af286e10ebc693b2a0f5a09e46d73190193040fd03dbd0b0ef35f0f3fc4e421a"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00112_.png",
+      "sha256": "f4aed455e749ce1c926fff63ccbfc84b359855a15f76c97e5c7b482ca98806db"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00113_.png",
+      "sha256": "3c5d498328f5435d13585cc453d98da37cad9501fb1fb9039279b0d3dd6082a2"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00114_.png",
+      "sha256": "b69cf8f2106a5c962d806c80418d8cf7c7c67971cb2c081d71f5c78e70ab24fa"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00115_.png",
+      "sha256": "41b130566ec03fbe86135bd9a6568fe930652dcf90c9ad0c70a536fd7774a25f"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00116_.png",
+      "sha256": "41d7adc11da1b4798a683e0dd6e12e5aa329bc1ef7c892fe2f7b473ca036eb1b"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00117_.png",
+      "sha256": "068e5e52648c3fa6e198b766b1ad453665e43b7ac34697f2af20b6cfed4780c7"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00118_.png",
+      "sha256": "04705fdbb1ffddc3bd1a3a06bca8d273ef710413e7727ecc3badba4b64d4a966"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00119_.png",
+      "sha256": "ab9add3e0ec14065d2d2c97807bba519e595698061b99961364f4fc5c1884b49"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00120_.png",
+      "sha256": "d13e688ec0a3fe6506ed5837bb414ad59743bd9c64e2bd26e0173c688ae3129a"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00121_.png",
+      "sha256": "332635cd804d955a269581cda91594451399e48e1200d49990ec4e752929d399"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00122_.png",
+      "sha256": "381a6609e68fe85c0541b5242cc44491c6850f70f5140c3c2b4d0644456c8850"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00123_.png",
+      "sha256": "3583e6455197c5e8a5c0b6ba4e2da0e05e5390a40e3de5d9fc25a9d0285e6fea"
+    },
+    {
+      "path": "art-migration/generation/hero064-single-attack-minimax-v10/hero064-single-attack-minimax-v10_00124_.png",
+      "sha256": "63933199fb7371a3484d0f0f386469d7db0c0b34ed13175e1c166d80f0a5e168"
+    }
+  ]
+}

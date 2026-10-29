@@ -1,0 +1,199 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "minimax_h3_fl2va_pruned_w4a8_mixed.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_32b_minimax_h3_int4_convrot.safetensors",
+      "type": "minimax",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "hero064-single-attack-minimax-v10-idle.png"
+    }
+  },
+  "5": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "hero064-single-attack-minimax-v10-attack.png"
+    }
+  },
+  "7": {
+    "class_type": "MiniMaxH3ImageToVideo",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "prompt": "One locked-camera 124-frame studio animation of the exact yellow bull janitor in the reference. Same horns, face, ragged gray-brown tunic and trousers, ankle wraps, brown shoes and ONE original straight bamboo broom with straw fan. Both hands maintain their original grip order: viewer-left hand above viewer-right hand. Keep feet planted in the same wide stance. Perform exactly ONE small lateral floor sweep toward viewer RIGHT and recover: continuously lean shoulders and flex elbows, move straw head sideways along floor to the reference near frame62, then smoothly return to starting pose by frame123. Keep the broom parallel to the image plane and at constant physical length, never point toward camera, lift overhead, flip end-for-end, detach hands, walk, or perform a second sweep. Preserve complete broom, shoes, horns and hands inside generous margins throughout. Visible intermediate joint movement from preparation through sweep and recovery; no held-pose montage, teleporting, dissolves or cuts. Only a short pause at turnaround. Same tactile2.5D semi-realistic semi-cartoon absurd neighborhood style. Matte black empty studio, constant neutral light, no dust, particles, light streaks, blur shapes, additional objects or camera movement. This is only one ordinary sweeping gesture, not two exercises or a skill sequence.\n",
+      "width": 512,
+      "height": 512,
+      "length": 124,
+      "first_frame": [
+        "4",
+        0
+      ],
+      "last_frame": [
+        "4",
+        0
+      ]
+    }
+  },
+  "8": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "7",
+        0
+      ],
+      "latent": [
+        "7",
+        1
+      ],
+      "frame_idx": 62,
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "5",
+        0
+      ]
+    }
+  },
+  "12": {
+    "class_type": "MiniMaxH3DualClockSamplerT8",
+    "inputs": {
+      "model": [
+        "19",
+        0
+      ],
+      "av_latent": [
+        "7",
+        1
+      ],
+      "steps": 24,
+      "shift_video": 12,
+      "shift_audio": 3,
+      "sampler_name": "dual_clock_euler",
+      "scheduler": "native_flow"
+    }
+  },
+  "13": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "12",
+        0
+      ],
+      "conditioning": [
+        "8",
+        0
+      ]
+    }
+  },
+  "14": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 202610310064
+    }
+  },
+  "15": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "14",
+        0
+      ],
+      "guider": [
+        "13",
+        0
+      ],
+      "sampler": [
+        "12",
+        1
+      ],
+      "sigmas": [
+        "12",
+        2
+      ],
+      "latent_image": [
+        "7",
+        1
+      ]
+    }
+  },
+  "16": {
+    "class_type": "LTXVSeparateAVLatent",
+    "inputs": {
+      "av_latent": [
+        "15",
+        0
+      ]
+    }
+  },
+  "17": {
+    "class_type": "VAEDecodeTiled",
+    "inputs": {
+      "samples": [
+        "20",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "tile_size": 512,
+      "overlap": 64,
+      "temporal_size": 32,
+      "temporal_overlap": 4
+    }
+  },
+  "18": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "17",
+        0
+      ],
+      "filename_prefix": "street-reskin/hero064-single-attack-minimax-v10"
+    }
+  },
+  "19": {
+    "class_type": "MiniMaxH3MemoryEfficientSageAttentionPatch",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "20": {
+    "class_type": "SaveLatent",
+    "inputs": {
+      "samples": [
+        "16",
+        0
+      ],
+      "filename_prefix": "street-reskin/hero064-single-attack-minimax-v10-video"
+    }
+  }
+}

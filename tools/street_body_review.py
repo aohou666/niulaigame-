@@ -6,7 +6,9 @@ from PIL import Image,ImageDraw
 from street_motion_continuity import measure
 ROOT=Path(__file__).resolve().parents[1]
 p=argparse.ArgumentParser();p.add_argument('name');a=p.parse_args();folder=ROOT/'art-migration/generation'/a.name
-job=json.loads((folder/'job.json').read_text('utf8'));design=json.loads((folder/('body-design.json' if (folder/'body-design.json').exists() else 'idle-design.json')).read_text('utf8'));files=[ROOT/r['path'] for r in job.get('outputs',[])]
+job=json.loads((folder/'job.json').read_text('utf8'));designFile=next((folder/name for name in ['body-design.json','action-design.json','idle-design.json'] if (folder/name).exists()),None)
+if designFile is None:raise SystemExit('Missing explicit motion design scope')
+design=json.loads(designFile.read_text('utf8'));files=[ROOT/r['path'] for r in job.get('outputs',[])]
 if not files:raise SystemExit('No completed video frames')
 out=ROOT/'outputs/street-reskin'/a.name;out.mkdir(exist_ok=True)
 for start in range(0,len(files),64):
