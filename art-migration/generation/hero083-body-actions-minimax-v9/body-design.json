@@ -1,0 +1,576 @@
+{
+  "heroId": 83,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/083/portrait.png",
+      "prepared": "art-migration/references/body-083-v9/idle.png",
+      "foot": [
+        384.28,
+        700
+      ],
+      "size": [
+        317,
+        500
+      ],
+      "sha256": "30d9dc8ad8066f5034f3a8e996d65214ef01caf83236fbc248a7f1fd45c07603"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero083-attack-v2/hero083_attack_alpha_00001_.png",
+      "prepared": "art-migration/references/body-083-v9/attack.png",
+      "foot": [
+        383.75,
+        700
+      ],
+      "size": [
+        400,
+        500
+      ],
+      "sha256": "052d23276bce0ccf9d2e3de821f8be381c245d8e6566428ae2c3e7f927fe159a"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero083-skill-v2/hero083_skill_alpha_00001_.png",
+      "prepared": "art-migration/references/body-083-v9/skill.png",
+      "foot": [
+        384.42,
+        700
+      ],
+      "size": [
+        274,
+        500
+      ],
+      "sha256": "7d41992ec69e8f009c1095d13597b6965b33bfd8a282b93a2e4db3158101636d"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        61
+      ],
+      "guideImpactFrame": 28,
+      "native": {
+        "taskId": "H083-ATK",
+        "heroId": 83,
+        "name": "金龙",
+        "originalName": "神赵云",
+        "slot": "普攻",
+        "skillId": 550830110,
+        "skillName": "普通攻击",
+        "newSkillName": "金鳞轻击",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "近身攻击",
+        "movement": "移到目标前出手",
+        "weapon": "能量球／龙息",
+        "weaponObservation": "Gold scaly dragon costume with antlers/red mane and tail-tip; ONE luminous fire orb is already held in RIGHT palm. Preserve this identity object throughout, LEFT hand empty or supporting same orb.",
+        "effectClass": "命中/生效附着特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "Facing the same front-right direction throughout, bend knees slightly, move the original RIGHT palm-supported orb horizontally forward at lower chest height while LEFT hand supports its underside, then draw both hands back. Keep constant contact between the SAME orb and RIGHT palm. No throwing, overhead gesture, turning away or flying object.",
+        "rootPolicy": "引擎负责接近与返回；视频固定根位置，只做出手",
+        "batch": "B02",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_shenzhaoyun_pg",
+        "model": "hero_083_03",
+        "action": "gongji",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "550830310 绝境：受到伤害时,只会立即受到50%伤害,剩余50%伤害在回合结束时转化为<残伤>,在之后3回合陆续释放。（无法驱散）",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "wuqi22、wuqi、wuqi1、wuqi_02、wuqi_01、wuqi_2",
+        "rawDurationMs": 1466.667,
+        "fps": 30,
+        "durationFrames": 44,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "effectsPiaEnemy": [
+            {
+              "posType": 0,
+              "src": [
+                "common_shenzhaoyun_2_1"
+              ]
+            }
+          ],
+          "meFlyConfig": [
+            2,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_shenzhaoyun_2_1",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_shenzhaoyun_2_1_a7c2234e.bin",
+              "timelines": [
+                {
+                  "armature": "common_shenzhaoyun_2_1",
+                  "name": "common_shenzhaoyun_2_1",
+                  "fps": 24,
+                  "durationFrames": 13,
+                  "durationMs": 541.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsPiaEnemy: common_shenzhaoyun_2_1 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_shenzhaoyun_pg"
+        ],
+        "portrait": "reskin/hero_083.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        62,
+        123
+      ],
+      "guideImpactFrame": 92,
+      "native": {
+        "taskId": "H083-ULT",
+        "heroId": 83,
+        "name": "金龙",
+        "originalName": "神赵云",
+        "slot": "大招",
+        "skillId": 550830210,
+        "skillName": "七进七出",
+        "newSkillName": "金龙穿阵",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "全体",
+        "delivery": "中场释放（远近待回放）",
+        "movement": "移到场地中部释放",
+        "weapon": "能量球／龙息",
+        "weaponObservation": "Gold scaly dragon costume with antlers/red mane and tail-tip; ONE luminous fire orb is already held in RIGHT palm. Preserve this identity object throughout, LEFT hand empty or supporting same orb.",
+        "effectClass": "目标位置特效、命中/生效附着特效",
+        "semantic": "治疗、降低",
+        "bodyDesign": "Keep chest and eyes in the SAME three-quarter front-right orientation throughout. Both feet stay planted. Anatomical RIGHT elbow stays BELOW the shoulder and gently straightens a little, carrying the original palm-supported orb horizontally from chest to waist-front, then returns. The orb rests in direct contact with the cupped RIGHT palm at every instant, never above shoulder height. LEFT arm remains low. No torso turn, overhead lift, toss, release, spin or airborne object.",
+        "rootPolicy": "引擎移到中场后播出手；视频不自行横穿战场",
+        "batch": "B07",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方全体造成随机7段伤害,每段造成190%攻击伤害。随后降低敌方30%受到治疗,持续2回合。",
+        "skillModel": "common_skill_shenzhaoyun_jn",
+        "model": "hero_083_03",
+        "action": "jineng",
+        "effectiveDesc": "对敌方全体造成随机7段伤害,每段造成190%攻击伤害。随后降低敌方30%受到治疗,持续2回合。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "550830310 绝境：受到伤害时,只会立即受到50%伤害,剩余50%伤害在回合结束时转化为<残伤>,在之后3回合陆续释放。（无法驱散）",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "wuqi22、wuqi、wuqi1、wuqi_02、wuqi_01、wuqi_2",
+        "rawDurationMs": 2066.667,
+        "fps": 30,
+        "durationFrames": 62,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "allAttkDelayOffset": -550,
+          "attackDoneDelay": 1400,
+          "effectsTarEnemy": [
+            {
+              "offset": [
+                200,
+                0
+              ],
+              "src": [
+                "common_shenzhaoyun_1_2"
+              ],
+              "scaleX": 0.8,
+              "scaleY": 0.8,
+              "type": 7,
+              "z": 0
+            },
+            {
+              "offset": [
+                200,
+                0
+              ],
+              "src": [
+                "common_shenzhaoyun_1_1"
+              ],
+              "scaleX": 0.8,
+              "scaleY": 0.8,
+              "type": 7
+            }
+          ],
+          "_effectQP": [
+            {
+              "delay": 0,
+              "scaleX": 0.8,
+              "scaleY": 0.8,
+              "offset": [
+                200,
+                0
+              ],
+              "src": [
+                "common_shenzhaoyun_1_2"
+              ],
+              "z": 0
+            },
+            {
+              "delay": 0,
+              "scaleX": 0.8,
+              "scaleY": 0.8,
+              "offset": [
+                200,
+                0
+              ],
+              "src": [
+                "common_shenzhaoyun_1_1"
+              ]
+            }
+          ],
+          "effectsPiaEnemy": [
+            {
+              "posType": 0,
+              "src": [
+                "common_shenzhaoyun_1_3"
+              ]
+            }
+          ],
+          "meFlyConfig": [
+            1,
+            200,
+            50
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_shenzhaoyun_1_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 7,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_shenzhaoyun_1_2_8523ec42.bin",
+              "timelines": [
+                {
+                  "armature": "common_shenzhaoyun_1_2",
+                  "name": "common_shenzhaoyun_1_2",
+                  "fps": 30,
+                  "durationFrames": 91,
+                  "durationMs": 3033.333,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "hero_083_01",
+                  "name": "daiji",
+                  "fps": 30,
+                  "durationFrames": 254,
+                  "durationMs": 8466.667,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "hero_083_01",
+                  "name": "gongji",
+                  "fps": 30,
+                  "durationFrames": 46,
+                  "durationMs": 1533.333,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "hero_083_01",
+                  "name": "jineng",
+                  "fps": 30,
+                  "durationFrames": 62,
+                  "durationMs": 2066.667,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "hero_083_01",
+                  "name": "shouji",
+                  "fps": 30,
+                  "durationFrames": 21,
+                  "durationMs": 700.0,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "hero_083_01",
+                  "name": "jineng_复制1",
+                  "fps": 30,
+                  "durationFrames": 62,
+                  "durationMs": 2066.667,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "hero_083_01",
+                  "name": "jineng_复制2",
+                  "fps": 30,
+                  "durationFrames": 62,
+                  "durationMs": 2066.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_shenzhaoyun_1_1",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 7,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_shenzhaoyun_1_1_84742284.bin",
+              "timelines": [
+                {
+                  "armature": "common_shenzhaoyun_1_1",
+                  "name": "common_shenzhaoyun_1_1",
+                  "fps": 30,
+                  "durationFrames": 91,
+                  "durationMs": 3033.333,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 36,
+                      "timeMs": 1200.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 38,
+                      "timeMs": 1266.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 42,
+                      "timeMs": 1400.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 51,
+                      "timeMs": 1700.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 53,
+                      "timeMs": 1766.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 62,
+                      "timeMs": 2066.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 68,
+                      "timeMs": 2266.667,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                },
+                {
+                  "armature": "hero_083_01",
+                  "name": "daiji",
+                  "fps": 30,
+                  "durationFrames": 254,
+                  "durationMs": 8466.667,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "hero_083_01",
+                  "name": "gongji",
+                  "fps": 30,
+                  "durationFrames": 46,
+                  "durationMs": 1533.333,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "hero_083_01",
+                  "name": "jineng",
+                  "fps": 30,
+                  "durationFrames": 62,
+                  "durationMs": 2066.667,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "hero_083_01",
+                  "name": "shouji",
+                  "fps": 30,
+                  "durationFrames": 21,
+                  "durationMs": 700.0,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "hero_083_01",
+                  "name": "jineng_复制1",
+                  "fps": 30,
+                  "durationFrames": 62,
+                  "durationMs": 2066.667,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "hero_083_01",
+                  "name": "jineng_复制2",
+                  "fps": 30,
+                  "durationFrames": 62,
+                  "durationMs": 2066.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_shenzhaoyun_1_3",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_shenzhaoyun_1_3_b2e390b6.bin",
+              "timelines": [
+                {
+                  "armature": "common_shenzhaoyun_01_3",
+                  "name": "common_shenzhaoyun_01_3",
+                  "fps": 30,
+                  "durationFrames": 14,
+                  "durationMs": 466.667,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "hero_083_01",
+                  "name": "daiji",
+                  "fps": 30,
+                  "durationFrames": 254,
+                  "durationMs": 8466.667,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "hero_083_01",
+                  "name": "gongji",
+                  "fps": 30,
+                  "durationFrames": 46,
+                  "durationMs": 1533.333,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "hero_083_01",
+                  "name": "jineng",
+                  "fps": 30,
+                  "durationFrames": 62,
+                  "durationMs": 2066.667,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "hero_083_01",
+                  "name": "shouji",
+                  "fps": 30,
+                  "durationFrames": 21,
+                  "durationMs": 700.0,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "hero_083_01",
+                  "name": "jineng_复制1",
+                  "fps": 30,
+                  "durationFrames": 62,
+                  "durationMs": 2066.667,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "hero_083_01",
+                  "name": "jineng_复制2",
+                  "fps": 30,
+                  "durationFrames": 62,
+                  "durationMs": 2066.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_shenzhaoyun_1_2 delay=0 dt=None speed=1\neffectsTarEnemy: common_shenzhaoyun_1_1 delay=0 dt=None speed=1 事件=pia@1200.0,pia@1266.7,pia@1400.0,pia@1700.0,pia@1766.7,pia@2066.7,pia@2266.7\neffectsPiaEnemy: common_shenzhaoyun_1_3 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_shenzhaoyun_jn"
+        ],
+        "portrait": "reskin/hero_083.png"
+      }
+    }
+  },
+  "length": 124,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false,
+  "sparseGuideSchedule": [
+    {
+      "frame": 0,
+      "image": "idle"
+    },
+    {
+      "frame": 28,
+      "image": "attack"
+    },
+    {
+      "frame": 62,
+      "image": "idle"
+    },
+    {
+      "frame": 92,
+      "image": "skill"
+    },
+    {
+      "frame": 123,
+      "image": "idle"
+    }
+  ],
+  "temporalReviewRequired": true
+}

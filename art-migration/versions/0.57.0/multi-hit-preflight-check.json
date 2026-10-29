@@ -1,0 +1,29 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "hero": 61,
+      "rejected": true,
+      "reason": "Single-gesture template cannot represent multiple native hits; prepare and review explicit multi-hit choreography first: hero_061_01/gongji: [12, 25, 39]; hero_061_01_ez/gongji: [12, 25, 39]",
+      "pass": true
+    },
+    {
+      "hero": 53,
+      "rejected": true,
+      "reason": "Single-gesture template cannot represent multiple native hits; prepare and review explicit multi-hit choreography first: hero_053_01/jineng: [43, 56, 61, 65, 69]; hero_053_01_ez/jineng: [43, 56, 61, 65, 69]",
+      "pass": true
+    },
+    {
+      "hero": 46,
+      "rejected": false,
+      "reason": "",
+      "pass": true
+    },
+    {
+      "hero": 84,
+      "rejected": false,
+      "reason": "",
+      "pass": true
+    }
+  ]
+}

@@ -1,0 +1,424 @@
+{
+  "heroId": 51,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/051/portrait.png",
+      "prepared": "art-migration/references/body-051-v8/idle.png",
+      "foot": [
+        384.1,
+        700
+      ],
+      "size": [
+        410,
+        500
+      ],
+      "sha256": "7c37cbda4216ab06158e50f611a0c7bf8ac991aa56cb70e1599832003803addf"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero051-attack-v3/hero051_attack_continuity_alpha_00001_.png",
+      "prepared": "art-migration/references/body-051-v8/attack.png",
+      "foot": [
+        383.74,
+        700
+      ],
+      "size": [
+        440,
+        500
+      ],
+      "sha256": "6e10d3f0bac5e9d8514b33547773fe653f7da85baad343b86c6a8d5fc3bf7805"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero051-skill-v3/hero051_skill_continuity_alpha_00001_.png",
+      "prepared": "art-migration/references/body-051-v8/skill.png",
+      "foot": [
+        384.3,
+        700
+      ],
+      "size": [
+        365,
+        500
+      ],
+      "sha256": "0954bfa1d7b6601e70a63785cbb920c1a1d20d770f9bb3b09359db31b0c542f5"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        61
+      ],
+      "guideImpactFrame": 28,
+      "native": {
+        "taskId": "H051-ATK",
+        "heroId": 51,
+        "name": "嘎子",
+        "originalName": "丁奉",
+        "slot": "普攻",
+        "skillId": 550510110,
+        "skillName": "普通攻击",
+        "newSkillName": "锐行试锋",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "远程弹道/连线",
+        "movement": "原站位出手",
+        "weapon": "步枪",
+        "weaponObservation": "gray-suited bull with white shirt and scoped black rifle gripped in BOTH hands",
+        "effectClass": "飞行弹道、命中/生效附着特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "Aim same rifle forward-right with both hands. PHYSICAL POSE ONLY: no muzzle flash, light, projectile, smoke or firing effect.",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B01",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_handang_03",
+        "model": "hero_051_01",
+        "action": "gongji",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1066.667,
+        "fps": 30,
+        "durationFrames": 32,
+        "rawEvents": [
+          {
+            "frame0": 15,
+            "timeMs": 500.0,
+            "type": 10,
+            "name": "zd"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "zd@500.0ms（发射/启动特效）",
+        "impactMs": [
+          750.0
+        ],
+        "impactStatus": "发射事件＋弹道delay/dt推导；待游戏内验收",
+        "performance": {
+          "effectsPiaEnemy": [
+            {
+              "posType": 0,
+              "src": [
+                "common_skill_handang_03_2"
+              ],
+              "type": 0
+            }
+          ],
+          "effectsPiaUs": [
+            {
+              "posType": 0,
+              "src": [
+                "common_skill_handang_03_2"
+              ],
+              "type": 0
+            }
+          ],
+          "effectsTarEnemy": [
+            {
+              "dt": 250,
+              "fixedWidth": 50,
+              "offset": [
+                0,
+                -50
+              ],
+              "posType": 0,
+              "src": [
+                "common_skill_handang_03_1"
+              ],
+              "type": 1
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_handang_03_1",
+            "delay": 0,
+            "dt": 250,
+            "timeScale": 1,
+            "type": 1,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_handang_03_1_590a625e.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_handang_03_1",
+                  "name": "common_skill_handang_03_1",
+                  "fps": 24,
+                  "durationFrames": 1,
+                  "durationMs": 41.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_handang_03_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_handang_03_2_585bf25c.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_handang_03_2",
+                  "name": "common_skill_handang_03_2",
+                  "fps": 24,
+                  "durationFrames": 13,
+                  "durationMs": 541.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaUs",
+            "resource": "common_skill_handang_03_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_handang_03_2_585bf25c.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_handang_03_2",
+                  "name": "common_skill_handang_03_2",
+                  "fps": 24,
+                  "durationFrames": 13,
+                  "durationMs": 541.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_handang_03_1 delay=0 dt=250 speed=1\neffectsPiaEnemy: common_skill_handang_03_2 delay=0 dt=None speed=1\neffectsPiaUs: common_skill_handang_03_2 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_handang_03"
+        ],
+        "portrait": "reskin/hero_051.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        62,
+        123
+      ],
+      "guideImpactFrame": 92,
+      "native": {
+        "taskId": "H051-ULT",
+        "heroId": 51,
+        "name": "嘎子",
+        "originalName": "丁奉",
+        "slot": "大招",
+        "skillId": 550510210,
+        "skillName": "雪天裸战",
+        "newSkillName": "寒夜先行",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "远程弹道/连线",
+        "movement": "原站位出手",
+        "weapon": "步枪",
+        "weaponObservation": "gray-suited bull with white shirt and scoped black rifle gripped in BOTH hands",
+        "effectClass": "飞行弹道、命中/生效附着特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "Slightly raise rifle barrel while retaining both-hand grip, no firing flash or smoke.",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B05",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_dingfeng_01",
+        "model": "hero_051_01",
+        "action": "jineng",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "未取得明确武器命名；需看原动作",
+        "rawDurationMs": 1266.667,
+        "fps": 30,
+        "durationFrames": 38,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "effectsPiaEnemy": [
+            {
+              "posType": 1,
+              "src": [
+                "common_skill_dingfeng_01_2"
+              ],
+              "type": 0
+            }
+          ],
+          "effectsPiaUs": [
+            {
+              "posType": 1,
+              "src": [
+                "common_skill_dingfeng_01_2"
+              ],
+              "type": 0
+            }
+          ],
+          "effectsTarEnemy": [
+            {
+              "delay": 200,
+              "dt": 350,
+              "fixedWidth": 50,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_dingfeng_01_1"
+              ],
+              "type": 1
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_dingfeng_01_1",
+            "delay": 200,
+            "dt": 350,
+            "timeScale": 1,
+            "type": 1,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_dingfeng_01_1_55fa6df0.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_dingfeng_01_1",
+                  "name": "common_skill_dingfeng_01_1",
+                  "fps": 24,
+                  "durationFrames": 15,
+                  "durationMs": 625.0,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_skill_dingfeng_01_q",
+                  "name": "common_skill_dingfeng_01_q",
+                  "fps": 24,
+                  "durationFrames": 4,
+                  "durationMs": 166.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_dingfeng_01_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_dingfeng_01_2_864c4049.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_dingfeng_01_2",
+                  "name": "common_skill_dingfeng_01_2",
+                  "fps": 24,
+                  "durationFrames": 11,
+                  "durationMs": 458.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaUs",
+            "resource": "common_skill_dingfeng_01_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_dingfeng_01_2_864c4049.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_dingfeng_01_2",
+                  "name": "common_skill_dingfeng_01_2",
+                  "fps": 24,
+                  "durationFrames": 11,
+                  "durationMs": 458.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_dingfeng_01_1 delay=200 dt=350 speed=1\neffectsPiaEnemy: common_skill_dingfeng_01_2 delay=0 dt=None speed=1\neffectsPiaUs: common_skill_dingfeng_01_2 delay=0 dt=None speed=1",
+        "variants": [
+          "common_skill_dingfeng_01"
+        ],
+        "portrait": "reskin/hero_051.png"
+      }
+    }
+  },
+  "length": 124,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false,
+  "sparseGuideSchedule": [
+    {
+      "frame": 0,
+      "image": "idle"
+    },
+    {
+      "frame": 28,
+      "image": "attack"
+    },
+    {
+      "frame": 62,
+      "image": "idle"
+    },
+    {
+      "frame": 92,
+      "image": "skill"
+    },
+    {
+      "frame": 123,
+      "image": "idle"
+    }
+  ],
+  "temporalReviewRequired": true
+}

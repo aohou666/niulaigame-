@@ -22,13 +22,29 @@ def measure(folder):
     # Deliberate anticipation/recovery holds lower the median even in fluid clips.
     # Count meaningful transition frames rather than rejecting a low median itself.
     significant = sum(value > max(.5, max(delta, default=0)*.1) for value in delta)
-    flag = len(files) < 20 or top > .65 or significant < 10
+    # A long held pose can evade the four-largest-jumps test when flashes or
+    # several abrupt cuts spread the delta across the clip. Flag the transition
+    # out of a long near-static run; do not treat a quiet ending as a bad cut.
+    held_then_jump = []
+    run_start = 0
+    for i, value in enumerate(delta):
+        if value <= .5:
+            continue
+        held = i-run_start
+        burst = sum(delta[i:i+4])
+        if held >= 20 and burst > 12:
+            held_then_jump.append({'startFrame': run_start,
+                                   'endFrame': i, 'heldTransitions': held,
+                                   'nextFourDeltaSum': round(burst, 5)})
+        run_start = i+1
+    flag = len(files) < 20 or top > .65 or significant < 10 or bool(held_then_jump)
     return {'source': folder.relative_to(ROOT).as_posix(), 'frames': len(files),
             'sourceSignature': hashlib.sha256(''.join(row['sha256'] for row in job.get('outputs', [])).encode()).hexdigest(),
             'meanAbsoluteRgbDelta128': [round(x, 5) for x in delta],
             'medianDelta': round(median, 5), 'topFourDeltaShare': round(top, 5),
             'jumpFrames': jumps, 'significantTransitionFrames': significant,
-            'algorithmVersion':'0.49.0', 'requiresTemporalReview': flag,
+            'heldPoseJumpWindows': held_then_jump,
+            'algorithmVersion':'0.57.0', 'requiresTemporalReview': flag,
             'interpretation': 'screening only; no automatic animation approval or rejection'}
 
 def main():

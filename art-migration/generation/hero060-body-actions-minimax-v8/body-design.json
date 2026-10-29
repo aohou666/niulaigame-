@@ -1,0 +1,437 @@
+{
+  "heroId": 60,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/060/portrait.png",
+      "prepared": "art-migration/references/body-060-v8/idle.png",
+      "foot": [
+        384.39,
+        700
+      ],
+      "size": [
+        272,
+        500
+      ],
+      "sha256": "b6e3b13f6dd7bb3627de34be8adc30528974c60443dcfd968f4c0fa9ba13cda6"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero060-attack-v4/official-guide.png",
+      "prepared": "art-migration/references/body-060-v8/attack.png",
+      "foot": [
+        384.25,
+        700
+      ],
+      "size": [
+        317,
+        500
+      ],
+      "sha256": "94707ba36d6b568c8b6e591783e06e086734d95b1259d4dbde569b67386473ac"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero060-skill-v3/official-guide.png",
+      "prepared": "art-migration/references/body-060-v8/skill.png",
+      "foot": [
+        383.87,
+        700
+      ],
+      "size": [
+        289,
+        500
+      ],
+      "sha256": "58e0cef4fccf1efd8e5ed9d035c16f3e90610bb4bfb6535e361aa32c6f3fa9e0"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        61
+      ],
+      "guideImpactFrame": 28,
+      "native": {
+        "taskId": "H060-ATK",
+        "heroId": 60,
+        "name": "算命牛",
+        "originalName": "于吉",
+        "slot": "普攻",
+        "skillId": 550600110,
+        "skillName": "普通攻击",
+        "newSkillName": "签声轻点",
+        "purpose": "辅助／减益随机分支",
+        "targetSide": "敌方或友方（按占卜结果）",
+        "scope": "敌我分支全体",
+        "delivery": "辅助施法",
+        "movement": "原站位出手",
+        "weapon": "生活长柄道具",
+        "weaponObservation": "RIGHT hand always holds one vertical bamboo banner, front lettering 今日卜卦 stays legible, left hip bamboo cylinder/red ring remain. LEFT hand empty.",
+        "effectClass": "目标位置特效",
+        "semantic": "降低",
+        "bodyDesign": "Keep RIGHT banner vertical and front-facing; LEFT empty palm extends forward to cast/command, then returns to idle. Do not swing or twirl the pole.",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B04",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_yuji_02",
+        "model": "hero_060_01",
+        "action": "gongji",
+        "effectiveDesc": "普通攻击转化为：进行一次占卜,大吉,提升我方全体5%攻击,持续1回合；大凶,降低敌方全体10%防御,持续1回合。",
+        "classificationStage": "被动改写生效后；解锁前仍用基础普攻",
+        "passiveRewrite": "550600310 阴阳开泰：普通攻击转化为：进行一次占卜,大吉,提升我方全体5%攻击,持续1回合；大凶,降低敌方全体10%防御,持续1回合。",
+        "passiveNotes": "550600310 阴阳开泰：普通攻击转化为：进行一次占卜,大吉,提升我方全体5%攻击,持续1回合；大凶,降低敌方全体10%防御,持续1回合。",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "3wuqi",
+        "rawDurationMs": 1333.333,
+        "fps": 30,
+        "durationFrames": 40,
+        "rawEvents": [
+          {
+            "frame0": 21,
+            "timeMs": 700.0,
+            "type": 10,
+            "name": "zd"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "zd@700.0ms（发射/启动特效）",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "effectsTarEnemy": [
+            {
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 0,
+              "src": [
+                "common_skill_yuji_02"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_yuji_02",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_yuji_02_d4c42ad4.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_yuji_02",
+                  "name": "common_skill_yuji_02",
+                  "fps": 24,
+                  "durationFrames": 19,
+                  "durationMs": 791.667,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        3
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 4,
+                      "timeMs": 166.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 9,
+                      "timeMs": 375.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 15,
+                      "timeMs": 625.0,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                },
+                {
+                  "armature": "common_skill_xiaoqiao_ljf",
+                  "name": "common_skill_xiaoqiao_ljf",
+                  "fps": 24,
+                  "durationFrames": 19,
+                  "durationMs": 791.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_yuji_02 delay=0 dt=None speed=1 事件=pia@166.7,pia@375.0,pia@625.0",
+        "variants": [
+          "common_skill_yuji_02"
+        ],
+        "portrait": "reskin/hero_060.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        62,
+        123
+      ],
+      "guideImpactFrame": 92,
+      "native": {
+        "taskId": "H060-ULT",
+        "heroId": 60,
+        "name": "算命牛",
+        "originalName": "于吉",
+        "slot": "大招",
+        "skillId": 550600210,
+        "skillName": "仙灵卦",
+        "newSkillName": "街角灵签",
+        "purpose": "攻辅随机分支",
+        "targetSide": "敌方或友方（按占卜结果）",
+        "scope": "敌我分支单体",
+        "delivery": "辅助施法",
+        "movement": "原站位出手",
+        "weapon": "生活长柄道具",
+        "weaponObservation": "RIGHT hand always holds one vertical bamboo banner, front lettering 今日卜卦 stays legible, left hip bamboo cylinder/red ring remain. LEFT hand empty.",
+        "effectClass": "场景/范围特效、命中/生效附着特效",
+        "semantic": "治疗/吸血、降低",
+        "bodyDesign": "Keep RIGHT banner vertical/front-facing; LEFT index finger rises at chest in advising gesture, then recovers. No pole rotation or banner disappearance.",
+        "rootPolicy": "原位播放，锁脚底锚点；位移若有由引擎负责",
+        "batch": "B04",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "进行一次占卜。大吉,回复生命比例最低的友方单体320%攻击生命,并降低其受到的10%伤害,持续2回合；大凶,对敌方前排单体造成260%伤害,并增加其8%受到的伤害,持续2回合。",
+        "skillModel": "common_skill_yuji_01",
+        "model": "hero_060_01",
+        "action": "jineng",
+        "effectiveDesc": "进行一次占卜。大吉,回复生命比例最低的友方单体320%攻击生命,并降低其受到的10%伤害,持续2回合；大凶,对敌方前排单体造成260%伤害,并增加其8%受到的伤害,持续2回合。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "550600310 阴阳开泰：普通攻击转化为：进行一次占卜,大吉,提升我方全体5%攻击,持续1回合；大凶,降低敌方全体10%防御,持续1回合。",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "3wuqi",
+        "rawDurationMs": 2666.667,
+        "fps": 30,
+        "durationFrames": 80,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "__attackDoneDelay": 1000,
+          "effectQP": [
+            {
+              "delay": 0,
+              "offset": [
+                0,
+                0
+              ],
+              "src": [
+                "common_skill_yuji_01_1"
+              ]
+            }
+          ],
+          "effectsPiaEnemy": [
+            {
+              "posType": 1,
+              "src": [
+                "common_skill_yuji_01_3"
+              ]
+            }
+          ],
+          "effectsPiaUs": [
+            {
+              "posType": 1,
+              "src": [
+                "common_skill_yuji_01_2"
+              ]
+            }
+          ],
+          "forceSkillActionType": 2,
+          "meFlyConfig": [
+            0,
+            0,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectQP",
+            "resource": "common_skill_yuji_01_1",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_yuji_01_1_24f08f2c.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_yuji_01_1",
+                  "name": "common_skill_yuji_01_1",
+                  "fps": 24,
+                  "durationFrames": 37,
+                  "durationMs": 1541.667,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        1
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 36,
+                      "timeMs": 1500.0,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaEnemy",
+            "resource": "common_skill_yuji_01_3",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_yuji_01_3_72e4ce6a.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_yuji_01_3",
+                  "name": "common_skill_yuji_01_3",
+                  "fps": 24,
+                  "durationFrames": 24,
+                  "durationMs": 1000.0,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        1
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 9,
+                      "timeMs": 375.0,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsPiaUs",
+            "resource": "common_skill_yuji_01_2",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_yuji_01_2_fdc4f8da.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_yuji_01_2",
+                  "name": "common_skill_yuji_01_2",
+                  "fps": 24,
+                  "durationFrames": 24,
+                  "durationMs": 1000.0,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        1
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 10,
+                      "timeMs": 416.667,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                },
+                {
+                  "armature": "common_skill_yuji_01_bx",
+                  "name": "common_activity_chunjieqian_bx",
+                  "fps": 24,
+                  "durationFrames": 29,
+                  "durationMs": 1208.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectQP: common_skill_yuji_01_1 delay=0 dt=None speed=1 事件=pia@1500.0\neffectsPiaEnemy: common_skill_yuji_01_3 delay=0 dt=None speed=1 事件=pia@375.0\neffectsPiaUs: common_skill_yuji_01_2 delay=0 dt=None speed=1 事件=pia@416.7",
+        "variants": [
+          "common_skill_yuji_01"
+        ],
+        "portrait": "reskin/hero_060.png"
+      }
+    }
+  },
+  "length": 124,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false,
+  "sparseGuideSchedule": [
+    {
+      "frame": 0,
+      "image": "idle"
+    },
+    {
+      "frame": 28,
+      "image": "attack"
+    },
+    {
+      "frame": 62,
+      "image": "idle"
+    },
+    {
+      "frame": 92,
+      "image": "skill"
+    },
+    {
+      "frame": 123,
+      "image": "idle"
+    }
+  ],
+  "temporalReviewRequired": true
+}

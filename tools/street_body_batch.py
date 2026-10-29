@@ -3,9 +3,11 @@ import argparse,hashlib,json,re,shutil
 from pathlib import Path
 from PIL import Image
 from street_comfy import ROOT,COMFY,submit
+from street_motion_preflight import check_single_gesture
 p=argparse.ArgumentParser();p.add_argument('ids',nargs='+',type=int);p.add_argument('--revision',type=int,default=1);p.add_argument('--height',type=int,default=560);p.add_argument('--length',type=int,choices=[73,124],default=73);p.add_argument('--base-steps',type=int,choices=[16,24,32]);p.add_argument('--landmarks',type=Path);guides=p.add_mutually_exclusive_group();guides.add_argument('--dense-guides',action='store_true');guides.add_argument('--sparse-guides',action='store_true');p.add_argument('--queue-tail',action='store_true');p.add_argument('--retain-lit-prop',action='store_true');a=p.parse_args()
 assert a.length==73 or a.sparse_guides,'Longer trained-range pilot uses sparse guides only'
 base=ROOT/'art-migration/generation'
+check_single_gesture(a.ids, ROOT/'art-migration/native-action-events.json')
 plan=json.loads((ROOT/'outputs/combat-action-plan-20261022/combat-action-plan.json').read_text('utf8'))['rows']
 template=json.loads((base/'hero001-body-actions-minimax-v3-fastdecode/workflow.json').read_text('utf8'))
 overrides=json.loads((ROOT/'art-migration/prop-continuity-overrides.json').read_text('utf8'))
