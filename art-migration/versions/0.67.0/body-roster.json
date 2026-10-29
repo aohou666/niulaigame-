@@ -1,0 +1,1842 @@
+{
+  "pass": true,
+  "errors": [],
+  "reports": [
+    {
+      "hero": 2,
+      "pass": true,
+      "frameChecks": 188,
+      "clocks": [
+        {
+          "model": "hero_002_01",
+          "action": "gongji",
+          "totalTime": 1.0666666666666667,
+          "expected": 1.0666666666666667
+        },
+        {
+          "model": "hero_002_01",
+          "action": "jineng",
+          "totalTime": 1.7333333333333334,
+          "expected": 1.7333333333333334
+        },
+        {
+          "model": "hero_002_01",
+          "action": "paobu",
+          "totalTime": 0.3333333333333333,
+          "expected": 0.3333333333333333
+        },
+        {
+          "model": "hero_002_01_ez",
+          "action": "gongji",
+          "totalTime": 1.0666666666666667,
+          "expected": 1.0666666666666667
+        },
+        {
+          "model": "hero_002_01_ez",
+          "action": "jineng",
+          "totalTime": 1.7333333333333334,
+          "expected": 1.7333333333333334
+        },
+        {
+          "model": "hero_002_01_ez",
+          "action": "paobu",
+          "totalTime": 0.3333333333333333,
+          "expected": 0.3333333333333333
+        }
+      ],
+      "timing": {
+        "events": [
+          {
+            "model": "hero_002_01",
+            "action": "gongji",
+            "expected": 1066.6666666666667,
+            "calls": 1,
+            "elapsedMs": 1078.7000000029802,
+            "native": [
+              {
+                "name": "zd",
+                "elapsedMs": 545.1000000014901
+              },
+              {
+                "name": "zd",
+                "elapsedMs": 578.7000000029802
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "zd",
+                "timeMs": 533.3333333333334,
+                "frame0": 16
+              },
+              {
+                "name": "zd",
+                "timeMs": 566.6666666666666,
+                "frame0": 17
+              }
+            ],
+            "fps": 30
+          },
+          {
+            "model": "hero_002_01",
+            "action": "jineng",
+            "expected": 1733.3333333333335,
+            "calls": 1,
+            "elapsedMs": 1750.8999999985099,
+            "native": [],
+            "expectedEvents": [],
+            "fps": 30
+          },
+          {
+            "model": "hero_002_01",
+            "action": "paobu",
+            "expected": 333.3333333333333,
+            "calls": 1,
+            "elapsedMs": 349.79999999701977,
+            "native": [],
+            "expectedEvents": [],
+            "fps": 30
+          },
+          {
+            "model": "hero_002_01",
+            "action": "gongji",
+            "expected": 1066.6666666666667,
+            "calls": 1,
+            "elapsedMs": 1065.8000000044703,
+            "native": [
+              {
+                "name": "zd",
+                "elapsedMs": 548.8999999985099
+              },
+              {
+                "name": "zd",
+                "elapsedMs": 565.5
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "zd",
+                "timeMs": 533.3333333333334,
+                "frame0": 16
+              },
+              {
+                "name": "zd",
+                "timeMs": 566.6666666666666,
+                "frame0": 17
+              }
+            ],
+            "fps": 30
+          },
+          {
+            "model": "hero_002_01_ez",
+            "action": "gongji",
+            "expected": 1066.6666666666667,
+            "calls": 1,
+            "elapsedMs": 1083.0999999940395,
+            "native": [
+              {
+                "name": "zd",
+                "elapsedMs": 549.6999999955297
+              },
+              {
+                "name": "zd",
+                "elapsedMs": 583
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "zd",
+                "timeMs": 533.3333333333334,
+                "frame0": 16
+              },
+              {
+                "name": "zd",
+                "timeMs": 566.6666666666666,
+                "frame0": 17
+              }
+            ],
+            "fps": 30
+          },
+          {
+            "model": "hero_002_01_ez",
+            "action": "jineng",
+            "expected": 1733.3333333333335,
+            "calls": 1,
+            "elapsedMs": 1750.1000000014901,
+            "native": [],
+            "expectedEvents": [],
+            "fps": 30
+          },
+          {
+            "model": "hero_002_01_ez",
+            "action": "paobu",
+            "expected": 333.3333333333333,
+            "calls": 1,
+            "elapsedMs": 350.1000000014901,
+            "native": [],
+            "expectedEvents": [],
+            "fps": 30
+          },
+          {
+            "model": "hero_002_01_ez",
+            "action": "gongji",
+            "expected": 1066.6666666666667,
+            "calls": 1,
+            "elapsedMs": 1082.8999999985099,
+            "native": [
+              {
+                "name": "zd",
+                "elapsedMs": 549.3999999985099
+              },
+              {
+                "name": "zd",
+                "elapsedMs": 566.0999999940395
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "zd",
+                "timeMs": 533.3333333333334,
+                "frame0": 16
+              },
+              {
+                "name": "zd",
+                "timeMs": 566.6666666666666,
+                "frame0": 17
+              }
+            ],
+            "fps": 30
+          }
+        ],
+        "idle": [
+          {
+            "body": false,
+            "native": false,
+            "idle": true
+          },
+          {
+            "body": false,
+            "native": false,
+            "idle": true
+          }
+        ],
+        "shared": {
+          "sameCache": true,
+          "users": 2
+        },
+        "after": {
+          "installed": true,
+          "framesPresented": 442,
+          "actions": {
+            "gongji": 194,
+            "jineng": 208,
+            "paobu": 40
+          },
+          "atlasRequests": 1,
+          "suppressedViewsDetached": 0,
+          "errors": [],
+          "caches": [],
+          "active": []
+        }
+      }
+    },
+    {
+      "hero": 3,
+      "pass": true,
+      "frameChecks": 134,
+      "clocks": [
+        {
+          "model": "hero_003_01",
+          "action": "gongji",
+          "totalTime": 0.6666666666666666,
+          "expected": 0.6666666666666666
+        },
+        {
+          "model": "hero_003_01",
+          "action": "jineng",
+          "totalTime": 1.5666666666666667,
+          "expected": 1.5666666666666667
+        },
+        {
+          "model": "hero_003_01_ez",
+          "action": "gongji",
+          "totalTime": 0.6666666666666666,
+          "expected": 0.6666666666666666
+        },
+        {
+          "model": "hero_003_01_ez",
+          "action": "jineng",
+          "totalTime": 1.5666666666666667,
+          "expected": 1.5666666666666667
+        }
+      ],
+      "timing": {
+        "events": [
+          {
+            "model": "hero_003_01",
+            "action": "gongji",
+            "expected": 666.6666666666666,
+            "calls": 1,
+            "elapsedMs": 676.5,
+            "native": [
+              {
+                "name": "pia",
+                "elapsedMs": 192.60000000149012
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "pia",
+                "frame0": 6,
+                "timeMs": 200
+              }
+            ],
+            "fps": 30
+          },
+          {
+            "model": "hero_003_01",
+            "action": "jineng",
+            "expected": 1566.6666666666667,
+            "calls": 1,
+            "elapsedMs": 1583,
+            "native": [],
+            "expectedEvents": [],
+            "fps": 30
+          },
+          {
+            "model": "hero_003_01",
+            "action": "gongji",
+            "expected": 666.6666666666666,
+            "calls": 1,
+            "elapsedMs": 666.6999999955297,
+            "native": [
+              {
+                "name": "pia",
+                "elapsedMs": 199.79999999701977
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "pia",
+                "frame0": 6,
+                "timeMs": 200
+              }
+            ],
+            "fps": 30
+          },
+          {
+            "model": "hero_003_01_ez",
+            "action": "gongji",
+            "expected": 666.6666666666666,
+            "calls": 1,
+            "elapsedMs": 683.2000000029802,
+            "native": [
+              {
+                "name": "pia",
+                "elapsedMs": 199.5
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "pia",
+                "frame0": 6,
+                "timeMs": 200
+              }
+            ],
+            "fps": 30
+          },
+          {
+            "model": "hero_003_01_ez",
+            "action": "jineng",
+            "expected": 1566.6666666666667,
+            "calls": 1,
+            "elapsedMs": 1566.7999999970198,
+            "native": [],
+            "expectedEvents": [],
+            "fps": 30
+          },
+          {
+            "model": "hero_003_01_ez",
+            "action": "gongji",
+            "expected": 666.6666666666666,
+            "calls": 1,
+            "elapsedMs": 683.3000000044703,
+            "native": [
+              {
+                "name": "pia",
+                "elapsedMs": 199.60000000149012
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "pia",
+                "frame0": 6,
+                "timeMs": 200
+              }
+            ],
+            "fps": 30
+          }
+        ],
+        "idle": [
+          {
+            "body": false,
+            "native": false,
+            "idle": true
+          },
+          {
+            "body": false,
+            "native": false,
+            "idle": true
+          }
+        ],
+        "shared": {
+          "sameCache": true,
+          "users": 2
+        },
+        "after": {
+          "installed": true,
+          "framesPresented": 712,
+          "actions": {
+            "gongji": 316,
+            "jineng": 356,
+            "paobu": 40
+          },
+          "atlasRequests": 2,
+          "suppressedViewsDetached": 0,
+          "errors": [],
+          "caches": [],
+          "active": []
+        }
+      }
+    },
+    {
+      "hero": 46,
+      "pass": true,
+      "frameChecks": 120,
+      "clocks": [
+        {
+          "model": "hero_046_01",
+          "action": "gongji",
+          "totalTime": 1,
+          "expected": 1
+        },
+        {
+          "model": "hero_046_01",
+          "action": "jineng",
+          "totalTime": 1,
+          "expected": 1
+        },
+        {
+          "model": "hero_046_01_ez",
+          "action": "gongji",
+          "totalTime": 1,
+          "expected": 1
+        },
+        {
+          "model": "hero_046_01_ez",
+          "action": "jineng",
+          "totalTime": 1,
+          "expected": 1
+        }
+      ],
+      "timing": {
+        "events": [
+          {
+            "model": "hero_046_01",
+            "action": "gongji",
+            "expected": 1000,
+            "calls": 1,
+            "elapsedMs": 1003.1999999955297,
+            "native": [
+              {
+                "name": "zd",
+                "elapsedMs": 402.69999999552965
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "zd",
+                "timeMs": 400,
+                "frame0": 12
+              }
+            ],
+            "fps": 30
+          },
+          {
+            "model": "hero_046_01",
+            "action": "jineng",
+            "expected": 1000,
+            "calls": 1,
+            "elapsedMs": 999.5,
+            "native": [],
+            "expectedEvents": [],
+            "fps": 30
+          },
+          {
+            "model": "hero_046_01",
+            "action": "gongji",
+            "expected": 1000,
+            "calls": 1,
+            "elapsedMs": 1000.1000000014901,
+            "native": [
+              {
+                "name": "zd",
+                "elapsedMs": 400
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "zd",
+                "timeMs": 400,
+                "frame0": 12
+              }
+            ],
+            "fps": 30
+          },
+          {
+            "model": "hero_046_01_ez",
+            "action": "gongji",
+            "expected": 1000,
+            "calls": 1,
+            "elapsedMs": 1001.1000000014901,
+            "native": [
+              {
+                "name": "zd",
+                "elapsedMs": 399.6000000014901
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "zd",
+                "timeMs": 400,
+                "frame0": 12
+              }
+            ],
+            "fps": 30
+          },
+          {
+            "model": "hero_046_01_ez",
+            "action": "jineng",
+            "expected": 1000,
+            "calls": 1,
+            "elapsedMs": 998.6999999955297,
+            "native": [],
+            "expectedEvents": [],
+            "fps": 30
+          },
+          {
+            "model": "hero_046_01_ez",
+            "action": "gongji",
+            "expected": 1000,
+            "calls": 1,
+            "elapsedMs": 1000.1000000014901,
+            "native": [
+              {
+                "name": "zd",
+                "elapsedMs": 399.6000000014901
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "zd",
+                "timeMs": 400,
+                "frame0": 12
+              }
+            ],
+            "fps": 30
+          }
+        ],
+        "idle": [
+          {
+            "body": false,
+            "native": false,
+            "idle": true
+          },
+          {
+            "body": false,
+            "native": false,
+            "idle": true
+          }
+        ],
+        "shared": {
+          "sameCache": true,
+          "users": 2
+        },
+        "after": {
+          "installed": true,
+          "framesPresented": 1014,
+          "actions": {
+            "gongji": 498,
+            "jineng": 476,
+            "paobu": 40
+          },
+          "atlasRequests": 3,
+          "suppressedViewsDetached": 0,
+          "errors": [],
+          "caches": [],
+          "active": []
+        }
+      }
+    },
+    {
+      "hero": 52,
+      "pass": true,
+      "frameChecks": 140,
+      "clocks": [
+        {
+          "model": "hero_052_01",
+          "action": "gongji",
+          "totalTime": 1.2666666666666666,
+          "expected": 1.2666666666666666
+        },
+        {
+          "model": "hero_052_01",
+          "action": "jineng",
+          "totalTime": 1.0666666666666667,
+          "expected": 1.0666666666666667
+        },
+        {
+          "model": "hero_052_01_ez",
+          "action": "gongji",
+          "totalTime": 1.2666666666666666,
+          "expected": 1.2666666666666666
+        },
+        {
+          "model": "hero_052_01_ez",
+          "action": "jineng",
+          "totalTime": 1.0666666666666667,
+          "expected": 1.0666666666666667
+        }
+      ],
+      "timing": {
+        "events": [
+          {
+            "model": "hero_052_01",
+            "action": "gongji",
+            "expected": 1266.6666666666665,
+            "calls": 1,
+            "elapsedMs": 1267.1000000014901,
+            "native": [
+              {
+                "name": "zd",
+                "elapsedMs": 433.5
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "zd",
+                "timeMs": 433.33333333333337,
+                "frame0": 13
+              }
+            ],
+            "fps": 30
+          },
+          {
+            "model": "hero_052_01",
+            "action": "jineng",
+            "expected": 1066.6666666666667,
+            "calls": 1,
+            "elapsedMs": 1083.1999999955297,
+            "native": [],
+            "expectedEvents": [],
+            "fps": 30
+          },
+          {
+            "model": "hero_052_01",
+            "action": "gongji",
+            "expected": 1266.6666666666665,
+            "calls": 1,
+            "elapsedMs": 1266.8999999985099,
+            "native": [
+              {
+                "name": "zd",
+                "elapsedMs": 449.6000000014901
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "zd",
+                "timeMs": 433.33333333333337,
+                "frame0": 13
+              }
+            ],
+            "fps": 30
+          },
+          {
+            "model": "hero_052_01_ez",
+            "action": "gongji",
+            "expected": 1266.6666666666665,
+            "calls": 1,
+            "elapsedMs": 1283.7000000029802,
+            "native": [
+              {
+                "name": "zd",
+                "elapsedMs": 449.6000000014901
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "zd",
+                "timeMs": 433.33333333333337,
+                "frame0": 13
+              }
+            ],
+            "fps": 30
+          },
+          {
+            "model": "hero_052_01_ez",
+            "action": "jineng",
+            "expected": 1066.6666666666667,
+            "calls": 1,
+            "elapsedMs": 1066,
+            "native": [],
+            "expectedEvents": [],
+            "fps": 30
+          },
+          {
+            "model": "hero_052_01_ez",
+            "action": "gongji",
+            "expected": 1266.6666666666665,
+            "calls": 1,
+            "elapsedMs": 1283.6000000014901,
+            "native": [
+              {
+                "name": "zd",
+                "elapsedMs": 449.70000000298023
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "zd",
+                "timeMs": 433.33333333333337,
+                "frame0": 13
+              }
+            ],
+            "fps": 30
+          }
+        ],
+        "idle": [
+          {
+            "body": false,
+            "native": false,
+            "idle": true
+          },
+          {
+            "body": false,
+            "native": false,
+            "idle": true
+          }
+        ],
+        "shared": {
+          "sameCache": true,
+          "users": 2
+        },
+        "after": {
+          "installed": true,
+          "framesPresented": 1372,
+          "actions": {
+            "gongji": 728,
+            "jineng": 604,
+            "paobu": 40
+          },
+          "atlasRequests": 4,
+          "suppressedViewsDetached": 0,
+          "errors": [],
+          "caches": [],
+          "active": []
+        }
+      }
+    },
+    {
+      "hero": 63,
+      "pass": true,
+      "frameChecks": 228,
+      "clocks": [
+        {
+          "model": "hero_063_01",
+          "action": "gongji",
+          "totalTime": 1.9,
+          "expected": 1.9
+        },
+        {
+          "model": "hero_063_01",
+          "action": "jineng",
+          "totalTime": 1.9,
+          "expected": 1.9
+        },
+        {
+          "model": "hero_063_01_ez",
+          "action": "gongji",
+          "totalTime": 1.9,
+          "expected": 1.9
+        },
+        {
+          "model": "hero_063_01_ez",
+          "action": "jineng",
+          "totalTime": 1.9,
+          "expected": 1.9
+        }
+      ],
+      "timing": {
+        "events": [
+          {
+            "model": "hero_063_01",
+            "action": "gongji",
+            "expected": 1900,
+            "calls": 1,
+            "elapsedMs": 1915.2000000029802,
+            "native": [
+              {
+                "name": "zd",
+                "elapsedMs": 680.3000000044703
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "zd",
+                "timeMs": 666.6666666666666,
+                "frame0": 20
+              }
+            ],
+            "fps": 30
+          },
+          {
+            "model": "hero_063_01",
+            "action": "jineng",
+            "expected": 1900,
+            "calls": 1,
+            "elapsedMs": 1915.5,
+            "native": [],
+            "expectedEvents": [],
+            "fps": 30
+          },
+          {
+            "model": "hero_063_01",
+            "action": "gongji",
+            "expected": 1900,
+            "calls": 1,
+            "elapsedMs": 1917,
+            "native": [
+              {
+                "name": "zd",
+                "elapsedMs": 666.2999999970198
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "zd",
+                "timeMs": 666.6666666666666,
+                "frame0": 20
+              }
+            ],
+            "fps": 30
+          },
+          {
+            "model": "hero_063_01_ez",
+            "action": "gongji",
+            "expected": 1900,
+            "calls": 1,
+            "elapsedMs": 1916.1999999955297,
+            "native": [
+              {
+                "name": "zd",
+                "elapsedMs": 682.6000000014901
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "zd",
+                "timeMs": 666.6666666666666,
+                "frame0": 20
+              }
+            ],
+            "fps": 30
+          },
+          {
+            "model": "hero_063_01_ez",
+            "action": "jineng",
+            "expected": 1900,
+            "calls": 1,
+            "elapsedMs": 1900.3000000044703,
+            "native": [],
+            "expectedEvents": [],
+            "fps": 30
+          },
+          {
+            "model": "hero_063_01_ez",
+            "action": "gongji",
+            "expected": 1900,
+            "calls": 1,
+            "elapsedMs": 1916.5,
+            "native": [
+              {
+                "name": "zd",
+                "elapsedMs": 666.1000000014901
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "zd",
+                "timeMs": 666.6666666666666,
+                "frame0": 20
+              }
+            ],
+            "fps": 30
+          }
+        ],
+        "idle": [
+          {
+            "body": false,
+            "native": false,
+            "idle": true
+          },
+          {
+            "body": false,
+            "native": false,
+            "idle": true
+          }
+        ],
+        "shared": {
+          "sameCache": true,
+          "users": 2
+        },
+        "after": {
+          "installed": true,
+          "framesPresented": 1854,
+          "actions": {
+            "gongji": 982,
+            "jineng": 832,
+            "paobu": 40
+          },
+          "atlasRequests": 5,
+          "suppressedViewsDetached": 0,
+          "errors": [],
+          "caches": [],
+          "active": []
+        }
+      }
+    },
+    {
+      "hero": 73,
+      "pass": true,
+      "frameChecks": 204,
+      "clocks": [
+        {
+          "model": "hero_073_01",
+          "action": "gongji",
+          "totalTime": 1.3333333333333333,
+          "expected": 1.3333333333333333
+        },
+        {
+          "model": "hero_073_01",
+          "action": "jineng",
+          "totalTime": 2.066666666666667,
+          "expected": 2.066666666666667
+        },
+        {
+          "model": "hero_073_01_ez",
+          "action": "gongji",
+          "totalTime": 1.3333333333333333,
+          "expected": 1.3333333333333333
+        },
+        {
+          "model": "hero_073_01_ez",
+          "action": "jineng",
+          "totalTime": 2.066666666666667,
+          "expected": 2.066666666666667
+        }
+      ],
+      "timing": {
+        "events": [
+          {
+            "model": "hero_073_01",
+            "action": "gongji",
+            "expected": 1333.3333333333333,
+            "calls": 1,
+            "elapsedMs": 1337.8999999985099,
+            "native": [],
+            "expectedEvents": [],
+            "fps": 30
+          },
+          {
+            "model": "hero_073_01",
+            "action": "jineng",
+            "expected": 2066.666666666667,
+            "calls": 1,
+            "elapsedMs": 2066.60000000149,
+            "native": [],
+            "expectedEvents": [],
+            "fps": 30
+          },
+          {
+            "model": "hero_073_01",
+            "action": "gongji",
+            "expected": 1333.3333333333333,
+            "calls": 1,
+            "elapsedMs": 1350.3999999985099,
+            "native": [],
+            "expectedEvents": [],
+            "fps": 30
+          },
+          {
+            "model": "hero_073_01_ez",
+            "action": "gongji",
+            "expected": 1333.3333333333333,
+            "calls": 1,
+            "elapsedMs": 1349.6999999955297,
+            "native": [],
+            "expectedEvents": [],
+            "fps": 30
+          },
+          {
+            "model": "hero_073_01_ez",
+            "action": "jineng",
+            "expected": 2066.666666666667,
+            "calls": 1,
+            "elapsedMs": 2083.4000000059605,
+            "native": [],
+            "expectedEvents": [],
+            "fps": 30
+          },
+          {
+            "model": "hero_073_01_ez",
+            "action": "gongji",
+            "expected": 1333.3333333333333,
+            "calls": 1,
+            "elapsedMs": 1349.5999999940395,
+            "native": [],
+            "expectedEvents": [],
+            "fps": 30
+          }
+        ],
+        "idle": [
+          {
+            "body": false,
+            "native": false,
+            "idle": true
+          },
+          {
+            "body": false,
+            "native": false,
+            "idle": true
+          }
+        ],
+        "shared": {
+          "sameCache": true,
+          "users": 2
+        },
+        "after": {
+          "installed": true,
+          "framesPresented": 2344,
+          "actions": {
+            "gongji": 1224,
+            "jineng": 1080,
+            "paobu": 40
+          },
+          "atlasRequests": 6,
+          "suppressedViewsDetached": 0,
+          "errors": [],
+          "caches": [],
+          "active": []
+        }
+      }
+    },
+    {
+      "hero": 79,
+      "pass": true,
+      "frameChecks": 176,
+      "clocks": [
+        {
+          "model": "hero_079_03",
+          "action": "gongji",
+          "totalTime": 1.2666666666666666,
+          "expected": 1.2666666666666666
+        },
+        {
+          "model": "hero_079_03",
+          "action": "jineng",
+          "totalTime": 1.6666666666666667,
+          "expected": 1.6666666666666667
+        },
+        {
+          "model": "hero_079_03_ez",
+          "action": "gongji",
+          "totalTime": 1.2666666666666666,
+          "expected": 1.2666666666666666
+        },
+        {
+          "model": "hero_079_03_ez",
+          "action": "jineng",
+          "totalTime": 1.6666666666666667,
+          "expected": 1.6666666666666667
+        }
+      ],
+      "timing": {
+        "events": [
+          {
+            "model": "hero_079_03",
+            "action": "gongji",
+            "expected": 1266.6666666666665,
+            "calls": 1,
+            "elapsedMs": 1270.1999999955297,
+            "native": [
+              {
+                "name": "pia",
+                "elapsedMs": 536.6000000014901
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "pia",
+                "timeMs": 533.3333333333334,
+                "frame0": 16
+              }
+            ],
+            "fps": 30
+          },
+          {
+            "model": "hero_079_03",
+            "action": "jineng",
+            "expected": 1666.6666666666667,
+            "calls": 1,
+            "elapsedMs": 1666.6000000014901,
+            "native": [],
+            "expectedEvents": [],
+            "fps": 30
+          },
+          {
+            "model": "hero_079_03",
+            "action": "gongji",
+            "expected": 1266.6666666666665,
+            "calls": 1,
+            "elapsedMs": 1268,
+            "native": [
+              {
+                "name": "pia",
+                "elapsedMs": 549.7000000029802
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "pia",
+                "timeMs": 533.3333333333334,
+                "frame0": 16
+              }
+            ],
+            "fps": 30
+          },
+          {
+            "model": "hero_079_03_ez",
+            "action": "gongji",
+            "expected": 1266.6666666666665,
+            "calls": 1,
+            "elapsedMs": 1281.7000000029802,
+            "native": [
+              {
+                "name": "pia",
+                "elapsedMs": 548.3000000044703
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "pia",
+                "timeMs": 533.3333333333334,
+                "frame0": 16
+              }
+            ],
+            "fps": 30
+          },
+          {
+            "model": "hero_079_03_ez",
+            "action": "jineng",
+            "expected": 1666.6666666666667,
+            "calls": 1,
+            "elapsedMs": 1683.5,
+            "native": [],
+            "expectedEvents": [],
+            "fps": 30
+          },
+          {
+            "model": "hero_079_03_ez",
+            "action": "gongji",
+            "expected": 1266.6666666666665,
+            "calls": 1,
+            "elapsedMs": 1266.7999999970198,
+            "native": [
+              {
+                "name": "pia",
+                "elapsedMs": 549.6999999955297
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "pia",
+                "timeMs": 533.3333333333334,
+                "frame0": 16
+              }
+            ],
+            "fps": 30
+          }
+        ],
+        "idle": [
+          {
+            "body": false,
+            "native": false,
+            "idle": true
+          },
+          {
+            "body": false,
+            "native": false,
+            "idle": true
+          }
+        ],
+        "shared": {
+          "sameCache": true,
+          "users": 2
+        },
+        "after": {
+          "installed": true,
+          "framesPresented": 2774,
+          "actions": {
+            "gongji": 1454,
+            "jineng": 1280,
+            "paobu": 40
+          },
+          "atlasRequests": 7,
+          "suppressedViewsDetached": 0,
+          "errors": [],
+          "caches": [],
+          "active": []
+        }
+      }
+    },
+    {
+      "hero": 80,
+      "pass": true,
+      "frameChecks": 210,
+      "clocks": [
+        {
+          "model": "hero_080_03",
+          "action": "gongji",
+          "totalTime": 1.2333333333333334,
+          "expected": 1.2333333333333334
+        },
+        {
+          "model": "hero_080_03",
+          "action": "jineng",
+          "totalTime": 2.2666666666666666,
+          "expected": 2.2666666666666666
+        },
+        {
+          "model": "hero_080_03_ez",
+          "action": "gongji",
+          "totalTime": 1.2333333333333334,
+          "expected": 1.2333333333333334
+        },
+        {
+          "model": "hero_080_03_ez",
+          "action": "jineng",
+          "totalTime": 2.2666666666666666,
+          "expected": 2.2666666666666666
+        }
+      ],
+      "timing": {
+        "events": [
+          {
+            "model": "hero_080_03",
+            "action": "gongji",
+            "expected": 1233.3333333333335,
+            "calls": 1,
+            "elapsedMs": 1234,
+            "native": [
+              {
+                "name": "pia",
+                "elapsedMs": 432
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "pia",
+                "timeMs": 433.33333333333337,
+                "frame0": 13
+              }
+            ],
+            "fps": 30
+          },
+          {
+            "model": "hero_080_03",
+            "action": "jineng",
+            "expected": 2266.6666666666665,
+            "calls": 1,
+            "elapsedMs": 2281.60000000149,
+            "native": [],
+            "expectedEvents": [],
+            "fps": 30
+          },
+          {
+            "model": "hero_080_03",
+            "action": "gongji",
+            "expected": 1233.3333333333335,
+            "calls": 1,
+            "elapsedMs": 1250.2000000029802,
+            "native": [
+              {
+                "name": "pia",
+                "elapsedMs": 449.6000000014901
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "pia",
+                "timeMs": 433.33333333333337,
+                "frame0": 13
+              }
+            ],
+            "fps": 30
+          },
+          {
+            "model": "hero_080_03_ez",
+            "action": "gongji",
+            "expected": 1233.3333333333335,
+            "calls": 1,
+            "elapsedMs": 1234.8999999985099,
+            "native": [
+              {
+                "name": "pia",
+                "elapsedMs": 449.5
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "pia",
+                "timeMs": 433.33333333333337,
+                "frame0": 13
+              }
+            ],
+            "fps": 30
+          },
+          {
+            "model": "hero_080_03_ez",
+            "action": "jineng",
+            "expected": 2266.6666666666665,
+            "calls": 1,
+            "elapsedMs": 2281.60000000149,
+            "native": [],
+            "expectedEvents": [],
+            "fps": 30
+          },
+          {
+            "model": "hero_080_03_ez",
+            "action": "gongji",
+            "expected": 1233.3333333333335,
+            "calls": 1,
+            "elapsedMs": 1249.6000000014901,
+            "native": [
+              {
+                "name": "pia",
+                "elapsedMs": 449.69999999552965
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "pia",
+                "timeMs": 433.33333333333337,
+                "frame0": 13
+              }
+            ],
+            "fps": 30
+          }
+        ],
+        "idle": [
+          {
+            "body": false,
+            "native": false,
+            "idle": true
+          },
+          {
+            "body": false,
+            "native": false,
+            "idle": true
+          }
+        ],
+        "shared": {
+          "sameCache": true,
+          "users": 2
+        },
+        "after": {
+          "installed": true,
+          "framesPresented": 3246,
+          "actions": {
+            "gongji": 1678,
+            "jineng": 1528,
+            "paobu": 40
+          },
+          "atlasRequests": 8,
+          "suppressedViewsDetached": 0,
+          "errors": [],
+          "caches": [],
+          "active": []
+        }
+      }
+    },
+    {
+      "hero": 84,
+      "pass": true,
+      "frameChecks": 244,
+      "clocks": [
+        {
+          "model": "hero_084_01",
+          "action": "gongji",
+          "totalTime": 1.7333333333333334,
+          "expected": 1.7333333333333334
+        },
+        {
+          "model": "hero_084_01",
+          "action": "jineng",
+          "totalTime": 2.3333333333333335,
+          "expected": 2.3333333333333335
+        },
+        {
+          "model": "hero_084_01_ez",
+          "action": "gongji",
+          "totalTime": 1.7333333333333334,
+          "expected": 1.7333333333333334
+        },
+        {
+          "model": "hero_084_01_ez",
+          "action": "jineng",
+          "totalTime": 2.3333333333333335,
+          "expected": 2.3333333333333335
+        }
+      ],
+      "timing": {
+        "events": [
+          {
+            "model": "hero_084_01",
+            "action": "gongji",
+            "expected": 1733.3333333333335,
+            "calls": 1,
+            "elapsedMs": 1720.7000000029802,
+            "native": [
+              {
+                "name": "pia",
+                "elapsedMs": 1.3000000044703484
+              },
+              {
+                "name": "pia",
+                "elapsedMs": 786.7000000029802
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "pia",
+                "timeMs": 0,
+                "frame0": 0
+              },
+              {
+                "name": "pia",
+                "timeMs": 800,
+                "frame0": 24
+              }
+            ],
+            "fps": 30
+          },
+          {
+            "model": "hero_084_01",
+            "action": "jineng",
+            "expected": 2333.3333333333335,
+            "calls": 1,
+            "elapsedMs": 2333.2999999970198,
+            "native": [
+              {
+                "name": "pia",
+                "elapsedMs": 17.299999997019768
+              },
+              {
+                "name": "pia",
+                "elapsedMs": 1033
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "pia",
+                "timeMs": 0,
+                "frame0": 0
+              },
+              {
+                "name": "pia",
+                "timeMs": 1033.3333333333335,
+                "frame0": 31
+              }
+            ],
+            "fps": 30
+          },
+          {
+            "model": "hero_084_01",
+            "action": "gongji",
+            "expected": 1733.3333333333335,
+            "calls": 1,
+            "elapsedMs": 1749.7000000029802,
+            "native": [
+              {
+                "name": "pia",
+                "elapsedMs": 16.700000002980232
+              },
+              {
+                "name": "pia",
+                "elapsedMs": 816.7000000029802
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "pia",
+                "timeMs": 0,
+                "frame0": 0
+              },
+              {
+                "name": "pia",
+                "timeMs": 800,
+                "frame0": 24
+              }
+            ],
+            "fps": 30
+          },
+          {
+            "model": "hero_084_01_ez",
+            "action": "gongji",
+            "expected": 1733.3333333333335,
+            "calls": 1,
+            "elapsedMs": 1734.2000000029802,
+            "native": [
+              {
+                "name": "pia",
+                "elapsedMs": 17.200000002980232
+              },
+              {
+                "name": "pia",
+                "elapsedMs": 816.2000000029802
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "pia",
+                "timeMs": 0,
+                "frame0": 0
+              },
+              {
+                "name": "pia",
+                "timeMs": 800,
+                "frame0": 24
+              }
+            ],
+            "fps": 30
+          },
+          {
+            "model": "hero_084_01_ez",
+            "action": "jineng",
+            "expected": 2333.3333333333335,
+            "calls": 1,
+            "elapsedMs": 2348.5999999940395,
+            "native": [
+              {
+                "name": "pia",
+                "elapsedMs": 18
+              },
+              {
+                "name": "pia",
+                "elapsedMs": 1048.2999999970198
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "pia",
+                "timeMs": 0,
+                "frame0": 0
+              },
+              {
+                "name": "pia",
+                "timeMs": 1033.3333333333335,
+                "frame0": 31
+              }
+            ],
+            "fps": 30
+          },
+          {
+            "model": "hero_084_01_ez",
+            "action": "gongji",
+            "expected": 1733.3333333333335,
+            "calls": 1,
+            "elapsedMs": 1750.2000000029802,
+            "native": [
+              {
+                "name": "pia",
+                "elapsedMs": 16.700000002980232
+              },
+              {
+                "name": "pia",
+                "elapsedMs": 816.4000000059605
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "pia",
+                "timeMs": 0,
+                "frame0": 0
+              },
+              {
+                "name": "pia",
+                "timeMs": 800,
+                "frame0": 24
+              }
+            ],
+            "fps": 30
+          }
+        ],
+        "idle": [
+          {
+            "body": false,
+            "native": false,
+            "idle": true
+          },
+          {
+            "body": false,
+            "native": false,
+            "idle": true
+          }
+        ],
+        "shared": {
+          "sameCache": true,
+          "users": 2
+        },
+        "after": {
+          "installed": true,
+          "framesPresented": 3744,
+          "actions": {
+            "gongji": 1956,
+            "jineng": 1748,
+            "paobu": 40
+          },
+          "atlasRequests": 9,
+          "suppressedViewsDetached": 0,
+          "errors": [],
+          "caches": [],
+          "active": []
+        }
+      }
+    },
+    {
+      "hero": 85,
+      "pass": true,
+      "frameChecks": 232,
+      "clocks": [
+        {
+          "model": "hero_085_01",
+          "action": "gongji",
+          "totalTime": 1.6666666666666667,
+          "expected": 1.6666666666666667
+        },
+        {
+          "model": "hero_085_01",
+          "action": "jineng",
+          "totalTime": 2.2,
+          "expected": 2.2
+        },
+        {
+          "model": "hero_085_01_ez",
+          "action": "gongji",
+          "totalTime": 1.6666666666666667,
+          "expected": 1.6666666666666667
+        },
+        {
+          "model": "hero_085_01_ez",
+          "action": "jineng",
+          "totalTime": 2.2,
+          "expected": 2.2
+        }
+      ],
+      "timing": {
+        "events": [
+          {
+            "model": "hero_085_01",
+            "action": "gongji",
+            "expected": 1666.6666666666667,
+            "calls": 1,
+            "elapsedMs": 1676.2000000029802,
+            "native": [
+              {
+                "name": "eventName",
+                "elapsedMs": 8.600000001490116
+              },
+              {
+                "name": "pia",
+                "elapsedMs": 841.8000000044703
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "pia",
+                "timeMs": 833.3333333333334,
+                "frame0": 25
+              }
+            ],
+            "fps": 30
+          },
+          {
+            "model": "hero_085_01",
+            "action": "jineng",
+            "expected": 2200,
+            "calls": 1,
+            "elapsedMs": 2199.1999999955297,
+            "native": [
+              {
+                "name": "eventName",
+                "elapsedMs": 16.100000001490116
+              },
+              {
+                "name": "pia",
+                "elapsedMs": 1082.1999999955297
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "pia",
+                "timeMs": 1066.6666666666667,
+                "frame0": 32
+              }
+            ],
+            "fps": 30
+          },
+          {
+            "model": "hero_085_01",
+            "action": "gongji",
+            "expected": 1666.6666666666667,
+            "calls": 1,
+            "elapsedMs": 1667.3000000044703,
+            "native": [
+              {
+                "name": "eventName",
+                "elapsedMs": 16.600000001490116
+              },
+              {
+                "name": "pia",
+                "elapsedMs": 849.6000000014901
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "pia",
+                "timeMs": 833.3333333333334,
+                "frame0": 25
+              }
+            ],
+            "fps": 30
+          },
+          {
+            "model": "hero_085_01_ez",
+            "action": "gongji",
+            "expected": 1666.6666666666667,
+            "calls": 1,
+            "elapsedMs": 1682.6999999955297,
+            "native": [
+              {
+                "name": "eventName",
+                "elapsedMs": 15.899999998509884
+              },
+              {
+                "name": "pia",
+                "elapsedMs": 848.8999999985099
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "pia",
+                "timeMs": 833.3333333333334,
+                "frame0": 25
+              }
+            ],
+            "fps": 30
+          },
+          {
+            "model": "hero_085_01_ez",
+            "action": "jineng",
+            "expected": 2200,
+            "calls": 1,
+            "elapsedMs": 2199.9000000059605,
+            "native": [
+              {
+                "name": "eventName",
+                "elapsedMs": 16.30000000447035
+              },
+              {
+                "name": "pia",
+                "elapsedMs": 1082.9000000059605
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "pia",
+                "timeMs": 1066.6666666666667,
+                "frame0": 32
+              }
+            ],
+            "fps": 30
+          },
+          {
+            "model": "hero_085_01_ez",
+            "action": "gongji",
+            "expected": 1666.6666666666667,
+            "calls": 1,
+            "elapsedMs": 1683.0999999940395,
+            "native": [
+              {
+                "name": "eventName",
+                "elapsedMs": 16.69999999552965
+              },
+              {
+                "name": "pia",
+                "elapsedMs": 849.5
+              }
+            ],
+            "expectedEvents": [
+              {
+                "name": "pia",
+                "timeMs": 833.3333333333334,
+                "frame0": 25
+              }
+            ],
+            "fps": 30
+          }
+        ],
+        "idle": [
+          {
+            "body": false,
+            "native": false,
+            "idle": true
+          },
+          {
+            "body": false,
+            "native": false,
+            "idle": true
+          }
+        ],
+        "shared": {
+          "sameCache": true,
+          "users": 2
+        },
+        "after": {
+          "installed": true,
+          "framesPresented": 4294,
+          "actions": {
+            "gongji": 2258,
+            "jineng": 1996,
+            "paobu": 40
+          },
+          "atlasRequests": 10,
+          "suppressedViewsDetached": 0,
+          "errors": [],
+          "caches": [],
+          "active": []
+        }
+      }
+    }
+  ]
+}

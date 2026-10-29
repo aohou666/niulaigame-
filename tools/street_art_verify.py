@@ -29,6 +29,10 @@ def verify():
    for action,seq in list(cfg['actions'].items())+[(model+'/'+action,seq) for model,actions in cfg.get('modelActionOverrides',{}).items() for action,seq in actions.items()]:
     assert seq['fps']>0 and len(seq['frameMap'])>1
     assert all(isinstance(n,int) and 0<=n<len(cfg['frames']) for n in seq['frameMap']),'bad source frame index'
+    if seq.get('geometry'):
+     g=seq['geometry'];assert g['bodyHeight']>0 and len(g['root'])==2 and len(g['crop'])==4 and g['crop'][2]>g['crop'][0] and g['crop'][3]>g['crop'][1],'invalid action geometry'
+    if seq.get('alphaReviewSha256'):
+     proof=ROOT/seq['source']/'alpha-qa.json';assert hashlib.sha256(proof.read_bytes()).hexdigest()==seq['alphaReviewSha256'] and json.loads(proof.read_text('utf8'))['manualReview']=='approved','action alpha review mismatch'
     if seq.get('nativeImpactFrame') is not None:assert seq['frameMap'][seq['nativeImpactFrame']]==seq['sourceImpactFrame'],'impact mapping mismatch'
     for mark in seq.get('eventAnchors',[]):assert seq['frameMap'][mark['nativeFrame']]==mark['sourceFrame'],'multi-event mapping mismatch'
    if cfg.get('nativeEventAuditSha256'):

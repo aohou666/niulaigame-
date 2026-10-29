@@ -30,6 +30,14 @@ try {
  });
  await page.waitForFunction(()=>window.CharacterIdle&&CharacterIdle.snapshot().installed,{timeout:90000});
  await page.waitForTimeout(mode==='heroes'?2500:7000);
+ if(process.argv.includes('--probe-resource-failure')){
+  // Fault injection is confined to this browser; the game files/save are untouched.
+  await page.evaluate(async()=>{
+   const url=location.origin+'/__street_audit_missing_resource__.png';
+   await new Promise(resolve=>{const timer=setTimeout(resolve,4000);try{const result=RES.getResByUrl(url,()=>{clearTimeout(timer);resolve();},null,RES.ResourceItem.TYPE_IMAGE);if(result&&typeof result.catch==='function')result.catch(()=>{clearTimeout(timer);resolve();});}catch(e){clearTimeout(timer);resolve();}});
+  });
+  await page.waitForTimeout(200);
+ }
  if(process.argv.includes('--probe-null-rejection')){
   // Harness self-check only: reproduce a real unhandled null rejection without changing game files.
   await page.evaluate(()=>{Promise.reject(null);});

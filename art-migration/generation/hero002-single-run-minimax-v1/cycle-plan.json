@@ -1,0 +1,35 @@
+{
+  "heroId": 2,
+  "action": "paobu",
+  "sourceSignature": "342680583fe6f86be52ac99914db030b034f76d031c00ea85c4bd640a7fe2718",
+  "status": "native-loop-frame-and-wrap-validated",
+  "sourceCycle": [
+    0,
+    23
+  ],
+  "nextPhaseReference": 24,
+  "nativeDurationFrames": 10,
+  "nativeFps": 30,
+  "frameMap": [
+    0,
+    2,
+    5,
+    7,
+    10,
+    12,
+    14,
+    17,
+    19,
+    22
+  ],
+  "models": [
+    "hero_002_01",
+    "hero_002_01_ez"
+  ],
+  "observations": [
+    "Viewed enlarged all0-24: one alternating full step cycle;23/24 return near initial raised-knee phase.",
+    "Candidate samples preserve chronological motion; alpha and actual native loop playback still required."
+  ],
+  "evidence": "outputs/street-reskin/hero002-run-first-cycle.jpg",
+  "evidenceVersion": "0.67.0"
+}

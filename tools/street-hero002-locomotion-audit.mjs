@@ -1,0 +1,14 @@
+import fs from 'node:fs/promises';import assert from 'node:assert/strict';import {createRequire} from 'node:module';const require=createRequire(import.meta.url),{chromium}=require('C:/Users/dongdong/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const models=['hero_002_01','hero_002_01_ez'].map(model=>({model,hero:2})),browser=await chromium.launch({channel:'chrome',headless:true}),records=[];
+try{const page=await browser.newPage();await page.goto('http://127.0.0.1:8787/index_bh_lite3zbtest_andr.html?mode=heroes');await page.waitForFunction(()=>window.StreetBody?.snapshot().installed);
+ for(let begin=0;begin<models.length;begin+=8){
+  const batch=await page.evaluate(async entries=>Promise.all(entries.flatMap(entry=>['paobu','shouji'].map(async action=>{
+   const p=new DBPlayer();p._characterIdleSuppressNative=true;egret.MainContext.instance.stage.addChild(p);p.init(entry.model,entry.model.replace(/_ez$/,''));try{
+    await new Promise((resolve,reject)=>{const start=Date.now(),timer=setInterval(()=>{if(p.isReady){clearInterval(timer);resolve();}else if(Date.now()-start>30000){clearInterval(timer);reject(Error('load timeout '+entry.model));}},10);});
+    const realAction=p.getRealAction(action);if(realAction!==action)throw Error('missing native action '+entry.model+'/'+action+' => '+realAction);const data=p.armature.armature.armatureData.animations[action],fps=data.frameCount/data.duration,events=[],start=performance.now();p.armature.addEventListener(dragonBones.EventObject.FRAME_EVENT,e=>events.push({name:e.eventObject.name,timeMs:e.eventObject.time*1000,frame0:Math.round(e.eventObject.time*fps)}),null);
+    await new Promise((resolve,reject)=>{const timeout=setTimeout(()=>reject(Error('completion timeout '+entry.model+'/'+action)),data.duration*1000+4000);p.trigger(action,()=>{clearTimeout(timeout);resolve();},1);});return {...entry,action,fps,durationFrames:data.frameCount,durationMs:data.duration*1000,elapsedMs:performance.now()-start,events};
+   }finally{p.destroy();}
+  }))),models.slice(begin,begin+8));records.push(...batch);await fs.writeFile('art-migration/hero002-locomotion-native-events.json',JSON.stringify({source:'Actual native DragonBones FRAME_EVENT stream, unmodified timelines; no battle callbacks or generated-art clocks',checkedUtc:new Date().toISOString(),models:models.length,completedActions:records.length,complete:records.length===models.length*2,records},null,2));console.log(JSON.stringify({models:models.length,completedActions:records.length,total:models.length*2}));
+ }
+ assert.equal(models.length,2);assert.equal(records.length,4);
+}finally{await browser.close();}
