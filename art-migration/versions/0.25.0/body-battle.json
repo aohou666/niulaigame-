@@ -1,0 +1,60 @@
+{
+  "pass": true,
+  "saveIsolation": "outputs/street-reskin/effect-test-save.json port8791",
+  "active": {
+    "installed": true,
+    "framesPresented": 11,
+    "actions": {
+      "gongji": 11
+    },
+    "errors": [],
+    "caches": [
+      {
+        "id": "1",
+        "users": 1,
+        "ready": true
+      }
+    ],
+    "active": [
+      {
+        "model": "hero_001_01_ez",
+        "action": "gongji",
+        "frame": 10,
+        "nativeFrame": 12,
+        "visible": true,
+        "nativeVisible": false,
+        "ready": true,
+        "onStage": true
+      }
+    ]
+  },
+  "after": {
+    "installed": true,
+    "framesPresented": 24,
+    "actions": {
+      "gongji": 19,
+      "jineng": 5
+    },
+    "errors": [],
+    "caches": [
+      {
+        "id": "1",
+        "users": 1,
+        "ready": true
+      }
+    ],
+    "active": [
+      {
+        "model": "hero_001_01_ez",
+        "action": "jineng",
+        "frame": 40,
+        "nativeFrame": 5,
+        "visible": true,
+        "nativeVisible": false,
+        "ready": true,
+        "onStage": true
+      }
+    ]
+  },
+  "errors": []
+}

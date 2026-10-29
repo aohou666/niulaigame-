@@ -10,9 +10,9 @@
     "missingIdleFrames": [],
     "actions": {
       "idle": "integrated-verified",
-      "attack": "original",
+      "attack": "integrated-verified",
       "hit": "original",
-      "skill": "original",
+      "skill": "integrated-verified",
       "move": "original",
       "death": "original"
     },
@@ -28,7 +28,8 @@
         "common_skill_caocao_02_1_ez"
       ],
       "remainingLayers": "pending"
-    }
+    },
+    "bodyMotionEvidence": "versions/0.25.0/body-runtime.json"
   },
   {
     "id": 2,

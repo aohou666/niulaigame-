@@ -24,7 +24,7 @@ def main():
  packed=json.loads((OUT/'packed-summary.json').read_text('utf8'))
  packed_rows=[json.loads(line) for line in (OUT/'packed-art.jsonl').read_text('utf8').splitlines()]
  pending_regions=sum(len(r['regions']) for r in packed_rows if r['status']!='complete')
- pending_animations=sum(len(arm['animations']) for r in packed_rows if r['status']!='complete' for arm in r['armatures'])
+ pending_animations=sum(sum(1 for anim in arm['animations'] if anim['name'] not in r.get('verifiedAnimationReplacements',[])) for r in packed_rows if r['status']!='complete' for arm in r['armatures'])
  atlas_file=OUT/'idle-atlas-verification.json'
  atlas=json.loads(atlas_file.read_text('utf8')) if atlas_file.exists() else None
  browser_logs={}

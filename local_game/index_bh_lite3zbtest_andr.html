@@ -60,6 +60,8 @@
 <script src="character-idle-data.js?v=20261021-clean2"></script>
 <script src="character-idle-atlas-data.js?v=20261029-23"></script>
 <script src="character-idle.js?v=20261029-23"></script>
+<script src="street-body-data.js?v=20261029-25"></script>
+<script src="street-body.js?v=20261029-25"></script>
 <script src="character-regression.js?v=20261022-1"></script>
 <script>
     var now = Date.now();
@@ -2078,6 +2080,7 @@
                     }
                     if (window.CharacterIdle) window.CharacterIdle.install();
                     if (window.StreetEffects) window.StreetEffects.install();
+                    if (window.StreetBody) window.StreetBody.install();
                     function mergeLocalCosts(costs) {
                         var merged = {};
                         (costs || []).forEach(function (cost) {

@@ -1,0 +1,80 @@
+{
+  "pass": true,
+  "errors": [],
+  "timing": {
+    "events": [
+      {
+        "action": "gongji",
+        "calls": 1,
+        "pia": [
+          {
+            "elapsedMs": 404.40000000037253,
+            "sourceFrame": 10
+          }
+        ],
+        "elapsedMs": 1388.2999999998137
+      },
+      {
+        "action": "jineng",
+        "calls": 1,
+        "pia": [],
+        "elapsedMs": 1599.3999999994412
+      },
+      {
+        "action": "gongji",
+        "calls": 1,
+        "pia": [
+          {
+            "elapsedMs": 416.29999999981374,
+            "sourceFrame": 10
+          }
+        ],
+        "elapsedMs": 1416.9000000003725
+      }
+    ],
+    "idle": {
+      "bodyVisible": false,
+      "nativeVisible": false,
+      "idleVisible": true
+    },
+    "before": {
+      "installed": true,
+      "framesPresented": 105,
+      "actions": {
+        "gongji": 62,
+        "jineng": 43
+      },
+      "errors": [],
+      "caches": [
+        {
+          "id": "1",
+          "users": 1,
+          "ready": true
+        }
+      ],
+      "active": [
+        {
+          "model": "hero_001_01",
+          "action": "daiji",
+          "frame": 35,
+          "nativeFrame": 41,
+          "visible": false,
+          "nativeVisible": false,
+          "ready": true,
+          "onStage": true
+        }
+      ]
+    },
+    "after": {
+      "installed": true,
+      "framesPresented": 105,
+      "actions": {
+        "gongji": 62,
+        "jineng": 43
+      },
+      "errors": [],
+      "caches": [],
+      "active": []
+    }
+  }
+}
