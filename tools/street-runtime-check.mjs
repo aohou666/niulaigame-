@@ -36,6 +36,10 @@ try {
   const parsed=JSON.parse(result);console.log(JSON.stringify({allHeroes:{checked:parsed.checked,passed:parsed.passed,total:parsed.total,failures:parsed.results.filter(r=>!r.pass)}}));
   await fs.writeFile(path.join(out,'all-heroes-post-snapshot.json'),JSON.stringify(await page.evaluate(()=>CharacterIdle.snapshot()),null,2));
   await page.screenshot({path:path.join(out,'runtime-allheroes-last.png')});
+  const bodyUrls=images.filter(url=>url.includes('/actions/body'));
+  const bodyLoadReview={checkedHeroes:85,bodyAtlasResponseCount:bodyUrls.length,bodyAtlasUrls:bodyUrls,bodySnapshot:await page.evaluate(()=>window.StreetBody?.snapshot())};
+  await fs.writeFile(path.join(out,'detail-body-load-review.json'),JSON.stringify(bodyLoadReview,null,2));
+  if(process.argv.includes('--assert-no-detail-body-loads')&&bodyUrls.length)throw Error('Idle-only detail views loaded unused body atlases: '+bodyUrls.length);
  }
  if(process.argv.includes('--metrics')){
   const metrics=await page.evaluate(()=>new Promise(resolve=>{

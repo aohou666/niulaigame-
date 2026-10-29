@@ -1,0 +1,504 @@
+{
+  "heroId": 79,
+  "inputs": {
+    "idle": {
+      "source": "local_game/assets/street/characters/079/portrait.png",
+      "prepared": "art-migration/references/body-079-v9/idle.png",
+      "sourceSha256": "e15aa6c1c8169eb86c58ab0fb012a6b4fd0c8b21274e1bd299747b255a158a55",
+      "foot": [
+        384,
+        700
+      ],
+      "size": [
+        307,
+        418
+      ],
+      "subjectHeight": 360.0,
+      "normalization": "manually inspected head/feet landmarks; full prop bbox retained",
+      "sha256": "6531a35182530f3d9c736fe22d4bb02526e04944afb1b3a4d5b37d856184e3c2"
+    },
+    "attack": {
+      "source": "art-migration/generation/hero079-attack-v4/official-guide.png",
+      "prepared": "art-migration/references/body-079-v9/attack.png",
+      "sourceSha256": "d4b3467aa61aefa90a1df6badbaaaef80b27a3a829f8e652a47a763c295d1f07",
+      "foot": [
+        384,
+        700
+      ],
+      "size": [
+        341,
+        360
+      ],
+      "subjectHeight": 360.0,
+      "normalization": "manually inspected head/feet landmarks; full prop bbox retained",
+      "sha256": "da03381d7c3f674d31057a24644847357eaf4d9362b2a45db2831b453c954993"
+    },
+    "skill": {
+      "source": "art-migration/generation/hero079-skill-v5/official-guide.png",
+      "prepared": "art-migration/references/body-079-v9/skill.png",
+      "sourceSha256": "e7a17236bd0ad3c2cd11bfdabb711c6132c6bca913889be591063a1afc9001c2",
+      "foot": [
+        384,
+        700
+      ],
+      "size": [
+        365,
+        370
+      ],
+      "subjectHeight": 360.0,
+      "normalization": "manually inspected head/feet landmarks; full prop bbox retained",
+      "sha256": "fe09daae8cf8133f08bc9678046c07c2cc56f6f383fc31344a20016c9f4699db"
+    }
+  },
+  "actions": {
+    "attack": {
+      "sourceFrames": [
+        0,
+        61
+      ],
+      "guideImpactFrame": 28,
+      "native": {
+        "taskId": "H079-ATK",
+        "heroId": 79,
+        "name": "传奇牛",
+        "originalName": "魔夏侯惇",
+        "slot": "普攻",
+        "skillId": 550790110,
+        "skillName": "普通攻击",
+        "newSkillName": "幽甲重击",
+        "purpose": "进攻",
+        "targetSide": "敌方",
+        "scope": "单体",
+        "delivery": "近身攻击",
+        "movement": "移到目标前出手",
+        "weapon": "重刃",
+        "weaponObservation": "EXACTLY ONE curved sword/hilt, originally behind shoulder at idle. It moves to front during attack/skill; NEVER leave a copy behind head or duplicate a blade. Gold dragon armor, purple clothing, maroon cape.",
+        "effectClass": "目标位置特效",
+        "semantic": "直接伤害",
+        "bodyDesign": "Move the ONE original curved sword from shoulder to front waist guard, BOTH hands on same single hilt, then recover to original idle. No second rear blade.",
+        "rootPolicy": "引擎负责接近与返回；视频固定根位置，只做出手",
+        "batch": "B02",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方前排单体造成100%伤害。",
+        "skillModel": "common_skill_xiahoudun_2",
+        "model": "hero_079_03",
+        "action": "gongji",
+        "effectiveDesc": "对敌方前排单体造成100%伤害。",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "wuqi",
+        "rawDurationMs": 1266.667,
+        "fps": 30,
+        "durationFrames": 38,
+        "rawEvents": [
+          {
+            "frame0": 16,
+            "timeMs": 533.333,
+            "type": 10,
+            "name": "pia"
+          }
+        ],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "pia@533.3ms（角色事件）",
+        "impactMs": [
+          533.333
+        ],
+        "impactStatus": "角色pia直接回调；待游戏内验收",
+        "performance": {
+          "__attackDoneDelay": 1000,
+          "effectsTarEnemy": [
+            {
+              "delay": 0,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "z": 0,
+              "timeScale": 2,
+              "src": [
+                "common_skill_xiahoudun_2_02"
+              ],
+              "type": 0
+            },
+            {
+              "delay": 0,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "src": [
+                "common_skill_xiahoudun_2_01"
+              ],
+              "type": 0
+            }
+          ],
+          "meFlyConfig": [
+            2,
+            -40,
+            0
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_xiahoudun_2_02",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 2,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_xiahoudun_2_02_c8e81fbd.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_xiahoudun_2_02",
+                  "name": "common_skill_xiahoudun_2_02",
+                  "fps": 30,
+                  "durationFrames": 38,
+                  "durationMs": 1266.667,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectsTarEnemy",
+            "resource": "common_skill_xiahoudun_2_01",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": 0,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_skill_xiahoudun_2_01_9f5bd00e.bin",
+              "timelines": [
+                {
+                  "armature": "common_skill_xiahoudun_2_01",
+                  "name": "common_skill_xiahoudun_2_01",
+                  "fps": 30,
+                  "durationFrames": 27,
+                  "durationMs": 900.0,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 1,
+                      "timeMs": 33.333,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 2,
+                      "timeMs": 66.667,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 3,
+                      "timeMs": 100.0,
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectsTarEnemy: common_skill_xiahoudun_2_02 delay=0 dt=None speed=2\neffectsTarEnemy: common_skill_xiahoudun_2_01 delay=0 dt=None speed=1 事件=pia@33.3,pia@66.7,pia@100.0",
+        "variants": [
+          "common_skill_xiahoudun_2"
+        ],
+        "portrait": "reskin/hero_079.png"
+      }
+    },
+    "skill": {
+      "sourceFrames": [
+        62,
+        123
+      ],
+      "guideImpactFrame": 92,
+      "native": {
+        "taskId": "H079-ULT",
+        "heroId": 79,
+        "name": "传奇牛",
+        "originalName": "魔夏侯惇",
+        "slot": "大招",
+        "skillId": 550790210,
+        "skillName": "裂天斩",
+        "newSkillName": "幽甲裂锋",
+        "purpose": "攻辅兼备",
+        "targetSide": "敌方",
+        "scope": "按技能机制",
+        "delivery": "中场释放（远近待回放）",
+        "movement": "移到场地中部释放",
+        "weapon": "重刃",
+        "weaponObservation": "EXACTLY ONE curved sword/hilt, originally behind shoulder at idle. It moves to front during attack/skill; NEVER leave a copy behind head or duplicate a blade. Gold dragon armor, purple clothing, maroon cape.",
+        "effectClass": "施法者特效",
+        "semantic": "治疗/吸血、恢复、驱散、真实伤害",
+        "bodyDesign": "Move that SAME ONE sword to diagonal chest-level two-hand guard in front of torso, then recover. No extra sword at waist/head.",
+        "rootPolicy": "引擎移到中场后播出手；视频不自行横穿战场",
+        "batch": "B04",
+        "status": "设计待出样；分类已整理",
+        "reviewReasons": [],
+        "skillDesc": "对敌方生命值最高武将总共造成500%伤害和自身最大生命值10%的真实伤害(真实伤害不超过自身攻击8倍)，并驱散1个增益效果；技能释放后，为己方全体附加【酒池肉林】和【豪勇】效果，持续2回合，不可驱散。\n\n【酒池肉林】拥有该效果的武将主动造成伤害后恢复5%伤害值的生命\n\n【豪勇】非魔阵营武将提升15%生命和攻击（魔阵营翻倍）",
+        "skillModel": "common_skill_xiahoudun_1",
+        "model": "hero_079_03",
+        "action": "jineng",
+        "effectiveDesc": "对敌方生命值最高武将总共造成500%伤害和自身最大生命值10%的真实伤害(真实伤害不超过自身攻击8倍)，并驱散1个增益效果；技能释放后，为己方全体附加【酒池肉林】和【豪勇】效果，持续2回合，不可驱散。\n\n【酒池肉林】拥有该效果的武将主动造成伤害后恢复5%伤害值的生命\n\n【豪勇】非魔阵营武将提升15%生命和攻击（魔阵营翻倍）",
+        "classificationStage": "基础技能",
+        "passiveRewrite": "",
+        "passiveNotes": "",
+        "unlockConfig": "[0,0,1,3,5]",
+        "originalWeaponClues": "wuqi",
+        "rawDurationMs": 1666.667,
+        "fps": 30,
+        "durationFrames": 50,
+        "rawEvents": [],
+        "modelSpeed": 1,
+        "animationScale": 1,
+        "eventText": "角色轨无pia/zd，需追踪特效/特殊逻辑",
+        "impactMs": [],
+        "impactStatus": "待整条技能回放验证",
+        "performance": {
+          "__tag": "魔夏侯惇主动",
+          "attackDoneDelay": 1000,
+          "allAttkDelayOffset": -220,
+          "effectSrc": [
+            {
+              "delay": 0,
+              "_notFollowParent": 1,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "timeScale": 1,
+              "src": [
+                "common_newskill_moxiahoudun_01_1"
+              ]
+            },
+            {
+              "delay": 100,
+              "_notFollowParent": 1,
+              "offset": [
+                0,
+                0
+              ],
+              "posType": 1,
+              "timeScale": 1,
+              "z": 0,
+              "src": [
+                "common_newskill_moxiahoudun_01_2"
+              ],
+              "scale": 1
+            }
+          ],
+          "meFlyConfig": [
+            1,
+            0,
+            30
+          ]
+        },
+        "effectDetails": [
+          {
+            "layer": "effectSrc",
+            "resource": "common_newskill_moxiahoudun_01_1",
+            "delay": 0,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_newskill_moxiahoudun_01_1_33b2869b.bin",
+              "timelines": [
+                {
+                  "armature": "common_newskill_moxiahoudun_01_1",
+                  "name": "common_newskill_moxiahoudun_01_1",
+                  "fps": 30,
+                  "durationFrames": 110,
+                  "durationMs": 3666.667,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_newskill_moxiahoudun_01_bz",
+                  "name": "common_newskill_moxiahoudun_01_bz",
+                  "fps": 30,
+                  "durationFrames": 20,
+                  "durationMs": 666.667,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_newskill_moxiahoudun_01_xfd",
+                  "name": "common_newskill_moxiahoudun_01_xfd",
+                  "fps": 30,
+                  "durationFrames": 6,
+                  "durationMs": 200.0,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_newskill_moxiahoudun_01_xw2",
+                  "name": "common_newskill_moxiahoudun_01_xw2",
+                  "fps": 30,
+                  "durationFrames": 19,
+                  "durationMs": 633.333,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_newskill_moxiahoudun_01_xw2",
+                  "name": "common_newskill_moxiahoudun_01_xw2_0",
+                  "fps": 30,
+                  "durationFrames": 1,
+                  "durationMs": 33.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          },
+          {
+            "layer": "effectSrc",
+            "resource": "common_newskill_moxiahoudun_01_2",
+            "delay": 100,
+            "dt": null,
+            "timeScale": 1,
+            "type": null,
+            "actionOverride": null,
+            "asset": {
+              "path": "local_game\\resource\\assets\\effect\\common_newskill_moxiahoudun_01_2_826e2b85.bin",
+              "timelines": [
+                {
+                  "armature": "common_newskill_moxiahoudun_01_2",
+                  "name": "common_newskill_moxiahoudun_01_2",
+                  "fps": 30,
+                  "durationFrames": 109,
+                  "durationMs": 3633.333,
+                  "scale": 1,
+                  "events": [
+                    {
+                      "frame0": 0,
+                      "timeMs": 0.0,
+                      "ints": [
+                        4
+                      ],
+                      "type": 10,
+                      "name": "count"
+                    },
+                    {
+                      "frame0": 33,
+                      "timeMs": 1100.0,
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 52,
+                      "timeMs": 1733.333,
+                      "ints": [
+                        3
+                      ],
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 71,
+                      "timeMs": 2366.667,
+                      "ints": [
+                        3
+                      ],
+                      "type": 10,
+                      "name": "pia"
+                    },
+                    {
+                      "frame0": 93,
+                      "timeMs": 3100.0,
+                      "ints": [
+                        3
+                      ],
+                      "type": 10,
+                      "name": "pia"
+                    }
+                  ]
+                },
+                {
+                  "armature": "common_newskill_moxiahoudun_01_cjb",
+                  "name": "common_newskill_moxiahoudun_01_cjb",
+                  "fps": 30,
+                  "durationFrames": 8,
+                  "durationMs": 266.667,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_newskill_moxiahoudun_01_fz",
+                  "name": "common_newskill_moxiahoudun_01_fz",
+                  "fps": 30,
+                  "durationFrames": 79,
+                  "durationMs": 2633.333,
+                  "scale": 1,
+                  "events": []
+                },
+                {
+                  "armature": "common_newskill_moxiahoudun_01_xw",
+                  "name": "common_newskill_moxiahoudun_01_xw",
+                  "fps": 30,
+                  "durationFrames": 79,
+                  "durationMs": 2633.333,
+                  "scale": 1,
+                  "events": []
+                }
+              ]
+            }
+          }
+        ],
+        "effectText": "effectSrc: common_newskill_moxiahoudun_01_1 delay=0 dt=None speed=1\neffectSrc: common_newskill_moxiahoudun_01_2 delay=100 dt=None speed=1 事件=pia@1100.0,pia@1733.3,pia@2366.7,pia@3100.0",
+        "variants": [
+          "common_skill_xiahoudun_1"
+        ],
+        "portrait": "reskin/hero_079.png"
+      }
+    }
+  },
+  "length": 124,
+  "nativeClockMustBeRetained": true,
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false,
+  "sparseGuideSchedule": [
+    {
+      "frame": 0,
+      "image": "idle"
+    },
+    {
+      "frame": 28,
+      "image": "attack"
+    },
+    {
+      "frame": 62,
+      "image": "idle"
+    },
+    {
+      "frame": 92,
+      "image": "skill"
+    },
+    {
+      "frame": 123,
+      "image": "idle"
+    }
+  ],
+  "temporalReviewRequired": true
+}

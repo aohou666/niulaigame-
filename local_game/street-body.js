@@ -1,15 +1,20 @@
 (function(global){
  'use strict';
- var installed=false,byModel={},caches={},players=[],audit={framesPresented:0,errors:[],actions:{}};
+ var installed=false,byModel={},caches={},players=[],audit={framesPresented:0,errors:[],actions:{},atlasRequests:0,suppressedViewsDetached:0};
  function acquire(cfg){
   var c=caches[cfg.id];if(c){c.users++;return c;}
   c={cfg:cfg,users:1,dead:false,ready:false,textures:[],sheet:null};caches[cfg.id]=c;
-  fetch(cfg.atlas+'?v='+(cfg.atlasSha256||StreetBodyData.version),{cache:'force-cache'}).then(function(r){if(!r.ok)throw Error(r.status+' '+cfg.atlas);return r.blob();}).then(createImageBitmap).then(function(image){
+  // Let detail/formation layout mark its idle-only native stand-in before I/O.
+  requestAnimationFrame(function(){
+   players.slice().forEach(function(p){if(p._streetBody&&p._streetBody.cache===c&&p._characterIdleSuppressNative){audit.suppressedViewsDetached++;detach(p);}});
+   if(c.dead||!c.users)return;audit.atlasRequests++;
+   fetch(cfg.atlas+'?v='+(cfg.atlasSha256||StreetBodyData.version),{cache:'force-cache'}).then(function(r){if(!r.ok)throw Error(r.status+' '+cfg.atlas);return r.blob();}).then(createImageBitmap).then(function(image){
    if(c.dead){image.close();return;}
    var canvas=document.createElement('canvas');canvas.width=image.width;canvas.height=image.height;canvas.getContext('2d').drawImage(image,0,0);image.close();
    var texture=new egret.Texture();texture.disposeBitmapData=true;texture.bitmapData=new egret.BitmapData(canvas);c.sheet=new egret.SpriteSheet(texture);
    cfg.frames.forEach(function(f,i){c.textures[i]=c.sheet.createTexture(String(i),f.x,f.y,f.w,f.h);});c.ready=true;
-  }).catch(function(e){audit.errors.push({hero:cfg.id,error:String(e)});});return c;
+   }).catch(function(e){audit.errors.push({hero:cfg.id,error:String(e)});});
+  });return c;
  }
  function release(c){if(--c.users>0)return;c.dead=true;if(c.sheet)c.sheet.dispose();delete caches[c.cfg.id];}
  function restore(player,state){
@@ -20,6 +25,7 @@
  function detach(player){var s=player._streetBody;if(!s)return;restore(player,s);player.removeEventListener(egret.Event.ENTER_FRAME,s.tick,player);player.removeEventListener(egret.Event.REMOVED_FROM_STAGE,s.removed,player);if(s.bitmap.parent)s.bitmap.parent.removeChild(s.bitmap);release(s.cache);player._streetBody=null;var i=players.indexOf(player);if(i>=0)players.splice(i,1);}
  function render(player){
   var s=player._streetBody;if(!s)return;
+  if(player._characterIdleSuppressNative){audit.suppressedViewsDetached++;detach(player);return;}
   var action=player.action||player._action,seq=(s.cfg.modelActionOverrides&&s.cfg.modelActionOverrides[player._dbName]&&s.cfg.modelActionOverrides[player._dbName][action])||s.cfg.actions[action],display=player._armature,clock=display&&display.animation&&display.animation.lastAnimationState;
   if(!player._characterIdleSuppressNative&&display&&(s.cfg.qualityQuarantineActions||[]).indexOf(action)>=0){
    restore(player,s);var idle=player._characterIdleState;if(idle){idle.bitmap.visible=false;idle.hidden=false;}display.visible=true;return;
@@ -51,5 +57,5 @@
   p.trigger=function(){var r=trigger.apply(this,arguments);render(this);return r;};
   p.reset=function(){detach(this);return reset.apply(this,arguments);};p.destroy=function(){detach(this);return destroy.apply(this,arguments);};installed=true;
  }
- global.StreetBody={install:install,render:render,snapshot:function(){return {installed:installed,framesPresented:audit.framesPresented,actions:audit.actions,errors:audit.errors.slice(),caches:Object.keys(caches).map(function(k){return {id:k,users:caches[k].users,ready:caches[k].ready};}),active:players.map(function(p){var s=p._streetBody;return {model:p._dbName,action:p.action,frame:s.frame,nativeFrame:s.nativeFrame,visible:s.bitmap.visible,nativeVisible:!!(p._armature&&p._armature.visible),ready:s.cache.ready,onStage:!!p.stage};})};}};
+ global.StreetBody={install:install,render:render,snapshot:function(){return {installed:installed,framesPresented:audit.framesPresented,actions:audit.actions,atlasRequests:audit.atlasRequests,suppressedViewsDetached:audit.suppressedViewsDetached,errors:audit.errors.slice(),caches:Object.keys(caches).map(function(k){return {id:k,users:caches[k].users,ready:caches[k].ready};}),active:players.map(function(p){var s=p._streetBody;return {model:p._dbName,action:p.action,frame:s.frame,nativeFrame:s.nativeFrame,visible:s.bitmap.visible,nativeVisible:!!(p._armature&&p._armature.visible),ready:s.cache.ready,onStage:!!p.stage};})};}};
 })(window);

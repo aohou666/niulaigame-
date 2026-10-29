@@ -17,6 +17,8 @@ def verify():
  for cfg in body['characters']:
   try:
    if cfg.get('atlasSha256'):assert hashlib.sha256((GAME/cfg['atlas']).read_bytes()).hexdigest()==cfg['atlasSha256'],'atlas digest mismatch'
+   if cfg.get('alphaReviewSha256'):
+    alphaFile=ROOT/cfg['source']/'alpha-qa.json';assert hashlib.sha256(alphaFile.read_bytes()).hexdigest()==cfg['alphaReviewSha256'],'alpha review digest mismatch';assert json.loads(alphaFile.read_text('utf8'))['manualReview']=='approved','alpha sequence not manually approved'
    with Image.open(GAME/cfg['atlas']) as im:
     assert im.mode=='RGBA','atlas must have alpha';hashes=set()
     for f in cfg['frames']:

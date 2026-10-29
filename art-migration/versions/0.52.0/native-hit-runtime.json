@@ -1,0 +1,71 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "model": "hero_079_03",
+      "action": "gongji",
+      "native": [
+        {
+          "name": "pia",
+          "time": 0.5333333333333333
+        }
+      ],
+      "callbacks": [
+        {
+          "elapsedMs": 529.5999999940395,
+          "key": "pia",
+          "nativeFrame": 16,
+          "sourceFrame": 28
+        }
+      ],
+      "authored": [
+        {
+          "name": "pia",
+          "timeMs": 533.3333333333334,
+          "frame0": 16
+        }
+      ],
+      "expectedMs": 533.3333333333334,
+      "fps": 30
+    },
+    {
+      "model": "hero_079_03_ez",
+      "action": "gongji",
+      "native": [
+        {
+          "name": "pia",
+          "time": 0.5333333333333333
+        }
+      ],
+      "callbacks": [
+        {
+          "elapsedMs": 547.3999999985099,
+          "key": "pia",
+          "nativeFrame": 16,
+          "sourceFrame": 28
+        }
+      ],
+      "authored": [
+        {
+          "name": "pia",
+          "timeMs": 533.3333333333334,
+          "frame0": 16
+        }
+      ],
+      "expectedMs": 533.3333333333334,
+      "fps": 30
+    }
+  ],
+  "after": {
+    "installed": true,
+    "framesPresented": 76,
+    "actions": {
+      "gongji": 76
+    },
+    "atlasRequests": 2,
+    "suppressedViewsDetached": 0,
+    "errors": [],
+    "caches": [],
+    "active": []
+  }
+}
