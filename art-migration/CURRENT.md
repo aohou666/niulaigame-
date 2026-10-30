@@ -64,3 +64,8 @@ v0.69 `character-idle.js`新增可选data.skins和按模型/拥有者选择独�
 
 ## v0.71优先接续
 已补官方皮肤背景pf_img_ditu_png，正常面板缺失键14降13但整面板仍失败27异常。85详情、1876帧位、1900依赖通过。普攻MiniMax e5f0cdc8-2e21-4314-ac58-35783a5c4c52实际运行，技能96517373-3612-4689-99e9-99cfb29da847实际排队；只collect。工具street_skin_action_candidate.py按独立skinCode和nativeAudit生成，未发布战斗动作。下一项官方选中边框generation/skin-panel-selected-official-v1，已保存透明原图及167x254缩放，需叠原生卡验收再接入pf_img_xuanzhong_png。
+
+远端推送已核对：v0.71 HEAD与delivery/main均9cae85c0e95c2a7b16ef3d238895dc8d7d08b23f，1900依赖HEAD检查通过。首次443连接失败，重试成功。下一推送v0.74（72/73/74）。官方选中边框167x254灰背景叠图已看，透明中心/细框/勾选可读，仍未原生列表接入。
+
+## v0.72优先接续
+独立选中框pf_img_xuanzhong_png已正式接入，实际正常面板四项167x254纹理、一个可见，剩余12缺失键/23异常。85详情、1876检查、1901依赖通过。普攻v1停姿拒收，body-qa保留全部124/16放大实际审核，不抠像。普攻v2 d57e9fec-5bf7-4186-aeab-a81a15255adf首帧only实际运行，技能v1已终结正在collect/整段复查。官方卸下图标正在生成，工具cell181必须等结果保存，不重复生成。下一推送v0.74。

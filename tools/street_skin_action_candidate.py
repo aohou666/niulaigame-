@@ -5,7 +5,7 @@ from street_comfy import ROOT, COMFY, submit
 
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 def read(p): return json.loads(p.read_text('utf8'))
-p=argparse.ArgumentParser();p.add_argument('--skin-code',type=int,required=True);p.add_argument('--action',choices=['gongji','jineng'],required=True);p.add_argument('--guide-qa',required=True);p.add_argument('--prompt-file',required=True);p.add_argument('--revision',type=int,required=True);a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('--skin-code',type=int,required=True);p.add_argument('--action',choices=['gongji','jineng'],required=True);p.add_argument('--guide-qa',required=True);p.add_argument('--prompt-file',required=True);p.add_argument('--revision',type=int,required=True);p.add_argument('--first-frame-only',action='store_true');a=p.parse_args()
 assert a.skin_code==100201,'Other skins require their own native/reference inventory'
 name=f'skin{a.skin_code}-{a.action}-minimax-v{a.revision}'
 assert not (ROOT/'art-migration/generation'/name).exists(),'Collect existing job instead'
@@ -30,6 +30,9 @@ g['7']['inputs'].update(prompt=(ROOT/a.prompt_file).read_text('utf8'),last_frame
 guide_frame=50 if a.action=='gongji' else 62
 g['8']={'class_type':'MiniMaxH3AddGuide','inputs':{'positive':['7',0],'latent':['7',1],'frame_idx':guide_frame,'vae':['3',0],'image':['5',0]}}
 g['13']['inputs']['conditioning']=['8',0];g['14']['inputs']['noise_seed']=20261030100201+a.revision*100+(a.action=='jineng')
+if a.first_frame_only:
+ g['7']['inputs'].pop('last_frame',None);g.pop('8');g.pop('5');g['13']['inputs']['conditioning']=['7',0]
 g['18']['inputs']['filename_prefix']='street-reskin/'+name;g['20']['inputs']['filename_prefix']='street-reskin/'+name+'-video'
 record={'heroId':2,'skinCode':a.skin_code,'models':[r['model'] for r in rows],'length':124,'scope':a.action+' only; independent skin, not base hero','motionSegments':{a.action:[0,123]},'inputs':{'idle':idle_design['inputs']['idle'],'guide':{'source':qa['image'],'sourceSha256':qa['sha256'],'prepared':prepared.relative_to(ROOT).as_posix(),'sha256':sha(prepared)}},'nativeAuditPath':native_path.relative_to(ROOT).as_posix(),'nativeAuditSha256':sha(native_path),'nativeFrames':rows[0]['durationFrames'],'nativeEvents':rows[0]['events'],'guideFrame':guide_frame,'conditioningMode':'idle endpoints with action guide','manualVideoReview':'pending','runtimeIntegrated':False}
-folder=submit(g,name,front=False);(folder/'action-design.json').write_text(json.dumps(record,indent=2)+'\n','utf8');print(json.dumps({'name':name,'scope':record['scope'],'guideFrame':guide_frame}))
+if a.first_frame_only:record.update(conditioningMode='first-frame-only, no guide or end frame',guideFrame=None)
+folder=submit(g,name,front=False);(folder/'action-design.json').write_text(json.dumps(record,indent=2)+'\n','utf8');print(json.dumps({'name':name,'scope':record['scope'],'guideFrame':record['guideFrame']}))

@@ -88,10 +88,12 @@
     },
     {
       "key": "pf_img_xuanzhong_png",
-      "status": "pending",
+      "status": "repaired-selection-border-only",
       "observedIn": "HeroDermaPanel normal AppFacade open",
       "originalManifestBindingFound": false,
-      "kind": "missing-ui-resource-key"
+      "kind": "missing-ui-resource-key",
+      "replacementVersion": "0.72.0",
+      "evidence": "art-migration/versions/0.72.0/selection-resource-check.json"
     },
     {
       "key": "pf_img_yichuandai_png",
