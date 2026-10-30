@@ -1,0 +1,83 @@
+{
+  "pass": true,
+  "scope": "15s this PC headless Chrome, two normal/EZ actors alternating complete45-frame attack and21-frame hit through native callbacks. One shared bitmap, warm render only; not APK/mobile/all battles.",
+  "sampleMs": 15000,
+  "bitmapSize": [
+    1328,
+    2340
+  ],
+  "decodedBytes": 12430080,
+  "sharedBitmap": true,
+  "frames": 899,
+  "p50": 16.69999999999891,
+  "p95": 16.800000000000182,
+  "over50ms": 0,
+  "over100ms": 0,
+  "longTasks": [],
+  "heapUsedBytes": 147252330,
+  "distinctFrames": [
+    66,
+    66
+  ],
+  "active": {
+    "installed": true,
+    "framesPresented": 132,
+    "actions": {
+      "gongji": 90,
+      "shouji": 42
+    },
+    "atlasRequests": 1,
+    "suppressedViewsDetached": 0,
+    "errors": [],
+    "caches": [
+      {
+        "id": "100201",
+        "users": 2,
+        "ready": true
+      }
+    ],
+    "active": [
+      {
+        "model": "hero_skin_002_01",
+        "action": "shouji",
+        "atlas": "assets/street/skins/100201/actions/shouji-gongji-f1393faddd871997.webp",
+        "atlasSha256": "f1393faddd871997affb205710e0c456a441cbedce2a897e32935a4cbb956be5",
+        "frame": 20,
+        "nativeFrame": 20,
+        "visible": true,
+        "nativeVisible": true,
+        "nativeFXOnly": true,
+        "ready": true,
+        "onStage": true
+      },
+      {
+        "model": "hero_skin_002_01_ez",
+        "action": "shouji",
+        "atlas": "assets/street/skins/100201/actions/shouji-gongji-f1393faddd871997.webp",
+        "atlasSha256": "f1393faddd871997affb205710e0c456a441cbedce2a897e32935a4cbb956be5",
+        "frame": 20,
+        "nativeFrame": 20,
+        "visible": true,
+        "nativeVisible": true,
+        "nativeFXOnly": true,
+        "ready": true,
+        "onStage": true
+      }
+    ]
+  },
+  "after": {
+    "installed": true,
+    "framesPresented": 132,
+    "actions": {
+      "gongji": 90,
+      "shouji": 42
+    },
+    "atlasRequests": 1,
+    "suppressedViewsDetached": 0,
+    "errors": [],
+    "caches": [],
+    "active": []
+  },
+  "errors": [],
+  "failures": []
+}

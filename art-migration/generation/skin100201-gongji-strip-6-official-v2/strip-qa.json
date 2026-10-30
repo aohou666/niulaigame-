@@ -1,0 +1,164 @@
+{
+  "sourceSha256": "1c8ea5253b910fa4f645a41725d68bd9d3f41f150d59e1b6b5f4bf800d70f1ca",
+  "sourceSize": [
+    2172,
+    724
+  ],
+  "selectedSourceCells": [
+    3,
+    2,
+    1,
+    0
+  ],
+  "unusedSourceCells": [
+    4,
+    5,
+    6
+  ],
+  "technicalSegmentation": "seven disjoint alpha components, original source pixels retained; no pose reconstruction",
+  "frames": [
+    {
+      "frame": 41,
+      "sourceCellIndex": 3,
+      "sourceCell": [
+        947,
+        0,
+        1222,
+        724
+      ],
+      "sourceAlphaBounds": [
+        12,
+        105,
+        263,
+        640
+      ],
+      "sourceFoot": [
+        177.234416022804,
+        640
+      ],
+      "sourceMargin": 12,
+      "scale": 0.9774436090225563,
+      "preparedFoot": [
+        384,
+        680
+      ],
+      "preparedOffset": [
+        222,
+        157
+      ],
+      "rgbaSha256": "a23819af3c1ff18b189cd4afd576a74ed35465e9c78228e07d2d0d2fafed0255"
+    },
+    {
+      "frame": 42,
+      "sourceCellIndex": 2,
+      "sourceCell": [
+        632,
+        0,
+        911,
+        724
+      ],
+      "sourceAlphaBounds": [
+        12,
+        105,
+        267,
+        639
+      ],
+      "sourceFoot": [
+        180.5764440210296,
+        639
+      ],
+      "sourceMargin": 12,
+      "scale": 0.9774436090225563,
+      "preparedFoot": [
+        384,
+        680
+      ],
+      "preparedOffset": [
+        219,
+        158
+      ],
+      "rgbaSha256": "aba64ff0d7b408ea917834238de06ac6a81f2b933bddf9e60e09047122f7fd68"
+    },
+    {
+      "frame": 43,
+      "sourceCellIndex": 1,
+      "sourceCell": [
+        320,
+        0,
+        597,
+        724
+      ],
+      "sourceAlphaBounds": [
+        12,
+        105,
+        265,
+        639
+      ],
+      "sourceFoot": [
+        180.5100021326509,
+        639
+      ],
+      "sourceMargin": 12,
+      "scale": 0.9774436090225563,
+      "preparedFoot": [
+        384,
+        680
+      ],
+      "preparedOffset": [
+        219,
+        158
+      ],
+      "rgbaSha256": "c7fa65288c2df44a8cc5ce1c7e29d148e14e3ff6d677dfb12a3841578e153498"
+    },
+    {
+      "frame": 44,
+      "sourceCellIndex": 0,
+      "sourceCell": [
+        0,
+        0,
+        277,
+        724
+      ],
+      "sourceAlphaBounds": [
+        9,
+        105,
+        265,
+        637
+      ],
+      "sourceFoot": [
+        187.39671230695748,
+        637
+      ],
+      "sourceMargin": 9,
+      "scale": 0.9774436090225563,
+      "preparedFoot": [
+        384,
+        680
+      ],
+      "preparedOffset": [
+        210,
+        160
+      ],
+      "rgbaSha256": "938053d09a6f542b0365a0527848b28e0f3017a5c824f841bcb4afe3d2f0de15"
+    }
+  ],
+  "manualReview": "approved-drawn-source-for-native-trial",
+  "scope": "Seven individually drawn source cells, root aligned with common strip scale. No creative edits/interpolation; neither complete21-frame animation nor manual approval.",
+  "runtimeIntegrated": false,
+  "manualNotes": "All selected prepared frames inspected on light/dark full45 contacts and original large strips. One walnut held before18, absent18..34, retrieved35..40; two support balls throughout. One unicycle, fixed tire root. Native45 motion and event approval remain separate.",
+  "recoveryOrder": {
+    "nativeFrames": [
+      41,
+      42,
+      43,
+      44
+    ],
+    "rawSourceCells": [
+      3,
+      2,
+      1,
+      0
+    ],
+    "reason": "Hand moves gradually outward from reload chest pose toward existing independent idle pose; source art unchanged."
+  }
+}

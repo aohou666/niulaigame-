@@ -52,7 +52,7 @@ try{
  for(const r of live.rows){assert.equal(r.complete,1);assert.equal(r.calls,1);assert.deepEqual(r.events,[]);assert(Math.abs(r.elapsed-700)<130,JSON.stringify(r));assert(r.distinctSourceFrames>=10);}
  for(const r of live.idle){assert(!r.body);assert.equal(r.idleId,100201);assert(r.idleVisible&&(!r.nativeVisible||r.nativeFXOnly));}
  const fallbacks=await page.evaluate(()=>{
-  const rows=[];for(const p of __skinHit.players)for(const action of ['gongji','jineng','paobu']){p.gotoAndStopByFrame(action,0);p._armature.armature.advanceTime(0);StreetBody.render(p);rows.push({model:p._dbName,action,body:p._streetBody.bitmap.visible,native:p._armature.visible,fxOwner:!!p._streetNativeFX,bodySlotsVisible:p._armature.armature.getSlots().some(slot=>slot.visible&&!slot.childArmature)});}return rows;
+  const rows=[];for(const p of __skinHit.players)for(const action of ['gongji','jineng','paobu'].filter(action=>!StreetBodyData.skins['100201'].actions[action])){p.gotoAndStopByFrame(action,0);p._armature.armature.advanceTime(0);StreetBody.render(p);rows.push({model:p._dbName,action,body:p._streetBody.bitmap.visible,native:p._armature.visible,fxOwner:!!p._streetNativeFX,bodySlotsVisible:p._armature.armature.getSlots().some(slot=>slot.visible&&!slot.childArmature)});}return rows;
  });
  for(const r of fallbacks)assert(!r.body&&r.native&&!r.fxOwner&&r.bodySlotsVisible,'Unsupported body state must preserve original native: '+JSON.stringify(r));
  const effects=await page.evaluate(async()=>{

@@ -35,7 +35,13 @@ def verify():
      for row in alphaReview['sourceFrames']:assert hashlib.sha256((ROOT/row['path']).read_bytes()).hexdigest()==row['sha256'],'independent source frame changed'
    if cfg.get('nativeRuntimeAuditSha256'):
     proofFile=ROOT/cfg['nativeRuntimeAuditPath'];assert hashlib.sha256(proofFile.read_bytes()).hexdigest()==cfg['nativeRuntimeAuditSha256'],'native runtime proof changed'
-    proof=json.loads(proofFile.read_text('utf8'));assert proof['pass'] and proof['manualVideoReview']=='approved-continuous-single-hit-and-recovery','independent native animation not approved'
+    proof=json.loads(proofFile.read_text('utf8'));assert proof['pass'],'independent native animation failed'
+    if proof['manualVideoReview']=='approved-continuous-native-actions':
+     assert proof['atlasSha256']==cfg['atlasSha256'] and set(proof['actions'])==set(cfg['actions']),'native action proof scope differs'
+     for action,ref in proof['actions'].items():
+      actionFile=ROOT/ref['path'];assert hashlib.sha256(actionFile.read_bytes()).hexdigest()==ref['sha256'],'native action report digest differs';actionProof=json.loads(actionFile.read_text('utf8'));assert actionProof['pass'] and actionProof['action']==action and actionProof['atlasSha256']==cfg['atlasSha256'] and actionProof['candidateSha256']==proof['candidateSha256'],'native action report package differs'
+      assert actionProof['manualFrameSequenceReview']=='approved-all-native-frames-and-source-sequence' and len(actionProof['checks'])==len(cfg['actions'][action]['frameMap'])*len(cfg['models']),'native mapped frame coverage incomplete'
+    else:assert proof['manualVideoReview']=='approved-continuous-single-hit-and-recovery' and set(cfg['actions'])=={'shouji'},'legacy hit-only proof cannot approve added actions'
    if cfg.get('battleRuntimeAuditSha256'):
     proofFile=ROOT/cfg['battleRuntimeAuditPath'];assert hashlib.sha256(proofFile.read_bytes()).hexdigest()==cfg['battleRuntimeAuditSha256'],'independent battle proof changed'
     proof=json.loads(proofFile.read_text('utf8'));assert proof['pass'] and proof['mainSaveUnchanged'] and proof['isolatedSaveRestored'],'isolated battle proof incomplete'
@@ -54,6 +60,9 @@ def verify():
      g=seq['geometry'];assert g['bodyHeight']>0 and len(g['root'])==2 and len(g['crop'])==4 and g['crop'][2]>g['crop'][0] and g['crop'][3]>g['crop'][1],'invalid action geometry'
     if seq.get('alphaReviewSha256'):
      proof=ROOT/seq['source']/'alpha-qa.json';assert hashlib.sha256(proof.read_bytes()).hexdigest()==seq['alphaReviewSha256'] and json.loads(proof.read_text('utf8'))['manualReview']=='approved','action alpha review mismatch'
+    if seq.get('battleRuntimeAuditSha256'):
+     battleFile=ROOT/seq['battleRuntimeAuditPath'];assert hashlib.sha256(battleFile.read_bytes()).hexdigest()==seq['battleRuntimeAuditSha256'],'action battle report digest differs';battleProof=json.loads(battleFile.read_text('utf8'));assert battleProof['pass'] and battleProof['action']==action and battleProof['mainSaveUnchanged'] and battleProof['isolatedSaveRestored'],'action battle proof incomplete';assert battleProof['runtimeAtlas']['sha256']==cfg['atlasSha256'] and battleProof['runtimeAtlas']['path']==cfg['atlas'],'action battle loaded another atlas'
+     if seq.get('nativeRecoveryFrame') is not None:assert any(r['nativeFrame']>=seq['nativeRecoveryFrame'] for r in battleProof['recoverySnapshot']),'action recovery not observed in real battle'
     if seq.get('nativeImpactFrame') is not None:assert seq['frameMap'][seq['nativeImpactFrame']]==seq['sourceImpactFrame'],'impact mapping mismatch'
     for mark in seq.get('eventAnchors',[]):assert seq['frameMap'][mark['nativeFrame']]==mark['sourceFrame'],'multi-event mapping mismatch'
    if cfg.get('nativeEventAuditSha256'):

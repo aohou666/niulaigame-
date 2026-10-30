@@ -1,0 +1,2528 @@
+{
+  "pass": true,
+  "action": "gongji",
+  "atlasSha256": "f1393faddd871997affb205710e0c456a441cbedce2a897e32935a4cbb956be5",
+  "atlasProof": {
+    "path": "assets/street/skins/100201/actions/shouji-gongji-f1393faddd871997.webp",
+    "sha256": "f1393faddd871997affb205710e0c456a441cbedce2a897e32935a4cbb956be5"
+  },
+  "candidateSha256": "953572d983e7cd7a7005edd8f70013671571cbad6e0ca528c250273bfaad2c77",
+  "mode": "candidate-data-route",
+  "scope": "Native ordinary/EZ independent skin100201 gongji; all mapped frames, original authored timing/events, idle, unmapped native fallbacks, six FX armatures, reuse/destroy. Actual battle is separate; incomplete skin.",
+  "manualVideoReview": "pending",
+  "setup": [
+    {
+      "model": "hero_skin_002_01",
+      "id": 100201,
+      "skinCode": 100201,
+      "armature": "hero_skin_002_01"
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "id": 100201,
+      "skinCode": 100201,
+      "armature": "hero_skin_002_01"
+    }
+  ],
+  "checks": [
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 21,
+      "nativeFrame": 0,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 6675,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 21,
+      "nativeFrame": 0,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 6682,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 22,
+      "nativeFrame": 1,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 6713,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 22,
+      "nativeFrame": 1,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 6718,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 23,
+      "nativeFrame": 2,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 6740,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 23,
+      "nativeFrame": 2,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 6745,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 24,
+      "nativeFrame": 3,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 6766,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 24,
+      "nativeFrame": 3,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 6771,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 25,
+      "nativeFrame": 4,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 6792,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 25,
+      "nativeFrame": 4,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 6797,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 26,
+      "nativeFrame": 5,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 6818,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 26,
+      "nativeFrame": 5,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 6823,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 27,
+      "nativeFrame": 6,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 6836,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 27,
+      "nativeFrame": 6,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 6841,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 28,
+      "nativeFrame": 7,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 6862,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 28,
+      "nativeFrame": 7,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 6867,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 29,
+      "nativeFrame": 8,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 6888,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 29,
+      "nativeFrame": 8,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 6893,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 30,
+      "nativeFrame": 9,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 6906,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 30,
+      "nativeFrame": 9,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 6911,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 31,
+      "nativeFrame": 10,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 6932,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 31,
+      "nativeFrame": 10,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 6937,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 32,
+      "nativeFrame": 11,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 6958,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 32,
+      "nativeFrame": 11,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 6963,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 33,
+      "nativeFrame": 12,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 6984,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 33,
+      "nativeFrame": 12,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 6989,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 34,
+      "nativeFrame": 13,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7002,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 34,
+      "nativeFrame": 13,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7007,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 35,
+      "nativeFrame": 14,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7028,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 35,
+      "nativeFrame": 14,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7033,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 36,
+      "nativeFrame": 15,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7054,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 36,
+      "nativeFrame": 15,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7059,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 37,
+      "nativeFrame": 16,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7080,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 37,
+      "nativeFrame": 16,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7085,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 38,
+      "nativeFrame": 17,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7098,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 38,
+      "nativeFrame": 17,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7103,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 39,
+      "nativeFrame": 18,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7124,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 39,
+      "nativeFrame": 18,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7129,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 40,
+      "nativeFrame": 19,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7150,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 40,
+      "nativeFrame": 19,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7155,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 41,
+      "nativeFrame": 20,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7176,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 41,
+      "nativeFrame": 20,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7181,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 42,
+      "nativeFrame": 21,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7194,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 42,
+      "nativeFrame": 21,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7199,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 43,
+      "nativeFrame": 22,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7220,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 43,
+      "nativeFrame": 22,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7225,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 44,
+      "nativeFrame": 23,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7246,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 44,
+      "nativeFrame": 23,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7251,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 45,
+      "nativeFrame": 24,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7272,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 45,
+      "nativeFrame": 24,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7277,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 46,
+      "nativeFrame": 25,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7290,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 46,
+      "nativeFrame": 25,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7295,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 47,
+      "nativeFrame": 26,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7316,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 47,
+      "nativeFrame": 26,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7321,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 48,
+      "nativeFrame": 27,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7342,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 48,
+      "nativeFrame": 27,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7347,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 49,
+      "nativeFrame": 28,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7368,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 49,
+      "nativeFrame": 28,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7373,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 50,
+      "nativeFrame": 29,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7394,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 50,
+      "nativeFrame": 29,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7399,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 51,
+      "nativeFrame": 30,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7420,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 51,
+      "nativeFrame": 30,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7425,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 52,
+      "nativeFrame": 31,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7438,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 52,
+      "nativeFrame": 31,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7443,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 53,
+      "nativeFrame": 32,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7464,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 53,
+      "nativeFrame": 32,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7469,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 54,
+      "nativeFrame": 33,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7490,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 54,
+      "nativeFrame": 33,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7495,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 55,
+      "nativeFrame": 34,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7508,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 55,
+      "nativeFrame": 34,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7513,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 56,
+      "nativeFrame": 35,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7534,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 56,
+      "nativeFrame": 35,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7539,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 57,
+      "nativeFrame": 36,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7560,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 57,
+      "nativeFrame": 36,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7565,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 58,
+      "nativeFrame": 37,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7578,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 58,
+      "nativeFrame": 37,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7583,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 59,
+      "nativeFrame": 38,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7604,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 59,
+      "nativeFrame": 38,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7609,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 60,
+      "nativeFrame": 39,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7630,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 60,
+      "nativeFrame": 39,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7635,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 61,
+      "nativeFrame": 40,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7656,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 61,
+      "nativeFrame": 40,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7661,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 62,
+      "nativeFrame": 41,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7674,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 62,
+      "nativeFrame": 41,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7679,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 63,
+      "nativeFrame": 42,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7702,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 63,
+      "nativeFrame": 42,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7707,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 64,
+      "nativeFrame": 43,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7728,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 64,
+      "nativeFrame": 43,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7733,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01",
+      "sourceFrame": 65,
+      "nativeFrame": 44,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7746,
+        "x": 179,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "sourceFrame": 65,
+      "nativeFrame": 44,
+      "generated": true,
+      "native": true,
+      "nativeFXOnly": true,
+      "duration": 1.5,
+      "bodyBounds": {
+        "$hashCode": 7751,
+        "x": 479,
+        "y": 575,
+        "width": 79,
+        "height": 126
+      }
+    }
+  ],
+  "live": {
+    "rows": [
+      {
+        "model": "hero_skin_002_01",
+        "elapsed": 1508.699999999255,
+        "complete": 1,
+        "calls": 1,
+        "events": [
+          {
+            "name": "zd",
+            "frame": 18
+          }
+        ],
+        "observed": [
+          {
+            "time": 8.699999999254942,
+            "nativeFrame": 0,
+            "sourceFrame": 21
+          },
+          {
+            "time": 24.699999999254942,
+            "nativeFrame": 0,
+            "sourceFrame": 21
+          },
+          {
+            "time": 41.599999997764826,
+            "nativeFrame": 1,
+            "sourceFrame": 22
+          },
+          {
+            "time": 58.099999997764826,
+            "nativeFrame": 1,
+            "sourceFrame": 22
+          },
+          {
+            "time": 74.80000000074506,
+            "nativeFrame": 2,
+            "sourceFrame": 23
+          },
+          {
+            "time": 91.80000000074506,
+            "nativeFrame": 2,
+            "sourceFrame": 23
+          },
+          {
+            "time": 108.09999999776483,
+            "nativeFrame": 3,
+            "sourceFrame": 24
+          },
+          {
+            "time": 124.69999999925494,
+            "nativeFrame": 3,
+            "sourceFrame": 24
+          },
+          {
+            "time": 141.5,
+            "nativeFrame": 4,
+            "sourceFrame": 25
+          },
+          {
+            "time": 158.19999999925494,
+            "nativeFrame": 4,
+            "sourceFrame": 25
+          },
+          {
+            "time": 174.89999999850988,
+            "nativeFrame": 5,
+            "sourceFrame": 26
+          },
+          {
+            "time": 191.59999999776483,
+            "nativeFrame": 5,
+            "sourceFrame": 26
+          },
+          {
+            "time": 208.09999999776483,
+            "nativeFrame": 6,
+            "sourceFrame": 27
+          },
+          {
+            "time": 224.80000000074506,
+            "nativeFrame": 6,
+            "sourceFrame": 27
+          },
+          {
+            "time": 241.59999999776483,
+            "nativeFrame": 7,
+            "sourceFrame": 28
+          },
+          {
+            "time": 258.5,
+            "nativeFrame": 7,
+            "sourceFrame": 28
+          },
+          {
+            "time": 274.69999999925494,
+            "nativeFrame": 8,
+            "sourceFrame": 29
+          },
+          {
+            "time": 291.5,
+            "nativeFrame": 8,
+            "sourceFrame": 29
+          },
+          {
+            "time": 308.0999999977648,
+            "nativeFrame": 9,
+            "sourceFrame": 30
+          },
+          {
+            "time": 324.80000000074506,
+            "nativeFrame": 9,
+            "sourceFrame": 30
+          },
+          {
+            "time": 341.5,
+            "nativeFrame": 10,
+            "sourceFrame": 31
+          },
+          {
+            "time": 358.0999999977648,
+            "nativeFrame": 10,
+            "sourceFrame": 31
+          },
+          {
+            "time": 374.69999999925494,
+            "nativeFrame": 11,
+            "sourceFrame": 32
+          },
+          {
+            "time": 391.3999999985099,
+            "nativeFrame": 11,
+            "sourceFrame": 32
+          },
+          {
+            "time": 408.0999999977648,
+            "nativeFrame": 12,
+            "sourceFrame": 33
+          },
+          {
+            "time": 424.80000000074506,
+            "nativeFrame": 12,
+            "sourceFrame": 33
+          },
+          {
+            "time": 441.5,
+            "nativeFrame": 13,
+            "sourceFrame": 34
+          },
+          {
+            "time": 458.30000000074506,
+            "nativeFrame": 13,
+            "sourceFrame": 34
+          },
+          {
+            "time": 474.8999999985099,
+            "nativeFrame": 14,
+            "sourceFrame": 35
+          },
+          {
+            "time": 491.5999999977648,
+            "nativeFrame": 14,
+            "sourceFrame": 35
+          },
+          {
+            "time": 508.30000000074506,
+            "nativeFrame": 15,
+            "sourceFrame": 36
+          },
+          {
+            "time": 524.8000000007451,
+            "nativeFrame": 15,
+            "sourceFrame": 36
+          },
+          {
+            "time": 541.5999999977648,
+            "nativeFrame": 16,
+            "sourceFrame": 37
+          },
+          {
+            "time": 558.5,
+            "nativeFrame": 16,
+            "sourceFrame": 37
+          },
+          {
+            "time": 574.8000000007451,
+            "nativeFrame": 17,
+            "sourceFrame": 38
+          },
+          {
+            "time": 591.5,
+            "nativeFrame": 17,
+            "sourceFrame": 38
+          },
+          {
+            "time": 608.5,
+            "nativeFrame": 18,
+            "sourceFrame": 39
+          },
+          {
+            "time": 625,
+            "nativeFrame": 18,
+            "sourceFrame": 39
+          },
+          {
+            "time": 641.6999999992549,
+            "nativeFrame": 19,
+            "sourceFrame": 40
+          },
+          {
+            "time": 658.0999999977648,
+            "nativeFrame": 19,
+            "sourceFrame": 40
+          },
+          {
+            "time": 674.8999999985099,
+            "nativeFrame": 20,
+            "sourceFrame": 41
+          },
+          {
+            "time": 691.6999999992549,
+            "nativeFrame": 20,
+            "sourceFrame": 41
+          },
+          {
+            "time": 708,
+            "nativeFrame": 21,
+            "sourceFrame": 42
+          },
+          {
+            "time": 724.8000000007451,
+            "nativeFrame": 21,
+            "sourceFrame": 42
+          },
+          {
+            "time": 741.5999999977648,
+            "nativeFrame": 22,
+            "sourceFrame": 43
+          },
+          {
+            "time": 758.1999999992549,
+            "nativeFrame": 22,
+            "sourceFrame": 43
+          },
+          {
+            "time": 774.8000000007451,
+            "nativeFrame": 23,
+            "sourceFrame": 44
+          },
+          {
+            "time": 791.8000000007451,
+            "nativeFrame": 23,
+            "sourceFrame": 44
+          },
+          {
+            "time": 808.3999999985099,
+            "nativeFrame": 24,
+            "sourceFrame": 45
+          },
+          {
+            "time": 825.5,
+            "nativeFrame": 24,
+            "sourceFrame": 45
+          },
+          {
+            "time": 841.3999999985099,
+            "nativeFrame": 25,
+            "sourceFrame": 46
+          },
+          {
+            "time": 858.0999999977648,
+            "nativeFrame": 25,
+            "sourceFrame": 46
+          },
+          {
+            "time": 875.0999999977648,
+            "nativeFrame": 26,
+            "sourceFrame": 47
+          },
+          {
+            "time": 891.8999999985099,
+            "nativeFrame": 26,
+            "sourceFrame": 47
+          },
+          {
+            "time": 908.5,
+            "nativeFrame": 27,
+            "sourceFrame": 48
+          },
+          {
+            "time": 925,
+            "nativeFrame": 27,
+            "sourceFrame": 48
+          },
+          {
+            "time": 941.6999999992549,
+            "nativeFrame": 28,
+            "sourceFrame": 49
+          },
+          {
+            "time": 958.5,
+            "nativeFrame": 28,
+            "sourceFrame": 49
+          },
+          {
+            "time": 976.1999999992549,
+            "nativeFrame": 29,
+            "sourceFrame": 50
+          },
+          {
+            "time": 991.5,
+            "nativeFrame": 29,
+            "sourceFrame": 50
+          },
+          {
+            "time": 1008.3999999985099,
+            "nativeFrame": 30,
+            "sourceFrame": 51
+          },
+          {
+            "time": 1025.0999999977648,
+            "nativeFrame": 30,
+            "sourceFrame": 51
+          },
+          {
+            "time": 1041.3999999985099,
+            "nativeFrame": 31,
+            "sourceFrame": 52
+          },
+          {
+            "time": 1058.3999999985099,
+            "nativeFrame": 31,
+            "sourceFrame": 52
+          },
+          {
+            "time": 1074.800000000745,
+            "nativeFrame": 32,
+            "sourceFrame": 53
+          },
+          {
+            "time": 1091.699999999255,
+            "nativeFrame": 32,
+            "sourceFrame": 53
+          },
+          {
+            "time": 1108.3999999985099,
+            "nativeFrame": 33,
+            "sourceFrame": 54
+          },
+          {
+            "time": 1125,
+            "nativeFrame": 33,
+            "sourceFrame": 54
+          },
+          {
+            "time": 1141.699999999255,
+            "nativeFrame": 34,
+            "sourceFrame": 55
+          },
+          {
+            "time": 1158.300000000745,
+            "nativeFrame": 34,
+            "sourceFrame": 55
+          },
+          {
+            "time": 1175.0999999977648,
+            "nativeFrame": 35,
+            "sourceFrame": 56
+          },
+          {
+            "time": 1191.5999999977648,
+            "nativeFrame": 35,
+            "sourceFrame": 56
+          },
+          {
+            "time": 1208.3999999985099,
+            "nativeFrame": 36,
+            "sourceFrame": 57
+          },
+          {
+            "time": 1224.800000000745,
+            "nativeFrame": 36,
+            "sourceFrame": 57
+          },
+          {
+            "time": 1241.699999999255,
+            "nativeFrame": 37,
+            "sourceFrame": 58
+          },
+          {
+            "time": 1258.300000000745,
+            "nativeFrame": 37,
+            "sourceFrame": 58
+          },
+          {
+            "time": 1274.5999999977648,
+            "nativeFrame": 38,
+            "sourceFrame": 59
+          },
+          {
+            "time": 1291.5,
+            "nativeFrame": 38,
+            "sourceFrame": 59
+          },
+          {
+            "time": 1308.199999999255,
+            "nativeFrame": 39,
+            "sourceFrame": 60
+          },
+          {
+            "time": 1325.0999999977648,
+            "nativeFrame": 39,
+            "sourceFrame": 60
+          },
+          {
+            "time": 1341.8999999985099,
+            "nativeFrame": 40,
+            "sourceFrame": 61
+          },
+          {
+            "time": 1358.3999999985099,
+            "nativeFrame": 40,
+            "sourceFrame": 61
+          },
+          {
+            "time": 1375,
+            "nativeFrame": 41,
+            "sourceFrame": 62
+          },
+          {
+            "time": 1391.3999999985099,
+            "nativeFrame": 41,
+            "sourceFrame": 62
+          },
+          {
+            "time": 1408.300000000745,
+            "nativeFrame": 42,
+            "sourceFrame": 63
+          },
+          {
+            "time": 1424.800000000745,
+            "nativeFrame": 42,
+            "sourceFrame": 63
+          },
+          {
+            "time": 1441.300000000745,
+            "nativeFrame": 43,
+            "sourceFrame": 64
+          },
+          {
+            "time": 1458,
+            "nativeFrame": 43,
+            "sourceFrame": 64
+          },
+          {
+            "time": 1474.5999999977648,
+            "nativeFrame": 44,
+            "sourceFrame": 65
+          },
+          {
+            "time": 1491.699999999255,
+            "nativeFrame": 44,
+            "sourceFrame": 65
+          },
+          {
+            "time": 1508.699999999255,
+            "nativeFrame": 44,
+            "sourceFrame": 65
+          }
+        ],
+        "distinctSourceFrames": 45
+      },
+      {
+        "model": "hero_skin_002_01_ez",
+        "elapsed": 1515.8999999985099,
+        "complete": 1,
+        "calls": 1,
+        "events": [
+          {
+            "name": "zd",
+            "frame": 18
+          }
+        ],
+        "observed": [
+          {
+            "time": 16.5,
+            "nativeFrame": 0,
+            "sourceFrame": 21
+          },
+          {
+            "time": 32.899999998509884,
+            "nativeFrame": 0,
+            "sourceFrame": 21
+          },
+          {
+            "time": 49.399999998509884,
+            "nativeFrame": 1,
+            "sourceFrame": 22
+          },
+          {
+            "time": 66.09999999776483,
+            "nativeFrame": 1,
+            "sourceFrame": 22
+          },
+          {
+            "time": 82.5,
+            "nativeFrame": 2,
+            "sourceFrame": 23
+          },
+          {
+            "time": 99.09999999776483,
+            "nativeFrame": 2,
+            "sourceFrame": 23
+          },
+          {
+            "time": 115.89999999850988,
+            "nativeFrame": 3,
+            "sourceFrame": 24
+          },
+          {
+            "time": 132.79999999701977,
+            "nativeFrame": 3,
+            "sourceFrame": 24
+          },
+          {
+            "time": 149.29999999701977,
+            "nativeFrame": 4,
+            "sourceFrame": 25
+          },
+          {
+            "time": 165.89999999850988,
+            "nativeFrame": 4,
+            "sourceFrame": 25
+          },
+          {
+            "time": 182.79999999701977,
+            "nativeFrame": 5,
+            "sourceFrame": 26
+          },
+          {
+            "time": 199.69999999925494,
+            "nativeFrame": 6,
+            "sourceFrame": 27
+          },
+          {
+            "time": 216.09999999776483,
+            "nativeFrame": 6,
+            "sourceFrame": 27
+          },
+          {
+            "time": 232.69999999925494,
+            "nativeFrame": 6,
+            "sourceFrame": 27
+          },
+          {
+            "time": 249.29999999701977,
+            "nativeFrame": 7,
+            "sourceFrame": 28
+          },
+          {
+            "time": 265.8999999985099,
+            "nativeFrame": 7,
+            "sourceFrame": 28
+          },
+          {
+            "time": 282.8999999985099,
+            "nativeFrame": 8,
+            "sourceFrame": 29
+          },
+          {
+            "time": 299.5999999977648,
+            "nativeFrame": 9,
+            "sourceFrame": 30
+          },
+          {
+            "time": 316,
+            "nativeFrame": 9,
+            "sourceFrame": 30
+          },
+          {
+            "time": 332.69999999925494,
+            "nativeFrame": 9,
+            "sourceFrame": 30
+          },
+          {
+            "time": 349.69999999925494,
+            "nativeFrame": 10,
+            "sourceFrame": 31
+          },
+          {
+            "time": 366.29999999701977,
+            "nativeFrame": 10,
+            "sourceFrame": 31
+          },
+          {
+            "time": 383.3999999985099,
+            "nativeFrame": 11,
+            "sourceFrame": 32
+          },
+          {
+            "time": 399.5,
+            "nativeFrame": 11,
+            "sourceFrame": 32
+          },
+          {
+            "time": 416.5999999977648,
+            "nativeFrame": 12,
+            "sourceFrame": 33
+          },
+          {
+            "time": 433.0999999977648,
+            "nativeFrame": 12,
+            "sourceFrame": 33
+          },
+          {
+            "time": 449.69999999925494,
+            "nativeFrame": 13,
+            "sourceFrame": 34
+          },
+          {
+            "time": 466.5,
+            "nativeFrame": 13,
+            "sourceFrame": 34
+          },
+          {
+            "time": 483.29999999701977,
+            "nativeFrame": 14,
+            "sourceFrame": 35
+          },
+          {
+            "time": 499.69999999925494,
+            "nativeFrame": 15,
+            "sourceFrame": 36
+          },
+          {
+            "time": 516.3999999985099,
+            "nativeFrame": 15,
+            "sourceFrame": 36
+          },
+          {
+            "time": 532.5999999977648,
+            "nativeFrame": 15,
+            "sourceFrame": 36
+          },
+          {
+            "time": 549.5,
+            "nativeFrame": 16,
+            "sourceFrame": 37
+          },
+          {
+            "time": 566.1999999992549,
+            "nativeFrame": 16,
+            "sourceFrame": 37
+          },
+          {
+            "time": 582.7999999970198,
+            "nativeFrame": 17,
+            "sourceFrame": 38
+          },
+          {
+            "time": 599.5999999977648,
+            "nativeFrame": 18,
+            "sourceFrame": 39
+          },
+          {
+            "time": 616,
+            "nativeFrame": 18,
+            "sourceFrame": 39
+          },
+          {
+            "time": 632.8999999985099,
+            "nativeFrame": 18,
+            "sourceFrame": 39
+          },
+          {
+            "time": 649.6999999992549,
+            "nativeFrame": 19,
+            "sourceFrame": 40
+          },
+          {
+            "time": 666,
+            "nativeFrame": 19,
+            "sourceFrame": 40
+          },
+          {
+            "time": 683.2999999970198,
+            "nativeFrame": 20,
+            "sourceFrame": 41
+          },
+          {
+            "time": 699.6999999992549,
+            "nativeFrame": 21,
+            "sourceFrame": 42
+          },
+          {
+            "time": 716.1999999992549,
+            "nativeFrame": 21,
+            "sourceFrame": 42
+          },
+          {
+            "time": 732.7999999970198,
+            "nativeFrame": 21,
+            "sourceFrame": 42
+          },
+          {
+            "time": 749.5,
+            "nativeFrame": 22,
+            "sourceFrame": 43
+          },
+          {
+            "time": 765.8999999985099,
+            "nativeFrame": 22,
+            "sourceFrame": 43
+          },
+          {
+            "time": 782.7999999970198,
+            "nativeFrame": 23,
+            "sourceFrame": 44
+          },
+          {
+            "time": 799.5999999977648,
+            "nativeFrame": 23,
+            "sourceFrame": 44
+          },
+          {
+            "time": 816.2999999970198,
+            "nativeFrame": 24,
+            "sourceFrame": 45
+          },
+          {
+            "time": 832.5999999977648,
+            "nativeFrame": 24,
+            "sourceFrame": 45
+          },
+          {
+            "time": 849.5999999977648,
+            "nativeFrame": 25,
+            "sourceFrame": 46
+          },
+          {
+            "time": 865.7999999970198,
+            "nativeFrame": 25,
+            "sourceFrame": 46
+          },
+          {
+            "time": 883,
+            "nativeFrame": 26,
+            "sourceFrame": 47
+          },
+          {
+            "time": 899.5,
+            "nativeFrame": 26,
+            "sourceFrame": 47
+          },
+          {
+            "time": 915.7999999970198,
+            "nativeFrame": 27,
+            "sourceFrame": 48
+          },
+          {
+            "time": 932.5,
+            "nativeFrame": 27,
+            "sourceFrame": 48
+          },
+          {
+            "time": 949.5999999977648,
+            "nativeFrame": 28,
+            "sourceFrame": 49
+          },
+          {
+            "time": 965.6999999992549,
+            "nativeFrame": 28,
+            "sourceFrame": 49
+          },
+          {
+            "time": 982.7999999970198,
+            "nativeFrame": 29,
+            "sourceFrame": 50
+          },
+          {
+            "time": 999.0999999977648,
+            "nativeFrame": 29,
+            "sourceFrame": 50
+          },
+          {
+            "time": 1016,
+            "nativeFrame": 30,
+            "sourceFrame": 51
+          },
+          {
+            "time": 1032.8999999985099,
+            "nativeFrame": 30,
+            "sourceFrame": 51
+          },
+          {
+            "time": 1049.5999999977648,
+            "nativeFrame": 31,
+            "sourceFrame": 52
+          },
+          {
+            "time": 1065.8999999985099,
+            "nativeFrame": 31,
+            "sourceFrame": 52
+          },
+          {
+            "time": 1082.7999999970198,
+            "nativeFrame": 32,
+            "sourceFrame": 53
+          },
+          {
+            "time": 1099.0999999977648,
+            "nativeFrame": 32,
+            "sourceFrame": 53
+          },
+          {
+            "time": 1115.8999999985099,
+            "nativeFrame": 33,
+            "sourceFrame": 54
+          },
+          {
+            "time": 1132.699999999255,
+            "nativeFrame": 33,
+            "sourceFrame": 54
+          },
+          {
+            "time": 1149.5999999977648,
+            "nativeFrame": 34,
+            "sourceFrame": 55
+          },
+          {
+            "time": 1165.8999999985099,
+            "nativeFrame": 34,
+            "sourceFrame": 55
+          },
+          {
+            "time": 1183.0999999977648,
+            "nativeFrame": 35,
+            "sourceFrame": 56
+          },
+          {
+            "time": 1199.199999999255,
+            "nativeFrame": 35,
+            "sourceFrame": 56
+          },
+          {
+            "time": 1215.8999999985099,
+            "nativeFrame": 36,
+            "sourceFrame": 57
+          },
+          {
+            "time": 1232.8999999985099,
+            "nativeFrame": 36,
+            "sourceFrame": 57
+          },
+          {
+            "time": 1249.699999999255,
+            "nativeFrame": 37,
+            "sourceFrame": 58
+          },
+          {
+            "time": 1266.199999999255,
+            "nativeFrame": 37,
+            "sourceFrame": 58
+          },
+          {
+            "time": 1283,
+            "nativeFrame": 38,
+            "sourceFrame": 59
+          },
+          {
+            "time": 1299.5999999977648,
+            "nativeFrame": 39,
+            "sourceFrame": 60
+          },
+          {
+            "time": 1316.2999999970198,
+            "nativeFrame": 39,
+            "sourceFrame": 60
+          },
+          {
+            "time": 1332.8999999985099,
+            "nativeFrame": 39,
+            "sourceFrame": 60
+          },
+          {
+            "time": 1349.5,
+            "nativeFrame": 40,
+            "sourceFrame": 61
+          },
+          {
+            "time": 1366.0999999977648,
+            "nativeFrame": 40,
+            "sourceFrame": 61
+          },
+          {
+            "time": 1383.0999999977648,
+            "nativeFrame": 41,
+            "sourceFrame": 62
+          },
+          {
+            "time": 1399.5,
+            "nativeFrame": 42,
+            "sourceFrame": 63
+          },
+          {
+            "time": 1416,
+            "nativeFrame": 42,
+            "sourceFrame": 63
+          },
+          {
+            "time": 1432.2999999970198,
+            "nativeFrame": 42,
+            "sourceFrame": 63
+          },
+          {
+            "time": 1449,
+            "nativeFrame": 43,
+            "sourceFrame": 64
+          },
+          {
+            "time": 1465.7999999970198,
+            "nativeFrame": 43,
+            "sourceFrame": 64
+          },
+          {
+            "time": 1482.5999999977648,
+            "nativeFrame": 44,
+            "sourceFrame": 65
+          },
+          {
+            "time": 1499,
+            "nativeFrame": 44,
+            "sourceFrame": 65
+          },
+          {
+            "time": 1515.7999999970198,
+            "nativeFrame": 44,
+            "sourceFrame": 65
+          }
+        ],
+        "distinctSourceFrames": 45
+      }
+    ],
+    "idle": [
+      {
+        "model": "hero_skin_002_01",
+        "body": false,
+        "idleId": 100201,
+        "idleVisible": true,
+        "nativeVisible": true,
+        "nativeFXOnly": true
+      },
+      {
+        "model": "hero_skin_002_01_ez",
+        "body": false,
+        "idleId": 100201,
+        "idleVisible": true,
+        "nativeVisible": true,
+        "nativeFXOnly": true
+      }
+    ]
+  },
+  "fallbacks": [
+    {
+      "model": "hero_skin_002_01",
+      "action": "jineng",
+      "body": false,
+      "native": true,
+      "fxOwner": false,
+      "bodySlotsVisible": true
+    },
+    {
+      "model": "hero_skin_002_01",
+      "action": "paobu",
+      "body": false,
+      "native": true,
+      "fxOwner": false,
+      "bodySlotsVisible": true
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "action": "jineng",
+      "body": false,
+      "native": true,
+      "fxOwner": false,
+      "bodySlotsVisible": true
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "action": "paobu",
+      "body": false,
+      "native": true,
+      "fxOwner": false,
+      "bodySlotsVisible": true
+    }
+  ],
+  "effects": {
+    "rows": [
+      {
+        "model": "hero_skin_002_01",
+        "action": "effect_1",
+        "body": false,
+        "idle": false,
+        "native": true
+      },
+      {
+        "model": "hero_skin_002_01",
+        "action": "effect_2",
+        "body": false,
+        "idle": false,
+        "native": true
+      },
+      {
+        "model": "hero_skin_002_01",
+        "action": "effect_3",
+        "body": false,
+        "idle": false,
+        "native": true
+      },
+      {
+        "model": "hero_skin_002_01_ez",
+        "action": "effect_1",
+        "body": false,
+        "idle": false,
+        "native": true
+      },
+      {
+        "model": "hero_skin_002_01_ez",
+        "action": "effect_2",
+        "body": false,
+        "idle": false,
+        "native": true
+      },
+      {
+        "model": "hero_skin_002_01_ez",
+        "action": "effect_3",
+        "body": false,
+        "idle": false,
+        "native": true
+      }
+    ],
+    "restored": 100201,
+    "after": {
+      "installed": true,
+      "framesPresented": 180,
+      "actions": {
+        "gongji": 180
+      },
+      "atlasRequests": 1,
+      "suppressedViewsDetached": 0,
+      "errors": [],
+      "caches": [],
+      "active": []
+    }
+  },
+  "errors": [],
+  "failures": [],
+  "manualFrameSequenceReview": "approved-all-native-frames-and-source-sequence",
+  "reviewMethod": "All source/native frames inspected; full timed playback verified by telemetry; no claim of human video viewing."
+}

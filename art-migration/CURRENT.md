@@ -38,7 +38,16 @@ Comfy http://127.0.0.1:8188；G:/comfylight/ComfyUI_windows_portable_nvidia/Comf
 
 补充v92实际受击覆盖：单敌3的hell10/normal10两场均致死，只有0..2帧，等第5帧超时；normal1无负伤害，触发检查失败。三份失败原报告保留。八种敌人真实BattleAI补测通过，80样本/10不同受击帧，effect1/2/3均实际可见，主存档不变/隔离恢复。不能把被战斗打断的10帧称为实际完整21帧；21帧完整循环另有原生播放器证明。详见v92/battle-coverage-limitations.json。
 
-## 最新工作v93及100201普攻接续
-v93本次提交为46立绘构图修复：generation/hero046-portrait-compact-rod-official-v1，portrait-v093.png及bind_wujiang_46_v093.png；只改canonical portrait和base pictureDraw，其他avatar/halfPic/独立额外皮肤不冒称新换。原生实际hero.config.pictureDraw→新注册资源/eui.Image132x257通过，完整道具已看。两套85各85、1876动作/14特效/125属性四卡/6副骨架和1920运行依赖/全台账通过。四页静态检查：新page2已看，其余3页逐字节同v92批准图。下次推v95（93/94/95），当前远端v92。
-100201新普攻原生45@30=1.5秒，zd事件18帧，拟45独立绘制源一一映射，无关键姿势停帧填充。先15格v1因行间尺寸漂移和动作跳变拒收（skin100201-gongji-official15-v1/qa.json），未接入。现按7格横条制作，strip0-v1=0..6，strip1-v1=7..13，strip2-v1=14..20均已prepare，manual pending整体45动画，不算完整动作；18..20空投掷手/无核桃，17仍持核桃，支持手保持2彩球。strip2原图7身体互不相接但x投影重叠，--components技术分离7 alpha连通体，不画补帧、不借别的角色。
-strip3-v1（21..27收势，整个段无核桃）官方imagegen cell772当前在跑，继续时用同handle wait，不能仅凭本条重启。实际终态以wait为准。后续还需strip4=28..34入袋、strip5=35..41补回一颗核桃、strip6=42..48回正（只用42..44，45..48明确不用）。计划outputs/street-reskin/skin100201-gongji-official45-review/assembly-plan.json。所有帧脚底root384,680，共同段scale保持姿势高度变化，未接入street-body-data。完整45源/原生普通EZ/zd18一次/真实战斗/缓存性能全通过后才发布，仍缺技能/跑动等，完整角色0/85、完整皮肤0/125。
+## 最新：v93已提交，v94最终回归中，v95弹丸/命中特效
+HEAD v93=2a7b531fafa087301da4be96b6599b1e78d0cc4d，远端仍v92。下一推v95（93/94/95）。v93两套85/1876动作/14特效/125属性/6副骨架/1920依赖通过，46竖向持竿portrait-v093及native pictureDraw完整道具已验证，单文件资源complete58→59；其它avatar/halfPic/额外皮肤不冒称新绘。
+v94工作区已发布100201独立gongji45+原shouji21（66总atlas帧），主骨架普通/EZ精确绑定。最终候选generation/skin100201-gongji-official45-v2，图集shouji-gongji-f1393faddd871997.webp，RGBA解码12430080字节，旧21受击tile逐像素不变。新45源独立无复用填时长，native45@30=1.5秒/zd18一次保持。
+原v1末尾取核桃在实际BattleAI约native35切idle前未完成，优化v2重排收势/取核桃并新增7个独立呼吸/平衡帧，33已取回核桃，native38..44为新绘尾段。实际场景观察36不同帧0..35，zd18一次，33回收手持核桃snapshot已看；不把实际36称完整45。完整45另有普通/EZ实播各45、90暂停映射；shouji21/42映射也通过。没有修改AI/控制器/原生时间线。普通/EZ源45与native90接触图均已看，人工逐帧+时序遥测，未虚称观看视频。
+最终证明在versions/0.94.0/recovery-v2/skin-body-native-runtime.json；实际战斗同目录skin-body-gongji-battle-natural-normal-recovery.json，主存档不变/隔离恢复。root0.94原native-v1及单次harness action闭包错误失败报告均保留，不覆写。最终数据.actions.gongji绑定battle证明SHA，verifier核actual atlas SHA/33恢复。新frame-map按计划frameSources显式选45源，排除原21/23/25/27/29/31/33，新增neutral8中选7；不是复制持帧。source folders strip0..5-v1、strip6-v2和gongji-recovery-neutral8-v1；raw多余格明确不用。
+15秒双角色原生回调交替45普攻/21受击：各66不同帧、P95约16.8ms、0帧>100ms、共享1bitmap、销毁0body缓存通过（PC Chrome warm，仅此范围）。完整角色0/85、完整独立皮肤0/125不变，技能/跑动、UI FX、107原生身体纹理等仍未全换。
+v94全量运行的handles：base85 exec86645已完成属于v93；当前v94 base85 exec32260已完成或待确认；v94 worn85 exec95660已完成，body/14FX/属性/6副骨架 exec49792已完成；legacy hit+overlay+fidelity exec80869正在/终态待poll。直接查reports/实际handle，不重复启动已通过测试。需要复制两套85JSON到版本/全局，stage合格source/atlas后review/tracking、提交v94，再做v95。
+无活动官方imagegen（801已完成；825为Qwen核桃去白底alpha编辑，若当前handle仍活用wait确认）。Comfy Qwen v1成功但核桃壳过平滑拒收design-qa；Qwen v2成功深沟壳设计已看，原图generation/skin100201-qiu-qwen-v2/skin100201-qiu-qwen-v2_00001_.png，prompt efa367d9-f83f-4672-afe1-2b4ffb7264fb已terminal并collect。alpha官方编辑cell825需确认结果。v1 9e19685b...也terminal，不重启。
+v95目标：真实发射仍旧红白球，init已定位common_newskill_simayi_02_qiu普通/EZ（各1region qiu，1@30静态），命中common_newskill_simayi_02普通/EZ（各13region，13@24）。原包inventory/atlas/skeleton在outputs/street-reskin/skin100201-projectile-audit-v95，普通128²/EZ64²的palette透明别误认绿背景，convert RGBA后alpha0是透明。将Qwen深纹核桃制合格alpha后逐纹理替换qiu；还需命中13帧新效果，拟本地MiniMax参照原native13节奏+铜白青材质。当前这些4原包未替换，不能把普攻全部美术算完成。
+后续可研究107原生身体region逐部件重绘/重绑，保持原动画，减少每动作整帧重绘并覆盖残留材质；不能用重着色/空白/共用人物图冒充独立新皮肤。
+
+### v94终态复核
+v94双85/1876/14FX/125属性/6副骨架/1922依赖与全台账通过；4肖像页SHA同v93。v94即将/已经提交，实际SHA以git为准。v95 MiniMax prompt b59a3aa1-dce4-49ca-a827-dba7ea246169正在运行，queue/history为准，不重复提交。Qwen核桃透明源已在skin100201-qiu-hybrid-alpha-v1/official-alpha.png，官方去背景源SHA/provenance齐备；尚未替换弹丸包。

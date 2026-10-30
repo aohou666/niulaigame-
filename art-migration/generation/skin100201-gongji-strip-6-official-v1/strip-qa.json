@@ -1,0 +1,149 @@
+{
+  "sourceSha256": "1c8ea5253b910fa4f645a41725d68bd9d3f41f150d59e1b6b5f4bf800d70f1ca",
+  "sourceSize": [
+    2172,
+    724
+  ],
+  "selectedSourceCells": [
+    3,
+    2,
+    1,
+    0
+  ],
+  "unusedSourceCells": [
+    4,
+    5,
+    6
+  ],
+  "technicalSegmentation": "seven disjoint alpha components, original source pixels retained; no pose reconstruction",
+  "frames": [
+    {
+      "frame": 41,
+      "sourceCellIndex": 3,
+      "sourceCell": [
+        947,
+        0,
+        1222,
+        724
+      ],
+      "sourceAlphaBounds": [
+        12,
+        105,
+        263,
+        640
+      ],
+      "sourceFoot": [
+        177.234416022804,
+        640
+      ],
+      "sourceMargin": 12,
+      "scale": 1.0,
+      "preparedFoot": [
+        384,
+        680
+      ],
+      "preparedOffset": [
+        219,
+        145
+      ],
+      "rgbaSha256": "f7e60a1f23d50bd66f99dc0a52fb998a59083120314b487d4fa0dd9b1eb9f984"
+    },
+    {
+      "frame": 42,
+      "sourceCellIndex": 2,
+      "sourceCell": [
+        632,
+        0,
+        911,
+        724
+      ],
+      "sourceAlphaBounds": [
+        12,
+        105,
+        267,
+        639
+      ],
+      "sourceFoot": [
+        180.5764440210296,
+        639
+      ],
+      "sourceMargin": 12,
+      "scale": 1.0,
+      "preparedFoot": [
+        384,
+        680
+      ],
+      "preparedOffset": [
+        215,
+        146
+      ],
+      "rgbaSha256": "b3d756e3953f1c60e1caa340acab56a649dcb48591a0490b625e96753cebaf62"
+    },
+    {
+      "frame": 43,
+      "sourceCellIndex": 1,
+      "sourceCell": [
+        320,
+        0,
+        597,
+        724
+      ],
+      "sourceAlphaBounds": [
+        12,
+        105,
+        265,
+        639
+      ],
+      "sourceFoot": [
+        180.5100021326509,
+        639
+      ],
+      "sourceMargin": 12,
+      "scale": 1.0,
+      "preparedFoot": [
+        384,
+        680
+      ],
+      "preparedOffset": [
+        215,
+        146
+      ],
+      "rgbaSha256": "e33bc9d8f61ee9e9be1a1bd64c79359c47bd68c9bb80cbcdddaf2ae4ed1fa173"
+    },
+    {
+      "frame": 44,
+      "sourceCellIndex": 0,
+      "sourceCell": [
+        0,
+        0,
+        277,
+        724
+      ],
+      "sourceAlphaBounds": [
+        9,
+        105,
+        265,
+        637
+      ],
+      "sourceFoot": [
+        187.39671230695748,
+        637
+      ],
+      "sourceMargin": 9,
+      "scale": 1.0,
+      "preparedFoot": [
+        384,
+        680
+      ],
+      "preparedOffset": [
+        206,
+        148
+      ],
+      "rgbaSha256": "e0bfc081e5a967b6a132dec8533ad8b437b4d9cbfd44067af94482d5ee2e7314"
+    }
+  ],
+  "manualReview": "superseded-common-scale",
+  "scope": "Seven individually drawn source cells, root aligned with common strip scale. No creative edits/interpolation; neither complete21-frame animation nor manual approval.",
+  "runtimeIntegrated": false,
+  "reason": "Technical scale1 trial replaced with one common520px body baseline scale for final strip, same official source and selected cell order. No runtime integration."
+}

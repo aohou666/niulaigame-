@@ -1,0 +1,28 @@
+{
+  "pass": true,
+  "manualVideoReview": "approved-continuous-native-actions",
+  "reviewMethod": "Frame-by-frame visual review and complete native live telemetry, no claim of human video viewing.",
+  "candidateSha256": "953572d983e7cd7a7005edd8f70013671571cbad6e0ca528c250273bfaad2c77",
+  "atlasSha256": "f1393faddd871997affb205710e0c456a441cbedce2a897e32935a4cbb956be5",
+  "actions": {
+    "shouji": {
+      "path": "art-migration/versions/0.94.0/recovery-v2/skin-shouji-native-runtime.json",
+      "sha256": "93a058eb7a98aa6cec8528088c7ccdefb6870ebb3fa1dfe977d04234fa878dbc",
+      "nativeFrames": 21,
+      "liveDistinct": [
+        21,
+        21
+      ]
+    },
+    "gongji": {
+      "path": "art-migration/versions/0.94.0/recovery-v2/skin-gongji-native-runtime.json",
+      "sha256": "b50f1359a31bece2bc458d6cf6dbed47207a9484cf1d6e69258e04ceb79b4974",
+      "nativeFrames": 45,
+      "liveDistinct": [
+        45,
+        45
+      ]
+    }
+  },
+  "scope": "Native shouji21/gongji45 ordinary/EZ; recovered walnut by native33, source45 remains unique, zd18 unchanged. Actual battle and complete skin separate."
+}

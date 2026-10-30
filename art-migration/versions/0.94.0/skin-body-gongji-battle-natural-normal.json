@@ -1,0 +1,632 @@
+{
+  "pass": false,
+  "scope": "Actual production equip proxy/persisted isolated save, native BattleAI replay and autonomous selected skin body action; no manually triggered DBPlayer action or edited battle payload. Main save must stay unchanged.",
+  "equip": {
+    "uuid": "offline-hero-all-2",
+    "dermaCode": 100201,
+    "subType": 2,
+    "skinSubType": 2,
+    "model": "hero_skin_002_01",
+    "calls": 1,
+    "results": 1
+  },
+  "payload": {
+    "allies": [
+      {
+        "entityId": 11100,
+        "code": 41010002,
+        "dermaCode": 100201,
+        "attr": "{\"1\":745200000,\"2\":6486000000,\"3\":614100000,\"4\":172500000,\"5\":0,\"11\":78,\"12\":455,\"13\":43,\"14\":63,\"15\":43,\"16\":43,\"17\":43,\"18\":43,\"19\":43,\"20\":420,\"21\":43,\"22\":43,\"23\":25,\"24\":20,\"25\":0,\"26\":0,\"27\":0,\"28\":0,\"29\":27,\"30\":27,\"31\":0,\"32\":0,\"33\":43,\"34\":43,\"41\":0,\"42\":0,\"43\":0,\"44\":0,\"45\":0,\"46\":0,\"51\":0,\"52\":0,\"53\":0,\"54\":0,\"55\":0,\"56\":0,\"57\":0,\"58\":0,\"92\":12,\"93\":12,\"94\":28,\"301\":5,\"302\":5,\"303\":5,\"304\":5,\"305\":0,\"311\":5,\"312\":5,\"313\":5,\"314\":5,\"315\":5,\"316\":5,\"317\":5,\"318\":5,\"319\":5,\"320\":5,\"321\":5,\"333\":5,\"351\":0,\"352\":0,\"353\":0,\"354\":0,\"355\":0,\"356\":0,\"357\":0,\"358\":0}",
+        "life": 6486000000
+      }
+    ],
+    "enemies": [
+      {
+        "entityId": 21100,
+        "code": 41000003,
+        "dermaCode": 0,
+        "attr": "{\"1\":444400000,\"2\":4268000000,\"3\":448800000,\"4\":127600000,\"5\":0,\"11\":0,\"12\":0,\"13\":0,\"14\":0,\"15\":0,\"16\":0,\"17\":0,\"18\":0,\"19\":0,\"20\":0,\"21\":0,\"22\":0,\"23\":0,\"24\":0,\"25\":0,\"26\":0,\"27\":0,\"28\":0,\"29\":0,\"30\":0,\"31\":0,\"32\":0,\"33\":0,\"34\":0,\"41\":0,\"42\":0,\"43\":0,\"44\":0,\"45\":0,\"46\":0,\"51\":0,\"52\":0,\"53\":0,\"54\":0,\"55\":0,\"56\":0,\"57\":0,\"58\":0,\"92\":0,\"93\":0,\"94\":0,\"301\":0,\"302\":0,\"303\":0,\"304\":0,\"305\":0,\"311\":0,\"312\":0,\"313\":0,\"314\":0,\"315\":0,\"316\":0,\"317\":0,\"318\":0,\"319\":0,\"320\":0,\"321\":0,\"333\":0,\"351\":0,\"352\":0,\"353\":0,\"354\":0,\"355\":0,\"356\":0,\"357\":0,\"358\":0}",
+        "life": 4268000000
+      }
+    ],
+    "engine": {
+      "mode": "original-battle-ai",
+      "rounds": 2,
+      "effects": 6,
+      "buffs": 16,
+      "ticks": 5,
+      "result": 1
+    },
+    "rounds": 2,
+    "incoming": [
+      {
+        "value": 0,
+        "life": 6486000000,
+        "status": 0
+      },
+      {
+        "value": 223560000,
+        "life": 6486000000,
+        "status": 0,
+        "skillId": "550020315"
+      },
+      {
+        "value": 0,
+        "life": 6486000000,
+        "status": 0,
+        "skillId": "220001010"
+      },
+      {
+        "value": 0,
+        "life": 6486000000,
+        "status": 1,
+        "skillId": "550030110"
+      },
+      {
+        "value": 0,
+        "life": 6486000000,
+        "status": 0,
+        "skillId": "550020310"
+      },
+      {
+        "value": 0,
+        "life": 6486000000,
+        "status": 0
+      }
+    ]
+  },
+  "aiAttrAudit": [
+    {
+      "entityId": 11100,
+      "code": 41010002,
+      "changes": {
+        "11": {
+          "display": 78,
+          "native": 0.78
+        },
+        "12": {
+          "display": 455,
+          "native": 4.55
+        },
+        "13": {
+          "display": 43,
+          "native": 0.43
+        },
+        "14": {
+          "display": 63,
+          "native": 0.63
+        },
+        "15": {
+          "display": 43,
+          "native": 0.43
+        },
+        "16": {
+          "display": 43,
+          "native": 0.43
+        },
+        "17": {
+          "display": 43,
+          "native": 0.43
+        },
+        "18": {
+          "display": 43,
+          "native": 0.43
+        },
+        "19": {
+          "display": 43,
+          "native": 0.43
+        },
+        "20": {
+          "display": 420,
+          "native": 4.2
+        },
+        "21": {
+          "display": 43,
+          "native": 0.43
+        },
+        "22": {
+          "display": 43,
+          "native": 0.43
+        },
+        "23": {
+          "display": 25,
+          "native": 0.25
+        },
+        "24": {
+          "display": 20,
+          "native": 0.2
+        },
+        "29": {
+          "display": 27,
+          "native": 0.27
+        },
+        "30": {
+          "display": 27,
+          "native": 0.27
+        },
+        "33": {
+          "display": 43,
+          "native": 0.43
+        },
+        "34": {
+          "display": 43,
+          "native": 0.43
+        },
+        "92": {
+          "display": 12,
+          "native": 0.12
+        },
+        "93": {
+          "display": 12,
+          "native": 0.12
+        },
+        "94": {
+          "display": 28,
+          "native": 0.28
+        },
+        "301": {
+          "display": 5,
+          "native": 0.05
+        },
+        "302": {
+          "display": 5,
+          "native": 0.05
+        },
+        "303": {
+          "display": 5,
+          "native": 0.05
+        },
+        "304": {
+          "display": 5,
+          "native": 0.05
+        },
+        "311": {
+          "display": 5,
+          "native": 0.05
+        },
+        "312": {
+          "display": 5,
+          "native": 0.05
+        },
+        "313": {
+          "display": 5,
+          "native": 0.05
+        },
+        "314": {
+          "display": 5,
+          "native": 0.05
+        },
+        "315": {
+          "display": 5,
+          "native": 0.05
+        },
+        "316": {
+          "display": 5,
+          "native": 0.05
+        },
+        "317": {
+          "display": 5,
+          "native": 0.05
+        },
+        "318": {
+          "display": 5,
+          "native": 0.05
+        },
+        "319": {
+          "display": 5,
+          "native": 0.05
+        },
+        "320": {
+          "display": 5,
+          "native": 0.05
+        },
+        "321": {
+          "display": 5,
+          "native": 0.05
+        },
+        "333": {
+          "display": 5,
+          "native": 0.05
+        }
+      }
+    },
+    {
+      "entityId": 10100,
+      "code": 120000001,
+      "changes": {
+        "11": {
+          "display": 0,
+          "native": 0
+        },
+        "12": {
+          "display": 0,
+          "native": 0
+        },
+        "13": {
+          "display": 0,
+          "native": 0
+        },
+        "14": {
+          "display": 0,
+          "native": 0
+        },
+        "15": {
+          "display": 0,
+          "native": 0
+        },
+        "16": {
+          "display": 0,
+          "native": 0
+        },
+        "17": {
+          "display": 0,
+          "native": 0
+        },
+        "18": {
+          "display": 0,
+          "native": 0
+        },
+        "19": {
+          "display": 0,
+          "native": 0
+        },
+        "20": {
+          "display": 0,
+          "native": 0
+        },
+        "21": {
+          "display": 0,
+          "native": 0
+        },
+        "22": {
+          "display": 0,
+          "native": 0
+        },
+        "23": {
+          "display": 0,
+          "native": 0
+        },
+        "24": {
+          "display": 0,
+          "native": 0
+        },
+        "29": {
+          "display": 0,
+          "native": 0
+        },
+        "30": {
+          "display": 0,
+          "native": 0
+        },
+        "33": {
+          "display": 0,
+          "native": 0
+        },
+        "34": {
+          "display": 0,
+          "native": 0
+        },
+        "92": {
+          "display": 0,
+          "native": 0
+        },
+        "93": {
+          "display": 0,
+          "native": 0
+        },
+        "94": {
+          "display": 0,
+          "native": 0
+        },
+        "301": {
+          "display": 0,
+          "native": 0
+        },
+        "302": {
+          "display": 0,
+          "native": 0
+        },
+        "303": {
+          "display": 0,
+          "native": 0
+        },
+        "304": {
+          "display": 0,
+          "native": 0
+        },
+        "311": {
+          "display": 0,
+          "native": 0
+        },
+        "312": {
+          "display": 0,
+          "native": 0
+        },
+        "313": {
+          "display": 0,
+          "native": 0
+        },
+        "314": {
+          "display": 0,
+          "native": 0
+        },
+        "315": {
+          "display": 0,
+          "native": 0
+        },
+        "316": {
+          "display": 0,
+          "native": 0
+        },
+        "317": {
+          "display": 0,
+          "native": 0
+        },
+        "318": {
+          "display": 0,
+          "native": 0
+        },
+        "319": {
+          "display": 0,
+          "native": 0
+        },
+        "320": {
+          "display": 0,
+          "native": 0
+        },
+        "321": {
+          "display": 0,
+          "native": 0
+        },
+        "333": {
+          "display": 0,
+          "native": 0
+        }
+      }
+    },
+    {
+      "entityId": 10200,
+      "code": 310000001,
+      "changes": {
+        "11": {
+          "display": 0,
+          "native": 0
+        },
+        "12": {
+          "display": 0,
+          "native": 0
+        },
+        "13": {
+          "display": 0,
+          "native": 0
+        },
+        "14": {
+          "display": 0,
+          "native": 0
+        },
+        "15": {
+          "display": 0,
+          "native": 0
+        },
+        "16": {
+          "display": 0,
+          "native": 0
+        },
+        "17": {
+          "display": 0,
+          "native": 0
+        },
+        "18": {
+          "display": 0,
+          "native": 0
+        },
+        "19": {
+          "display": 0,
+          "native": 0
+        },
+        "20": {
+          "display": 0,
+          "native": 0
+        },
+        "21": {
+          "display": 0,
+          "native": 0
+        },
+        "22": {
+          "display": 0,
+          "native": 0
+        },
+        "23": {
+          "display": 0,
+          "native": 0
+        },
+        "24": {
+          "display": 0,
+          "native": 0
+        },
+        "29": {
+          "display": 0,
+          "native": 0
+        },
+        "30": {
+          "display": 0,
+          "native": 0
+        },
+        "33": {
+          "display": 0,
+          "native": 0
+        },
+        "34": {
+          "display": 0,
+          "native": 0
+        },
+        "92": {
+          "display": 0,
+          "native": 0
+        },
+        "93": {
+          "display": 0,
+          "native": 0
+        },
+        "94": {
+          "display": 0,
+          "native": 0
+        },
+        "301": {
+          "display": 0,
+          "native": 0
+        },
+        "302": {
+          "display": 0,
+          "native": 0
+        },
+        "303": {
+          "display": 0,
+          "native": 0
+        },
+        "304": {
+          "display": 0,
+          "native": 0
+        },
+        "311": {
+          "display": 0,
+          "native": 0
+        },
+        "312": {
+          "display": 0,
+          "native": 0
+        },
+        "313": {
+          "display": 0,
+          "native": 0
+        },
+        "314": {
+          "display": 0,
+          "native": 0
+        },
+        "315": {
+          "display": 0,
+          "native": 0
+        },
+        "316": {
+          "display": 0,
+          "native": 0
+        },
+        "317": {
+          "display": 0,
+          "native": 0
+        },
+        "318": {
+          "display": 0,
+          "native": 0
+        },
+        "319": {
+          "display": 0,
+          "native": 0
+        },
+        "320": {
+          "display": 0,
+          "native": 0
+        },
+        "321": {
+          "display": 0,
+          "native": 0
+        },
+        "333": {
+          "display": 0,
+          "native": 0
+        }
+      }
+    }
+  ],
+  "error": "page.waitForFunction: ReferenceError: action is not defined\n    at eval (eval at predicate (eval at evaluate (:311:30)), <anonymous>:1:93)\n    at Array.some (<anonymous>)\n    at eval (eval at predicate (eval at evaluate (:311:30)), <anonymous>:1:34)\n    at predicate (eval at evaluate (:311:30), <anonymous>:7:27)\n    at next (eval at evaluate (:311:30), <anonymous>:29:33)\n    at eval (eval at evaluate (:311:30), <anonymous>:42:13)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at C:\\Users\\dongdong\\Documents\\ChatGPT\\安装\\tools\\street-skin-body-battle-test.mjs:44:13",
+  "diagnostic": {
+    "samples": [],
+    "triggers": [
+      {
+        "at": 1370.3999999985099,
+        "model": "hero_skin_002_01_ez",
+        "action": "daiji"
+      },
+      {
+        "at": 1370.5,
+        "model": "hero_skin_002_01_ez",
+        "action": "daiji"
+      },
+      {
+        "at": 1370.5,
+        "model": "hero_skin_002_01_ez",
+        "action": "daiji"
+      },
+      {
+        "at": 1370.699999999255,
+        "model": "hero_skin_002_01_ez",
+        "action": "daiji"
+      },
+      {
+        "at": 1370.800000000745,
+        "model": "hero_skin_002_01_ez",
+        "action": "daiji"
+      }
+    ],
+    "body": {
+      "installed": true,
+      "framesPresented": 0,
+      "actions": {},
+      "atlasRequests": 2,
+      "suppressedViewsDetached": 0,
+      "errors": [],
+      "caches": [
+        {
+          "id": "3",
+          "users": 1,
+          "ready": false
+        },
+        {
+          "id": "100201",
+          "users": 1,
+          "ready": false
+        }
+      ],
+      "active": [
+        {
+          "model": "hero_skin_002_01_ez",
+          "action": "daiji",
+          "frame": -1,
+          "visible": false,
+          "nativeVisible": false,
+          "nativeFXOnly": false,
+          "ready": false,
+          "onStage": true
+        },
+        {
+          "model": "hero_003_01_ez",
+          "action": "daiji",
+          "frame": -1,
+          "visible": false,
+          "nativeVisible": false,
+          "nativeFXOnly": false,
+          "ready": false,
+          "onStage": true
+        }
+      ]
+    },
+    "payloadKeys": [
+      "teams",
+      "entityResults",
+      "normalRewards",
+      "extRewards",
+      "result",
+      "battleType",
+      "clientReward",
+      "battleInfo",
+      "offlineBuffs",
+      "offlineBuffsByEntity",
+      "offlineSupportEntities",
+      "offlineBeauty",
+      "offlineCombatEngine"
+    ]
+  },
+  "isolatedSaveRestored": true,
+  "mainSaveUnchanged": true
+}

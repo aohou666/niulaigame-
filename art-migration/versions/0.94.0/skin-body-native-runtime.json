@@ -1,0 +1,28 @@
+{
+  "pass": true,
+  "manualVideoReview": "approved-continuous-native-actions",
+  "reviewMethod": "Frame-by-frame visual review plus complete native live telemetry, not a claim of human video viewing.",
+  "candidateSha256": "dfbf4c7fdf77b4584de0d420837abed11727b8e6f1b4b88eb9547bdc8d3d8419",
+  "atlasSha256": "341b25f0827e3d98a124d290d95a36f720de67885f02297bd050af83f322d714",
+  "actions": {
+    "shouji": {
+      "path": "art-migration/versions/0.94.0/skin-shouji-native-runtime.json",
+      "sha256": "5247357f731bdf4ab3834053a5934a849615b2fa339c85e4158f72cd75049c06",
+      "nativeFrames": 21,
+      "liveDistinct": [
+        21,
+        21
+      ]
+    },
+    "gongji": {
+      "path": "art-migration/versions/0.94.0/skin-gongji-native-runtime.json",
+      "sha256": "68eecdffaf95f2be76a4d4328d31e2441dba64097b74b7c0c643843d9bfdb969",
+      "nativeFrames": 45,
+      "liveDistinct": [
+        45,
+        45
+      ]
+    }
+  },
+  "scope": "Native independent100201 shouji21 and gongji45, ordinary/EZ. Complete skin, actual battle, APK/mobile performance remain separate."
+}

@@ -1,0 +1,2709 @@
+{
+  "pass": true,
+  "scope": "Actual production equip proxy/persisted isolated save, native BattleAI replay and autonomous selected skin body action; no manually triggered DBPlayer action or edited battle payload. Main save must stay unchanged.",
+  "equip": {
+    "uuid": "offline-hero-all-2",
+    "dermaCode": 100201,
+    "subType": 2,
+    "skinSubType": 2,
+    "model": "hero_skin_002_01",
+    "calls": 1,
+    "results": 1
+  },
+  "payload": {
+    "allies": [
+      {
+        "entityId": 11100,
+        "code": 41010002,
+        "dermaCode": 100201,
+        "attr": "{\"1\":745200000,\"2\":6486000000,\"3\":614100000,\"4\":172500000,\"5\":0,\"11\":78,\"12\":455,\"13\":43,\"14\":63,\"15\":43,\"16\":43,\"17\":43,\"18\":43,\"19\":43,\"20\":420,\"21\":43,\"22\":43,\"23\":25,\"24\":20,\"25\":0,\"26\":0,\"27\":0,\"28\":0,\"29\":27,\"30\":27,\"31\":0,\"32\":0,\"33\":43,\"34\":43,\"41\":0,\"42\":0,\"43\":0,\"44\":0,\"45\":0,\"46\":0,\"51\":0,\"52\":0,\"53\":0,\"54\":0,\"55\":0,\"56\":0,\"57\":0,\"58\":0,\"92\":12,\"93\":12,\"94\":28,\"301\":5,\"302\":5,\"303\":5,\"304\":5,\"305\":0,\"311\":5,\"312\":5,\"313\":5,\"314\":5,\"315\":5,\"316\":5,\"317\":5,\"318\":5,\"319\":5,\"320\":5,\"321\":5,\"333\":5,\"351\":0,\"352\":0,\"353\":0,\"354\":0,\"355\":0,\"356\":0,\"357\":0,\"358\":0}",
+        "life": 6486000000
+      }
+    ],
+    "enemies": [
+      {
+        "entityId": 21100,
+        "code": 41000003,
+        "dermaCode": 0,
+        "attr": "{\"1\":444400000,\"2\":4268000000,\"3\":448800000,\"4\":127600000,\"5\":0,\"11\":0,\"12\":0,\"13\":0,\"14\":0,\"15\":0,\"16\":0,\"17\":0,\"18\":0,\"19\":0,\"20\":0,\"21\":0,\"22\":0,\"23\":0,\"24\":0,\"25\":0,\"26\":0,\"27\":0,\"28\":0,\"29\":0,\"30\":0,\"31\":0,\"32\":0,\"33\":0,\"34\":0,\"41\":0,\"42\":0,\"43\":0,\"44\":0,\"45\":0,\"46\":0,\"51\":0,\"52\":0,\"53\":0,\"54\":0,\"55\":0,\"56\":0,\"57\":0,\"58\":0,\"92\":0,\"93\":0,\"94\":0,\"301\":0,\"302\":0,\"303\":0,\"304\":0,\"305\":0,\"311\":0,\"312\":0,\"313\":0,\"314\":0,\"315\":0,\"316\":0,\"317\":0,\"318\":0,\"319\":0,\"320\":0,\"321\":0,\"333\":0,\"351\":0,\"352\":0,\"353\":0,\"354\":0,\"355\":0,\"356\":0,\"357\":0,\"358\":0}",
+        "life": 4268000000
+      }
+    ],
+    "engine": {
+      "mode": "original-battle-ai",
+      "rounds": 2,
+      "effects": 6,
+      "buffs": 16,
+      "ticks": 5,
+      "result": 1
+    },
+    "rounds": 2,
+    "incoming": [
+      {
+        "value": 0,
+        "life": 6486000000,
+        "status": 0
+      },
+      {
+        "value": 223560000,
+        "life": 6486000000,
+        "status": 0,
+        "skillId": "550020315"
+      },
+      {
+        "value": 0,
+        "life": 6486000000,
+        "status": 0,
+        "skillId": "220001010"
+      },
+      {
+        "value": 0,
+        "life": 6486000000,
+        "status": 0,
+        "skillId": "550030110"
+      },
+      {
+        "value": 0,
+        "life": 6486000000,
+        "status": 0,
+        "skillId": "550020310"
+      },
+      {
+        "value": 0,
+        "life": 6486000000,
+        "status": 0
+      }
+    ]
+  },
+  "aiAttrAudit": [
+    {
+      "entityId": 11100,
+      "code": 41010002,
+      "changes": {
+        "11": {
+          "display": 78,
+          "native": 0.78
+        },
+        "12": {
+          "display": 455,
+          "native": 4.55
+        },
+        "13": {
+          "display": 43,
+          "native": 0.43
+        },
+        "14": {
+          "display": 63,
+          "native": 0.63
+        },
+        "15": {
+          "display": 43,
+          "native": 0.43
+        },
+        "16": {
+          "display": 43,
+          "native": 0.43
+        },
+        "17": {
+          "display": 43,
+          "native": 0.43
+        },
+        "18": {
+          "display": 43,
+          "native": 0.43
+        },
+        "19": {
+          "display": 43,
+          "native": 0.43
+        },
+        "20": {
+          "display": 420,
+          "native": 4.2
+        },
+        "21": {
+          "display": 43,
+          "native": 0.43
+        },
+        "22": {
+          "display": 43,
+          "native": 0.43
+        },
+        "23": {
+          "display": 25,
+          "native": 0.25
+        },
+        "24": {
+          "display": 20,
+          "native": 0.2
+        },
+        "29": {
+          "display": 27,
+          "native": 0.27
+        },
+        "30": {
+          "display": 27,
+          "native": 0.27
+        },
+        "33": {
+          "display": 43,
+          "native": 0.43
+        },
+        "34": {
+          "display": 43,
+          "native": 0.43
+        },
+        "92": {
+          "display": 12,
+          "native": 0.12
+        },
+        "93": {
+          "display": 12,
+          "native": 0.12
+        },
+        "94": {
+          "display": 28,
+          "native": 0.28
+        },
+        "301": {
+          "display": 5,
+          "native": 0.05
+        },
+        "302": {
+          "display": 5,
+          "native": 0.05
+        },
+        "303": {
+          "display": 5,
+          "native": 0.05
+        },
+        "304": {
+          "display": 5,
+          "native": 0.05
+        },
+        "311": {
+          "display": 5,
+          "native": 0.05
+        },
+        "312": {
+          "display": 5,
+          "native": 0.05
+        },
+        "313": {
+          "display": 5,
+          "native": 0.05
+        },
+        "314": {
+          "display": 5,
+          "native": 0.05
+        },
+        "315": {
+          "display": 5,
+          "native": 0.05
+        },
+        "316": {
+          "display": 5,
+          "native": 0.05
+        },
+        "317": {
+          "display": 5,
+          "native": 0.05
+        },
+        "318": {
+          "display": 5,
+          "native": 0.05
+        },
+        "319": {
+          "display": 5,
+          "native": 0.05
+        },
+        "320": {
+          "display": 5,
+          "native": 0.05
+        },
+        "321": {
+          "display": 5,
+          "native": 0.05
+        },
+        "333": {
+          "display": 5,
+          "native": 0.05
+        }
+      }
+    },
+    {
+      "entityId": 10100,
+      "code": 120000001,
+      "changes": {
+        "11": {
+          "display": 0,
+          "native": 0
+        },
+        "12": {
+          "display": 0,
+          "native": 0
+        },
+        "13": {
+          "display": 0,
+          "native": 0
+        },
+        "14": {
+          "display": 0,
+          "native": 0
+        },
+        "15": {
+          "display": 0,
+          "native": 0
+        },
+        "16": {
+          "display": 0,
+          "native": 0
+        },
+        "17": {
+          "display": 0,
+          "native": 0
+        },
+        "18": {
+          "display": 0,
+          "native": 0
+        },
+        "19": {
+          "display": 0,
+          "native": 0
+        },
+        "20": {
+          "display": 0,
+          "native": 0
+        },
+        "21": {
+          "display": 0,
+          "native": 0
+        },
+        "22": {
+          "display": 0,
+          "native": 0
+        },
+        "23": {
+          "display": 0,
+          "native": 0
+        },
+        "24": {
+          "display": 0,
+          "native": 0
+        },
+        "29": {
+          "display": 0,
+          "native": 0
+        },
+        "30": {
+          "display": 0,
+          "native": 0
+        },
+        "33": {
+          "display": 0,
+          "native": 0
+        },
+        "34": {
+          "display": 0,
+          "native": 0
+        },
+        "92": {
+          "display": 0,
+          "native": 0
+        },
+        "93": {
+          "display": 0,
+          "native": 0
+        },
+        "94": {
+          "display": 0,
+          "native": 0
+        },
+        "301": {
+          "display": 0,
+          "native": 0
+        },
+        "302": {
+          "display": 0,
+          "native": 0
+        },
+        "303": {
+          "display": 0,
+          "native": 0
+        },
+        "304": {
+          "display": 0,
+          "native": 0
+        },
+        "311": {
+          "display": 0,
+          "native": 0
+        },
+        "312": {
+          "display": 0,
+          "native": 0
+        },
+        "313": {
+          "display": 0,
+          "native": 0
+        },
+        "314": {
+          "display": 0,
+          "native": 0
+        },
+        "315": {
+          "display": 0,
+          "native": 0
+        },
+        "316": {
+          "display": 0,
+          "native": 0
+        },
+        "317": {
+          "display": 0,
+          "native": 0
+        },
+        "318": {
+          "display": 0,
+          "native": 0
+        },
+        "319": {
+          "display": 0,
+          "native": 0
+        },
+        "320": {
+          "display": 0,
+          "native": 0
+        },
+        "321": {
+          "display": 0,
+          "native": 0
+        },
+        "333": {
+          "display": 0,
+          "native": 0
+        }
+      }
+    },
+    {
+      "entityId": 10200,
+      "code": 310000001,
+      "changes": {
+        "11": {
+          "display": 0,
+          "native": 0
+        },
+        "12": {
+          "display": 0,
+          "native": 0
+        },
+        "13": {
+          "display": 0,
+          "native": 0
+        },
+        "14": {
+          "display": 0,
+          "native": 0
+        },
+        "15": {
+          "display": 0,
+          "native": 0
+        },
+        "16": {
+          "display": 0,
+          "native": 0
+        },
+        "17": {
+          "display": 0,
+          "native": 0
+        },
+        "18": {
+          "display": 0,
+          "native": 0
+        },
+        "19": {
+          "display": 0,
+          "native": 0
+        },
+        "20": {
+          "display": 0,
+          "native": 0
+        },
+        "21": {
+          "display": 0,
+          "native": 0
+        },
+        "22": {
+          "display": 0,
+          "native": 0
+        },
+        "23": {
+          "display": 0,
+          "native": 0
+        },
+        "24": {
+          "display": 0,
+          "native": 0
+        },
+        "29": {
+          "display": 0,
+          "native": 0
+        },
+        "30": {
+          "display": 0,
+          "native": 0
+        },
+        "33": {
+          "display": 0,
+          "native": 0
+        },
+        "34": {
+          "display": 0,
+          "native": 0
+        },
+        "92": {
+          "display": 0,
+          "native": 0
+        },
+        "93": {
+          "display": 0,
+          "native": 0
+        },
+        "94": {
+          "display": 0,
+          "native": 0
+        },
+        "301": {
+          "display": 0,
+          "native": 0
+        },
+        "302": {
+          "display": 0,
+          "native": 0
+        },
+        "303": {
+          "display": 0,
+          "native": 0
+        },
+        "304": {
+          "display": 0,
+          "native": 0
+        },
+        "311": {
+          "display": 0,
+          "native": 0
+        },
+        "312": {
+          "display": 0,
+          "native": 0
+        },
+        "313": {
+          "display": 0,
+          "native": 0
+        },
+        "314": {
+          "display": 0,
+          "native": 0
+        },
+        "315": {
+          "display": 0,
+          "native": 0
+        },
+        "316": {
+          "display": 0,
+          "native": 0
+        },
+        "317": {
+          "display": 0,
+          "native": 0
+        },
+        "318": {
+          "display": 0,
+          "native": 0
+        },
+        "319": {
+          "display": 0,
+          "native": 0
+        },
+        "320": {
+          "display": 0,
+          "native": 0
+        },
+        "321": {
+          "display": 0,
+          "native": 0
+        },
+        "333": {
+          "display": 0,
+          "native": 0
+        }
+      }
+    }
+  ],
+  "samples": [
+    {
+      "at": 3002.199999999255,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 21,
+      "nativeFrame": 0,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3013.5,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 21,
+      "nativeFrame": 0,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_06",
+        "effect_3/effect_3_15",
+        "effect_2/effect_2_06",
+        "effect_3/effect_3_15",
+        "effect_1/effect_1_06"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3013.800000000745,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 21,
+      "nativeFrame": 0,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3021.89999999851,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 21,
+      "nativeFrame": 0,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3029.5,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 22,
+      "nativeFrame": 1,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_06",
+        "effect_3/effect_3_15",
+        "effect_2/effect_2_06",
+        "effect_3/effect_3_15",
+        "effect_1/effect_1_06"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3031.89999999851,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 22,
+      "nativeFrame": 1,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3042.5,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 22,
+      "nativeFrame": 1,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3046.300000000745,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 23,
+      "nativeFrame": 2,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_06",
+        "effect_3/effect_3_15",
+        "effect_2/effect_2_06",
+        "effect_3/effect_3_15",
+        "effect_1/effect_1_06"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3051.60000000149,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 23,
+      "nativeFrame": 2,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3063,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 23,
+      "nativeFrame": 2,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_07",
+        "effect_3/effect_3_16",
+        "effect_2/effect_2_07",
+        "effect_3/effect_3_16",
+        "effect_1/effect_1_07"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3063.300000000745,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 23,
+      "nativeFrame": 2,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3073,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 23,
+      "nativeFrame": 2,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3079.199999999255,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 24,
+      "nativeFrame": 3,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_07",
+        "effect_3/effect_3_16",
+        "effect_2/effect_2_07",
+        "effect_3/effect_3_16",
+        "effect_1/effect_1_07"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3082.10000000149,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 24,
+      "nativeFrame": 3,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3092.10000000149,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 24,
+      "nativeFrame": 3,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3095.800000000745,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 25,
+      "nativeFrame": 4,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_07",
+        "effect_3/effect_3_16",
+        "effect_2/effect_2_07",
+        "effect_3/effect_3_16",
+        "effect_1/effect_1_07"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3102.300000000745,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 25,
+      "nativeFrame": 4,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3112.60000000149,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 25,
+      "nativeFrame": 4,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_08",
+        "effect_3/effect_3_17",
+        "effect_2/effect_2_08",
+        "effect_3/effect_3_17",
+        "effect_1/effect_1_08"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3112.699999999255,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 25,
+      "nativeFrame": 4,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3121.89999999851,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 25,
+      "nativeFrame": 4,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3129.199999999255,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 26,
+      "nativeFrame": 5,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_08",
+        "effect_3/effect_3_17",
+        "effect_2/effect_2_08",
+        "effect_3/effect_3_17",
+        "effect_1/effect_1_08"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3131.89999999851,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 26,
+      "nativeFrame": 5,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3142,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 26,
+      "nativeFrame": 5,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3145.699999999255,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 27,
+      "nativeFrame": 6,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_08",
+        "effect_3/effect_3_17",
+        "effect_2/effect_2_08",
+        "effect_3/effect_3_17",
+        "effect_1/effect_1_08"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3152.699999999255,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 27,
+      "nativeFrame": 6,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3162.5,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 27,
+      "nativeFrame": 6,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_09",
+        "effect_3/effect_3_18",
+        "effect_2/effect_2_09",
+        "effect_3/effect_3_18",
+        "effect_1/effect_1_09"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3162.699999999255,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 27,
+      "nativeFrame": 6,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3171.89999999851,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 27,
+      "nativeFrame": 6,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3179,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 28,
+      "nativeFrame": 7,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_09",
+        "effect_3/effect_3_18",
+        "effect_2/effect_2_09",
+        "effect_3/effect_3_18",
+        "effect_1/effect_1_09"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3182.10000000149,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 28,
+      "nativeFrame": 7,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3192.10000000149,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 28,
+      "nativeFrame": 7,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3195.89999999851,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 29,
+      "nativeFrame": 8,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_09",
+        "effect_3/effect_3_18",
+        "effect_2/effect_2_09",
+        "effect_3/effect_3_18",
+        "effect_1/effect_1_09"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3202.10000000149,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 29,
+      "nativeFrame": 8,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3212.39999999851,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 29,
+      "nativeFrame": 8,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_10",
+        "effect_3/effect_3_19",
+        "effect_2/effect_2_10",
+        "effect_3/effect_3_19",
+        "effect_1/effect_1_10"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3212.5,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 29,
+      "nativeFrame": 8,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3221.800000000745,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 29,
+      "nativeFrame": 8,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3228.89999999851,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 30,
+      "nativeFrame": 9,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_10",
+        "effect_3/effect_3_19",
+        "effect_2/effect_2_10",
+        "effect_3/effect_3_19",
+        "effect_1/effect_1_10"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3231.800000000745,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 30,
+      "nativeFrame": 9,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3242.10000000149,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 30,
+      "nativeFrame": 9,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3245.800000000745,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 31,
+      "nativeFrame": 10,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_01",
+        "effect_3/effect_3_19",
+        "effect_2/effect_2_01",
+        "effect_3/effect_3_19",
+        "effect_1/effect_1_01"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3252.39999999851,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 31,
+      "nativeFrame": 10,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3262.300000000745,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 31,
+      "nativeFrame": 10,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_01",
+        "effect_3/effect_3_20",
+        "effect_2/effect_2_01",
+        "effect_3/effect_3_20",
+        "effect_1/effect_1_01"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3262.39999999851,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 31,
+      "nativeFrame": 10,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3273.199999999255,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 31,
+      "nativeFrame": 10,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3278.89999999851,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 32,
+      "nativeFrame": 11,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_01",
+        "effect_3/effect_3_20",
+        "effect_2/effect_2_01",
+        "effect_3/effect_3_20",
+        "effect_1/effect_1_01"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3282.10000000149,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 32,
+      "nativeFrame": 11,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3292.89999999851,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 32,
+      "nativeFrame": 11,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3295.800000000745,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 33,
+      "nativeFrame": 12,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_02",
+        "effect_3/effect_3_01",
+        "effect_2/effect_2_02",
+        "effect_3/effect_3_01",
+        "effect_1/effect_1_02"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3302,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 33,
+      "nativeFrame": 12,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3312.39999999851,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 33,
+      "nativeFrame": 12,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_02",
+        "effect_3/effect_3_01",
+        "effect_2/effect_2_02",
+        "effect_3/effect_3_01",
+        "effect_1/effect_1_02"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3312.5,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 33,
+      "nativeFrame": 12,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3322.199999999255,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 33,
+      "nativeFrame": 12,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3329.10000000149,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 34,
+      "nativeFrame": 13,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_02",
+        "effect_3/effect_3_01",
+        "effect_2/effect_2_02",
+        "effect_3/effect_3_01",
+        "effect_1/effect_1_02"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3332.800000000745,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 34,
+      "nativeFrame": 13,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3341.800000000745,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 34,
+      "nativeFrame": 13,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3345.699999999255,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 35,
+      "nativeFrame": 14,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_03",
+        "effect_3/effect_3_02",
+        "effect_2/effect_2_03",
+        "effect_3/effect_3_02",
+        "effect_1/effect_1_03"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3352,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 35,
+      "nativeFrame": 14,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3362.300000000745,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 35,
+      "nativeFrame": 14,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_03",
+        "effect_3/effect_3_02",
+        "effect_2/effect_2_03",
+        "effect_3/effect_3_02",
+        "effect_1/effect_1_03"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3362.5,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 35,
+      "nativeFrame": 14,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3372.10000000149,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 35,
+      "nativeFrame": 14,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3378.89999999851,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 36,
+      "nativeFrame": 15,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_03",
+        "effect_3/effect_3_02",
+        "effect_2/effect_2_03",
+        "effect_3/effect_3_02",
+        "effect_1/effect_1_03"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3382.5,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 36,
+      "nativeFrame": 15,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3392,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 36,
+      "nativeFrame": 15,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3396,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 37,
+      "nativeFrame": 16,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_04",
+        "effect_3/effect_3_03",
+        "effect_2/effect_2_04",
+        "effect_3/effect_3_03",
+        "effect_1/effect_1_04"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3402.10000000149,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 37,
+      "nativeFrame": 16,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3412.5,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 37,
+      "nativeFrame": 16,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_04",
+        "effect_3/effect_3_03",
+        "effect_2/effect_2_04",
+        "effect_3/effect_3_03",
+        "effect_1/effect_1_04"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3412.60000000149,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 37,
+      "nativeFrame": 16,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3421.699999999255,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 37,
+      "nativeFrame": 16,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3429,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 38,
+      "nativeFrame": 17,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_04",
+        "effect_3/effect_3_03",
+        "effect_2/effect_2_04",
+        "effect_3/effect_3_03",
+        "effect_1/effect_1_04"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3432.5,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 38,
+      "nativeFrame": 17,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3442,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 38,
+      "nativeFrame": 17,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3446.699999999255,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 39,
+      "nativeFrame": 18,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_05",
+        "effect_3/effect_3_04",
+        "effect_2/effect_2_05",
+        "effect_3/effect_3_04",
+        "effect_1/effect_1_05"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3451.60000000149,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 39,
+      "nativeFrame": 18,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3462.60000000149,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 39,
+      "nativeFrame": 18,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_05",
+        "effect_3/effect_3_04",
+        "effect_2/effect_2_05",
+        "effect_3/effect_3_04",
+        "effect_1/effect_1_05"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3462.800000000745,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 39,
+      "nativeFrame": 18,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3472.199999999255,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 39,
+      "nativeFrame": 18,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3479.10000000149,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 40,
+      "nativeFrame": 19,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_06",
+        "effect_3/effect_3_05",
+        "effect_2/effect_2_06",
+        "effect_3/effect_3_05",
+        "effect_1/effect_1_06"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3481.89999999851,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 40,
+      "nativeFrame": 19,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3492,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 40,
+      "nativeFrame": 19,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3495.800000000745,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 41,
+      "nativeFrame": 20,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_06",
+        "effect_3/effect_3_05",
+        "effect_2/effect_2_06",
+        "effect_3/effect_3_05",
+        "effect_1/effect_1_06"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3502.89999999851,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 41,
+      "nativeFrame": 20,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3512.39999999851,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 41,
+      "nativeFrame": 20,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_06",
+        "effect_3/effect_3_05",
+        "effect_2/effect_2_06",
+        "effect_3/effect_3_05",
+        "effect_1/effect_1_06"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3512.39999999851,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 41,
+      "nativeFrame": 20,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3522.10000000149,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 41,
+      "nativeFrame": 20,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3528.89999999851,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 42,
+      "nativeFrame": 21,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_07",
+        "effect_3/effect_3_06",
+        "effect_2/effect_2_07",
+        "effect_3/effect_3_06",
+        "effect_1/effect_1_07"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3531.699999999255,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 42,
+      "nativeFrame": 21,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3541.89999999851,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 42,
+      "nativeFrame": 21,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3545.60000000149,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 43,
+      "nativeFrame": 22,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_07",
+        "effect_3/effect_3_06",
+        "effect_2/effect_2_07",
+        "effect_3/effect_3_06",
+        "effect_1/effect_1_07"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3552.199999999255,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 43,
+      "nativeFrame": 22,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3562.39999999851,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 43,
+      "nativeFrame": 22,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_07",
+        "effect_3/effect_3_06",
+        "effect_2/effect_2_07",
+        "effect_3/effect_3_06",
+        "effect_1/effect_1_07"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3562.60000000149,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 43,
+      "nativeFrame": 22,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3572.10000000149,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 43,
+      "nativeFrame": 22,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3579.10000000149,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 44,
+      "nativeFrame": 23,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_08",
+        "effect_3/effect_3_07",
+        "effect_2/effect_2_08",
+        "effect_3/effect_3_07",
+        "effect_1/effect_1_08"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3582.199999999255,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 44,
+      "nativeFrame": 23,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3591.89999999851,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 44,
+      "nativeFrame": 23,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3598.699999999255,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 45,
+      "nativeFrame": 24,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_08",
+        "effect_3/effect_3_07",
+        "effect_2/effect_2_08",
+        "effect_3/effect_3_07",
+        "effect_1/effect_1_08"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3601.89999999851,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 45,
+      "nativeFrame": 24,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3617.10000000149,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 45,
+      "nativeFrame": 24,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_08",
+        "effect_3/effect_3_07",
+        "effect_2/effect_2_08",
+        "effect_3/effect_3_07",
+        "effect_1/effect_1_08"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3617.5,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 45,
+      "nativeFrame": 24,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3622.5,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 45,
+      "nativeFrame": 24,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3629.199999999255,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 46,
+      "nativeFrame": 25,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_09",
+        "effect_3/effect_3_08",
+        "effect_2/effect_2_09",
+        "effect_3/effect_3_08",
+        "effect_1/effect_1_09"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3632,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 46,
+      "nativeFrame": 25,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3642,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 46,
+      "nativeFrame": 25,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3646.5,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 47,
+      "nativeFrame": 26,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_09",
+        "effect_3/effect_3_08",
+        "effect_2/effect_2_09",
+        "effect_3/effect_3_08",
+        "effect_1/effect_1_09"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3652.199999999255,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 47,
+      "nativeFrame": 26,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3662.5,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 48,
+      "nativeFrame": 27,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_09",
+        "effect_3/effect_3_08",
+        "effect_2/effect_2_09",
+        "effect_3/effect_3_08",
+        "effect_1/effect_1_09"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3662.60000000149,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 48,
+      "nativeFrame": 27,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3671.800000000745,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 48,
+      "nativeFrame": 27,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3679.300000000745,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 48,
+      "nativeFrame": 27,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_10",
+        "effect_3/effect_3_09",
+        "effect_2/effect_2_10",
+        "effect_3/effect_3_09",
+        "effect_1/effect_1_10"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3681.89999999851,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 48,
+      "nativeFrame": 27,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3692.10000000149,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 48,
+      "nativeFrame": 27,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3696.699999999255,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 49,
+      "nativeFrame": 28,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_10",
+        "effect_3/effect_3_09",
+        "effect_2/effect_2_10",
+        "effect_3/effect_3_09",
+        "effect_1/effect_1_10"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3702.5,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 49,
+      "nativeFrame": 28,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3712.89999999851,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 50,
+      "nativeFrame": 29,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_01",
+        "effect_3/effect_3_09",
+        "effect_2/effect_2_01",
+        "effect_3/effect_3_09",
+        "effect_1/effect_1_01"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3713.10000000149,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 50,
+      "nativeFrame": 29,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3721.89999999851,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 50,
+      "nativeFrame": 29,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3729.199999999255,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 50,
+      "nativeFrame": 29,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_01",
+        "effect_3/effect_3_10",
+        "effect_2/effect_2_01",
+        "effect_3/effect_3_10",
+        "effect_1/effect_1_01"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3732,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 50,
+      "nativeFrame": 29,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3742.199999999255,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 50,
+      "nativeFrame": 29,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3746.300000000745,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 51,
+      "nativeFrame": 30,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_01",
+        "effect_3/effect_3_10",
+        "effect_2/effect_2_01",
+        "effect_3/effect_3_10",
+        "effect_1/effect_1_01"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3752.60000000149,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 51,
+      "nativeFrame": 30,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3761.800000000745,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 51,
+      "nativeFrame": 30,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3762.5,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 52,
+      "nativeFrame": 31,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_02",
+        "effect_3/effect_3_10",
+        "effect_2/effect_2_02",
+        "effect_3/effect_3_10",
+        "effect_1/effect_1_02"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3771.89999999851,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 52,
+      "nativeFrame": 31,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3779.60000000149,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 52,
+      "nativeFrame": 31,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_02",
+        "effect_3/effect_3_11",
+        "effect_2/effect_2_02",
+        "effect_3/effect_3_11",
+        "effect_1/effect_1_02"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3782,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 52,
+      "nativeFrame": 31,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3792.39999999851,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 52,
+      "nativeFrame": 31,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3796,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 53,
+      "nativeFrame": 32,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_02",
+        "effect_3/effect_3_11",
+        "effect_2/effect_2_02",
+        "effect_3/effect_3_11",
+        "effect_1/effect_1_02"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3802.199999999255,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 53,
+      "nativeFrame": 32,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3812.5,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 54,
+      "nativeFrame": 33,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_03",
+        "effect_3/effect_3_11",
+        "effect_2/effect_2_03",
+        "effect_3/effect_3_11",
+        "effect_1/effect_1_03"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3812.699999999255,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 54,
+      "nativeFrame": 33,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3822.10000000149,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 54,
+      "nativeFrame": 33,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3830.699999999255,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 54,
+      "nativeFrame": 33,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_03",
+        "effect_3/effect_3_12",
+        "effect_2/effect_2_03",
+        "effect_3/effect_3_12",
+        "effect_1/effect_1_03"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3832.5,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 54,
+      "nativeFrame": 33,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3843,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 54,
+      "nativeFrame": 33,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3846.300000000745,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 55,
+      "nativeFrame": 34,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_03",
+        "effect_3/effect_3_12",
+        "effect_2/effect_2_03",
+        "effect_3/effect_3_12",
+        "effect_1/effect_1_03"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3852.5,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 55,
+      "nativeFrame": 34,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3862.300000000745,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 56,
+      "nativeFrame": 35,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "fxTextures": [
+        "effect_1/effect_1_04",
+        "effect_3/effect_3_12",
+        "effect_2/effect_2_04",
+        "effect_3/effect_3_12",
+        "effect_1/effect_1_04"
+      ],
+      "onStage": true
+    },
+    {
+      "at": 3862.5,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 56,
+      "nativeFrame": 35,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    },
+    {
+      "at": 3872.10000000149,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "frame": 56,
+      "nativeFrame": 35,
+      "visible": true,
+      "nativeVisible": true,
+      "nativeFXOnly": true,
+      "ready": true,
+      "onStage": true
+    }
+  ],
+  "nativeTriggers": [
+    {
+      "at": 1288.5,
+      "model": "hero_skin_002_01_ez",
+      "action": "daiji"
+    },
+    {
+      "at": 1288.5,
+      "model": "hero_skin_002_01_ez",
+      "action": "daiji"
+    },
+    {
+      "at": 1288.5,
+      "model": "hero_skin_002_01_ez",
+      "action": "daiji"
+    },
+    {
+      "at": 1288.6000000014901,
+      "model": "hero_skin_002_01_ez",
+      "action": "daiji"
+    },
+    {
+      "at": 1288.6000000014901,
+      "model": "hero_skin_002_01_ez",
+      "action": "daiji"
+    },
+    {
+      "at": 1371.3999999985099,
+      "model": "hero_skin_002_01_ez",
+      "action": "daiji"
+    },
+    {
+      "at": 1375.199999999255,
+      "model": "hero_skin_002_01_ez",
+      "action": "daiji"
+    },
+    {
+      "at": 2997,
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji"
+    },
+    {
+      "at": 3878.699999999255,
+      "model": "hero_skin_002_01_ez",
+      "action": "daiji"
+    }
+  ],
+  "body": {
+    "installed": true,
+    "framesPresented": 36,
+    "actions": {
+      "gongji": 36
+    },
+    "atlasRequests": 2,
+    "suppressedViewsDetached": 0,
+    "errors": [],
+    "caches": [
+      {
+        "id": "3",
+        "users": 1,
+        "ready": true
+      },
+      {
+        "id": "100201",
+        "users": 1,
+        "ready": true
+      }
+    ],
+    "active": [
+      {
+        "model": "hero_skin_002_01_ez",
+        "action": "daiji",
+        "frame": 56,
+        "nativeFrame": 35,
+        "visible": false,
+        "nativeVisible": true,
+        "nativeFXOnly": true,
+        "ready": true,
+        "onStage": true
+      },
+      {
+        "model": "hero_003_01_ez",
+        "action": "daiji",
+        "frame": -1,
+        "visible": false,
+        "nativeVisible": false,
+        "nativeFXOnly": false,
+        "ready": true,
+        "onStage": true
+      }
+    ]
+  },
+  "nativeEvents": [
+    {
+      "at": 3445.39999999851,
+      "name": "zd",
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "nativeFrame": 18
+    }
+  ],
+  "modelInitializations": [
+    {
+      "at": 1287.800000000745,
+      "model": "hero_skin_002_01_ez",
+      "armature": "hero_skin_002_01"
+    },
+    {
+      "at": 1289.8999999985099,
+      "model": "hero_003_01_ez",
+      "armature": "hero_003_01"
+    },
+    {
+      "at": 1697.8999999985099,
+      "model": "common_zhandoukaishi"
+    },
+    {
+      "at": 3445.89999999851,
+      "model": "common_newskill_simayi_02_qiu_ez",
+      "armature": "common_newskill_simayi_02_qiu"
+    },
+    {
+      "at": 3596.89999999851,
+      "model": "common_newskill_simayi_02_ez",
+      "armature": "common_newskill_simayi_02"
+    },
+    {
+      "at": 3897.89999999851,
+      "model": "common_tqt_02",
+      "armature": "common_tqt_02"
+    },
+    {
+      "at": 3936.699999999255,
+      "model": "common_wangyuanji_01_ez",
+      "armature": "common_wangyuanji_01"
+    },
+    {
+      "at": 3937.10000000149,
+      "model": "common_wangyuanji_03_ez",
+      "armature": "common_wangyuanji_03"
+    },
+    {
+      "at": 3937.300000000745,
+      "model": "common_wangyuanji_04_ez",
+      "armature": "common_wangyuanji_04"
+    },
+    {
+      "at": 3937.5,
+      "model": "common_wangyuanji_05_ez",
+      "armature": "common_wangyuanji_05"
+    },
+    {
+      "at": 4145.89999999851,
+      "model": "common_wangyuanji_02_ez",
+      "armature": "common_wangyuanji_02"
+    }
+  ],
+  "requests": [
+    "http://127.0.0.1:8794/offline-skill-references.js?v=20261029-30",
+    "http://127.0.0.1:8794/street-effects-data.js?v=20261029-37",
+    "http://127.0.0.1:8794/street-effects.js?v=0.86.0-37",
+    "http://127.0.0.1:8794/resource/assets/ui_effect/common_dianji_7c8d5845.bin",
+    "http://127.0.0.1:8794/resource/config/g_skill_96a92798.json",
+    "http://127.0.0.1:8794/offline-skill-references.js?v=20261029-30",
+    "http://127.0.0.1:8794/street-effects-data.js?v=20261029-37",
+    "http://127.0.0.1:8794/street-effects.js?v=0.86.0-37",
+    "http://127.0.0.1:8794/resource/assets/ui_effect/common_dianji_7c8d5845.bin",
+    "http://127.0.0.1:8794/resource/config/g_skill_96a92798.json",
+    "http://127.0.0.1:8794/assets/street/skins/100201/native-fx/hero_skin_002_01_ez-effect_3-ec7245dcb0d40380.bin?v=ec7245dcb0d40380",
+    "http://127.0.0.1:8794/resource/assets/model/hero_003_01_ez_2a8f8dab.bin",
+    "http://127.0.0.1:8794/resource/assets/ui_effect/common_zhandoukaishi_6bb5fbfd.bin",
+    "http://127.0.0.1:8794/resource/assets/effect/common_newskill_simayi_02_qiu_ez_29d6b530.bin",
+    "http://127.0.0.1:8794/resource/assets/effect/common_newskill_simayi_02_ez_5e420eaf.bin",
+    "http://127.0.0.1:8794/resource/assets/model/common_tqt_02_24fd5cc4.bin",
+    "http://127.0.0.1:8794/resource/assets/ui_effect/common_wangyuanji_01_ez_7bfa054b.bin",
+    "http://127.0.0.1:8794/resource/assets/ui_effect/common_wangyuanji_03_ez_17934f82.bin",
+    "http://127.0.0.1:8794/resource/assets/ui_effect/common_wangyuanji_04_ez_6d29b169.bin",
+    "http://127.0.0.1:8794/resource/assets/ui_effect/common_wangyuanji_05_ez_ff1887d2.bin",
+    "http://127.0.0.1:8794/resource/assets/ui_effect/common_wangyuanji_02_ez_b21a25c8.bin"
+  ],
+  "action": "gongji",
+  "visibleHurtFxTextures": [
+    "effect_1/effect_1_06",
+    "effect_3/effect_3_15",
+    "effect_2/effect_2_06",
+    "effect_1/effect_1_07",
+    "effect_3/effect_3_16",
+    "effect_2/effect_2_07",
+    "effect_1/effect_1_08",
+    "effect_3/effect_3_17",
+    "effect_2/effect_2_08",
+    "effect_1/effect_1_09",
+    "effect_3/effect_3_18",
+    "effect_2/effect_2_09",
+    "effect_1/effect_1_10",
+    "effect_3/effect_3_19",
+    "effect_2/effect_2_10",
+    "effect_1/effect_1_01",
+    "effect_2/effect_2_01",
+    "effect_3/effect_3_20",
+    "effect_1/effect_1_02",
+    "effect_3/effect_3_01",
+    "effect_2/effect_2_02",
+    "effect_1/effect_1_03",
+    "effect_3/effect_3_02",
+    "effect_2/effect_2_03",
+    "effect_1/effect_1_04",
+    "effect_3/effect_3_03",
+    "effect_2/effect_2_04",
+    "effect_1/effect_1_05",
+    "effect_3/effect_3_04",
+    "effect_2/effect_2_05",
+    "effect_3/effect_3_05",
+    "effect_3/effect_3_06",
+    "effect_3/effect_3_07",
+    "effect_3/effect_3_08",
+    "effect_3/effect_3_09",
+    "effect_3/effect_3_10",
+    "effect_3/effect_3_11",
+    "effect_3/effect_3_12"
+  ],
+  "errors": [],
+  "failures": [],
+  "isolatedSaveRestored": true,
+  "mainSaveUnchanged": true
+}
