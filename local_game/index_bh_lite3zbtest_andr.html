@@ -57,7 +57,7 @@
 <script src="character-reskin-data.js?v=0.58.0"></script>
 <script src="character-art-data.js?v=0.68.0"></script>
 <script src="character-art.js?v=0.38.0"></script>
-<script src="street-art-data.js?v=0.78.0"></script>
+<script src="street-art-data.js?v=0.79.0"></script>
 <script src="street-art.js?v=0.71.0"></script>
 <script src="street-effects-data.js?v=20261029-37"></script>
 <script src="street-effects.js?v=20261029-37"></script>
@@ -1045,7 +1045,6 @@
                     }
                     function installOfflineCardAspect(DermaItemRenderer) {
                         if (!DermaItemRenderer || DermaItemRenderer.prototype._offlineCardAspectPatched) return;
-                        var originalDermaItemDataChanged = DermaItemRenderer.prototype.dataChanged;
                         DermaItemRenderer.prototype.dataChanged = function () {
                             var image = this.img_dermaType;
                             if (!image._offlineCardAspectListener) {
@@ -1060,9 +1059,31 @@
                                 };
                                 image.addEventListener(egret.Event.COMPLETE, image._offlineCardAspectListener, image);
                             }
-                            var result = originalDermaItemDataChanged.apply(this, arguments);
+                            var row = this.data || {};
+                            var isLast = !!row.isLast;
+                            this.img_choose.visible = !isLast && !!row.choose;
+                            this.img_isLock.visible = !isLast && !!row.isLock;
+                            this.lb_name.text = isLast ? "" : row.name || "";
+                            image.source = isLast ? "pf_img_jingqingqidai_png" :
+                                row.dermaPic ? row.dermaPic + "_png" : "pf_img_hspz03_png";
+                            if (!this._offlineSkinChooseListener) {
+                                this._offlineSkinChooseListener = function () {
+                                    var current = this.data;
+                                    if (!current || current.isLast || current.choose) return;
+                                    if (current.updateShowCb) current.updateShowCb();
+                                    if (current.updateChooseCb) current.updateChooseCb(current.index);
+                                };
+                                this.gp_root.touchEnabled = true;
+                                this.gp_root.addEventListener(egret.TouchEvent.TOUCH_TAP, this._offlineSkinChooseListener, this);
+                            }
+                            image.touchEnabled = !isLast;
+                            if (isLast) {
+                                image.source = "pf_img_jingqingqidai_png";
+                                this.lb_name.text = "";
+                                this.img_choose.visible = false;
+                                this.img_isLock.visible = false;
+                            }
                             image._offlineCardAspectListener();
-                            return result;
                         };
                         DermaItemRenderer.prototype._offlineCardAspectPatched = true;
                     }

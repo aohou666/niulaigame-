@@ -1,0 +1,60 @@
+{
+  "pass": true,
+  "scope": "One actual native renderer recycled normal/last/normal, real browser clicks, fixture callbacks only; no equip transaction",
+  "states": [
+    {
+      "source": "street_skin100201_wujiang_img_pifukasmy_png",
+      "texture": [
+        135,
+        82
+      ],
+      "touchEnabled": true,
+      "name": "盛装小丑",
+      "worn": true,
+      "choose": false,
+      "calls": 0,
+      "click": {
+        "x": 201.66666666666666,
+        "y": 316.85925925925926
+      },
+      "callsAfter": 1,
+      "phase": "normal"
+    },
+    {
+      "source": "pf_img_jingqingqidai_png",
+      "texture": [
+        159,
+        246
+      ],
+      "touchEnabled": false,
+      "name": "",
+      "worn": false,
+      "choose": false,
+      "calls": 1,
+      "click": {
+        "x": 201.66666666666666,
+        "y": 316.6666666666667
+      },
+      "callsAfter": 1,
+      "phase": "last"
+    },
+    {
+      "source": "street_skin100201_wujiang_img_pifukasmy_png",
+      "texture": [
+        135,
+        82
+      ],
+      "touchEnabled": true,
+      "name": "盛装小丑",
+      "worn": true,
+      "choose": false,
+      "calls": 1,
+      "click": {
+        "x": 201.66666666666666,
+        "y": 316.85925925925926
+      },
+      "callsAfter": 2,
+      "phase": "normal"
+    }
+  ]
+}
