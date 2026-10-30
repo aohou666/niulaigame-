@@ -42,6 +42,20 @@ def main():
  baseRuntimePath=OUT/'versions'/a.version/'base-heroes-runtime.json'
  report['baseHeroDetailRuntime']=json.loads(baseRuntimePath.read_text('utf8')) if baseRuntimePath.exists() else None
  report['promotedStreetArtVerification']=verify_street_art()
+ containerBindings=loadjs(GAME/'street-art-data.js').get('containers',[])
+ report['nativePackedRegionBindings']={'containers':[{'originalKey':r['originalKey'],'skinCode':r.get('skinCode'),'regions':r['changedRegions'],'completeContainerReplaced':False,'nativeAnimation':r.get('nativeAnimationReplacement'),'runtimeAudit':r.get('nativeRuntimeAuditPath')} for r in containerBindings],'note':'Only declared texture regions replaced; unchanged body/effect regions are still original. Ordinary/EZ are two versions of the same skin, not two independent skins.'}
+ verifiedContainerKeys={r['originalKey'] for r in report['promotedStreetArtVerification'].get('nativePackedRegions',[])}
+ confirmedRegions=0;confirmedAnimations=0;logicalEffects=set()
+ for binding in containerBindings:
+  if binding['originalKey'] not in verifiedContainerKeys:continue
+  row=next((r for r in packed_rows if r['path']==binding['originalPath']),None)
+  if not row or row['status']=='complete':continue
+  confirmedRegions+=len({r['name'] for r in row['regions']} & set(binding['changedRegions']))
+  name=binding.get('nativeAnimationReplacement')
+  if name:
+   confirmedAnimations+=sum(1 for arm in row['armatures'] if arm['name']==name for anim in arm['animations'] if anim['name']==name and name not in row.get('verifiedAnimationReplacements',[]));logicalEffects.add((binding.get('skinCode'),name))
+ report['packedRegionsNotYetReplaced']=pending_regions-confirmedRegions;report['animationsNotYetReplaced']=pending_animations-confirmedAnimations
+ report['nativePackedRegionBindings'].update(verifiedPhysicalRegions=confirmedRegions,verifiedPhysicalAnimations=confirmedAnimations,logicalSkinEffects=[{'skinCode':skin,'effect':effect} for skin,effect in sorted(logicalEffects)])
  body=loadjs(GAME/'street-body-data.js')['characters'];targets=[c for c in body if c['id']!=13]
  report['attackSkillContinuousMotionQuality']={'installedTargetMappings':len(targets),'approvedContinuousTargetMappings':sum(c.get('temporalQuality')=='approved-continuous' for c in targets),'quarantinedTargetMappings':sum(bool(c.get('qualityQuarantineActions')) for c in targets),'all85TargetsComplete':False,'note':'Installed images/native frame timing are separate from complete continuous-animation approval; unreviewed clips do not count as complete.'}
  skinStatic={}

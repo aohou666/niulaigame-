@@ -1,0 +1,184 @@
+{
+  "skinCode": 100201,
+  "effect": "effect_1",
+  "nativeFrames": 19,
+  "nativeFps": 30,
+  "sourceTextures": 10,
+  "sourceSha256": "b545cee4ea6a824003f2460b278d9a637ee6c743029981492231242135b76304",
+  "tiles": [
+    {
+      "name": "effect_1/effect_1_01",
+      "sourceCell": [
+        0,
+        0,
+        397,
+        396
+      ],
+      "alphaBounds": [
+        67,
+        174,
+        321,
+        340
+      ],
+      "path": "art-migration/generation/skin100201-effect1-official-slots-v1/effect_1_01.png",
+      "sha256": "99cba71eca17c47fc9d138d346013b464500466f14a292ef9ce4d5f8e75bec45"
+    },
+    {
+      "name": "effect_1/effect_1_02",
+      "sourceCell": [
+        397,
+        0,
+        793,
+        396
+      ],
+      "alphaBounds": [
+        70,
+        128,
+        340,
+        341
+      ],
+      "path": "art-migration/generation/skin100201-effect1-official-slots-v1/effect_1_02.png",
+      "sha256": "0f8fe8968929fc97735b89d06e156978911e809316d6ad538d06540e7eb92c8b"
+    },
+    {
+      "name": "effect_1/effect_1_03",
+      "sourceCell": [
+        793,
+        0,
+        1190,
+        396
+      ],
+      "alphaBounds": [
+        55,
+        100,
+        339,
+        341
+      ],
+      "path": "art-migration/generation/skin100201-effect1-official-slots-v1/effect_1_03.png",
+      "sha256": "b740111801c9b59eee5496ed03f31b0081658e4b1d8239bfe65174a828ba6e85"
+    },
+    {
+      "name": "effect_1/effect_1_04",
+      "sourceCell": [
+        1190,
+        0,
+        1586,
+        396
+      ],
+      "alphaBounds": [
+        38,
+        89,
+        357,
+        341
+      ],
+      "path": "art-migration/generation/skin100201-effect1-official-slots-v1/effect_1_04.png",
+      "sha256": "36d3c91506c58d75335b70260b4e61323ad6c94001cbfc9f5e20cae0b41c7ee8"
+    },
+    {
+      "name": "effect_1/effect_1_05",
+      "sourceCell": [
+        1586,
+        0,
+        1983,
+        396
+      ],
+      "alphaBounds": [
+        46,
+        107,
+        360,
+        341
+      ],
+      "path": "art-migration/generation/skin100201-effect1-official-slots-v1/effect_1_05.png",
+      "sha256": "845af29082d6aa0074d5586407effdac828df80f087d6317d6adcf88458d0148"
+    },
+    {
+      "name": "effect_1/effect_1_06",
+      "sourceCell": [
+        0,
+        396,
+        397,
+        793
+      ],
+      "alphaBounds": [
+        39,
+        74,
+        359,
+        317
+      ],
+      "path": "art-migration/generation/skin100201-effect1-official-slots-v1/effect_1_06.png",
+      "sha256": "37a88b6c4520ae7d11edd1d361118ac36929db7462c81e1f4fdb6d9ab3e529f3"
+    },
+    {
+      "name": "effect_1/effect_1_07",
+      "sourceCell": [
+        397,
+        396,
+        793,
+        793
+      ],
+      "alphaBounds": [
+        42,
+        96,
+        367,
+        317
+      ],
+      "path": "art-migration/generation/skin100201-effect1-official-slots-v1/effect_1_07.png",
+      "sha256": "e4e653a55e4f7573648b6a05fea4c05b4202e4cc3e3f81905fec215febfe9c66"
+    },
+    {
+      "name": "effect_1/effect_1_08",
+      "sourceCell": [
+        793,
+        396,
+        1190,
+        793
+      ],
+      "alphaBounds": [
+        59,
+        99,
+        373,
+        316
+      ],
+      "path": "art-migration/generation/skin100201-effect1-official-slots-v1/effect_1_08.png",
+      "sha256": "c974cc94e934e50b9db32fd7d0092dde332e0133846a8f5df0ccc0f28a7001d7"
+    },
+    {
+      "name": "effect_1/effect_1_09",
+      "sourceCell": [
+        1190,
+        396,
+        1586,
+        793
+      ],
+      "alphaBounds": [
+        48,
+        134,
+        351,
+        317
+      ],
+      "path": "art-migration/generation/skin100201-effect1-official-slots-v1/effect_1_09.png",
+      "sha256": "db2d5858116c557314ce9aa3525cd13f1dfadde4d037962c303be36718d205a2"
+    },
+    {
+      "name": "effect_1/effect_1_10",
+      "sourceCell": [
+        1586,
+        396,
+        1983,
+        793
+      ],
+      "alphaBounds": [
+        69,
+        169,
+        329,
+        318
+      ],
+      "path": "art-migration/generation/skin100201-effect1-official-slots-v1/effect_1_10.png",
+      "sha256": "8af99bff927636532cfc494ebd56bafbfaca0a8c5f918f9e2e1e5ff4cc9338f2"
+    }
+  ],
+  "manualReview": "approved-texture-sequence-for-native-trial",
+  "runtimeIntegrated": false,
+  "provenance": "Official independently drawn ten-texture sequence, native ten-pose composition and local MiniMax material reference. MiniMax full clip rejected, not reused as an approved animation.",
+  "manualNotes": "All ten independently drawn textures inspected on light/dark backgrounds. Ivory/copper open fan progression, two teal glints, transparent margins, no source overlap/cropping. Source sequence only; native19-frame loop and actual child effect playback still require trials."
+}

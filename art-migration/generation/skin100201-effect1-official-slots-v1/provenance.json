@@ -1,0 +1,25 @@
+{
+  "skinCode": 100201,
+  "effect": "effect_1",
+  "provider": "official-imagegen",
+  "sourceSha256": "b545cee4ea6a824003f2460b278d9a637ee6c743029981492231242135b76304",
+  "qaSha256": "ca2eb26e291497567d6c955b70cbadd103e1f76ff1d19c4233278f37fcd18bb2",
+  "referenceInputs": [
+    {
+      "path": "art-migration/generation/skin100201-effect1-official-slots-v1/native-ten-texture-guide.png",
+      "sha256": "9b904d8ca0583bee24b0e597a3ff6468b4c032a29f512c84af5c359bcc117702",
+      "scope": "Ten actual original texture compositions; native complete19-frame animation schedule retained separately"
+    },
+    {
+      "path": "art-migration/generation/skin100201-effect1-official-slots-v1/minimax-material-reference.png",
+      "sha256": "6c2d00927cc4c9b8469fd89fc26f4ed89d84141389bffe082342b24d2dd517e9",
+      "provider": "local-minimax-h3-ref2va",
+      "scope": "Static ivory/copper material reference only. Full motion clip rejected and never promoted."
+    }
+  ],
+  "technicalAdaptation": "Split5x2 tiles, preserve generated alpha except<9 export noise. Fit into each original native alpha footprint without palette filtering, preserve skeleton/atlas bytes and all unrelated pixel regions.",
+  "sourceTextures": 10,
+  "nativeFrames": 19,
+  "ordinaryAndEzAreSameSkin": true,
+  "completeSkin": false
+}

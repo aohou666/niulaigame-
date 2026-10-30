@@ -42,7 +42,7 @@ def verify(tree=None):
   if path not in entries or not file.is_file():missing.append(path);continue
   value=file.read_bytes();blob=hashlib.sha1(b'blob '+str(len(value)).encode()+b'\0'+value).hexdigest()
   # Text assets may be normalized to LF by Git; binary images must match byte-for-byte.
-  if blob!=entries[path] and file.suffix.lower() in ['.webp','.png','.jpg','.jpeg']:different.append(path)
+  if blob!=entries[path] and file.suffix.lower() in ['.webp','.png','.jpg','.jpeg','.bin','.dbbin']:different.append(path)
  return {'pass':not missing and not different,'scope':'Enabled generated assets, all85 portrait/idle mappings, and static HTML dependencies; original resource package remains a separate release dependency.','tree':tree or 'index','checked':len(paths),'missing':missing,'binaryContentDiffers':different}
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('--tree');p.add_argument('--report');a=p.parse_args();r=verify(a.tree)

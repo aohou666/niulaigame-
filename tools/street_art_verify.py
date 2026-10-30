@@ -6,12 +6,18 @@ ROOT=Path(__file__).resolve().parents[1];GAME=ROOT/'local_game'
 def loadjs(p):return json.loads(p.read_text('utf8').split('=',1)[1].strip().rstrip(';'))
 def verify():
  errors=[];images=0;frames=0;characters=[]
- for r in loadjs(GAME/'street-art-data.js')['resources']:
+ artData=loadjs(GAME/'street-art-data.js');packedRegions=[]
+ for r in artData['resources']:
   try:
    p=GAME/r['targetPath'];assert hashlib.sha256(p.read_bytes()).hexdigest()==r['targetSha256'],'digest mismatch'
    with Image.open(p) as im:assert list(im.size)==list(r['size']),'dimensions mismatch';assert im.getbbox() is not None,'empty image'
    images+=1
   except Exception as e:errors.append({'resource':r['originalKey'],'error':str(e)})
+ for r in artData.get('containers',[]):
+  try:
+   from street_packed_fx import verify_container
+   packedRegions.append(verify_container(r))
+  except Exception as e:errors.append({'container':r['originalKey'],'error':str(e)})
  body=loadjs(GAME/'street-body-data.js') if (GAME/'street-body-data.js').exists() else {'characters':[]}
  auditPath=ROOT/'art-migration/native-action-events.json';nativeAudit=json.loads(auditPath.read_text('utf8')) if auditPath.exists() else None;nativeRows={(r['model'],r['action']):r for r in nativeAudit['records']} if nativeAudit else {};nativeChecks=0
  skinBodies=body.get('skins',{})
@@ -95,6 +101,6 @@ def verify():
      mapping=seq.get('frameMap',list(range(cfg['frameCount'])));assert len(mapping)==seq['frameCount'] and mapping==sorted(mapping) and min(mapping)>=0 and max(mapping)<cfg['frameCount'],'effect variant frame mapping invalid'
    effects.append({'id':cfg['id'],'models':len(cfg['models']),'armature':cfg.get('armature'),'nativeFrames':cfg['frameCount'],'nonemptyFrames':nonempty,'distinctFrames':len(hashes)})
   except Exception as e:errors.append({'effect':cfg['id'],'error':str(e)})
- return {'images':images,'bodyAtlasFrames':frames,'bodyCharacters':characters,'nativeModelActionsChecked':nativeChecks,'effects':effects,'errors':errors}
+ return {'images':images,'bodyAtlasFrames':frames,'bodyCharacters':characters,'nativeModelActionsChecked':nativeChecks,'effects':effects,'nativePackedRegions':packedRegions,'errors':errors}
 if __name__=='__main__':
  r=verify();print(json.dumps(r));raise SystemExit(bool(r['errors']))

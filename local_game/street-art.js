@@ -3,10 +3,10 @@
     var installed=false,earlyPrepared=false,applied={},audit={installed:false,bindings:[],errors:[],earlyConfigInstalls:0};
     function install(early){
         if(installed||!global.StreetArtData||!global.RES||!RES.config)return;
-        StreetArtData.resources.forEach(function(r){
+        StreetArtData.resources.concat(StreetArtData.containers||[]).forEach(function(r){
             if(applied[r.originalKey])return;
             if(!RES.hasRes(r.originalKey)&&r.originalAvailability!=='missing-native-ui-key'){if(!early)audit.errors.push({key:r.originalKey,error:'original key missing'});return;}
-            RES.config.addResourceData({name:r.targetKey,url:r.targetPath+'?v='+r.targetSha256.slice(0,16),type:'image',root:''});
+            RES.config.addResourceData({name:r.targetKey,url:r.targetPath+'?v='+r.targetSha256.slice(0,16),type:r.type||'image',root:''});
             RES.config.addAlias(r.originalKey,r.targetKey);
             (r.extraAliases||[]).forEach(function(key){RES.config.addAlias(key,r.targetKey);});
             audit.bindings.push({original:r.originalKey,target:r.targetKey,url:r.targetPath});
