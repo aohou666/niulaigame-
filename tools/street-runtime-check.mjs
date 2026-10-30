@@ -19,7 +19,7 @@ page.on('console',m=>{if(logs.length<150)logs.push({type:m.type(),text:m.text().
 page.on('response',r=>{if(r.status()>=400)failed.push({status:r.status(),url:r.url()});if(/\.(png|jpg|webp)(\?|$)/i.test(r.url()))images.push(r.url());});
 page.on('requestfailed',r=>requestFailures.push({url:r.url(),method:r.method(),failure:r.failure(),at:new Date().toISOString()}));
 try {
- await page.goto(`${base}/index_bh_lite3zbtest_andr.html?mode=${mode}${mode==='heroes'?'&heroaudit=1':''}`,{waitUntil:'domcontentloaded'});
+ await page.goto(`${base}/index_bh_lite3zbtest_andr.html?mode=${mode}${mode==='heroes'?'&heroaudit=1'+(process.argv.includes('--base-heroes')?'&baseaudit=1':''):''}`,{waitUntil:'domcontentloaded'});
  await page.waitForFunction(()=>window.RES?.ResourceEvent);
  await page.evaluate(()=>{
   window.__streetResourceEvents=[];

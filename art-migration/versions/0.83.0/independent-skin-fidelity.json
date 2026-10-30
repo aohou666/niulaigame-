@@ -1,0 +1,119 @@
+{
+  "pass": true,
+  "scope": "Actual normal panel selection callbacks and real configured models; approved100201 uses its independent idle, unapproved skins retain original native preview. No equip transaction or completion claim.",
+  "rows": [
+    {
+      "code": 100201,
+      "configuredModel": "hero_skin_002_01",
+      "actualModel": "hero_skin_002_01",
+      "nativeVisible": false,
+      "suppressed": true,
+      "standIn": true,
+      "id": 100201,
+      "material": "skin100201-09828f2019409fc9",
+      "newVisible": true,
+      "ez": false
+    },
+    {
+      "code": 100202,
+      "configuredModel": "hero_087_03",
+      "actualModel": "hero_087_03",
+      "nativeVisible": true,
+      "suppressed": false,
+      "standIn": false,
+      "newVisible": false,
+      "ez": false
+    },
+    {
+      "code": 100202,
+      "configuredModel": "hero_087_03",
+      "actualModel": "hero_087_03_ez",
+      "nativeVisible": true,
+      "suppressed": false,
+      "standIn": false,
+      "newVisible": false,
+      "ez": true
+    },
+    {
+      "code": 10202,
+      "configuredModel": "hero_002_02",
+      "actualModel": "hero_002_02",
+      "nativeVisible": true,
+      "suppressed": false,
+      "standIn": false,
+      "newVisible": false,
+      "ez": false
+    },
+    {
+      "code": 100201,
+      "configuredModel": "hero_skin_002_01",
+      "actualModel": "hero_skin_002_01_ez",
+      "nativeVisible": false,
+      "suppressed": true,
+      "standIn": true,
+      "id": 100201,
+      "material": "skin100201-09828f2019409fc9",
+      "newVisible": true,
+      "ez": true
+    },
+    {
+      "code": 100201,
+      "configuredModel": "hero_skin_002_01",
+      "actualModel": "hero_skin_002_01",
+      "nativeVisible": false,
+      "suppressed": true,
+      "standIn": true,
+      "id": 100201,
+      "material": "skin100201-09828f2019409fc9",
+      "newVisible": true,
+      "ez": false
+    }
+  ],
+  "formation": [
+    {
+      "actors": [
+        {
+          "model": "hero_skin_002_01_ez",
+          "visible": false,
+          "suppressed": true
+        }
+      ],
+      "states": [
+        {
+          "id": 100201,
+          "visible": true
+        }
+      ],
+      "code": 100201
+    },
+    {
+      "actors": [
+        {
+          "model": "hero_087_03_ez",
+          "visible": true,
+          "suppressed": false
+        }
+      ],
+      "states": [],
+      "code": 100202
+    },
+    {
+      "actors": [
+        {
+          "model": "hero_skin_002_01_ez",
+          "visible": false,
+          "suppressed": true
+        }
+      ],
+      "states": [
+        {
+          "id": 100201,
+          "visible": true
+        }
+      ],
+      "code": 100201
+    }
+  ],
+  "errors": [],
+  "failures": []
+}

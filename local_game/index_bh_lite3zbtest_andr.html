@@ -64,10 +64,10 @@
 <script src="character-reskin.js?v=0.38.0"></script>
 <script src="character-idle-data.js?v=0.70.0"></script>
 <script src="character-idle-atlas-data.js?v=20261029-23"></script>
-<script src="character-idle.js?v=0.82.0"></script>
+<script src="character-idle.js?v=0.83.0"></script>
 <script src="street-body-data.js?v=0.67.0"></script>
 <script src="street-body.js?v=0.67.0"></script>
-<script src="character-regression.js?v=20261022-1"></script>
+<script src="character-regression.js?v=0.83.0-1"></script>
 <script>
     var now = Date.now();
     var manifestJson = {};
@@ -1167,6 +1167,7 @@
                             this.lb_name0.text = info.name || this.params.name;
                             if (HeroRaceConfig[this.params.race]) this.img_race_icon0.source = HeroRaceConfig[this.params.race].raceIconBig;
                             this.gp_hero._characterIdleFootY = 450;
+                            this.gp_hero._characterIdleSkinCode = info.code;
                             this.hero_model0.update({ code: this.params.code, model: info.model, useHD: true });
                             this.gp_type.y = 80;
                             this.gp_activate.y = 150;

@@ -1,6 +1,6 @@
 (function (global) {
     'use strict';
-    var data=global.CharacterIdleData, caches={}, modelIds={}, skinModelIds={}, installed=false, queue=[], loading=0;
+    var data=global.CharacterIdleData, caches={}, modelIds={}, skinModelIds={}, independentSkinModels={}, skinModelsIndexed=false, installed=false, queue=[], loading=0;
     var atlasData=global.CharacterIdleAtlasData;
     var audit={version:data&&data.version,excluded:[13],framesPresented:0,errors:[],players:[],attachedHeroes:{},modelRequests:{}};
     function config(id){return data&&(data.heroes[String(id)]||(data.skins&&data.skins[String(id)]));}
@@ -12,6 +12,23 @@
         // Shared numeric models need an explicit owning hero to disambiguate them.
         if(!owner&&nativeOwner&&Number(nativeOwner[1])!==Number(cfg.heroId))return 0;
         return id;
+    }
+    function isUnmappedIndependentSkin(name,owner){
+        var store=global.config&&global.config.HeroDermaLO&&global.config.HeroDermaLO.Store;
+        if(!skinModelsIndexed&&store&&Object.keys(store).length){
+            Object.keys(store).forEach(function(code){
+                var row=global.config.HeroDermaLO.Get(Number(code));
+                if(!row||Number(row.code)<100000||!row.model)return;
+                var key=String(row.model).replace(/_ez$/,'');
+                (independentSkinModels[key]||(independentSkinModels[key]={}))[Number(row.subType)]=true;
+            });
+            skinModelsIndexed=true;
+        }
+        var key=String(name||'').replace(/_ez$/,'');
+        // A shared model alone cannot turn an ordinary base-hero view into a skin selection.
+        if(modelIds[key]===Number(owner))return false;
+        var owners=independentSkinModels[key];
+        return !!(owners&&owners[Number(owner)]&&!skinForModel(name,owner));
     }
     function releaseTexture(texture){if(texture){texture.disposeBitmapData=true;texture.dispose();}}
     function pump(){
@@ -137,13 +154,17 @@
         if(view._characterIdleViewTick){view._characterIdleViewTick();return;}
         var tick=function(){
             var nativePlayer=view.getModel&&view.getModel(),hero=heroForView(view),p=nativePlayer;
-            hero=skinForModel(nativePlayer&&nativePlayer._dbName,hero)||hero;
+            var model=nativePlayer&&nativePlayer._dbName,mappedSkin=skinForModel(model,hero);
+            var selectedSkin=view.parent&&view.parent._characterIdleSkinCode;
+            if(selectedSkin!=null)hero=mappedSkin===Number(selectedSkin)?mappedSkin:0;
+            else hero=isUnmappedIndependentSkin(model,hero)?0:mappedSkin||hero;
             if(config(hero)&&profile(view)!=='battle'){
                 if(nativePlayer){detach(nativePlayer);nativePlayer._characterIdleSuppressNative=true;if(nativePlayer._armature)nativePlayer._armature.visible=false;}
                 p=view._characterIdleStandIn;
                 if(!p){p=new egret.DisplayObjectContainer();p.name='canonicalIdleRenderer';p.action='daiji';view._characterIdleStandIn=p;view.addChild(p);}
-            }else if(view._characterIdleStandIn){
-                detach(view._characterIdleStandIn);if(view._characterIdleStandIn.parent)view._characterIdleStandIn.parent.removeChild(view._characterIdleStandIn);view._characterIdleStandIn=null;
+            }else{
+                if(view._characterIdleStandIn){detach(view._characterIdleStandIn);if(view._characterIdleStandIn.parent)view._characterIdleStandIn.parent.removeChild(view._characterIdleStandIn);view._characterIdleStandIn=null;}
+                if(nativePlayer)detach(nativePlayer);
                 if(nativePlayer){nativePlayer._characterIdleSuppressNative=false;if(nativePlayer._armature)nativePlayer._armature.visible=true;}
             }
             if(!p)return;
@@ -174,6 +195,22 @@
             var dynamic=customui.HeroDynamicModel.prototype,update=dynamic.update,reset=dynamic.reset;
             dynamic.update=function(){this._characterIdleHeroId=0;var r=update.apply(this,arguments),id=heroForView(this);var p=this.getModel&&this.getModel();if(id)bindView(this,id);return r;};
             dynamic.reset=function(){this._characterIdleHeroId=0;this._characterIdleLayout=null;if(this._characterIdleViewTick){this.removeEventListener(egret.Event.ENTER_FRAME,this._characterIdleViewTick,this);this._characterIdleViewTick=null;}var standIn=this._characterIdleStandIn;if(standIn){detach(standIn);if(standIn.parent)standIn.parent.removeChild(standIn);this._characterIdleStandIn=null;}var p=this.getModel&&this.getModel();if(p){detach(p);p._characterIdleHeroId=0;p._characterIdleLayout=null;p._characterIdleSuppressNative=false;}return reset.apply(this,arguments);};
+        }
+        if(game.FormationModelComponent){
+            var formation=game.FormationModelComponent.prototype,formationUpdate=formation.update;
+            formation.update=function(params){
+                var result=formationUpdate.apply(this,arguments);
+                var skinCode=Number(params&&params.heroInfo&&params.heroInfo.dermaCode)||0;
+                function mark(node){
+                    if(global.customui&&node instanceof customui.HeroDynamicModel&&node.parent){
+                        if(skinCode)node.parent._characterIdleSkinCode=skinCode;
+                        else delete node.parent._characterIdleSkinCode;
+                        if(node._characterIdleViewTick)node._characterIdleViewTick();
+                    }
+                    for(var i=0;i<(node.numChildren||0);i++)mark(node.getChildAt(i));
+                }
+                mark(this);return result;
+            };
         }
         audit.installed=true;audit.mappedHeroes=Object.keys(data.heroes).length;console.log('[CHARACTER-IDLE]',audit.mappedHeroes,'full sequences; original ID13 excluded');
         if(new URLSearchParams(location.search).has('heroaudit')){

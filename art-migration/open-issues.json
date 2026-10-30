@@ -85,9 +85,20 @@
   },
   {
     "id": "SKIN-PREVIEW-082-UNMAPPED-SHARING",
-    "status": "investigating",
+    "status": "resolved",
     "summary": "Configured100202 modelhero_087_03 preview substitutes base2 new idle without an independent skin mapping.",
     "evidence": "art-migration/versions/0.82.0/independent-skin-fidelity-gap.json",
-    "next": "Guard independent skin selection by configured skinCode/model; do not reuse base idle for unapproved skins, retain native pending full replacement."
+    "next": "Guard independent skin selection by configured skinCode/model; do not reuse base idle for unapproved skins, retain native pending full replacement.",
+    "resolutionVersion": "0.83.0",
+    "resolutionEvidence": "art-migration/versions/0.83.0/independent-skin-fidelity.json",
+    "resolution": "Explicit native panel and formation selection code/model guard preserves approved independent100201 and restores original native100202, including EZ and return transitions.",
+    "limits": "Unmapped skins are still original unreplaced art; standalone model names shared by base/skin require selection context; actual equip/battle not validated."
+  },
+  {
+    "id": "SKIN-NATIVE-083-PREVIEW-BOUNDS",
+    "status": "investigating",
+    "summary": "Correct native100202 fallback is oversized and clipped above the skin panel. Independent identity restored, native preview fitting still needs work.",
+    "evidence": "art-migration/versions/0.83.0/unmapped100202-native.png",
+    "next": "Fit original native model bounds into preview region without distorting/replacing art or affecting approved independent idle placement."
   }
 ]

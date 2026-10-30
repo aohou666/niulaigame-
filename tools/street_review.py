@@ -38,6 +38,9 @@ def main():
  report={'version':a.version,'reviewedUtc':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'characterImageBindings':checked,'supplementalCharacterImageBindings':supplementalChecked,'bindingErrors':errors,'originalManifestEntriesChecked':len(manifest['resources']),'missingOriginals':missing,'detailRuntime':runtime,'browserLogs':browser_logs,'idleAtlas':atlas,'originalArtNotYetFullyReplaced':dict(pending),'packedRegionsNotYetReplaced':pending_regions,'animationsNotYetReplaced':pending_animations,'allArtReplaced':False,'zeroBugsClaimed':False,'visualReview':'Contact sheets and key game screens; this is not a visual sign-off for every original resource.'}
  ui_file=OUT/'ui-regions.jsonl';ui_rows=[json.loads(line) for line in ui_file.read_text('utf8').splitlines()] if ui_file.exists() else []
  report['uiSheetRegionsNotYetReplaced']=sum(r['status']!='complete' for r in ui_rows)
+ report['currentEquippedPresentationCounts']=dict(collections.Counter(row.get('presentation','legacy-unspecified') for row in (runtime or {}).get('results',[])))
+ baseRuntimePath=OUT/'versions'/a.version/'base-heroes-runtime.json'
+ report['baseHeroDetailRuntime']=json.loads(baseRuntimePath.read_text('utf8')) if baseRuntimePath.exists() else None
  report['promotedStreetArtVerification']=verify_street_art()
  body=loadjs(GAME/'street-body-data.js')['characters'];targets=[c for c in body if c['id']!=13]
  report['attackSkillContinuousMotionQuality']={'installedTargetMappings':len(targets),'approvedContinuousTargetMappings':sum(c.get('temporalQuality')=='approved-continuous' for c in targets),'quarantinedTargetMappings':sum(bool(c.get('qualityQuarantineActions')) for c in targets),'all85TargetsComplete':False,'note':'Installed images/native frame timing are separate from complete continuous-animation approval; unreviewed clips do not count as complete.'}

@@ -5,7 +5,7 @@
 
 ## 仓库与交付
 工作区 C:/Users/dongdong/Documents/ChatGPT/安装，分支 codex/street-reskin-20261029。delivery=https://github.com/aohou666/oldniulai.git，保留原origin。
-最新实质版本v0.82本次提交，v0.81基线f06b1c49。已验证delivery/main到v0.80完整6eb4f1fdf0a7b97b35f787688aaf7cff954dcd37。下一推送v0.83（81/82/83），命令git push delivery HEAD:main后ls-remote核对完整SHA。
+最新实质版本v0.83本次提交，v0.82为efca267b。已验证delivery/main到v0.80完整6eb4f1fdf0a7b97b35f787688aaf7cff954dcd37。下一推送v0.83（81/82/83），命令git push delivery HEAD:main后ls-remote核对完整SHA。
 保留无关dirty Android build.gradle/MainActivity、README/offline-launcher、disabled技能修复及大量旧collector job/qa改动；禁止git add .、批量reset/删除。原resource大包是独立Release依赖，不入Git大包。
 
 ## 真实完成状态
@@ -42,3 +42,12 @@ Python street_atlas_verify.py；精确stage新启用图片后street_runtime_trac
 ## v0.82优先接续
 100201脚底与台面global均[363,878]；属性底446/激活底502/身体顶608，脚底X/Y容器级锚点、截图/125属性/4卡/九宫格/阵营/无资源错通过。85详情、1876动作、1910依赖通过。并发详情采样曾失败，串行113帧复测通过；复用夹具加弹窗就绪+置顶等待后实际点击通过，不抹去失败记录。
 下一v83重点：config100202实际model=hero_087_03，组件实际用基础2新待机，fidelity-gap.json明确失败。不要用猜的hero_skin_002_02（不存在，诊断资源错误无效）。可在皮肤面板容器标记明确选择skinCode，bindView只允许匹配该code/model的data.skins序列；没有批准独立序列时恢复原生模型而非共用基础新序列。注意清理旧standIn/原生suppress/cache，选择100201→100202→基础→100201及普通/EZ/编队均要证据，不能改测试期望掩盖错误。需实际读取配置建测试并记录无独立映射=未完成。v83完成后推81/82/83并核对SHA。无活动生成任务。
+
+## v0.83进行中，勿沿用旧单一85门槛
+独立预览守卫及真实选择/编队100201→100202→100201普通/EZ已通过；100202原生保留，不算新皮肤。初次全85旧审计83/85：20实际穿102002/modelhero_089_03，77穿107701/modelhero_092_03。原生回退正确，旧审计把这两个已装备原生皮肤强判无基础新待机，非基础动画坏掉。审计现分当前装备85详情（必须配置对应原生模型/可见性/技能、明确标原作未重绘）和baseaudit临时浏览器卸皮肤85基础新待机（恢复，不做交易），新待机还断言实际cfg.id等于预期。两组最终强化审计正在跑，尚未提交。10角色1876及1910依赖索引通过。
+角色效果3的all-direct-timeline.jpg39张看起来相同crescent/dots，不可直接当有变化的motion-reference证据；下一步应检查原生实时播放/子骨架，再做MiniMax独立特效。无活动生成任务。v83提交后推81/82/83核对SHA。
+
+## v0.83最终接续（优先于上文进行中状态）
+实际独立选择普通/EZ/基础变体/编队切换通过；无批准独立序列恢复原生，100202不再共用base2。代码守卫显式skinCode优先，模糊共享模型不能单凭名当独立序列。新的fidelity测试tools/street-independent-skin-fidelity-test.mjs替代旧routing-probe手动面板模型循环作实际选择验收。
+两套强化85审计均通过：当前穿戴85（83 new-base-idle、2 original-unreplaced-skin：20/77确实穿原生额外皮肤）；--base-heroes在独立浏览器临时卸皮肤、逐项恢复，85基础新待机ID/帧变化全部通过。每版应两套都验：street-runtime-check.mjs --all-heroes ...（当前装备），再加--base-heroes（基础）；不同输出目录，当前装备3报告复制版本和全局，基础all-heroes-runtime.json另存版本/base-heroes-runtime.json。审计报告含presentationCounts，勿把85详情通过当85完整换皮。旧83/85并非生产回退错，详见equipped20-77-state.json，已保留失败。1876动作/1910依赖/台账通过。
+新open SKIN-NATIVE-083-PREVIEW-BOUNDS：100202原作模型已正确显示，但巨型原生模型超出面板，截图unmapped100202-native.png；下一步必须适配原生bounds，不能用新基础图遮它。100201批准新序列台面布局仍通过。没有活动生成任务。v83推81/82/83核SHA，下一推送v86。
