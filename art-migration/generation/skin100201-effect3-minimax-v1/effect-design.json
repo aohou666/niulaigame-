@@ -1,0 +1,93 @@
+{
+  "id": "skin100201-effect3",
+  "skinCode": 100201,
+  "heroId": 2,
+  "models": [
+    "hero_skin_002_01",
+    "hero_skin_002_01_ez"
+  ],
+  "armature": "effect_3",
+  "kind": "loop",
+  "scope": "effect_3 only, independent skin; other effects/body states not approved",
+  "nativeAuditSha256": "3d6b2228d54675611d640a4036711e9439a5a7052c3c63929f0e178c74e2ee30",
+  "native": [
+    {
+      "model": "hero_skin_002_01",
+      "hero": 2,
+      "action": "effect_3",
+      "fps": 30,
+      "durationFrames": 39,
+      "durationMs": 1300,
+      "elapsedMs": 1274.1999999999534,
+      "events": []
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "hero": 2,
+      "action": "effect_3",
+      "fps": 30,
+      "durationFrames": 39,
+      "durationMs": 1300,
+      "elapsedMs": 1274.3000000000466,
+      "events": []
+    }
+  ],
+  "referenceVideoSha256": "f46f1b59e8d8ba659a004be131d11de21d1e3b6162a61c52fbae64971d26f4e3",
+  "referenceReviewSha256": "2d31fe53209b42dd83887707c245743374080e1e46c7917a8193a548ef976f43",
+  "guideSha256": "74163d0845977759b127802dccffbdc351f5f694ed990411a191eb524ce21fe0",
+  "guideReviewSha256": "11e09ac01202317c81bd98ae0016b97c97f8b0d819c91048a22ab65e5939ca49",
+  "sourceFrames": 124,
+  "prompt": "Use <Image 1> as the new visual design: an ivory sculpted chalk crescent, a smaller copper-foil ribbon curl, TWO tiny teal enamel glints and sparse warm copper flecks. Use <Video 1> ONLY for the real original juggling-trail orbital choreography, relative grouping and loop purpose; do not copy its magenta/purple artwork. Create an independent new effect for skin100201, contemporary absurd neighborhood street-circus style, 2.5D half-realistic half-cartoon tangible chalk/enamel/metallic foil edges. Smooth continuous curved orbital movement and changing arcs, two connected complete cycles across the five-second clip, matching initial/final composition for a seamless loop. All elements remain small within central40percent of the canvas, no frozen design card, no jump cuts, no added characters or balls, no environment, floor, text, smoke, giant rings or explosion. Fixed camera, pure black RGB0 background. Keep the two curved elements and two glints distinguishable while they travel, and preserve the new ivory/copper/teal palette. Animation candidate only, not a static guide slideshow.",
+  "manualReview": "pending",
+  "runtimeIntegrated": false,
+  "renderReferenceOnly": {
+    "path": "G:\\comfylight\\ComfyUI_windows_portable_nvidia\\ComfyUI_windows_portable\\ComfyUI\\input\\skin100201-effect3-native-realtime-v1.mp4",
+    "sha256": "f46f1b59e8d8ba659a004be131d11de21d1e3b6162a61c52fbae64971d26f4e3",
+    "sourceCaptureSha256": "6fcb126a3f7ad75c74bd5bda98043f5802fcde7595b43ab1bcd002e234e9b6c1",
+    "sourceReviewSha256": "2d31fe53209b42dd83887707c245743374080e1e46c7917a8193a548ef976f43",
+    "crop": [
+      25,
+      128,
+      558,
+      661
+    ],
+    "sampleTimingRetimedToSeconds": 2.5,
+    "nativeCycles": 2,
+    "nativeLoopSeconds": 1.3,
+    "sourceSetup": {
+      "model": "hero_skin_002_01",
+      "armature": "effect_3",
+      "duration": 1.3,
+      "sourceBounds": {
+        "x": -27,
+        "y": -31,
+        "width": 53,
+        "height": 67
+      },
+      "actor": {
+        "x": 363.39622641509436,
+        "y": 463.0188679245283,
+        "scale": 6.7924528301886795
+      },
+      "stage": {
+        "width": 720,
+        "height": 960
+      },
+      "canvas": {
+        "x": 0,
+        "y": 0,
+        "width": 600,
+        "height": 800
+      },
+      "bodyIdleState": false
+    },
+    "manualReferenceReview": "approved-purpose-and-motion-only"
+  },
+  "requiredBeforeRuntime": [
+    "all generated frames reviewed",
+    "complete-cycle selection and native1.3s mapping",
+    "alpha and additive blend review",
+    "geometry/native ordinary andEZ replay",
+    "actual battle trigger validation"
+  ]
+}

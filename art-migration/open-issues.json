@@ -107,9 +107,13 @@
   },
   {
     "id": "SKIN-FX-084-UNUSED-IDLE-CACHE",
-    "status": "investigating",
+    "status": "resolved",
     "summary": "Explicit effect_1/2/3 armatures ofhero_skin_002_01 attach an unnecessary100201 idle state/cache, while native effect remains visible and idle bitmap hidden.",
     "evidence": "art-migration/versions/0.84.0/effect-armature-state-diagnostic.json",
-    "next": "Avoid body-idle binding for explicit effect armatures; preserve original effects and audit references/cleanup. No claim of current visual replacement bug."
+    "next": "Avoid body-idle binding for explicit effect armatures; preserve original effects and audit references/cleanup. No claim of current visual replacement bug.",
+    "resolutionVersion": "0.85.0",
+    "resolutionEvidence": "art-migration/versions/0.85.0/effect-idle-cache.json",
+    "resolution": "Explicit effect_* armatures detach stale idle/layout/suppression before init and never bind body idle. Six ordinary/EZ effects request0 body idle assets; body/effect/body reuse and destroy return0 active skin states.",
+    "limits": "Native effects preserved, not new VFX art approval or proof of all battle triggers."
   }
 ]

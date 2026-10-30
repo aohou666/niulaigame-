@@ -1,0 +1,177 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "minimax_h3_ref2va_pruned_w4a8_mixed.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_32b_minimax_h3_int4_convrot.safetensors",
+      "type": "minimax",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "VHS_LoadVideo",
+    "inputs": {
+      "video": "skin100201-effect3-native-realtime-v1.mp4",
+      "force_rate": 24,
+      "custom_width": 512,
+      "custom_height": 512,
+      "frame_load_cap": 60,
+      "skip_first_frames": 0,
+      "select_every_nth": 1,
+      "format": "None"
+    }
+  },
+  "5": {
+    "class_type": "MiniMaxH3ReferenceToVideo",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "prompt": "Use <Image 1> as the new visual design: an ivory sculpted chalk crescent, a smaller copper-foil ribbon curl, TWO tiny teal enamel glints and sparse warm copper flecks. Use <Video 1> ONLY for the real original juggling-trail orbital choreography, relative grouping and loop purpose; do not copy its magenta/purple artwork. Create an independent new effect for skin100201, contemporary absurd neighborhood street-circus style, 2.5D half-realistic half-cartoon tangible chalk/enamel/metallic foil edges. Smooth continuous curved orbital movement and changing arcs, two connected complete cycles across the five-second clip, matching initial/final composition for a seamless loop. All elements remain small within central40percent of the canvas, no frozen design card, no jump cuts, no added characters or balls, no environment, floor, text, smoke, giant rings or explosion. Fixed camera, pure black RGB0 background. Keep the two curved elements and two glints distinguishable while they travel, and preserve the new ivory/copper/teal palette. Animation candidate only, not a static guide slideshow.",
+      "width": 512,
+      "height": 512,
+      "length": 124,
+      "ref_image_size": "match",
+      "ref_videos.ref_video_1": [
+        "4",
+        0
+      ],
+      "ref_images.ref_image_1": [
+        "30",
+        0
+      ]
+    }
+  },
+  "6": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "lora_name": "minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors",
+      "strength_model": 1
+    }
+  },
+  "8": {
+    "class_type": "MiniMaxH3DualClockSamplerT8",
+    "inputs": {
+      "model": [
+        "6",
+        0
+      ],
+      "av_latent": [
+        "5",
+        1
+      ],
+      "steps": 4,
+      "shift_video": 12,
+      "shift_audio": 3,
+      "sampler_name": "dual_clock_euler",
+      "scheduler": "native_flow"
+    }
+  },
+  "9": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "8",
+        0
+      ],
+      "conditioning": [
+        "5",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 202610301002013
+    }
+  },
+  "11": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "10",
+        0
+      ],
+      "guider": [
+        "9",
+        0
+      ],
+      "sampler": [
+        "8",
+        1
+      ],
+      "sigmas": [
+        "8",
+        2
+      ],
+      "latent_image": [
+        "5",
+        1
+      ]
+    }
+  },
+  "12": {
+    "class_type": "LTXVSeparateAVLatent",
+    "inputs": {
+      "av_latent": [
+        "11",
+        0
+      ]
+    }
+  },
+  "13": {
+    "class_type": "VAEDecodeTiled",
+    "inputs": {
+      "samples": [
+        "12",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "tile_size": 512,
+      "overlap": 64,
+      "temporal_size": 32,
+      "temporal_overlap": 4
+    }
+  },
+  "14": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "13",
+        0
+      ],
+      "filename_prefix": "street-reskin/skin100201-effect3-minimax-v1"
+    }
+  },
+  "30": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "skin100201-effect3-guide-74163d0845977759.png"
+    }
+  }
+}

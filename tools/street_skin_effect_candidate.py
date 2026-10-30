@@ -1,0 +1,22 @@
+"""Submit an independent skin effect from reviewed real-time native reference, never auto-promote."""
+import json,hashlib,shutil
+from pathlib import Path
+from street_comfy import ROOT,COMFY,submit
+def read(p):return json.loads(p.read_text('utf8'))
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+name='skin100201-effect3-minimax-v1';assert not (ROOT/'art-migration/generation'/name).exists(),'Collect existing job instead of duplicating'
+ref=ROOT/'outputs/street-reskin/skin100201-live-effect3-reference-v1';capture=read(ref/'capture.json');review=read(ref/'visual-review.json');video=read(ref/'reference-video.json');guideFolder=ROOT/'art-migration/generation/skin100201-effect3-guide-official-v1';guide=read(guideFolder/'qa.json')
+assert review['manualReview']=='approved-original-reference' and review['uniqueRgbFrames']>1
+assert not capture['setup']['bodyIdleState'] and capture['setup']['armature']=='effect_3'
+assert sha(ref/'capture.json')==video['sourceCaptureSha256'] and sha(ref/'visual-review.json')==video['sourceReviewSha256']
+sourceVideo=Path(video['path']);assert sha(sourceVideo)==video['sha256']
+assert guide['manualReview']=='approved' and sha(ROOT/guide['image'])==guide['sha256']
+audit=ROOT/'art-migration/skin-migration/100201/native-events.json';rows=[r for r in read(audit)['records'] if r['action']=='effect_3'];assert len(rows)==2 and all(r['durationFrames']==39 for r in rows)
+guideName='skin100201-effect3-guide-'+guide['sha256'][:16]+'.png';shutil.copy2(ROOT/guide['image'],COMFY/'input'/guideName)
+g=read(ROOT/'art-migration/generation/hero001-cast-minimax-v2/workflow.json');g['4']['inputs'].update(video=sourceVideo.name,frame_load_cap=60)
+prompt='''Use <Image 1> as the new visual design: an ivory sculpted chalk crescent, a smaller copper-foil ribbon curl, TWO tiny teal enamel glints and sparse warm copper flecks. Use <Video 1> ONLY for the real original juggling-trail orbital choreography, relative grouping and loop purpose; do not copy its magenta/purple artwork. Create an independent new effect for skin100201, contemporary absurd neighborhood street-circus style, 2.5D half-realistic half-cartoon tangible chalk/enamel/metallic foil edges. Smooth continuous curved orbital movement and changing arcs, two connected complete cycles across the five-second clip, matching initial/final composition for a seamless loop. All elements remain small within central40percent of the canvas, no frozen design card, no jump cuts, no added characters or balls, no environment, floor, text, smoke, giant rings or explosion. Fixed camera, pure black RGB0 background. Keep the two curved elements and two glints distinguishable while they travel, and preserve the new ivory/copper/teal palette. Animation candidate only, not a static guide slideshow.'''
+g['5']['inputs'].update(prompt=prompt,length=124);g['30']={'class_type':'LoadImage','inputs':{'image':guideName}};g['5']['inputs']['ref_images.ref_image_1']=['30',0];g['13']['inputs'].update(tile_size=512,temporal_size=32);g['10']['inputs']['noise_seed']=202610301002013;g['14']['inputs']['filename_prefix']='street-reskin/'+name
+for node in g.values():
+ if node['class_type']=='VHS_VideoCombine':node['inputs']['filename_prefix']='street-reskin/'+name+'-preview'
+folder=submit(g,name,front=False);shutil.copy2(sourceVideo,folder/'native-reference.mp4');shutil.copy2(ref/'capture.json',folder/'reference-capture.json');shutil.copy2(ref/'visual-review.json',folder/'reference-review.json');shutil.copy2(ref/'reference-video.json',folder/'reference-video.json')
+d={'id':'skin100201-effect3','skinCode':100201,'heroId':2,'models':['hero_skin_002_01','hero_skin_002_01_ez'],'armature':'effect_3','kind':'loop','scope':'effect_3 only, independent skin; other effects/body states not approved','nativeAuditSha256':sha(audit),'native':rows,'referenceVideoSha256':sha(sourceVideo),'referenceReviewSha256':sha(ref/'visual-review.json'),'guideSha256':guide['sha256'],'guideReviewSha256':sha(guideFolder/'qa.json'),'sourceFrames':124,'prompt':prompt,'manualReview':'pending','runtimeIntegrated':False,'renderReferenceOnly':video,'requiredBeforeRuntime':['all generated frames reviewed','complete-cycle selection and native1.3s mapping','alpha and additive blend review','geometry/native ordinary andEZ replay','actual battle trigger validation']};(folder/'effect-design.json').write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n','utf8')

@@ -5,7 +5,7 @@
 
 ## 仓库与交付
 工作区 C:/Users/dongdong/Documents/ChatGPT/安装，分支 codex/street-reskin-20261029。delivery=https://github.com/aohou666/oldniulai.git，保留原origin。
-最新实质版本v0.84本次提交，v0.83为39a79bb1。已验证delivery/main到v0.80完整6eb4f1fdf0a7b97b35f787688aaf7cff954dcd37。下一推送v0.83（81/82/83），命令git push delivery HEAD:main后ls-remote核对完整SHA。
+最新实质版本v0.85本次提交，v0.84为638d2200。已验证delivery/main到v0.80完整6eb4f1fdf0a7b97b35f787688aaf7cff954dcd37。下一推送v0.83（81/82/83），命令git push delivery HEAD:main后ls-remote核对完整SHA。
 保留无关dirty Android build.gradle/MainActivity、README/offline-launcher、disabled技能修复及大量旧collector job/qa改动；禁止git add .、批量reset/删除。原resource大包是独立Release依赖，不入Git大包。
 
 ## 真实完成状态
@@ -57,3 +57,10 @@ Python street_atlas_verify.py；精确stage新启用图片后street_runtime_trac
 ## v0.84最终接续（优先）
 原生100202尺寸适配已修：首次就绪真实bounds+20%裕量，固定420x270目标，按台面锚点平移，保留原比例；每帧不重测bbox，init/destroy/reset/切回新待机恢复原变换。普通/EZ各2个9秒循环实际bounds/底边/factor稳定断言通过，截图已看；10202样本/切回100201无fit残留/编队均通过。关闭100202原生bounds issue，仍非新皮肤完成。
 当前装备85与基础85两套、1876动作、125属性/4比例/九宫格/阵营/台面/点击、1910依赖/台账通过。source effect3实际诊断三armature原生可见、idle bitmap隐藏，但人物idle状态/cache多余绑定（tools/street-skin-effect-state-probe.mjs；v84/effect-armature-state-diagnostic.json）。下一v85先阻止明确effect_*副骨架绑定人物待机，验证真实特效保持可见/无多余cache/销毁回收，不要把当前状态误说成视觉错替。随后核实实时特效/子骨架运动并恢复本地MiniMax独立特效和缺失身体动作生成，勿长期只做UI。原始39张direct-timeline近静态尚不足运动证据。无活动生成任务；下一推送v0.86（84/85/86）。
+
+## v0.85最终接续（优先）
+明确effect_*副骨架不绑定人物idle，普通/EZ6项0idle请求、body/effect/body及destroy后active/cache/queued/loading均0。两套85/1876动作/原生fit与独立切换/编队/125属性/4卡/台面/点击/1910依赖/台账通过。
+该生成已结束：skin100201-effect3-minimax-v1，prompt f6eeba97-1cc1-42d7-bb41-a309cf5ae55c，124帧已collect，不重复提交。工具street_skin_effect_candidate.py固定唯一名防重复，参考源与批准导图SHA已绑定。模型minimax_h3_ref2va_pruned_w4a8_mixed，输出预计124帧。
+真实effect3实时参考outputs/street-reskin/skin100201-live-effect3-reference-v1，31采样/19不同帧，两1.3秒循环，全部已看；非穷尽原39帧。生成目录保存native-reference.mp4、reference-{capture,review,video}.json。官方新guide在generation/skin100201-effect3-guide-official-v1（原图及512导图已看，仅静态设计批准）。下一步collect后用street_effect_review.py全124/16放大实际看，拒收停顿/裁边/错误形状，不自动promote。需明确完整周期映射原生39帧1.3秒、alpha/加色混合、几何与普通/EZ原生、实际战斗触发后才可接入；effect-design特意独立schema，不用旧全局特效promote冒充独立皮肤。输出仍pending/未运行接入，不计完成。v0.86完成后推84/85/86核SHA。
+
+最新终态纠正：v85提交收尾API队列变空后已立即collect到124帧，现无活动生成。全部124接触图和16放大已查看；整片未批准，34..60暗细网状/模糊材质、123骤返静态导图。effect-qa.manualReview=needs-complete-cycle-review，不能报告成整片通过。62..122较清楚且看似周期性，仅可作为完整周期候选，下一步需高分辨率连续帧/相位/接缝/完整一圈审查，不许只摘几张关键姿势；若无合格完整圈则拒收重做。仍未alpha/加色混合/原生回放/战斗验收，未接入。不再称此任务运行。
