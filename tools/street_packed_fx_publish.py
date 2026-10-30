@@ -9,8 +9,8 @@ for entry in entries:
  verify_container(entry)
  observed=next(r for r in proof['resourceDigests'] if r['key']==entry['originalKey']);assert observed['digest']==entry['targetSha256'],'Native trial loaded a different package'
  old=existing.get(entry['originalKey']);assert not old or set(old['changedRegions'])<=set(entry['changedRegions']),'New package would erase previously replaced regions'
- entry['nativeRuntimeAuditPath']=a.runtime;entry['nativeRuntimeAuditSha256']=hashlib.sha256(runtime.read_bytes()).hexdigest();entry['nativeAnimationReplacement']='effect_1';entry['review']='approved-native-19-frame-effect1-retexture';entry['fullSkinComplete']=False
+ entry['nativeRuntimeAuditPath']=a.runtime;entry['nativeRuntimeAuditSha256']=hashlib.sha256(runtime.read_bytes()).hexdigest();entry['nativeAnimationReplacement']=json.loads((ROOT/entry['regionReviewPath']).read_text('utf8'))['effect'];entry['review']='approved-native-19-frame-FX-retexture';entry['fullSkinComplete']=False
  source=ROOT/entry['regionReviewPath'];provenance=source.parent/'provenance.json';assert provenance.exists();entry['sourceProvenancePath']=provenance.relative_to(ROOT).as_posix();entry['sourceProvenanceSha256']=hashlib.sha256(provenance.read_bytes()).hexdigest()
  existing[entry['originalKey']]=entry
 data['containers']=list(existing.values());data['version']=a.version;dataPath.write_text('window.StreetArtData='+json.dumps(data,ensure_ascii=False,separators=(',',':'))+';\n','utf8')
-print(json.dumps({'publishedContainers':len(entries),'physicalRegions':sum(len(e['changedRegions']) for e in entries),'logicalSkin':100201,'logicalEffect':'effect_1','completeSkin':False}))
+print(json.dumps({'publishedContainers':len(entries),'physicalRegions':sum(len(e['changedRegions']) for e in entries),'logicalSkin':100201,'logicalEffect':entries[0]['nativeAnimationReplacement'],'completeSkin':False}))

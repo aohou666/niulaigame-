@@ -51,8 +51,9 @@ def main():
   row=next((r for r in packed_rows if r['path']==binding['originalPath']),None)
   if not row or row['status']=='complete':continue
   confirmedRegions+=len({r['name'] for r in row['regions']} & set(binding['changedRegions']))
-  name=binding.get('nativeAnimationReplacement')
-  if name:
+  def approved_names(cfg):
+   return ({cfg['nativeAnimationReplacement']} if cfg.get('nativeAnimationReplacement') else set()).union(*(approved_names(old) for old in cfg.get('inheritedReplacements',[])))
+  for name in approved_names(binding):
    confirmedAnimations+=sum(1 for arm in row['armatures'] if arm['name']==name for anim in arm['animations'] if anim['name']==name and name not in row.get('verifiedAnimationReplacements',[]));logicalEffects.add((binding.get('skinCode'),name))
  report['packedRegionsNotYetReplaced']=pending_regions-confirmedRegions;report['animationsNotYetReplaced']=pending_animations-confirmedAnimations
  report['nativePackedRegionBindings'].update(verifiedPhysicalRegions=confirmedRegions,verifiedPhysicalAnimations=confirmedAnimations,logicalSkinEffects=[{'skinCode':skin,'effect':effect} for skin,effect in sorted(logicalEffects)])

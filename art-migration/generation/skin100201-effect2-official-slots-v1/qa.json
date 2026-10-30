@@ -1,0 +1,184 @@
+{
+  "skinCode": 100201,
+  "effect": "effect_2",
+  "nativeFrames": 19,
+  "nativeFps": 30,
+  "sourceTextures": 10,
+  "sourceSha256": "dc1d36439389906f46e272b9cbd98904ef7637c3657b768aff1dd442faf9da32",
+  "tiles": [
+    {
+      "name": "effect_2/effect_2_01",
+      "sourceCell": [
+        0,
+        0,
+        397,
+        396
+      ],
+      "alphaBounds": [
+        43,
+        216,
+        336,
+        335
+      ],
+      "path": "art-migration/generation/skin100201-effect2-official-slots-v1/effect_2_01.png",
+      "sha256": "4abb0395a3ecb7fb86a64c06c8fc324bfaca92acd4852cd785ebc3211575dc65"
+    },
+    {
+      "name": "effect_2/effect_2_02",
+      "sourceCell": [
+        397,
+        0,
+        793,
+        396
+      ],
+      "alphaBounds": [
+        56,
+        225,
+        350,
+        335
+      ],
+      "path": "art-migration/generation/skin100201-effect2-official-slots-v1/effect_2_02.png",
+      "sha256": "79cbc213eb3814ff564724981c78dd28fb0939ebe605c4d7504a1c1e33930bce"
+    },
+    {
+      "name": "effect_2/effect_2_03",
+      "sourceCell": [
+        793,
+        0,
+        1190,
+        396
+      ],
+      "alphaBounds": [
+        52,
+        210,
+        351,
+        336
+      ],
+      "path": "art-migration/generation/skin100201-effect2-official-slots-v1/effect_2_03.png",
+      "sha256": "6755e7c488b701d70416a9008fa5ecda2391759e3e6c9cb72bcfb7786126564b"
+    },
+    {
+      "name": "effect_2/effect_2_04",
+      "sourceCell": [
+        1190,
+        0,
+        1586,
+        396
+      ],
+      "alphaBounds": [
+        40,
+        197,
+        344,
+        336
+      ],
+      "path": "art-migration/generation/skin100201-effect2-official-slots-v1/effect_2_04.png",
+      "sha256": "869f45de0ef60441f8a70e7fc6ed5c5b4c3375e6127daac10f885a8cb677aea3"
+    },
+    {
+      "name": "effect_2/effect_2_05",
+      "sourceCell": [
+        1586,
+        0,
+        1983,
+        396
+      ],
+      "alphaBounds": [
+        36,
+        195,
+        355,
+        336
+      ],
+      "path": "art-migration/generation/skin100201-effect2-official-slots-v1/effect_2_05.png",
+      "sha256": "e5debc8befdc23f218336e7a18985de0f684d840cae11a2c02aea9961962b80e"
+    },
+    {
+      "name": "effect_2/effect_2_06",
+      "sourceCell": [
+        0,
+        396,
+        397,
+        793
+      ],
+      "alphaBounds": [
+        55,
+        163,
+        355,
+        299
+      ],
+      "path": "art-migration/generation/skin100201-effect2-official-slots-v1/effect_2_06.png",
+      "sha256": "9dadf8b5d6d4e38ba22d17f8790ee965ec6388ef094237ba73906a6ff7b2542d"
+    },
+    {
+      "name": "effect_2/effect_2_07",
+      "sourceCell": [
+        397,
+        396,
+        793,
+        793
+      ],
+      "alphaBounds": [
+        55,
+        176,
+        362,
+        293
+      ],
+      "path": "art-migration/generation/skin100201-effect2-official-slots-v1/effect_2_07.png",
+      "sha256": "0aa3bee8b96e59ba3c6345f33de1c28c4ef0a6b65dc367f7faeb7caa5f245e1e"
+    },
+    {
+      "name": "effect_2/effect_2_08",
+      "sourceCell": [
+        793,
+        396,
+        1190,
+        793
+      ],
+      "alphaBounds": [
+        50,
+        187,
+        353,
+        296
+      ],
+      "path": "art-migration/generation/skin100201-effect2-official-slots-v1/effect_2_08.png",
+      "sha256": "8ef9160da7478342e992be94f0d1455bdcf2e1c64f1f5fb9c90ccbbe1a1212a2"
+    },
+    {
+      "name": "effect_2/effect_2_09",
+      "sourceCell": [
+        1190,
+        396,
+        1586,
+        793
+      ],
+      "alphaBounds": [
+        51,
+        192,
+        345,
+        300
+      ],
+      "path": "art-migration/generation/skin100201-effect2-official-slots-v1/effect_2_09.png",
+      "sha256": "780a4132fb0c1b6cef4c71005d46fcf6efd9ac778b515d8263b6de32fb3daf29"
+    },
+    {
+      "name": "effect_2/effect_2_10",
+      "sourceCell": [
+        1586,
+        396,
+        1983,
+        793
+      ],
+      "alphaBounds": [
+        39,
+        194,
+        333,
+        302
+      ],
+      "path": "art-migration/generation/skin100201-effect2-official-slots-v1/effect_2_10.png",
+      "sha256": "fc544c8cfd68a58a29692dd59b201093fa84d792748fa8ab2dd0406985806b93"
+    }
+  ],
+  "manualReview": "approved-texture-sequence-for-native-trial",
+  "runtimeIntegrated": false,
+  "provenance": "Official independently drawn ten-texture sequence, native ten-pose composition and local MiniMax material reference. MiniMax full clip rejected, not reused as an approved animation.",
+  "manualNotes": "All ten light/dark source cells inspected. Low twin ribbon wave grows through middle then settles, no extra props or opaque background. Loop and actual native size still require trial."
+}
