@@ -39,10 +39,12 @@
     },
     {
       "key": "common_icon_xiexia",
-      "status": "pending",
+      "status": "repaired-unequip-icon-only",
       "observedIn": "HeroDermaPanel normal AppFacade open",
       "originalManifestBindingFound": false,
-      "kind": "missing-ui-resource-key"
+      "kind": "missing-ui-resource-key",
+      "replacementVersion": "0.73.0",
+      "evidence": "art-migration/versions/0.73.0/unequip-button-native.json"
     },
     {
       "key": "pf_img_baojizi_png",
