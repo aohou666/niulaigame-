@@ -57,10 +57,12 @@
     },
     {
       "key": "common_icon_tujian",
-      "status": "pending",
+      "status": "repaired-catalog-icon-only",
       "observedIn": "HeroDermaPanel normal AppFacade open",
       "originalManifestBindingFound": false,
-      "kind": "missing-ui-resource-key"
+      "kind": "missing-ui-resource-key",
+      "replacementVersion": "0.77.0",
+      "evidence": "art-migration/versions/0.77.0/catalog-button-native.json"
     },
     {
       "key": "common_icon_peidai",
