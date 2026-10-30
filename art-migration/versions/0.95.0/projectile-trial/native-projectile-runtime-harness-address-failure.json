@@ -1,0 +1,17 @@
+{
+  "pass": false,
+  "scope": "Original one-frame projectile at its native scale, normal/EZ; native skeleton, animation and atlas bytes preserved. No save writes.",
+  "resourceDigests": [
+    {
+      "key": "common_newskill_simayi_02_qiu_bin",
+      "url": "assets/effect/common_newskill_simayi_02_qiu_8d6ed433.bin",
+      "digest": "860b53ed6ea6a0cf602fae632cfcd28dbcf637f85a8bee28d2ee9c6cc9081669"
+    },
+    {
+      "key": "common_newskill_simayi_02_qiu_ez_bin",
+      "url": "assets/effect/common_newskill_simayi_02_qiu_ez_29d6b530.bin",
+      "digest": "860b53ed6ea6a0cf602fae632cfcd28dbcf637f85a8bee28d2ee9c6cc9081669"
+    }
+  ],
+  "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert(report.resourceDigests.some(r=>r.key===e.originalKey&&r.digest===e.targetSha256))\n\n    at file:///C:/Users/dongdong/Documents/ChatGPT/%E5%AE%89%E8%A3%85/tools/street-projectile-native-test.mjs:9:25\n    at runNextTicks (node:internal/process/task_queues:65:5)\n    at process.processImmediate (node:internal/timers:472:9)"
+}

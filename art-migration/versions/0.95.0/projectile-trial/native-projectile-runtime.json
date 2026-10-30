@@ -1,0 +1,78 @@
+{
+  "pass": true,
+  "scope": "Original one-frame projectile at its native scale, normal/EZ; native skeleton, animation and atlas bytes preserved. No save writes.",
+  "resourceDigests": [
+    {
+      "key": "common_newskill_simayi_02_qiu_bin",
+      "url": "assets/street/skins/100201/native-fx/common_newskill_simayi_02_qiu_bin-walnut-96e415b7c3294bfc.bin?v=96e415b7c3294bfc",
+      "digest": "96e415b7c3294bfcbb1047847e7fc3dbc21e2626e67e05d5bf5cb9877fe0a21e"
+    },
+    {
+      "key": "common_newskill_simayi_02_qiu_ez_bin",
+      "url": "assets/street/skins/100201/native-fx/common_newskill_simayi_02_qiu_ez_bin-walnut-0ad2d715cd78cc71.bin?v=0ad2d715cd78cc71",
+      "digest": "0ad2d715cd78cc71bf2808bb2039d6b17619865ad3e942bb0fc6aab84625b8b2"
+    }
+  ],
+  "native": [
+    {
+      "model": "common_newskill_simayi_02_qiu",
+      "duration": 0.03333333333333333,
+      "slots": [
+        {
+          "name": "\u9365\u60e7\u7730 1",
+          "texture": "qiu"
+        }
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "bounds": {
+        "$hashCode": 3559,
+        "x": -54,
+        "y": -57,
+        "width": 108,
+        "height": 112
+      }
+    },
+    {
+      "model": "common_newskill_simayi_02_qiu_ez",
+      "duration": 0,
+      "slots": [
+        {
+          "name": "\u9365\u60e7\u7730 1",
+          "texture": "qiu"
+        }
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "bounds": {
+        "$hashCode": 3574,
+        "x": -23,
+        "y": -26,
+        "width": 46,
+        "height": 50
+      }
+    }
+  ],
+  "live": [
+    {
+      "model": "common_newskill_simayi_02_qiu",
+      "elapsed": 42.19999999925494,
+      "callbacks": 1,
+      "completes": 1
+    },
+    {
+      "model": "common_newskill_simayi_02_qiu_ez",
+      "elapsed": 15.199999999254942,
+      "callbacks": 1,
+      "completes": 1
+    }
+  ],
+  "errors": [],
+  "failures": [],
+  "manualReview": "approved-complete-native-loop",
+  "reviewScope": "Static one-texture projectile, original ordinary 1/30s / EZ zero-duration clocks; native screenshot reviewed. This is not a multi-frame new animation."
+}

@@ -1,0 +1,28 @@
+{
+  "sourceTextures": 1,
+  "effect": "qiu",
+  "nativeFrames": 1,
+  "nativeFps": 30,
+  "manualReview": "approved-texture-sequence-for-native-trial",
+  "runtimeIntegrated": false,
+  "tiles": [
+    {
+      "name": "qiu",
+      "path": "art-migration/generation/skin100201-qiu-native-packed-v1/walnut.png",
+      "sha256": "42c0ca2b33d8b778bc734cb298c4885a82ab9746d468ee72d534d4850f560a50"
+    }
+  ],
+  "scope": "One newly drawn static projectile texture; not a newly animated sequence or a complete skin.",
+  "nativeClockVariants": {
+    "normal": {
+      "duration": 1,
+      "fps": 30
+    },
+    "ez": {
+      "duration": 0,
+      "fps": 30,
+      "static": true
+    }
+  },
+  "visualReview": "Both actual native-size light/dark tiles and native DBPlayer normal/EZ screenshot inspected; transparent edge, deep shell identity and original native bounds retained."
+}

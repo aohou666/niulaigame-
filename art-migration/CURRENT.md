@@ -51,3 +51,6 @@ v95目标：真实发射仍旧红白球，init已定位common_newskill_simayi_02
 
 ### v94终态复核
 v94双85/1876/14FX/125属性/6副骨架/1922依赖与全台账通过；4肖像页SHA同v93。v94即将/已经提交，实际SHA以git为准。v95 MiniMax prompt b59a3aa1-dce4-49ca-a827-dba7ea246169正在运行，queue/history为准，不重复提交。Qwen核桃透明源已在skin100201-qiu-hybrid-alpha-v1/official-alpha.png，官方去背景源SHA/provenance齐备；尚未替换弹丸包。
+
+### v95终态/下一步
+v94已提交a141ea66，v95替换qiu普通/EZ各唯一纹理，深沟核桃透明源+原生/实际BattleAI已看，8实际EZ弹丸可见采样，两包SHA核验；普通1/30秒、EZ0静态，原时钟完全保持。61单资源complete，完整角色0/85/皮肤0/125。双85/1876/14FX/125属性/6副骨架/1924依赖通过，4portrait页SHA同v94。v95按93/94/95三版推送，见push-095/实际gitSHA。MiniMax impact-v1已collect124全contact查看，保留原作虹彩/首帧核桃突变拒收，queue现空。官方新13帧核桃碎壳source已保存generation/skin100201-impact-official13-v1（5x3，末2空），alpha有，待native13逐帧+连续时序验收；尚未接入/批准。无需重新生成已完成source，不把失败素材算换皮。上下文以本末段为准，前段历史不覆盖新状态。

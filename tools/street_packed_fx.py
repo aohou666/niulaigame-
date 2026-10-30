@@ -48,7 +48,15 @@ def verify_container(cfg):
   proofFile=ROOT/cfg['battleRuntimeAuditPath'];assert sha(proofFile.read_bytes())==cfg['battleRuntimeAuditSha256'],'Packed battle proof changed';proof=json.loads(proofFile.read_text('utf8'));assert proof['pass'] and proof['mainSaveUnchanged'] and proof['isolatedSaveRestored'],'Packed battle proof incomplete'
   assert any(e['dermaCode']==cfg['skinCode'] for e in proof['payload']['allies']),'Packed effect skin not actually equipped'
   assert {name for row in proof['samples'] for name in row['active']}==set(row['name'] for row in review['tiles']),'Actual battle did not visit every replaced texture'
- return {'originalKey':cfg['originalKey'],'imageSize':list(newIm.size),'decodedBytes':newIm.width*newIm.height*4,'changedRegions':changed,'unchangedRegions':len(regions)-len(changed),'skeletonAndAtlasByteIdentical':True,'nativeAnimations':[(arm['name'],[(anim['name'],anim['duration']) for anim in arm.get('animation',[])]) for arm in oldData['skeleton']['armature']],'completeContainerReplaced':False}
+ if cfg.get('projectileBattleRuntimeAuditSha256'):
+  proofFile=ROOT/cfg['projectileBattleRuntimeAuditPath'];assert sha(proofFile.read_bytes())==cfg['projectileBattleRuntimeAuditSha256'],'Projectile battle proof changed'
+  proof=json.loads(proofFile.read_text('utf8'));assert proof['pass'] and proof['mainSaveUnchanged'] and proof['isolatedSaveRestored']
+  assert any(e['dermaCode']==cfg['skinCode'] for e in proof['payload']['allies']),'Projectile skin was not equipped'
+  assert any(r['visible'] and r['onStage'] and 'qiu' in r['slots'] for r in proof['projectileSamples']),'Projectile never visible in actual battle'
+  assert any(r['key']==cfg['originalKey'] and r['digest']==cfg['targetSha256'] for r in proof['projectileResourceDigests']),'Battle projectile bytes differ'
+ complete=set(changed)=={r['name'] for r in regions}
+ assert not cfg.get('completeContainerReplaced') or complete,'Claimed whole container still has original textures'
+ return {'originalKey':cfg['originalKey'],'imageSize':list(newIm.size),'decodedBytes':newIm.width*newIm.height*4,'changedRegions':changed,'unchangedRegions':len(regions)-len(changed),'skeletonAndAtlasByteIdentical':True,'nativeAnimations':[(arm['name'],[(anim['name'],anim.get('duration',0)) for anim in arm.get('animation',[])]) for arm in oldData['skeleton']['armature']],'completeContainerReplaced':complete}
 
 def prepare(args):
  source=Path(args.source);out=ROOT/args.out;assert not out.exists(),'Use a separate source revision'

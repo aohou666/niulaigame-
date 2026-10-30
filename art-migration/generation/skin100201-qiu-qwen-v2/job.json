@@ -1,0 +1,50 @@
+{
+  "promptId": "efa367d9-f83f-4672-afe1-2b4ffb7264fb",
+  "submittedUtc": "2026-10-30T08:09:28Z",
+  "status": "generated-unreviewed",
+  "provider": "local-comfyui",
+  "workflowSha256": "8a8bb3ad263d01fa9351f296d9ad1e11962e918795d2ff76b0a1970b12665b9d",
+  "response": {
+    "prompt_id": "efa367d9-f83f-4672-afe1-2b4ffb7264fb",
+    "number": 20,
+    "node_errors": {}
+  },
+  "comfyStatus": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "efa367d9-f83f-4672-afe1-2b4ffb7264fb",
+          "timestamp": 1793347768284
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "1",
+            "2",
+            "3"
+          ],
+          "prompt_id": "efa367d9-f83f-4672-afe1-2b4ffb7264fb",
+          "timestamp": 1793347768285
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "efa367d9-f83f-4672-afe1-2b4ffb7264fb",
+          "timestamp": 1793347792337
+        }
+      ]
+    ]
+  },
+  "outputs": [
+    {
+      "path": "art-migration/generation/skin100201-qiu-qwen-v2/skin100201-qiu-qwen-v2_00001_.png",
+      "sha256": "e72dcdc2e64bba249325cb83702253ad23a960204567c0bb68b828ff017c72ed"
+    }
+  ]
+}

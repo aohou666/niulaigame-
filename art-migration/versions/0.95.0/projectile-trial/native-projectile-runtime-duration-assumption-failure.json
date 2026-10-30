@@ -1,0 +1,61 @@
+{
+  "pass": false,
+  "scope": "Original one-frame projectile at its native scale, normal/EZ; native skeleton, animation and atlas bytes preserved. No save writes.",
+  "resourceDigests": [
+    {
+      "key": "common_newskill_simayi_02_qiu_bin",
+      "url": "assets/street/skins/100201/native-fx/common_newskill_simayi_02_qiu_bin-walnut-96e415b7c3294bfc.bin?v=96e415b7c3294bfc",
+      "digest": "96e415b7c3294bfcbb1047847e7fc3dbc21e2626e67e05d5bf5cb9877fe0a21e"
+    },
+    {
+      "key": "common_newskill_simayi_02_qiu_ez_bin",
+      "url": "assets/street/skins/100201/native-fx/common_newskill_simayi_02_qiu_ez_bin-walnut-0ad2d715cd78cc71.bin?v=0ad2d715cd78cc71",
+      "digest": "0ad2d715cd78cc71bf2808bb2039d6b17619865ad3e942bb0fc6aab84625b8b2"
+    }
+  ],
+  "native": [
+    {
+      "model": "common_newskill_simayi_02_qiu",
+      "duration": 0.03333333333333333,
+      "slots": [
+        {
+          "name": "图层 1",
+          "texture": "qiu"
+        }
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "bounds": {
+        "$hashCode": 3559,
+        "x": -54,
+        "y": -57,
+        "width": 108,
+        "height": 112
+      }
+    },
+    {
+      "model": "common_newskill_simayi_02_qiu_ez",
+      "duration": 0,
+      "slots": [
+        {
+          "name": "图层 1",
+          "texture": "qiu"
+        }
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "bounds": {
+        "$hashCode": 3575,
+        "x": -23,
+        "y": -26,
+        "width": 46,
+        "height": 50
+      }
+    }
+  ],
+  "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert(Math.abs(r.duration-1/30)<1e-6)\n\n    at file:///C:/Users/dongdong/Documents/ChatGPT/%E5%AE%89%E8%A3%85/tools/street-projectile-native-test.mjs:11:32"
+}

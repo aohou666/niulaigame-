@@ -47,7 +47,7 @@ def main():
  report['baseHeroDetailRuntime']=json.loads(baseRuntimePath.read_text('utf8')) if baseRuntimePath.exists() else None
  report['promotedStreetArtVerification']=verify_street_art()
  containerBindings=loadjs(GAME/'street-art-data.js').get('containers',[])
- report['nativePackedRegionBindings']={'containers':[{'originalKey':r['originalKey'],'skinCode':r.get('skinCode'),'regions':r['changedRegions'],'completeContainerReplaced':False,'nativeAnimation':r.get('nativeAnimationReplacement'),'runtimeAudit':r.get('nativeRuntimeAuditPath')} for r in containerBindings],'note':'Only declared texture regions replaced; unchanged body/effect regions are still original. Ordinary/EZ are two versions of the same skin, not two independent skins.'}
+ report['nativePackedRegionBindings']={'containers':[{'originalKey':r['originalKey'],'skinCode':r.get('skinCode'),'regions':r['changedRegions'],'completeContainerReplaced':next((v['completeContainerReplaced'] for v in report['promotedStreetArtVerification'].get('nativePackedRegions',[]) if v['originalKey']==r['originalKey']),False),'nativeAnimation':r.get('nativeAnimationReplacement'),'runtimeAudit':r.get('nativeRuntimeAuditPath')} for r in containerBindings],'note':'Only declared texture regions replaced; unchanged body/effect regions are still original. Ordinary/EZ are two versions of the same skin, not two independent skins.'}
  verifiedContainerKeys={r['originalKey'] for r in report['promotedStreetArtVerification'].get('nativePackedRegions',[])}
  confirmedRegions=0;confirmedAnimations=0;logicalEffects=set()
  for binding in containerBindings:
