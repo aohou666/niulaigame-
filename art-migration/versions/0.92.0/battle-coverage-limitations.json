@@ -1,0 +1,33 @@
+{
+  "scope": "All attempts retained; failed supplementary single-enemy observations do not establish a rendering fault or a complete real-battle21-frame loop. Complete21-frame timing has separate native-player proof.",
+  "attempts": [
+    {
+      "report": "art-migration/versions/0.92.0/skin-hit-battle-all-three-native-fx.json",
+      "pass": false,
+      "limitation": "Single enemy3 hell10 lethal hit interrupted at0..2 before required frame5.",
+      "mainSaveUnchanged": true,
+      "isolatedSaveRestored": true
+    },
+    {
+      "report": "art-migration/versions/0.92.0/skin-hit-battle-normal-stage-all-three.json",
+      "pass": false,
+      "limitation": "Single enemy3 normal1 produced no negative incoming damage, so hurt-trigger coverage unavailable.",
+      "mainSaveUnchanged": true,
+      "isolatedSaveRestored": true
+    },
+    {
+      "report": "art-migration/versions/0.92.0/skin-hit-battle-normal10-all-three.json",
+      "pass": false,
+      "limitation": "Single enemy3 normal10 lethal hit interrupted at0..2 before required frame5.",
+      "mainSaveUnchanged": true,
+      "isolatedSaveRestored": true
+    },
+    {
+      "report": "art-migration/versions/0.92.0/skin-hit-battle-varied-enemies-all-three.json",
+      "pass": true,
+      "limitation": "Eight varied enemies:10 different hurt frames before interruption, all3 approved FX groups actually visible; not a complete21-frame real-battle loop claim.",
+      "mainSaveUnchanged": true,
+      "isolatedSaveRestored": true
+    }
+  ]
+}

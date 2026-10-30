@@ -1,0 +1,5827 @@
+{
+  "pass": true,
+  "label": "preserved-effect2",
+  "scope": "Native packed effect_2: independently drawn texture regions on original native30fps timeline, ordinary/EZ; not complete skin/body replacement.",
+  "requests": [
+    "http://127.0.0.1:8787/street-native-fx.js?v=0.91.0",
+    "http://127.0.0.1:8787/assets/street/skins/100201/native-fx/hero_skin_002_01-effect_3-5fed9cc9fdd4812d.bin?v=5fed9cc9fdd4812d",
+    "http://127.0.0.1:8787/assets/street/skins/100201/native-fx/hero_skin_002_01-effect_3-5fed9cc9fdd4812d.bin?v=5fed9cc9fdd4812d",
+    "http://127.0.0.1:8787/assets/street/skins/100201/native-fx/hero_skin_002_01_ez-effect_3-ec7245dcb0d40380.bin?v=ec7245dcb0d40380",
+    "http://127.0.0.1:8787/assets/street/skins/100201/native-fx/hero_skin_002_01_ez-effect_3-ec7245dcb0d40380.bin?v=ec7245dcb0d40380"
+  ],
+  "artAudit": {
+    "installed": true,
+    "bindings": [
+      {
+        "original": "dk_02_bg_01_jpg",
+        "target": "street_noodle_plaza_battle_jpg",
+        "url": "assets/street/environments/noodle-plaza-battle.jpg"
+      },
+      {
+        "original": "common_btn_5_png",
+        "target": "street_ui_common_btn_5_png",
+        "url": "assets/street/ui/controls/common_btn_5_png.png"
+      },
+      {
+        "original": "common_btn_an_png",
+        "target": "street_ui_common_btn_an_png",
+        "url": "assets/street/ui/controls/common_btn_an_png.png"
+      },
+      {
+        "original": "common_btn_hong_png",
+        "target": "street_ui_common_btn_hong_png",
+        "url": "assets/street/ui/controls/common_btn_hong_png.png"
+      },
+      {
+        "original": "common_btn_huang_png",
+        "target": "street_ui_common_btn_huang_png",
+        "url": "assets/street/ui/controls/common_btn_huang_png.png"
+      },
+      {
+        "original": "common_btn_lan3_png",
+        "target": "street_ui_common_btn_lan3_png",
+        "url": "assets/street/ui/controls/common_btn_lan3_png.png"
+      },
+      {
+        "original": "common_btn_qing_png",
+        "target": "street_ui_common_btn_qing_png",
+        "url": "assets/street/ui/controls/common_btn_qing_png.png"
+      },
+      {
+        "original": "common_btn_zise_png",
+        "target": "street_ui_common_btn_zise_png",
+        "url": "assets/street/ui/controls/common_btn_zise_png.png"
+      },
+      {
+        "original": "common_btn_fanhui_png",
+        "target": "street_ui_common_btn_fanhui_png",
+        "url": "assets/street/ui/controls/common_btn_fanhui_png.png"
+      },
+      {
+        "original": "common_btn_guanbi_png",
+        "target": "street_ui_common_btn_guanbi_png",
+        "url": "assets/street/ui/controls/common_btn_guanbi_png.png"
+      },
+      {
+        "original": "common_btn_dagou_png",
+        "target": "street_ui_common_btn_dagou_png",
+        "url": "assets/street/ui/controls/common_btn_dagou_png.png"
+      },
+      {
+        "original": "beibao_img_gou_png",
+        "target": "street_ui_beibao_img_gou_png",
+        "url": "assets/street/ui/controls/beibao_img_gou_png.png"
+      },
+      {
+        "original": "common_btn_jiantou_png",
+        "target": "street_ui_common_btn_jiantou_png",
+        "url": "assets/street/ui/controls/common_btn_jiantou_png.png"
+      },
+      {
+        "original": "common_btn_shengji_png",
+        "target": "street_ui_common_btn_shengji_png",
+        "url": "assets/street/ui/controls/common_btn_shengji_png.png"
+      },
+      {
+        "original": "common_btn_tianjia_png",
+        "target": "street_ui_common_btn_tianjia_png",
+        "url": "assets/street/ui/controls/common_btn_tianjia_png.png"
+      },
+      {
+        "original": "common_btn_tianjia_reschange_bh523_png",
+        "target": "street_ui_common_btn_tianjia_reschange_bh523_png",
+        "url": "assets/street/ui/controls/common_btn_tianjia_reschange_bh523_png.png"
+      },
+      {
+        "original": "common_btn_shandian_png",
+        "target": "street_ui_common_btn_shandian_png",
+        "url": "assets/street/ui/controls/common_btn_shandian_png.png"
+      },
+      {
+        "original": "common_btn_shanchu_png",
+        "target": "street_ui_common_btn_shanchu_png",
+        "url": "assets/street/ui/controls/common_btn_shanchu_png.png"
+      },
+      {
+        "original": "chouka_btn_qiehuan_png",
+        "target": "street_ui_chouka_btn_qiehuan_png",
+        "url": "assets/street/ui/controls/chouka_btn_qiehuan_png.png"
+      },
+      {
+        "original": "common_btn_qiehuan_new_png",
+        "target": "street_ui_common_btn_qiehuan_new_png",
+        "url": "assets/street/ui/controls/common_btn_qiehuan_new_png.png"
+      },
+      {
+        "original": "wujiang_icon_xiangqing_png",
+        "target": "street_ui_wujiang_icon_xiangqing_png",
+        "url": "assets/street/ui/controls/wujiang_icon_xiangqing_png.png"
+      },
+      {
+        "original": "main_img_zhujue_png",
+        "target": "street_captain_main_img_zhujue_png",
+        "url": "assets/street/ui/main_img_zhujue_png.png"
+      },
+      {
+        "original": "wj_img_zhujue_png",
+        "target": "street_captain_wj_img_zhujue_png",
+        "url": "assets/street/ui/wj_img_zhujue_png.png"
+      },
+      {
+        "original": "_hero_m_json.wujiang_img_renwu",
+        "target": "street_captain__hero_m_json_wujiang_img_renwu",
+        "url": "assets/street/ui/_hero_m_json.wujiang_img_renwu.png"
+      },
+      {
+        "original": "wujiang_bg_js_jpg",
+        "target": "street_environment_wujiang_bg_js_jpg",
+        "url": "assets/street/environments/workshop-courtyard-menu.jpg"
+      },
+      {
+        "original": "common_icon_jinbi_png",
+        "target": "street_currency_common_icon_jinbi_png",
+        "url": "assets/street/ui/currency/common_icon_jinbi_png.png"
+      },
+      {
+        "original": "common_icon_tongbi_png",
+        "target": "street_currency_common_icon_tongbi_png",
+        "url": "assets/street/ui/currency/common_icon_tongbi_png.png"
+      },
+      {
+        "original": "common_icon_yuanbao2_png",
+        "target": "street_currency_common_icon_yuanbao2_png",
+        "url": "assets/street/ui/currency/common_icon_yuanbao2_png.png"
+      },
+      {
+        "original": "common_icon_yuanbao2_reschange_png",
+        "target": "street_currency_common_icon_yuanbao2_reschange_png",
+        "url": "assets/street/ui/currency/common_icon_yuanbao2_reschange_png.png"
+      },
+      {
+        "original": "common_icon_yuanbao2_reschange_bh523_png",
+        "target": "street_currency_common_icon_yuanbao2_reschange_bh523_png",
+        "url": "assets/street/ui/currency/common_icon_yuanbao2_reschange_bh523_png.png"
+      },
+      {
+        "original": "common_icon_yuanbao2_reschange_bh523zhsg_png",
+        "target": "street_currency_common_icon_yuanbao2_reschange_bh523zhsg_png",
+        "url": "assets/street/ui/currency/common_icon_yuanbao2_reschange_bh523zhsg_png.png"
+      },
+      {
+        "original": "common_icon_yuanbao2_reschange_shengben5_png",
+        "target": "street_currency_common_icon_yuanbao2_reschange_shengben5_png",
+        "url": "assets/street/ui/currency/common_icon_yuanbao2_reschange_shengben5_png.png"
+      },
+      {
+        "original": "common_icon_yuanbao2_reschange_shengben4_png",
+        "target": "street_currency_common_icon_yuanbao2_reschange_shengben4_png",
+        "url": "assets/street/ui/currency/common_icon_yuanbao2_reschange_shengben4_png.png"
+      },
+      {
+        "original": "common_icon_yuanbao2_reschange_shengben6_png",
+        "target": "street_currency_common_icon_yuanbao2_reschange_shengben6_png",
+        "url": "assets/street/ui/currency/common_icon_yuanbao2_reschange_shengben6_png.png"
+      },
+      {
+        "original": "common_icon_jingyanshu_png",
+        "target": "street_currency_common_icon_jingyanshu_png",
+        "url": "assets/street/ui/currency/common_icon_jingyanshu_png.png"
+      },
+      {
+        "original": "common_icon_tili_png",
+        "target": "street_currency_common_icon_tili_png",
+        "url": "assets/street/ui/currency/common_icon_tili_png.png"
+      },
+      {
+        "original": "common_icon_vipjingyan_png",
+        "target": "street_currency_common_icon_vipjingyan_png",
+        "url": "assets/street/ui/currency/common_icon_vipjingyan_png.png"
+      },
+      {
+        "original": "common_icon_yuanbaofudai_png",
+        "target": "street_currency_common_icon_yuanbaofudai_png",
+        "url": "assets/street/ui/currency/common_icon_yuanbaofudai_png.png"
+      },
+      {
+        "original": "common_icon_ziyuanbaoxiang2_png",
+        "target": "street_currency_common_icon_ziyuanbaoxiang2_png",
+        "url": "assets/street/ui/currency/common_icon_ziyuanbaoxiang2_png.png"
+      },
+      {
+        "original": "common_icon_dianfengsaijinbi_png",
+        "target": "street_currency_common_icon_dianfengsaijinbi_png",
+        "url": "assets/street/ui/currency/common_icon_dianfengsaijinbi_png.png"
+      },
+      {
+        "original": "_hero_m_json.common_img_liebiao_1",
+        "target": "street_hero_list_cards_common_img_liebiao_1_png",
+        "url": "assets/street/ui/hero-list-cards/common_img_liebiao_1_png.png"
+      },
+      {
+        "original": "_hero_m_json.common_img_liebiao_2",
+        "target": "street_hero_list_cards_common_img_liebiao_2_png",
+        "url": "assets/street/ui/hero-list-cards/common_img_liebiao_2_png.png"
+      },
+      {
+        "original": "_hero_m_json.common_img_liebiao_3",
+        "target": "street_hero_list_cards_common_img_liebiao_3_png",
+        "url": "assets/street/ui/hero-list-cards/common_img_liebiao_3_png.png"
+      },
+      {
+        "original": "_hero_m_json.common_img_liebiao_4",
+        "target": "street_hero_list_cards_common_img_liebiao_4_png",
+        "url": "assets/street/ui/hero-list-cards/common_img_liebiao_4_png.png"
+      },
+      {
+        "original": "_hero_m_json.common_img_liebiao_5",
+        "target": "street_hero_list_cards_common_img_liebiao_5_png",
+        "url": "assets/street/ui/hero-list-cards/common_img_liebiao_5_png.png"
+      },
+      {
+        "original": "_hero_m_json.common_img_liebiao_6",
+        "target": "street_hero_list_cards_common_img_liebiao_6_png",
+        "url": "assets/street/ui/hero-list-cards/common_img_liebiao_6_png.png"
+      },
+      {
+        "original": "_main_m_json.main_icon_wujiang",
+        "target": "street_navigation__main_m_json.main_icon_wujiang",
+        "url": "assets/street/ui/navigation/_main_m_json.main_icon_wujiang.png"
+      },
+      {
+        "original": "_main_m_json.main_icon_zhuangbei",
+        "target": "street_navigation__main_m_json.main_icon_zhuangbei",
+        "url": "assets/street/ui/navigation/_main_m_json.main_icon_zhuangbei.png"
+      },
+      {
+        "original": "_main_m_json.main_icon_ybd",
+        "target": "street_navigation__main_m_json.main_icon_ybd",
+        "url": "assets/street/ui/navigation/_main_m_json.main_icon_ybd.png"
+      },
+      {
+        "original": "_main_m_json.main_icon_zhandou",
+        "target": "street_navigation__main_m_json.main_icon_zhandou",
+        "url": "assets/street/ui/navigation/_main_m_json.main_icon_zhandou.png"
+      },
+      {
+        "original": "_main_m_json.main_icon_baoxiang",
+        "target": "street_navigation__main_m_json.main_icon_baoxiang",
+        "url": "assets/street/ui/navigation/_main_m_json.main_icon_baoxiang.png"
+      },
+      {
+        "original": "_main_m_json.main_icon_lilian",
+        "target": "street_navigation__main_m_json.main_icon_lilian",
+        "url": "assets/street/ui/navigation/_main_m_json.main_icon_lilian.png"
+      },
+      {
+        "original": "_main_m_json.main_icon_gonghui",
+        "target": "street_navigation__main_m_json.main_icon_gonghui",
+        "url": "assets/street/ui/navigation/_main_m_json.main_icon_gonghui.png"
+      },
+      {
+        "original": "_hangUpSystem_m_json.main_img_tubiaodik",
+        "target": "street_navigation__hangUpSystem_m_json.main_img_tubiaodik",
+        "url": "assets/street/ui/navigation/_hangUpSystem_m_json.main_img_tubiaodik.png"
+      },
+      {
+        "original": "_main_m_json.common_btn_huang",
+        "target": "street_sheet__main_m_json_common_btn_huang",
+        "url": "assets/street/ui/sheet-variants/_main_m_json.common_btn_huang.png"
+      },
+      {
+        "original": "_main_m_json.common_btn_qing",
+        "target": "street_sheet__main_m_json_common_btn_qing",
+        "url": "assets/street/ui/sheet-variants/_main_m_json.common_btn_qing.png"
+      },
+      {
+        "original": "_btn_lb_m_json.common_btn_shengji",
+        "target": "street_sheet__btn_lb_m_json_common_btn_shengji",
+        "url": "assets/street/ui/sheet-variants/_btn_lb_m_json.common_btn_shengji.png"
+      },
+      {
+        "original": "_fight_m_json.zbxx_img_vs",
+        "target": "street_battle-controls__fight_m_json.zbxx_img_vs",
+        "url": "assets/street/ui/battle-controls/_fight_m_json.zbxx_img_vs.png"
+      },
+      {
+        "original": "_fight_m_json.zbxx_img_lanse",
+        "target": "street_battle-controls__fight_m_json.zbxx_img_lanse",
+        "url": "assets/street/ui/battle-controls/_fight_m_json.zbxx_img_lanse.png"
+      },
+      {
+        "original": "_fight_m_json.zbxx_img_hongse",
+        "target": "street_battle-controls__fight_m_json.zbxx_img_hongse",
+        "url": "assets/street/ui/battle-controls/_fight_m_json.zbxx_img_hongse.png"
+      },
+      {
+        "original": "_fight_m_json.zbxx_btn_kuaijin",
+        "target": "street_battle-controls__fight_m_json.zbxx_btn_kuaijin",
+        "url": "assets/street/ui/battle-controls/_fight_m_json.zbxx_btn_kuaijin.png"
+      },
+      {
+        "original": "common_btn_4_png",
+        "target": "street_battle-controls_common_btn_4_png",
+        "url": "assets/street/ui/battle-controls/common_btn_4_png.png"
+      },
+      {
+        "original": "_btn_lb_m_json.common_btn_shuxing",
+        "target": "street_battle-controls__btn_lb_m_json.common_btn_shuxing",
+        "url": "assets/street/ui/battle-controls/_btn_lb_m_json.common_btn_shuxing.png"
+      },
+      {
+        "original": "_btn_lb_m_json.common_btn_liaotian",
+        "target": "street_battle-controls__btn_lb_m_json.common_btn_liaotian",
+        "url": "assets/street/ui/battle-controls/_btn_lb_m_json.common_btn_liaotian.png"
+      },
+      {
+        "original": "zdzl_btn_zdzl_png",
+        "target": "street_battle-controls_zdzl_btn_zdzl_png",
+        "url": "assets/street/ui/battle-controls/zdzl_btn_zdzl_png.png"
+      },
+      {
+        "original": "wujiang_img_bg1_png",
+        "target": "street_hero_details_workshop",
+        "url": "assets/street/ui/hero-details/workshop.png"
+      },
+      {
+        "original": "common_img_dakuang_10_png",
+        "target": "street_hero_details_panel",
+        "url": "assets/street/ui/hero-details/panel.png"
+      },
+      {
+        "original": "_hero_m_json.wujiang_txt_wjyc",
+        "target": "street_hero_details_title",
+        "url": "assets/street/ui/hero-details/title.png"
+      },
+      {
+        "original": "dk_01_bg_01_jpg",
+        "target": "street_cabbage_courtyard_battle_jpg",
+        "url": "assets/street/environments/cabbage-courtyard-battle-v1.jpg"
+      },
+      {
+        "original": "login13_bg_jpg",
+        "target": "street_courier_shutter_loading_jpg",
+        "url": "assets/street/ui/loading/courier-shutter-v1.jpg"
+      },
+      {
+        "original": "denglu_img_jindudi_png",
+        "target": "street_loading_denglu_img_jindudi_png",
+        "url": "assets/street/ui/loading/industrial-gauge-housing-v1.png"
+      },
+      {
+        "original": "denglu_img_jindutiao_png",
+        "target": "street_loading_denglu_img_jindutiao_png",
+        "url": "assets/street/ui/loading/industrial-gauge-fill-v1.png"
+      },
+      {
+        "original": "denglu_img_heitiao_png",
+        "target": "street_loading_denglu_img_heitiao_png",
+        "url": "assets/street/ui/loading/industrial-gauge-shadow-v1.png"
+      },
+      {
+        "original": "common_btn_lingqu_png",
+        "target": "street_claim_enamel_v1_png",
+        "url": "assets/street/ui/controls/claim-enamel-v1.png"
+      },
+      {
+        "original": "phb_btn_lingqu0",
+        "target": "street_rank_claim_disabled_png",
+        "url": "assets/street/ui/controls/rank-claim-disabled-v1.png"
+      },
+      {
+        "original": "phb_btn_lingqu1",
+        "target": "street_rank_claim_enabled_png",
+        "url": "assets/street/ui/controls/rank-claim-enabled-v1.png"
+      },
+      {
+        "original": "fhqp_bg_ditu_png",
+        "target": "street_community_club_lobby_jpg",
+        "url": "assets/street/environments/community-club-lobby-v1.jpg"
+      },
+      {
+        "original": "fhqp_img_wushuangdoupai_png",
+        "target": "street_neighborhood_title_png",
+        "url": "assets/street/ui/controls/neighborhood-title-v1.png"
+      },
+      {
+        "original": "fhqp_img_longtou_png",
+        "target": "street_neighborhood_bull_crest_png",
+        "url": "assets/street/ui/controls/neighborhood-bull-crest-v1.png"
+      },
+      {
+        "original": "fhqp_btn_duizhan_png",
+        "target": "street_neighborhood_duel_png",
+        "url": "assets/street/ui/controls/neighborhood-duel-v1.png"
+      },
+      {
+        "original": "fhqp_btn_zhanyi_png",
+        "target": "street_neighborhood_campaign_png",
+        "url": "assets/street/ui/controls/neighborhood-campaign-v1.png"
+      },
+      {
+        "original": "pf_img_ditu_png",
+        "target": "street_skin_panel_showroom",
+        "url": "assets/street/ui/skin-panel/showroom-50c5f6fb54258497.png"
+      },
+      {
+        "original": "pf_img_xuanzhong_png",
+        "target": "street_skin_panel_selected",
+        "url": "assets/street/ui/skin-panel/selected-419a43f076b18d92.png"
+      },
+      {
+        "original": "common_icon_xiexia",
+        "target": "street_skin_panel_unequip",
+        "url": "assets/street/ui/skin-panel/unequip-8d146006b5a6fda3.png"
+      },
+      {
+        "original": "common_icon_peidai",
+        "target": "street_skin_panel_equip",
+        "url": "assets/street/ui/skin-panel/equip-f08f4e03495e074c.png"
+      },
+      {
+        "original": "common_icon_tujian",
+        "target": "street_skin_panel_catalog",
+        "url": "assets/street/ui/skin-panel/catalog-39ca9335b654bc84.png"
+      },
+      {
+        "original": "pf_img_yichuandai_png",
+        "target": "street_skin_panel_worn",
+        "url": "assets/street/ui/skin-panel/worn-43066efdce574208.png"
+      },
+      {
+        "original": "pf_img_jingqingqidai_png",
+        "target": "street_skin_panel_coming_soon",
+        "url": "assets/street/ui/skin-panel/coming-soon-948388b37e6d5228.png"
+      },
+      {
+        "original": "common_img_heiditiao_01_png",
+        "target": "street_skin_panel_namebar",
+        "url": "assets/street/ui/skin-panel/namebar-60cb64f78873b6ca.png"
+      },
+      {
+        "original": "common_img_heiditiao_03_png",
+        "target": "street_skin_panel_attribute",
+        "url": "assets/street/ui/skin-panel/attribute-58a34117672b5491.png"
+      },
+      {
+        "original": "common_img_jichukuang_09_png",
+        "target": "street_skin_panel_outer",
+        "url": "assets/street/ui/skin-panel/outer-b4611828029f3f08.png"
+      },
+      {
+        "original": "common_img_dikuang03_png",
+        "target": "street_skin_panel_small",
+        "url": "assets/street/ui/skin-panel/small-0027630f010d0d07.png"
+      },
+      {
+        "original": "bycc_img_ditu_png",
+        "target": "street_city_community_courtyard_png",
+        "url": "assets/street/environments/community-courtyard.png"
+      },
+      {
+        "original": "hero_skin_002_01_bin",
+        "target": "street_hero_skin_002_01_effect_3_bin",
+        "url": "assets/street/skins/100201/native-fx/hero_skin_002_01-effect_3-5fed9cc9fdd4812d.bin"
+      },
+      {
+        "original": "hero_skin_002_01_ez_bin",
+        "target": "street_hero_skin_002_01_ez_effect_3_bin",
+        "url": "assets/street/skins/100201/native-fx/hero_skin_002_01_ez-effect_3-ec7245dcb0d40380.bin"
+      }
+    ],
+    "errors": [],
+    "earlyConfigInstalls": 1
+  },
+  "resourceDigests": [
+    {
+      "key": "hero_skin_002_01_bin",
+      "resolved": "street_hero_skin_002_01_effect_3_bin",
+      "url": "assets/street/skins/100201/native-fx/hero_skin_002_01-effect_3-5fed9cc9fdd4812d.bin?v=5fed9cc9fdd4812d",
+      "digest": "5fed9cc9fdd4812d4304caf721662ed02745117a9aa2b10f2f7eee0b4d2129d2",
+      "bytes": 845413,
+      "parsedType": "e"
+    },
+    {
+      "key": "hero_skin_002_01_ez_bin",
+      "resolved": "street_hero_skin_002_01_ez_effect_3_bin",
+      "url": "assets/street/skins/100201/native-fx/hero_skin_002_01_ez-effect_3-ec7245dcb0d40380.bin?v=ec7245dcb0d40380",
+      "digest": "ec7245dcb0d40380b4b4eed28c863bda1f0b79e048b6d72313a2681d26e5d972",
+      "bytes": 324143,
+      "parsedType": "e"
+    }
+  ],
+  "slotDebug": [
+    {
+      "name": "effect_2_01",
+      "displayIndex": -1,
+      "privateIndex": -1,
+      "hasDisplay": false,
+      "keys": [
+        "_displayFrames",
+        "_rawDisplay",
+        "_meshDisplay",
+        "_display",
+        "_armatureDisplay",
+        "_renderDisplay",
+        "displayController",
+        "_displayDataDirty",
+        "_displayDirty",
+        "_textureDirty",
+        "_visibleDirty",
+        "_visible",
+        "_displayIndex",
+        "_animationDisplayIndex",
+        "_displayFrame",
+        "_textureData"
+      ]
+    },
+    {
+      "name": "effect_2_02",
+      "displayIndex": -1,
+      "privateIndex": -1,
+      "hasDisplay": false,
+      "keys": [
+        "_displayFrames",
+        "_rawDisplay",
+        "_meshDisplay",
+        "_display",
+        "_armatureDisplay",
+        "_renderDisplay",
+        "displayController",
+        "_displayDataDirty",
+        "_displayDirty",
+        "_textureDirty",
+        "_visibleDirty",
+        "_visible",
+        "_displayIndex",
+        "_animationDisplayIndex",
+        "_displayFrame",
+        "_textureData"
+      ]
+    }
+  ],
+  "frames": [
+    {
+      "frame": 0,
+      "rows": [
+        {
+          "model": "hero_skin_002_01",
+          "currentTime": 1e-7,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_01",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_01"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        },
+        {
+          "model": "hero_skin_002_01_ez",
+          "currentTime": 1e-7,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_01",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_01"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        }
+      ]
+    },
+    {
+      "frame": 1,
+      "rows": [
+        {
+          "model": "hero_skin_002_01",
+          "currentTime": 0.033333433333333336,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_01",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_01"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        },
+        {
+          "model": "hero_skin_002_01_ez",
+          "currentTime": 0.033333433333333336,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_01",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_01"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "rows": [
+        {
+          "model": "hero_skin_002_01",
+          "currentTime": 0.06666676666666667,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_02",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_02"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        },
+        {
+          "model": "hero_skin_002_01_ez",
+          "currentTime": 0.06666676666666667,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_02",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_02"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "rows": [
+        {
+          "model": "hero_skin_002_01",
+          "currentTime": 0.1000001,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_02",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_02"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        },
+        {
+          "model": "hero_skin_002_01_ez",
+          "currentTime": 0.1000001,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_02",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_02"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "rows": [
+        {
+          "model": "hero_skin_002_01",
+          "currentTime": 0.13333343333333333,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_03",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_03"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        },
+        {
+          "model": "hero_skin_002_01_ez",
+          "currentTime": 0.13333343333333333,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_03",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_03"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "rows": [
+        {
+          "model": "hero_skin_002_01",
+          "currentTime": 0.16666676666666666,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_03",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_03"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        },
+        {
+          "model": "hero_skin_002_01_ez",
+          "currentTime": 0.16666676666666666,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_03",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_03"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "rows": [
+        {
+          "model": "hero_skin_002_01",
+          "currentTime": 0.2000001,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_04",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_04"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        },
+        {
+          "model": "hero_skin_002_01_ez",
+          "currentTime": 0.2000001,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_04",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_04"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "rows": [
+        {
+          "model": "hero_skin_002_01",
+          "currentTime": 0.23333343333333334,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_04",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_04"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        },
+        {
+          "model": "hero_skin_002_01_ez",
+          "currentTime": 0.23333343333333334,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_04",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_04"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "rows": [
+        {
+          "model": "hero_skin_002_01",
+          "currentTime": 0.26666676666666667,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_05",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_05"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        },
+        {
+          "model": "hero_skin_002_01_ez",
+          "currentTime": 0.26666676666666667,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_05",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_05"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "rows": [
+        {
+          "model": "hero_skin_002_01",
+          "currentTime": 0.3000001,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_05",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_05"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        },
+        {
+          "model": "hero_skin_002_01_ez",
+          "currentTime": 0.3000001,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_05",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_05"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        }
+      ]
+    },
+    {
+      "frame": 10,
+      "rows": [
+        {
+          "model": "hero_skin_002_01",
+          "currentTime": 0.3333334333333333,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_06",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_06"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        },
+        {
+          "model": "hero_skin_002_01_ez",
+          "currentTime": 0.3333334333333333,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_06",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_06"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        }
+      ]
+    },
+    {
+      "frame": 11,
+      "rows": [
+        {
+          "model": "hero_skin_002_01",
+          "currentTime": 0.3666667666666667,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_06",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_06"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        },
+        {
+          "model": "hero_skin_002_01_ez",
+          "currentTime": 0.3666667666666667,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_06",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_06"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "rows": [
+        {
+          "model": "hero_skin_002_01",
+          "currentTime": 0.40000009999999997,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_07",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_07"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        },
+        {
+          "model": "hero_skin_002_01_ez",
+          "currentTime": 0.40000009999999997,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_07",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_07"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        }
+      ]
+    },
+    {
+      "frame": 13,
+      "rows": [
+        {
+          "model": "hero_skin_002_01",
+          "currentTime": 0.4333334333333333,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_07",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_07"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        },
+        {
+          "model": "hero_skin_002_01_ez",
+          "currentTime": 0.4333334333333333,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_07",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_07"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        }
+      ]
+    },
+    {
+      "frame": 14,
+      "rows": [
+        {
+          "model": "hero_skin_002_01",
+          "currentTime": 0.4666667666666667,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_08",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_08"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        },
+        {
+          "model": "hero_skin_002_01_ez",
+          "currentTime": 0.4666667666666667,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_08",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_08"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        }
+      ]
+    },
+    {
+      "frame": 15,
+      "rows": [
+        {
+          "model": "hero_skin_002_01",
+          "currentTime": 0.5000001,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_08",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_08"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        },
+        {
+          "model": "hero_skin_002_01_ez",
+          "currentTime": 0.5000001,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_08",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_08"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        }
+      ]
+    },
+    {
+      "frame": 16,
+      "rows": [
+        {
+          "model": "hero_skin_002_01",
+          "currentTime": 0.5333334333333333,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_09",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_09"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        },
+        {
+          "model": "hero_skin_002_01_ez",
+          "currentTime": 0.5333334333333333,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_09",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_09"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        }
+      ]
+    },
+    {
+      "frame": 17,
+      "rows": [
+        {
+          "model": "hero_skin_002_01",
+          "currentTime": 0.5666667666666666,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_09",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_09"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        },
+        {
+          "model": "hero_skin_002_01_ez",
+          "currentTime": 0.5666667666666666,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_09",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_09"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        }
+      ]
+    },
+    {
+      "frame": 18,
+      "rows": [
+        {
+          "model": "hero_skin_002_01",
+          "currentTime": 0.6000000999999999,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_10",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_10"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        },
+        {
+          "model": "hero_skin_002_01_ez",
+          "currentTime": 0.6000000999999999,
+          "duration": 0.6333333333333333,
+          "active": [
+            {
+              "slot": "effect_2_10",
+              "displayIndex": 0,
+              "texture": "effect_2/effect_2_10"
+            }
+          ],
+          "body": false,
+          "idle": false,
+          "nativeVisible": true
+        }
+      ]
+    }
+  ],
+  "live": [
+    {
+      "model": "hero_skin_002_01",
+      "elapsed": 1278.3999999985099,
+      "callbacks": 1,
+      "completes": 1,
+      "events": [],
+      "samples": [
+        {
+          "time": 11.299999997019768,
+          "frame": 0,
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 29.199999999254942,
+          "frame": 0,
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 44.899999998509884,
+          "frame": 1,
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 61.29999999701977,
+          "frame": 1,
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 77.89999999850988,
+          "frame": 2,
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 94.79999999701977,
+          "frame": 2,
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 111.19999999925494,
+          "frame": 3,
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 127.89999999850988,
+          "frame": 3,
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 144.89999999850988,
+          "frame": 4,
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 161.29999999701977,
+          "frame": 4,
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 177.89999999850988,
+          "frame": 5,
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 194.79999999701977,
+          "frame": 5,
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 211.39999999850988,
+          "frame": 6,
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 228.09999999776483,
+          "frame": 6,
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 244.79999999701977,
+          "frame": 7,
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 261.29999999701977,
+          "frame": 7,
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 278,
+          "frame": 8,
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 294.5999999977648,
+          "frame": 8,
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 311.29999999701977,
+          "frame": 9,
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 328,
+          "frame": 9,
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 344.69999999925494,
+          "frame": 10,
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 361.29999999701977,
+          "frame": 10,
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 378,
+          "frame": 11,
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 394.5999999977648,
+          "frame": 11,
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 411.19999999925494,
+          "frame": 12,
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 428,
+          "frame": 12,
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 444.79999999701977,
+          "frame": 13,
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 461.19999999925494,
+          "frame": 13,
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 478,
+          "frame": 14,
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 494.5999999977648,
+          "frame": 14,
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 511.19999999925494,
+          "frame": 15,
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 528,
+          "frame": 15,
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 544.7999999970198,
+          "frame": 16,
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 561.1999999992549,
+          "frame": 16,
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 577.7999999970198,
+          "frame": 17,
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 594.5999999977648,
+          "frame": 17,
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 611.1999999992549,
+          "frame": 18,
+          "active": [
+            "effect_2/effect_2_10"
+          ]
+        },
+        {
+          "time": 627.8999999985099,
+          "frame": 18,
+          "active": [
+            "effect_2/effect_2_10"
+          ]
+        },
+        {
+          "time": 644.5999999977648,
+          "frame": 0,
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 661.1999999992549,
+          "frame": 0,
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 678,
+          "frame": 1,
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 694.5999999977648,
+          "frame": 1,
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 711.1999999992549,
+          "frame": 2,
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 727.8999999985099,
+          "frame": 2,
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 744.8999999985099,
+          "frame": 3,
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 761.3999999985099,
+          "frame": 3,
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 778,
+          "frame": 4,
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 794.6999999992549,
+          "frame": 4,
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 811.2999999970198,
+          "frame": 5,
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 828,
+          "frame": 5,
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 844.8999999985099,
+          "frame": 6,
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 861.2999999970198,
+          "frame": 6,
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 878,
+          "frame": 7,
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 894.5,
+          "frame": 7,
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 911.1999999992549,
+          "frame": 8,
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 928.0999999977648,
+          "frame": 8,
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 944.5,
+          "frame": 9,
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 961.2999999970198,
+          "frame": 9,
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 978,
+          "frame": 10,
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 994.6999999992549,
+          "frame": 10,
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 1011.2999999970198,
+          "frame": 11,
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 1029.0999999977648,
+          "frame": 11,
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 1044.699999999255,
+          "frame": 12,
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 1061.2999999970198,
+          "frame": 12,
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 1078,
+          "frame": 13,
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 1094.7999999970198,
+          "frame": 13,
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 1111.2999999970198,
+          "frame": 14,
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 1128,
+          "frame": 14,
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 1144.699999999255,
+          "frame": 15,
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 1161.199999999255,
+          "frame": 15,
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 1177.7999999970198,
+          "frame": 16,
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 1194.5999999977648,
+          "frame": 16,
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 1211.3999999985099,
+          "frame": 17,
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 1228,
+          "frame": 17,
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 1244.5999999977648,
+          "frame": 18,
+          "active": [
+            "effect_2/effect_2_10"
+          ]
+        },
+        {
+          "time": 1261.199999999255,
+          "frame": 18,
+          "active": [
+            "effect_2/effect_2_10"
+          ]
+        },
+        {
+          "time": 1278.3999999985099,
+          "frame": 19,
+          "active": [
+            "effect_2/effect_2_10"
+          ]
+        }
+      ],
+      "distinctTextures": 10
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "elapsed": 1282.7999999970198,
+      "callbacks": 1,
+      "completes": 1,
+      "events": [],
+      "samples": [
+        {
+          "time": 16.299999997019768,
+          "frame": 0,
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 32.69999999925494,
+          "frame": 0,
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 49.399999998509884,
+          "frame": 1,
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 66.19999999925494,
+          "frame": 2,
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 82.69999999925494,
+          "frame": 2,
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 99.5,
+          "frame": 3,
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 116,
+          "frame": 3,
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 132.79999999701977,
+          "frame": 3,
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 149.39999999850988,
+          "frame": 4,
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 166.29999999701977,
+          "frame": 4,
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 182.69999999925494,
+          "frame": 5,
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 199.5,
+          "frame": 6,
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 216,
+          "frame": 6,
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 232.89999999850988,
+          "frame": 6,
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 249.39999999850988,
+          "frame": 7,
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 266.0999999977648,
+          "frame": 8,
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 282.69999999925494,
+          "frame": 8,
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 299.3999999985099,
+          "frame": 9,
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 316,
+          "frame": 9,
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 332.69999999925494,
+          "frame": 9,
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 349.5,
+          "frame": 10,
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 366.19999999925494,
+          "frame": 11,
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 382.79999999701977,
+          "frame": 11,
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 399.3999999985099,
+          "frame": 12,
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 416.0999999977648,
+          "frame": 12,
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 432.69999999925494,
+          "frame": 12,
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 449.3999999985099,
+          "frame": 13,
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 466.3999999985099,
+          "frame": 14,
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 482.69999999925494,
+          "frame": 14,
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 499.3999999985099,
+          "frame": 15,
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 516.1999999992549,
+          "frame": 15,
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 532.6999999992549,
+          "frame": 15,
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 549.3999999985099,
+          "frame": 16,
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 566.2999999970198,
+          "frame": 17,
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 582.6999999992549,
+          "frame": 17,
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 599.3999999985099,
+          "frame": 18,
+          "active": [
+            "effect_2/effect_2_10"
+          ]
+        },
+        {
+          "time": 616.5,
+          "frame": 18,
+          "active": [
+            "effect_2/effect_2_10"
+          ]
+        },
+        {
+          "time": 632.5999999977648,
+          "frame": 18,
+          "active": [
+            "effect_2/effect_2_10"
+          ]
+        },
+        {
+          "time": 649.3999999985099,
+          "frame": 0,
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 666.1999999992549,
+          "frame": 1,
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 682.6999999992549,
+          "frame": 1,
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 699.2999999970198,
+          "frame": 2,
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 716.1999999992549,
+          "frame": 2,
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 732.7999999970198,
+          "frame": 2,
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 749.5999999977648,
+          "frame": 3,
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 766.2999999970198,
+          "frame": 4,
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 782.5999999977648,
+          "frame": 4,
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 799.5,
+          "frame": 5,
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 816,
+          "frame": 5,
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 832.6999999992549,
+          "frame": 5,
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 849.3999999985099,
+          "frame": 6,
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 866.0999999977648,
+          "frame": 7,
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 882.7999999970198,
+          "frame": 7,
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 899.3999999985099,
+          "frame": 8,
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 916.1999999992549,
+          "frame": 8,
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 932.6999999992549,
+          "frame": 8,
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 949.3999999985099,
+          "frame": 9,
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 966.1999999992549,
+          "frame": 10,
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 982.6999999992549,
+          "frame": 10,
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 999.3999999985099,
+          "frame": 11,
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 1016.0999999977648,
+          "frame": 11,
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 1032.699999999255,
+          "frame": 11,
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 1049.3999999985099,
+          "frame": 12,
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 1066.0999999977648,
+          "frame": 13,
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 1082.7999999970198,
+          "frame": 13,
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 1099.5,
+          "frame": 14,
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 1116,
+          "frame": 14,
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 1132.7999999970198,
+          "frame": 14,
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 1149.3999999985099,
+          "frame": 15,
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 1166.0999999977648,
+          "frame": 16,
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 1182.699999999255,
+          "frame": 16,
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 1199.3999999985099,
+          "frame": 17,
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 1216.0999999977648,
+          "frame": 17,
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 1232.699999999255,
+          "frame": 17,
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 1249.3999999985099,
+          "frame": 18,
+          "active": [
+            "effect_2/effect_2_10"
+          ]
+        },
+        {
+          "time": 1266,
+          "frame": 18,
+          "active": [
+            "effect_2/effect_2_10"
+          ]
+        },
+        {
+          "time": 1282.7999999970198,
+          "frame": 19,
+          "active": [
+            "effect_2/effect_2_10"
+          ]
+        }
+      ],
+      "distinctTextures": 10
+    }
+  ],
+  "parentPlayback": [
+    {
+      "model": "hero_skin_002_01",
+      "action": "gongji",
+      "samples": [
+        {
+          "time": 4762.39999999851,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 4774.599999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 4790.699999999255,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 4807.5,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 4823.89999999851,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 4840.599999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 4857.29999999702,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 4873.89999999851,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 4890.599999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 4907.29999999702,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 4924,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 4940.89999999851,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 4957.099999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 4973.699999999255,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 4990.39999999851,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 5006.89999999851,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 5023.699999999255,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 5040.199999999255,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 5057.199999999255,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 5073.79999999702,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 5090.29999999702,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 5107.099999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 5123.699999999255,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 5140.5,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 5156.699999999255,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 5173.599999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 5190.29999999702,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 5207.199999999255,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 5223.699999999255,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 5240.199999999255,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 5256.599999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 5273.599999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 5290.39999999851,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 5306.79999999702,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 5323.699999999255,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 5340.29999999702,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_10"
+          ]
+        },
+        {
+          "time": 5356.79999999702,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_10"
+          ]
+        },
+        {
+          "time": 5373.599999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_10"
+          ]
+        },
+        {
+          "time": 5390.29999999702,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 5407.199999999255,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 5423.79999999702,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 5440.599999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 5456.699999999255,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 5473.599999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 5490.29999999702,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 5506.79999999702,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 5523.599999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 5540.199999999255,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 5557.099999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 5573.599999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 5590.39999999851,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 5607.099999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 5623.5,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 5640.39999999851,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 5656.79999999702,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 5673.39999999851,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 5690.099999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 5706.699999999255,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 5723.5,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 5740.29999999702,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 5756.79999999702,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 5773.5,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 5790.5,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 5807,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 5823.79999999702,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 5840.39999999851,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 5857,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 5873.599999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 5890.29999999702,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 5907,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 5923.5,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 5940.29999999702,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 5956.89999999851,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 5973.39999999851,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 5990.29999999702,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_10"
+          ]
+        },
+        {
+          "time": 6007,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 6023.699999999255,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 6040.199999999255,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 6056.89999999851,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 6073.39999999851,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 6090.199999999255,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 6106.89999999851,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 6123.699999999255,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 6140.199999999255,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 6156.79999999702,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 6173.5,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 6190.39999999851,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 6207.099999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 6223.5,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 6240.599999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "hero_skin_002_01",
+      "action": "jineng",
+      "samples": [
+        {
+          "time": 6258.79999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 6274.79999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 6290.89999999851,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 6307.199999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 6323.599999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 6340.39999999851,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 6357.199999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 6373.79999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 6390.199999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 6407.099999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 6423.79999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 6440.599999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 6456.89999999851,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 6473.79999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 6490.699999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 6506.79999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 6523.599999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 6540.29999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 6557.099999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 6573.5,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 6590.39999999851,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 6607,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_10"
+          ]
+        },
+        {
+          "time": 6623.699999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_10"
+          ]
+        },
+        {
+          "time": 6640.29999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 6656.89999999851,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 6673.699999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 6690.199999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 6707.199999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 6723.39999999851,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 6740.099999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 6757.099999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 6773.5,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 6790.39999999851,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 6806.599999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 6823.39999999851,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 6840.699999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 6857,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 6873.39999999851,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 6890.39999999851,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 6907.099999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 6923.29999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 6940.199999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 6956.79999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 6973.5,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 6990.199999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 7006.79999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 7023.699999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 7040.099999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 7056.89999999851,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 7073.39999999851,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 7090.39999999851,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 7107,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 7123.79999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 7140.099999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 7157,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 7173.199999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 7190.29999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 7207.099999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 7223.5,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 7240.29999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_10"
+          ]
+        },
+        {
+          "time": 7256.699999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_10"
+          ]
+        },
+        {
+          "time": 7273.29999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_10"
+          ]
+        },
+        {
+          "time": 7289.89999999851,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 7306.79999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 7323.29999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 7340,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 7356.699999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 7373.599999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 7390.39999999851,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 7407.5,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 7423.599999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 7440.29999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 7457,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 7473.699999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 7490.5,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 7506.699999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 7523.599999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 7540.099999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 7557,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 7573.5,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 7590.199999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 7606.89999999851,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 7623.5,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 7640,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 7656.699999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 7673.5,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 7690.099999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 7706.599999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 7723.599999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 7740.199999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 7756.79999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 7773.89999999851,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 7790.099999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "hero_skin_002_01",
+      "action": "paobu",
+      "samples": [
+        {
+          "time": 7807.29999999702,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 7823.699999999255,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 7840.199999999255,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 7856.599999997765,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 7873.39999999851,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 7890.599999997765,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_10"
+          ]
+        },
+        {
+          "time": 7906.89999999851,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 7923.39999999851,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 7940.099999997765,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 7956.599999997765,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 7973.39999999851,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 7990.199999999255,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 8006.79999999702,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 8023.39999999851,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 8040.099999997765,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 8056.89999999851,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 8073.5,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 8090,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 8106.599999997765,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 8123.5,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 8140,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 8156.79999999702,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 8173.5,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 8190.199999999255,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 8206.89999999851,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 8223.5,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 8240.199999999255,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 8256.699999999255,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 8273.29999999702,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 8290.199999999255,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 8306.699999999255,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 8323.699999999255,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 8340,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "samples": [
+        {
+          "time": 8357.89999999851,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 8374.5,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 8390.5,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 8407,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 8423.89999999851,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 8440.29999999702,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 8457.199999999255,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 8473.89999999851,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 8491.099999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 8507.5,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 8524.199999999255,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 8540.599999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 8557.099999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 8573.89999999851,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 8590.599999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 8607.599999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 8623.89999999851,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 8640.39999999851,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 8657.199999999255,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 8674,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 8690.79999999702,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 8707.199999999255,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 8723.29999999702,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 8740.599999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 8757.099999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 8774,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 8790.29999999702,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 8807.29999999702,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 8823.599999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 8840.5,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 8862.5,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 8873.699999999255,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 8890.599999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 8907.099999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 8923.699999999255,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 8940.39999999851,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_10"
+          ]
+        },
+        {
+          "time": 8956.89999999851,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_10"
+          ]
+        },
+        {
+          "time": 8973.599999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_10"
+          ]
+        },
+        {
+          "time": 8990.29999999702,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 9007,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 9023.599999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 9040.5,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 9056.699999999255,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 9073.5,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 9090.099999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 9106.599999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 9123.39999999851,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 9140.29999999702,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 9156.699999999255,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 9173.79999999702,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 9190.5,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 9207.099999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 9223.699999999255,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 9240.5,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 9257.29999999702,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 9273.599999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 9290.79999999702,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 9307,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 9323.699999999255,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 9340.39999999851,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 9356.89999999851,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 9373.599999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 9390.29999999702,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 9407,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 9423.699999999255,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 9440.29999999702,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 9457.099999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 9473.5,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 9490.199999999255,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 9507.099999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 9523.599999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 9540.29999999702,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 9557.099999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 9573.5,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 9590.39999999851,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_10"
+          ]
+        },
+        {
+          "time": 9607,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 9623.39999999851,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 9640.099999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 9657.099999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 9673.5,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 9690.599999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 9706.599999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 9723.599999997765,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 9740.29999999702,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 9756.89999999851,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 9773.699999999255,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 9790.29999999702,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 9807,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 9823.699999999255,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 9840.29999999702,
+          "parentAction": "gongji",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "action": "jineng",
+      "samples": [
+        {
+          "time": 9857.699999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 9873.5,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 9890.699999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 9907,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 9923.39999999851,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 9940.5,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 9957,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 9973.699999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 9990.199999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 10007,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 10024,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 10040.39999999851,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 10057.099999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 10073.599999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 10090.5,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 10106.89999999851,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 10123.5,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 10140.199999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 10157.29999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 10173.599999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 10190.599999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 10207,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_10"
+          ]
+        },
+        {
+          "time": 10223.599999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_10"
+          ]
+        },
+        {
+          "time": 10240.29999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 10256.89999999851,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 10273.29999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 10291.099999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 10307.099999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 10323.599999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 10340,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 10357.099999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 10373.099999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 10390.199999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 10406.79999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 10423.5,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 10439.79999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 10456.39999999851,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 10473,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 10490,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 10506.599999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 10523.199999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 10540,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 10556.79999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 10573.199999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 10590.199999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 10606.79999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 10623.39999999851,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 10640.199999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 10656.699999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 10673.099999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 10690.29999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 10706.79999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 10723.29999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 10740.29999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 10757.099999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 10773.699999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 10789.89999999851,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 10806.599999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 10823.199999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 10840.199999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_10"
+          ]
+        },
+        {
+          "time": 10857,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_10"
+          ]
+        },
+        {
+          "time": 10873.599999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_10"
+          ]
+        },
+        {
+          "time": 10890.199999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 10906.79999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 10923.199999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 10940.39999999851,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 10956.79999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 10973.39999999851,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 10990.199999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 11006.699999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 11023.5,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 11040.199999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 11056.29999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 11073.39999999851,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 11090.29999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 11106.699999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 11123.39999999851,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 11140.199999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 11156.599999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 11173.39999999851,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 11190.29999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 11206.79999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 11223.5,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 11240.099999997765,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 11256.79999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 11273.5,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 11290.199999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 11306.89999999851,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 11323.5,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 11339.699999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 11356.89999999851,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 11373.29999999702,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        },
+        {
+          "time": 11390.199999999255,
+          "parentAction": "jineng",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_08"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "action": "paobu",
+      "samples": [
+        {
+          "time": 11407.199999999255,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 11423,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 11440.099999997765,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 11456.89999999851,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 11473.29999999702,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_09"
+          ]
+        },
+        {
+          "time": 11489.89999999851,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_10"
+          ]
+        },
+        {
+          "time": 11506.699999999255,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 11523.199999999255,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 11540,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 11556.099999997765,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 11573,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_01"
+          ]
+        },
+        {
+          "time": 11589.699999999255,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 11606.5,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 11623.39999999851,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_02"
+          ]
+        },
+        {
+          "time": 11640.099999997765,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 11656.599999997765,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 11673.199999999255,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 11689.89999999851,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_03"
+          ]
+        },
+        {
+          "time": 11706.599999997765,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 11723.199999999255,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 11739.699999999255,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 11756.39999999851,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 11773,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_04"
+          ]
+        },
+        {
+          "time": 11790.099999997765,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 11806.5,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 11823.29999999702,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_05"
+          ]
+        },
+        {
+          "time": 11839.79999999702,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 11856.79999999702,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 11873.29999999702,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 11889.79999999702,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_06"
+          ]
+        },
+        {
+          "time": 11906.599999997765,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 11923.29999999702,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        },
+        {
+          "time": 11939.89999999851,
+          "parentAction": "paobu",
+          "slot": "effect_2",
+          "active": [
+            "effect_2/effect_2_07"
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "failures": [],
+  "effect": "effect_2",
+  "manualReview": "pending"
+}

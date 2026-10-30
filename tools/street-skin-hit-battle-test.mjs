@@ -4,7 +4,7 @@ const version=process.argv.find(x=>x.startsWith('--version='))?.slice(10)||'0.88
 const savePath='outputs/street-reskin/stress/8794-save.json',mainPath='pc_server_data/offline-replica-save.json',original=await fs.readFile(savePath),mainSha=crypto.createHash('sha256').update(await fs.readFile(mainPath)).digest('hex');
 const save=JSON.parse(original),hero=save.heroes.find(h=>h.code===41010002);assert(hero);hero.dermaCode=0;hero.attr=JSON.stringify({'1':1,'2':1000000000,'3':1,'4':1});hero.skillList=[{code:550020110,level:1}];
 const focused=process.argv.includes('--focused');
-save.formation=[{uuid:hero.uuid,pos:1}];save.progress.stage=10;save.progress.battles=0;save.progress.wins=0;save.battleConfig={scenario:'wei',difficulty:'hell',enemyCount:focused?1:8,enemySubTypes:focused?[3]:[1,3,5,7,9,11,15,17],enemyRaces:[1,2,3,4,5,6]};save.battleEntities=[];delete save.pendingBattle;
+save.formation=[{uuid:hero.uuid,pos:1}];save.progress.stage=Number(process.argv.find(x=>x.startsWith('--stage='))?.slice(8)||10);save.progress.battles=0;save.progress.wins=0;save.battleConfig={scenario:'wei',difficulty:process.argv.find(x=>x.startsWith('--difficulty='))?.slice(13)||'hell',enemyCount:focused?1:8,enemySubTypes:focused?[3]:[1,3,5,7,9,11,15,17],enemyRaces:[1,2,3,4,5,6]};save.battleEntities=[];delete save.pendingBattle;
 const browser=await chromium.launch({channel:'chrome',headless:true});let page;let report={pass:false,scope:'Actual production equip proxy/persisted isolated save, native BattleAI replay and autonomous skin hit animation; no manually triggered DBPlayer hurt or edited battle payload. Main save must stay unchanged.'};
 await fs.mkdir(out,{recursive:true});
 try{
