@@ -1,9 +1,18 @@
 (function (global) {
     'use strict';
-    var data=global.CharacterIdleData, caches={}, modelIds={}, installed=false, queue=[], loading=0;
+    var data=global.CharacterIdleData, caches={}, modelIds={}, skinModelIds={}, installed=false, queue=[], loading=0;
     var atlasData=global.CharacterIdleAtlasData;
     var audit={version:data&&data.version,excluded:[13],framesPresented:0,errors:[],players:[],attachedHeroes:{},modelRequests:{}};
-    function config(id){return data&&data.heroes[String(id)];}
+    function config(id){return data&&(data.heroes[String(id)]||(data.skins&&data.skins[String(id)]));}
+    function skinForModel(name,owner){
+        var key=String(name||'').replace(/_ez$/,''),id=skinModelIds[key],cfg=id&&config(id);
+        if(!cfg||!cfg.skinCode)return 0;
+        if(owner&&Number(cfg.heroId)!==Number(owner))return 0;
+        var nativeOwner=/^hero_(\d+)_\d+$/.exec(key);
+        // Shared numeric models need an explicit owning hero to disambiguate them.
+        if(!owner&&nativeOwner&&Number(nativeOwner[1])!==Number(cfg.heroId))return 0;
+        return id;
+    }
     function releaseTexture(texture){if(texture){texture.disposeBitmapData=true;texture.dispose();}}
     function pump(){
         while(loading<6&&queue.length){
@@ -126,6 +135,7 @@
         if(view._characterIdleViewTick){view._characterIdleViewTick();return;}
         var tick=function(){
             var nativePlayer=view.getModel&&view.getModel(),hero=heroForView(view),p=nativePlayer;
+            hero=skinForModel(nativePlayer&&nativePlayer._dbName,hero)||hero;
             if(config(hero)&&profile(view)!=='battle'){
                 if(nativePlayer){detach(nativePlayer);nativePlayer._characterIdleSuppressNative=true;if(nativePlayer._armature)nativePlayer._armature.visible=false;}
                 p=view._characterIdleStandIn;
@@ -148,8 +158,13 @@
             if(cfg)row.name=cfg.name;var key=String(row.model||'').replace(/_ez$/,'');
             if(key)modelIds[key]=modelIds[key]===undefined?id:(modelIds[key]===id?id:0);
         });
+        Object.keys(data.skins||{}).forEach(function(id){
+            var cfg=data.skins[id];
+            if(!cfg||!cfg.skinCode||!config(cfg.heroId))return;
+            (cfg.models||[]).forEach(function(name){var key=String(name).replace(/_ez$/,'');skinModelIds[key]=skinModelIds[key]===undefined?Number(id):(skinModelIds[key]===Number(id)?Number(id):0);});
+        });
         var proto=DBPlayer.prototype,init=proto.init,destroy=proto.destroy,trigger=proto.trigger,ready=proto.readyToPlay;
-        proto.init=function(name){audit.modelRequests[name]=(audit.modelRequests[name]||0)+1;var r=init.apply(this,arguments),key=String(name).replace(/_ez$/,''),id=modelIds[key],variant=/^hero_(\d+)_\d+$/.exec(key);if(variant&&(config(Number(variant[1]))||Number(variant[1])===13))id=Number(variant[1]);if(this._characterIdleSuppressNative){if(this._armature)this._armature.visible=false;}else bind(this,id);return r;};
+        proto.init=function(name){audit.modelRequests[name]=(audit.modelRequests[name]||0)+1;var r=init.apply(this,arguments),key=String(name).replace(/_ez$/,''),id=modelIds[key],variant=/^hero_(\d+)_\d+$/.exec(key);if(variant&&(config(Number(variant[1]))||Number(variant[1])===13))id=Number(variant[1]);id=skinForModel(key)||id;if(this._characterIdleSuppressNative){if(this._armature)this._armature.visible=false;}else bind(this,id);return r;};
         proto.destroy=function(){detach(this);this._characterIdleHeroId=0;this._characterIdleLayout=null;this._characterIdleSuppressNative=false;return destroy.apply(this,arguments);};
         if(trigger)proto.trigger=function(action){var result=trigger.apply(this,arguments),s=this._characterIdleState;if(this._characterIdleSuppressNative&&this._armature)this._armature.visible=false;else if(s){if((action||this.action)==='daiji')hideNative(this,s);else restore(this,s);}return result;};
         if(ready)proto.readyToPlay=function(){var result=ready.apply(this,arguments),s=this._characterIdleState;if(this._characterIdleSuppressNative&&this._armature)this._armature.visible=false;else if(s&&(!this.action||this.action==='daiji'))hideNative(this,s);return result;};

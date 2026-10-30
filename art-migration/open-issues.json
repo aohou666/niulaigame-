@@ -51,5 +51,13 @@
     "evidence": "versions/0.60.0/notice-endpoints.json; versions/0.60.0/protocol-startup-clean.json",
     "scope": "Not claimed as cause of historical intermittent null Promise rejection.",
     "rechecks": "Isolated8796 native normal/maintenance callbacks and85/85 details pass, zero browser/HTTP/network/RES failures. Main8787 restarted PID6944 with unchanged save SHA; startup strict audit passes."
+  },
+  {
+    "id": "SKIN-PANEL-069-RESOURCE-KEYS",
+    "status": "investigating",
+    "observed": "Normal AppFacade HERO_DERMA open reproduces14 unknown UI resource keys requested as bare URLs, HTTP404 and28 unhandled null rejection records. Distinct from independent idle routing.",
+    "evidence": "versions/0.69.0/skin-panel-normal-traced.json",
+    "next": "Replace or correctly bind each missing UI asset in the actual native skin panel; also resolve invalid _png attribute label request. Do not silence errors or substitute generic success.",
+    "historicalCausality": "This reproducible skin-panel null rejection path is not proven to be the historical DETAIL-NULL or RESOURCE-LOAD-015 cause."
   }
 ]
