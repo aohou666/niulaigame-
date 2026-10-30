@@ -84,7 +84,8 @@
         var scale=Math.min(width/Math.max(1,box[2]),height/Math.max(1,box[3]),bodyHeight/Math.max(1,cfg.bodyHeight));
         bitmap.scaleX=scale*box[2]/((texture&&texture.textureWidth)||box[2]);bitmap.scaleY=scale*box[3]/((texture&&texture.textureHeight)||box[3]);
         var x=ui?(layout.view.horizontalCenter!=null&&isFinite(Number(layout.view.horizontalCenter))?parent.width/2+Number(layout.view.horizontalCenter):layout.view.x):0;
-        var y=mode==='formation'?parent.height-23:ui?layout.view.y:0;
+        var footY=ui&&parent._characterIdleFootY;
+        var y=mode==='formation'?parent.height-23:ui?(typeof footY==='number'&&isFinite(footY)?footY:layout.view.y):0;
         bitmap.x=x-box[2]*scale/2;bitmap.y=y-box[3]*scale;
         state.fit={mode:mode,width:width,height:height,scale:scale,x:bitmap.x,y:bitmap.y,drawWidth:box[2]*scale,drawHeight:box[3]*scale,bodyHeight:cfg.bodyHeight*scale,ui:ui};
         if(!state.fitRange)state.fitRange={min:scale,max:scale,samples:0};state.fitRange.min=Math.min(state.fitRange.min,scale);state.fitRange.max=Math.max(state.fitRange.max,scale);state.fitRange.samples++;

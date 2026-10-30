@@ -64,7 +64,7 @@
 <script src="character-reskin.js?v=0.38.0"></script>
 <script src="character-idle-data.js?v=0.70.0"></script>
 <script src="character-idle-atlas-data.js?v=20261029-23"></script>
-<script src="character-idle.js?v=0.69.0"></script>
+<script src="character-idle.js?v=0.74.0"></script>
 <script src="street-body-data.js?v=0.67.0"></script>
 <script src="street-body.js?v=0.67.0"></script>
 <script src="character-regression.js?v=20261022-1"></script>
@@ -1044,6 +1044,18 @@
                         };
                     }
                     if (game.HeroDermaPanel && !game.HeroDermaPanel.prototype._offlineSkinPanelPatched) {
+                        // Attribute codes in HeroDermaLO use AttrConfig, not the battle EAttrType enum.
+                        // Create empty image slots so the skin does not request its absent default Crit image.
+                        if (window.HeroDermaPanelSkin) {
+                            [0, 1, 2].forEach(function (index) {
+                                HeroDermaPanelSkin.prototype["img_type" + index + "_i"] = function () {
+                                    var image = new eui.Image();
+                                    this["img_type" + index] = image;
+                                    image.width = 77; image.height = 38; image.x = 8.39; image.y = 7.76;
+                                    return image;
+                                };
+                            });
+                        }
                         var originalSkinInitList = game.HeroDermaPanel.prototype.initList;
                         game.HeroDermaPanel.prototype.initList = function () {
                             originalSkinInitList.call(this);
@@ -1101,6 +1113,7 @@
                             this.dermaConfig = info;
                             this.lb_name0.text = info.name || this.params.name;
                             if (HeroRaceConfig[this.params.race]) this.img_race_icon0.source = HeroRaceConfig[this.params.race].raceIconBig;
+                            this.gp_hero._characterIdleFootY = 450;
                             this.hero_model0.update({ code: this.params.code, model: info.model, useHD: true });
                             var attrs = [];
                             try { attrs = JSON.parse(info.attr || "[]"); } catch (_) {}
@@ -1110,7 +1123,21 @@
                             groups.forEach(function (group, index) {
                                 if (group) group.visible = index < attrs.length;
                                 if (index < attrs.length) {
-                                    icons[index].source = this.getAttrType(attrs[index][0]);
+                                    icons[index].source = "";
+                                    icons[index].visible = false;
+                                    var attributeLabel = group._offlineAttributeLabel;
+                                    if (!attributeLabel) {
+                                        attributeLabel = group._offlineAttributeLabel = new eui.Label();
+                                        attributeLabel.x = icons[index].x; attributeLabel.y = icons[index].y;
+                                        attributeLabel.width = 77; attributeLabel.height = 38;
+                                        attributeLabel.size = 18; attributeLabel.bold = true;
+                                        attributeLabel.textColor = 0xffe7b5; attributeLabel.stroke = 2;
+                                        attributeLabel.strokeColor = 0x173a3e;
+                                        attributeLabel.textAlign = "center"; attributeLabel.verticalAlign = "middle";
+                                        group.addChild(attributeLabel);
+                                    }
+                                    var attributeConfig = window.AttrConfig && AttrConfig[attrs[index][0]];
+                                    attributeLabel.text = attributeConfig && attributeConfig.name || ("属性" + attrs[index][0]);
                                     labels[index].text = "+" + game.GeneralConfig.getAttrValue(attrs[index][1]);
                                 }
                             }, this);

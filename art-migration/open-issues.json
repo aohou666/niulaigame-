@@ -59,5 +59,12 @@
     "evidence": "versions/0.69.0/skin-panel-normal-traced.json",
     "next": "Replace or correctly bind each missing UI asset in the actual native skin panel; also resolve invalid _png attribute label request. Do not silence errors or substitute generic success.",
     "historicalCausality": "This reproducible skin-panel null rejection path is not proven to be the historical DETAIL-NULL or RESOURCE-LOAD-015 cause."
+  },
+  {
+    "id": "SKIN-PANEL-074-LAYOUT",
+    "status": "investigating",
+    "summary": "Skin preview moved below header; new unicycle remains above background platform and existing landscape cards stretch into portrait cells. Remaining nine missing keys also prevent full panel approval.",
+    "evidence": "art-migration/versions/0.74.0/skin-attributes-native.png",
+    "complete": false
   }
 ]
