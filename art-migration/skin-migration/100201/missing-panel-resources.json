@@ -25,10 +25,12 @@
     },
     {
       "key": "_hero_ar_m_json.common_icon_zhiye_1",
-      "status": "pending",
+      "status": "repaired-invalid-default-actual-race-icon-preserved",
       "observedIn": "HeroDermaPanel normal AppFacade open",
       "originalManifestBindingFound": false,
-      "kind": "missing-ui-resource-key"
+      "kind": "missing-ui-resource-key",
+      "replacementVersion": "0.80.0",
+      "evidence": "art-migration/versions/0.80.0/skin-attributes-native.json"
     },
     {
       "key": "common_img_heiditiao_03_png",

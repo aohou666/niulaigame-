@@ -1091,6 +1091,14 @@
                         // Attribute codes in HeroDermaLO use AttrConfig, not the battle EAttrType enum.
                         // Create empty image slots so the skin does not request its absent default Crit image.
                         if (window.HeroDermaPanelSkin) {
+                            HeroDermaPanelSkin.prototype.img_race_icon0_i = function () {
+                                var image = new eui.Image();
+                                this.img_race_icon0 = image;
+                                image.scaleX = .7; image.scaleY = .7;
+                                image.x = 8.02; image.y = -.14;
+                                // updateDermaInfo supplies the configured race icon before display.
+                                return image;
+                            };
                             [0, 1, 2].forEach(function (index) {
                                 HeroDermaPanelSkin.prototype["img_type" + index + "_i"] = function () {
                                     var image = new eui.Image();
