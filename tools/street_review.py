@@ -48,6 +48,8 @@ def main():
     row=skinStatic.setdefault(str(binding['skinCode']),{'bindings':[],'completeSkin':False})
     row['bindings'].append({'key':key,'url':binding['url'],'review':binding.get('review'),'targetSha256':binding.get('targetSha256')})
  report['independentSkinStaticBindings']={'skins':skinStatic,'note':'Independent static art is partial progress only; this does not establish animation, effects, equip or complete-skin approval.'}
+ skinIdles=loadjs(GAME/'character-idle-data.js').get('skins',{})
+ report['independentSkinIdleBindings']={'skins':{key:{'heroId':cfg['heroId'],'frameCount':cfg['frameCount'],'loopSeconds':cfg['frameCount']/cfg['fps'],'review':cfg.get('review'),'completeSkin':False} for key,cfg in skinIdles.items()},'note':'Idle-only evidence; other body actions, effects, real equip and battle remain separate requirements.'}
  report['generatedRuntimeGitTracking']=verify_runtime_tracking()
  issues=OUT/'open-issues.json';report['knownOpenIssues']=[r for r in json.loads(issues.read_text('utf8')) if r.get('status')!='resolved'] if issues.exists() else []
  folder=OUT/'versions'/a.version;folder.mkdir(parents=True,exist_ok=True)

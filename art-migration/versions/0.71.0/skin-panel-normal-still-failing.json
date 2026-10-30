@@ -1,0 +1,481 @@
+{
+  "pass": false,
+  "rows": [
+    {
+      "requested": "hero_skin_002_01",
+      "actualModel": "hero_skin_002_01",
+      "id": 100201,
+      "material": "test-routing-only",
+      "visible": true,
+      "textureReady": true,
+      "cacheKey": "100201"
+    },
+    {
+      "requested": "hero_skin_002_01_ez",
+      "actualModel": "hero_skin_002_01_ez",
+      "id": 100201,
+      "material": "test-routing-only",
+      "visible": true,
+      "textureReady": true,
+      "cacheKey": "100201"
+    },
+    {
+      "requested": "hero_002_01",
+      "actualModel": "hero_002_01",
+      "id": 2,
+      "material": "laoba_老八",
+      "visible": true,
+      "textureReady": true,
+      "cacheKey": "2:detail"
+    },
+    {
+      "requested": "hero_skin_002_01",
+      "actualModel": "hero_skin_002_01",
+      "id": 100201,
+      "material": "test-routing-only",
+      "visible": true,
+      "textureReady": true,
+      "cacheKey": "100201"
+    }
+  ],
+  "baseHeroCount": 85,
+  "resourceFailures": [
+    {
+      "name": "common_img_jichukuang_09_png",
+      "url": "common_img_jichukuang_09_png"
+    },
+    {
+      "name": "common_img_heiditiao_01_png",
+      "url": "common_img_heiditiao_01_png"
+    },
+    {
+      "name": "_hero_ar_m_json.common_icon_zhiye_1",
+      "url": "_hero_ar_m_json.common_icon_zhiye_1"
+    },
+    {
+      "name": "common_img_heiditiao_03_png",
+      "url": "common_img_heiditiao_03_png"
+    },
+    {
+      "name": "common_img_heiditiao_03_png",
+      "url": "common_img_heiditiao_03_png"
+    },
+    {
+      "name": "common_img_heiditiao_03_png",
+      "url": "common_img_heiditiao_03_png"
+    },
+    {
+      "name": "pf_img_baojizi_png",
+      "url": "pf_img_baojizi_png"
+    },
+    {
+      "name": "pf_img_baojizi_png",
+      "url": "pf_img_baojizi_png"
+    },
+    {
+      "name": "pf_img_baojizi_png",
+      "url": "pf_img_baojizi_png"
+    },
+    {
+      "name": "common_icon_xiexia",
+      "url": "common_icon_xiexia"
+    },
+    {
+      "name": "common_icon_peidai",
+      "url": "common_icon_peidai"
+    },
+    {
+      "name": "common_icon_tujian",
+      "url": "common_icon_tujian"
+    },
+    {
+      "name": "common_img_dikuang03_png",
+      "url": "common_img_dikuang03_png"
+    },
+    {
+      "name": "_png",
+      "url": "_png"
+    },
+    {
+      "name": "_png",
+      "url": "_png"
+    },
+    {
+      "name": "pf_img_jingqingqidai_png",
+      "url": "pf_img_jingqingqidai_png"
+    },
+    {
+      "name": "pf_img_jingqingqidai_png",
+      "url": "pf_img_jingqingqidai_png"
+    },
+    {
+      "name": "pf_img_jingqingqidai_png",
+      "url": "pf_img_jingqingqidai_png"
+    },
+    {
+      "name": "pf_img_jingqingqidai_png",
+      "url": "pf_img_jingqingqidai_png"
+    },
+    {
+      "name": "pf_img_xuanzhong_png",
+      "url": "pf_img_xuanzhong_png"
+    },
+    {
+      "name": "pf_img_xuanzhong_png",
+      "url": "pf_img_xuanzhong_png"
+    },
+    {
+      "name": "pf_img_xuanzhong_png",
+      "url": "pf_img_xuanzhong_png"
+    },
+    {
+      "name": "pf_img_xuanzhong_png",
+      "url": "pf_img_xuanzhong_png"
+    },
+    {
+      "name": "pf_img_yichuandai_png",
+      "url": "pf_img_yichuandai_png"
+    },
+    {
+      "name": "pf_img_yichuandai_png",
+      "url": "pf_img_yichuandai_png"
+    },
+    {
+      "name": "pf_img_yichuandai_png",
+      "url": "pf_img_yichuandai_png"
+    },
+    {
+      "name": "pf_img_yichuandai_png",
+      "url": "pf_img_yichuandai_png"
+    }
+  ],
+  "promiseFailures": [
+    {
+      "method": "getResByUrl",
+      "key": "common_img_jichukuang_09_png",
+      "reason": "null",
+      "caller": "Error\n    at RES.<computed> [as getResByUrl] (eval at evaluate (:311:30), <anonymous>:1:318)\n    at e.getAsset (http://127.0.0.1:8787/js/main.min_6fea25ed.js:50:19396)\n    at Object.e [as getAssets] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:47067)\n    at i.parseSource (http://127.0.0.1:8787/js/all.min_32285d70.js:14:19530)\n    at i.createChildren (http://127.0.0.1:8787/js/all.min_32285d70.js:14:20094)\n    at r.$onAddToStage [as $ori_onAddToStage] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49658)\n    at i._ [as $onAddToStage] (http://127.0.0.1:8787/js/main.min_6fea25ed.js:59:14351)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)\n    at r.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49570)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)"
+    },
+    {
+      "method": "getResByUrl",
+      "key": "common_img_heiditiao_01_png",
+      "reason": "null",
+      "caller": "Error\n    at RES.<computed> [as getResByUrl] (eval at evaluate (:311:30), <anonymous>:1:318)\n    at e.getAsset (http://127.0.0.1:8787/js/main.min_6fea25ed.js:50:19396)\n    at Object.e [as getAssets] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:47067)\n    at i.parseSource (http://127.0.0.1:8787/js/all.min_32285d70.js:14:19530)\n    at i.createChildren (http://127.0.0.1:8787/js/all.min_32285d70.js:14:20094)\n    at r.$onAddToStage [as $ori_onAddToStage] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49658)\n    at i._ [as $onAddToStage] (http://127.0.0.1:8787/js/main.min_6fea25ed.js:59:14351)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)\n    at r.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49570)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)"
+    },
+    {
+      "method": "getResByUrl",
+      "key": "_hero_ar_m_json.common_icon_zhiye_1",
+      "reason": "null",
+      "caller": "Error\n    at RES.<computed> [as getResByUrl] (eval at evaluate (:311:30), <anonymous>:1:318)\n    at e.getAsset (http://127.0.0.1:8787/js/main.min_6fea25ed.js:50:19396)\n    at Object.e [as getAssets] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:47067)\n    at i.parseSource (http://127.0.0.1:8787/js/all.min_32285d70.js:14:19530)\n    at i.createChildren (http://127.0.0.1:8787/js/all.min_32285d70.js:14:20094)\n    at r.$onAddToStage [as $ori_onAddToStage] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49658)\n    at i._ [as $onAddToStage] (http://127.0.0.1:8787/js/main.min_6fea25ed.js:59:14351)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)\n    at r.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49570)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)"
+    },
+    {
+      "method": "getResByUrl",
+      "key": "common_img_heiditiao_03_png",
+      "reason": "null",
+      "caller": "Error\n    at RES.<computed> [as getResByUrl] (eval at evaluate (:311:30), <anonymous>:1:318)\n    at e.getAsset (http://127.0.0.1:8787/js/main.min_6fea25ed.js:50:19396)\n    at Object.e [as getAssets] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:47067)\n    at i.parseSource (http://127.0.0.1:8787/js/all.min_32285d70.js:14:19530)\n    at i.createChildren (http://127.0.0.1:8787/js/all.min_32285d70.js:14:20094)\n    at r.$onAddToStage [as $ori_onAddToStage] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49658)\n    at i._ [as $onAddToStage] (http://127.0.0.1:8787/js/main.min_6fea25ed.js:59:14351)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)\n    at r.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49570)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)"
+    },
+    {
+      "method": "getResAsync",
+      "key": "common_img_heiditiao_03_png",
+      "reason": "null",
+      "caller": "Error\n    at RES.<computed> [as getResAsync] (eval at evaluate (:311:30), <anonymous>:1:318)\n    at e.getAsset (http://127.0.0.1:8787/js/main.min_6fea25ed.js:50:19365)\n    at Object.e [as getAssets] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:47067)\n    at i.parseSource (http://127.0.0.1:8787/js/all.min_32285d70.js:14:19530)\n    at i.createChildren (http://127.0.0.1:8787/js/all.min_32285d70.js:14:20094)\n    at r.$onAddToStage [as $ori_onAddToStage] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49658)\n    at i._ [as $onAddToStage] (http://127.0.0.1:8787/js/main.min_6fea25ed.js:59:14351)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)\n    at r.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49570)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)"
+    },
+    {
+      "method": "getResAsync",
+      "key": "common_img_heiditiao_03_png",
+      "reason": "null",
+      "caller": "Error\n    at RES.<computed> [as getResAsync] (eval at evaluate (:311:30), <anonymous>:1:318)\n    at e.getAsset (http://127.0.0.1:8787/js/main.min_6fea25ed.js:50:19365)\n    at Object.e [as getAssets] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:47067)\n    at i.parseSource (http://127.0.0.1:8787/js/all.min_32285d70.js:14:19530)\n    at i.createChildren (http://127.0.0.1:8787/js/all.min_32285d70.js:14:20094)\n    at r.$onAddToStage [as $ori_onAddToStage] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49658)\n    at i._ [as $onAddToStage] (http://127.0.0.1:8787/js/main.min_6fea25ed.js:59:14351)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)\n    at r.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49570)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)"
+    },
+    {
+      "method": "getResByUrl",
+      "key": "pf_img_baojizi_png",
+      "reason": "null",
+      "caller": "Error\n    at RES.<computed> [as getResByUrl] (eval at evaluate (:311:30), <anonymous>:1:318)\n    at e.getAsset (http://127.0.0.1:8787/js/main.min_6fea25ed.js:50:19396)\n    at Object.e [as getAssets] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:47067)\n    at i.parseSource (http://127.0.0.1:8787/js/all.min_32285d70.js:14:19530)\n    at i.createChildren (http://127.0.0.1:8787/js/all.min_32285d70.js:14:20094)\n    at r.$onAddToStage [as $ori_onAddToStage] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49658)\n    at i._ [as $onAddToStage] (http://127.0.0.1:8787/js/main.min_6fea25ed.js:59:14351)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)\n    at r.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49570)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)"
+    },
+    {
+      "method": "getResAsync",
+      "key": "pf_img_baojizi_png",
+      "reason": "null",
+      "caller": "Error\n    at RES.<computed> [as getResAsync] (eval at evaluate (:311:30), <anonymous>:1:318)\n    at e.getAsset (http://127.0.0.1:8787/js/main.min_6fea25ed.js:50:19365)\n    at Object.e [as getAssets] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:47067)\n    at i.parseSource (http://127.0.0.1:8787/js/all.min_32285d70.js:14:19530)\n    at i.createChildren (http://127.0.0.1:8787/js/all.min_32285d70.js:14:20094)\n    at r.$onAddToStage [as $ori_onAddToStage] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49658)\n    at i._ [as $onAddToStage] (http://127.0.0.1:8787/js/main.min_6fea25ed.js:59:14351)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)\n    at r.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49570)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)"
+    },
+    {
+      "method": "getResAsync",
+      "key": "pf_img_baojizi_png",
+      "reason": "null",
+      "caller": "Error\n    at RES.<computed> [as getResAsync] (eval at evaluate (:311:30), <anonymous>:1:318)\n    at e.getAsset (http://127.0.0.1:8787/js/main.min_6fea25ed.js:50:19365)\n    at Object.e [as getAssets] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:47067)\n    at i.parseSource (http://127.0.0.1:8787/js/all.min_32285d70.js:14:19530)\n    at i.createChildren (http://127.0.0.1:8787/js/all.min_32285d70.js:14:20094)\n    at r.$onAddToStage [as $ori_onAddToStage] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49658)\n    at i._ [as $onAddToStage] (http://127.0.0.1:8787/js/main.min_6fea25ed.js:59:14351)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)\n    at r.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49570)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)"
+    },
+    {
+      "method": "getResByUrl",
+      "key": "common_icon_xiexia",
+      "reason": "null",
+      "caller": "Error\n    at RES.<computed> [as getResByUrl] (eval at evaluate (:311:30), <anonymous>:1:318)\n    at e.getAsset (http://127.0.0.1:8787/js/main.min_6fea25ed.js:50:19396)\n    at Object.e [as getAssets] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:47067)\n    at i.parseSource (http://127.0.0.1:8787/js/all.min_32285d70.js:14:19530)\n    at i.createChildren (http://127.0.0.1:8787/js/all.min_32285d70.js:14:20094)\n    at r.$onAddToStage [as $ori_onAddToStage] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49658)\n    at i._ [as $onAddToStage] (http://127.0.0.1:8787/js/main.min_6fea25ed.js:59:14351)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)\n    at r.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49570)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)"
+    },
+    {
+      "method": "getResByUrl",
+      "key": "common_icon_peidai",
+      "reason": "null",
+      "caller": "Error\n    at RES.<computed> [as getResByUrl] (eval at evaluate (:311:30), <anonymous>:1:318)\n    at e.getAsset (http://127.0.0.1:8787/js/main.min_6fea25ed.js:50:19396)\n    at Object.e [as getAssets] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:47067)\n    at i.parseSource (http://127.0.0.1:8787/js/all.min_32285d70.js:14:19530)\n    at i.createChildren (http://127.0.0.1:8787/js/all.min_32285d70.js:14:20094)\n    at r.$onAddToStage [as $ori_onAddToStage] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49658)\n    at i._ [as $onAddToStage] (http://127.0.0.1:8787/js/main.min_6fea25ed.js:59:14351)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)\n    at r.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49570)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)"
+    },
+    {
+      "method": "getResByUrl",
+      "key": "common_icon_tujian",
+      "reason": "null",
+      "caller": "Error\n    at RES.<computed> [as getResByUrl] (eval at evaluate (:311:30), <anonymous>:1:318)\n    at e.getAsset (http://127.0.0.1:8787/js/main.min_6fea25ed.js:50:19396)\n    at Object.e [as getAssets] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:47067)\n    at i.parseSource (http://127.0.0.1:8787/js/all.min_32285d70.js:14:19530)\n    at i.createChildren (http://127.0.0.1:8787/js/all.min_32285d70.js:14:20094)\n    at r.$onAddToStage [as $ori_onAddToStage] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49658)\n    at i._ [as $onAddToStage] (http://127.0.0.1:8787/js/main.min_6fea25ed.js:59:14351)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)\n    at r.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49570)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)"
+    },
+    {
+      "method": "getResByUrl",
+      "key": "common_img_dikuang03_png",
+      "reason": "null",
+      "caller": "Error\n    at RES.<computed> [as getResByUrl] (eval at evaluate (:311:30), <anonymous>:1:318)\n    at e.getAsset (http://127.0.0.1:8787/js/main.min_6fea25ed.js:50:19396)\n    at Object.e [as getAssets] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:47067)\n    at i.parseSource (http://127.0.0.1:8787/js/all.min_32285d70.js:14:19530)\n    at i.createChildren (http://127.0.0.1:8787/js/all.min_32285d70.js:14:20094)\n    at r.$onAddToStage [as $ori_onAddToStage] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49658)\n    at i._ [as $onAddToStage] (http://127.0.0.1:8787/js/main.min_6fea25ed.js:59:14351)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)\n    at r.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49570)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)"
+    },
+    {
+      "method": "getResByUrl",
+      "key": "_png",
+      "reason": "null",
+      "caller": "Error\n    at RES.<computed> [as getResByUrl] (eval at evaluate (:311:30), <anonymous>:1:318)\n    at e.getAsset (http://127.0.0.1:8787/js/main.min_6fea25ed.js:50:19396)\n    at Object.e [as getAssets] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:47067)\n    at i.parseSource (http://127.0.0.1:8787/js/all.min_32285d70.js:14:19530)\n    at i.set [as source] (http://127.0.0.1:8787/js/all.min_32285d70.js:14:19139)\n    at a.<anonymous> (http://127.0.0.1:8787/index_bh_lite3zbtest_andr.html?mode=heroes:1113:57)\n    at Array.forEach (<anonymous>)\n    at game.HeroDermaPanel.updateDermaInfo (http://127.0.0.1:8787/index_bh_lite3zbtest_andr.html?mode=heroes:1110:36)\n    at a.updateView (http://127.0.0.1:8787/js/main.min_6fea25ed.js:196:1144)\n    at game.HeroDermaPanel.updateView (eval at evaluate (:311:30), <anonymous>:5:170)"
+    },
+    {
+      "method": "getResAsync",
+      "key": "_png",
+      "reason": "null",
+      "caller": "Error\n    at RES.<computed> [as getResAsync] (eval at evaluate (:311:30), <anonymous>:1:318)\n    at e.getAsset (http://127.0.0.1:8787/js/main.min_6fea25ed.js:50:19365)\n    at Object.e [as getAssets] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:47067)\n    at i.parseSource (http://127.0.0.1:8787/js/all.min_32285d70.js:14:19530)\n    at i.set [as source] (http://127.0.0.1:8787/js/all.min_32285d70.js:14:19139)\n    at a.<anonymous> (http://127.0.0.1:8787/index_bh_lite3zbtest_andr.html?mode=heroes:1113:57)\n    at Array.forEach (<anonymous>)\n    at game.HeroDermaPanel.updateDermaInfo (http://127.0.0.1:8787/index_bh_lite3zbtest_andr.html?mode=heroes:1110:36)\n    at a.updateView (http://127.0.0.1:8787/js/main.min_6fea25ed.js:196:1144)\n    at game.HeroDermaPanel.updateView (eval at evaluate (:311:30), <anonymous>:5:170)"
+    },
+    {
+      "method": "getResByUrl",
+      "key": "pf_img_jingqingqidai_png",
+      "reason": "null",
+      "caller": "Error\n    at RES.<computed> [as getResByUrl] (eval at evaluate (:311:30), <anonymous>:1:318)\n    at e.getAsset (http://127.0.0.1:8787/js/main.min_6fea25ed.js:50:19396)\n    at Object.e [as getAssets] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:47067)\n    at i.parseSource (http://127.0.0.1:8787/js/all.min_32285d70.js:14:19530)\n    at i.createChildren (http://127.0.0.1:8787/js/all.min_32285d70.js:14:20094)\n    at r.$onAddToStage [as $ori_onAddToStage] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49658)\n    at i._ [as $onAddToStage] (http://127.0.0.1:8787/js/main.min_6fea25ed.js:59:14351)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)\n    at r.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49570)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)"
+    },
+    {
+      "method": "getResAsync",
+      "key": "pf_img_jingqingqidai_png",
+      "reason": "null",
+      "caller": "Error\n    at RES.<computed> [as getResAsync] (eval at evaluate (:311:30), <anonymous>:1:318)\n    at e.getAsset (http://127.0.0.1:8787/js/main.min_6fea25ed.js:50:19365)\n    at Object.e [as getAssets] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:47067)\n    at i.parseSource (http://127.0.0.1:8787/js/all.min_32285d70.js:14:19530)\n    at i.createChildren (http://127.0.0.1:8787/js/all.min_32285d70.js:14:20094)\n    at r.$onAddToStage [as $ori_onAddToStage] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49658)\n    at i._ [as $onAddToStage] (http://127.0.0.1:8787/js/main.min_6fea25ed.js:59:14351)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)\n    at r.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49570)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)"
+    },
+    {
+      "method": "getResAsync",
+      "key": "pf_img_jingqingqidai_png",
+      "reason": "null",
+      "caller": "Error\n    at RES.<computed> [as getResAsync] (eval at evaluate (:311:30), <anonymous>:1:318)\n    at e.getAsset (http://127.0.0.1:8787/js/main.min_6fea25ed.js:50:19365)\n    at Object.e [as getAssets] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:47067)\n    at i.parseSource (http://127.0.0.1:8787/js/all.min_32285d70.js:14:19530)\n    at i.createChildren (http://127.0.0.1:8787/js/all.min_32285d70.js:14:20094)\n    at r.$onAddToStage [as $ori_onAddToStage] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49658)\n    at i._ [as $onAddToStage] (http://127.0.0.1:8787/js/main.min_6fea25ed.js:59:14351)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)\n    at r.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49570)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)"
+    },
+    {
+      "method": "getResAsync",
+      "key": "pf_img_jingqingqidai_png",
+      "reason": "null",
+      "caller": "Error\n    at RES.<computed> [as getResAsync] (eval at evaluate (:311:30), <anonymous>:1:318)\n    at e.getAsset (http://127.0.0.1:8787/js/main.min_6fea25ed.js:50:19365)\n    at Object.e [as getAssets] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:47067)\n    at i.parseSource (http://127.0.0.1:8787/js/all.min_32285d70.js:14:19530)\n    at i.createChildren (http://127.0.0.1:8787/js/all.min_32285d70.js:14:20094)\n    at r.$onAddToStage [as $ori_onAddToStage] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49658)\n    at i._ [as $onAddToStage] (http://127.0.0.1:8787/js/main.min_6fea25ed.js:59:14351)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)\n    at r.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49570)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)"
+    },
+    {
+      "method": "getResByUrl",
+      "key": "pf_img_xuanzhong_png",
+      "reason": "null",
+      "caller": "Error\n    at RES.<computed> [as getResByUrl] (eval at evaluate (:311:30), <anonymous>:1:318)\n    at e.getAsset (http://127.0.0.1:8787/js/main.min_6fea25ed.js:50:19396)\n    at Object.e [as getAssets] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:47067)\n    at i.parseSource (http://127.0.0.1:8787/js/all.min_32285d70.js:14:19530)\n    at i.createChildren (http://127.0.0.1:8787/js/all.min_32285d70.js:14:20094)\n    at r.$onAddToStage [as $ori_onAddToStage] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49658)\n    at i._ [as $onAddToStage] (http://127.0.0.1:8787/js/main.min_6fea25ed.js:59:14351)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)\n    at r.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49570)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)"
+    },
+    {
+      "method": "getResAsync",
+      "key": "pf_img_xuanzhong_png",
+      "reason": "null",
+      "caller": "Error\n    at RES.<computed> [as getResAsync] (eval at evaluate (:311:30), <anonymous>:1:318)\n    at e.getAsset (http://127.0.0.1:8787/js/main.min_6fea25ed.js:50:19365)\n    at Object.e [as getAssets] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:47067)\n    at i.parseSource (http://127.0.0.1:8787/js/all.min_32285d70.js:14:19530)\n    at i.createChildren (http://127.0.0.1:8787/js/all.min_32285d70.js:14:20094)\n    at r.$onAddToStage [as $ori_onAddToStage] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49658)\n    at i._ [as $onAddToStage] (http://127.0.0.1:8787/js/main.min_6fea25ed.js:59:14351)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)\n    at r.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49570)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)"
+    },
+    {
+      "method": "getResAsync",
+      "key": "pf_img_xuanzhong_png",
+      "reason": "null",
+      "caller": "Error\n    at RES.<computed> [as getResAsync] (eval at evaluate (:311:30), <anonymous>:1:318)\n    at e.getAsset (http://127.0.0.1:8787/js/main.min_6fea25ed.js:50:19365)\n    at Object.e [as getAssets] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:47067)\n    at i.parseSource (http://127.0.0.1:8787/js/all.min_32285d70.js:14:19530)\n    at i.createChildren (http://127.0.0.1:8787/js/all.min_32285d70.js:14:20094)\n    at r.$onAddToStage [as $ori_onAddToStage] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49658)\n    at i._ [as $onAddToStage] (http://127.0.0.1:8787/js/main.min_6fea25ed.js:59:14351)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)\n    at r.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49570)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)"
+    },
+    {
+      "method": "getResAsync",
+      "key": "pf_img_xuanzhong_png",
+      "reason": "null",
+      "caller": "Error\n    at RES.<computed> [as getResAsync] (eval at evaluate (:311:30), <anonymous>:1:318)\n    at e.getAsset (http://127.0.0.1:8787/js/main.min_6fea25ed.js:50:19365)\n    at Object.e [as getAssets] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:47067)\n    at i.parseSource (http://127.0.0.1:8787/js/all.min_32285d70.js:14:19530)\n    at i.createChildren (http://127.0.0.1:8787/js/all.min_32285d70.js:14:20094)\n    at r.$onAddToStage [as $ori_onAddToStage] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49658)\n    at i._ [as $onAddToStage] (http://127.0.0.1:8787/js/main.min_6fea25ed.js:59:14351)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)\n    at r.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49570)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)"
+    },
+    {
+      "method": "getResByUrl",
+      "key": "pf_img_yichuandai_png",
+      "reason": "null",
+      "caller": "Error\n    at RES.<computed> [as getResByUrl] (eval at evaluate (:311:30), <anonymous>:1:318)\n    at e.getAsset (http://127.0.0.1:8787/js/main.min_6fea25ed.js:50:19396)\n    at Object.e [as getAssets] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:47067)\n    at i.parseSource (http://127.0.0.1:8787/js/all.min_32285d70.js:14:19530)\n    at i.createChildren (http://127.0.0.1:8787/js/all.min_32285d70.js:14:20094)\n    at r.$onAddToStage [as $ori_onAddToStage] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49658)\n    at i._ [as $onAddToStage] (http://127.0.0.1:8787/js/main.min_6fea25ed.js:59:14351)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)\n    at r.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49570)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)"
+    },
+    {
+      "method": "getResAsync",
+      "key": "pf_img_yichuandai_png",
+      "reason": "null",
+      "caller": "Error\n    at RES.<computed> [as getResAsync] (eval at evaluate (:311:30), <anonymous>:1:318)\n    at e.getAsset (http://127.0.0.1:8787/js/main.min_6fea25ed.js:50:19365)\n    at Object.e [as getAssets] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:47067)\n    at i.parseSource (http://127.0.0.1:8787/js/all.min_32285d70.js:14:19530)\n    at i.createChildren (http://127.0.0.1:8787/js/all.min_32285d70.js:14:20094)\n    at r.$onAddToStage [as $ori_onAddToStage] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49658)\n    at i._ [as $onAddToStage] (http://127.0.0.1:8787/js/main.min_6fea25ed.js:59:14351)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)\n    at r.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49570)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)"
+    },
+    {
+      "method": "getResAsync",
+      "key": "pf_img_yichuandai_png",
+      "reason": "null",
+      "caller": "Error\n    at RES.<computed> [as getResAsync] (eval at evaluate (:311:30), <anonymous>:1:318)\n    at e.getAsset (http://127.0.0.1:8787/js/main.min_6fea25ed.js:50:19365)\n    at Object.e [as getAssets] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:47067)\n    at i.parseSource (http://127.0.0.1:8787/js/all.min_32285d70.js:14:19530)\n    at i.createChildren (http://127.0.0.1:8787/js/all.min_32285d70.js:14:20094)\n    at r.$onAddToStage [as $ori_onAddToStage] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49658)\n    at i._ [as $onAddToStage] (http://127.0.0.1:8787/js/main.min_6fea25ed.js:59:14351)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)\n    at r.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49570)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)"
+    },
+    {
+      "method": "getResAsync",
+      "key": "pf_img_yichuandai_png",
+      "reason": "null",
+      "caller": "Error\n    at RES.<computed> [as getResAsync] (eval at evaluate (:311:30), <anonymous>:1:318)\n    at e.getAsset (http://127.0.0.1:8787/js/main.min_6fea25ed.js:50:19365)\n    at Object.e [as getAssets] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:47067)\n    at i.parseSource (http://127.0.0.1:8787/js/all.min_32285d70.js:14:19530)\n    at i.createChildren (http://127.0.0.1:8787/js/all.min_32285d70.js:14:20094)\n    at r.$onAddToStage [as $ori_onAddToStage] (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49658)\n    at i._ [as $onAddToStage] (http://127.0.0.1:8787/js/main.min_6fea25ed.js:59:14351)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)\n    at r.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:12:49570)\n    at i.$onAddToStage (http://127.0.0.1:8787/js/all.min_32285d70.js:2:2239)"
+    }
+  ],
+  "errors": [
+    {
+      "message": "null",
+      "stack": ""
+    },
+    {
+      "message": "null",
+      "stack": ""
+    },
+    {
+      "message": "null",
+      "stack": ""
+    },
+    {
+      "message": "null",
+      "stack": ""
+    },
+    {
+      "message": "null",
+      "stack": ""
+    },
+    {
+      "message": "null",
+      "stack": ""
+    },
+    {
+      "message": "null",
+      "stack": ""
+    },
+    {
+      "message": "null",
+      "stack": ""
+    },
+    {
+      "message": "null",
+      "stack": ""
+    },
+    {
+      "message": "null",
+      "stack": ""
+    },
+    {
+      "message": "null",
+      "stack": ""
+    },
+    {
+      "message": "null",
+      "stack": ""
+    },
+    {
+      "message": "null",
+      "stack": ""
+    },
+    {
+      "message": "null",
+      "stack": ""
+    },
+    {
+      "message": "null",
+      "stack": ""
+    },
+    {
+      "message": "null",
+      "stack": ""
+    },
+    {
+      "message": "null",
+      "stack": ""
+    },
+    {
+      "message": "null",
+      "stack": ""
+    },
+    {
+      "message": "null",
+      "stack": ""
+    },
+    {
+      "message": "null",
+      "stack": ""
+    },
+    {
+      "message": "null",
+      "stack": ""
+    },
+    {
+      "message": "null",
+      "stack": ""
+    },
+    {
+      "message": "null",
+      "stack": ""
+    },
+    {
+      "message": "null",
+      "stack": ""
+    },
+    {
+      "message": "null",
+      "stack": ""
+    },
+    {
+      "message": "null",
+      "stack": ""
+    },
+    {
+      "message": "null",
+      "stack": ""
+    }
+  ],
+  "network": [
+    {
+      "url": "http://127.0.0.1:8787/common_img_jichukuang_09_png",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:8787/common_img_heiditiao_01_png",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:8787/_hero_ar_m_json.common_icon_zhiye_1",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:8787/common_img_heiditiao_03_png",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:8787/pf_img_baojizi_png",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:8787/common_icon_xiexia",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:8787/common_icon_peidai",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:8787/common_icon_tujian",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:8787/common_img_dikuang03_png",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:8787/_png",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:8787/pf_img_jingqingqidai_png",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:8787/pf_img_xuanzhong_png",
+      "status": 404
+    },
+    {
+      "url": "http://127.0.0.1:8787/pf_img_yichuandai_png",
+      "status": 404
+    }
+  ],
+  "scope": "Browser-only single-frame test fixture validates independent skin routing, not animation or complete skin"
+}

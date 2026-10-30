@@ -9,10 +9,12 @@
     },
     {
       "key": "pf_img_ditu_png",
-      "status": "pending",
+      "status": "repaired-background-only",
       "observedIn": "HeroDermaPanel normal AppFacade open",
       "originalManifestBindingFound": false,
-      "kind": "missing-ui-resource-key"
+      "kind": "missing-ui-resource-key",
+      "replacementVersion": "0.71.0",
+      "evidence": "art-migration/versions/0.71.0/skin-panel-background-native.json"
     },
     {
       "key": "common_img_heiditiao_01_png",

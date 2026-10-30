@@ -61,3 +61,6 @@ v0.69 `character-idle.js`新增可选data.skins和按模型/拥有者选择独�
 
 ## v0.70 接入收尾（优先于上文旧状态）
 100201独立待机124原图/7WebP已正式接入，普通、EZ、编队live循环通过，原生6.6秒；248图块像素与124回退SHA核对通过，全85详情通过，1899依赖索引通过。10角色1876动作帧位回归全部通过。完整角色0/85、完整皮肤0/125。attack-qwen-v2已查看批准姿势参考，matte-v2任务502efb76-bbd2-4ccf-bddf-e997841d0d4e已提交，后续只collect。skill-matte-v1尚未做背景合成alpha验收。
+
+## v0.71优先接续
+已补官方皮肤背景pf_img_ditu_png，正常面板缺失键14降13但整面板仍失败27异常。85详情、1876帧位、1900依赖通过。普攻MiniMax e5f0cdc8-2e21-4314-ac58-35783a5c4c52实际运行，技能96517373-3612-4689-99e9-99cfb29da847实际排队；只collect。工具street_skin_action_candidate.py按独立skinCode和nativeAudit生成，未发布战斗动作。下一项官方选中边框generation/skin-panel-selected-official-v1，已保存透明原图及167x254缩放，需叠原生卡验收再接入pf_img_xuanzhong_png。
