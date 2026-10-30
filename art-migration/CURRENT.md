@@ -64,3 +64,9 @@ Python street_atlas_verify.py；精确stage新启用图片后street_runtime_trac
 真实effect3实时参考outputs/street-reskin/skin100201-live-effect3-reference-v1，31采样/19不同帧，两1.3秒循环，全部已看；非穷尽原39帧。生成目录保存native-reference.mp4、reference-{capture,review,video}.json。官方新guide在generation/skin100201-effect3-guide-official-v1（原图及512导图已看，仅静态设计批准）。下一步collect后用street_effect_review.py全124/16放大实际看，拒收停顿/裁边/错误形状，不自动promote。需明确完整周期映射原生39帧1.3秒、alpha/加色混合、几何与普通/EZ原生、实际战斗触发后才可接入；effect-design特意独立schema，不用旧全局特效promote冒充独立皮肤。输出仍pending/未运行接入，不计完成。v0.86完成后推84/85/86核SHA。
 
 最新终态纠正：v85提交收尾API队列变空后已立即collect到124帧，现无活动生成。全部124接触图和16放大已查看；整片未批准，34..60暗细网状/模糊材质、123骤返静态导图。effect-qa.manualReview=needs-complete-cycle-review，不能报告成整片通过。62..122较清楚且看似周期性，仅可作为完整周期候选，下一步需高分辨率连续帧/相位/接缝/完整一圈审查，不许只摘几张关键姿势；若无合格完整圈则拒收重做。仍未alpha/加色混合/原生回放/战斗验收，未接入。不再称此任务运行。
+
+## v0.86最终接续（优先于历史状态）
+特效支持精确model+armature绑定，hero模型未指定armature/重复冲突保留原生，init/ready/reset/destroy清理请求。生产特效数据未新增；浏览器复用旧图集仅验证路由，不算新皮肤资产。7项正常/重复/缺armature三组、14原有普通/EZ特效、effect副骨架不绑定人物idle及销毁缓存均通过。
+当前装备85/85（83新基础待机、2原作未更换皮肤）与临时浏览器卸皮肤85/85均通过；10角色1876动作、125属性/4卡比例/台面/真实点击、普通/EZ100202原生两周期bounds/100201切回/编队、1910依赖索引/全台账无绑定错。不是全85完整换皮或零bug证明。完整角色0/85，完整独立皮肤0/125。
+MiniMax effect3-v1经连续放大拒收；新官方guide-v2仅设计批准，56帧参考避免节点17k+5截断，max图像参考/无turboLoRA/24steps的effect3-v2已生成124帧。全部124+16放大实际查看，0..17长停姿、25..38及79..123材质/形状变为发光碎片，拒收整片，未alpha/接入。当前Comfy队列为空，无活动生成；旧worker active不作证据。必须继续推进独立完整动作/3特效，不得将基础设施当全部美术完成。
+本版完成后推送84/85/86至delivery/main并核对完整SHA；下一批推送v89。原始候选124帧留本地，Git保存工作流/设计/QA/参考/接触图，不把拒收原图作为运行依赖。

@@ -1,0 +1,73 @@
+{
+  "pass": true,
+  "mode": "duplicate",
+  "scope": "Browser-only fixture reuses an existing approved atlas only to verify model/armature routing. Not a new skin/VFX asset, not written to production data, not an art approval.",
+  "rows": [
+    {
+      "model": "hero_skin_002_01",
+      "armature": "hero_skin_002_01",
+      "generatedVisible": false,
+      "nativeVisible": false,
+      "idleId": 100201
+    },
+    {
+      "model": "hero_skin_002_01",
+      "armature": "effect_1",
+      "generatedVisible": false,
+      "nativeVisible": true
+    },
+    {
+      "model": "hero_skin_002_01",
+      "armature": "effect_2",
+      "generatedVisible": false,
+      "nativeVisible": true
+    },
+    {
+      "model": "hero_skin_002_01",
+      "armature": "effect_3",
+      "generatedVisible": false,
+      "nativeVisible": true
+    },
+    {
+      "model": "hero_skin_002_01",
+      "armature": "hero_skin_002_01",
+      "generatedVisible": false,
+      "nativeVisible": false,
+      "idleId": 100201
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "armature": "effect_3",
+      "generatedVisible": false,
+      "nativeVisible": true
+    },
+    {
+      "model": "common_skill_caocao_02_1",
+      "armature": "common_skill_caocao_02_1",
+      "effectId": "hero001-cast",
+      "generatedVisible": true,
+      "nativeVisible": false
+    }
+  ],
+  "cleanup": {
+    "installed": true,
+    "framesPresented": 3,
+    "errors": [
+      {
+        "effect": "TEST-ONLY-duplicate",
+        "error": "ambiguous effect binding hero_skin_002_01/effect_3"
+      },
+      {
+        "effect": "TEST-ONLY-duplicate",
+        "error": "ambiguous effect binding hero_skin_002_01_ez/effect_3"
+      }
+    ],
+    "models": {
+      "common_skill_caocao_02_1": 1
+    },
+    "caches": [],
+    "active": []
+  },
+  "errors": [],
+  "failures": []
+}

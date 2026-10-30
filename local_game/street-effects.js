@@ -1,6 +1,6 @@
 (function(global){
     'use strict';
-    var installed=false,byModel={},caches={},players=[],audit={installed:false,framesPresented:0,errors:[],models:{}};
+    var installed=false,byModel={},byArmature={},caches={},players=[],audit={installed:false,framesPresented:0,errors:[],models:{}};
     function acquire(cfg){
         var c=caches[cfg.id];if(c){c.users++;return c;}
         c={cfg:cfg,users:1,dead:false,textures:[],sheet:null,ready:false};caches[cfg.id]=c;
@@ -35,8 +35,10 @@
         }
         state.renderScale=scale;state.bitmap.x=cfg.render.x*scale;state.bitmap.y=cfg.render.y*scale;state.bitmap.width=cfg.render.width*scale;state.bitmap.height=cfg.render.height*scale;state.bitmap.alpha=cfg.render.alpha===undefined?1:cfg.render.alpha;state.bitmap.visible=true;
     }
-    function attach(player,name){
-        var cfg=byModel[String(name)];if(!cfg){detach(player);return;}
+    function attach(player,name,armature){
+        var actual=armature||(player._armature&&player._armature.armature&&player._armature.armature.armatureData&&player._armature.armature.armatureData.name);
+        var key=String(name)+'/'+String(actual||'');
+        var cfg=Object.prototype.hasOwnProperty.call(byArmature,key)?byArmature[key]:byModel[String(name)];if(!cfg){detach(player);return;}
         if(player._streetEffect&&player._streetEffect.cfg===cfg)return;
         detach(player);var bitmap=new egret.Bitmap();bitmap.name='generatedStreetEffect';bitmap.touchEnabled=false;bitmap.blendMode=cfg.blendMode==='normal-alpha'?egret.BlendMode.NORMAL:egret.BlendMode.ADD;bitmap.visible=false;player.addChild(bitmap);
         var state={cfg:cfg,cache:acquire(cfg),bitmap:bitmap,frame:-1,tick:null,removed:null,origin:new egret.Point(),axisX:new egret.Point(),axisY:new egret.Point()};state.tick=function(){render(player);};state.removed=function(){detach(player);};
@@ -45,12 +47,17 @@
     }
     function install(){
         if(installed||!global.StreetEffectsData||!global.DBPlayer||new URLSearchParams(location.search).get('streetfx')==='0')return;
-        StreetEffectsData.effects.forEach(function(cfg){cfg.models.forEach(function(name){byModel[name]=cfg;});});
+        StreetEffectsData.effects.forEach(function(cfg){cfg.models.forEach(function(name){
+            if(/^hero_/.test(name)&&!cfg.armature){audit.errors.push({effect:cfg.id,error:'character model requires explicit effect armature '+name});return;}
+            var table=cfg.armature?byArmature:byModel,key=cfg.armature?String(name)+'/'+String(cfg.armature):name;
+            if(Object.prototype.hasOwnProperty.call(table,key)&&table[key]!==cfg){table[key]=null;audit.errors.push({effect:cfg.id,error:'ambiguous effect binding '+key});}
+            else table[key]=cfg;
+        });});
         var proto=DBPlayer.prototype,init=proto.init,ready=proto.readyToPlay,destroy=proto.destroy,reset=proto.reset;
-        proto.init=function(name){var result=init.apply(this,arguments);attach(this,name);return result;};
-        proto.readyToPlay=function(){var result=ready.apply(this,arguments);render(this);return result;};
-        proto.reset=function(){detach(this);return reset.apply(this,arguments);};
-        proto.destroy=function(){detach(this);return destroy.apply(this,arguments);};
+        proto.init=function(name){detach(this);var request={model:String(name),armature:arguments[1]==null?null:String(arguments[1])};this._streetEffectRequest=request;var result=init.apply(this,arguments);this._streetEffectRequest=request;attach(this,name,request.armature);return result;};
+        proto.readyToPlay=function(){var result=ready.apply(this,arguments),request=this._streetEffectRequest;if(request)attach(this,request.model,request.armature);render(this);return result;};
+        proto.reset=function(){detach(this);this._streetEffectRequest=null;return reset.apply(this,arguments);};
+        proto.destroy=function(){detach(this);this._streetEffectRequest=null;return destroy.apply(this,arguments);};
         installed=audit.installed=true;
     }
     global.StreetEffects={install:install,render:render,audit:audit,snapshot:function(){return {installed:installed,framesPresented:audit.framesPresented,errors:audit.errors.slice(),models:audit.models,caches:Object.keys(caches).map(function(key){var c=caches[key];return {id:key,users:c.users,ready:c.ready};}),active:players.map(function(p){return {id:p._streetEffect.cfg.id,model:p._dbName,nativeFrame:p._streetEffect.nativeFrame,frame:p._streetEffect.frame,visible:p._streetEffect.bitmap.visible,screenDiagonal:p._streetEffect.screenDiagonal,ready:p._streetEffect.cache.ready,onStage:!!p.stage,nativeVisible:!!(p._armature&&p._armature.visible)};})};}};

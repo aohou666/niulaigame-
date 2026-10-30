@@ -1,0 +1,56 @@
+{
+  "path": "G:\\comfylight\\ComfyUI_windows_portable_nvidia\\ComfyUI_windows_portable\\ComfyUI\\input\\skin100201-effect3-native-realtime-v2.mp4",
+  "sha256": "5f128f5afb15783f61356158cf3b3e48666531364f1a2607c3eb0859c7f3e748",
+  "sourceCaptureSha256": "6fcb126a3f7ad75c74bd5bda98043f5802fcde7595b43ab1bcd002e234e9b6c1",
+  "sourceReviewSha256": "2d31fe53209b42dd83887707c245743374080e1e46c7917a8193a548ef976f43",
+  "crop": [
+    25,
+    128,
+    558,
+    661
+  ],
+  "sampleTimingRetimedToSeconds": 2.3333333333333335,
+  "nativeCycles": 2,
+  "nativeLoopSeconds": 1.3,
+  "sourceSetup": {
+    "model": "hero_skin_002_01",
+    "armature": "effect_3",
+    "duration": 1.3,
+    "sourceBounds": {
+      "x": -27,
+      "y": -31,
+      "width": 53,
+      "height": 67
+    },
+    "actor": {
+      "x": 363.39622641509436,
+      "y": 463.0188679245283,
+      "scale": 6.7924528301886795
+    },
+    "stage": {
+      "width": 720,
+      "height": 960
+    },
+    "canvas": {
+      "x": 0,
+      "y": 0,
+      "width": 600,
+      "height": 800
+    },
+    "bodyIdleState": false
+  },
+  "manualReferenceReview": "approved-purpose-and-motion-only",
+  "frames": 56,
+  "ffprobe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "r_frame_rate": "24/1",
+        "duration": "2.333008",
+        "nb_frames": "56"
+      }
+    ]
+  },
+  "referenceConformance": "56=17*3+5; two complete sampled native cycles retimed, no in-node frame truncation"
+}

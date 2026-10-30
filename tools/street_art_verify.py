@@ -46,10 +46,13 @@ def verify():
       assert [(e['name'],e['frame0']) for e in seq.get('nativeEvents',[])]==[(e['name'],e['frame0']) for e in native['events'] if e['name'] in ['pia','zd']],'native event metadata differs';nativeChecks+=1
    characters.append({'hero':cfg['id'],'frames':len(cfg['frames']),'distinctFrames':len(hashes),'actions':list(cfg['actions']),'quarantinedActions':cfg.get('qualityQuarantineActions',[]),'temporalQuality':cfg.get('temporalQuality','not-revalidated'),'supplemental':cfg.get('supplemental',False)})
   except Exception as e:errors.append({'hero':cfg['id'],'error':str(e)})
- effects=[]
+ effects=[];effectBindings=set()
  effectFile=GAME/'street-effects-data.js'
  for cfg in loadjs(effectFile)['effects'] if effectFile.exists() else []:
   try:
+   for model in cfg['models']:
+    binding=(model,cfg.get('armature'));assert binding not in effectBindings,'duplicate model/armature effect binding';effectBindings.add(binding)
+    assert not model.startswith('hero_') or cfg.get('armature'),'character model requires explicit effect armature'
    assert hashlib.sha256((GAME/cfg['atlas']).read_bytes()).hexdigest()==cfg['atlasSha256'],'effect atlas digest mismatch'
    assert len(cfg['frames'])==len(cfg['sampling'])==cfg['frameCount']==cfg['sourceOriginalFrames'],'effect native frame count differs'
    assert cfg['nativeTimelineRetained'] and cfg['fps']>0
@@ -68,10 +71,13 @@ def verify():
     nativeFile=ROOT/cfg['nativeEventAuditPath'];assert hashlib.sha256(nativeFile.read_bytes()).hexdigest()==cfg['nativeEventAuditSha256'],'effect native audit digest mismatch'
     nativeData=json.loads(nativeFile.read_text('utf8'));assert nativeData['complete'];nativeRows={r['model']:r for r in nativeData['records']}
     for model in cfg['models']:
-     row=nativeRows[model];seq=cfg.get('modelOverrides',{}).get(model,cfg);assert seq['frameCount']==row['durationFrames'] and abs(seq['fps']-row['fps'])<.0001,'effect variant native clock mismatch'
+     if cfg.get('armature'):
+      matches=[r for r in nativeData['records'] if r['model']==model and (r.get('armature') or r.get('action'))==cfg['armature']];assert len(matches)==1,'missing/ambiguous effect armature audit';row=matches[0]
+     else:row=nativeRows[model]
+     seq=cfg.get('modelOverrides',{}).get(model,cfg);assert seq['frameCount']==row['durationFrames'] and abs(seq['fps']-row['fps'])<.0001,'effect variant native clock mismatch'
      assert cfg['nativeModels'][model]['events']==row['events'],'effect authored event metadata mismatch'
      mapping=seq.get('frameMap',list(range(cfg['frameCount'])));assert len(mapping)==seq['frameCount'] and mapping==sorted(mapping) and min(mapping)>=0 and max(mapping)<cfg['frameCount'],'effect variant frame mapping invalid'
-   effects.append({'id':cfg['id'],'models':len(cfg['models']),'nativeFrames':cfg['frameCount'],'nonemptyFrames':nonempty,'distinctFrames':len(hashes)})
+   effects.append({'id':cfg['id'],'models':len(cfg['models']),'armature':cfg.get('armature'),'nativeFrames':cfg['frameCount'],'nonemptyFrames':nonempty,'distinctFrames':len(hashes)})
   except Exception as e:errors.append({'effect':cfg['id'],'error':str(e)})
  return {'images':images,'bodyAtlasFrames':frames,'bodyCharacters':characters,'nativeModelActionsChecked':nativeChecks,'effects':effects,'errors':errors}
 if __name__=='__main__':

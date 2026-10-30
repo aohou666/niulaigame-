@@ -1,0 +1,73 @@
+{
+  "pass": true,
+  "scope": "Actual ordinary/EZ effect armatures, no body idle requests for six effects; main/effect/main reuse and destroy. No battle transaction.",
+  "rows": [
+    {
+      "model": "hero_skin_002_01",
+      "armature": "effect_1",
+      "nativeVisible": true,
+      "idleState": false,
+      "suppressed": false,
+      "layout": false
+    },
+    {
+      "model": "hero_skin_002_01",
+      "armature": "effect_2",
+      "nativeVisible": true,
+      "idleState": false,
+      "suppressed": false,
+      "layout": false
+    },
+    {
+      "model": "hero_skin_002_01",
+      "armature": "effect_3",
+      "nativeVisible": true,
+      "idleState": false,
+      "suppressed": false,
+      "layout": false
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "armature": "effect_1",
+      "nativeVisible": true,
+      "idleState": false,
+      "suppressed": false,
+      "layout": false
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "armature": "effect_2",
+      "nativeVisible": true,
+      "idleState": false,
+      "suppressed": false,
+      "layout": false
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "armature": "effect_3",
+      "nativeVisible": true,
+      "idleState": false,
+      "suppressed": false,
+      "layout": false
+    }
+  ],
+  "effectOnlyIdleRequests": 0,
+  "reuse": {
+    "before": true,
+    "effect": {
+      "state": false,
+      "nativeVisible": true,
+      "suppressed": false
+    },
+    "restored": 100201,
+    "afterDestroyState": false
+  },
+  "cleanup": {
+    "activeSkinStates": 0,
+    "cacheCount": 0,
+    "queued": 0,
+    "loading": 0
+  },
+  "errors": [],
+  "failures": []
+}

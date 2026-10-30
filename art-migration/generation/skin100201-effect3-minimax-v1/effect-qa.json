@@ -875,7 +875,7 @@
   "croppedFrames": [],
   "peakFrame": 64,
   "endpointMeanAbsoluteDifference": 0.610870361328125,
-  "manualReview": "needs-complete-cycle-review",
+  "manualReview": "rejected",
   "runtimeIntegrated": false,
   "wholeClipApproved": false,
   "reviewedAllFrames": 124,
@@ -885,5 +885,13 @@
     "Whole clip not approved: frames34..60 become dark wirelike/blurred strands and palette/material consistency drops; frame123 returns to static guide composition abruptly. Endpoint similarity alone is insufficient.",
     "Later region62..122 appears periodic and clearer; it is only a candidate for a genuinely complete cycle. Must inspect full-resolution consecutive frames, prove wrap/phase and preserve one complete motion before any cycle approval. No cropping a few good key poses and calling it animation.",
     "No alpha/additive blend, native geometry/replay or battle-trigger approval yet."
-  ]
+  ],
+  "cycleReview": {
+    "viewedSourceRange": [
+      62,
+      97
+    ],
+    "completeCycleApproved": false,
+    "reason": "Foreground-union enlarged consecutive review still shows tangled/hatching edge bundles and changing material/shape. Periodicity alone does not establish production quality. No selected segment approved."
+  }
 }
