@@ -1,0 +1,199 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "minimax_h3_fl2va_pruned_w4a8_mixed.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_32b_minimax_h3_int4_convrot.safetensors",
+      "type": "minimax",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "skin100201-shouji-minimax-v3-idle.png"
+    }
+  },
+  "7": {
+    "class_type": "MiniMaxH3ImageToVideo",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "prompt": "ONE complete hit reaction for this EXACT masked golden bull on ONE stationary unicycle. In this short1.625second clip, start in the upright FIRST image, immediately flinch and bend upper body LEFT once into the middle GUIDE image, recover promptly to the SAME upright LAST image. Exactly ONE recoil and ONE complete return, no toss or second hit, no long frozen opening or ending. Wheel ground contact is fixed; keep both feet on pedals. Right hand on viewer left retains ONE walnut, left hand on viewer right retains exactly TWO red-white striped balls throughout. Match identity, horns, black mask, teal-purple formal suit, cream ruffles, purple trousers, teal sneakers, unicycle shape and materials in every frame. The image guide shows only peak recoil; it is not the ending pose. Full figure and all props visible with safe margin, fixed camera, pure black background, no text, flashes, extra limbs, new objects or motion trails. 2.5D semi-realistic semi-cartoon absurd neighborhood game character.",
+      "width": 512,
+      "height": 512,
+      "length": 39,
+      "first_frame": [
+        "4",
+        0
+      ],
+      "last_frame": [
+        "4",
+        0
+      ]
+    }
+  },
+  "12": {
+    "class_type": "MiniMaxH3DualClockSamplerT8",
+    "inputs": {
+      "model": [
+        "19",
+        0
+      ],
+      "av_latent": [
+        "7",
+        1
+      ],
+      "steps": 24,
+      "shift_video": 12,
+      "shift_audio": 3,
+      "sampler_name": "dual_clock_euler",
+      "scheduler": "native_flow"
+    }
+  },
+  "13": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "12",
+        0
+      ],
+      "conditioning": [
+        "8",
+        0
+      ]
+    }
+  },
+  "14": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 20261030100501
+    }
+  },
+  "15": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "14",
+        0
+      ],
+      "guider": [
+        "13",
+        0
+      ],
+      "sampler": [
+        "12",
+        1
+      ],
+      "sigmas": [
+        "12",
+        2
+      ],
+      "latent_image": [
+        "7",
+        1
+      ]
+    }
+  },
+  "16": {
+    "class_type": "LTXVSeparateAVLatent",
+    "inputs": {
+      "av_latent": [
+        "15",
+        0
+      ]
+    }
+  },
+  "17": {
+    "class_type": "VAEDecodeTiled",
+    "inputs": {
+      "samples": [
+        "20",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "tile_size": 512,
+      "overlap": 64,
+      "temporal_size": 32,
+      "temporal_overlap": 4
+    }
+  },
+  "18": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "17",
+        0
+      ],
+      "filename_prefix": "street-reskin/skin100201-shouji-minimax-v3"
+    }
+  },
+  "19": {
+    "class_type": "MiniMaxH3MemoryEfficientSageAttentionPatch",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ]
+    }
+  },
+  "20": {
+    "class_type": "SaveLatent",
+    "inputs": {
+      "samples": [
+        "16",
+        0
+      ],
+      "filename_prefix": "street-reskin/skin100201-shouji-minimax-v3-video"
+    }
+  },
+  "5": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "skin100201-shouji-minimax-v3-guide.png"
+    }
+  },
+  "8": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "7",
+        0
+      ],
+      "latent": [
+        "7",
+        1
+      ],
+      "frame_idx": 17,
+      "vae": [
+        "3",
+        0
+      ],
+      "image": [
+        "5",
+        0
+      ]
+    }
+  }
+}

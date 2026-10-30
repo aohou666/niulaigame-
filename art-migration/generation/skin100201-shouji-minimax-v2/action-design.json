@@ -1,0 +1,27 @@
+{
+  "skinCode": 100201,
+  "heroId": 2,
+  "action": "shouji",
+  "models": [
+    "hero_skin_002_01",
+    "hero_skin_002_01_ez"
+  ],
+  "nativeFrames": 21,
+  "nativeFps": 30,
+  "nativeAuditSha256": "3d6b2228d54675611d640a4036711e9439a5a7052c3c63929f0e178c74e2ee30",
+  "sourceFrames": 39,
+  "guideSha256": "4a2acd061eed862de248dd2945a1f4502a37b09f42945157708ef7d1533678eb",
+  "idleSha256": "6522f053e716c4c4250f8e5eca8f50fe89a3d79f858c73abc0a4f9b0d4a8a9b1",
+  "referenceVideoSha256": "08b09cd43a0187afcb8d67c07d6302ef5e307cba749eb99d43e80e926e078441",
+  "scope": "Independent skin shouji only. Reference is retimed native motion; other actions remain incomplete.",
+  "manualReview": "pending",
+  "runtimeIntegrated": false,
+  "requiredBeforeRuntime": [
+    "all39 full-frame visual review",
+    "one continuous recoil/recovery identity and props",
+    "native21-frame0.7s mapping",
+    "alpha and geometry",
+    "ordinary/EZ replay",
+    "actual battle hit trigger"
+  ]
+}

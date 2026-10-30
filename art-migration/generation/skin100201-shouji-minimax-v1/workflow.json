@@ -1,0 +1,176 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "minimax_h3_ref2va_pruned_w4a8_mixed.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_32b_minimax_h3_int4_convrot.safetensors",
+      "type": "minimax",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "VHS_LoadVideo",
+    "inputs": {
+      "video": "skin100201-shouji-minimax-v1-native-reference.mp4",
+      "force_rate": 24,
+      "custom_width": 512,
+      "custom_height": 512,
+      "frame_load_cap": 39,
+      "skip_first_frames": 0,
+      "select_every_nth": 1,
+      "format": "None"
+    }
+  },
+  "5": {
+    "class_type": "MiniMaxH3ReferenceToVideo",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "prompt": "Create ONE complete hit reaction for the EXACT golden bull street-circus unicyclist of <Image 1>. <Image 2> shows his recoil pose and matching costume, not another character. <Video 1> is ONLY the original single hit-recoil-and-recovery motion reference, NOT the visual identity or props. Across this entire1.625second clip: start upright on unicycle, quickly flinch and bend upper body toward viewer left with shoulders/head recoiling once, then smoothly recover to the SAME upright balance and settle. Recoil begins immediately; no long frozen opening. Exactly ONE hit and ONE recovery, no repeated bobbing. Golden bull, black eye mask, short black hair, teal jacket purple lapels, cream ruffles, purple pants, teal shoes, SAME single unicycle, right hand(viewer left)holds ONE walnut and left hand(viewer right)holds exactly TWO red-white balls THROUGHOUT. No tossing or dropping props. Preserve body proportions and materials. Ground contact fixed, wheel stays in place with only small balancing rotation. Fixed full-body camera with all horns, hands, props and tire visible, black RGB0 background, no scene, text, trails, extra limbs, extra balls or hit flashes. 2.5D half-realistic half-cartoon absurd neighborhood style.",
+      "width": 512,
+      "height": 512,
+      "length": 39,
+      "ref_image_size": "max",
+      "ref_videos.ref_video_1": [
+        "4",
+        0
+      ],
+      "ref_images.ref_image_1": [
+        "30",
+        0
+      ],
+      "ref_images.ref_image_2": [
+        "31",
+        0
+      ]
+    }
+  },
+  "8": {
+    "class_type": "MiniMaxH3DualClockSamplerT8",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "av_latent": [
+        "5",
+        1
+      ],
+      "steps": 24,
+      "shift_video": 12,
+      "shift_audio": 3,
+      "sampler_name": "dual_clock_euler",
+      "scheduler": "native_flow"
+    }
+  },
+  "9": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "8",
+        0
+      ],
+      "conditioning": [
+        "5",
+        0
+      ]
+    }
+  },
+  "10": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 2026103010020121
+    }
+  },
+  "11": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "10",
+        0
+      ],
+      "guider": [
+        "9",
+        0
+      ],
+      "sampler": [
+        "8",
+        1
+      ],
+      "sigmas": [
+        "8",
+        2
+      ],
+      "latent_image": [
+        "5",
+        1
+      ]
+    }
+  },
+  "12": {
+    "class_type": "LTXVSeparateAVLatent",
+    "inputs": {
+      "av_latent": [
+        "11",
+        0
+      ]
+    }
+  },
+  "13": {
+    "class_type": "VAEDecodeTiled",
+    "inputs": {
+      "samples": [
+        "12",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "tile_size": 512,
+      "overlap": 64,
+      "temporal_size": 32,
+      "temporal_overlap": 4
+    }
+  },
+  "14": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "13",
+        0
+      ],
+      "filename_prefix": "street-reskin/skin100201-shouji-minimax-v1"
+    }
+  },
+  "30": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "skin100201-shouji-minimax-v1-30.png"
+    }
+  },
+  "31": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "skin100201-shouji-minimax-v1-31.png"
+    }
+  }
+}

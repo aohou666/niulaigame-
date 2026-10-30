@@ -115,5 +115,12 @@
     "resolutionEvidence": "art-migration/versions/0.85.0/effect-idle-cache.json",
     "resolution": "Explicit effect_* armatures detach stale idle/layout/suppression before init and never bind body idle. Six ordinary/EZ effects request0 body idle assets; body/effect/body reuse and destroy return0 active skin states.",
     "limits": "Native effects preserved, not new VFX art approval or proof of all battle triggers."
+  },
+  {
+    "id": "CITY-MAP-087-VERTICAL-STRETCH",
+    "status": "open",
+    "summary": "Native SlgCityView retains scale9Grid349,329,16,20; synthetic height1098 stretches decorative cones/trees. Fixed native960x898 approved only; production code inspected does not resize img_bg.",
+    "evidence": "art-migration/versions/0.87.0/city-map-960x1098.png",
+    "next": "If variable height is needed, use separately rendered fixed caps and a repeatable empty floor region; never extend decorative edges. Actual city gameplay/placement still requires isolated validation."
   }
 ]

@@ -596,3 +596,26 @@ v85提交收尾队列已空，立即collect同一f6任务得到124帧，实际�
 当前装备85/85（83新基础待机、2原作未更换皮肤）与临时浏览器卸皮肤85/85均通过；10角色1876动作、125属性/4卡比例/台面/真实点击、普通/EZ100202原生两周期bounds/100201切回/编队、1910依赖索引/全台账无绑定错。不是全85完整换皮或零bug证明。完整角色0/85，完整独立皮肤0/125。
 MiniMax effect3-v1经连续放大拒收；新官方guide-v2仅设计批准，56帧参考避免节点17k+5截断，max图像参考/无turboLoRA/24steps的effect3-v2已生成124帧。全部124+16放大实际查看，0..17长停姿、25..38及79..123材质/形状变为发光碎片，拒收整片，未alpha/接入。当前Comfy队列为空，无活动生成；旧worker active不作证据。必须继续推进独立完整动作/3特效，不得将基础设施当全部美术完成。
 本版完成后推送84/85/86至delivery/main并核对完整SHA；下一批推送v89。原始候选124帧留本地，Git保存工作流/设计/QA/参考/接触图，不把拒收原图作为运行依赖。
+
+远端v86核对：delivery/main=HEAD=75849ddce72158771c0fdf4e87853a3d09683f90，HEAD1910运行依赖通过。之后新增候选v3（不是游戏新版本）：prompt49c097f5-7763-4eca-818c-bd1f99f1824d、queue15，精确56帧输出对齐56帧参考2.333秒，保持v2导图/24steps/无turboLoRA；检验参考/输出时长不匹配假设，尚未证明效果改善。工具支持--match-reference-length，py_compile通过。下次先collect同目录，不重复提交；截至此刻实际队列运行此prompt。
+
+## v87待制作：独立受击动作参考与候选（尚无新运行资源）
+新增100201原生shouji全部21帧截图，接触图逐帧已看，确认单次侧倒回正；reference39帧@24重采样完整21帧（0.7秒原生动作放慢至1.625秒，仅运动参考），固定灰背景阈值去除不作发布alpha。outputs/street-reskin/skin100201-native-frames-shouji，art-migration/references/skin100201-shouji-native-v1；原图SHA完整记录。新增官方受击导图skin100201-shouji-guide-official-v1，原图/768透明技术适配均已看，右核桃/左两球/青紫服装/独轮车保留，仅姿势设计批准，不算完整动作。
+工具street_skin_hit_candidate.py用原生完整运动视频+新独立idle/受击导图，提交skin100201-shouji-minimax-v1，prompt c47c038e-f9b5-43d5-9b47-0e69f2cf5d65、queue16，39帧候选、24steps、无turboLoRA；待逐39帧审核/原生21帧映射/alpha/普通EZ/真实受击战斗，不自动接入。编译检查通过。特效v3 prompt49c097f5-7763-4eca-818c-bd1f99f1824d仍在运行，受击候选排队，均以实际queue/history为准。下一步collect这两个既有目录，不要重复提交；v87尚未实质版本提交，下一三版推送v89。
+
+受击参考纠正（优先）：原截图frame10左侧球裁边，先前接触图未发现，放大已确认；已从实际pending删除queue16/promptc47c038e-f9b5-43d5-9b47-0e69f2cf5d65，仅取消该任务，job标quality-cancelled，旧参考标rejected-clipped-source。没有生成接入，不掩盖该失败。frame-capture工具改为先遍历全部原生帧联合bounds再固定取景，支持--output保留独立样本。新source outputs/street-reskin/skin100201-native-shouji-v2，全21每帧边距>15px；原始/黑底prepared全部21已看，frame10球完整，参考art-migration/references/skin100201-shouji-native-v2获运动参考批准。新受击候选skin100201-shouji-minimax-v2，queue17/promptc59f890e-6f0e-44e8-816e-df9671a5562f，39帧，实际排队；工具参数revision/reference明确，编译通过。下一次收取effect3-v3和shouji-v2，绝不重提已运行任务。
+
+## v0.87最终接续（优先）
+新增独立官方城池庭院地图：bycc_img_ditu_png -> assets/street/environments/community-courtyard.png，960x898保留透明alpha；宫殿/旗帜/古代杂物/植被/铺装全部改为青棚铜管社区服务站、修车棚/面摊/花箱/路锥/混凝土空场，中央可玩区域未置障碍。实际skins.SlgCityView.img_bg原生实例隔离渲染/原key别名/960x898/原九宫格校验通过，截图已看；不等于城市服务器玩法完成。720x898横缩图已看可用。人工额外1098高拉伸测试发现继承九宫格拉长装饰，拒收此扩展布局并开CITY-MAP-087-VERTICAL-STRETCH；机械路由pass不表示全部视觉布局通过。生产代码所读SlgCityView未设置img_bg宽高，目前只批准原生固定尺寸，不虚报该限制消失。
+两套85（当前83新基础+2原生未换/基础85新待机）及1876动作、14特效、125属性/4卡/台面、6副骨架缓存/复用回收、1911运行依赖/全台账通过。完整角色0/85、完整独立皮肤0/125不变。
+特效v3已collect56帧，全部56+16放大已看：0..10停姿，12..24旋转未成完整圈，26..55碎裂/材质变，拒收未接入。时长对齐未解决保真。受击v2已collect39帧，全39+16放大已看，完整侧倒但结尾未回正/13脸部模糊，body-qa.manualVideoReview=rejected，未接入。
+新受击v3用fl2va模型首末同idle+第17帧新独立受击guide，39帧短片；prompt25e893c9-eb44-464f-9122-d819d7ed86fd，queue18，已实际确认运行、pending空。工具扩展shouji原生21帧审计与39源帧端点，中间关键姿势仅作为生成条件，不算完整动画。下一步collect已有目录后全39逐帧查，再考虑alpha/21帧0.7秒映射/普通EZ/战斗。别重提已运行任务。v87提交；下一推送v89（87/88/89），远端仍v86完整75849ddce72158771c0fdf4e87853a3d09683f90。
+
+上下文接续文档CURRENT已收敛为单一最新快照；历史细节仍在WORKLOG、版本报告和git历史，未删除审计证据。v87提交后HEAD1911依赖校验通过。
+
+受击v3终态：39帧已收，全39和16放大已看，额外飞出核桃/球、guide长停姿，拒收body-qa；Comfy队列空。下一制作改用官方分别绘制全部21帧（3条7帧），不插值冒充完整帧，逐道具和锚点验收。尚无新的正式动画。
+
+## v88接续优先：官方21帧受击源已制作，尚未接入
+MiniMax受击v3已终态拒收、实际Comfy队列空；不要再称运行或重提交。改用官方逐帧图像源，全21帧是独立绘制的实际in-between，不是插值/复制关键姿势。三条7帧已技术拆分并查看全部21浅/深底接触图，道具各帧右1核桃/左2球保留；需在原生0.7秒回放中继续验证接缝和idle切换，尚不计完整动画。
+有效源目录generation/skin100201-shouji-strip-0-official-v2（0..6）、strip-1-official-v3（7..13）、strip-2-official-v3（14..20），均有official-source.png、frame-NN.png、strip-qa.json。strip0初版外框裁边拒收；strip1/2首版相邻身体重叠已重排留白。工具street_sprite_strip_prepare.py只拆分7独立alpha轮廓，拒绝粘连/贴边/重复；auto-columns各crop可共享空白gap、不共享人物像素，未降低6px边距门槛。21有效源各strip按共同缩放对齐轮胎脚底[384,680]，不逐姿势拉身高，不生成任何插值帧。校准和审查art-migration/../outputs/street-reskin/skin100201-shouji-official21-review/assembly-plan.json（实际从根outputs路径读取），all21-light/dark-calibrated.jpg已看；shouji-wheel-size-review.jpg记录初始尺寸差。
+下一实质v88：先组装候选atlas+原生21帧@30一一映射，再给StreetBodyData单独skins注册及主骨架守卫；禁止旧street_body_promote.py覆盖基础2。当前street-body.js只支持characters按model绑定，不能直接偷塞id2，且新独立body必须不绑定effect_1/2/3。完整动作还须ordinary/EZ、销毁回收/原生事件不变、真实隔离战斗受击触发和全量两套85/台账。未完成攻技跑动/3特效依然未完成。此源准备不是新游戏版本，不新增完成计数；v87地图已提交，下一三版推v89。

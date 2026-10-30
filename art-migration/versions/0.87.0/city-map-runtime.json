@@ -1,0 +1,79 @@
+{
+  "pass": true,
+  "scope": "Actual native SlgCityView skin img_bg isolated and rendered, alias/dimensions/nine-slice checks. Does not assert city server gameplay or all city panel resources are reskinned. Visual approval only native960x898; synthetic extension failed and is not a supported new layout.",
+  "source": "bycc_img_ditu_png",
+  "size": [
+    960,
+    898
+  ],
+  "aliasSame": true,
+  "grid": {
+    "x": 349,
+    "y": 329,
+    "width": 16,
+    "height": 20
+  },
+  "artErrors": [],
+  "stage": {
+    "width": 720,
+    "height": 1200
+  },
+  "rows": [
+    {
+      "width": 960,
+      "height": 898,
+      "source": "bycc_img_ditu_png",
+      "texture": [
+        960,
+        898
+      ],
+      "grid": {
+        "$hashCode": 3553,
+        "x": 349,
+        "y": 329,
+        "width": 16,
+        "height": 20
+      }
+    },
+    {
+      "width": 960,
+      "height": 1098,
+      "source": "bycc_img_ditu_png",
+      "texture": [
+        960,
+        898
+      ],
+      "grid": {
+        "$hashCode": 3553,
+        "x": 349,
+        "y": 329,
+        "width": 16,
+        "height": 20
+      }
+    },
+    {
+      "width": 720,
+      "height": 898,
+      "source": "bycc_img_ditu_png",
+      "texture": [
+        960,
+        898
+      ],
+      "grid": {
+        "$hashCode": 3553,
+        "x": 349,
+        "y": 329,
+        "width": 16,
+        "height": 20
+      }
+    }
+  ],
+  "errors": [],
+  "failures": [],
+  "visualReview": {
+    "native960x898": "approved",
+    "synthetic960x1098": "rejected-stretched-cones-and-trees",
+    "synthetic720x898": "approved-horizontal-contraction-only",
+    "note": "Mechanical routing pass does not approve stretched artwork. Native game code does not assign img_bg height/width; fixed960x898 is supported only until geometry repair verified."
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "skinCode": 100201,
+  "heroId": 2,
+  "action": "shouji",
+  "sourceFrames": 21,
+  "nativeFrames": 21,
+  "nativeFps": 30,
+  "mapping": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "sources": [
+    "art-migration/generation/skin100201-shouji-strip-0-official-v2",
+    "art-migration/generation/skin100201-shouji-strip-1-official-v3",
+    "art-migration/generation/skin100201-shouji-strip-2-official-v3"
+  ],
+  "roots": [
+    384,
+    680
+  ],
+  "calibration": "Common scale per strip, never normalize pose heights: strip0=1.03, strip1=1.1311607142857143, strip2=0.9745384615384616. Compared dark lower-tire silhouette width at preparedy630..675 against strip0 median123px, strip1 old112px, strip2 old130px. Manual wheel montage retained. This is geometric normalization, no invented motion frames.",
+  "manualReview": "pending-native-playback",
+  "runtimeIntegrated": false,
+  "requirements": [
+    "all21 full size and light/dark alpha review",
+    "native0.7s continuous playback, no seam jumps at6/7,13/14",
+    "independent skin body registry and exact main-armature routing",
+    "21 unique frames atlas and native timeline mapping",
+    "ordinary/EZ and actual battle hit trigger",
+    "full85/ledger version review before release"
+  ]
+}

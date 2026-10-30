@@ -1,0 +1,46 @@
+{
+  "heroId": 2,
+  "skinCode": 100201,
+  "models": [
+    "hero_skin_002_01",
+    "hero_skin_002_01_ez"
+  ],
+  "length": 39,
+  "scope": "shouji only; independent skin, not base hero",
+  "motionSegments": {
+    "shouji": [
+      0,
+      38
+    ]
+  },
+  "inputs": {
+    "idle": {
+      "source": "art-migration/generation/skin100201-unicycle-matte-v2/clean-alpha.png",
+      "sourceSha256": "8e90991f145eee0e88562f2edfd01c000ce902806837d7c0200a976e41fae939",
+      "prepared": "art-migration/references/skin100201-idle-minimax-v1/idle.png",
+      "sha256": "6522f053e716c4c4250f8e5eca8f50fe89a3d79f858c73abc0a4f9b0d4a8a9b1",
+      "foot": [
+        384,
+        680
+      ],
+      "size": [
+        259,
+        520
+      ]
+    },
+    "guide": {
+      "source": "art-migration/generation/skin100201-shouji-guide-official-v1/guide.png",
+      "sourceSha256": "4a2acd061eed862de248dd2945a1f4502a37b09f42945157708ef7d1533678eb",
+      "prepared": "art-migration/references/skin100201-shouji-minimax-v3/guide.png",
+      "sha256": "041eb7d3e5f847de717708feb2967d155ce597318b0fbec43d838010b7435c25"
+    }
+  },
+  "nativeAuditPath": "art-migration/skin-migration/100201/native-events.json",
+  "nativeAuditSha256": "3d6b2228d54675611d640a4036711e9439a5a7052c3c63929f0e178c74e2ee30",
+  "nativeFrames": 21,
+  "nativeEvents": [],
+  "guideFrame": 17,
+  "conditioningMode": "idle endpoints with action guide",
+  "manualVideoReview": "pending",
+  "runtimeIntegrated": false
+}

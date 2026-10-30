@@ -1,72 +1,45 @@
-# 游戏换皮接续（先读此文件，历史按需查 WORKLOG）
+# 游戏换皮接续：只先读此文件，历史按需读WORKLOG和版本报告
 
-## 授权与范围
-用户已授权自主继续，无需重复询问。85目标角色、125独立额外皮肤及全部UI/地图/建筑/文字/道具/特效，2.5D半写实半卡通离谱街区风；官方ImageGen/本地Qwen2.1与MiniMax H3。不能以关键姿势、共享图、局部测试冒充完整动作/皮肤；不能宣称零bug或全设备不卡。原10小时窗口已结束，后续用户明确继续，当前目标仍在进行。每实质版本全量台账及85角色复查，每3版推送并核对远端SHA。
+## 授权、范围与真实完成
+用户授权自主继续，不重复询问。85目标角色、125独立额外皮肤、全部UI/地图/建筑/文字/道具/特效，2.5D半写实半卡通离谱街区风；官方ImageGen/本地Qwen2.1及MiniMax H3。原Oct29十小时窗口已结束，Oct30用户明确继续。不得以姿势/共享人物图/原作回退冒充完整新动作/独立皮肤，不宣称零bug/全设备不卡。每实质版本全台账+两套85详情复查，每三版推GitHub核对完整SHA。无关dirty不清理、禁止git add .。
+完整角色0/85；完整独立皮肤0/125。连续攻技批准10/85：2、3、46、52、63、73、79、80、84、85；76动作映射、34隔离。2号独立跑动24源图映射原生10帧，受击仍缺，自主战斗跑动触发未证明。100201有4独立静态绑定+124源待机/7WebP，原生198@30的6.6秒保持；缺gongji/jineng/shouji/paobu、effect_1/2/3、真实装备战斗验证。其余资产大量未完成。
 
 ## 仓库与交付
-工作区 C:/Users/dongdong/Documents/ChatGPT/安装，分支 codex/street-reskin-20261029。delivery=https://github.com/aohou666/oldniulai.git，保留原origin。
-最新实质版本v0.85本次提交，v0.84为638d2200。已验证delivery/main到v0.80完整6eb4f1fdf0a7b97b35f787688aaf7cff954dcd37。下一推送v0.83（81/82/83），命令git push delivery HEAD:main后ls-remote核对完整SHA。
-保留无关dirty Android build.gradle/MainActivity、README/offline-launcher、disabled技能修复及大量旧collector job/qa改动；禁止git add .、批量reset/删除。原resource大包是独立Release依赖，不入Git大包。
+cwd C:/Users/dongdong/Documents/ChatGPT/安装，branch codex/street-reskin-20261029，delivery=https://github.com/aohou666/oldniulai.git，保留origin。
+最新本地v0.87，6f9ce1e4（后续文档若amend以git rev-parse为准）。delivery/main仍v0.86完整75849ddce72158771c0fdf4e87853a3d09683f90，push-086.json及ls-remote已核。下一推送v89（87/88/89），push delivery HEAD:main后ls-remote核完整SHA。v87 HEAD1911依赖通过，原resource包仍独立Release依赖。
+保留无关Android build.gradle/MainActivity、README/offline-launcher、disabled技能修复、大量旧collector job/qa等dirty。原始拒收视频帧大部分仅本地保留，Git保存工作流/QA/关键接触图/参考，拒收图不是运行依赖。
 
-## 真实完成状态
-完整角色0/85；完整独立额外皮肤0/125。连续攻技批准10/85：2、3、46、52、63、73、79、80、84、85；76动作映射，34隔离。2号v0.67新增独立跑动24源图，原生10帧循环；旧攻技RGBA保留。2号受击仍缺；战斗自主跑动触发未证明。
-100201盛装小丑（2号独立青紫演出服、独轮车、右手核桃、左手两球）有4独立静态绑定和v0.70连续待机124原图/7WebP。普通/EZ/编队正式循环通过，原作198帧30fps的6.6秒保持；基础85英雄保留。完整皮肤还缺gongji/jineng/shouji/paobu、effect_1/2/3以及真实装备战斗验证。
-100201普攻MiniMax-v1长停姿/跳变拒收；v2首帧only仍弱动作/停姿拒收；技能-v1双次抛球/停姿拒收。全部124及16放大已看，body-qa保存，不抠像不发布。目前无活动生成任务，旧worker JSON不作运行证据。
+## v87新增地图与限制
+bycc_img_ditu_png -> assets/street/environments/community-courtyard.png，960x898保留alpha。宫殿庭院改为青棚铜管社区站、修车棚/面摊/花箱/路锥/混凝土空场；独立官方源generation/city-community-courtyard-official-v1。实际skins.SlgCityView.img_bg隔离渲染别名/尺寸/原九宫格通过，native及720x898截图已看。不是城市服务器玩法证明。机械路由pass不能代替视觉批准。
+额外1098高拉伸导致装饰拉长，拒收该扩展布局，CITY-MAP-087-VERTICAL-STRETCH open。生产SlgCityView所读代码不设置img_bg宽高，目前仅批准原生固定960x898；不要虚报纵向可任意伸长。若需要变高，应拆固定边饰+可重复空场，不能伸长树和路锥。
+v87两套85/1876动作/14原特效/125属性4卡台面/6副骨架idle缓存复用回收/1911依赖及全台账通过，证据art-migration/versions/0.87.0。
 
-## 最新v0.81证据
-版本目录 art-migration/versions/0.81.0。四项独立官方底框正式接入：名字285x38、属性202x39、透明外框640x346、小底框55x55。原生纹理/九宫格/截图已核对。来源generation/skin-panel-{namebar,attribute,outer,small}-official-v1；各自独立原图、SHA与技术适配说明，不共用占位。
-先前正常AppFacade皮肤面板14类资源错误在hero2已复现路径全部消除，脚本/HTTP/网络/RES/Promise失败0；关闭SKIN-PANEL-069-RESOURCE-KEYS，只限此已复现路径，不等于历史DETAIL-NULL根因已修或所有面板穷尽。
-125皮肤属性名称/数值按真实AttrConfig显示，非战斗枚举；4可见卡按源135x82比例159x96.58显示。已穿戴89徽章、佩戴/卸下/图鉴64图标、敬请期待159x246各有独立资产。状态测试是临时浏览器hero.dermaCode后恢复，不是装备交易。
-原生列表私有renderer从list.itemRenderer取得；只注册一次gp_root监听读取当前data，修复旧闭包复用双回调及徽章遮挡点击。normal→last→normal真实中心点击计数1→1→2；末项清图名/状态并禁止选中。第四张是有效100202魔龙君临，第五项才末项，旧截图推断已纠正。
-全85详情、10角色1876动作检查、1910运行依赖索引/全量台账通过。v0.82已对齐100201脚底与台面，关闭该已验证布局issue；新发现100202错误共用基础2待机，另开SKIN-PREVIEW-082-UNMAPPED-SHARING。其余原UI/地图/道具/角色动作/独立皮肤资产及玩法缺口仍多，不得缩小总目标。历史DETAIL-NULL、RESOURCE-LOAD-015和TEMPORAL问题未据此关闭。
+## 当前活动生成：只collect，勿重复提交
+已终态：skin100201-shouji-minimax-v3，prompt25e893c9-eb44-464f-9122-d819d7ed86fd，queue18，已collect39帧；全39+16放大已看，飞出额外球/核桃且中间长停姿，拒收。实际queue已空，无活动Comfy任务。不要沿用之前运行状态。实际Comfy /queue /history权威，旧generation-worker.json active过时。
+v3用fl2va模型首末同独立idle+第17帧新受击guide，39源帧短片1.625秒；原生shouji21帧@30=0.7秒、无事件。中间guide仅生成条件不是完整动作。工具street_skin_action_candidate.py已支持shouji39源/原生21审计。collect同目录→street_body_review.py→全39+16放大逐看→合格完整受击回正后才alpha、21帧映射、普通/EZ原生与真实战斗受击验证。自动时序筛选pass不等于人工批准。
+原生受击参考：outputs/street-reskin/skin100201-native-shouji-v2，全部21帧已看、全帧边距>15px；art-migration/references/skin100201-shouji-native-v2有39@24完整重采样视频/原图SHA/已看接触图。暂停帧不证明实时采样。旧v1截屏frame10球裁边已拒收，只删除实际pending queue16，保留quality-cancelled和失败证据。新官方受击guide原图/768透明适配已看批准设计，右核桃/左两球/独轮车/青紫服保留。
 
-## 运行与工具
-Python .tools/python/python.exe，先设PYTHONUTF8=1；Node/Playwright已可用。
-主服务8787使用pc_server_data/offline-replica-save.json，禁止重置或战斗测试修改主存档。隔离8794/8796先查是否在线，战斗工具用隔离save并finally恢复。
-Comfy http://127.0.0.1:8188；实际queue/history为准。目录G:/comfylight/ComfyUI_windows_portable_nvidia/ComfyUI_windows_portable/ComfyUI。
-Qwen模型qwen_image_2.1_int8_convrot.safetensors，MiniMax H3已验证。已有任务只用street_comfy.py collect同一目录，不因观察超时重启。官方生成结果必须复制进项目并真实查看；PIL只技术裁切/缩放/alpha/图集，不作创作替代。
-street_skin_action_candidate.py按独立skinCode/nativeAudit，禁止基础hero发布器覆盖独立皮肤。先前导图source QA、alpha清理与动作失败证据在generation/skin100201-*。
+## 已拒收，勿重收冒充合格
+100201普攻v1/v2及技能v1全部124帧+16放大已看，停姿/弱动作/双抛等拒收，无接入。
+effect3-v1/v2全部124+16、v3全部56+16已看。v1暗网/形变/末尾静态guide跳变；v2长停姿/碎片化；v3时长对齐仍0..10停姿、12..24只局部旋转、26..55碎裂，均effect-qa.manualReview=rejected，无完整圈/alpha/运行接入。
+shouji-v2(ref2va+原生完整运动视频)全部39+16已看，侧倒有但结束没回正、13脸模糊，body-qa.manualVideoReview=rejected，未接入。effect-qa仅早期接触工具记录，body-qa为动作权威。
+不要仅反复做基础设施，继续完整动作/3独立特效及其他85/全部资源。
 
-## 验证入口
-node tools/street-runtime-check.mjs --all-heroes --assert-no-detail-body-loads --output=独立输出目录；成功后复制all-heroes-runtime.json/browser-log.json/detail-body-load-review.json到版本及全局输出。
-node tools/street-body-roster-test.mjs 2 3 46 52 63 73 79 80 84 85 --version=版本（ID用空格）。
-node tools/street-skin-attribute-test.mjs --version=版本 --assert-card-aspect --assert-worn --assert-race-icon --assert-clean-panel --assert-panel-frames。
-node tools/street-skin-last-item-test.mjs --version=版本；不会覆盖老版本证据。
-node tools/street-skin-idle-routing-probe.mjs --normal-panel --live --label=唯一标签；strict检查四类错误，结果outputs/street-reskin/skin-idle-routing。
-Python street_atlas_verify.py；精确stage新启用图片后street_runtime_tracking.py（索引）与street_review.py --version版本。提交后tracking --tree HEAD。禁止把未入Git资源说已交付。
+## 关键运行守卫（勿回归）
+character-idle.js显式skinCode优先；无批准独立序列恢复真实原生，不套基础新待机。100202真实hero_087_03，切换100201→100202→100201普通/EZ/编队通过。20实际穿102002、77穿107701，两者原生回退正确，标original-unreplaced-skin不是换皮完成。baseaudit临时浏览器卸皮肤逐项恢复，不做装备交易。
+100201脚底台面global[363,878]，bodytop608/属性底446/激活底502。未换100202首次真实bounds+20%裕量固定420x270，循环factor稳定，init/reset/destroy/切回恢复原变换；普通/EZ各2×9秒已验。
+明确effect_*副骨架不绑定人物idle，普通/EZ6项0idle请求、复用/销毁active/cache/loading/queued0。street-effects.js可精确model+armature；hero模型必须指定armature，重复冲突保留原生；生产数据未新增独立皮肤特效。浏览器复用旧图集的路由fixture绝非新美术。
+125属性按真实AttrConfig，4卡135x82→159x96.58；末项点击正常→禁选→正常计数1→1→2。正常hero2 AppFacade皮肤面板14资源失败已修；不等于历史DETAIL-NULL/RESOURCE-LOAD-015/TEMPORAL全部关闭。
 
-## 接续重点与上下文
-下一步应修好预览/台面布局并验证实际选择/换装（隔离存档），随后推进100201完整身体动作和3独立特效/其余85目标，避免长期只做局部UI。原生皮肤审计skin-migration/100201/native-events.json：普通/EZ主动作45/46/21/198/16帧，普攻zd18；effect_1/2/3独立armature19/19/39帧，截帧直接骨架animation.gotoAndStopByFrame。
-用户要求少占对话；输出定向摘要，历史只按需查WORKLOG/版本证据。保持重要进展/失败通知，不刷无变化状态。不能删除历史审计来制造完成；应用聊天历史无法由文件工具压缩。
+## 环境与验证
+Python .tools/python/python.exe，PYTHONUTF8=1；Node24/Playwright可用。主8787存档pc_server_data/offline-replica-save.json禁止重置或战斗修改；8794/8796隔离先查在线，战斗finally恢复隔离存档。
+Comfy http://127.0.0.1:8188，安装G:/comfylight/ComfyUI_windows_portable_nvidia/ComfyUI_windows_portable/ComfyUI。官方图生成用imagegen技能；PIL仅裁切缩放alpha/图集技术适配，不创作替代。
+node tools/street-runtime-check.mjs --all-heroes --assert-no-detail-body-loads --output=独立equipped目录；第二次加--base-heroes另目录。equipped三JSON复制版本和global，base的all-heroes-runtime.json另存版本/base-heroes-runtime.json。两套均85，不混淆当前装备和基础。
+node tools/street-body-roster-test.mjs 2 3 46 52 63 73 79 80 84 85 --version=版本；另street-effects-roster-test、street-skin-attribute-test完整断言、street-skin-effect-cache-test按更改复查。
+新图精确stage后street_art_verify.py、street_runtime_tracking.py --report ...、street_review.py --version ...；提交后tracking --tree HEAD。查看JSON实际范围，勿仅看最后PowerShell exit0。资源计数和台账并非完整美术验收。
+保持对话简洁，重要完成/失败通知；历史按需从WORKLOG和git旧CURRENT查，不重复载入巨量minified JS或全量脏文件名。不能用删除失败审计制造完成。
 
-## v0.82优先接续
-100201脚底与台面global均[363,878]；属性底446/激活底502/身体顶608，脚底X/Y容器级锚点、截图/125属性/4卡/九宫格/阵营/无资源错通过。85详情、1876动作、1910依赖通过。并发详情采样曾失败，串行113帧复测通过；复用夹具加弹窗就绪+置顶等待后实际点击通过，不抹去失败记录。
-下一v83重点：config100202实际model=hero_087_03，组件实际用基础2新待机，fidelity-gap.json明确失败。不要用猜的hero_skin_002_02（不存在，诊断资源错误无效）。可在皮肤面板容器标记明确选择skinCode，bindView只允许匹配该code/model的data.skins序列；没有批准独立序列时恢复原生模型而非共用基础新序列。注意清理旧standIn/原生suppress/cache，选择100201→100202→基础→100201及普通/EZ/编队均要证据，不能改测试期望掩盖错误。需实际读取配置建测试并记录无独立映射=未完成。v83完成后推81/82/83并核对SHA。无活动生成任务。
-
-## v0.83进行中，勿沿用旧单一85门槛
-独立预览守卫及真实选择/编队100201→100202→100201普通/EZ已通过；100202原生保留，不算新皮肤。初次全85旧审计83/85：20实际穿102002/modelhero_089_03，77穿107701/modelhero_092_03。原生回退正确，旧审计把这两个已装备原生皮肤强判无基础新待机，非基础动画坏掉。审计现分当前装备85详情（必须配置对应原生模型/可见性/技能、明确标原作未重绘）和baseaudit临时浏览器卸皮肤85基础新待机（恢复，不做交易），新待机还断言实际cfg.id等于预期。两组最终强化审计正在跑，尚未提交。10角色1876及1910依赖索引通过。
-角色效果3的all-direct-timeline.jpg39张看起来相同crescent/dots，不可直接当有变化的motion-reference证据；下一步应检查原生实时播放/子骨架，再做MiniMax独立特效。无活动生成任务。v83提交后推81/82/83核对SHA。
-
-## v0.83最终接续（优先于上文进行中状态）
-实际独立选择普通/EZ/基础变体/编队切换通过；无批准独立序列恢复原生，100202不再共用base2。代码守卫显式skinCode优先，模糊共享模型不能单凭名当独立序列。新的fidelity测试tools/street-independent-skin-fidelity-test.mjs替代旧routing-probe手动面板模型循环作实际选择验收。
-两套强化85审计均通过：当前穿戴85（83 new-base-idle、2 original-unreplaced-skin：20/77确实穿原生额外皮肤）；--base-heroes在独立浏览器临时卸皮肤、逐项恢复，85基础新待机ID/帧变化全部通过。每版应两套都验：street-runtime-check.mjs --all-heroes ...（当前装备），再加--base-heroes（基础）；不同输出目录，当前装备3报告复制版本和全局，基础all-heroes-runtime.json另存版本/base-heroes-runtime.json。审计报告含presentationCounts，勿把85详情通过当85完整换皮。旧83/85并非生产回退错，详见equipped20-77-state.json，已保留失败。1876动作/1910依赖/台账通过。
-新open SKIN-NATIVE-083-PREVIEW-BOUNDS：100202原作模型已正确显示，但巨型原生模型超出面板，截图unmapped100202-native.png；下一步必须适配原生bounds，不能用新基础图遮它。100201批准新序列台面布局仍通过。没有活动生成任务。v83推81/82/83核SHA，下一推送v86。
-
-远端核对v0.83：HEAD和delivery/main均39a79bb1dec273ff7bb10ea2fc2321c10bba563d，1910依赖HEAD通过。下一推送v0.86。
-
-## v0.84最终接续（优先）
-原生100202尺寸适配已修：首次就绪真实bounds+20%裕量，固定420x270目标，按台面锚点平移，保留原比例；每帧不重测bbox，init/destroy/reset/切回新待机恢复原变换。普通/EZ各2个9秒循环实际bounds/底边/factor稳定断言通过，截图已看；10202样本/切回100201无fit残留/编队均通过。关闭100202原生bounds issue，仍非新皮肤完成。
-当前装备85与基础85两套、1876动作、125属性/4比例/九宫格/阵营/台面/点击、1910依赖/台账通过。source effect3实际诊断三armature原生可见、idle bitmap隐藏，但人物idle状态/cache多余绑定（tools/street-skin-effect-state-probe.mjs；v84/effect-armature-state-diagnostic.json）。下一v85先阻止明确effect_*副骨架绑定人物待机，验证真实特效保持可见/无多余cache/销毁回收，不要把当前状态误说成视觉错替。随后核实实时特效/子骨架运动并恢复本地MiniMax独立特效和缺失身体动作生成，勿长期只做UI。原始39张direct-timeline近静态尚不足运动证据。无活动生成任务；下一推送v0.86（84/85/86）。
-
-## v0.85最终接续（优先）
-明确effect_*副骨架不绑定人物idle，普通/EZ6项0idle请求、body/effect/body及destroy后active/cache/queued/loading均0。两套85/1876动作/原生fit与独立切换/编队/125属性/4卡/台面/点击/1910依赖/台账通过。
-该生成已结束：skin100201-effect3-minimax-v1，prompt f6eeba97-1cc1-42d7-bb41-a309cf5ae55c，124帧已collect，不重复提交。工具street_skin_effect_candidate.py固定唯一名防重复，参考源与批准导图SHA已绑定。模型minimax_h3_ref2va_pruned_w4a8_mixed，输出预计124帧。
-真实effect3实时参考outputs/street-reskin/skin100201-live-effect3-reference-v1，31采样/19不同帧，两1.3秒循环，全部已看；非穷尽原39帧。生成目录保存native-reference.mp4、reference-{capture,review,video}.json。官方新guide在generation/skin100201-effect3-guide-official-v1（原图及512导图已看，仅静态设计批准）。下一步collect后用street_effect_review.py全124/16放大实际看，拒收停顿/裁边/错误形状，不自动promote。需明确完整周期映射原生39帧1.3秒、alpha/加色混合、几何与普通/EZ原生、实际战斗触发后才可接入；effect-design特意独立schema，不用旧全局特效promote冒充独立皮肤。输出仍pending/未运行接入，不计完成。v0.86完成后推84/85/86核SHA。
-
-最新终态纠正：v85提交收尾API队列变空后已立即collect到124帧，现无活动生成。全部124接触图和16放大已查看；整片未批准，34..60暗细网状/模糊材质、123骤返静态导图。effect-qa.manualReview=needs-complete-cycle-review，不能报告成整片通过。62..122较清楚且看似周期性，仅可作为完整周期候选，下一步需高分辨率连续帧/相位/接缝/完整一圈审查，不许只摘几张关键姿势；若无合格完整圈则拒收重做。仍未alpha/加色混合/原生回放/战斗验收，未接入。不再称此任务运行。
-
-## v0.86最终接续（优先于历史状态）
-特效支持精确model+armature绑定，hero模型未指定armature/重复冲突保留原生，init/ready/reset/destroy清理请求。生产特效数据未新增；浏览器复用旧图集仅验证路由，不算新皮肤资产。7项正常/重复/缺armature三组、14原有普通/EZ特效、effect副骨架不绑定人物idle及销毁缓存均通过。
-当前装备85/85（83新基础待机、2原作未更换皮肤）与临时浏览器卸皮肤85/85均通过；10角色1876动作、125属性/4卡比例/台面/真实点击、普通/EZ100202原生两周期bounds/100201切回/编队、1910依赖索引/全台账无绑定错。不是全85完整换皮或零bug证明。完整角色0/85，完整独立皮肤0/125。
-MiniMax effect3-v1经连续放大拒收；新官方guide-v2仅设计批准，56帧参考避免节点17k+5截断，max图像参考/无turboLoRA/24steps的effect3-v2已生成124帧。全部124+16放大实际查看，0..17长停姿、25..38及79..123材质/形状变为发光碎片，拒收整片，未alpha/接入。当前Comfy队列为空，无活动生成；旧worker active不作证据。必须继续推进独立完整动作/3特效，不得将基础设施当全部美术完成。
-本版完成后推送84/85/86至delivery/main并核对完整SHA；下一批推送v89。原始候选124帧留本地，Git保存工作流/设计/QA/参考/接触图，不把拒收原图作为运行依赖。
+## v88接续优先：官方21帧受击源已制作，尚未接入
+MiniMax受击v3已终态拒收、实际Comfy队列空；不要再称运行或重提交。改用官方逐帧图像源，全21帧是独立绘制的实际in-between，不是插值/复制关键姿势。三条7帧已技术拆分并查看全部21浅/深底接触图，道具各帧右1核桃/左2球保留；需在原生0.7秒回放中继续验证接缝和idle切换，尚不计完整动画。
+有效源目录generation/skin100201-shouji-strip-0-official-v2（0..6）、strip-1-official-v3（7..13）、strip-2-official-v3（14..20），均有official-source.png、frame-NN.png、strip-qa.json。strip0初版外框裁边拒收；strip1/2首版相邻身体重叠已重排留白。工具street_sprite_strip_prepare.py只拆分7独立alpha轮廓，拒绝粘连/贴边/重复；auto-columns各crop可共享空白gap、不共享人物像素，未降低6px边距门槛。21有效源各strip按共同缩放对齐轮胎脚底[384,680]，不逐姿势拉身高，不生成任何插值帧。校准和审查art-migration/../outputs/street-reskin/skin100201-shouji-official21-review/assembly-plan.json（实际从根outputs路径读取），all21-light/dark-calibrated.jpg已看；shouji-wheel-size-review.jpg记录初始尺寸差。
+下一实质v88：先组装候选atlas+原生21帧@30一一映射，再给StreetBodyData单独skins注册及主骨架守卫；禁止旧street_body_promote.py覆盖基础2。当前street-body.js只支持characters按model绑定，不能直接偷塞id2，且新独立body必须不绑定effect_1/2/3。完整动作还须ordinary/EZ、销毁回收/原生事件不变、真实隔离战斗受击触发和全量两套85/台账。未完成攻技跑动/3特效依然未完成。此源准备不是新游戏版本，不新增完成计数；v87地图已提交，下一三版推v89。

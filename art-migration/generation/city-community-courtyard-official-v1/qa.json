@@ -1,0 +1,26 @@
+{
+  "manualReview": "approved-design",
+  "scope": "Map design only; native alias/scale9/view validation pending",
+  "entry": {
+    "originalKey": "bycc_img_ditu_png",
+    "originalPath": "resource/assets/ui/slg/city/bycc_img_ditu_dd581060.png",
+    "originalSha256": "39bd2c4cf9ca653e8671b05a0ab8bd16cd0de73b06cde28ca8e343742cfe8a34",
+    "targetKey": "street_city_community_courtyard_png",
+    "targetPath": "assets/street/environments/community-courtyard.png",
+    "targetSha256": "3c855aa01b774fabbc5136c0882b723bd3d85798755abb90f065047cf4381b6e",
+    "size": [
+      960,
+      898
+    ],
+    "status": "integrated-unreviewed",
+    "generation": {
+      "provider": "official-built-in-image_gen",
+      "source": "art-migration/generation/city-community-courtyard-official-v1/official-source.png",
+      "sourceSha256": "5534b253377436614c730e15524dc8c07ce8b07b7f43d0b412966cf186926b4a",
+      "prompt": "Preserve original city courtyard footprint and empty central playable floor. Replace imperial hall/trees/props/paving with absurd contemporary neighborhood service hall, teal awnings, copper pipes, bicycle workshop/noodle cart/planters/cone bollards; 2.5D semi-realistic semi-cartoon, no text/people. Exact aspect adaptation960x898, preserve alpha."
+    }
+  },
+  "runtimeReview": "approved-native-fixed-size",
+  "runtimeEvidence": "art-migration/versions/0.87.0/city-map-runtime.json",
+  "limitations": "Synthetic vertical stretch1098 rejected and open issue; city server gameplay not tested; only this one native map plate replaced."
+}

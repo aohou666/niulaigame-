@@ -1,0 +1,110 @@
+{
+  "scope": "All21 native shouji frames, paused-frame capture, single recoil/recovery; nearest frame resampled to39@24 for H3 reference only, retimed from native0.7s to1.625s",
+  "model": "hero_skin_002_01",
+  "nativeFrames": 21,
+  "nativeFps": 30,
+  "frames": 39,
+  "fps": 24,
+  "union": [
+    0,
+    275,
+    494,
+    627
+  ],
+  "crop": [
+    -86,
+    118,
+    580,
+    784
+  ],
+  "background": "Captured gray82/100/106 replaced by black where max channel difference<=12; motion reference only, not publish alpha",
+  "sourceFiles": [
+    {
+      "path": "outputs/street-reskin/skin100201-native-frames-shouji/00.png",
+      "sha256": "868cbc6da94c5b19ca641ca3b7b5212bb686361918ae0ab825cb4cee50f72fee"
+    },
+    {
+      "path": "outputs/street-reskin/skin100201-native-frames-shouji/01.png",
+      "sha256": "3b973510b89eac09a48ffdeead2a29865e60c54fefc764d0aaeee099c990e0af"
+    },
+    {
+      "path": "outputs/street-reskin/skin100201-native-frames-shouji/02.png",
+      "sha256": "679d4375e64793efc1dd178bc57a5f9035f42a9bcb875fec88dd0310cd05aec9"
+    },
+    {
+      "path": "outputs/street-reskin/skin100201-native-frames-shouji/03.png",
+      "sha256": "99c62f96af456ec054607474f413497c51f14e0a4efabf3ae8b53e19e627a4ee"
+    },
+    {
+      "path": "outputs/street-reskin/skin100201-native-frames-shouji/04.png",
+      "sha256": "683c21293afe9a392a55c2169a9a85fc2cb4a9aa2f82739f13439409971aba5b"
+    },
+    {
+      "path": "outputs/street-reskin/skin100201-native-frames-shouji/05.png",
+      "sha256": "2c60dfa5f99f8215e823962224bbc2ccc161f3fc887a0b2516605c29ac53a33c"
+    },
+    {
+      "path": "outputs/street-reskin/skin100201-native-frames-shouji/06.png",
+      "sha256": "da28b8ae91ab0b6c639b8257b90d742b8aa0fd832d1e2c43251bd2a776dd76a1"
+    },
+    {
+      "path": "outputs/street-reskin/skin100201-native-frames-shouji/07.png",
+      "sha256": "ffff80c691502e097432933f111c86c9c97adcf3919c35225cf6aafe0476ee43"
+    },
+    {
+      "path": "outputs/street-reskin/skin100201-native-frames-shouji/08.png",
+      "sha256": "b8476405dc75ddfdf3ca9e2e11d2b9492d75b93e5375a0fdd0fc5e0b8654e88f"
+    },
+    {
+      "path": "outputs/street-reskin/skin100201-native-frames-shouji/09.png",
+      "sha256": "be92e18c005be4ddfd803880fd6e41843f14118f9768e1636241b701e8e9136f"
+    },
+    {
+      "path": "outputs/street-reskin/skin100201-native-frames-shouji/10.png",
+      "sha256": "a27f38b68c7f5e565df44be773144497b789381ddd1df7ad387516848bad4ee8"
+    },
+    {
+      "path": "outputs/street-reskin/skin100201-native-frames-shouji/11.png",
+      "sha256": "e5ca01401eba6374c3089b43fbb1865c9a143c2905347acc365bc759356fc829"
+    },
+    {
+      "path": "outputs/street-reskin/skin100201-native-frames-shouji/12.png",
+      "sha256": "60c084c38f3960959ad91a19faec7caf03e87f96443db09fe2a1341881d872ee"
+    },
+    {
+      "path": "outputs/street-reskin/skin100201-native-frames-shouji/13.png",
+      "sha256": "ad2f4af1bab446ae1bb2d79d60507f79233923bb114ad82fbe5c693a70bb126d"
+    },
+    {
+      "path": "outputs/street-reskin/skin100201-native-frames-shouji/14.png",
+      "sha256": "4c2a3164a2b344fd2d7efabe01d12431ed43b5878723b73203a0692ecf600846"
+    },
+    {
+      "path": "outputs/street-reskin/skin100201-native-frames-shouji/15.png",
+      "sha256": "f807348bfdc5108d52165b317236ba03e9448f81466653e5d3179a4bc481388d"
+    },
+    {
+      "path": "outputs/street-reskin/skin100201-native-frames-shouji/16.png",
+      "sha256": "070acd509f9f58f1ea2a3ddd07dffcfac742b4c5b29bb758b31e11df6b90fa12"
+    },
+    {
+      "path": "outputs/street-reskin/skin100201-native-frames-shouji/17.png",
+      "sha256": "c6ec4c7c517c643749aec306a28024868e21511164502de16410a59893ad1854"
+    },
+    {
+      "path": "outputs/street-reskin/skin100201-native-frames-shouji/18.png",
+      "sha256": "bfaa8dad69640d0146ab80c27a1bb258249248eff30122895eca39ae87230468"
+    },
+    {
+      "path": "outputs/street-reskin/skin100201-native-frames-shouji/19.png",
+      "sha256": "d1b3df381f0e3eff159600e1e0a40d2a3ddfe6f610f698538045faa1323ec6ad"
+    },
+    {
+      "path": "outputs/street-reskin/skin100201-native-frames-shouji/20.png",
+      "sha256": "0606d246e5087c8f331592f9d89c638cc1c9ebc7565bf202b5e2814e4fbb41a7"
+    }
+  ],
+  "manualReview": "rejected-clipped-source",
+  "runtimeIntegrated": false,
+  "manualNotes": "Frame10 native orb clipped at viewport left; raw source preserved; no generated runtime asset approved."
+}
