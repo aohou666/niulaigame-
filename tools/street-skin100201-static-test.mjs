@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';import assert from 'node:assert/strict';import {createRequire} from 'node:module';
 const require=createRequire(import.meta.url),{chromium}=require('C:/Users/dongdong/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
-const out='art-migration/versions/0.68.0';await fs.mkdir(out,{recursive:true});
+const out='art-migration/versions/'+(process.argv.find(x=>x.startsWith('--version='))?.split('=')[1]||'0.68.0');await fs.mkdir(out,{recursive:true});
 const b=await chromium.launch({channel:'chrome',headless:true});
 try{
  const p=await b.newPage({viewport:{width:480,height:900}}),errors=[],failed=[];p.on('pageerror',e=>errors.push(e.message));p.on('requestfailed',r=>failed.push({url:r.url(),failure:r.failure()}));p.on('response',r=>{if(r.status()>=400)failed.push({url:r.url(),status:r.status()});});

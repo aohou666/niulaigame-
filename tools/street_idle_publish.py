@@ -6,6 +6,7 @@ from street_atomic import atomic_write_text,atomic_write_bytes
 ROOT=Path(__file__).resolve().parents[1];GAME=ROOT/'local_game'
 p=argparse.ArgumentParser();p.add_argument('candidate',type=Path);p.add_argument('--version',required=True);a=p.parse_args()
 c=json.loads((a.candidate/'candidate.json').read_text('utf8'));hid=str(c['heroId'])
+assert not c.get('skinCode'),'Independent skins require a skin publisher; never overwrite the base hero'
 for name in ['verification.json','native-runtime.json','native-raw-runtime.json','native-atlas-formation-runtime.json']:
  assert json.loads((a.candidate/name).read_text('utf8'))['pass'],name
 dest=GAME/f"assets/street/idle/{int(hid):03d}/revision-{c['sourceSignature'][:16]}";dest.mkdir(parents=True,exist_ok=True)

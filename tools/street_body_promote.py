@@ -7,6 +7,7 @@ ROOT=Path(__file__).resolve().parents[1];GAME=ROOT/'local_game';BASE=ROOT/'art-m
 p=argparse.ArgumentParser();p.add_argument('name');p.add_argument('--attack-anchor',required=True,type=int);p.add_argument('--event-anchors');p.add_argument('--fallback-impact',type=int);p.add_argument('--version',required=True);a=p.parse_args();folder=BASE/a.name
 reviewedAnchors=json.loads(Path(a.event_anchors).read_text('utf8')) if a.event_anchors else {}
 job=json.loads((folder/'job.json').read_text('utf8'));design=json.loads((folder/'body-design.json').read_text('utf8'));hid=design['heroId'];source=ROOT/design['sourceBodyJob'];qa=json.loads((source/'body-qa.json').read_text('utf8'))
+assert not design.get('skinCode'),'Independent skins must not overwrite base-hero body mappings'
 existingData=json.loads((GAME/'street-body-data.js').read_text('utf8').split('=',1)[1].strip().rstrip(';'));existing=next((c for c in existingData['characters'] if c['id']==hid),None)
 assert not existing or not (set(existing['actions'])-{'gongji','jineng'}),'Two-action promotion would discard existing run/hurt/idle states; merge those reviewed states explicitly first'
 assert qa['manualVideoReview']=='approved-for-matting' and qa['automaticChecksPassed'];assert len(job['outputs'])==len(design['sourceFrameOrder'])==design['length'];assert design['length'] in [73,124]

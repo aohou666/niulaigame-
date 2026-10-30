@@ -17,7 +17,7 @@ const b=await chromium.launch({channel:'chrome',headless:true});try{
    else {panel=new game.HeroDermaPanel();egret.MainContext.instance.stage.addChild(panel);panel.validateNow();panel.updateView(params);panel.validateNow();}view=panel.hero_model0;}
   const rows=[];
   for(const model of ['hero_skin_002_01','hero_skin_002_01_ez','hero_002_01','hero_skin_002_01']){
-   view.update({code:hero.code,model});await new Promise(r=>setTimeout(r,600));const native=view.getModel(),stand=view._characterIdleStandIn,state=stand?._characterIdleState||native?._characterIdleState;
+   view.update({code:hero.code,model:model.replace(/_ez$/,''),useHD:!model.endsWith('_ez')});await new Promise(r=>setTimeout(r,600));const native=view.getModel(),stand=view._characterIdleStandIn,state=stand?._characterIdleState||native?._characterIdleState;
    rows.push({requested:model,actualModel:native?._dbName,id:state?.cfg.id,material:state?.cfg.materialId,visible:state?.bitmap.visible,textureReady:!!state?.bitmap.texture,cacheKey:state?.cache.key});
   }return {rows,baseHeroCount:Object.keys(CharacterIdleData.heroes).length,resourceFailures:__skinResourceFailures,promiseFailures:__skinPromiseFailures};
  },{modelOnly:process.argv.includes('--model-only'),normalPanel:process.argv.includes('--normal-panel')});const pass=result.rows.every(r=>r.id===(r.requested.startsWith('hero_skin_')?100201:2)&&r.visible&&r.textureReady)&&errors.length===0;

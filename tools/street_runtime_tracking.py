@@ -13,7 +13,8 @@ def dependencies():
   elif isinstance(value,str) and value.startswith('assets/street/'):result.add('local_game/'+value)
  for name in ['character-art-data.js','character-idle-data.js','character-idle-atlas-data.js','street-art-data.js','street-body-data.js','street-effects-data.js']:
   collect(js(name));result.add('local_game/'+name)
- for cfg in js('character-idle-data.js')['heroes'].values():
+ idle=js('character-idle-data.js')
+ for cfg in list(idle['heroes'].values())+list(idle.get('skins',{}).values()):
   if cfg.get('baseUrl','').startswith('assets/street/'):
    result.update('local_game/'+cfg['baseUrl']+name for name in cfg['files'])
  # baseUrl is a directory, not a standalone dependency.

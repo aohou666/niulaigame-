@@ -9,6 +9,7 @@ p.add_argument('--revision',type=int,required=True)
 a=p.parse_args()
 source=ROOT/'art-migration/generation'/a.body_job
 design=json.loads((source/'body-design.json').read_text('utf8'))
+assert not design.get('skinCode'),'Use an explicit independent-skin workflow; base-hero naming is unsafe here'
 hid=design['heroId']
 name=f'hero{hid:03}-idle-minimax-v{a.revision}'
 assert not (ROOT/'art-migration/generation'/name).exists(), 'Existing job must be polled, not resubmitted'

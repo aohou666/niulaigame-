@@ -6,6 +6,7 @@ const require=createRequire(import.meta.url);
 const {chromium}=require('C:/Users/dongdong/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const folder=process.argv[2];assert(folder,'candidate-pack directory required');
 const candidate=JSON.parse(await fs.readFile(path.join(folder,'candidate.json'),'utf8'));
+assert(!candidate.skinCode,'Independent skin candidates require their own runtime fixture; do not replace the base hero');
 const live=process.argv.includes('--live');
 const id=candidate.heroId,raw=process.argv.includes('--raw'),formation=process.argv.includes('--formation'),label=(live?'live-':'')+(raw?'raw':'atlas')+(formation?'-formation':'');
 const idleText=await fs.readFile('local_game/character-idle-data.js','utf8');

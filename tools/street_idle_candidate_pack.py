@@ -63,5 +63,12 @@ report={'heroId':design['heroId'],'frameCount':len(frames),'crop':[box[0],box[1]
         'loopSeamScreening':{'lastToFirstMeanRgbDelta':float(np.abs(rgb[-1]-rgb[0]).mean()),
                              'largestAdjacentMeanRgbDelta':max(deltas),
                              'note':'Diagnostic only; visual looping/runtime review still required'}}
+if design.get('skinCode'):
+    assert sourceqa.get('manualTemporalReview')=='approved-continuous','Skin idle needs continuous-motion approval'
+    nativeFrames=design['nativeIdleFrames'];nativeFps=design['nativeFps'];assert nativeFrames>0 and nativeFps>0
+    report.update(skinCode=design['skinCode'],models=[design['model'],design['model']+'_ez'],
+                  nativeIdleFrames=nativeFrames,nativeFps=nativeFps,
+                  fps=len(frames)/(nativeFrames/nativeFps),bodyHeight=design['inputs']['idle']['size'][1]*512/768,
+                  scope='independent skin idle only; base hero must be preserved')
 (out/'candidate.json').write_text(json.dumps(report,indent=2)+'\n','utf8')
 print(json.dumps({'candidate':str(out),'frames':len(frames),'pages':sum(len(v['pages']) for v in profiles.values()),'seam':report['loopSeamScreening']}))
