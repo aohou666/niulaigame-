@@ -94,3 +94,8 @@ v0.75全85/1876动作/1902依赖/台账复查全部通过，待提交。官方�
 图鉴64x64新图标已接入原生80x94按钮并截图检查；正常皮肤面板剩7缺失键/15异常，未整体修复。1904依赖索引通过，85详情/10角色回归仍运行。官方已穿戴89x89徽章cell244正在生成，须等结果保存，不重复生成。下一推送v77。
 
 v0.77全85/1876动作/1904依赖/台账通过。官方已穿戴徽章cell244已生成保存generation/skin-panel-worn-official-v1，89x89待看和原生项检查后绑定pf_img_yichuandai_png，无活动生成任务。剩7缺失键含4面板/属性底框、1职业图标和敬请期待/已穿戴。完整角色/皮肤仍0；下一推送v0.80。
+
+远端已核对v0.77：HEAD和delivery/main均7f5237e98b050730c046c0e267914eb03bf9d4ca，1904依赖HEAD通过。下一推送v0.80。
+
+## v0.78优先接续
+已穿戴徽章89x89正式接入，4项原生状态/125属性/4卡比例及全85/1876/1905依赖通过。正常面板剩6键/11异常。状态夹具已改临时浏览器hero.dermaCode一致后恢复，明确未执行穿戴交易。下一项generation/skin-panel-coming-soon-official-v1已保存159x246候选，需实际查看/绑定pf_img_jingqingqidai_png，并修复原生isLast复用残图：在installOfflineCardAspect的dataChanged后对isLast显式换待更新卡、清lb_name、隐藏isLock、关闭image.touchEnabled；普通项恢复点击。不可计新皮肤。无活动生成任务，下一推送v0.80。
