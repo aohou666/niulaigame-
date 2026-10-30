@@ -84,6 +84,7 @@
         var scale=Math.min(width/Math.max(1,box[2]),height/Math.max(1,box[3]),bodyHeight/Math.max(1,cfg.bodyHeight));
         bitmap.scaleX=scale*box[2]/((texture&&texture.textureWidth)||box[2]);bitmap.scaleY=scale*box[3]/((texture&&texture.textureHeight)||box[3]);
         var x=ui?(layout.view.horizontalCenter!=null&&isFinite(Number(layout.view.horizontalCenter))?parent.width/2+Number(layout.view.horizontalCenter):layout.view.x):0;
+        if(ui&&typeof parent._characterIdleFootX==='number'&&isFinite(parent._characterIdleFootX))x=parent._characterIdleFootX;
         var footY=ui&&parent._characterIdleFootY;
         var y=mode==='formation'?parent.height-23:ui?(typeof footY==='number'&&isFinite(footY)?footY:layout.view.y):0;
         bitmap.x=x-box[2]*scale/2;bitmap.y=y-box[3]*scale;

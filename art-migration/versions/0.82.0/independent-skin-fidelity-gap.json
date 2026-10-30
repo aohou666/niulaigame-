@@ -1,0 +1,19 @@
+{
+  "pass": false,
+  "skinCode": 100202,
+  "configuredModel": "hero_087_03",
+  "observed": {
+    "requested": "hero_087_03",
+    "actualModel": "hero_087_03",
+    "id": 2,
+    "material": "laoba_老八",
+    "visible": true,
+    "textureReady": true,
+    "cacheKey": "2:detail"
+  },
+  "scope": "Actual HeroDynamicModel with same hero code/model as skin config, not actual equip transaction",
+  "probePassMeaning": "Routing probe passed its base-hero expectation, which is not an independent-skin fidelity criterion. This dedicated review is failed.",
+  "required": "Use approved independent skin idle only for its own code/model. Otherwise retain original native skin preview, not shared new base animation.",
+  "invalidEarlierProbe": "hero_skin_002_02 was guessed, absent, produced3 missing resource errors; excluded from production fault evidence.",
+  "concurrentChecks": "Initial parallel-browser sampling missed110 distinct frames; serial retry113 passed. First recycle fixture lacked popup-settle/top-order guard; corrected guard and real clicks passed."
+}

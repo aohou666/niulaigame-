@@ -57,14 +57,14 @@
 <script src="character-reskin-data.js?v=0.58.0"></script>
 <script src="character-art-data.js?v=0.68.0"></script>
 <script src="character-art.js?v=0.38.0"></script>
-<script src="street-art-data.js?v=0.81.0"></script>
+<script src="street-art-data.js?v=0.82.0"></script>
 <script src="street-art.js?v=0.71.0"></script>
 <script src="street-effects-data.js?v=20261029-37"></script>
 <script src="street-effects.js?v=20261029-37"></script>
 <script src="character-reskin.js?v=0.38.0"></script>
 <script src="character-idle-data.js?v=0.70.0"></script>
 <script src="character-idle-atlas-data.js?v=20261029-23"></script>
-<script src="character-idle.js?v=0.74.0"></script>
+<script src="character-idle.js?v=0.82.0"></script>
 <script src="street-body-data.js?v=0.67.0"></script>
 <script src="street-body.js?v=0.67.0"></script>
 <script src="character-regression.js?v=20261022-1"></script>
@@ -1168,6 +1168,29 @@
                             if (HeroRaceConfig[this.params.race]) this.img_race_icon0.source = HeroRaceConfig[this.params.race].raceIconBig;
                             this.gp_hero._characterIdleFootY = 450;
                             this.hero_model0.update({ code: this.params.code, model: info.model, useHD: true });
+                            this.gp_type.y = 80;
+                            this.gp_activate.y = 150;
+                            egret.callLater(function () {
+                                var cfg = window.StreetArtData && StreetArtData.resources.find(function (row) {
+                                    return row.originalKey === "pf_img_ditu_png";
+                                });
+                                if (!cfg || !cfg.previewSurfaceAnchor) return;
+                                var background = null;
+                                function findBackground(node) {
+                                    if (node.source === cfg.originalKey || node.source === cfg.targetKey) background = node;
+                                    for (var i = 0; i < (node.numChildren || 0); i++) findBackground(node.getChildAt(i));
+                                }
+                                panel.validateNow();
+                                findBackground(panel);
+                                if (!background) return;
+                                var point = background.localToGlobal(
+                                    cfg.previewSurfaceAnchor[0] * background.width / cfg.size[0],
+                                    cfg.previewSurfaceAnchor[1] * background.height / cfg.size[1]);
+                                var foot = panel.gp_hero.globalToLocal(point.x, point.y);
+                                panel.gp_hero._characterIdleFootX = foot.x;
+                                panel.gp_hero._characterIdleFootY = foot.y;
+                                panel._streetSkinPreviewLayout = { surface: { x: point.x, y: point.y }, footY: foot.y };
+                            }, this);
                             var attrs = [];
                             try { attrs = JSON.parse(info.attr || "[]"); } catch (_) {}
                             var groups = [this.gp_type0, this.gp_type1, this.gp_type2];

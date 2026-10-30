@@ -66,11 +66,15 @@
   },
   {
     "id": "SKIN-PANEL-074-LAYOUT",
-    "status": "investigating",
+    "status": "resolved",
     "summary": "Preview is below header; four landscape card aspects fixed; all formerly missing common skin panel resources repaired in0.81. Unicycle still floats above background stage, so complete visual approval remains open.",
     "evidence": "art-migration/versions/0.74.0/skin-attributes-native.png",
     "complete": false,
-    "cardAspectEvidence": "art-migration/versions/0.75.0/skin-attributes-native.json"
+    "cardAspectEvidence": "art-migration/versions/0.75.0/skin-attributes-native.json",
+    "resolutionVersion": "0.82.0",
+    "resolutionEvidence": "art-migration/versions/0.82.0/skin-attributes-native.json",
+    "resolution": "100201 bitmap foot exactly matches configured background stage anchor; attributes and activation area above bitmap, card aspects preserved.",
+    "limits": "Approved100201 preview geometry only, not all native skin models or complete skin approval."
   },
   {
     "id": "SKIN-ITEM-079-STALE-TAP",
@@ -78,5 +82,12 @@
     "summary": "Native renderer accumulated stale data tap handlers after reuse; last item retained source/state. Replaced with one current-data group listener and explicit last-item reset.",
     "evidence": "art-migration/versions/0.79.0/last-item-recycle.json",
     "limits": "Fixture callbacks and browser clicks only, no actual equip transaction."
+  },
+  {
+    "id": "SKIN-PREVIEW-082-UNMAPPED-SHARING",
+    "status": "investigating",
+    "summary": "Configured100202 modelhero_087_03 preview substitutes base2 new idle without an independent skin mapping.",
+    "evidence": "art-migration/versions/0.82.0/independent-skin-fidelity-gap.json",
+    "next": "Guard independent skin selection by configured skinCode/model; do not reuse base idle for unapproved skins, retain native pending full replacement."
   }
 ]

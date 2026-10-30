@@ -5,7 +5,7 @@
 
 ## 仓库与交付
 工作区 C:/Users/dongdong/Documents/ChatGPT/安装，分支 codex/street-reskin-20261029。delivery=https://github.com/aohou666/oldniulai.git，保留原origin。
-最新实质版本v0.81正在提交。已验证delivery/main到v0.80完整6eb4f1fdf0a7b97b35f787688aaf7cff954dcd37。下一推送v0.83（81/82/83），命令git push delivery HEAD:main后ls-remote核对完整SHA。
+最新实质版本v0.82本次提交，v0.81基线f06b1c49。已验证delivery/main到v0.80完整6eb4f1fdf0a7b97b35f787688aaf7cff954dcd37。下一推送v0.83（81/82/83），命令git push delivery HEAD:main后ls-remote核对完整SHA。
 保留无关dirty Android build.gradle/MainActivity、README/offline-launcher、disabled技能修复及大量旧collector job/qa改动；禁止git add .、批量reset/删除。原resource大包是独立Release依赖，不入Git大包。
 
 ## 真实完成状态
@@ -18,7 +18,7 @@
 先前正常AppFacade皮肤面板14类资源错误在hero2已复现路径全部消除，脚本/HTTP/网络/RES/Promise失败0；关闭SKIN-PANEL-069-RESOURCE-KEYS，只限此已复现路径，不等于历史DETAIL-NULL根因已修或所有面板穷尽。
 125皮肤属性名称/数值按真实AttrConfig显示，非战斗枚举；4可见卡按源135x82比例159x96.58显示。已穿戴89徽章、佩戴/卸下/图鉴64图标、敬请期待159x246各有独立资产。状态测试是临时浏览器hero.dermaCode后恢复，不是装备交易。
 原生列表私有renderer从list.itemRenderer取得；只注册一次gp_root监听读取当前data，修复旧闭包复用双回调及徽章遮挡点击。normal→last→normal真实中心点击计数1→1→2；末项清图名/状态并禁止选中。第四张是有效100202魔龙君临，第五项才末项，旧截图推断已纠正。
-全85详情、10角色1876动作检查、1910运行依赖索引/全量台账通过。人物仍浮在背景台面上方，SKIN-PANEL-074-LAYOUT保持open。其余原UI/地图/道具/角色动作/独立皮肤资产及玩法缺口仍多，不得缩小总目标。历史DETAIL-NULL、RESOURCE-LOAD-015和TEMPORAL问题未据此关闭。
+全85详情、10角色1876动作检查、1910运行依赖索引/全量台账通过。v0.82已对齐100201脚底与台面，关闭该已验证布局issue；新发现100202错误共用基础2待机，另开SKIN-PREVIEW-082-UNMAPPED-SHARING。其余原UI/地图/道具/角色动作/独立皮肤资产及玩法缺口仍多，不得缩小总目标。历史DETAIL-NULL、RESOURCE-LOAD-015和TEMPORAL问题未据此关闭。
 
 ## 运行与工具
 Python .tools/python/python.exe，先设PYTHONUTF8=1；Node/Playwright已可用。
@@ -38,3 +38,7 @@ Python street_atlas_verify.py；精确stage新启用图片后street_runtime_trac
 ## 接续重点与上下文
 下一步应修好预览/台面布局并验证实际选择/换装（隔离存档），随后推进100201完整身体动作和3独立特效/其余85目标，避免长期只做局部UI。原生皮肤审计skin-migration/100201/native-events.json：普通/EZ主动作45/46/21/198/16帧，普攻zd18；effect_1/2/3独立armature19/19/39帧，截帧直接骨架animation.gotoAndStopByFrame。
 用户要求少占对话；输出定向摘要，历史只按需查WORKLOG/版本证据。保持重要进展/失败通知，不刷无变化状态。不能删除历史审计来制造完成；应用聊天历史无法由文件工具压缩。
+
+## v0.82优先接续
+100201脚底与台面global均[363,878]；属性底446/激活底502/身体顶608，脚底X/Y容器级锚点、截图/125属性/4卡/九宫格/阵营/无资源错通过。85详情、1876动作、1910依赖通过。并发详情采样曾失败，串行113帧复测通过；复用夹具加弹窗就绪+置顶等待后实际点击通过，不抹去失败记录。
+下一v83重点：config100202实际model=hero_087_03，组件实际用基础2新待机，fidelity-gap.json明确失败。不要用猜的hero_skin_002_02（不存在，诊断资源错误无效）。可在皮肤面板容器标记明确选择skinCode，bindView只允许匹配该code/model的data.skins序列；没有批准独立序列时恢复原生模型而非共用基础新序列。注意清理旧standIn/原生suppress/cache，选择100201→100202→基础→100201及普通/EZ/编队均要证据，不能改测试期望掩盖错误。需实际读取配置建测试并记录无独立映射=未完成。v83完成后推81/82/83并核对SHA。无活动生成任务。
