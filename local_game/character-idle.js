@@ -76,8 +76,8 @@
         // rather than deleting upcoming/displayed frames while asynchronous decode lags.
     }
     function release(c){if(--c.users>0)return;c.dead=true;if(c.atlas)c.sheets.forEach(function(sheet){sheet.dispose();});else Object.keys(c.textures).forEach(function(k){releaseTexture(c.textures[k]);});delete caches[c.key];}
-    function restore(player,state){if(state.hidden&&player._armature){player._armature.visible=true;state.hidden=false;audit.actionRestores=(audit.actionRestores||0)+1;}if(state.bitmap)state.bitmap.visible=false;}
-    function hideNative(player,state){if(player._armature)player._armature.visible=false;state.hidden=true;}
+    function restore(player,state){if(global.StreetNativeFX)StreetNativeFX.restore(player,state);if(state.hidden&&player._armature){player._armature.visible=true;state.hidden=false;audit.actionRestores=(audit.actionRestores||0)+1;}if(state.bitmap)state.bitmap.visible=false;}
+    function hideNative(player,state){if(player._armature)player._armature.visible=!!(global.StreetNativeFX&&StreetNativeFX.show(player,state.cfg.id,110,state));state.hidden=true;}
     function profile(view){
         for(var node=view;node;node=node.parent){
             if(global.game&&game.FormationModelComponent&&node instanceof game.FormationModelComponent)return 'formation';
@@ -213,7 +213,7 @@
             (cfg.models||[]).forEach(function(name){var key=String(name).replace(/_ez$/,'');skinModelIds[key]=skinModelIds[key]===undefined?Number(id):(skinModelIds[key]===Number(id)?Number(id):0);});
         });
         var proto=DBPlayer.prototype,init=proto.init,destroy=proto.destroy,trigger=proto.trigger,ready=proto.readyToPlay;
-        proto.init=function(name){restoreNativePreview(this);var effectArmature=/^effect_/.test(String(arguments[1]||''));if(effectArmature){detach(this);this._characterIdleHeroId=0;this._characterIdleLayout=null;this._characterIdleSuppressNative=false;}audit.modelRequests[name]=(audit.modelRequests[name]||0)+1;var r=init.apply(this,arguments),key=String(name).replace(/_ez$/,''),id=modelIds[key],variant=/^hero_(\d+)_\d+$/.exec(key);if(variant&&(config(Number(variant[1]))||Number(variant[1])===13))id=Number(variant[1]);id=skinForModel(key)||id;if(effectArmature)id=0;if(this._characterIdleSuppressNative){if(this._armature)this._armature.visible=false;}else bind(this,id);return r;};
+        proto.init=function(name){if(global.StreetNativeFX)StreetNativeFX.restore(this);restoreNativePreview(this);var effectArmature=/^effect_/.test(String(arguments[1]||''));if(effectArmature){detach(this);this._characterIdleHeroId=0;this._characterIdleLayout=null;this._characterIdleSuppressNative=false;}audit.modelRequests[name]=(audit.modelRequests[name]||0)+1;var r=init.apply(this,arguments),key=String(name).replace(/_ez$/,''),id=modelIds[key],variant=/^hero_(\d+)_\d+$/.exec(key);if(variant&&(config(Number(variant[1]))||Number(variant[1])===13))id=Number(variant[1]);id=skinForModel(key)||id;if(effectArmature)id=0;if(this._characterIdleSuppressNative){if(this._armature)this._armature.visible=false;}else bind(this,id);return r;};
         proto.destroy=function(){restoreNativePreview(this);detach(this);this._characterIdleHeroId=0;this._characterIdleLayout=null;this._characterIdleSuppressNative=false;return destroy.apply(this,arguments);};
         if(trigger)proto.trigger=function(action){var result=trigger.apply(this,arguments),s=this._characterIdleState;if(this._characterIdleSuppressNative&&this._armature)this._armature.visible=false;else if(s){if((action||this.action)==='daiji')hideNative(this,s);else restore(this,s);}return result;};
         if(ready)proto.readyToPlay=function(){var result=ready.apply(this,arguments),s=this._characterIdleState;if(this._characterIdleSuppressNative&&this._armature)this._armature.visible=false;else if(s&&(!this.action||this.action==='daiji'))hideNative(this,s);return result;};

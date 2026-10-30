@@ -17,7 +17,7 @@
   });return c;
  }
  function release(c){if(--c.users>0)return;c.dead=true;if(c.sheet)c.sheet.dispose();delete caches[c.cfg.id];}
- function restore(player,state){
+ function restore(player,state){if(global.StreetNativeFX)StreetNativeFX.restore(player,state);
   state.bitmap.visible=false;
   if(state.hidden&&player._armature){var idle=player._characterIdleState;player._armature.visible=!(player._characterIdleSuppressNative||(idle&&idle.hidden));}
   state.hidden=false;
@@ -28,10 +28,10 @@
   if(player._characterIdleSuppressNative){audit.suppressedViewsDetached++;detach(player);return;}
   var action=player.action||player._action||'daiji',seq=(s.cfg.modelActionOverrides&&s.cfg.modelActionOverrides[player._dbName]&&s.cfg.modelActionOverrides[player._dbName][action])||s.cfg.actions[action],display=player._armature,clock=display&&display.animation&&display.animation.lastAnimationState;
   if(!player._characterIdleSuppressNative&&display&&(s.cfg.qualityQuarantineActions||[]).indexOf(action)>=0){
-   restore(player,s);var idle=player._characterIdleState;if(idle){idle.bitmap.visible=false;idle.hidden=false;}display.visible=true;return;
+   restore(player,s);if(global.StreetNativeFX)StreetNativeFX.restore(player);var idle=player._characterIdleState;if(idle){idle.bitmap.visible=false;idle.hidden=false;}display.visible=true;return;
   }
   if(!seq&&action!=='daiji'&&display){
-   restore(player,s);var fallbackIdle=player._characterIdleState;if(fallbackIdle){fallbackIdle.bitmap.visible=false;fallbackIdle.hidden=false;}display.visible=true;return;
+   restore(player,s);if(global.StreetNativeFX)StreetNativeFX.restore(player);var fallbackIdle=player._characterIdleState;if(fallbackIdle){fallbackIdle.bitmap.visible=false;fallbackIdle.hidden=false;}display.visible=true;return;
   }
   if(player._characterIdleSuppressNative||!seq||!clock||!s.cache.ready){restore(player,s);return;}
   var nativeFrame=Math.min(seq.frameMap.length-1,Math.max(0,Math.floor(clock.currentTime*seq.fps+.0001))),frame=seq.frameMap[nativeFrame];
@@ -42,7 +42,7 @@
   var scale=targetHeight/(geometry.bodyHeight*sy),b=s.bitmap;
   b.x=(box[0]-geometry.root[0])*scale;b.y=(box[1]-geometry.root[1])*scale;b.width=(box[2]-box[0])*scale;b.height=(box[3]-box[1])*scale;b.visible=true;
   if(player._characterIdleState)player._characterIdleState.bitmap.visible=false;
-  display.visible=false;s.hidden=true;s.nativeFrame=nativeFrame;
+  display.visible=!!(global.StreetNativeFX&&StreetNativeFX.show(player,cfg.id,targetHeight,s));s.hidden=true;s.nativeFrame=nativeFrame;
  }
  function attach(player,name,armature){
   var actual=armature||(player._armature&&player._armature.armature&&player._armature.armature.armatureData&&player._armature.armature.armatureData.name);
@@ -66,7 +66,7 @@
   p.init=function(name){detach(this);var request={model:String(name),armature:arguments[1]==null?null:String(arguments[1])};this._streetBodyRequest=request;var r=init.apply(this,arguments);this._streetBodyRequest=request;attach(this,name,request.armature);return r;};
   p.readyToPlay=function(){var r=ready.apply(this,arguments),request=this._streetBodyRequest;if(request)attach(this,request.model,request.armature);render(this);return r;};
   p.trigger=function(){var r=trigger.apply(this,arguments);render(this);return r;};
-  p.reset=function(){detach(this);this._streetBodyRequest=null;return reset.apply(this,arguments);};p.destroy=function(){detach(this);this._streetBodyRequest=null;return destroy.apply(this,arguments);};installed=true;
+  p.reset=function(){if(global.StreetNativeFX)StreetNativeFX.restore(this);detach(this);this._streetBodyRequest=null;return reset.apply(this,arguments);};p.destroy=function(){if(global.StreetNativeFX)StreetNativeFX.restore(this);detach(this);this._streetBodyRequest=null;return destroy.apply(this,arguments);};installed=true;
  }
- global.StreetBody={install:install,render:render,snapshot:function(){return {installed:installed,framesPresented:audit.framesPresented,actions:audit.actions,atlasRequests:audit.atlasRequests,suppressedViewsDetached:audit.suppressedViewsDetached,errors:audit.errors.slice(),caches:Object.keys(caches).map(function(k){return {id:k,users:caches[k].users,ready:caches[k].ready};}),active:players.map(function(p){var s=p._streetBody;return {model:p._dbName,action:p.action,frame:s.frame,nativeFrame:s.nativeFrame,visible:s.bitmap.visible,nativeVisible:!!(p._armature&&p._armature.visible),ready:s.cache.ready,onStage:!!p.stage};})};}};
+ global.StreetBody={install:install,render:render,snapshot:function(){return {installed:installed,framesPresented:audit.framesPresented,actions:audit.actions,atlasRequests:audit.atlasRequests,suppressedViewsDetached:audit.suppressedViewsDetached,errors:audit.errors.slice(),caches:Object.keys(caches).map(function(k){return {id:k,users:caches[k].users,ready:caches[k].ready};}),active:players.map(function(p){var s=p._streetBody;return {model:p._dbName,action:p.action,frame:s.frame,nativeFrame:s.nativeFrame,visible:s.bitmap.visible,nativeVisible:!!(p._armature&&p._armature.visible),nativeFXOnly:!!(global.StreetNativeFX&&StreetNativeFX.onlyFX(p)),ready:s.cache.ready,onStage:!!p.stage};})};}};
 })(window);

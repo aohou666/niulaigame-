@@ -54,20 +54,21 @@ def prepare(args):
  source=Path(args.source);out=ROOT/args.out;assert not out.exists(),'Use a separate source revision'
  im=Image.open(source).convert('RGBA');assert im.getchannel('A').getextrema()[0]<64
  tiles=[];images=[]
- for i in range(10):
-  x0=round(i%5*im.width/5);x1=round((i%5+1)*im.width/5);y0=round(i//5*im.height/2);y1=round((i//5+1)*im.height/2)
+ count=20 if args.effect=='effect_3' else 10;rows=count//5
+ for i in range(count):
+  x0=round(i%5*im.width/5);x1=round((i%5+1)*im.width/5);y0=round(i//5*im.height/rows);y1=round((i//5+1)*im.height/rows)
   tile=im.crop((x0,y0,x1,y1));alpha=tile.getchannel('A').point(lambda v:0 if v<9 else v);tile.putalpha(alpha);box=alpha.point(lambda v:255 if v>32 else 0).getbbox();assert box
   assert min(box[0],box[1],tile.width-box[2],tile.height-box[3])>=5,f'Tile{i+1} touches edge'
   images.append(tile);tiles.append({'name':f'{args.effect}/{args.effect}_{i+1:02}','sourceCell':[x0,y0,x1,y1],'alphaBounds':list(box)})
  out.mkdir(parents=True);(out/'official-source.png').write_bytes(source.read_bytes())
  for row,tile in zip(tiles,images):
   path=out/(row['name'].split('/')[-1]+'.png');tile.save(path);row['path']=path.relative_to(ROOT).as_posix();row['sha256']=sha(path.read_bytes())
- assert len({r['sha256'] for r in tiles})==10
- review={'skinCode':100201,'effect':args.effect,'nativeFrames':19,'nativeFps':30,'sourceTextures':10,'sourceSha256':sha(source.read_bytes()),'tiles':tiles,'manualReview':'pending','runtimeIntegrated':False,'provenance':'Official independently drawn ten-texture sequence, native ten-pose composition and local MiniMax material reference. MiniMax full clip rejected, not reused as an approved animation.'}
+ assert len({r['sha256'] for r in tiles})==count
+ review={'skinCode':100201,'effect':args.effect,'nativeFrames':count*2-1,'nativeFps':30,'sourceTextures':count,'sourceSha256':sha(source.read_bytes()),'tiles':tiles,'manualReview':'pending','runtimeIntegrated':False,'provenance':'Official independently drawn ten-texture sequence, native ten-pose composition and local MiniMax material reference. MiniMax full clip rejected, not reused as an approved animation.'}
  (out/'qa.json').write_text(json.dumps(review,indent=2)+'\n','utf8');print(json.dumps({'prepared':str(out),'textures':len(tiles)}))
 
 def build(args):
- qaPath=ROOT/args.review;review=json.loads(qaPath.read_text('utf8'));assert review['manualReview']=='approved-texture-sequence-for-native-trial';assert len(review['tiles'])==10
+ qaPath=ROOT/args.review;review=json.loads(qaPath.read_text('utf8'));assert review['manualReview']=='approved-texture-sequence-for-native-trial';assert len(review['tiles'])==review['sourceTextures']
  folder=ROOT/args.out;assert not folder.exists();folder.mkdir(parents=True);entries=[]
  for model,filename in [('hero_skin_002_01','hero_skin_002_01_44129895.bin'),('hero_skin_002_01_ez','hero_skin_002_01_ez_cdeed9df.bin')]:
   original=GAME/'resource/assets/model'/filename;data=decode(original);base=next((e for e in json.loads((ROOT/args.base).read_text('utf8')) if e['originalKey']==model+'_bin'),None) if args.base else None
@@ -88,4 +89,4 @@ def build(args):
  (folder/'candidate-containers.json').write_text(json.dumps(entries,indent=2)+'\n','utf8');print(json.dumps({'containers':len(entries),'changedPerContainer':[len(e['changedRegions']) for e in entries]}))
 
 if __name__=='__main__':
- p=argparse.ArgumentParser();p.add_argument('mode',choices=['prepare','build']);p.add_argument('--source');p.add_argument('--review');p.add_argument('--out',required=True);p.add_argument('--effect',choices=['effect_1','effect_2'],default='effect_1');p.add_argument('--base');p.add_argument('--opacity',type=float,default=1);args=p.parse_args();assert 0<args.opacity<=1;(prepare if args.mode=='prepare' else build)(args)
+ p=argparse.ArgumentParser();p.add_argument('mode',choices=['prepare','build']);p.add_argument('--source');p.add_argument('--review');p.add_argument('--out',required=True);p.add_argument('--effect',choices=['effect_1','effect_2','effect_3'],default='effect_1');p.add_argument('--base');p.add_argument('--opacity',type=float,default=1);args=p.parse_args();assert 0<args.opacity<=1;(prepare if args.mode=='prepare' else build)(args)

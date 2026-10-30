@@ -30,10 +30,10 @@ try{
  for(let n=0;n<21;n++){
   const result=await page.evaluate(n=>{
    const {players,container}=__skinHit,rows=[];
-   for(const p of players){p.gotoAndStopByFrame('shouji',n);p._armature.armature.advanceTime(0);StreetBody.render(p);const s=p._streetBody;rows.push({model:p._dbName,sourceFrame:s.frame,nativeFrame:s.nativeFrame,generated:s.bitmap.visible,native:p._armature.visible,duration:p._armature.animation.lastAnimationState.totalTime,bodyBounds:s.bitmap.getTransformedBounds(egret.MainContext.instance.stage)});}
+   for(const p of players){p.gotoAndStopByFrame('shouji',n);p._armature.armature.advanceTime(0);StreetBody.render(p);const s=p._streetBody;rows.push({model:p._dbName,sourceFrame:s.frame,nativeFrame:s.nativeFrame,generated:s.bitmap.visible,native:p._armature.visible,nativeFXOnly:!!p._streetNativeFX&&p._armature.armature.getSlots().filter(slot=>slot.visible).length>0&&p._armature.armature.getSlots().filter(slot=>slot.visible).every(slot=>slot.childArmature&&p._streetNativeFX.names.includes(slot.childArmature.armatureData.name)),duration:p._armature.animation.lastAnimationState.totalTime,bodyBounds:s.bitmap.getTransformedBounds(egret.MainContext.instance.stage)});}
    const texture=new egret.RenderTexture();texture.drawToTexture(container,new egret.Rectangle(130,540,480,190),2);const png=texture.toDataURL('image/png').split(',')[1];texture.dispose();return {rows,png};
   },n);
-  for(const row of result.rows){assert.equal(row.sourceFrame,n);assert.equal(row.nativeFrame,n);assert(row.generated&&!row.native);assert(Math.abs(row.duration-.7)<1e-6);}
+  for(const row of result.rows){assert.equal(row.sourceFrame,n);assert.equal(row.nativeFrame,n);assert(row.generated&&(!row.native||row.nativeFXOnly));assert(Math.abs(row.duration-.7)<1e-6);}
   checks.push(...result.rows);await fs.writeFile(out+`/skin-hit-frame-${String(n).padStart(2,'0')}.png`,Buffer.from(result.png,'base64'));
  }
  const live=await page.evaluate(async()=>{
@@ -47,14 +47,14 @@ try{
    rows.push({model:p._dbName,elapsed:performance.now()-start,complete,calls,events,observed,distinctSourceFrames:new Set(observed.map(x=>x.sourceFrame)).size});
   }
   for(const p of __skinHit.players)p.trigger('daiji',null,0);await new Promise(r=>setTimeout(r,300));
-  return {rows,idle:__skinHit.players.map(p=>({model:p._dbName,body:p._streetBody.bitmap.visible,idleId:p._characterIdleState?.cfg.id,idleVisible:!!p._characterIdleState?.bitmap.visible,nativeVisible:p._armature.visible}))};
+  return {rows,idle:__skinHit.players.map(p=>({model:p._dbName,body:p._streetBody.bitmap.visible,idleId:p._characterIdleState?.cfg.id,idleVisible:!!p._characterIdleState?.bitmap.visible,nativeVisible:p._armature.visible,nativeFXOnly:!!p._streetNativeFX&&p._armature.armature.getSlots().filter(slot=>slot.visible).length>0&&p._armature.armature.getSlots().filter(slot=>slot.visible).every(slot=>slot.childArmature&&p._streetNativeFX.names.includes(slot.childArmature.armatureData.name))}))};
  });
  for(const r of live.rows){assert.equal(r.complete,1);assert.equal(r.calls,1);assert.deepEqual(r.events,[]);assert(Math.abs(r.elapsed-700)<130,JSON.stringify(r));assert(r.distinctSourceFrames>=10);}
- for(const r of live.idle){assert(!r.body);assert.equal(r.idleId,100201);assert(r.idleVisible&&!r.nativeVisible);}
+ for(const r of live.idle){assert(!r.body);assert.equal(r.idleId,100201);assert(r.idleVisible&&(!r.nativeVisible||r.nativeFXOnly));}
  const fallbacks=await page.evaluate(()=>{
-  const rows=[];for(const p of __skinHit.players)for(const action of ['gongji','jineng','paobu']){p.gotoAndStopByFrame(action,0);p._armature.armature.advanceTime(0);StreetBody.render(p);rows.push({model:p._dbName,action,body:p._streetBody.bitmap.visible,native:p._armature.visible});}return rows;
+  const rows=[];for(const p of __skinHit.players)for(const action of ['gongji','jineng','paobu']){p.gotoAndStopByFrame(action,0);p._armature.armature.advanceTime(0);StreetBody.render(p);rows.push({model:p._dbName,action,body:p._streetBody.bitmap.visible,native:p._armature.visible,fxOwner:!!p._streetNativeFX,bodySlotsVisible:p._armature.armature.getSlots().some(slot=>slot.visible&&!slot.childArmature)});}return rows;
  });
- for(const r of fallbacks)assert(!r.body&&r.native,'Unsupported body state must preserve original native: '+JSON.stringify(r));
+ for(const r of fallbacks)assert(!r.body&&r.native&&!r.fxOwner&&r.bodySlotsVisible,'Unsupported body state must preserve original native: '+JSON.stringify(r));
  const effects=await page.evaluate(async()=>{
   const p=__skinHit.players[0],rows=[];
   for(const model of ['hero_skin_002_01','hero_skin_002_01_ez'])for(const action of ['effect_1','effect_2','effect_3']){

@@ -1,0 +1,2449 @@
+{
+  "pass": true,
+  "fixture": false,
+  "scope": "Battle-size raster idle/hurt plus original native approved child FX slots only, normal/EZ. No UI overlay completion claim.",
+  "rows": [
+    {
+      "action": "daiji",
+      "actors": [
+        {
+          "model": "hero_skin_002_01",
+          "action": "daiji",
+          "nativeVisible": true,
+          "owner": true,
+          "allowed": [
+            "effect_2",
+            "effect_1"
+          ],
+          "visibleSlots": [
+            {
+              "name": "effect_1",
+              "child": "effect_1"
+            },
+            {
+              "name": "effect_2",
+              "child": "effect_2"
+            },
+            {
+              "name": "effect_11",
+              "child": "effect_1"
+            }
+          ],
+          "idle": true,
+          "body": false,
+          "display": {
+            "x": -2.011428571428575,
+            "y": -0.13118012422360747,
+            "sx": 0.2732919254658385,
+            "sy": 0.2732919254658385
+          }
+        },
+        {
+          "model": "hero_skin_002_01_ez",
+          "action": "daiji",
+          "nativeVisible": true,
+          "owner": true,
+          "allowed": [
+            "effect_2",
+            "effect_1"
+          ],
+          "visibleSlots": [
+            {
+              "name": "effect_1",
+              "child": "effect_1"
+            },
+            {
+              "name": "effect_2",
+              "child": "effect_2"
+            },
+            {
+              "name": "effect_11",
+              "child": "effect_1"
+            }
+          ],
+          "idle": true,
+          "body": false,
+          "display": {
+            "x": -1.0043478260869558,
+            "y": -0.06559006211180374,
+            "sx": 0.2732919254658385,
+            "sy": 0.2732919254658385
+          }
+        }
+      ]
+    },
+    {
+      "action": "shouji",
+      "actors": [
+        {
+          "model": "hero_skin_002_01",
+          "action": "shouji",
+          "nativeVisible": true,
+          "owner": true,
+          "allowed": [
+            "effect_2",
+            "effect_1"
+          ],
+          "visibleSlots": [
+            {
+              "name": "effect_1",
+              "child": "effect_1"
+            },
+            {
+              "name": "effect_2",
+              "child": "effect_2"
+            },
+            {
+              "name": "effect_11",
+              "child": "effect_1"
+            }
+          ],
+          "idle": false,
+          "body": true,
+          "display": {
+            "x": -2.011428571428575,
+            "y": -0.13118012422360747,
+            "sx": 0.2732919254658385,
+            "sy": 0.2732919254658385
+          }
+        },
+        {
+          "model": "hero_skin_002_01_ez",
+          "action": "shouji",
+          "nativeVisible": true,
+          "owner": true,
+          "allowed": [
+            "effect_2",
+            "effect_1"
+          ],
+          "visibleSlots": [
+            {
+              "name": "effect_1",
+              "child": "effect_1"
+            },
+            {
+              "name": "effect_2",
+              "child": "effect_2"
+            },
+            {
+              "name": "effect_11",
+              "child": "effect_1"
+            }
+          ],
+          "idle": false,
+          "body": true,
+          "display": {
+            "x": -1.0043478260869558,
+            "y": -0.06559006211180374,
+            "sx": 0.2732919254658385,
+            "sy": 0.2732919254658385
+          }
+        }
+      ]
+    },
+    {
+      "action": "gongji",
+      "actors": [
+        {
+          "model": "hero_skin_002_01",
+          "action": "gongji",
+          "nativeVisible": true,
+          "owner": false,
+          "visibleSlots": [
+            {
+              "name": "effect_1",
+              "child": "effect_1"
+            },
+            {
+              "name": "zxx_4"
+            },
+            {
+              "name": "zxx_3"
+            },
+            {
+              "name": "zxx_2"
+            },
+            {
+              "name": "zxx_1"
+            },
+            {
+              "name": "r_shou_2"
+            },
+            {
+              "name": "r_shou_1"
+            },
+            {
+              "name": "r_shou3_15"
+            },
+            {
+              "name": "r_shou3_14"
+            },
+            {
+              "name": "r_shou3_13"
+            },
+            {
+              "name": "r_shou3_12"
+            },
+            {
+              "name": "r_shou3_11"
+            },
+            {
+              "name": "r_shou3_10"
+            },
+            {
+              "name": "r_shou3_9"
+            },
+            {
+              "name": "r_shou3_8"
+            },
+            {
+              "name": "r_shou3_7"
+            },
+            {
+              "name": "r_shou3_6"
+            },
+            {
+              "name": "r_shou3_5"
+            },
+            {
+              "name": "r_shou3_4"
+            },
+            {
+              "name": "r_shou3_3"
+            },
+            {
+              "name": "r_shou3_2"
+            },
+            {
+              "name": "r_shou3_1"
+            },
+            {
+              "name": "effect_31",
+              "child": "effect_3"
+            },
+            {
+              "name": "xxxx_4"
+            },
+            {
+              "name": "xxxx_3"
+            },
+            {
+              "name": "xxxx_1"
+            },
+            {
+              "name": "r_tui_5"
+            },
+            {
+              "name": "r_tui_4"
+            },
+            {
+              "name": "r_tui_3"
+            },
+            {
+              "name": "r_tui_2"
+            },
+            {
+              "name": "r_tui_1"
+            },
+            {
+              "name": "cc_4"
+            },
+            {
+              "name": "cc_3"
+            },
+            {
+              "name": "cc_2"
+            },
+            {
+              "name": "cc_1"
+            },
+            {
+              "name": "shen_2"
+            },
+            {
+              "name": "shen_1"
+            },
+            {
+              "name": "l_tui_3"
+            },
+            {
+              "name": "l_tui_2"
+            },
+            {
+              "name": "l_tui_1"
+            },
+            {
+              "name": "l_shou_2"
+            },
+            {
+              "name": "l_shou_1"
+            },
+            {
+              "name": "go2xxx_4_"
+            },
+            {
+              "name": "go2xx_3_"
+            },
+            {
+              "name": "ling_4"
+            },
+            {
+              "name": "ling_3"
+            },
+            {
+              "name": "ling_2"
+            },
+            {
+              "name": "ling_1"
+            },
+            {
+              "name": "go2_4"
+            },
+            {
+              "name": "go2_3"
+            },
+            {
+              "name": "go2_2"
+            },
+            {
+              "name": "go2_1"
+            },
+            {
+              "name": "Goux_6_"
+            },
+            {
+              "name": "Goux_5_"
+            },
+            {
+              "name": "tou__5"
+            },
+            {
+              "name": "tou__4"
+            },
+            {
+              "name": "tou__3"
+            },
+            {
+              "name": "tou__31"
+            },
+            {
+              "name": "tou__311"
+            },
+            {
+              "name": "tou__2"
+            },
+            {
+              "name": "tou__1"
+            },
+            {
+              "name": "tou__0"
+            },
+            {
+              "name": "tou_"
+            },
+            {
+              "name": "mao_9"
+            },
+            {
+              "name": "mao_4"
+            },
+            {
+              "name": "mao_3"
+            },
+            {
+              "name": "mao_2"
+            },
+            {
+              "name": "mao_1"
+            },
+            {
+              "name": "lxx_7"
+            },
+            {
+              "name": "lxx_6"
+            },
+            {
+              "name": "lxx_5"
+            },
+            {
+              "name": "lxx_1"
+            },
+            {
+              "name": "rxx_7"
+            },
+            {
+              "name": "rxx_6"
+            },
+            {
+              "name": "rxx_1"
+            },
+            {
+              "name": "effect_2",
+              "child": "effect_2"
+            },
+            {
+              "name": "tou_2"
+            },
+            {
+              "name": "tou_1_2"
+            },
+            {
+              "name": "tou_1_1"
+            },
+            {
+              "name": "die_3"
+            },
+            {
+              "name": "die_2"
+            },
+            {
+              "name": "die_1"
+            },
+            {
+              "name": "Gou_6"
+            },
+            {
+              "name": "Gou_5"
+            },
+            {
+              "name": "Gou_4"
+            },
+            {
+              "name": "Gou_3"
+            },
+            {
+              "name": "Gou_2"
+            },
+            {
+              "name": "Gou_1"
+            },
+            {
+              "name": "l_shou3_15"
+            },
+            {
+              "name": "l_shou3_14"
+            },
+            {
+              "name": "l_shou3_13"
+            },
+            {
+              "name": "l_shou3_12"
+            },
+            {
+              "name": "l_shou3_11"
+            },
+            {
+              "name": "l_shou3_10"
+            },
+            {
+              "name": "l_shou3_9"
+            },
+            {
+              "name": "l_shou3_8"
+            },
+            {
+              "name": "l_shou3_7"
+            },
+            {
+              "name": "l_shou3_6"
+            },
+            {
+              "name": "l_shou3_5"
+            },
+            {
+              "name": "l_shou3_4"
+            },
+            {
+              "name": "l_shou3_3"
+            },
+            {
+              "name": "l_shou3_2"
+            },
+            {
+              "name": "l_shou3_1"
+            },
+            {
+              "name": "effect_3",
+              "child": "effect_3"
+            },
+            {
+              "name": "qiu_1"
+            },
+            {
+              "name": "qiu_11"
+            },
+            {
+              "name": "qiu_2"
+            },
+            {
+              "name": "qiu_22"
+            },
+            {
+              "name": "qiu_3"
+            },
+            {
+              "name": "qiu_33"
+            },
+            {
+              "name": "qiux_1"
+            },
+            {
+              "name": "effect_11",
+              "child": "effect_1"
+            }
+          ],
+          "idle": false,
+          "body": false,
+          "display": {
+            "x": 0,
+            "y": 0,
+            "sx": 1,
+            "sy": 1
+          }
+        },
+        {
+          "model": "hero_skin_002_01_ez",
+          "action": "gongji",
+          "nativeVisible": true,
+          "owner": false,
+          "visibleSlots": [
+            {
+              "name": "effect_1",
+              "child": "effect_1"
+            },
+            {
+              "name": "zxx_4"
+            },
+            {
+              "name": "zxx_3"
+            },
+            {
+              "name": "zxx_2"
+            },
+            {
+              "name": "zxx_1"
+            },
+            {
+              "name": "r_shou_2"
+            },
+            {
+              "name": "r_shou_1"
+            },
+            {
+              "name": "r_shou3_15"
+            },
+            {
+              "name": "r_shou3_14"
+            },
+            {
+              "name": "r_shou3_13"
+            },
+            {
+              "name": "r_shou3_12"
+            },
+            {
+              "name": "r_shou3_11"
+            },
+            {
+              "name": "r_shou3_10"
+            },
+            {
+              "name": "r_shou3_9"
+            },
+            {
+              "name": "r_shou3_8"
+            },
+            {
+              "name": "r_shou3_7"
+            },
+            {
+              "name": "r_shou3_6"
+            },
+            {
+              "name": "r_shou3_5"
+            },
+            {
+              "name": "r_shou3_4"
+            },
+            {
+              "name": "r_shou3_3"
+            },
+            {
+              "name": "r_shou3_2"
+            },
+            {
+              "name": "r_shou3_1"
+            },
+            {
+              "name": "effect_31",
+              "child": "effect_3"
+            },
+            {
+              "name": "xxxx_4"
+            },
+            {
+              "name": "xxxx_3"
+            },
+            {
+              "name": "xxxx_1"
+            },
+            {
+              "name": "r_tui_5"
+            },
+            {
+              "name": "r_tui_4"
+            },
+            {
+              "name": "r_tui_3"
+            },
+            {
+              "name": "r_tui_2"
+            },
+            {
+              "name": "r_tui_1"
+            },
+            {
+              "name": "cc_4"
+            },
+            {
+              "name": "cc_3"
+            },
+            {
+              "name": "cc_2"
+            },
+            {
+              "name": "cc_1"
+            },
+            {
+              "name": "shen_2"
+            },
+            {
+              "name": "shen_1"
+            },
+            {
+              "name": "l_tui_3"
+            },
+            {
+              "name": "l_tui_2"
+            },
+            {
+              "name": "l_tui_1"
+            },
+            {
+              "name": "l_shou_2"
+            },
+            {
+              "name": "l_shou_1"
+            },
+            {
+              "name": "go2xxx_4_"
+            },
+            {
+              "name": "go2xx_3_"
+            },
+            {
+              "name": "ling_4"
+            },
+            {
+              "name": "ling_3"
+            },
+            {
+              "name": "ling_2"
+            },
+            {
+              "name": "ling_1"
+            },
+            {
+              "name": "go2_4"
+            },
+            {
+              "name": "go2_3"
+            },
+            {
+              "name": "go2_2"
+            },
+            {
+              "name": "go2_1"
+            },
+            {
+              "name": "Goux_6_"
+            },
+            {
+              "name": "Goux_5_"
+            },
+            {
+              "name": "tou__5"
+            },
+            {
+              "name": "tou__4"
+            },
+            {
+              "name": "tou__3"
+            },
+            {
+              "name": "tou__31"
+            },
+            {
+              "name": "tou__311"
+            },
+            {
+              "name": "tou__2"
+            },
+            {
+              "name": "tou__1"
+            },
+            {
+              "name": "tou__0"
+            },
+            {
+              "name": "tou_"
+            },
+            {
+              "name": "mao_9"
+            },
+            {
+              "name": "mao_4"
+            },
+            {
+              "name": "mao_3"
+            },
+            {
+              "name": "mao_2"
+            },
+            {
+              "name": "mao_1"
+            },
+            {
+              "name": "lxx_7"
+            },
+            {
+              "name": "lxx_6"
+            },
+            {
+              "name": "lxx_5"
+            },
+            {
+              "name": "lxx_1"
+            },
+            {
+              "name": "rxx_7"
+            },
+            {
+              "name": "rxx_6"
+            },
+            {
+              "name": "rxx_1"
+            },
+            {
+              "name": "effect_2",
+              "child": "effect_2"
+            },
+            {
+              "name": "tou_2"
+            },
+            {
+              "name": "tou_1_2"
+            },
+            {
+              "name": "tou_1_1"
+            },
+            {
+              "name": "die_3"
+            },
+            {
+              "name": "die_2"
+            },
+            {
+              "name": "die_1"
+            },
+            {
+              "name": "Gou_6"
+            },
+            {
+              "name": "Gou_5"
+            },
+            {
+              "name": "Gou_4"
+            },
+            {
+              "name": "Gou_3"
+            },
+            {
+              "name": "Gou_2"
+            },
+            {
+              "name": "Gou_1"
+            },
+            {
+              "name": "l_shou3_15"
+            },
+            {
+              "name": "l_shou3_14"
+            },
+            {
+              "name": "l_shou3_13"
+            },
+            {
+              "name": "l_shou3_12"
+            },
+            {
+              "name": "l_shou3_11"
+            },
+            {
+              "name": "l_shou3_10"
+            },
+            {
+              "name": "l_shou3_9"
+            },
+            {
+              "name": "l_shou3_8"
+            },
+            {
+              "name": "l_shou3_7"
+            },
+            {
+              "name": "l_shou3_6"
+            },
+            {
+              "name": "l_shou3_5"
+            },
+            {
+              "name": "l_shou3_4"
+            },
+            {
+              "name": "l_shou3_3"
+            },
+            {
+              "name": "l_shou3_2"
+            },
+            {
+              "name": "l_shou3_1"
+            },
+            {
+              "name": "effect_3",
+              "child": "effect_3"
+            },
+            {
+              "name": "qiu_1"
+            },
+            {
+              "name": "qiu_11"
+            },
+            {
+              "name": "qiu_2"
+            },
+            {
+              "name": "qiu_22"
+            },
+            {
+              "name": "qiu_3"
+            },
+            {
+              "name": "qiu_33"
+            },
+            {
+              "name": "qiux_1"
+            },
+            {
+              "name": "effect_11",
+              "child": "effect_1"
+            }
+          ],
+          "idle": false,
+          "body": false,
+          "display": {
+            "x": 0,
+            "y": 0,
+            "sx": 1,
+            "sy": 1
+          }
+        }
+      ]
+    },
+    {
+      "action": "jineng",
+      "actors": [
+        {
+          "model": "hero_skin_002_01",
+          "action": "jineng",
+          "nativeVisible": true,
+          "owner": false,
+          "visibleSlots": [
+            {
+              "name": "effect_1",
+              "child": "effect_1"
+            },
+            {
+              "name": "zxx_4"
+            },
+            {
+              "name": "zxx_3"
+            },
+            {
+              "name": "zxx_2"
+            },
+            {
+              "name": "zxx_1"
+            },
+            {
+              "name": "r_shou_2"
+            },
+            {
+              "name": "r_shou_1"
+            },
+            {
+              "name": "r_shou3_15"
+            },
+            {
+              "name": "r_shou3_14"
+            },
+            {
+              "name": "r_shou3_13"
+            },
+            {
+              "name": "r_shou3_12"
+            },
+            {
+              "name": "r_shou3_11"
+            },
+            {
+              "name": "r_shou3_10"
+            },
+            {
+              "name": "r_shou3_9"
+            },
+            {
+              "name": "r_shou3_8"
+            },
+            {
+              "name": "r_shou3_7"
+            },
+            {
+              "name": "r_shou3_6"
+            },
+            {
+              "name": "r_shou3_5"
+            },
+            {
+              "name": "r_shou3_4"
+            },
+            {
+              "name": "r_shou3_3"
+            },
+            {
+              "name": "r_shou3_2"
+            },
+            {
+              "name": "r_shou3_1"
+            },
+            {
+              "name": "effect_31",
+              "child": "effect_3"
+            },
+            {
+              "name": "xxxx_4"
+            },
+            {
+              "name": "xxxx_3"
+            },
+            {
+              "name": "xxxx_1"
+            },
+            {
+              "name": "r_tui_5"
+            },
+            {
+              "name": "r_tui_4"
+            },
+            {
+              "name": "r_tui_3"
+            },
+            {
+              "name": "r_tui_2"
+            },
+            {
+              "name": "r_tui_1"
+            },
+            {
+              "name": "cc_4"
+            },
+            {
+              "name": "cc_3"
+            },
+            {
+              "name": "cc_2"
+            },
+            {
+              "name": "cc_1"
+            },
+            {
+              "name": "shen_2"
+            },
+            {
+              "name": "shen_1"
+            },
+            {
+              "name": "l_tui_3"
+            },
+            {
+              "name": "l_tui_2"
+            },
+            {
+              "name": "l_tui_1"
+            },
+            {
+              "name": "l_shou_2"
+            },
+            {
+              "name": "l_shou_1"
+            },
+            {
+              "name": "go2xxx_4_"
+            },
+            {
+              "name": "go2xx_3_"
+            },
+            {
+              "name": "ling_4"
+            },
+            {
+              "name": "ling_3"
+            },
+            {
+              "name": "ling_2"
+            },
+            {
+              "name": "ling_1"
+            },
+            {
+              "name": "go2_4"
+            },
+            {
+              "name": "go2_3"
+            },
+            {
+              "name": "go2_2"
+            },
+            {
+              "name": "go2_1"
+            },
+            {
+              "name": "Goux_6_"
+            },
+            {
+              "name": "Goux_5_"
+            },
+            {
+              "name": "tou__5"
+            },
+            {
+              "name": "tou__4"
+            },
+            {
+              "name": "tou__3"
+            },
+            {
+              "name": "tou__31"
+            },
+            {
+              "name": "tou__311"
+            },
+            {
+              "name": "tou__2"
+            },
+            {
+              "name": "tou__1"
+            },
+            {
+              "name": "tou__0"
+            },
+            {
+              "name": "tou_"
+            },
+            {
+              "name": "mao_9"
+            },
+            {
+              "name": "mao_4"
+            },
+            {
+              "name": "mao_3"
+            },
+            {
+              "name": "mao_2"
+            },
+            {
+              "name": "mao_1"
+            },
+            {
+              "name": "lxx_7"
+            },
+            {
+              "name": "lxx_6"
+            },
+            {
+              "name": "lxx_5"
+            },
+            {
+              "name": "lxx_1"
+            },
+            {
+              "name": "rxx_7"
+            },
+            {
+              "name": "rxx_6"
+            },
+            {
+              "name": "rxx_1"
+            },
+            {
+              "name": "effect_2",
+              "child": "effect_2"
+            },
+            {
+              "name": "tou_2"
+            },
+            {
+              "name": "tou_1_2"
+            },
+            {
+              "name": "tou_1_1"
+            },
+            {
+              "name": "die_3"
+            },
+            {
+              "name": "die_2"
+            },
+            {
+              "name": "die_1"
+            },
+            {
+              "name": "Gou_6"
+            },
+            {
+              "name": "Gou_5"
+            },
+            {
+              "name": "Gou_4"
+            },
+            {
+              "name": "Gou_3"
+            },
+            {
+              "name": "Gou_2"
+            },
+            {
+              "name": "Gou_1"
+            },
+            {
+              "name": "l_shou3_15"
+            },
+            {
+              "name": "l_shou3_14"
+            },
+            {
+              "name": "l_shou3_13"
+            },
+            {
+              "name": "l_shou3_12"
+            },
+            {
+              "name": "l_shou3_11"
+            },
+            {
+              "name": "l_shou3_10"
+            },
+            {
+              "name": "l_shou3_9"
+            },
+            {
+              "name": "l_shou3_8"
+            },
+            {
+              "name": "l_shou3_7"
+            },
+            {
+              "name": "l_shou3_6"
+            },
+            {
+              "name": "l_shou3_5"
+            },
+            {
+              "name": "l_shou3_4"
+            },
+            {
+              "name": "l_shou3_3"
+            },
+            {
+              "name": "l_shou3_2"
+            },
+            {
+              "name": "l_shou3_1"
+            },
+            {
+              "name": "effect_3",
+              "child": "effect_3"
+            },
+            {
+              "name": "qiu_1"
+            },
+            {
+              "name": "qiu_11"
+            },
+            {
+              "name": "qiu_2"
+            },
+            {
+              "name": "qiu_22"
+            },
+            {
+              "name": "qiu_3"
+            },
+            {
+              "name": "qiu_33"
+            },
+            {
+              "name": "qiux_1"
+            },
+            {
+              "name": "effect_11",
+              "child": "effect_1"
+            }
+          ],
+          "idle": false,
+          "body": false,
+          "display": {
+            "x": 0,
+            "y": 0,
+            "sx": 1,
+            "sy": 1
+          }
+        },
+        {
+          "model": "hero_skin_002_01_ez",
+          "action": "jineng",
+          "nativeVisible": true,
+          "owner": false,
+          "visibleSlots": [
+            {
+              "name": "effect_1",
+              "child": "effect_1"
+            },
+            {
+              "name": "zxx_4"
+            },
+            {
+              "name": "zxx_3"
+            },
+            {
+              "name": "zxx_2"
+            },
+            {
+              "name": "zxx_1"
+            },
+            {
+              "name": "r_shou_2"
+            },
+            {
+              "name": "r_shou_1"
+            },
+            {
+              "name": "r_shou3_15"
+            },
+            {
+              "name": "r_shou3_14"
+            },
+            {
+              "name": "r_shou3_13"
+            },
+            {
+              "name": "r_shou3_12"
+            },
+            {
+              "name": "r_shou3_11"
+            },
+            {
+              "name": "r_shou3_10"
+            },
+            {
+              "name": "r_shou3_9"
+            },
+            {
+              "name": "r_shou3_8"
+            },
+            {
+              "name": "r_shou3_7"
+            },
+            {
+              "name": "r_shou3_6"
+            },
+            {
+              "name": "r_shou3_5"
+            },
+            {
+              "name": "r_shou3_4"
+            },
+            {
+              "name": "r_shou3_3"
+            },
+            {
+              "name": "r_shou3_2"
+            },
+            {
+              "name": "r_shou3_1"
+            },
+            {
+              "name": "effect_31",
+              "child": "effect_3"
+            },
+            {
+              "name": "xxxx_4"
+            },
+            {
+              "name": "xxxx_3"
+            },
+            {
+              "name": "xxxx_1"
+            },
+            {
+              "name": "r_tui_5"
+            },
+            {
+              "name": "r_tui_4"
+            },
+            {
+              "name": "r_tui_3"
+            },
+            {
+              "name": "r_tui_2"
+            },
+            {
+              "name": "r_tui_1"
+            },
+            {
+              "name": "cc_4"
+            },
+            {
+              "name": "cc_3"
+            },
+            {
+              "name": "cc_2"
+            },
+            {
+              "name": "cc_1"
+            },
+            {
+              "name": "shen_2"
+            },
+            {
+              "name": "shen_1"
+            },
+            {
+              "name": "l_tui_3"
+            },
+            {
+              "name": "l_tui_2"
+            },
+            {
+              "name": "l_tui_1"
+            },
+            {
+              "name": "l_shou_2"
+            },
+            {
+              "name": "l_shou_1"
+            },
+            {
+              "name": "go2xxx_4_"
+            },
+            {
+              "name": "go2xx_3_"
+            },
+            {
+              "name": "ling_4"
+            },
+            {
+              "name": "ling_3"
+            },
+            {
+              "name": "ling_2"
+            },
+            {
+              "name": "ling_1"
+            },
+            {
+              "name": "go2_4"
+            },
+            {
+              "name": "go2_3"
+            },
+            {
+              "name": "go2_2"
+            },
+            {
+              "name": "go2_1"
+            },
+            {
+              "name": "Goux_6_"
+            },
+            {
+              "name": "Goux_5_"
+            },
+            {
+              "name": "tou__5"
+            },
+            {
+              "name": "tou__4"
+            },
+            {
+              "name": "tou__3"
+            },
+            {
+              "name": "tou__31"
+            },
+            {
+              "name": "tou__311"
+            },
+            {
+              "name": "tou__2"
+            },
+            {
+              "name": "tou__1"
+            },
+            {
+              "name": "tou__0"
+            },
+            {
+              "name": "tou_"
+            },
+            {
+              "name": "mao_9"
+            },
+            {
+              "name": "mao_4"
+            },
+            {
+              "name": "mao_3"
+            },
+            {
+              "name": "mao_2"
+            },
+            {
+              "name": "mao_1"
+            },
+            {
+              "name": "lxx_7"
+            },
+            {
+              "name": "lxx_6"
+            },
+            {
+              "name": "lxx_5"
+            },
+            {
+              "name": "lxx_1"
+            },
+            {
+              "name": "rxx_7"
+            },
+            {
+              "name": "rxx_6"
+            },
+            {
+              "name": "rxx_1"
+            },
+            {
+              "name": "effect_2",
+              "child": "effect_2"
+            },
+            {
+              "name": "tou_2"
+            },
+            {
+              "name": "tou_1_2"
+            },
+            {
+              "name": "tou_1_1"
+            },
+            {
+              "name": "die_3"
+            },
+            {
+              "name": "die_2"
+            },
+            {
+              "name": "die_1"
+            },
+            {
+              "name": "Gou_6"
+            },
+            {
+              "name": "Gou_5"
+            },
+            {
+              "name": "Gou_4"
+            },
+            {
+              "name": "Gou_3"
+            },
+            {
+              "name": "Gou_2"
+            },
+            {
+              "name": "Gou_1"
+            },
+            {
+              "name": "l_shou3_15"
+            },
+            {
+              "name": "l_shou3_14"
+            },
+            {
+              "name": "l_shou3_13"
+            },
+            {
+              "name": "l_shou3_12"
+            },
+            {
+              "name": "l_shou3_11"
+            },
+            {
+              "name": "l_shou3_10"
+            },
+            {
+              "name": "l_shou3_9"
+            },
+            {
+              "name": "l_shou3_8"
+            },
+            {
+              "name": "l_shou3_7"
+            },
+            {
+              "name": "l_shou3_6"
+            },
+            {
+              "name": "l_shou3_5"
+            },
+            {
+              "name": "l_shou3_4"
+            },
+            {
+              "name": "l_shou3_3"
+            },
+            {
+              "name": "l_shou3_2"
+            },
+            {
+              "name": "l_shou3_1"
+            },
+            {
+              "name": "effect_3",
+              "child": "effect_3"
+            },
+            {
+              "name": "qiu_1"
+            },
+            {
+              "name": "qiu_11"
+            },
+            {
+              "name": "qiu_2"
+            },
+            {
+              "name": "qiu_22"
+            },
+            {
+              "name": "qiu_3"
+            },
+            {
+              "name": "qiu_33"
+            },
+            {
+              "name": "qiux_1"
+            },
+            {
+              "name": "effect_11",
+              "child": "effect_1"
+            }
+          ],
+          "idle": false,
+          "body": false,
+          "display": {
+            "x": 0,
+            "y": 0,
+            "sx": 1,
+            "sy": 1
+          }
+        }
+      ]
+    },
+    {
+      "action": "paobu",
+      "actors": [
+        {
+          "model": "hero_skin_002_01",
+          "action": "paobu",
+          "nativeVisible": true,
+          "owner": false,
+          "visibleSlots": [
+            {
+              "name": "effect_1",
+              "child": "effect_1"
+            },
+            {
+              "name": "zxx_4"
+            },
+            {
+              "name": "zxx_3"
+            },
+            {
+              "name": "zxx_2"
+            },
+            {
+              "name": "zxx_1"
+            },
+            {
+              "name": "r_shou_2"
+            },
+            {
+              "name": "r_shou_1"
+            },
+            {
+              "name": "r_shou3_15"
+            },
+            {
+              "name": "r_shou3_14"
+            },
+            {
+              "name": "r_shou3_13"
+            },
+            {
+              "name": "r_shou3_12"
+            },
+            {
+              "name": "r_shou3_11"
+            },
+            {
+              "name": "r_shou3_10"
+            },
+            {
+              "name": "r_shou3_9"
+            },
+            {
+              "name": "r_shou3_8"
+            },
+            {
+              "name": "r_shou3_7"
+            },
+            {
+              "name": "r_shou3_6"
+            },
+            {
+              "name": "r_shou3_5"
+            },
+            {
+              "name": "r_shou3_4"
+            },
+            {
+              "name": "r_shou3_3"
+            },
+            {
+              "name": "r_shou3_2"
+            },
+            {
+              "name": "r_shou3_1"
+            },
+            {
+              "name": "effect_31",
+              "child": "effect_3"
+            },
+            {
+              "name": "xxxx_4"
+            },
+            {
+              "name": "xxxx_3"
+            },
+            {
+              "name": "xxxx_1"
+            },
+            {
+              "name": "r_tui_5"
+            },
+            {
+              "name": "r_tui_4"
+            },
+            {
+              "name": "r_tui_3"
+            },
+            {
+              "name": "r_tui_2"
+            },
+            {
+              "name": "r_tui_1"
+            },
+            {
+              "name": "cc_4"
+            },
+            {
+              "name": "cc_3"
+            },
+            {
+              "name": "cc_2"
+            },
+            {
+              "name": "cc_1"
+            },
+            {
+              "name": "shen_2"
+            },
+            {
+              "name": "shen_1"
+            },
+            {
+              "name": "l_tui_3"
+            },
+            {
+              "name": "l_tui_2"
+            },
+            {
+              "name": "l_tui_1"
+            },
+            {
+              "name": "l_shou_2"
+            },
+            {
+              "name": "l_shou_1"
+            },
+            {
+              "name": "go2xxx_4_"
+            },
+            {
+              "name": "go2xx_3_"
+            },
+            {
+              "name": "ling_4"
+            },
+            {
+              "name": "ling_3"
+            },
+            {
+              "name": "ling_2"
+            },
+            {
+              "name": "ling_1"
+            },
+            {
+              "name": "go2_4"
+            },
+            {
+              "name": "go2_3"
+            },
+            {
+              "name": "go2_2"
+            },
+            {
+              "name": "go2_1"
+            },
+            {
+              "name": "Goux_6_"
+            },
+            {
+              "name": "Goux_5_"
+            },
+            {
+              "name": "tou__5"
+            },
+            {
+              "name": "tou__4"
+            },
+            {
+              "name": "tou__3"
+            },
+            {
+              "name": "tou__31"
+            },
+            {
+              "name": "tou__311"
+            },
+            {
+              "name": "tou__2"
+            },
+            {
+              "name": "tou__1"
+            },
+            {
+              "name": "tou__0"
+            },
+            {
+              "name": "tou_"
+            },
+            {
+              "name": "mao_9"
+            },
+            {
+              "name": "mao_4"
+            },
+            {
+              "name": "mao_3"
+            },
+            {
+              "name": "mao_2"
+            },
+            {
+              "name": "mao_1"
+            },
+            {
+              "name": "lxx_7"
+            },
+            {
+              "name": "lxx_6"
+            },
+            {
+              "name": "lxx_5"
+            },
+            {
+              "name": "lxx_1"
+            },
+            {
+              "name": "rxx_7"
+            },
+            {
+              "name": "rxx_6"
+            },
+            {
+              "name": "rxx_1"
+            },
+            {
+              "name": "effect_2",
+              "child": "effect_2"
+            },
+            {
+              "name": "tou_2"
+            },
+            {
+              "name": "tou_1_2"
+            },
+            {
+              "name": "tou_1_1"
+            },
+            {
+              "name": "die_3"
+            },
+            {
+              "name": "die_2"
+            },
+            {
+              "name": "die_1"
+            },
+            {
+              "name": "Gou_6"
+            },
+            {
+              "name": "Gou_5"
+            },
+            {
+              "name": "Gou_4"
+            },
+            {
+              "name": "Gou_3"
+            },
+            {
+              "name": "Gou_2"
+            },
+            {
+              "name": "Gou_1"
+            },
+            {
+              "name": "l_shou3_15"
+            },
+            {
+              "name": "l_shou3_14"
+            },
+            {
+              "name": "l_shou3_13"
+            },
+            {
+              "name": "l_shou3_12"
+            },
+            {
+              "name": "l_shou3_11"
+            },
+            {
+              "name": "l_shou3_10"
+            },
+            {
+              "name": "l_shou3_9"
+            },
+            {
+              "name": "l_shou3_8"
+            },
+            {
+              "name": "l_shou3_7"
+            },
+            {
+              "name": "l_shou3_6"
+            },
+            {
+              "name": "l_shou3_5"
+            },
+            {
+              "name": "l_shou3_4"
+            },
+            {
+              "name": "l_shou3_3"
+            },
+            {
+              "name": "l_shou3_2"
+            },
+            {
+              "name": "l_shou3_1"
+            },
+            {
+              "name": "effect_3",
+              "child": "effect_3"
+            },
+            {
+              "name": "qiu_1"
+            },
+            {
+              "name": "qiu_11"
+            },
+            {
+              "name": "qiu_2"
+            },
+            {
+              "name": "qiu_22"
+            },
+            {
+              "name": "qiu_3"
+            },
+            {
+              "name": "qiu_33"
+            },
+            {
+              "name": "qiux_1"
+            },
+            {
+              "name": "effect_11",
+              "child": "effect_1"
+            }
+          ],
+          "idle": false,
+          "body": false,
+          "display": {
+            "x": 0,
+            "y": 0,
+            "sx": 1,
+            "sy": 1
+          }
+        },
+        {
+          "model": "hero_skin_002_01_ez",
+          "action": "paobu",
+          "nativeVisible": true,
+          "owner": false,
+          "visibleSlots": [
+            {
+              "name": "effect_1",
+              "child": "effect_1"
+            },
+            {
+              "name": "zxx_4"
+            },
+            {
+              "name": "zxx_3"
+            },
+            {
+              "name": "zxx_2"
+            },
+            {
+              "name": "zxx_1"
+            },
+            {
+              "name": "r_shou_2"
+            },
+            {
+              "name": "r_shou_1"
+            },
+            {
+              "name": "r_shou3_15"
+            },
+            {
+              "name": "r_shou3_14"
+            },
+            {
+              "name": "r_shou3_13"
+            },
+            {
+              "name": "r_shou3_12"
+            },
+            {
+              "name": "r_shou3_11"
+            },
+            {
+              "name": "r_shou3_10"
+            },
+            {
+              "name": "r_shou3_9"
+            },
+            {
+              "name": "r_shou3_8"
+            },
+            {
+              "name": "r_shou3_7"
+            },
+            {
+              "name": "r_shou3_6"
+            },
+            {
+              "name": "r_shou3_5"
+            },
+            {
+              "name": "r_shou3_4"
+            },
+            {
+              "name": "r_shou3_3"
+            },
+            {
+              "name": "r_shou3_2"
+            },
+            {
+              "name": "r_shou3_1"
+            },
+            {
+              "name": "effect_31",
+              "child": "effect_3"
+            },
+            {
+              "name": "xxxx_4"
+            },
+            {
+              "name": "xxxx_3"
+            },
+            {
+              "name": "xxxx_1"
+            },
+            {
+              "name": "r_tui_5"
+            },
+            {
+              "name": "r_tui_4"
+            },
+            {
+              "name": "r_tui_3"
+            },
+            {
+              "name": "r_tui_2"
+            },
+            {
+              "name": "r_tui_1"
+            },
+            {
+              "name": "cc_4"
+            },
+            {
+              "name": "cc_3"
+            },
+            {
+              "name": "cc_2"
+            },
+            {
+              "name": "cc_1"
+            },
+            {
+              "name": "shen_2"
+            },
+            {
+              "name": "shen_1"
+            },
+            {
+              "name": "l_tui_3"
+            },
+            {
+              "name": "l_tui_2"
+            },
+            {
+              "name": "l_tui_1"
+            },
+            {
+              "name": "l_shou_2"
+            },
+            {
+              "name": "l_shou_1"
+            },
+            {
+              "name": "go2xxx_4_"
+            },
+            {
+              "name": "go2xx_3_"
+            },
+            {
+              "name": "ling_4"
+            },
+            {
+              "name": "ling_3"
+            },
+            {
+              "name": "ling_2"
+            },
+            {
+              "name": "ling_1"
+            },
+            {
+              "name": "go2_4"
+            },
+            {
+              "name": "go2_3"
+            },
+            {
+              "name": "go2_2"
+            },
+            {
+              "name": "go2_1"
+            },
+            {
+              "name": "Goux_6_"
+            },
+            {
+              "name": "Goux_5_"
+            },
+            {
+              "name": "tou__5"
+            },
+            {
+              "name": "tou__4"
+            },
+            {
+              "name": "tou__3"
+            },
+            {
+              "name": "tou__31"
+            },
+            {
+              "name": "tou__311"
+            },
+            {
+              "name": "tou__2"
+            },
+            {
+              "name": "tou__1"
+            },
+            {
+              "name": "tou__0"
+            },
+            {
+              "name": "tou_"
+            },
+            {
+              "name": "mao_9"
+            },
+            {
+              "name": "mao_4"
+            },
+            {
+              "name": "mao_3"
+            },
+            {
+              "name": "mao_2"
+            },
+            {
+              "name": "mao_1"
+            },
+            {
+              "name": "lxx_7"
+            },
+            {
+              "name": "lxx_6"
+            },
+            {
+              "name": "lxx_5"
+            },
+            {
+              "name": "lxx_1"
+            },
+            {
+              "name": "rxx_7"
+            },
+            {
+              "name": "rxx_6"
+            },
+            {
+              "name": "rxx_1"
+            },
+            {
+              "name": "effect_2",
+              "child": "effect_2"
+            },
+            {
+              "name": "tou_2"
+            },
+            {
+              "name": "tou_1_2"
+            },
+            {
+              "name": "tou_1_1"
+            },
+            {
+              "name": "die_3"
+            },
+            {
+              "name": "die_2"
+            },
+            {
+              "name": "die_1"
+            },
+            {
+              "name": "Gou_6"
+            },
+            {
+              "name": "Gou_5"
+            },
+            {
+              "name": "Gou_4"
+            },
+            {
+              "name": "Gou_3"
+            },
+            {
+              "name": "Gou_2"
+            },
+            {
+              "name": "Gou_1"
+            },
+            {
+              "name": "l_shou3_15"
+            },
+            {
+              "name": "l_shou3_14"
+            },
+            {
+              "name": "l_shou3_13"
+            },
+            {
+              "name": "l_shou3_12"
+            },
+            {
+              "name": "l_shou3_11"
+            },
+            {
+              "name": "l_shou3_10"
+            },
+            {
+              "name": "l_shou3_9"
+            },
+            {
+              "name": "l_shou3_8"
+            },
+            {
+              "name": "l_shou3_7"
+            },
+            {
+              "name": "l_shou3_6"
+            },
+            {
+              "name": "l_shou3_5"
+            },
+            {
+              "name": "l_shou3_4"
+            },
+            {
+              "name": "l_shou3_3"
+            },
+            {
+              "name": "l_shou3_2"
+            },
+            {
+              "name": "l_shou3_1"
+            },
+            {
+              "name": "effect_3",
+              "child": "effect_3"
+            },
+            {
+              "name": "qiu_1"
+            },
+            {
+              "name": "qiu_11"
+            },
+            {
+              "name": "qiu_2"
+            },
+            {
+              "name": "qiu_22"
+            },
+            {
+              "name": "qiu_3"
+            },
+            {
+              "name": "qiu_33"
+            },
+            {
+              "name": "qiux_1"
+            },
+            {
+              "name": "effect_11",
+              "child": "effect_1"
+            }
+          ],
+          "idle": false,
+          "body": false,
+          "display": {
+            "x": 0,
+            "y": 0,
+            "sx": 1,
+            "sy": 1
+          }
+        }
+      ]
+    },
+    {
+      "action": "daiji",
+      "actors": [
+        {
+          "model": "hero_skin_002_01",
+          "action": "daiji",
+          "nativeVisible": true,
+          "owner": true,
+          "allowed": [
+            "effect_2",
+            "effect_1"
+          ],
+          "visibleSlots": [
+            {
+              "name": "effect_1",
+              "child": "effect_1"
+            },
+            {
+              "name": "effect_2",
+              "child": "effect_2"
+            },
+            {
+              "name": "effect_11",
+              "child": "effect_1"
+            }
+          ],
+          "idle": true,
+          "body": false,
+          "display": {
+            "x": -2.011428571428575,
+            "y": -0.13118012422360747,
+            "sx": 0.2732919254658385,
+            "sy": 0.2732919254658385
+          }
+        },
+        {
+          "model": "hero_skin_002_01_ez",
+          "action": "daiji",
+          "nativeVisible": true,
+          "owner": true,
+          "allowed": [
+            "effect_2",
+            "effect_1"
+          ],
+          "visibleSlots": [
+            {
+              "name": "effect_1",
+              "child": "effect_1"
+            },
+            {
+              "name": "effect_2",
+              "child": "effect_2"
+            },
+            {
+              "name": "effect_11",
+              "child": "effect_1"
+            }
+          ],
+          "idle": true,
+          "body": false,
+          "display": {
+            "x": -1.0043478260869558,
+            "y": -0.06559006211180374,
+            "sx": 0.2732919254658385,
+            "sy": 0.2732919254658385
+          }
+        }
+      ]
+    }
+  ],
+  "performanceReview": {
+    "scope": "This Chrome machine, two normal/EZ actors, idle native FX overlay only; not APK/mobile/all scenes",
+    "samples": 900,
+    "p95": 16.80000000000109,
+    "over100ms": 0,
+    "liveOwners": 2
+  },
+  "cleanup": {
+    "owners": 0,
+    "body": {
+      "installed": true,
+      "framesPresented": 34,
+      "actions": {
+        "shouji": 34
+      },
+      "atlasRequests": 1,
+      "suppressedViewsDetached": 0,
+      "errors": [],
+      "caches": [],
+      "active": []
+    },
+    "idle": {
+      "cacheCount": 0,
+      "queued": 0,
+      "loading": 0,
+      "atlasVersion": "0.23.0",
+      "roster": {
+        "expected": 86,
+        "owned": 86,
+        "added": [],
+        "missing": []
+      },
+      "nativeOwned": 86,
+      "installed": true,
+      "mappedHeroes": 85,
+      "framesPresented": 692,
+      "modelRequests": {
+        "common_shuaping": 1,
+        "guochang_01": 1,
+        "common_zhujiemianxz_02": 1,
+        "hero_skin_002_01": 1,
+        "hero_skin_002_01_ez": 1
+      },
+      "actionRestores": 6,
+      "lastUnbound": {
+        "name": "common_zhujiemianxz_02"
+      },
+      "attachedHeroes": {
+        "100201": "skin100201-09828f2019409fc9"
+      },
+      "modelKeys": [
+        [
+          "hero_001_01",
+          0
+        ],
+        [
+          "hero_002_01",
+          2
+        ],
+        [
+          "hero_003_01",
+          3
+        ],
+        [
+          "hero_004_01",
+          4
+        ]
+      ],
+      "errors": [],
+      "active": []
+    }
+  },
+  "errors": [],
+  "snapshot": {
+    "presented": 4472,
+    "restored": 6,
+    "errors": []
+  }
+}
