@@ -1,0 +1,37 @@
+{
+  "pass": true,
+  "scope": "Actual equip proxy then native main/hang-up entry. Skin-code transport only, not a new full skin or all hang-up art/AI coverage.",
+  "equip": {
+    "uuid": "offline-hero-all-2",
+    "dermaCode": 100201
+  },
+  "entry": {
+    "mediator": "HangUpSystemMed",
+    "view": 1
+  },
+  "payload": {
+    "battleType": 66,
+    "expected": 66,
+    "allies": [
+      {
+        "entityId": 11100,
+        "code": 41010002,
+        "dermaCode": 100201
+      }
+    ]
+  },
+  "unequip": {
+    "dermaCode": 0,
+    "callbacks": 1
+  },
+  "unequippedPayload": [
+    {
+      "code": 41010002,
+      "dermaCode": 0
+    }
+  ],
+  "errors": [],
+  "failures": [],
+  "saveRestored": true,
+  "mainSaveUnchanged": true
+}

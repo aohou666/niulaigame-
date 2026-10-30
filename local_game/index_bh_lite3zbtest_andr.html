@@ -65,8 +65,9 @@
 <script src="character-idle-data.js?v=0.70.0"></script>
 <script src="character-idle-atlas-data.js?v=20261029-23"></script>
 <script src="character-idle.js?v=0.85.0"></script>
-<script src="street-body-data.js?v=0.67.0"></script>
-<script src="street-body.js?v=0.67.0"></script>
+<script src="street-body-data.js?v=0.88.0"></script>
+<script src="street-body.js?v=0.88.0"></script>
+<script src="offline-battle-attributes.js?v=0.88.0"></script>
 <script src="character-regression.js?v=0.83.0-1"></script>
 <script>
     var now = Date.now();
@@ -3306,7 +3307,9 @@
                             attrs["2"] = Math.max(10000, Number(attrs["2"]) || level * 10000);
                             entity.code = Number(heroCfg.code);
                             entity.level = level;
-                            entity.dermaCode = 0;
+                            var savedDermaCode = Number(savedHero && savedHero.dermaCode) || 0;
+                            var savedDerma = savedDermaCode && config.HeroDermaLO.Get(savedDermaCode);
+                            entity.dermaCode = savedDerma && Number(savedDerma.subType) === Number(heroCfg.subType) ? savedDermaCode : 0;
                             entity.raceType = Number(heroCfg.race) || 1;
                             entity.attr = JSON.stringify(attrs);
                             entity.life = entity.lifeMax = Number(attrs["2"]);
@@ -3711,12 +3714,17 @@
                             entity.code = Number(heroCfg.code);
                             entity.level = level;
                             entity.type = 1;
+                            var savedDermaCode = Number(savedHero && savedHero.dermaCode) || 0;
+                            var savedDerma = savedDermaCode && config.HeroDermaLO.Get(savedDermaCode);
+                            entity.dermaCode = savedDerma && Number(savedDerma.subType) === Number(heroCfg.subType) ? savedDermaCode : 0;
                             entity.attr = JSON.stringify(attrs);
                             entity.skillIds = configuredSkills;
                             entity.life = entity.lifeMax = Number(attrs["2"]);
                             entity.anger = Number(heroCfg.initEnergy) || 2;
                             entity.angerMax = Number(heroCfg.maxEnergy) || 4;
-                            entity.ext = JSON.stringify(ext || {});
+                            var battleExt = Object.assign({}, ext || {});
+                            if (savedHero) battleExt.offlineAdvancedAttrUnit = "percent-points";
+                            entity.ext = JSON.stringify(battleExt);
                         }
                         demoBattle.teams[1].entities = demoBattle.teams[1].entities.slice(0, enemyCount);
                         demoBattle.teams[1].entities.forEach(function (entity, index) {
@@ -3917,7 +3925,7 @@
                                     entityId: 10100, code: selectedBeautyCode, type: game.BattleEntityType.Magical,
                                     life: supportAttrs["2"], lifeMax: supportAttrs["2"], anger: 0, angerMax: 0,
                                     level: selectedBeautyLevel, raceType: 1, attr: supportAttrs, skillIds: [Number(selectedBeautySkill.id)],
-                                    ext: { localServer: true, originalEntity: "magical", name: selectedBeauty.name, model: selectedBeauty.model }, pos: 0
+                                    ext: { localServer: true, offlineAdvancedAttrUnit: "percent-points", originalEntity: "magical", name: selectedBeauty.name, model: selectedBeauty.model }, pos: 0
                                 });
                             }
                         }
@@ -3940,7 +3948,7 @@
                                     entityId: 10200, code: selectedMythicalCode, type: game.BattleEntityType.MythicalBeast,
                                     life: supportAttrs["2"], lifeMax: supportAttrs["2"], anger: 0, angerMax: 0,
                                     level: selectedMythicalLevel, raceType: 1, attr: supportAttrs, skillIds: [Number(selectedMythicalSkill.id)],
-                                    ext: { localServer: true, originalEntity: "mythicalBeast", name: selectedMythical.name, model: selectedMythical.model }, pos: 1
+                                    ext: { localServer: true, offlineAdvancedAttrUnit: "percent-points", originalEntity: "mythicalBeast", name: selectedMythical.name, model: selectedMythical.model }, pos: 1
                                 });
                             }
                         }
@@ -4029,8 +4037,10 @@
                                 if (team.magical) team.entities.push(team.magical);
                                 (team.mythicalBeasts || []).forEach(function (entity) { team.entities.push(entity); });
                             });
+                            var preparedAI = OfflineBattleAttributes.prepare(aiInput);
+                            window.OfflineBattleAttrAudit = preparedAI.audit;
                             aiServer.init(aiProxy, game.BattleWinWay.Normal);
-                            aiServer.play(aiInput);
+                            aiServer.play(preparedAI.input);
                             aiServer.onSkillPlayDone();
                             var aiTicks = 0;
                             while (!aiServer.world.isEnd && aiTicks < 5000) {

@@ -1,0 +1,82 @@
+{
+  "pass": false,
+  "scope": "Actual production equip proxy/persisted isolated save, native BattleAI replay and autonomous skin hit animation; no manually triggered DBPlayer hurt or edited battle payload. Main save must stay unchanged.",
+  "equip": {
+    "uuid": "offline-hero-all-2",
+    "dermaCode": 100201,
+    "subType": 2,
+    "skinSubType": 2,
+    "model": "hero_skin_002_01",
+    "calls": 1,
+    "results": 1
+  },
+  "payload": {
+    "allies": [
+      {
+        "entityId": 11100,
+        "code": 41010002,
+        "dermaCode": 100201,
+        "attr": "{\"1\":745200000,\"2\":6486000000,\"3\":614100000,\"4\":172500000,\"5\":0,\"11\":78,\"12\":455,\"13\":43,\"14\":63,\"15\":43,\"16\":43,\"17\":43,\"18\":43,\"19\":43,\"20\":420,\"21\":43,\"22\":43,\"23\":25,\"24\":20,\"25\":0,\"26\":0,\"27\":0,\"28\":0,\"29\":27,\"30\":27,\"31\":0,\"32\":0,\"33\":43,\"34\":43,\"41\":0,\"42\":0,\"43\":0,\"44\":0,\"45\":0,\"46\":0,\"51\":0,\"52\":0,\"53\":0,\"54\":0,\"55\":0,\"56\":0,\"57\":0,\"58\":0,\"92\":12,\"93\":12,\"94\":28,\"301\":5,\"302\":5,\"303\":5,\"304\":5,\"305\":0,\"311\":5,\"312\":5,\"313\":5,\"314\":5,\"315\":5,\"316\":5,\"317\":5,\"318\":5,\"319\":5,\"320\":5,\"321\":5,\"333\":5,\"351\":0,\"352\":0,\"353\":0,\"354\":0,\"355\":0,\"356\":0,\"357\":0,\"358\":0}",
+        "life": 6486000000
+      }
+    ],
+    "engine": {
+      "mode": "original-battle-ai",
+      "rounds": 1,
+      "effects": 3,
+      "buffs": 1,
+      "ticks": 2,
+      "result": 1
+    },
+    "rounds": 0
+  },
+  "error": "page.waitForFunction: Timeout 60000ms exceeded.\n    at C:\\Users\\dongdong\\Documents\\ChatGPT\\安装\\tools\\street-skin-hit-battle-test.mjs:31:13",
+  "diagnostic": {
+    "samples": [],
+    "body": {
+      "installed": true,
+      "framesPresented": 4,
+      "actions": {
+        "shouji": 4
+      },
+      "atlasRequests": 2,
+      "suppressedViewsDetached": 0,
+      "errors": [],
+      "caches": [
+        {
+          "id": "100201",
+          "users": 1,
+          "ready": true
+        }
+      ],
+      "active": [
+        {
+          "model": "hero_skin_002_01_ez",
+          "action": "daiji",
+          "frame": -1,
+          "visible": false,
+          "nativeVisible": false,
+          "ready": true,
+          "onStage": true
+        }
+      ]
+    },
+    "payloadKeys": [
+      "teams",
+      "entityResults",
+      "normalRewards",
+      "extRewards",
+      "result",
+      "battleType",
+      "clientReward",
+      "battleInfo",
+      "offlineBuffs",
+      "offlineBuffsByEntity",
+      "offlineSupportEntities",
+      "offlineBeauty",
+      "offlineCombatEngine"
+    ]
+  },
+  "isolatedSaveRestored": true,
+  "mainSaveUnchanged": true
+}

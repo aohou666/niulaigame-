@@ -1,0 +1,34 @@
+{
+  "pass": false,
+  "scope": "Actual production equip proxy/persisted isolated save, native BattleAI replay and autonomous skin hit animation; no manually triggered DBPlayer hurt or edited battle payload. Main save must stay unchanged.",
+  "equip": {
+    "uuid": "offline-hero-all-2",
+    "dermaCode": 100201,
+    "subType": 2,
+    "skinSubType": 2,
+    "model": "hero_skin_002_01",
+    "calls": 1,
+    "results": 1
+  },
+  "payload": {
+    "allies": [
+      {
+        "entityId": 11100,
+        "code": 41010002,
+        "dermaCode": 100201
+      }
+    ],
+    "engine": {
+      "mode": "original-battle-ai",
+      "rounds": 1,
+      "effects": 3,
+      "buffs": 1,
+      "ticks": 2,
+      "result": 1
+    },
+    "rounds": 0
+  },
+  "error": "page.waitForFunction: Timeout 60000ms exceeded.\n    at C:\\Users\\dongdong\\Documents\\ChatGPT\\安装\\tools\\street-skin-hit-battle-test.mjs:31:13",
+  "isolatedSaveRestored": true,
+  "mainSaveUnchanged": true
+}

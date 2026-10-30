@@ -1,0 +1,12 @@
+{
+  "pass": false,
+  "scope": "Initial candidate native test after idle then direct paused unsupported gongji before next idle tick",
+  "observed": {
+    "model": "hero_skin_002_01",
+    "action": "gongji",
+    "body": false,
+    "native": false
+  },
+  "resolution": "StreetBody.render now clears stale idle hidden flag and immediately shows native for unsupported non-idle actions. Final native test passes six unsupported-action cases. Not a claim of prior real battle disappearance.",
+  "harnessCorrection": "First setup also mistakenly read DBPlayer display.armatureData instead of display.armature.armatureData; test access corrected before functional diagnosis."
+}

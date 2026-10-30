@@ -1,0 +1,41 @@
+{
+  "pass": true,
+  "mode": "missing-armature",
+  "scope": "Browser-only invalid-config fixture; native hit preserved and base2 atlas not poisoned. No source asset/config publication.",
+  "rows": [
+    {
+      "model": "hero_skin_002_01",
+      "body": false,
+      "native": true
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "body": false,
+      "native": true
+    },
+    {
+      "baseHero": 2,
+      "body": true,
+      "native": false
+    }
+  ],
+  "after": {
+    "installed": true,
+    "framesPresented": 1,
+    "actions": {
+      "gongji": 1
+    },
+    "atlasRequests": 1,
+    "suppressedViewsDetached": 0,
+    "errors": [
+      {
+        "skin": "100201",
+        "error": "invalid independent body identity or armature"
+      }
+    ],
+    "caches": [],
+    "active": []
+  },
+  "errors": [],
+  "failures": []
+}

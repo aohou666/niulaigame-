@@ -53,6 +53,8 @@ def main():
  report['independentSkinStaticBindings']={'skins':skinStatic,'note':'Independent static art is partial progress only; this does not establish animation, effects, equip or complete-skin approval.'}
  skinIdles=loadjs(GAME/'character-idle-data.js').get('skins',{})
  report['independentSkinIdleBindings']={'skins':{key:{'heroId':cfg['heroId'],'frameCount':cfg['frameCount'],'loopSeconds':cfg['frameCount']/cfg['fps'],'review':cfg.get('review'),'completeSkin':False} for key,cfg in skinIdles.items()},'note':'Idle-only evidence; other body actions, effects, real equip and battle remain separate requirements.'}
+ skinBodies=loadjs(GAME/'street-body-data.js').get('skins',{})
+ report['independentSkinBodyBindings']={'skins':{key:{'heroId':cfg['heroId'],'armature':cfg['armature'],'frames':len(cfg['frames']),'actions':list(cfg['actions']),'review':cfg.get('review'),'completeSkin':False} for key,cfg in skinBodies.items()},'note':'Individual native action replacement only; missing other body states, VFX, equip/battle proof must not count as a complete independent skin.'}
  report['generatedRuntimeGitTracking']=verify_runtime_tracking()
  issues=OUT/'open-issues.json';report['knownOpenIssues']=[r for r in json.loads(issues.read_text('utf8')) if r.get('status')!='resolved'] if issues.exists() else []
  folder=OUT/'versions'/a.version;folder.mkdir(parents=True,exist_ok=True)

@@ -1,0 +1,16 @@
+import fs from 'node:fs/promises';import vm from 'node:vm';import assert from 'node:assert/strict';
+const context={window:{}};vm.runInNewContext(await fs.readFile('local_game/offline-battle-attributes.js','utf8'),context);
+const api=context.window.OfflineBattleAttributes;
+const player={entityId:11100,code:41010002,attr:JSON.stringify({'1':745200000,'2':6486000000,'3':614100000,'4':172500000,'5':4,'11':78,'12':455,'14':63,'15':43,'17':43,'301':5}),ext:JSON.stringify({offlineAdvancedAttrUnit:'percent-points',uuid:'test-player'})};
+const enemy={entityId:21100,code:41000001,attr:JSON.stringify({'1':1000,'2':10000,'14':0,'15':.12,'12':1.5}),ext:'{}'};
+const input={teams:[{entities:[player]},{entities:[enemy]}]},original=JSON.stringify(input),result=api.prepare(input),converted=JSON.parse(result.input.teams[0].entities[0].attr);
+assert.equal(JSON.stringify(input),original,'AI conversion must never mutate saved/display entity data');
+assert.equal(converted['1'],745200000);assert.equal(converted['2'],6486000000);assert.equal(converted['3'],614100000);assert.equal(converted['4'],172500000);assert.equal(converted['5'],4);
+assert.equal(converted['11'],.78);assert.equal(converted['12'],4.55);assert.equal(converted['14'],.63);assert.equal(converted['15'],.43);assert.equal(converted['301'],.05);
+assert.equal(result.input.teams[1].entities[0].attr,enemy.attr,'Unmarked native config rates must remain untouched');
+assert.equal(JSON.stringify(api.prepare(result.input).input),JSON.stringify(result.input),'Unit marker prevents double conversion');
+const nativeHitChance=Math.max(0,1+JSON.parse(enemy.attr)['14']-converted['15']);assert(Math.abs(nativeHitChance-.57)<1e-9);
+assert.throws(()=>api.prepare({teams:[{entities:[{...player,attr:'{"15":"bad"}'}]}]}),/Invalid offline rate/);
+await fs.mkdir('art-migration/versions/0.88.0',{recursive:true});
+await fs.writeFile('art-migration/versions/0.88.0/battle-attributes-units.json',JSON.stringify({pass:true,scope:'Only explicitly marked offline percentage-point UI attributes become ratios in a deep AI-input copy; flat stats, unmarked native enemy rates, and original entities preserved. Native local isHit formula is max(0,1+Hit-Miss).',originalMiss:43,nativeMiss:converted['15'],enemyHit:0,nativeHitChance,sourceUnchanged:JSON.stringify(input)===original,doubleConversionPrevented:true},null,2));
+console.log(JSON.stringify({pass:true,nativeMiss:converted['15'],nativeHitChance}));

@@ -14,11 +14,26 @@ def verify():
   except Exception as e:errors.append({'resource':r['originalKey'],'error':str(e)})
  body=loadjs(GAME/'street-body-data.js') if (GAME/'street-body-data.js').exists() else {'characters':[]}
  auditPath=ROOT/'art-migration/native-action-events.json';nativeAudit=json.loads(auditPath.read_text('utf8')) if auditPath.exists() else None;nativeRows={(r['model'],r['action']):r for r in nativeAudit['records']} if nativeAudit else {};nativeChecks=0
- for cfg in body['characters']:
+ skinBodies=body.get('skins',{})
+ for key,cfg in skinBodies.items():
+  if str(cfg.get('skinCode'))!=key or cfg.get('id')!=cfg.get('skinCode') or not cfg.get('armature'):
+   errors.append({'skin':key,'error':'independent body requires its own id/skinCode and explicit armature'})
+ for cfg in body['characters']+list(skinBodies.values()):
   try:
    if cfg.get('atlasSha256'):assert hashlib.sha256((GAME/cfg['atlas']).read_bytes()).hexdigest()==cfg['atlasSha256'],'atlas digest mismatch'
    if cfg.get('alphaReviewSha256'):
     alphaFile=ROOT/cfg['source']/'alpha-qa.json';assert hashlib.sha256(alphaFile.read_bytes()).hexdigest()==cfg['alphaReviewSha256'],'alpha review digest mismatch';assert json.loads(alphaFile.read_text('utf8'))['manualReview']=='approved','alpha sequence not manually approved'
+    if cfg.get('skinCode'):
+     alphaReview=json.loads(alphaFile.read_text('utf8'));assert alphaReview['sourceSignature']==cfg['sourceSignature'] and alphaReview['atlasSha256']==cfg['atlasSha256'],'independent source/atlas provenance differs'
+     assert len(alphaReview['sourceFrames'])==len(cfg['frames'])==len({r['sha256'] for r in alphaReview['sourceFrames']}),'independent drawn frame count differs'
+     for row in alphaReview['sourceFrames']:assert hashlib.sha256((ROOT/row['path']).read_bytes()).hexdigest()==row['sha256'],'independent source frame changed'
+   if cfg.get('nativeRuntimeAuditSha256'):
+    proofFile=ROOT/cfg['nativeRuntimeAuditPath'];assert hashlib.sha256(proofFile.read_bytes()).hexdigest()==cfg['nativeRuntimeAuditSha256'],'native runtime proof changed'
+    proof=json.loads(proofFile.read_text('utf8'));assert proof['pass'] and proof['manualVideoReview']=='approved-continuous-single-hit-and-recovery','independent native animation not approved'
+   if cfg.get('battleRuntimeAuditSha256'):
+    proofFile=ROOT/cfg['battleRuntimeAuditPath'];assert hashlib.sha256(proofFile.read_bytes()).hexdigest()==cfg['battleRuntimeAuditSha256'],'independent battle proof changed'
+    proof=json.loads(proofFile.read_text('utf8'));assert proof['pass'] and proof['mainSaveUnchanged'] and proof['isolatedSaveRestored'],'isolated battle proof incomplete'
+    assert proof['equip']['dermaCode']==cfg['skinCode'] and any(e['dermaCode']==cfg['skinCode'] for e in proof['payload']['allies']),'equipped skin not carried into battle'
    with Image.open(GAME/cfg['atlas']) as im:
     assert im.mode=='RGBA','atlas must have alpha';hashes=set()
     for f in cfg['frames']:
@@ -36,15 +51,16 @@ def verify():
     if seq.get('nativeImpactFrame') is not None:assert seq['frameMap'][seq['nativeImpactFrame']]==seq['sourceImpactFrame'],'impact mapping mismatch'
     for mark in seq.get('eventAnchors',[]):assert seq['frameMap'][mark['nativeFrame']]==mark['sourceFrame'],'multi-event mapping mismatch'
    if cfg.get('nativeEventAuditSha256'):
-    assert nativeAudit['complete'] and hashlib.sha256(auditPath.read_bytes()).hexdigest()==cfg['nativeEventAuditSha256'],'native event audit provenance mismatch'
+    cfgAuditPath=ROOT/cfg.get('nativeEventAuditPath','art-migration/native-action-events.json');cfgAudit=json.loads(cfgAuditPath.read_text('utf8'));cfgNativeRows={(r['model'],r['action']):r for r in cfgAudit['records']}
+    assert cfgAudit['complete'] and hashlib.sha256(cfgAuditPath.read_bytes()).hexdigest()==cfg['nativeEventAuditSha256'],'native event audit provenance mismatch'
     supplementalRows={}
     if cfg.get('supplementalNativeActionAuditPath'):
      supplementalPath=ROOT/cfg['supplementalNativeActionAuditPath'];assert hashlib.sha256(supplementalPath.read_bytes()).hexdigest()==cfg['supplementalNativeActionAuditSha256'],'supplemental audit provenance mismatch';supplementalAudit=json.loads(supplementalPath.read_text('utf8'));assert supplementalAudit['complete'];supplementalRows={(r['model'],r['action']):r for r in supplementalAudit['records']}
     for model in cfg['models']:
      for action,base in cfg['actions'].items():
-      seq=cfg.get('modelActionOverrides',{}).get(model,{}).get(action,base);native=(supplementalRows if (model,action) in supplementalRows else nativeRows)[(model,action)];assert len(seq['frameMap'])==native['durationFrames'] and abs(seq['fps']-native['fps'])<.0001,'native clock differs'
+      seq=cfg.get('modelActionOverrides',{}).get(model,{}).get(action,base);native=(supplementalRows if (model,action) in supplementalRows else cfgNativeRows)[(model,action)];assert len(seq['frameMap'])==native['durationFrames'] and abs(seq['fps']-native['fps'])<.0001,'native clock differs'
       assert [(e['name'],e['frame0']) for e in seq.get('nativeEvents',[])]==[(e['name'],e['frame0']) for e in native['events'] if e['name'] in ['pia','zd']],'native event metadata differs';nativeChecks+=1
-   characters.append({'hero':cfg['id'],'frames':len(cfg['frames']),'distinctFrames':len(hashes),'actions':list(cfg['actions']),'quarantinedActions':cfg.get('qualityQuarantineActions',[]),'temporalQuality':cfg.get('temporalQuality','not-revalidated'),'supplemental':cfg.get('supplemental',False)})
+   characters.append({'hero':cfg['id'],'skinCode':cfg.get('skinCode'),'frames':len(cfg['frames']),'distinctFrames':len(hashes),'actions':list(cfg['actions']),'quarantinedActions':cfg.get('qualityQuarantineActions',[]),'temporalQuality':cfg.get('temporalQuality','not-revalidated'),'supplemental':cfg.get('supplemental',False)})
   except Exception as e:errors.append({'hero':cfg['id'],'error':str(e)})
  effects=[];effectBindings=set()
  effectFile=GAME/'street-effects-data.js'

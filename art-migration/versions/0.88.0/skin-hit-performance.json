@@ -1,0 +1,69 @@
+{
+  "pass": true,
+  "scope": "15s headless Chrome on this Windows PC, two genuine ordinary/EZ native skin hit loops with shared atlas. Warm rendering only, not full battle AI, APK/mobile or universal no-stutter proof.",
+  "sampleMs": 15000,
+  "frames": 899,
+  "p50": 16.699999999999818,
+  "p95": 16.80000000000109,
+  "over50ms": 0,
+  "over100ms": 0,
+  "longTasks": [],
+  "heapUsedBytes": 172958590,
+  "distinctFrames": [
+    21,
+    21
+  ],
+  "active": {
+    "installed": true,
+    "framesPresented": 900,
+    "actions": {
+      "shouji": 900
+    },
+    "atlasRequests": 1,
+    "suppressedViewsDetached": 0,
+    "errors": [],
+    "caches": [
+      {
+        "id": "100201",
+        "users": 2,
+        "ready": true
+      }
+    ],
+    "active": [
+      {
+        "model": "hero_skin_002_01",
+        "action": "shouji",
+        "frame": 8,
+        "nativeFrame": 8,
+        "visible": true,
+        "nativeVisible": false,
+        "ready": true,
+        "onStage": true
+      },
+      {
+        "model": "hero_skin_002_01_ez",
+        "action": "shouji",
+        "frame": 8,
+        "nativeFrame": 8,
+        "visible": true,
+        "nativeVisible": false,
+        "ready": true,
+        "onStage": true
+      }
+    ]
+  },
+  "after": {
+    "installed": true,
+    "framesPresented": 900,
+    "actions": {
+      "shouji": 900
+    },
+    "atlasRequests": 1,
+    "suppressedViewsDetached": 0,
+    "errors": [],
+    "caches": [],
+    "active": []
+  },
+  "errors": [],
+  "failures": []
+}

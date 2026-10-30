@@ -2,11 +2,11 @@
 
 ## 授权、范围与真实完成
 用户授权自主继续，不重复询问。85目标角色、125独立额外皮肤、全部UI/地图/建筑/文字/道具/特效，2.5D半写实半卡通离谱街区风；官方ImageGen/本地Qwen2.1及MiniMax H3。原Oct29十小时窗口已结束，Oct30用户明确继续。不得以姿势/共享人物图/原作回退冒充完整新动作/独立皮肤，不宣称零bug/全设备不卡。每实质版本全台账+两套85详情复查，每三版推GitHub核对完整SHA。无关dirty不清理、禁止git add .。
-完整角色0/85；完整独立皮肤0/125。连续攻技批准10/85：2、3、46、52、63、73、79、80、84、85；76动作映射、34隔离。2号独立跑动24源图映射原生10帧，受击仍缺，自主战斗跑动触发未证明。100201有4独立静态绑定+124源待机/7WebP，原生198@30的6.6秒保持；缺gongji/jineng/shouji/paobu、effect_1/2/3、真实装备战斗验证。其余资产大量未完成。
+完整角色0/85；完整独立皮肤0/125。连续攻技批准10/85：2、3、46、52、63、73、79、80、84、85；76动作映射、34隔离。2号独立跑动24源图映射原生10帧，受击仍缺，自主战斗跑动触发未证明。100201有4独立静态绑定+124源待机/7WebP，原生198@30的6.6秒保持；现已新增21@30受击并有隔离真实装备/战斗受击证明；仍缺gongji/jineng/paobu、effect_1/2/3及全皮肤验证。其余资产大量未完成。
 
 ## 仓库与交付
 cwd C:/Users/dongdong/Documents/ChatGPT/安装，branch codex/street-reskin-20261029，delivery=https://github.com/aohou666/oldniulai.git，保留origin。
-最新本地v0.87，6f9ce1e4（后续文档若amend以git rev-parse为准）。delivery/main仍v0.86完整75849ddce72158771c0fdf4e87853a3d09683f90，push-086.json及ls-remote已核。下一推送v89（87/88/89），push delivery HEAD:main后ls-remote核完整SHA。v87 HEAD1911依赖通过，原resource包仍独立Release依赖。
+最新本地v0.88（本次提交后以git rev-parse为准）；v87为4463ab9c。delivery/main仍v0.86完整75849ddce72158771c0fdf4e87853a3d09683f90，push-086.json及ls-remote已核。下一推送v89（87/88/89），push delivery HEAD:main后ls-remote核完整SHA。v87 HEAD1911依赖通过，原resource包仍独立Release依赖。
 保留无关Android build.gradle/MainActivity、README/offline-launcher、disabled技能修复、大量旧collector job/qa等dirty。原始拒收视频帧大部分仅本地保留，Git保存工作流/QA/关键接触图/参考，拒收图不是运行依赖。
 
 ## v87新增地图与限制
@@ -14,10 +14,8 @@ bycc_img_ditu_png -> assets/street/environments/community-courtyard.png，960x89
 额外1098高拉伸导致装饰拉长，拒收该扩展布局，CITY-MAP-087-VERTICAL-STRETCH open。生产SlgCityView所读代码不设置img_bg宽高，目前仅批准原生固定960x898；不要虚报纵向可任意伸长。若需要变高，应拆固定边饰+可重复空场，不能伸长树和路锥。
 v87两套85/1876动作/14原特效/125属性4卡台面/6副骨架idle缓存复用回收/1911依赖及全台账通过，证据art-migration/versions/0.87.0。
 
-## 当前活动生成：只collect，勿重复提交
-已终态：skin100201-shouji-minimax-v3，prompt25e893c9-eb44-464f-9122-d819d7ed86fd，queue18，已collect39帧；全39+16放大已看，飞出额外球/核桃且中间长停姿，拒收。实际queue已空，无活动Comfy任务。不要沿用之前运行状态。实际Comfy /queue /history权威，旧generation-worker.json active过时。
-v3用fl2va模型首末同独立idle+第17帧新受击guide，39源帧短片1.625秒；原生shouji21帧@30=0.7秒、无事件。中间guide仅生成条件不是完整动作。工具street_skin_action_candidate.py已支持shouji39源/原生21审计。collect同目录→street_body_review.py→全39+16放大逐看→合格完整受击回正后才alpha、21帧映射、普通/EZ原生与真实战斗受击验证。自动时序筛选pass不等于人工批准。
-原生受击参考：outputs/street-reskin/skin100201-native-shouji-v2，全部21帧已看、全帧边距>15px；art-migration/references/skin100201-shouji-native-v2有39@24完整重采样视频/原图SHA/已看接触图。暂停帧不证明实时采样。旧v1截屏frame10球裁边已拒收，只删除实际pending queue16，保留quality-cancelled和失败证据。新官方受击guide原图/768透明适配已看批准设计，右核桃/左两球/独轮车/青紫服保留。
+## 当前生成与最新身体动作
+实际Comfy队列空，MiniMax受击v3已collect39帧拒收（多出飞行道具/停姿），不是活动任务。100201官方21帧受击已接入，源generation/skin100201-shouji-strip-0-official-v2、strip-1/2-official-v3；不可共享给基础2或其他皮肤。candidate/alpha-qa/assembly在generation/skin100201-shouji-official21-v1，普通/EZ原生42映射/双21帧实播、实际装备BattleAI受击及挂机穿脱证据在versions/0.88.0。新图集3.6MB解码共享1份。完整皮肤仍0/125，完整基础角色仍0/85。
 
 ## 已拒收，勿重收冒充合格
 100201普攻v1/v2及技能v1全部124帧+16放大已看，停姿/弱动作/双抛等拒收，无接入。
@@ -39,7 +37,14 @@ node tools/street-body-roster-test.mjs 2 3 46 52 63 73 79 80 84 85 --version=版
 新图精确stage后street_art_verify.py、street_runtime_tracking.py --report ...、street_review.py --version ...；提交后tracking --tree HEAD。查看JSON实际范围，勿仅看最后PowerShell exit0。资源计数和台账并非完整美术验收。
 保持对话简洁，重要完成/失败通知；历史按需从WORKLOG和git旧CURRENT查，不重复载入巨量minified JS或全量脏文件名。不能用删除失败审计制造完成。
 
-## v88接续优先：官方21帧受击源已制作，尚未接入
-MiniMax受击v3已终态拒收、实际Comfy队列空；不要再称运行或重提交。改用官方逐帧图像源，全21帧是独立绘制的实际in-between，不是插值/复制关键姿势。三条7帧已技术拆分并查看全部21浅/深底接触图，道具各帧右1核桃/左2球保留；需在原生0.7秒回放中继续验证接缝和idle切换，尚不计完整动画。
-有效源目录generation/skin100201-shouji-strip-0-official-v2（0..6）、strip-1-official-v3（7..13）、strip-2-official-v3（14..20），均有official-source.png、frame-NN.png、strip-qa.json。strip0初版外框裁边拒收；strip1/2首版相邻身体重叠已重排留白。工具street_sprite_strip_prepare.py只拆分7独立alpha轮廓，拒绝粘连/贴边/重复；auto-columns各crop可共享空白gap、不共享人物像素，未降低6px边距门槛。21有效源各strip按共同缩放对齐轮胎脚底[384,680]，不逐姿势拉身高，不生成任何插值帧。校准和审查art-migration/../outputs/street-reskin/skin100201-shouji-official21-review/assembly-plan.json（实际从根outputs路径读取），all21-light/dark-calibrated.jpg已看；shouji-wheel-size-review.jpg记录初始尺寸差。
-下一实质v88：先组装候选atlas+原生21帧@30一一映射，再给StreetBodyData单独skins注册及主骨架守卫；禁止旧street_body_promote.py覆盖基础2。当前street-body.js只支持characters按model绑定，不能直接偷塞id2，且新独立body必须不绑定effect_1/2/3。完整动作还须ordinary/EZ、销毁回收/原生事件不变、真实隔离战斗受击触发和全量两套85/台账。未完成攻技跑动/3特效依然未完成。此源准备不是新游戏版本，不新增完成计数；v87地图已提交，下一三版推v89。
+## v0.88：独立受击21帧接入与真实装备战斗修复
+100201新增shouji：官方21个独立绘制源帧逐帧映射原生21@30=0.7秒，图集1162x780、RGBA解码3625440字节；新StreetBodyData.skins独立注册，不覆盖基础2。明确主armature hero_skin_002_01，只作用普通/EZ主骨架，effect_1/2/3不绑定人物body/idle。错误id/缺armature/重复模型骨架配置保留原生，不污染base2缓存，三负面fixture通过。
+原生42项暂停帧映射、普通/EZ实播均观察21不同帧、约0.7秒、原生完成回调1次/无 authored frame events，全部21×2接触图及放大峰值已看，连续一次侧倒回正和道具数正确；切回独立idle、未替换攻技跑步原生回退、6特效骨架、复用/销毁0body缓存通过。首次暂停切动作测试发现旧idle.hidden保留会让未映射gongji立即采样时native也隐藏；render显式清理未映射非idle状态，已修并保留before-fix证据。
+真实HeroDermaPutOn代理/服务器存档保存已装备100201后，demo构造实体仍dermaCode0，before报告复现。configureOriginalBattleEntity现在带入有效同subType皮肤；applyLocalHangUpEntity也从硬编码0修复。实际主入口打开HangUpSystemMed.MAIN，原生挂机载荷携带100201；真实PutDown后reload载荷归0，通过且隔离存档恢复/主存档不变。
+最初数次真实战斗受击测试超时（before/after/slow-fixture/native-stage10均保留）；原战报113个指向该角色的结果没有负伤害，多次敌方攻击均标MISS。local fillLocalAdvancedAttrs以整数百分数生成Miss43，原生BattleAIAttrData直接用value，isHit公式max(0,1+Hit-Miss)，误读为43而非0.43。新增offline-battle-attributes.js只将明确标记的离线英雄/支援UI百分数在深拷贝AI输入中转比率，保留存档/展示实体/Atk Life Defence Speed Anger及未标记原生敌方属性；marker阻止重复转换。单元和实际AI审计43→0.43，真实负伤害出现。八敌/单敌两真实BattleAI战斗均触发新受击（分别10/9不同源帧在战斗打断前观察到，非声称实际每次战斗都完整21帧；完整21@0.7秒另有原生播放器实播证明），截图已看，原作未换特效仍可遮挡人物。不人工trigger命中、不改战报。
+本机15秒普通/EZ双循环图集共享1份/users2，均21不同帧，P95约16.8ms，>100ms帧0；销毁0body缓存。只本机Chrome预热播放，不是APK/手机/所有战斗无卡顿保证。
+两套85最终复查均85/85（当前83新base+2原作未换独立皮肤，基础85新idle），1876原有动作/14特效/125属性4卡台面/6副骨架/100202双9秒原生fit与独立切换/1913依赖全台账通过，85静态肖像4页已实际看并保存SHA。没有绑定错/缺原包文件。完整角色0/85、完整独立皮肤0/125不变；100201只有4独立静态、连续idle、这1个受击动作，攻技跑步和3特效仍缺。历史DETAIL-NULL/RESOURCE-LOAD-015/TEMPORAL、地图纵向拉伸issue不据此关闭。
+Comfy实际队列空，无活动生成。下一实质版本v89，届时推87/88/89并核远端；远端仍v86 SHA75849ddce72158771c0fdf4e87853a3d09683f90。拒收MiniMax片段保留，不再称运行。
+
+## 下一步v89（做真实美术进展，不只扩基础设施）
+优先推进基础2仍缺的受击（与100201完全不同皮肤源，禁止共用），或100201缺失攻技/跑步和3独立特效。可先审计原生DragonBones slot纹理及完整动画，研究保留完整原生骨骼运动、逐slot替换新设计的方式；所有新组件必须真实生成/审批，一一映射，完整原生时钟和事件保持。不要以单个好姿势或坏MiniMax片段凑完成；若动画由骨骼/代码驱动必须明示，不冒充MiniMax整片批准。v89完成全量复查后推87/88/89并核GitHub完整SHA。
