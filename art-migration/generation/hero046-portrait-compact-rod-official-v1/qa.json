@@ -1,0 +1,33 @@
+{
+  "heroId": 46,
+  "sourcePath": "art-migration/generation/hero046-portrait-compact-rod-official-v1/official-source.png",
+  "sourceSha256": "a3f0cbd0cb341077fbd6e1e268461de6ed447379f5e5bad4f97917260dde80a8",
+  "technicalCrop": [
+    89,
+    33,
+    906,
+    1520
+  ],
+  "technicalAlphaCleanup": "Only alpha<9 removed; no object/pose painting",
+  "outputs": [
+    {
+      "path": "local_game/assets/street/characters/046/portrait-v093.png",
+      "size": [
+        422,
+        768
+      ],
+      "sha256": "f044afcc0a720f7f08ee78afd6307e63020dad812d59fe59030a6f7fd98f0a81"
+    },
+    {
+      "path": "local_game/assets/street/characters/046/bind_wujiang_46_v093.png",
+      "size": [
+        132,
+        257
+      ],
+      "sha256": "7a374e4dbd562f401ac1ed6ddcaa2854e30e3b58cd472667d65bd642518eaf7d"
+    }
+  ],
+  "manualReview": "approved-static-portrait-and-props",
+  "scope": "Base46 static portrait and native pictureDraw only; unchanged avatars/half-body/extra-skin bindings. Not complete character.",
+  "manualNotes": "Light/dark native132x257 before/after inspected: full body/feet/rod/line/lure/bucket retained, new body more than twice previous visible height. Native config/image runtime check pending separately."
+}

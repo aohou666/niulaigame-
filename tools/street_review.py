@@ -14,6 +14,10 @@ def main():
    target=GAME/binding['url'];checked+=int(hid in art);supplementalChecked+=int(hid in supplemental)
    if not target.exists():errors.append({'id':hid,'key':key,'error':'missing'});continue
    if binding.get('targetSha256') and hashlib.sha256(target.read_bytes()).hexdigest()!=binding['targetSha256']:errors.append({'id':hid,'key':key,'error':'target digest mismatch'})
+   if binding.get('sourceSha256') and hashlib.sha256((ROOT/binding['source']).read_bytes()).hexdigest()!=binding['sourceSha256']:errors.append({'id':hid,'key':key,'error':'source digest mismatch'})
+   if binding.get('nativeRuntimeAuditPath'):
+    proofFile=ROOT/binding['nativeRuntimeAuditPath'];proof=json.loads(proofFile.read_text('utf8'))
+    if hashlib.sha256(proofFile.read_bytes()).hexdigest()!=binding['nativeRuntimeAuditSha256'] or not proof['pass'] or proof['key']!=binding['name'] or proof['url']!=binding['url']:errors.append({'id':hid,'key':key,'error':'native static binding proof mismatch'})
    with Image.open(target) as im:
     if list(im.size)!=binding['size']:errors.append({'id':hid,'key':key,'error':'wrong dimensions'})
     if 'A' not in im.getbands():errors.append({'id':hid,'key':key,'error':'missing alpha'})

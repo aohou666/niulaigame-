@@ -5650,7 +5650,7 @@
   "46": {
     "id": 46,
     "name": "钓鱼佬",
-    "portrait": "assets/street/characters/046/portrait.png",
+    "portrait": "assets/street/characters/046/portrait-v093.png",
     "avatar": "assets/street/characters/046/avatar.png",
     "upperBodyCrop": [
       0,
@@ -5691,13 +5691,19 @@
       },
       "wujiang_46_png": {
         "name": "street_46_wujiang_46_png",
-        "url": "assets/street/characters/046/bind_wujiang_46_png.png",
+        "url": "assets/street/characters/046/bind_wujiang_46_v093.png",
         "size": [
           132,
           257
         ],
         "field": "pictureDraw",
-        "originalExists": true
+        "originalExists": true,
+        "targetSha256": "7a374e4dbd562f401ac1ed6ddcaa2854e30e3b58cd472667d65bd642518eaf7d",
+        "source": "art-migration/generation/hero046-portrait-compact-rod-official-v1/official-source.png",
+        "sourceSha256": "a3f0cbd0cb341077fbd6e1e268461de6ed447379f5e5bad4f97917260dde80a8",
+        "review": "approved-native-pictureDraw-fullbody-and-props",
+        "nativeRuntimeAuditPath": "art-migration/versions/0.93.0/hero46-portrait-native.json",
+        "nativeRuntimeAuditSha256": "776b7338cd17241679a23fca96bbfddd8b0cd4a666e827bbeeb90127dbf24fcb"
       },
       "head1_hero_046_02_png": {
         "name": "street_46_head1_hero_046_02_png",
@@ -5783,7 +5789,14 @@
     "source": "assets/character_idle/diaoyulao_钓鱼佬/frame_00001.png",
     "sourceSha256": "f6ef5299b2e3a41fcc00797a8d014f18e021e3ab15a954c23401b0039c2611d8",
     "origin": "existing-user-idle-frame",
-    "review": "pending"
+    "review": "pending",
+    "portraitProvenance": {
+      "source": "art-migration/generation/hero046-portrait-compact-rod-official-v1/official-source.png",
+      "sourceSha256": "a3f0cbd0cb341077fbd6e1e268461de6ed447379f5e5bad4f97917260dde80a8",
+      "qaPath": "art-migration/generation/hero046-portrait-compact-rod-official-v1/qa.json",
+      "qaSha256": "1929571626accbcf3f75dc8acf09b7a83316d363bdbdae86f0d439e354489603",
+      "scope": "Base46 portrait and pictureDraw; not independent extra skins"
+    }
   },
   "47": {
     "id": 47,
