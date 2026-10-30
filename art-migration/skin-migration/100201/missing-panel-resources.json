@@ -64,10 +64,12 @@
     },
     {
       "key": "common_icon_peidai",
-      "status": "pending",
+      "status": "repaired-equip-icon-only",
       "observedIn": "HeroDermaPanel normal AppFacade open",
       "originalManifestBindingFound": false,
-      "kind": "missing-ui-resource-key"
+      "kind": "missing-ui-resource-key",
+      "replacementVersion": "0.76.0",
+      "evidence": "art-migration/versions/0.76.0/equip-button-native.json"
     },
     {
       "key": "common_img_dikuang03_png",

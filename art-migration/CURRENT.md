@@ -86,3 +86,6 @@ v0.69 `character-idle.js`新增可选data.skins和按模型/拥有者选择独�
 修复HeroDermaItem横图拉伸：原生类为私有未导出，首次game.HeroDermaItem补丁无效、比例测试失败；现从this.list_derma.itemRenderer取得实际类，4张原生135x82纹理按159x96.58显示并居中，125属性检查通过。全85/10角色回归运行中，未提交v75。官方佩戴图标工具cell228正在生成，完成必须保存到项目，不重复提交。
 
 v0.75全85/1876动作/1902依赖/台账复查全部通过，待提交。官方佩戴图标cell228已完成保存generation/skin-panel-equip-official-v1；下一步验64x64及实际ButtonSkinIcon2，接入缺失common_icon_peidai。保留所有其他缺口，下一推送v0.77。
+
+## v0.76优先接续
+佩戴新图标正式接入，原生按钮检查/截图通过；正常面板剩8键/16异常。全85、1876检查、1903依赖/台账通过。下一项图鉴图标generation/skin-panel-catalog-official-v1已保存，需看64和原生ButtonSkinIcon2再绑定common_icon_tujian；注意原图非正方形已等比缩放，勿强拉。没有活动生成任务。下一推送v0.77（75/76/77）。
