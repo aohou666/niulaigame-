@@ -96,9 +96,20 @@
   },
   {
     "id": "SKIN-NATIVE-083-PREVIEW-BOUNDS",
-    "status": "investigating",
+    "status": "resolved",
     "summary": "Correct native100202 fallback is oversized and clipped above the skin panel. Independent identity restored, native preview fitting still needs work.",
     "evidence": "art-migration/versions/0.83.0/unmapped100202-native.png",
-    "next": "Fit original native model bounds into preview region without distorting/replacing art or affecting approved independent idle placement."
+    "next": "Fit original native model bounds into preview region without distorting/replacing art or affecting approved independent idle placement.",
+    "resolutionVersion": "0.84.0",
+    "resolutionEvidence": "art-migration/versions/0.84.0/independent-skin-fidelity.json",
+    "resolution": "Native preview uniformly fitted from cached unscaled bounds to stage anchor,20percent safety margin. Ordinary/EZ100202 two9-second loops each stayed within420x270 with stable factor; transforms restored on approved idle/reset/init/destroy.",
+    "limits": "Validated100202 ordinary/EZ and10202 sample; does not prove all native skins fit every pose or full reskin."
+  },
+  {
+    "id": "SKIN-FX-084-UNUSED-IDLE-CACHE",
+    "status": "investigating",
+    "summary": "Explicit effect_1/2/3 armatures ofhero_skin_002_01 attach an unnecessary100201 idle state/cache, while native effect remains visible and idle bitmap hidden.",
+    "evidence": "art-migration/versions/0.84.0/effect-armature-state-diagnostic.json",
+    "next": "Avoid body-idle binding for explicit effect armatures; preserve original effects and audit references/cleanup. No claim of current visual replacement bug."
   }
 ]

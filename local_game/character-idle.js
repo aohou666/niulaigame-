@@ -147,6 +147,29 @@
         var d=view.data||{},code=Number(d.code||(d.info&&d.info.code)||(d.playerInfo&&d.playerInfo.firstCode));
         var row=code&&global.config&&global.config.HeroLO.Get(code);return row?Number(row.subType):0;
     }
+    function restoreNativePreview(player){
+        var fit=player&&player._characterIdleNativePreviewFit;
+        if(!fit)return;
+        player.x=fit.original.x;player.y=fit.original.y;
+        player.scaleX=fit.original.sx;player.scaleY=fit.original.sy;
+        player._characterIdleNativePreviewFit=null;
+    }
+    function fitNativePreview(player,view,parent){
+        if(!player||!player.isReady||!player._armature||!parent||typeof parent._characterIdleFootY!=='number')return;
+        var fit=player._characterIdleNativePreviewFit;
+        if(!fit){
+            var box=player.getBounds();if(!box||box.width<=0||box.height<=0)return;
+            fit=player._characterIdleNativePreviewFit={model:player._dbName,bounds:{x:box.x,y:box.y,width:box.width,height:box.height},original:{x:player.x,y:player.y,sx:player.scaleX,sy:player.scaleY},padding:1.2};
+        }
+        var origin=view.localToGlobal(0,0),ux=view.localToGlobal(1,0),uy=view.localToGlobal(0,1);
+        var gx=Math.max(.01,Math.hypot(ux.x-origin.x,ux.y-origin.y)),gy=Math.max(.01,Math.hypot(uy.x-origin.x,uy.y-origin.y));
+        var b=fit.bounds,o=fit.original,factor=Math.min(420/(b.width*Math.abs(o.sx)*gx*fit.padding),270/(b.height*Math.abs(o.sy)*gy*fit.padding));
+        var world=parent.localToGlobal(typeof parent._characterIdleFootX==='number'?parent._characterIdleFootX:parent.width/2,parent._characterIdleFootY),target=view.globalToLocal(world.x,world.y);
+        player.scaleX=o.sx*factor;player.scaleY=o.sy*factor;
+        player.x=target.x-(b.x+b.width/2)*player.scaleX;
+        player.y=target.y-(b.y+b.height)*player.scaleY;
+        fit.factor=factor;fit.surface={x:world.x,y:world.y};
+    }
     function bindView(view,id){
         if(!view)return;view._characterIdleHeroId=Number(id);
         view._characterIdleLayout={view:view,width:420,height:300};
@@ -159,6 +182,7 @@
             if(selectedSkin!=null)hero=mappedSkin===Number(selectedSkin)?mappedSkin:0;
             else hero=isUnmappedIndependentSkin(model,hero)?0:mappedSkin||hero;
             if(config(hero)&&profile(view)!=='battle'){
+                restoreNativePreview(nativePlayer);
                 if(nativePlayer){detach(nativePlayer);nativePlayer._characterIdleSuppressNative=true;if(nativePlayer._armature)nativePlayer._armature.visible=false;}
                 p=view._characterIdleStandIn;
                 if(!p){p=new egret.DisplayObjectContainer();p.name='canonicalIdleRenderer';p.action='daiji';view._characterIdleStandIn=p;view.addChild(p);}
@@ -166,6 +190,8 @@
                 if(view._characterIdleStandIn){detach(view._characterIdleStandIn);if(view._characterIdleStandIn.parent)view._characterIdleStandIn.parent.removeChild(view._characterIdleStandIn);view._characterIdleStandIn=null;}
                 if(nativePlayer)detach(nativePlayer);
                 if(nativePlayer){nativePlayer._characterIdleSuppressNative=false;if(nativePlayer._armature)nativePlayer._armature.visible=true;}
+                if(selectedSkin!=null)fitNativePreview(nativePlayer,view,view.parent);
+                else restoreNativePreview(nativePlayer);
             }
             if(!p)return;
             p._characterIdleHeroId=hero;
@@ -187,14 +213,14 @@
             (cfg.models||[]).forEach(function(name){var key=String(name).replace(/_ez$/,'');skinModelIds[key]=skinModelIds[key]===undefined?Number(id):(skinModelIds[key]===Number(id)?Number(id):0);});
         });
         var proto=DBPlayer.prototype,init=proto.init,destroy=proto.destroy,trigger=proto.trigger,ready=proto.readyToPlay;
-        proto.init=function(name){audit.modelRequests[name]=(audit.modelRequests[name]||0)+1;var r=init.apply(this,arguments),key=String(name).replace(/_ez$/,''),id=modelIds[key],variant=/^hero_(\d+)_\d+$/.exec(key);if(variant&&(config(Number(variant[1]))||Number(variant[1])===13))id=Number(variant[1]);id=skinForModel(key)||id;if(this._characterIdleSuppressNative){if(this._armature)this._armature.visible=false;}else bind(this,id);return r;};
-        proto.destroy=function(){detach(this);this._characterIdleHeroId=0;this._characterIdleLayout=null;this._characterIdleSuppressNative=false;return destroy.apply(this,arguments);};
+        proto.init=function(name){restoreNativePreview(this);audit.modelRequests[name]=(audit.modelRequests[name]||0)+1;var r=init.apply(this,arguments),key=String(name).replace(/_ez$/,''),id=modelIds[key],variant=/^hero_(\d+)_\d+$/.exec(key);if(variant&&(config(Number(variant[1]))||Number(variant[1])===13))id=Number(variant[1]);id=skinForModel(key)||id;if(this._characterIdleSuppressNative){if(this._armature)this._armature.visible=false;}else bind(this,id);return r;};
+        proto.destroy=function(){restoreNativePreview(this);detach(this);this._characterIdleHeroId=0;this._characterIdleLayout=null;this._characterIdleSuppressNative=false;return destroy.apply(this,arguments);};
         if(trigger)proto.trigger=function(action){var result=trigger.apply(this,arguments),s=this._characterIdleState;if(this._characterIdleSuppressNative&&this._armature)this._armature.visible=false;else if(s){if((action||this.action)==='daiji')hideNative(this,s);else restore(this,s);}return result;};
         if(ready)proto.readyToPlay=function(){var result=ready.apply(this,arguments),s=this._characterIdleState;if(this._characterIdleSuppressNative&&this._armature)this._armature.visible=false;else if(s&&(!this.action||this.action==='daiji'))hideNative(this,s);return result;};
         if(global.customui&&customui.HeroDynamicModel){
             var dynamic=customui.HeroDynamicModel.prototype,update=dynamic.update,reset=dynamic.reset;
             dynamic.update=function(){this._characterIdleHeroId=0;var r=update.apply(this,arguments),id=heroForView(this);var p=this.getModel&&this.getModel();if(id)bindView(this,id);return r;};
-            dynamic.reset=function(){this._characterIdleHeroId=0;this._characterIdleLayout=null;if(this._characterIdleViewTick){this.removeEventListener(egret.Event.ENTER_FRAME,this._characterIdleViewTick,this);this._characterIdleViewTick=null;}var standIn=this._characterIdleStandIn;if(standIn){detach(standIn);if(standIn.parent)standIn.parent.removeChild(standIn);this._characterIdleStandIn=null;}var p=this.getModel&&this.getModel();if(p){detach(p);p._characterIdleHeroId=0;p._characterIdleLayout=null;p._characterIdleSuppressNative=false;}return reset.apply(this,arguments);};
+            dynamic.reset=function(){this._characterIdleHeroId=0;this._characterIdleLayout=null;if(this._characterIdleViewTick){this.removeEventListener(egret.Event.ENTER_FRAME,this._characterIdleViewTick,this);this._characterIdleViewTick=null;}var standIn=this._characterIdleStandIn;if(standIn){detach(standIn);if(standIn.parent)standIn.parent.removeChild(standIn);this._characterIdleStandIn=null;}var p=this.getModel&&this.getModel();if(p){restoreNativePreview(p);detach(p);p._characterIdleHeroId=0;p._characterIdleLayout=null;p._characterIdleSuppressNative=false;}return reset.apply(this,arguments);};
         }
         if(game.FormationModelComponent){
             var formation=game.FormationModelComponent.prototype,formationUpdate=formation.update;

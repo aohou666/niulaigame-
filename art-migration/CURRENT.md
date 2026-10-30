@@ -5,7 +5,7 @@
 
 ## 仓库与交付
 工作区 C:/Users/dongdong/Documents/ChatGPT/安装，分支 codex/street-reskin-20261029。delivery=https://github.com/aohou666/oldniulai.git，保留原origin。
-最新实质版本v0.83本次提交，v0.82为efca267b。已验证delivery/main到v0.80完整6eb4f1fdf0a7b97b35f787688aaf7cff954dcd37。下一推送v0.83（81/82/83），命令git push delivery HEAD:main后ls-remote核对完整SHA。
+最新实质版本v0.84本次提交，v0.83为39a79bb1。已验证delivery/main到v0.80完整6eb4f1fdf0a7b97b35f787688aaf7cff954dcd37。下一推送v0.83（81/82/83），命令git push delivery HEAD:main后ls-remote核对完整SHA。
 保留无关dirty Android build.gradle/MainActivity、README/offline-launcher、disabled技能修复及大量旧collector job/qa改动；禁止git add .、批量reset/删除。原resource大包是独立Release依赖，不入Git大包。
 
 ## 真实完成状态
@@ -51,3 +51,9 @@ Python street_atlas_verify.py；精确stage新启用图片后street_runtime_trac
 实际独立选择普通/EZ/基础变体/编队切换通过；无批准独立序列恢复原生，100202不再共用base2。代码守卫显式skinCode优先，模糊共享模型不能单凭名当独立序列。新的fidelity测试tools/street-independent-skin-fidelity-test.mjs替代旧routing-probe手动面板模型循环作实际选择验收。
 两套强化85审计均通过：当前穿戴85（83 new-base-idle、2 original-unreplaced-skin：20/77确实穿原生额外皮肤）；--base-heroes在独立浏览器临时卸皮肤、逐项恢复，85基础新待机ID/帧变化全部通过。每版应两套都验：street-runtime-check.mjs --all-heroes ...（当前装备），再加--base-heroes（基础）；不同输出目录，当前装备3报告复制版本和全局，基础all-heroes-runtime.json另存版本/base-heroes-runtime.json。审计报告含presentationCounts，勿把85详情通过当85完整换皮。旧83/85并非生产回退错，详见equipped20-77-state.json，已保留失败。1876动作/1910依赖/台账通过。
 新open SKIN-NATIVE-083-PREVIEW-BOUNDS：100202原作模型已正确显示，但巨型原生模型超出面板，截图unmapped100202-native.png；下一步必须适配原生bounds，不能用新基础图遮它。100201批准新序列台面布局仍通过。没有活动生成任务。v83推81/82/83核SHA，下一推送v86。
+
+远端核对v0.83：HEAD和delivery/main均39a79bb1dec273ff7bb10ea2fc2321c10bba563d，1910依赖HEAD通过。下一推送v0.86。
+
+## v0.84最终接续（优先）
+原生100202尺寸适配已修：首次就绪真实bounds+20%裕量，固定420x270目标，按台面锚点平移，保留原比例；每帧不重测bbox，init/destroy/reset/切回新待机恢复原变换。普通/EZ各2个9秒循环实际bounds/底边/factor稳定断言通过，截图已看；10202样本/切回100201无fit残留/编队均通过。关闭100202原生bounds issue，仍非新皮肤完成。
+当前装备85与基础85两套、1876动作、125属性/4比例/九宫格/阵营/台面/点击、1910依赖/台账通过。source effect3实际诊断三armature原生可见、idle bitmap隐藏，但人物idle状态/cache多余绑定（tools/street-skin-effect-state-probe.mjs；v84/effect-armature-state-diagnostic.json）。下一v85先阻止明确effect_*副骨架绑定人物待机，验证真实特效保持可见/无多余cache/销毁回收，不要把当前状态误说成视觉错替。随后核实实时特效/子骨架运动并恢复本地MiniMax独立特效和缺失身体动作生成，勿长期只做UI。原始39张direct-timeline近静态尚不足运动证据。无活动生成任务；下一推送v0.86（84/85/86）。
