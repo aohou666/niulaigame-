@@ -54,6 +54,12 @@ def verify_container(cfg):
   assert any(e['dermaCode']==cfg['skinCode'] for e in proof['payload']['allies']),'Projectile skin was not equipped'
   assert any(r['visible'] and r['onStage'] and 'qiu' in r['slots'] for r in proof['projectileSamples']),'Projectile never visible in actual battle'
   assert any(r['key']==cfg['originalKey'] and r['digest']==cfg['targetSha256'] for r in proof['projectileResourceDigests']),'Battle projectile bytes differ'
+ if cfg.get('impactBattleRuntimeAuditSha256'):
+  proofFile=ROOT/cfg['impactBattleRuntimeAuditPath'];assert sha(proofFile.read_bytes())==cfg['impactBattleRuntimeAuditSha256'],'Impact battle proof changed'
+  proof=json.loads(proofFile.read_text('utf8'));assert proof['pass'] and proof['mainSaveUnchanged'] and proof['isolatedSaveRestored']
+  assert any(e['dermaCode']==cfg['skinCode'] for e in proof['payload']['allies']),'Impact skin was not equipped'
+  assert any(r['visible'] and r['onStage'] and r['slots'] for r in proof['impactSamples']),'Impact never visible in actual battle'
+  assert any(r['key']==cfg['originalKey'] and r['digest']==cfg['targetSha256'] for r in proof['impactResourceDigests']),'Battle impact bytes differ'
  complete=set(changed)=={r['name'] for r in regions}
  assert not cfg.get('completeContainerReplaced') or complete,'Claimed whole container still has original textures'
  return {'originalKey':cfg['originalKey'],'imageSize':list(newIm.size),'decodedBytes':newIm.width*newIm.height*4,'changedRegions':changed,'unchangedRegions':len(regions)-len(changed),'skeletonAndAtlasByteIdentical':True,'nativeAnimations':[(arm['name'],[(anim['name'],anim.get('duration',0)) for anim in arm.get('animation',[])]) for arm in oldData['skeleton']['armature']],'completeContainerReplaced':complete}
