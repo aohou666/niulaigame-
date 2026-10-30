@@ -1,0 +1,23 @@
+{
+  "provider": "official-imagegen",
+  "sourceSha256": "968a22574e94556843f9f0bd034813286b127400ecc71e0ef50c40d39ff6bcc7",
+  "promptSummary": "Independent thin copper and teal scalable outer frame with only violet corner screws, transparent interior and outside, no text or scene.",
+  "technicalCrop": [
+    8,
+    69,
+    1697,
+    853
+  ],
+  "normalization": {
+    "size": [
+      640,
+      346
+    ],
+    "endCaps": 60,
+    "alphaThresholdForCropOnly": 16,
+    "pixelsInsideCropPreservedBeforeResampling": true
+  },
+  "manualReview": "Source and native candidate viewed; actual native panel nine-slice sizes verified",
+  "runtimeIntegrated": true,
+  "evidence": "art-migration/versions/0.81.0/skin-attributes-native.json"
+}

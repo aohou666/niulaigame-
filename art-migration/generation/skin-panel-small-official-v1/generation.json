@@ -1,0 +1,23 @@
+{
+  "provider": "official-imagegen",
+  "sourceSha256": "2db893c3e3da5079c084f577896ca2b682aacd6f301914a3097338a1aa474845",
+  "promptSummary": "Independent quiet teal square inset panel tile, copper6px corners for55x55 nine-slice, no ornament or text.",
+  "technicalCrop": [
+    63,
+    67,
+    1191,
+    1184
+  ],
+  "normalization": {
+    "size": [
+      55,
+      55
+    ],
+    "endCaps": null,
+    "alphaThresholdForCropOnly": 16,
+    "pixelsInsideCropPreservedBeforeResampling": true
+  },
+  "manualReview": "Source and native candidate viewed; actual native panel nine-slice sizes verified",
+  "runtimeIntegrated": true,
+  "evidence": "art-migration/versions/0.81.0/skin-attributes-native.json"
+}

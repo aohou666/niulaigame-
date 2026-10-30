@@ -54,16 +54,20 @@
   },
   {
     "id": "SKIN-PANEL-069-RESOURCE-KEYS",
-    "status": "investigating",
+    "status": "resolved",
     "observed": "Normal AppFacade HERO_DERMA open reproduces14 unknown UI resource keys requested as bare URLs, HTTP404 and28 unhandled null rejection records. Distinct from independent idle routing.",
     "evidence": "versions/0.69.0/skin-panel-normal-traced.json",
     "next": "Replace or correctly bind each missing UI asset in the actual native skin panel; also resolve invalid _png attribute label request. Do not silence errors or substitute generic success.",
-    "historicalCausality": "This reproducible skin-panel null rejection path is not proven to be the historical DETAIL-NULL or RESOURCE-LOAD-015 cause."
+    "historicalCausality": "This reproducible skin-panel null rejection path is not proven to be the historical DETAIL-NULL or RESOURCE-LOAD-015 cause.",
+    "resolutionVersion": "0.81.0",
+    "resolutionEvidence": "art-migration/versions/0.81.0/skin-panel-normal-clean.json",
+    "resolution": "All14 previously observed keys repaired by distinct art or corrected configuration; actual hero2 normal AppFacade open reports0 script/HTTP/network/RES/promise failures.",
+    "limits": "Does not prove historical DETAIL-NULL causality, all skin panels, actual equip/battle or visual completeness."
   },
   {
     "id": "SKIN-PANEL-074-LAYOUT",
     "status": "investigating",
-    "summary": "Preview is below header; v0.75 fixes actual four landscape card aspect ratios. Unicycle still floats above the background platform; remaining four missing keys prevent full panel approval.",
+    "summary": "Preview is below header; four landscape card aspects fixed; all formerly missing common skin panel resources repaired in0.81. Unicycle still floats above background stage, so complete visual approval remains open.",
     "evidence": "art-migration/versions/0.74.0/skin-attributes-native.png",
     "complete": false,
     "cardAspectEvidence": "art-migration/versions/0.75.0/skin-attributes-native.json"

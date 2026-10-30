@@ -1,0 +1,15 @@
+{
+  "provider": "official-imagegen",
+  "sourceSha256": "baa6687ff40592bc5ecf87941416d3457e362c17ca07a941208a1a9ccfd3e624",
+  "prompt": "Transparent thin horizontal285x38 nameplate bar, opaque quiet dark teal enamel center, thin copper bevel rim, violet end screws,2.5D semi-realistic semi-cartoon street-market game,no text/icons/scene/watermark.",
+  "normalization": "Crop to alpha>16 core bounds plus2px margin, discarding remote faint isolated output artifacts; preserve original alpha/RGB within crop. Uniform38px height; preserve38px end caps and resize only center to285 width.",
+  "manualReview": "Source and native candidate viewed; actual native panel nine-slice sizes verified",
+  "runtimeIntegrated": true,
+  "technicalCrop": [
+    22,
+    298,
+    1962,
+    482
+  ],
+  "evidence": "art-migration/versions/0.81.0/skin-attributes-native.json"
+}
