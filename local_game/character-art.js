@@ -15,7 +15,10 @@
         }
         Object.keys(game.Config.pack.t_hero).forEach(function(key){var row=game.Config.pack.t_hero[key];add(row,row.subType,false);});
         var skins=game.Config.pack.t_hero_derma||{};
-        Object.keys(skins).forEach(function(key){var row=skins[key];add(row,row.subType,true);});
+        Object.keys(skins).forEach(function(key){var row=skins[key],text=(CharacterArtData.skinText||{})[String(row.code||key)];
+            if(text){['name','desc'].forEach(function(field){if(typeof text[field]==='string')row[field]=text[field];});}
+            add(row,row.subType,true);
+        });
         Object.keys(bindings).forEach(function(name){
             var item=bindings[name];
             RES.config.addResourceData({name:name,url:item.url,type:'image',root:''});

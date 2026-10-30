@@ -158,16 +158,25 @@
         if(!player||!player.isReady||!player._armature||!parent||typeof parent._characterIdleFootY!=='number')return;
         var fit=player._characterIdleNativePreviewFit;
         if(!fit){
-            var box=player.getBounds();if(!box||box.width<=0||box.height<=0)return;
-            fit=player._characterIdleNativePreviewFit={model:player._dbName,bounds:{x:box.x,y:box.y,width:box.width,height:box.height},original:{x:player.x,y:player.y,sx:player.scaleX,sy:player.scaleY},padding:1.2};
+            var spec=(data.nativePreviews||{})[String(parent._characterIdleSkinCode)],declared=null;
+            if(spec&&Number(spec.skinCode)===Number(parent._characterIdleSkinCode)&&Number(spec.heroId)===heroForView(view)&&
+                (spec.models||[]).indexOf(player._dbName)>=0&&player._armature.armature.armatureData.name===spec.armature){
+                var expected=spec.containerSha256&&spec.containerSha256[player._dbName+'_bin'];
+                var bound=(global.StreetArtData&&StreetArtData.containers||[]).some(function(r){return r.originalKey===player._dbName+'_bin'&&r.targetSha256===expected;});
+                var candidate=spec.bounds&&spec.bounds[player._dbName];
+                if(expected&&bound&&candidate&&['x','y','width','height'].every(function(k){return typeof candidate[k]==='number'&&isFinite(candidate[k]);})&&candidate.width>0&&candidate.height>0)declared=candidate;
+            }
+            var box=declared||player.getBounds();if(!box||box.width<=0||box.height<=0)return;
+            fit=player._characterIdleNativePreviewFit={model:player._dbName,bounds:{x:box.x,y:box.y,width:box.width,height:box.height},original:{x:player.x,y:player.y,sx:player.scaleX,sy:player.scaleY},padding:declared?Math.max(1,Number(spec.padding)||1.1):1.2,mode:declared?'full-native-idle-envelope':'first-native-frame'};
+            if(declared&&spec.anchor&&spec.anchor.length===2&&spec.anchor.every(function(n){return typeof n==='number'&&isFinite(n);}))fit.anchor=spec.anchor.slice();
         }
         var origin=view.localToGlobal(0,0),ux=view.localToGlobal(1,0),uy=view.localToGlobal(0,1);
         var gx=Math.max(.01,Math.hypot(ux.x-origin.x,ux.y-origin.y)),gy=Math.max(.01,Math.hypot(uy.x-origin.x,uy.y-origin.y));
         var b=fit.bounds,o=fit.original,factor=Math.min(420/(b.width*Math.abs(o.sx)*gx*fit.padding),270/(b.height*Math.abs(o.sy)*gy*fit.padding));
         var world=parent.localToGlobal(typeof parent._characterIdleFootX==='number'?parent._characterIdleFootX:parent.width/2,parent._characterIdleFootY),target=view.globalToLocal(world.x,world.y);
         player.scaleX=o.sx*factor;player.scaleY=o.sy*factor;
-        player.x=target.x-(b.x+b.width/2)*player.scaleX;
-        player.y=target.y-(b.y+b.height)*player.scaleY;
+        player.x=target.x-(fit.anchor?fit.anchor[0]:b.x+b.width/2)*player.scaleX;
+        player.y=target.y-(fit.anchor?fit.anchor[1]:b.y+b.height)*player.scaleY;
         fit.factor=factor;fit.surface={x:world.x,y:world.y};
     }
     function bindView(view,id){

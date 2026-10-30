@@ -1,0 +1,39 @@
+{
+  "productionIntegrated": false,
+  "manualReview": "approved-native-skill-banner-candidate",
+  "resources": [
+    {
+      "originalKey": "zd_jn_002_skin_01_png",
+      "originalPath": "assets/shuzhi/jineng_banner/zd_jn_002_skin_01_ac7ac50.png",
+      "originalSha256": "d3c4a5899b4d19ce93aa2a7be87e310e7098bbd1b58dcda60183b7289895a276",
+      "targetKey": "street_skin100201_zd_jn_002_skin_01_png",
+      "targetPath": "assets/street/skins/100201/skill-banner-trial-v1/zd_jn_002_skin_01.png",
+      "targetSha256": "5a80f66c93d1c954e2e163a92da23026c21d90810567938873ffb587ebae7afa",
+      "size": [
+        598,
+        316
+      ],
+      "type": "image"
+    },
+    {
+      "originalKey": "zd_txt_002_skin_01_png",
+      "originalPath": "assets/shuzhi/jineng_banner/zd_txt_002_skin_01_805fce76.png",
+      "originalSha256": "d5d877651f8c307115a12d3dc04c02ff083ebc326160ae8cf711299a0de31d49",
+      "targetKey": "street_skin100201_zd_txt_002_skin_01_png",
+      "targetPath": "assets/street/skins/100201/skill-banner-trial-v1/zd_txt_002_skin_01.png",
+      "targetSha256": "311ae19e8f37393d86c09796e62f090e095be518e723467fad34e1475ccba602",
+      "size": [
+        271,
+        110
+      ],
+      "type": "image"
+    }
+  ],
+  "sourcePath": "art-migration/generation/skin100201-skill-banner-official-v2/official-source.png",
+  "sourceSha256": "44476bfe2aeeeb59576f513c0fafe9a7506d0373c36d02a811cc3b10fae242e3",
+  "text": "核桃开场",
+  "alphaReview": "v2 measured alpha>16 bbox(49,10,1711,888) in1726x911; all solid shapes inside canvas.6px native padding is technical fitting, not reconstruction. v1 clipped source rejected separately.",
+  "battleProofPath": "art-migration/generation/skin100201-native-body107-packed-trial-v2/native-battle-skill-banner/runtime.json",
+  "battleProofSha256": "25f73f916021f645ae4d072ac23776bb0973621286bccaad74fbfae7565fa4b1",
+  "review": "Actual native BattleAI skill screenshot viewed: new cow portrait and readable 核桃开场 title; original banner entrance position/left-screen crop retained. Fixture attack x10/life x100 solely isolated test to trigger active skill; no edited round payload/manual animation trigger. Other active FX remain original, not full skin completion."
+}

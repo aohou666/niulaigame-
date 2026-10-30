@@ -1,0 +1,146 @@
+{
+  "provider": "official-imagegen",
+  "manualReview": "approved-drawn-components-for-isolated-native-fit",
+  "runtimeIntegrated": false,
+  "completeSkin": false,
+  "sourceSha256": "9559e40393df9e6d6a98f937044a2fa0168279b7f5514ef35e4900558443f4f5",
+  "parts": [
+    {
+      "cell": 0,
+      "nativeRegion": "hero_skin_002_01/qiu_1",
+      "nativeSize": [
+        76,
+        72
+      ],
+      "path": "art-migration/generation/skin100201-native-props7-official-v1/part-component-00.png",
+      "sha256": "1c7316489445fd48c523b41577905b0cdac7267a156daf50fc207733e0188412",
+      "sourceBounds": [
+        50,
+        63,
+        408,
+        417
+      ],
+      "segmentationComponent": 1,
+      "sourceCrossedNominalCell": false,
+      "visibleMargin": 16
+    },
+    {
+      "cell": 1,
+      "nativeRegion": "hero_skin_002_01/qiu_11",
+      "nativeSize": [
+        25,
+        24
+      ],
+      "path": "art-migration/generation/skin100201-native-props7-official-v1/part-component-01.png",
+      "sha256": "8edd873cb297fe746696224d13fbd8fee0681f2a460d23eeda63e273093aa902",
+      "sourceBounds": [
+        519,
+        112,
+        831,
+        339
+      ],
+      "segmentationComponent": 3,
+      "sourceCrossedNominalCell": false,
+      "visibleMargin": 16
+    },
+    {
+      "cell": 2,
+      "nativeRegion": "hero_skin_002_01/qiu_2",
+      "nativeSize": [
+        64,
+        62
+      ],
+      "path": "art-migration/generation/skin100201-native-props7-official-v1/part-component-02.png",
+      "sha256": "941c800533e9176825c0843d030fb4c19866090fccba610c3aeb93024d3542ff",
+      "sourceBounds": [
+        949,
+        63,
+        1306,
+        418
+      ],
+      "segmentationComponent": 2,
+      "sourceCrossedNominalCell": false,
+      "visibleMargin": 16
+    },
+    {
+      "cell": 3,
+      "nativeRegion": "hero_skin_002_01/qiu_22",
+      "nativeSize": [
+        34,
+        31
+      ],
+      "path": "art-migration/generation/skin100201-native-props7-official-v1/part-component-03.png",
+      "sha256": "8f662f5e833c83dbd610a93bd772819c81cb079785dc617e3c115ee54bf07b12",
+      "sourceBounds": [
+        1420,
+        141,
+        1693,
+        351
+      ],
+      "segmentationComponent": 4,
+      "sourceCrossedNominalCell": false,
+      "visibleMargin": 16
+    },
+    {
+      "cell": 4,
+      "nativeRegion": "hero_skin_002_01/qiu_3",
+      "nativeSize": [
+        75,
+        74
+      ],
+      "path": "art-migration/generation/skin100201-native-props7-official-v1/part-component-04.png",
+      "sha256": "b0f62d1566d05006337a8ffa682227cedd45448f0f3094aef1b1ae8980751b60",
+      "sourceBounds": [
+        59,
+        481,
+        403,
+        823
+      ],
+      "segmentationComponent": 6,
+      "sourceCrossedNominalCell": false,
+      "visibleMargin": 16
+    },
+    {
+      "cell": 5,
+      "nativeRegion": "hero_skin_002_01/qiu_33",
+      "nativeSize": [
+        29,
+        30
+      ],
+      "path": "art-migration/generation/skin100201-native-props7-official-v1/part-component-05.png",
+      "sha256": "fa09880e1329b7ceb29963e534e5404b9c099162317cc4b65d6971567d258855",
+      "sourceBounds": [
+        539,
+        538,
+        811,
+        768
+      ],
+      "segmentationComponent": 7,
+      "sourceCrossedNominalCell": false,
+      "visibleMargin": 16
+    },
+    {
+      "cell": 6,
+      "nativeRegion": "hero_skin_002_01/qiux_1",
+      "nativeSize": [
+        87,
+        81
+      ],
+      "path": "art-migration/generation/skin100201-native-props7-official-v1/part-component-06.png",
+      "sha256": "1f9015827379cd4cbd8755b83865f57364de5041dfae04db217ce3d1cb682804",
+      "sourceBounds": [
+        936,
+        467,
+        1308,
+        829
+      ],
+      "segmentationComponent": 5,
+      "sourceCrossedNominalCell": false,
+      "visibleMargin": 16
+    }
+  ],
+  "technicalExtraction": "7 alpha>16 components area>1000 assigned to native cell by centroid; retain original RGBA for nearest-component pixels within12px;16px transparent output padding. No creative paint, interpolation of pose or alpha hole filling.",
+  "nativeMap": "art-migration/skin-migration/100201/native-body-parts/props7-original-map.json",
+  "componentCount": 7,
+  "visualReview": "All extracted individual sprites inspected on light/dark, boundaries/internal alpha retained; unique one-to-one native mapping. Native placement/joins/full-body style still unapproved."
+}

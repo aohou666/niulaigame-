@@ -21,6 +21,18 @@ def verify():
  body=loadjs(GAME/'street-body-data.js') if (GAME/'street-body-data.js').exists() else {'characters':[]}
  auditPath=ROOT/'art-migration/native-action-events.json';nativeAudit=json.loads(auditPath.read_text('utf8')) if auditPath.exists() else None;nativeRows={(r['model'],r['action']):r for r in nativeAudit['records']} if nativeAudit else {};nativeChecks=0
  skinBodies=body.get('skins',{})
+ for key,cfg in body.get('nativeSkins',{}).items():
+  try:
+   assert key==str(cfg['id'])==str(cfg['skinCode']) and cfg['renderer']=='native-skeletal'
+   assert key not in skinBodies,'Native skin still has raster body override'
+   idleData=loadjs(GAME/'character-idle-data.js');assert key not in idleData.get('skins',{}),'Native skin still has raster idle override'
+   assert cfg['fps']==30 and cfg['actions']=={'daiji':198,'gongji':45,'jineng':46,'shouji':21,'paobu':16}
+   assert cfg['bodyRegions']==107 and cfg['childFXRegions']==40
+   for originalKey,digest in cfg['containers'].items():
+    entry=next(r for r in artData['containers'] if r['originalKey']==originalKey)
+    assert entry.get('nativeBodyReplacement') and entry['targetSha256']==digest
+   assert set(cfg['containers'])=={m+'_bin' for m in cfg['models']}
+  except Exception as e:errors.append({'nativeSkin':key,'error':str(e)})
  for key,cfg in skinBodies.items():
   if str(cfg.get('skinCode'))!=key or cfg.get('id')!=cfg.get('skinCode') or not cfg.get('armature'):
    errors.append({'skin':key,'error':'independent body requires its own id/skinCode and explicit armature'})

@@ -1,0 +1,53 @@
+{
+  "provider": "official-imagegen",
+  "sourceSha256": "7a3293f20871c6066867f13e98620dda3e36973183244bdf4c5a0486bcfeeb27",
+  "manualReview": "drawn-head-expressions-approved-for-isolated-rig-trial-only",
+  "runtimeIntegrated": false,
+  "completeSkin": false,
+  "heads": [
+    {
+      "nativeRegion": "hero_skin_002_01/tou__3",
+      "path": "art-migration/generation/skin100201-native-head3-official-v1/head-0.png",
+      "sha256": "ebd15e730da55516594afd0c28e04569c113ef6d3d4637e68cad086505ac373d",
+      "alphaBounds": [
+        104,
+        115,
+        669,
+        621
+      ],
+      "visibleMargin": 55
+    },
+    {
+      "nativeRegion": "hero_skin_002_01/tou_ xx2",
+      "path": "art-migration/generation/skin100201-native-head3-official-v1/head-1.png",
+      "sha256": "f94fa22857571e1c9d3294983594cc65ffe81c978c132b7482b471f95d5cfa64",
+      "alphaBounds": [
+        100,
+        115,
+        666,
+        646
+      ],
+      "visibleMargin": 58
+    },
+    {
+      "nativeRegion": "hero_skin_002_01/tou_ xx1",
+      "path": "art-migration/generation/skin100201-native-head3-official-v1/head-2.png",
+      "sha256": "113a6ebac95a63d5157ce22f112c51cc744f8295a8eac59b92d0f924f1b0e761",
+      "alphaBounds": [
+        100,
+        115,
+        665,
+        622
+      ],
+      "visibleMargin": 59
+    }
+  ],
+  "references": [
+    "art-migration/generation/skin100201-gongji-recovery-neutral8-v1/frame-38.png",
+    "art-migration/skin-migration/100201/native-body-parts/head-expressions-original3.png"
+  ],
+  "limitations": [
+    "Original native rig still has separate facial/hat/limb textures; these three heads alone cannot establish a reskinned body.",
+    "Native proportional fit and joins untested; no production binding."
+  ]
+}

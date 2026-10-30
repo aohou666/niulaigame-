@@ -59,6 +59,8 @@ def main():
    return ({cfg['nativeAnimationReplacement']} if cfg.get('nativeAnimationReplacement') else set()).union(*(approved_names(old) for old in cfg.get('inheritedReplacements',[])))
   for name in approved_names(binding):
    confirmedAnimations+=sum(1 for arm in row['armatures'] if arm['name']==name for anim in arm['animations'] if anim['name']==name and name not in row.get('verifiedAnimationReplacements',[]));logicalEffects.add((binding.get('skinCode'),name))
+  if binding.get('nativeBodyReplacement'):
+   confirmedAnimations+=sum(1 for arm in row['armatures'] if arm['name']=='hero_skin_002_01' for anim in arm['animations'] if anim['name'] in {'daiji','gongji','jineng','shouji','paobu'} and anim['name'] not in row.get('verifiedAnimationReplacements',[]))
  report['packedRegionsNotYetReplaced']=pending_regions-confirmedRegions;report['animationsNotYetReplaced']=pending_animations-confirmedAnimations
  report['nativePackedRegionBindings'].update(verifiedPhysicalRegions=confirmedRegions,verifiedPhysicalAnimations=confirmedAnimations,logicalSkinEffects=[{'skinCode':skin,'effect':effect} for skin,effect in sorted(logicalEffects)])
  body=loadjs(GAME/'street-body-data.js')['characters'];targets=[c for c in body if c['id']!=13]
@@ -74,6 +76,8 @@ def main():
  report['independentSkinIdleBindings']={'skins':{key:{'heroId':cfg['heroId'],'frameCount':cfg['frameCount'],'loopSeconds':cfg['frameCount']/cfg['fps'],'review':cfg.get('review'),'completeSkin':False} for key,cfg in skinIdles.items()},'note':'Idle-only evidence; other body actions, effects, real equip and battle remain separate requirements.'}
  skinBodies=loadjs(GAME/'street-body-data.js').get('skins',{})
  report['independentSkinBodyBindings']={'skins':{key:{'heroId':cfg['heroId'],'armature':cfg['armature'],'frames':len(cfg['frames']),'actions':list(cfg['actions']),'review':cfg.get('review'),'completeSkin':False} for key,cfg in skinBodies.items()},'note':'Individual native action replacement only; missing other body states, VFX, equip/battle proof must not count as a complete independent skin.'}
+ nativeSkins=loadjs(GAME/'street-body-data.js').get('nativeSkins',{})
+ report['independentNativeSkinBindings']={'skins':nativeSkins,'note':'All independently drawn native body parts on original continuous skeletal timelines; UI and shared active-skill assets remain separately tracked. Native frame counts are not counts of separately drawn full-pose images. Whole-skin completion remains false.'}
  report['generatedRuntimeGitTracking']=verify_runtime_tracking()
  issues=OUT/'open-issues.json';report['knownOpenIssues']=[r for r in json.loads(issues.read_text('utf8')) if r.get('status')!='resolved'] if issues.exists() else []
  folder=OUT/'versions'/a.version;folder.mkdir(parents=True,exist_ok=True)

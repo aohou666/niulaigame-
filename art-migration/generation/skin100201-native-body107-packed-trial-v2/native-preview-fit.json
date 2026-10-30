@@ -1,0 +1,35 @@
+{
+  "skinCode": 100201,
+  "heroId": 2,
+  "armature": "hero_skin_002_01",
+  "models": [
+    "hero_skin_002_01",
+    "hero_skin_002_01_ez"
+  ],
+  "containerSha256": {
+    "hero_skin_002_01_bin": "601ccab34885774377e922543625b1b52422cbacf03229f8f322636fab777498",
+    "hero_skin_002_01_ez_bin": "6e99ca52477642f8d27f239720b4f634b695bd3655af7b883e119cb44057c3f5"
+  },
+  "bounds": {
+    "hero_skin_002_01": {
+      "x": -252,
+      "y": -652,
+      "width": 443,
+      "height": 688
+    },
+    "hero_skin_002_01_ez": {
+      "x": -127,
+      "y": -326,
+      "width": 222,
+      "height": 344
+    }
+  },
+  "padding": 1.1,
+  "anchor": [
+    0,
+    0
+  ],
+  "sourceAuditPath": "art-migration/generation/skin100201-native-body107-packed-trial-v2/native-trial/trial-runtime.json",
+  "sourceAuditSha256": "7e2ebc34935dd154e2ba711b2f38ed6037e4b3768c577ad165c223d3d1dceb60",
+  "scope": "Full198-frame native idle envelope plus10% reserve; root/wheel anchor preserved. Candidate only, not production skin approval."
+}

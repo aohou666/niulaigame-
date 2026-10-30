@@ -1,0 +1,31 @@
+{
+  "pass": false,
+  "productionIntegrated": false,
+  "scope": "Real equip transaction and unedited original BattleAI playback using new native107+40 candidate; no manual animation trigger.",
+  "equip": {
+    "uuid": "offline-hero-all-2",
+    "dermaCode": 100201,
+    "calls": 1,
+    "results": 1
+  },
+  "payload": {
+    "engine": {
+      "mode": "original-battle-ai",
+      "rounds": 2,
+      "effects": 14,
+      "buffs": 19,
+      "ticks": 13,
+      "result": 2
+    },
+    "allies": [
+      {
+        "code": 41010002,
+        "dermaCode": 100201
+      }
+    ],
+    "rounds": 2
+  },
+  "error": "page.waitForFunction: Timeout 90000ms exceeded.\n    at C:\\Users\\dongdong\\Documents\\ChatGPT\\安装\\tools\\street-native-skin-battle-trial.mjs:52:26",
+  "isolatedSaveRestored": true,
+  "mainSaveUnchanged": true
+}

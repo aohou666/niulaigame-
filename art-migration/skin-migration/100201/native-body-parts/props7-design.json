@@ -1,0 +1,60 @@
+{
+  "status": "independent-draws-generating-native-trial-pending",
+  "productionIntegrated": false,
+  "nativeRegionDecisions": [
+    {
+      "region": "hero_skin_002_01/qiu_1",
+      "sourceRole": "left-screen main juggling prop at setup, attached to root/qiu_11",
+      "replacement": "one deep-grooved walnut body",
+      "sourceSetupBoneXY": [
+        -175.54,
+        -220.2
+      ]
+    },
+    {
+      "region": "hero_skin_002_01/qiu_11",
+      "sourceRole": "round projecting overlay sharing qiu_11 bone",
+      "replacement": "rounded grooved walnut-shell cap, not second complete walnut"
+    },
+    {
+      "region": "hero_skin_002_01/qiu_2",
+      "sourceRole": "upper screen-right juggling prop on root/qiu_2",
+      "replacement": "peppermint ball view1",
+      "sourceSetupBoneXY": [
+        127.14,
+        -372.88
+      ]
+    },
+    {
+      "region": "hero_skin_002_01/qiu_22",
+      "sourceRole": "projecting overlay on same qiu_2 bone",
+      "replacement": "matching peppermint swirl cap"
+    },
+    {
+      "region": "hero_skin_002_01/qiu_3",
+      "sourceRole": "lower screen-right prop on root/qiu_3",
+      "replacement": "peppermint ball view2",
+      "sourceSetupBoneXY": [
+        198.38,
+        -187.47
+      ]
+    },
+    {
+      "region": "hero_skin_002_01/qiu_33",
+      "sourceRole": "projecting overlay on qiu_3 bone",
+      "replacement": "matching peppermint swirl cap view2"
+    },
+    {
+      "region": "hero_skin_002_01/qiux_1",
+      "sourceRole": "mesh attached to head, native hidden setup, expands in jineng",
+      "replacement": "new translucent lavender/ivory blown gum-bubble sphere with copper/teal reflection",
+      "sourceParentBone": "tou__3",
+      "nativeMeshOffset": 3458
+    }
+  ],
+  "limitations": [
+    "Setup positions and shared bones establish correspondence; active juggling trajectories move these props.",
+    "A cap texture is a component of one prop, not a second complete held object.",
+    "All seven source pieces must pass native shape, alpha, fit and visual trial before production; no blanking old cap regions."
+  ]
+}

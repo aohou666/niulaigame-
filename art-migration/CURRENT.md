@@ -1,28 +1,44 @@
-# 游戏换皮接续：以本页为准，历史按需读WORKLOG及版本报告
+# 当前接续入口（详细历史见 WORKLOG.md）
 
-## 范围与真实进度
-用户已授权自主继续；Oct29十小时结束后Oct30明确续作，不重复询问。85目标角色、125独立额外皮肤及所有UI/地图/建筑/文字/道具/VFX，2.5D半写实半卡通离谱街区风，官方ImageGen/本地Qwen2.1/MiniMax H3。每实质版全台账+两套85；每3版推指定GitHub并核完整SHA。关键姿势、重复持帧、共用人物图、原作回退不能充完整独立皮肤；不承诺全设备零bug不卡。
-完整角色0/85、完整独立皮肤0/125。单原始资源complete63（v96：61→63，两个共享命中包各13纹理；普通/EZ不是两皮肤）。连续攻技批准10目标2/3/46/52/63/73/79/80/84/85，76映射/34隔离；2号跑动24源→原生10帧，受击缺。当前装备85=83新base待机+20穿102002/77穿107701原作未换皮肤；base85临时浏览器卸装恢复。85检查通过不是全美术完成。
+## 目标与规则
+85目标角色+125额外独立皮肤+全UI/地图/建筑/道具/文字/VFX，2.5D半写实半卡通离谱街区；用户已续准，无需重复问授权。实质版本全量台账/双85复查，每3版推delivery/main并核SHA。完整角色0/85、完整额外皮肤0/125；不得把共享人物、关键姿势、原作fallback或候选当完成。当前原资产complete69，ledger其余以真实台账为准。无子代理授权。不得承诺全设备零bug/零卡顿。
 
-## Git交付/当前版本
-cwd C:/Users/dongdong/Documents/ChatGPT/安装；codex/street-reskin-20261029；delivery=https://github.com/aohou666/oldniulai.git，保留origin。
-v95 HEAD与远端main已核4eb1604c21b2e1a62d3289e21cefb272f77a3322（93/94/95批次），push-095.json/HEAD1924依赖报告在versions/0.95.0。v94=a141ea66；v93=2a7b531fafa087301da4be96b6599b1e78d0cc4d。v96工作区完成命中13纹理普通/EZ，双85/1876动作/14FX/125属性/6副骨架/FX叠加/100202保留已通过；1926依赖/verify通过，review待终态核对或已通过。准备记录肖像SHA、提交v96，下一推v98（96/97/98）。提交后tracking --tree HEAD。
-无关dirty必须保留（Android、README/offline-launcher、disabled技能修复、旧collector job/QA等）；禁止git add .、宽泛reset。批准源PNG可能被忽略，精确git add -f，运行资源须index/HEAD核验。原resource包是独立Release依赖。
+## Git/环境
+cwd C:/Users/dongdong/Documents/ChatGPT/安装；branch codex/street-reskin-20261029；delivery=https://github.com/aohou666/oldniulai.git，保留origin。
+HEAD v96=3a7b47c0794c99db7f7eb63dc06007d2a3b30ac4；远端main v95=4eb1604c21b2e1a62d3289e21cefb272f77a3322已核；下次推v98（96/97/98），v97工作区已接入并全量复查通过、待commit。v97启用1798依赖index通过（旧raster退出后减少，不是漏资源）；旧HEAD1926依赖通过，原resource包独立Release依赖。禁止git add .；精确暂存，忽略的合格PNG需add -f；保留无关dirty（Android/MainActivity/README/offline-launcher/disabled技能/旧collector等）。
+Python .tools/python/python.exe，PYTHONUTF8=1、read_text('utf8')；Node24/Playwright位置见mjs。8787主存档pc_server_data/offline-replica-save.json禁止测试改写；8794隔离outputs/street-reskin/stress/8794-save.json，每场backup/finally恢复+主SHA，不并行两场写入测试。Comfy8188实时queue上次running0/pending0，generation-worker.json旧Oct29不当作活队列。官方imagegen句柄1078/1085/1094均终态；继续先核实际队列/句柄。
 
-## 100201已接入/缺口
-独立4静态、124源待机/7WebP原生198@30、21独立受击@30、45独立普攻@30，精确主骨架hero_skin_002_01普通/EZ，不绑副effect骨架。受击+普攻66格lossless图集shouji-gongji-f1393faddd871997.webp，旧21格逐像素保持，解码12430080字节。普攻保留zd18；v94原v1回收核桃过晚，v2原生33完成取回、38..44为新增7独立尾帧。v94实际36帧0..35，完整45普通/EZ实播/90暂停另证。source gongji-official45-v2及strip-0..5-v1/6-v2、recovery-neutral8-v1；失败/草稿不覆盖。PC Chrome warm双角色15秒各66帧、共享1bitmap、P95约16.8ms/0>100ms/销毁0；非手机全场景承诺。
-三组原生子FX40纹理全部换（effect1/2各10→19@30，effect3 20→39@30）；两个主容器各147中40换，107原生身体region仍未换，骨架/图集字节保留。战斗overlay只隐藏旧身体槽位、保留新子FX，未映射动作恢复；UI详情/编队尚无FX。技能46@30/跑动16@30仍旧身体，完整皮肤不成立。
-v95共用司马懿qiu普通/EZ各唯一纹理换深沟核桃：本地Qwen efa367d9...成功+官方透明编辑，source qiu-hybrid-alpha-v1/official-alpha.png；普通1/30秒/EZ0静态原钟不动。实际BattleAI EZ弹丸8可见采样，普通另原生播放器；两包SHA、主存档不变/隔离恢复。作用所有原共享消费者，非skin独占。
-v96共用命中common_newskill_simayi_02普通/EZ各13纹理已换官方新核桃碎壳；13独立源，统一缩放normal1.14/EZ.57，原纹理逻辑中心/13@24及count,pia,pia每圈保持。普通/EZ全部26暂停图已看、两圈实播各13纹理/回调完成各1、SHA/slot/events原作对照通过。真实BattleAI EZ命中21采样、12不同纹理（frame3采样跳过），原生完整13另证；实际截图已看，主存档不变/隔离恢复。source impact-official13-v1、native-packed-v1；versions/0.96.0/impact-candidate/production及skin-body-gongji-battle-impact-visible.json。不要声称实际一场观察了全部13或普通+EZ都在场。
+## 历史生产v96与基础缺口（v97已替换下述100201身体/UI）
+100201生产仍为旧现代牛静态4张+124源待机(198@30)+21受击+45普攻，66格图集f1393faddd871997；zd18保持，v94回收核桃33前完成。原生主容器147区只40子FX已换，107身体仍原作；技能46/跑动16身体未换。v95共用qiu唯一纹理新核桃；v96共用impact13纹理normal/EZ全换，13@24及count/pia事件保持。完整皮肤未成立。
+基础连续动作已批准10目标2,3,46,52,63,73,79,80,84,85；76映射/34隔离以台账为准。equipped85含20穿102002、77穿107701未独立换皮；base85另清derma浏览器fixture不改存档。未批准100202为原hero_087_03，不得套base新图。
 
-## 生成队列与下一步
-Comfy http://127.0.0.1:8188；G:/comfylight/ComfyUI_windows_portable_nvidia/ComfyUI_windows_portable/ComfyUI；generation-worker.json旧Oct29，不当作活任务。实际queue/history为准，不因超时重启。最新MiniMax impact-v1 prompt b59a3aa1...已成功collect124但虹彩/首帧突变拒收，全contact和effect-qa保留；没有生成任务在跑（继续时重查）。官方865已完成，13帧源已入项目。
-研究后续原生107身体部件重绘/重绑覆盖，保留原连续动画，避免只覆盖几个整帧动作后残留大量旧部件。原107区域清单及3接触图在art-migration/skin-migration/100201/native-body-parts（未更换，非批准）。只有5原生动作：gongji45、jineng46、shouji21、daiji198、paobu16。必须逐部件真实新绘/语义对应，不能重着色/空白/共用人物图冒充；先证明原生连续外观及接缝可行再推广。不要把原生旧动作算新皮肤。
+## 100201原生资源证据（v97已接入原生身体、静态、gallery、preview、banner；共享主动FX仍未完）
+总文件夹art-migration/generation/skin100201-native-body107-packed-trial-v2。107独立部件分组head3/clothing18/right15/left15/props7/ornaments25+24，精确无漏；原作107全部实际使用，不能称未用。新主容器107+继承40FX=147全换；骨架/atlas压缩块逐字节保持，normal1024x727/EZ512x371，无所属背景只清透明padding。normalSHA601ccab34885774377e922543625b1b52422cbacf03229f8f322636fab777498；EZ6e99ca52477642f8d27f239720b4f634b695bd3655af7b883e119cb44057c3f5。
+body107-groups/native-use-all326在skin-migration/100201/native-body-parts；trial-body-regions-audit.json验证107源/ROI/147覆盖。所有源部件已看，左手v1/泡泡孔洞编辑v1拒收；props7-fit-v2只对新泡泡alphaScale.65。不是旧图重色/整帧持姿。
+native-motion/motion-candidate.json：normal/EZ五动作198/45/46/21/16全部652帧实时采样，回调/完成各1，与baseline事件相同；event-frame-comparison核zd18。修复完成回调后已再跑全652通过。native-trial/trial-runtime.json不宜重写，native-preview-fit.json绑定它的SHA。先前“部件重叠是seek累积”假说已撤回，原作也有夸张配饰，失败证据保留，不得宣称引擎修复。
+原生UI fit新可选CharacterIdleData.nativePreviews（带skin/hero/model/armature/containerSHA守卫），whole-idle-envelope修原首帧fit310>270越界；420x270不放宽。普通/EZ双6.6秒循环max160x234/161x231，3FX均见；100202原默认fit仍314x237。native-ui/runtime/review和3截图已看。
+真实native-battle/runtime.json：实际穿戴持久化/原BattleAI981样本，daiji/shouji/gongji/zd18，通过主SHA/隔离恢复；gongji截图已看，shouji被敌旧FX遮挡，daiji截图是加载页不算外观证据。
+native-battle-skill-scenario/runtime.json：只改隔离普通stage1，hero属性未改，原AI4回合34effects/41buffs，真实550020210/550020315，jineng21样本16不同原生帧0..15(漏6)，全46另motion证明；总2655样本。jineng截图已看；原作横幅与额外FX尚遗留。hell耐久场90秒超时为失败，已恢复存档，不算技能功能故障结论。
+native-performance.json：双normal/EZ同步回调五动作20秒循环，各326不同状态，P95~16.8ms/0>100ms，destroy后无stage/armature；仅本PC暖Chrome。先前同步链只完成首gongji失败报告保留。
 
-## 其他守卫/未结问题
-v88 dermaCode DTO真实穿脱/挂机修复；offline-battle-attributes仅明确离线UI整数百分数AI深拷贝43→.43，不动存档/显示/核心属性/未标原敌方/幂等。100202原生hero_087_03保留，详情固定420×270+20%裕量，普通/EZ双9秒因子稳定，禁止套base新图。
-v93 46竖向持竿pictureDraw132×257已修，完整人物/桶/鱼竿/线/饵，其他头像/额外皮肤未据此算新绘。v87庭院map960×898批准，1098拉伸拒收，CITY-MAP-087-VERTICAL-STRETCH open。DETAIL-NULL/RESOURCE-LOAD-015/TEMPORAL未全面关闭。v92受击实际八敌10不同帧，完整21另播放器；三个早停失败报告保留。
+## 本轮真实功能修复（未发布）
+local_game/js/main.min_6fea25ed.js只在DBPlayer trigger/gotoAndPlayByFrame两处COMPLETE注册once→addEventListener，ActionDoneHandler原先就先remove再callTrigger。修复Egret once分发结束清理误删回调内同步重注册监听器的问题。同步五动作链已验证成功，源码前后SHA在completion-reentrancy-source.json；未改其他once/时钟/reset/destroy。生产artverify outputs/street-reskin/v096-post-completion-fix-artverify.json errors[]。
+v97已启用JS与配置：character-idle.js的nativePreviews全循环fit；character-art.js的skinText仅name/desc。两表已填100201，属性/费用未动。
 
-## 工具/检查
-Python .tools/python/python.exe，PYTHONUTF8=1；Node24/Playwright Chrome路径见现有mjs。8787主存档pc_server_data/offline-replica-save.json测试禁止修改；8794隔离outputs/street-reskin/stress/8794-save.json，每场finally恢复+核主SHA，不并行两场写同隔离存档。
-两套85：street-runtime-check.mjs --all-heroes --assert-no-detail-body-loads --output=独立目录；第二套加--base-heroes。equipped三JSON复制版本及outputs/street-reskin全局，base三份另存。body-roster目标2 3 46 52 63 73 79 80 84 85；effects-roster/skin-effect-cache/skin-attribute完整断言；改动再测FX overlay/独立皮肤保留/原生/实际BattleAI。stage精确资产后street_art_verify.py、street_runtime_tracking.py --report、street_review.py --version，检查JSON而非只看shell退出码。全85肖像4页每版看，未变可比已看版SHA。上下文只读此页和当前证据，历史WORKLOG/Git按需查；不删失败审计或聊天、不声称已压缩系统上下文。
+## 静态/预览/横幅候选及新遗留
+skin100201-native-static-fit-v1/candidate.json：5独立目标(4旧字段+gallery mjl_img_simayi)，新avatar/half/fullbody/frame官方源；角色名夜市杂耍掌柜/新desc，旧框旧字未拷贝。实际4控件+skinlist+gallery验证通过，截图已看；属性仍[[10001,100],[10002,100]]，baseavatar及100202独立原图保留。mjl_img_simayi2属于100202别动。
+skin100201-native-activity-preview-v1：原common_activity_simayi_new01为19旧战斗截图/38帧24fps，已用新rig技能19曝光+批准新庭院图合成候选，无旧UI像素，非BattleAI录像。协议res/offset/labels/events保持；MovieClip实播1..38全见/complete1/1591ms通过，contact已看；未生产绑定。
+技能额外原包common_newskill_simayi_01_1(15区62帧)/01_2(16区16帧)由g_skill主动引用；01_3 sibling2区normal30/EZ29@24，实际依赖使用待核。共6包33区设计范围已在active-skill-native/inventory.json，不被已换qiu/impact覆盖。
+新active-ground2-official-v1透明核桃壳环/地裂两层，native-v1两包2/2候选通过。采样失败已定位为测具误用Bitmap.visible：EgretArmatureDisplay._batchEnabled模式直接GroupNode.drawData渲染，EgretSlot._updateVisible写node.alpha而不写Bitmap.visible。保留旧失败，改查真实GroupNode节点归属/alpha，原作及新候选同断言均通过(normal30/EZ29@24，各两纹理和1完成)。768x768捕获59暂停帧两张contact已看；normal连续淡出，EZ原本硬消失仍保留，不宣称优化了时钟。native-review.json仅批准原生纹理候选，不是实际BattleAI依赖证明或生产接入。
+新增active15-official-v1/official-source.png（exec41eb2411），15独立格：flight+impact1..13+glow，深沟核桃/象牙粉尘/铜火花；原15map/guide在active-skill-native。均已保存分格source-qa.json，alpha>16各格边距9..154像素，无跨格。原图整体已看，仍待逐格/native尺寸及统一时间尺度适配，勿放大尾帧/按帧bbox归一。官方1126已终态，无生成活动句柄。
+旧技能横幅zd_jn_002_skin_01_png598x316、zd_txt_002_skin_01_png271x110（糖衣炮弹）待换。新skill-banner-official-v1帽/手出界拒收；v2实际alpha>16bbox49,10,1711,888 in1726x911，轮廓在内；native-v1适配留6px安全边，新标题核桃开场重新字体排版已看。skill-banner-native-v1/candidate.json及assets/street/skins/100201/skill-banner-trial-v1保存。26381已终态无主动技能超时，失败报告no-active-skill-failure.json保留。75314重测已终态PASS：只在隔离场attack x10/life x100促主动技能，未改AI战报/手动trigger；native-battle-skill-banner/runtime.json含两图RES alias/尺寸/SHA断言，真实jineng横幅截图已看(新牛+核桃开场)，candidate仅批准横幅，不是整皮肤。所有本轮进程均已终态。
+
+## 必须完成的下一步
+1. 横幅候选验证已齐，后续合格资源正式接入时一起纳入全量账和依赖。
+2. ground原作基线诊断；补主动FX31区新绘/原生及实战、33区依赖审计，避免仅rig完整就算全皮肤。
+3. v97已完成full147 schema/provenance/motion/UI/battle/perf校验并接入2容器、4静态字段+gallery/preview/banner2图+name/desc；旧100201 raster退出配置、源图和配置存档保留。nativeSkins显式登记，completeSkin=false。后续继续共享主动FX31区，2区ground实际使用审查。
+4. v97全账/双85/1876动作/14FX/125attr/6cache/100202fidelity/4肖像页SHA/index1798依赖全部通过，当前需精确commit并HEAD核验；v98后推96/97/98，不造空版本。
+
+## 既有守卫/验证
+v88 dermaCode DTO真实穿脱/挂机；OfflineBattleAttributes只标记percent-points的离线AI深拷贝43→.43，不改显示/存档/未标原敌人。v93 46portrait132x257竖杆全道具保留；v87城市庭院960x898已准，1098拉伸拒收；CITY-MAP-087-VERTICAL-STRETCH/DETAIL-NULL/RESOURCE-LOAD-015/TEMPORAL仍未全结。
+双85命令street-runtime-check.mjs --all-heroes --assert-no-detail-body-loads --output=独立目录，第二套加--base-heroes；body/effects-roster、skin-effect-cache、skin-attribute/fidelity按实质改动跑。stage后street_art_verify.py、street_runtime_tracking.py、street_review.py核JSON非只看shell。上下文只读此入口和当前证据，旧过程查WORKLOG/Git，不删失败/聊天，不声称系统上下文已手动压缩。

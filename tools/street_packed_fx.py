@@ -14,6 +14,57 @@ def chunks(blob):
  assert pos==len(blob),'Unexpected extra bundle data'
  return result
 def raw(blob,part):return zlib.decompress(part,-15) if blob[4] else part
+def verify_native_body(cfg,image,regions):
+ """Full native bodies require source ROIs and motion/UI/battle/lifecycle proof.
+
+ This grants no whole-skin completion: independent UI, activity and shared skill
+ assets remain separate ledger entries.
+ """
+ names={r['name'] for r in regions};body=set(cfg['newBodyRegions'])
+ assert len(names)==147 and len(body)==107 and body<=names
+ arm=next(a for a in decode(GAME/cfg['targetPath'])['skeleton']['armature'] if a['name']=='hero_skin_002_01')
+ displays=[d for skin in arm.get('skin',[]) for slot in skin.get('slot',[]) for d in slot.get('display',[]) if d.get('type',0) not in [1,'armature']]
+ assert {d.get('path') or d['name'] for d in displays}==body,'Parent body display coverage differs'
+ assert set(cfg['changedRegions'])==names and cfg['completeContainerReplaced']
+ sources=cfg['bodySources'];assert len(sources)==107 and {s['nativeRegion'] for s in sources}==body
+ assert len({s['sourceSha256'] for s in sources})==107
+ for row in sources:
+  assert sha((ROOT/row['sourcePath']).read_bytes())==row['sourceSha256'],'Native body source changed'
+  region=next(r for r in regions if r['name']==row['nativeRegion'])
+  rect=[region['x'],region['y'],region['x']+region['width'],region['y']+region['height']]
+  assert row['targetRect']==rect and sha(image.crop(rect).tobytes())==row['targetRgbaSha256'],'Source ROI differs'
+ inherited={n for previous in cfg.get('inheritedReplacements',[]) for n in previous['changedRegions']}
+ assert inherited==names-body,'All40 earlier child-FX regions require retained provenance'
+ proofs={}
+ for key,ref in cfg['nativeBodyProofs'].items():
+  path=ROOT/ref['path'];assert sha(path.read_bytes())==ref['sha256'],'Native body proof changed: '+key
+  proofs[key]=json.loads(path.read_text('utf8'))
+ for key in ['motion','baseline','ui','battle','hurtBattle','performance']:
+  assert proofs[key]['pass'],'Native body proof failed: '+key
+ motion=proofs['motion'];baseline=proofs['baseline'];expected={'daiji':198,'gongji':45,'jineng':46,'shouji':21,'paobu':16}
+ assert any(r['key']==cfg['originalKey'] and r['digest']==cfg['targetSha256'] for r in motion['resourceDigests'])
+ assert len(motion['models'])==2
+ for model in motion['models']:
+  assert {r['action']:r['nativeFrames'] for r in model['actions']}==expected
+  old=next(r for r in baseline['models'] if r['model']==model['model'])
+  for row in model['actions']:
+   assert row['fps']==30 and row['callbacks']==row['completes']==1
+   assert row['distinctNativeFrames']==row['nativeFrames'],'Full native frame observation required'
+   assert row['distinctBodyTransformStates']>4,'Native body has no continuous motion'
+   prior=next(a for a in old['actions'] if a['action']==row['action'])
+   assert [e['name'] for e in row['events']]==[e['name'] for e in prior['events']]
+ ui=proofs['ui'];assert ui['mainSaveUnchanged'] and ui['isolatedSaveRestored']
+ assert {r['model'] for r in ui['rows'] if r['code']==100201}=={'hero_skin_002_01','hero_skin_002_01_ez'}
+ for battleKey in ['battle','hurtBattle']:
+  battle=proofs[battleKey];assert battle['mainSaveUnchanged'] and battle['isolatedSaveRestored'] and battle['equip']['dermaCode']==100201
+  assert battle['payload']['engine']['mode']=='original-battle-ai'
+  assert all(not r['raster'] and r['nativeVisible'] and r['body'] for r in battle['samples'])
+  assert any(r['key']==cfg['originalKey'] and r['sha256']==cfg['targetSha256'] for r in battle['digests'])
+ assert {'gongji','jineng'}<={r['action'] for r in proofs['battle']['samples']}
+ assert 'shouji' in {r['action'] for r in proofs['hurtBattle']['samples']}
+ perf=proofs['performance']['runtime'];assert perf['p95']<34 and all(not a['onStage'] and not a['armature'] for a in perf['afterDestroy'])
+ assert all(set(expected)<=set(actions) for actions in perf['completions'])
+
 def verify_container(cfg):
  original=GAME/cfg['originalPath'];target=GAME/cfg['targetPath'];old=original.read_bytes();new=target.read_bytes()
  assert sha(old)==cfg['originalSha256'] and sha(new)==cfg['targetSha256'],'Packed bundle digest differs'
@@ -27,14 +78,19 @@ def verify_container(cfg):
   if r['name'] in cfg['changedRegions']:
    allowed[rect[1]:rect[3],rect[0]:rect[2]]=True;assert newIm.crop(rect).getchannel('A').getbbox(),'Empty replacement region'
  assert set(changed)==set(cfg['changedRegions']),'Missing or unexpected changed texture region'
- assert np.array_equal(np.asarray(oldIm)[~allowed],np.asarray(newIm)[~allowed]),'Pixels outside declared regions changed'
+ if cfg.get('nativeBodyReplacement') and cfg.get('technicalUnownedPaddingClear'):
+  assert set(changed)=={r['name'] for r in regions},'Padding clear requires complete region replacement'
+  assert not np.asarray(newIm)[~allowed].any(),'Unowned padding was not cleared transparently'
+ else:assert np.array_equal(np.asarray(oldIm)[~allowed],np.asarray(newIm)[~allowed]),'Pixels outside declared regions changed'
  for previous in cfg.get('inheritedReplacements',[]):
   verify_container(previous)
   previousImage=Image.open(io.BytesIO(decode(GAME/previous['targetPath'])['image'])).convert('RGBA')
   for name in previous['changedRegions']:
    r=next(r for r in regions if r['name']==name);rect=(r['x'],r['y'],r['x']+r['width'],r['y']+r['height']);assert newIm.crop(rect).tobytes()==previousImage.crop(rect).tobytes(),'Earlier replacement changed'
- qa=ROOT/cfg['regionReviewPath'];assert sha(qa.read_bytes())==cfg['regionReviewSha256'];review=json.loads(qa.read_text('utf8'));assert review['manualReview']=='approved-texture-sequence-for-native-trial'
+ qa=ROOT/cfg['regionReviewPath'];assert sha(qa.read_bytes())==cfg['regionReviewSha256'];review=json.loads(qa.read_text('utf8'));assert review['manualReview']==('approved-native-body-parts-for-native-trial' if cfg.get('nativeBodyReplacement') else 'approved-texture-sequence-for-native-trial')
  for row in review['tiles']:assert sha((ROOT/row['path']).read_bytes())==row['sha256'],'Reviewed source tile changed'
+ if cfg.get('nativeBodyReplacement'):
+  verify_native_body(cfg,newIm,regions)
  if cfg.get('nativeRuntimeAuditSha256'):
   proofFile=ROOT/cfg['nativeRuntimeAuditPath'];assert sha(proofFile.read_bytes())==cfg['nativeRuntimeAuditSha256'],'Packed native proof changed';proof=json.loads(proofFile.read_text('utf8'));assert proof['pass'] and proof['manualReview']=='approved-complete-native-loop','Packed animation not manually approved'
   assert any(r['key']==cfg['originalKey'] and r['digest']==cfg['targetSha256'] for r in proof['resourceDigests']),'Native trial did not load this bundle'

@@ -1,0 +1,39 @@
+{
+  "status": "isolated-prototype-pending",
+  "productionIntegrated": false,
+  "nativeAudit": "art-migration/skin-migration/100201/native-body-parts/native-use-all326.json",
+  "bodyRegions": 107,
+  "all107Observed": true,
+  "nativeFramesAudited": 326,
+  "headsPrototype": "art-migration/generation/skin100201-native-head3-official-v1",
+  "requirements": [
+    "Preserve all original action clocks, count/pia/zd and native callbacks.",
+    "No production approval from three heads alone: separately redraw remaining104 body textures including separate eyes/mouth/hat/limb pieces.",
+    "Preserve previous40 FX pixels and replacement ownership when packing body candidates.",
+    "Use one common skull reference/crop/scale for3 facial expressions; do not independently normalize expressions and shift the brow line.",
+    "Inspect native all5 actions and joins at native sizes before accepting rig strategy.",
+    "Retain independently drawn whole-body idle/hurt/attack until complete new native rig is visually better and every required body texture truly replaced.",
+    "Keep all85/125 full scope and exact original-to-new mapping; no shared-skin art or recolor-only substitute."
+  ],
+  "notes": "Native daiji references105 of107 regions; across326 frames all107 are actually used. Cannot label any remaining original texture unused to hide missing reskin.",
+  "headTrial": "art-migration/generation/skin100201-native-head3-packed-trial-v1/native-trial/trial-runtime.json",
+  "headTrialProductionApproval": false,
+  "nextGroup": {
+    "regions": 18,
+    "reference": "art-migration/skin-migration/100201/native-body-parts/clothing-vehicle-original18.png",
+    "mapping": "art-migration/skin-migration/100201/native-body-parts/clothing-vehicle-original18-map.json",
+    "status": "completed-source-and-isolated-trial",
+    "source": "art-migration/generation/skin100201-native-clothing18-official-v1/component-qa.json"
+  },
+  "baselineFinding": "Original107-body bindings are native rig components, including elaborate clown ornaments. Their reference/use audit is not visual approval. Three heads alone leave old facial/hat/body parts incompatible; no parser bug proved.",
+  "latestTrial": "art-migration/generation/skin100201-native-body107-packed-trial-v2",
+  "latestTrialRegions": 107,
+  "remainingOriginalBodyRegions": 0,
+  "pendingGroups": [],
+  "pendingAcceptance": [
+    "Full five-action assembled visual/joins review",
+    "Unify four independent static fields with new native cap/ruff outfit",
+    "Actual independent skin UI/equip/battle/performance",
+    "Full85 and ledger review before version97 production switch"
+  ]
+}

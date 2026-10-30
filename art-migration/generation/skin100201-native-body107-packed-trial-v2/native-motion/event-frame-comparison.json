@@ -1,0 +1,98 @@
+{
+  "pass": true,
+  "baselineSha256": "55330beebd0504a14f0610f9e234d6d23c17d4f350c775de21477a0b16a542bf",
+  "candidateSha256": "df05c41312d6605c40a8e7703ea26071e1f1b4e5574df09fa312e12cdf43b2b5",
+  "checks": [
+    {
+      "model": "hero_skin_002_01",
+      "action": "daiji",
+      "events": [],
+      "callbacks": 1,
+      "completes": 1,
+      "realFrames": 198
+    },
+    {
+      "model": "hero_skin_002_01",
+      "action": "gongji",
+      "events": [
+        {
+          "name": "zd",
+          "frame": 18
+        }
+      ],
+      "callbacks": 1,
+      "completes": 1,
+      "realFrames": 45
+    },
+    {
+      "model": "hero_skin_002_01",
+      "action": "jineng",
+      "events": [],
+      "callbacks": 1,
+      "completes": 1,
+      "realFrames": 46
+    },
+    {
+      "model": "hero_skin_002_01",
+      "action": "shouji",
+      "events": [],
+      "callbacks": 1,
+      "completes": 1,
+      "realFrames": 21
+    },
+    {
+      "model": "hero_skin_002_01",
+      "action": "paobu",
+      "events": [],
+      "callbacks": 1,
+      "completes": 1,
+      "realFrames": 16
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "action": "daiji",
+      "events": [],
+      "callbacks": 1,
+      "completes": 1,
+      "realFrames": 198
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "action": "gongji",
+      "events": [
+        {
+          "name": "zd",
+          "frame": 18
+        }
+      ],
+      "callbacks": 1,
+      "completes": 1,
+      "realFrames": 45
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "action": "jineng",
+      "events": [],
+      "callbacks": 1,
+      "completes": 1,
+      "realFrames": 46
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "action": "shouji",
+      "events": [],
+      "callbacks": 1,
+      "completes": 1,
+      "realFrames": 21
+    },
+    {
+      "model": "hero_skin_002_01_ez",
+      "action": "paobu",
+      "events": [],
+      "callbacks": 1,
+      "completes": 1,
+      "realFrames": 16
+    }
+  ],
+  "note": "Every authored parent event compared by name and exact observed native frame, not only name. Gongji zd18 once, all10 actions original event tables retained."
+}

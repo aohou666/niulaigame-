@@ -1,0 +1,420 @@
+{
+  "hero": {
+    "code": 41010002,
+    "name": "老八",
+    "subType": 2,
+    "race": 1,
+    "profession": 3,
+    "initStar": 1,
+    "realStarLevel": 1,
+    "maxLevel": 7200,
+    "baseAttr": "[[1,216000000],[2,1880000000],[3,178000000],[4,50000000]]",
+    "upAttr": "[[1,10800000],[2,94000000],[3,8900000],[4,2500000]]",
+    "maxAttr": "[[1,143530289000000],[2,1249250858000000],[3,35769000000],[4,10048000000]]",
+    "normalSkill": 550020110,
+    "skillUnlock": "[0,0,1,3,5]",
+    "actSkill": 550020210,
+    "posSkill1": 550020310,
+    "posSkill2": 550020410,
+    "posSkill3": 550020510,
+    "avatar": "street_2_head1_hero_002_01",
+    "avatar2": "street_2_head_hero_002_01",
+    "model": "hero_002_01",
+    "halfPic": "street_2_half_hero_002_1",
+    "initEnergy": 2,
+    "maxEnergy": 4,
+    "decomposeRewards": "",
+    "talent1": "",
+    "talent2": "",
+    "talent3": "",
+    "talent4": "",
+    "talent5": "",
+    "talent6": "",
+    "talent7": "",
+    "talent8": "",
+    "talent9": "",
+    "talent10": "",
+    "talent11": "",
+    "talent12": "",
+    "isShow": 0,
+    "isStar": 55,
+    "voice": "",
+    "voiceGJ": "",
+    "tier": 0,
+    "dispatchPower": 0,
+    "dispatchOutPutDt": 0,
+    "sexType": 1,
+    "pictureDraw": "street_2_wujiang_02",
+    "isAltarShow": 0,
+    "definition": "戴黑眼罩、盘核桃的老街熟面孔。外表像个神秘人物，真正擅长的是找回失物和记住谁还没吃饭。",
+    "activeSkillDesc": "核桃开场：对敌方生命比例最低单体造成400%伤害,击杀敌人时,永久提高20%攻击,最多提高200%,若本次攻击可击杀目标,则有10%几率无视所有免疫状态立即击杀目标。",
+    "buildRate": 0,
+    "cityRate": 0,
+    "desInterval": 0,
+    "buildSkill": "",
+    "citySkill": "",
+    "storyTitle1": "眼罩的来历",
+    "storyDesc1": "老八的眼罩原是夜市演出的道具。散场时他忙着帮人收摊，忘了摘，第二天全街都把他当成新来的神秘调查员。",
+    "storyTitle2": "一颗核桃",
+    "storyDesc2": "他只盘一颗核桃，说另一颗在等失主。邻居找了半个月，才知道所谓失主，是总忘记下楼散步的退休师傅。",
+    "storyTitle3": "夜班名单",
+    "storyDesc3": "老八把晚归摊主的名字写在纸上，挨个留了热饭。有人问他调查出了什么，他指着空饭盒说：今晚一个也没落下。",
+    "isTrial": 0,
+    "treasureSubType": 2,
+    "isDestiny": 0,
+    "destinyFight": 0,
+    "isDerma": 1,
+    "color": 6,
+    "itemCode": 31001002,
+    "ghosItemCode": 0,
+    "canBinding": 1,
+    "canUltimate": 0
+  },
+  "skills": {
+    "550020110": {
+      "id": 550020110,
+      "name": "空掌探路",
+      "desc": "对敌方前排单体造成100%伤害。",
+      "tapDesc": "",
+      "tap": [],
+      "iconName": "common_icon_002_01",
+      "namepicHead": "",
+      "namepicTxt": "",
+      "action": 1,
+      "angerCost": 0,
+      "angerAdd": 0,
+      "level": 1,
+      "skillEffect": "[550020110]",
+      "tiggerCondition": "",
+      "roundTimes": 0,
+      "times": 0,
+      "roundTrTimes": 0,
+      "battlePosList": "",
+      "attr": "",
+      "conditionAttr": "",
+      "skillType": 0,
+      "invalid": 0,
+      "prob": 1000,
+      "motion": 1,
+      "modelId": "common_skill_simayi_01",
+      "skillsSubType": 550020110,
+      "subSkills": "",
+      "sound": "",
+      "dermaModelId": "[\"common_newskill_simayi_01_pg\",\"hero_087_02\"]",
+      "releaseType": 0,
+      "saySth": "",
+      "levelInfo": "",
+      "ext": "",
+      "txtAttk": "",
+      "txtDefence": ""
+    },
+    "550020210": {
+      "id": 550020210,
+      "name": "核桃开场",
+      "desc": "对敌方生命比例最低单体造成400%伤害,击杀敌人时,永久提高20%攻击,最多提高200%,若本次攻击可击杀目标,则有10%几率无视所有免疫状态立即击杀目标。",
+      "tapDesc": "[550020210]",
+      "tap": [
+        "单攻",
+        "斩杀"
+      ],
+      "iconName": "common_icon_002_01",
+      "namepicHead": "zd_jn_002",
+      "namepicTxt": "zd_txt_002",
+      "action": 2,
+      "angerCost": 4,
+      "angerAdd": 0,
+      "level": 1,
+      "skillEffect": "[550020210]",
+      "tiggerCondition": "",
+      "roundTimes": 0,
+      "times": 0,
+      "roundTrTimes": 0,
+      "battlePosList": "",
+      "attr": "",
+      "conditionAttr": "",
+      "skillType": 0,
+      "invalid": 0,
+      "prob": 1000,
+      "motion": 1,
+      "modelId": "common_skill_simayi_02",
+      "skillsSubType": 550020210,
+      "subSkills": "[550020215]",
+      "sound": "",
+      "dermaModelId": "[\"common_newskill_simayi_01_jn\",\"hero_087_01\"]",
+      "releaseType": 0,
+      "saySth": "",
+      "levelInfo": "",
+      "ext": "",
+      "txtAttk": "",
+      "txtDefence": ""
+    },
+    "550020310": {
+      "id": 550020310,
+      "name": "夜市熟人",
+      "desc": "普通攻击转化为：攻击敌方生命比例最低单体,并回复自身30%攻击力的生命。",
+      "tapDesc": "",
+      "tap": [],
+      "iconName": "common_icon_002_02",
+      "namepicHead": "",
+      "namepicTxt": "",
+      "action": 3,
+      "angerCost": 0,
+      "angerAdd": 0,
+      "level": 1,
+      "skillEffect": "[550020310]",
+      "tiggerCondition": "[5]",
+      "roundTimes": 0,
+      "times": 0,
+      "roundTrTimes": 0,
+      "battlePosList": "",
+      "attr": "",
+      "conditionAttr": "",
+      "skillType": 0,
+      "invalid": 0,
+      "prob": 1000,
+      "motion": 0,
+      "modelId": "",
+      "skillsSubType": 550020310,
+      "subSkills": "",
+      "sound": "",
+      "dermaModelId": "",
+      "releaseType": 0,
+      "saySth": "",
+      "levelInfo": "",
+      "ext": "",
+      "txtAttk": "",
+      "txtDefence": ""
+    },
+    "550020410": {
+      "id": 550020410,
+      "name": "热饭留份",
+      "desc": "提高30%攻击,30%生命,30%增伤",
+      "tapDesc": "",
+      "tap": [],
+      "iconName": "common_icon_002_03",
+      "namepicHead": "",
+      "namepicTxt": "",
+      "action": 3,
+      "angerCost": 0,
+      "angerAdd": 0,
+      "level": 1,
+      "skillEffect": "",
+      "tiggerCondition": "[5]",
+      "roundTimes": 0,
+      "times": 0,
+      "roundTrTimes": 0,
+      "battlePosList": "",
+      "attr": "[[10001,300],[10002,300],[16,300]]",
+      "conditionAttr": "",
+      "skillType": 0,
+      "invalid": 0,
+      "prob": 1000,
+      "motion": 0,
+      "modelId": "",
+      "skillsSubType": 550020410,
+      "subSkills": "",
+      "sound": "",
+      "dermaModelId": "",
+      "releaseType": 0,
+      "saySth": "",
+      "levelInfo": "",
+      "ext": "",
+      "txtAttk": "",
+      "txtDefence": ""
+    },
+    "550020510": {
+      "id": 550020510,
+      "name": "失物有主",
+      "desc": "击杀敌人后,立即释放一次主动技能（每回合最多触发2次）",
+      "tapDesc": "",
+      "tap": [],
+      "iconName": "common_icon_002_04",
+      "namepicHead": "",
+      "namepicTxt": "",
+      "action": 3,
+      "angerCost": 0,
+      "angerAdd": 0,
+      "level": 1,
+      "skillEffect": "[550020510]",
+      "tiggerCondition": "[8,4]",
+      "roundTimes": 2,
+      "times": 0,
+      "roundTrTimes": 0,
+      "battlePosList": "",
+      "attr": "",
+      "conditionAttr": "",
+      "skillType": 0,
+      "invalid": 0,
+      "prob": 1000,
+      "motion": 0,
+      "modelId": "",
+      "skillsSubType": 550020510,
+      "subSkills": "",
+      "sound": "",
+      "dermaModelId": "",
+      "releaseType": 0,
+      "saySth": "",
+      "levelInfo": "",
+      "ext": "",
+      "txtAttk": "fight_buff_txt_cklx",
+      "txtDefence": ""
+    }
+  },
+  "skinTables": {
+    "t_hero_derma": [
+      {
+        "code": 100201,
+        "name": "盛装小丑",
+        "avatar": "street_skin100201_head1_hero_002_04",
+        "avatar2": "street_skin100201_head_hero_002_04",
+        "model": "hero_skin_002_01",
+        "halfPic": "street_skin100201_half_skin_002_1",
+        "attr": "[[10001,100],[10002,100]]",
+        "costs": "[[3,32002011,1]]",
+        "putOnLevel": 1,
+        "maxLevel": 1,
+        "desc": "忍者伪装，一朝反目！可激活司马懿皮肤\"盛装小丑\"",
+        "anim": "common_activity_simayi_new01",
+        "color": 6,
+        "subType": 2,
+        "index": 1,
+        "dermaPic": "street_skin100201_wujiang_img_pifukasmy",
+        "skills": [],
+        "atlas": "mjl_img_simayi",
+        "condition": "",
+        "unlockText": "活动获取",
+        "source": "",
+        "jumpModuleParams": 0
+      }
+    ],
+    "t_hero_derma_handbook": [
+      {
+        "id": 3,
+        "attr": [
+          [
+            1001,
+            1000000000
+          ],
+          [
+            1019,
+            100
+          ]
+        ],
+        "dermaIds": [
+          100201,
+          103701
+        ],
+        "desc": "智定乾坤"
+      }
+    ],
+    "t_hero_derma_upgrade_costs": [],
+    "t_hero_derma_upStar": [
+      {
+        "code": 100201,
+        "starLevel": 1,
+        "costs": [
+          [
+            3,
+            30000471,
+            50
+          ]
+        ],
+        "attr": [
+          [
+            10001,
+            30
+          ],
+          [
+            10002,
+            30
+          ]
+        ]
+      },
+      {
+        "code": 100201,
+        "starLevel": 2,
+        "costs": [
+          [
+            3,
+            30000471,
+            50
+          ]
+        ],
+        "attr": [
+          [
+            10001,
+            60
+          ],
+          [
+            10002,
+            60
+          ]
+        ]
+      },
+      {
+        "code": 100201,
+        "starLevel": 3,
+        "costs": [
+          [
+            3,
+            30000471,
+            50
+          ]
+        ],
+        "attr": [
+          [
+            10001,
+            90
+          ],
+          [
+            10002,
+            90
+          ]
+        ]
+      },
+      {
+        "code": 100201,
+        "starLevel": 4,
+        "costs": [
+          [
+            3,
+            30000471,
+            50
+          ]
+        ],
+        "attr": [
+          [
+            10001,
+            120
+          ],
+          [
+            10002,
+            120
+          ]
+        ]
+      },
+      {
+        "code": 100201,
+        "starLevel": 5,
+        "costs": [
+          [
+            3,
+            30000471,
+            50
+          ]
+        ],
+        "attr": [
+          [
+            10001,
+            150
+          ],
+          [
+            10002,
+            150
+          ]
+        ]
+      }
+    ],
+    "t_worldEmpires_derma": []
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "file": "local_game\\js\\main.min_6fea25ed.js",
+  "beforeSha256": "e48b463024a55ad8d64c9c062eff810e26fa7e1378ca1b307af0f68041c1167d",
+  "afterSha256": "0527edec8e42ed4c0a61bc39948596fa6c24c3ffda68318d437cee1714ecbe57",
+  "exactReplacements": 2,
+  "scope": "DBPlayer trigger/gotoAndPlayByFrame COMPLETE registration only. Existing ActionDoneHandler removes listeners before callTrigger; reset/destroy removal unchanged.",
+  "reason": "Egret once cleanup after callback removes re-registered identical listener in synchronous chained actions."
+}

@@ -1,0 +1,118 @@
+{
+  "pass": true,
+  "rows": [
+    {
+      "field": "avatar",
+      "name": "street_skin100201_head1_hero_002_04_png",
+      "skinCode": 100201,
+      "url": "assets/street/skins/100201/static-native-trial-v1/head1_hero_002_04_png.png",
+      "size": [
+        111,
+        111
+      ],
+      "expected": [
+        111,
+        111
+      ],
+      "actualTexture": true,
+      "source": "street_skin100201_head1_hero_002_04_png"
+    },
+    {
+      "field": "avatar2",
+      "name": "street_skin100201_head_hero_002_04_png",
+      "skinCode": 100201,
+      "url": "assets/street/skins/100201/static-native-trial-v1/head_hero_002_04_png.png",
+      "size": [
+        97,
+        98
+      ],
+      "expected": [
+        97,
+        98
+      ],
+      "actualTexture": true,
+      "source": "street_skin100201_head_hero_002_04_png"
+    },
+    {
+      "field": "halfPic",
+      "name": "street_skin100201_half_skin_002_1_png",
+      "skinCode": 100201,
+      "url": "assets/street/skins/100201/static-native-trial-v1/half_skin_002_1_png.png",
+      "size": [
+        221,
+        130
+      ],
+      "expected": [
+        221,
+        130
+      ],
+      "actualTexture": true,
+      "source": "street_skin100201_half_skin_002_1_png"
+    },
+    {
+      "field": "dermaPic",
+      "name": "street_skin100201_wujiang_img_pifukasmy_png",
+      "skinCode": 100201,
+      "url": "assets/street/skins/100201/static-native-trial-v1/wujiang_img_pifukasmy_png.png",
+      "size": [
+        135,
+        82
+      ],
+      "expected": [
+        135,
+        82
+      ],
+      "actualTexture": true,
+      "source": "street_skin100201_wujiang_img_pifukasmy_png"
+    }
+  ],
+  "card": {
+    "source": "street_skin100201_wujiang_img_pifukasmy_png",
+    "textureCorrect": true,
+    "size": [
+      135,
+      82
+    ]
+  },
+  "name": "夜市杂耍掌柜",
+  "desc": "铜铃响过夜市，核桃与糖球轮番登场。可激活老八皮肤“夜市杂耍掌柜”。",
+  "attr": "[[10001,100],[10002,100]]",
+  "otherSkin": {
+    "name": "魔龙君临",
+    "model": "hero_087_03",
+    "atlas": "mjl_img_simayi2"
+  },
+  "baseAvatarPreserved": true,
+  "scope": "Four static bindings and actual HeroDermaListItem skin component; equip, body animations and battle not validated",
+  "resourceDigests": [
+    {
+      "key": "head1_hero_002_04_png",
+      "digest": "744d73068690cba4eab60c7ec96c20613abe0c6d47640d42da939a7e355e6108"
+    },
+    {
+      "key": "head_hero_002_04_png",
+      "digest": "b9e06b3a7dafce9cdcfb9047357c9e01a03eef62d5bced8512cfe196fd07c55c"
+    },
+    {
+      "key": "half_skin_002_1_png",
+      "digest": "ecbcb292f8f28ef5b8aa88feb2e3184f69f411778f30f970124e855bcc204d4c"
+    },
+    {
+      "key": "wujiang_img_pifukasmy_png",
+      "digest": "598cfbaa04d1d5b4d2e67622956e4164b3ae07102cb383595791617043fa720f"
+    },
+    {
+      "key": "mjl_img_simayi_png",
+      "digest": "3ef6e3cc8902ec305ed900ca6c54d3f8efb9ee70bb24f02683284fca8f3a7834",
+      "size": [
+        169,
+        228
+      ],
+      "actualTexture": true
+    }
+  ],
+  "fixtureOnly": true,
+  "candidatePath": "art-migration/generation/skin100201-native-static-fit-v1/candidate.json",
+  "errors": [],
+  "failed": []
+}

@@ -1,0 +1,121 @@
+{
+  "pass": true,
+  "productionIntegrated": false,
+  "scope": "Warm native normal+EZ two actors, all five action loops, 20 seconds on this PC headless Chrome only; no mobile or universal lag-free claim.",
+  "runtime": {
+    "sampleMs": 20000,
+    "p95": 16.80000000000109,
+    "p50": 16.69999999999891,
+    "over100ms": 0,
+    "longTasks": [],
+    "completions": [
+      [
+        "gongji",
+        "jineng",
+        "shouji",
+        "paobu",
+        "daiji",
+        "gongji",
+        "jineng",
+        "shouji",
+        "paobu"
+      ],
+      [
+        "gongji",
+        "jineng",
+        "shouji",
+        "paobu",
+        "daiji",
+        "gongji",
+        "jineng",
+        "shouji",
+        "paobu"
+      ]
+    ],
+    "distinctNativeStates": [
+      326,
+      326
+    ],
+    "beforeDestroy": [
+      {
+        "nativeVisible": true,
+        "raster": false,
+        "onStage": true
+      },
+      {
+        "nativeVisible": true,
+        "raster": false,
+        "onStage": true
+      }
+    ],
+    "afterDestroy": [
+      {
+        "onStage": false,
+        "armature": false
+      },
+      {
+        "onStage": false,
+        "armature": false
+      }
+    ],
+    "body": {
+      "installed": true,
+      "framesPresented": 0,
+      "actions": {},
+      "atlasRequests": 0,
+      "suppressedViewsDetached": 0,
+      "errors": [],
+      "caches": [],
+      "active": []
+    },
+    "idle": {
+      "cacheCount": 0,
+      "queued": 0,
+      "loading": 0,
+      "atlasVersion": "0.23.0",
+      "roster": {
+        "expected": 86,
+        "owned": 86,
+        "added": [],
+        "missing": []
+      },
+      "nativeOwned": 86,
+      "installed": true,
+      "mappedHeroes": 85,
+      "framesPresented": 0,
+      "modelRequests": {
+        "common_shuaping": 1,
+        "guochang_01": 1,
+        "common_zhujiemianxz_02": 1,
+        "hero_skin_002_01": 1,
+        "hero_skin_002_01_ez": 1
+      },
+      "actionRestores": 0,
+      "lastUnbound": {
+        "name": "hero_skin_002_01_ez"
+      },
+      "attachedHeroes": {},
+      "modelKeys": [
+        [
+          "hero_001_01",
+          0
+        ],
+        [
+          "hero_002_01",
+          2
+        ],
+        [
+          "hero_003_01",
+          3
+        ],
+        [
+          "hero_004_01",
+          4
+        ]
+      ],
+      "errors": [],
+      "active": []
+    }
+  },
+  "errors": []
+}

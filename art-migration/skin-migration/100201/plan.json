@@ -3,7 +3,7 @@
   "heroId": 2,
   "originalName": "盛装小丑",
   "originalModel": "hero_skin_002_01",
-  "status": "independent-static-idle-native-validated-fullskin-incomplete",
+  "status": "production-native-body-and-ui-partial-skin",
   "newDesign": "街区夜市杂耍掌柜：保留老八黄牛身份与面罩，独立青紫拼色演出夹克/围领/宽裤与彩鞋，区别基础棕毛衣牛仔裤；最终道具和动作须按原模型逐项核对",
   "references": [
     {
@@ -33,17 +33,46 @@
     "vehicle": "one copper/teal pedal unicycle"
   },
   "approvedScopes": [
-    "four-independent-static-bindings",
-    "continuous-daiji-124-source-frames-native6.6s"
+    "107 independent native body textures/40 retained new childFX per normal/EZ container, original all5 skeletal motions",
+    "4 native static fields and independent gallery image",
+    "name/description text",
+    "19-image activity preview on original38@24 MC protocol",
+    "new independent skill banner/title on actual BattleAI skill"
   ],
   "pendingScopes": [
-    "gongji",
-    "jineng",
-    "shouji",
-    "paobu",
-    "effect_1",
-    "effect_2",
-    "effect_3",
-    "actual-equip-and-battle-validation"
-  ]
+    "Shared active-skill common_newskill_simayi_01_1/01_2 texture replacement;01_3 actual dependency review",
+    "All remaining85 character and125 independent skin ledger gaps",
+    "Existing global gameplay/UI/performance open issues; no zero-bug or mobile guarantee"
+  ],
+  "isolatedNativeCandidate": {
+    "path": "art-migration/generation/skin100201-native-body107-packed-trial-v2",
+    "logicalBodyRegions": 107,
+    "physicalContainers": 2,
+    "all147RegionsNewInBoth": true,
+    "productionIntegrated": false,
+    "nativeRealTimeCoverage": 652,
+    "visualApproval": "pending",
+    "note": "Do not count candidate regions or two resolutions as complete independent skins."
+  },
+  "extraConfigResources": {
+    "atlas": "mjl_img_simayi",
+    "anim": "common_activity_simayi_new01",
+    "animNativeImageCount": 19,
+    "animNativeFrames": 38,
+    "animNativeFps": 24,
+    "status": "original-pending",
+    "note": "These original configured resources were already present in initial inventory but not covered by body/static-four work; remain explicitly pending, not counted complete."
+  },
+  "retiredRasterApprovedScopes": [
+    "four-independent-static-bindings",
+    "continuous-daiji-124-source-frames-native6.6s",
+    "continuous-shouji21-native-ordinary-EZ",
+    "continuous-gongji45-native-ordinary-EZ",
+    "effect1-2-3-all40-native-textures",
+    "shared-projectile-one-texture-ordinary-EZ",
+    "shared-impact13-textures-native13-at24-ordinary-EZ",
+    "actual-equip-and-gongji-shouji-battle-partial-coverage-recorded"
+  ],
+  "productionVersion": "0.97.0",
+  "productionEvidence": "art-migration/versions/0.97.0"
 }
