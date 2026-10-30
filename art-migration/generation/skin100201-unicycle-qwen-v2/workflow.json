@@ -1,0 +1,99 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "prompt": "Preserve this EXACT yellow masked adult bull and the independently designed teal-violet patchwork stage jacket, ivory ruffled collar, orange pompom, violet cropped trousers and teal canvas sneakers. Now complete the full absurd-neighborhood variety-show skin: the bull is SEATED ON A SINGLE-WHEEL PEDAL UNICYCLE, a small realistic dark rubber tire, brass/copper wheel rim, teal metal seat-post and one saddle. Both complete shoes rest naturally on the two opposite pedals, knees bent, anatomically coherent pelvis on saddle. The full wheel bottom, both pedals, horns and hands are inside frame with generous blank margins. Viewer RIGHT facing three-quarter profile. Anatomical RIGHT hand (viewer LEFT) holds ONE walnut raised near shoulder, LEFT hand supports a trio of distinct small red-and-ivory striped juggling balls near the chest. Keep exactly one wheel, not a bicycle, no front/back extra wheels. No floating feet, merged spokes, extra arms or legs. Tactile2.5D semi-realistic semi-cartoon neighborhood game asset, same identity and costume. Plain flat medium-gray background, no scenery, text, logos, particle effects, glow, detached shadow or extra people. Frame the complete rider AND whole unicycle with wide margins, not a closeup.\n",
+      "negative_prompt": "blurry, cropped body, duplicate character, watermark, unreadable text, medieval armor, ancient Chinese costume",
+      "resolution": 1024,
+      "images.image_1": [
+        "8",
+        0
+      ]
+    }
+  },
+  "5": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "seed": 2026102901,
+      "steps": 32,
+      "cfg": 4,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "4",
+        1
+      ],
+      "latent_image": [
+        "4",
+        2
+      ],
+      "denoise": 1
+    }
+  },
+  "6": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "5",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "7": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "6",
+        0
+      ],
+      "filename_prefix": "street-reskin/qwen"
+    }
+  },
+  "8": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "street_35bf05302418ee0d.png"
+    }
+  }
+}

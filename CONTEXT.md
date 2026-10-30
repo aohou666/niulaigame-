@@ -1,5 +1,7 @@
 # 工作区上下文（精简入口）
 
+- 当前游戏换皮续作先读 `art-migration/CURRENT.md`；历史细节按需查对应版本证据，避免整份加载 `WORKLOG.md`。下方0.19为历史工程基线，当前换皮版本见CURRENT。
+
 ## 当前可交付版本
 
 - 2026-10-13 迁移说明：`MIGRATION.md`；完整开发包发布到 Release `migration-20261013`。

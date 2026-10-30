@@ -1,0 +1,33 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "street_skin100201_cca26c715c9c2061.png"
+    }
+  },
+  "2": {
+    "class_type": "easy imageRemBg",
+    "inputs": {
+      "images": [
+        "1",
+        0
+      ],
+      "rem_mode": "BEN2",
+      "image_output": "Hide",
+      "save_prefix": "street-reskin/skin100201",
+      "add_background": "none",
+      "torchscript_jit": false,
+      "refine_foreground": false
+    }
+  },
+  "3": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "2",
+        0
+      ],
+      "filename_prefix": "street-reskin/skin100201_unicycle_alpha"
+    }
+  }
+}

@@ -13,6 +13,7 @@ def main():
   for key,binding in h['bindings'].items():
    target=GAME/binding['url'];checked+=int(hid in art);supplementalChecked+=int(hid in supplemental)
    if not target.exists():errors.append({'id':hid,'key':key,'error':'missing'});continue
+   if binding.get('targetSha256') and hashlib.sha256(target.read_bytes()).hexdigest()!=binding['targetSha256']:errors.append({'id':hid,'key':key,'error':'target digest mismatch'})
    with Image.open(target) as im:
     if list(im.size)!=binding['size']:errors.append({'id':hid,'key':key,'error':'wrong dimensions'})
     if 'A' not in im.getbands():errors.append({'id':hid,'key':key,'error':'missing alpha'})
@@ -40,6 +41,13 @@ def main():
  report['promotedStreetArtVerification']=verify_street_art()
  body=loadjs(GAME/'street-body-data.js')['characters'];targets=[c for c in body if c['id']!=13]
  report['attackSkillContinuousMotionQuality']={'installedTargetMappings':len(targets),'approvedContinuousTargetMappings':sum(c.get('temporalQuality')=='approved-continuous' for c in targets),'quarantinedTargetMappings':sum(bool(c.get('qualityQuarantineActions')) for c in targets),'all85TargetsComplete':False,'note':'Installed images/native frame timing are separate from complete continuous-animation approval; unreviewed clips do not count as complete.'}
+ skinStatic={}
+ for hero in art.values():
+  for key,binding in hero['bindings'].items():
+   if binding.get('skinCode'):
+    row=skinStatic.setdefault(str(binding['skinCode']),{'bindings':[],'completeSkin':False})
+    row['bindings'].append({'key':key,'url':binding['url'],'review':binding.get('review'),'targetSha256':binding.get('targetSha256')})
+ report['independentSkinStaticBindings']={'skins':skinStatic,'note':'Independent static art is partial progress only; this does not establish animation, effects, equip or complete-skin approval.'}
  report['generatedRuntimeGitTracking']=verify_runtime_tracking()
  issues=OUT/'open-issues.json';report['knownOpenIssues']=[r for r in json.loads(issues.read_text('utf8')) if r.get('status')!='resolved'] if issues.exists() else []
  folder=OUT/'versions'/a.version;folder.mkdir(parents=True,exist_ok=True)

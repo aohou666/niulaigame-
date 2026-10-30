@@ -1,0 +1,270 @@
+{
+  "skinCode": 100201,
+  "config": {
+    "code": 100201,
+    "name": "盛装小丑",
+    "avatar": "street_2_head1_hero_002_04",
+    "avatar2": "street_2_head_hero_002_04",
+    "model": "hero_skin_002_01",
+    "halfPic": "street_2_half_skin_002_1",
+    "attr": "[[10001,100],[10002,100]]",
+    "costs": "[[3,32002011,1]]",
+    "putOnLevel": 1,
+    "maxLevel": 1,
+    "desc": "忍者伪装，一朝反目！可激活司马懿皮肤\"盛装小丑\"",
+    "anim": "common_activity_simayi_new01",
+    "color": 6,
+    "subType": 2,
+    "index": 1,
+    "dermaPic": "street_2_wujiang_img_pifukasmy",
+    "skills": [],
+    "atlas": "mjl_img_simayi",
+    "condition": "",
+    "unlockText": "活动获取",
+    "source": "",
+    "jumpModuleParams": 0
+  },
+  "imageBindings": [
+    {
+      "originalKey": "head1_hero_002_04_png",
+      "originalPath": "local_game/resource/assets/shuzhi/head1/head1_hero_002_04_d0efd7bc.png",
+      "originalSha256": "e3e98ee02ce5afd62dab521f5b2b82a01a927e94e58ea6a4603c7df10fa44470",
+      "currentReplacement": {
+        "name": "street_2_head1_hero_002_04_png",
+        "url": "assets/street/characters/002/bind_head1_hero_002_04_png.png",
+        "size": [
+          111,
+          111
+        ],
+        "field": "avatar",
+        "originalExists": true
+      },
+      "status": "currently-shared-base-image-independent-art-pending"
+    },
+    {
+      "originalKey": "head_hero_002_04_png",
+      "originalPath": "local_game/resource/assets/shuzhi/head/head_hero_002_04_97d6314d.png",
+      "originalSha256": "6b0414e6d59be7500bd83c7b26083c43c0c2d6464407a63ee5ca4c0df86a697d",
+      "currentReplacement": {
+        "name": "street_2_head_hero_002_04_png",
+        "url": "assets/street/characters/002/bind_head_hero_002_04_png.png",
+        "size": [
+          97,
+          98
+        ],
+        "field": "avatar2",
+        "originalExists": true
+      },
+      "status": "currently-shared-base-image-independent-art-pending"
+    },
+    {
+      "originalKey": "half_skin_002_1_png",
+      "originalPath": "local_game/resource/assets/shuzhi/half/half_skin_002_1_b8290903.png",
+      "originalSha256": "1739b7b4d5a9cbedbe2f5282d241e943a9175cf8c2d61446672c531707ffa082",
+      "currentReplacement": {
+        "name": "street_2_half_skin_002_1_png",
+        "url": "assets/street/characters/002/bind_half_skin_002_1_png.png",
+        "size": [
+          221,
+          130
+        ],
+        "field": "halfPic",
+        "originalExists": true
+      },
+      "status": "currently-shared-base-image-independent-art-pending"
+    },
+    {
+      "originalKey": "wujiang_img_pifukasmy_png",
+      "originalPath": "local_game/resource/assets/shuzhi/pifuka/wujiang_img_pifukasmy_eaf2085c.png",
+      "originalSha256": "ab2ccd9c17c6504e4e2f0c334694542359b1e8240c25c2b302eaba826d3ea722",
+      "currentReplacement": {
+        "name": "street_2_wujiang_img_pifukasmy_png",
+        "url": "assets/street/characters/002/bind_wujiang_img_pifukasmy_png.png",
+        "size": [
+          135,
+          82
+        ],
+        "field": "dermaPic",
+        "originalExists": true
+      },
+      "status": "currently-shared-base-image-independent-art-pending"
+    }
+  ],
+  "models": [
+    {
+      "path": "resource/assets/model/hero_skin_002_01_44129895.bin",
+      "armatures": [
+        {
+          "name": "hero_skin_002_01",
+          "fps": 30,
+          "animations": [
+            {
+              "name": "gongji",
+              "frames": 45,
+              "playTimes": 0,
+              "frameEvents": []
+            },
+            {
+              "name": "jineng",
+              "frames": 46,
+              "playTimes": 0,
+              "frameEvents": []
+            },
+            {
+              "name": "shouji",
+              "frames": 21,
+              "playTimes": 0,
+              "frameEvents": []
+            },
+            {
+              "name": "daiji",
+              "frames": 198,
+              "playTimes": 0,
+              "frameEvents": []
+            },
+            {
+              "name": "paobu",
+              "frames": 16,
+              "playTimes": 0,
+              "frameEvents": []
+            }
+          ],
+          "bones": 137,
+          "slots": 112
+        },
+        {
+          "name": "effect_1",
+          "fps": 30,
+          "animations": [
+            {
+              "name": "effect_1",
+              "frames": 19,
+              "playTimes": 0,
+              "frameEvents": []
+            }
+          ],
+          "bones": 1,
+          "slots": 10
+        },
+        {
+          "name": "effect_2",
+          "fps": 30,
+          "animations": [
+            {
+              "name": "effect_2",
+              "frames": 19,
+              "playTimes": 0,
+              "frameEvents": []
+            }
+          ],
+          "bones": 1,
+          "slots": 10
+        },
+        {
+          "name": "effect_3",
+          "fps": 30,
+          "animations": [
+            {
+              "name": "effect_3",
+              "frames": 39,
+              "playTimes": 0,
+              "frameEvents": []
+            }
+          ],
+          "bones": 1,
+          "slots": 20
+        }
+      ],
+      "status": "pending"
+    },
+    {
+      "path": "resource/assets/model/hero_skin_002_01_ez_cdeed9df.bin",
+      "armatures": [
+        {
+          "name": "hero_skin_002_01",
+          "fps": 30,
+          "animations": [
+            {
+              "name": "gongji",
+              "frames": 45,
+              "playTimes": 0,
+              "frameEvents": []
+            },
+            {
+              "name": "jineng",
+              "frames": 46,
+              "playTimes": 0,
+              "frameEvents": []
+            },
+            {
+              "name": "shouji",
+              "frames": 21,
+              "playTimes": 0,
+              "frameEvents": []
+            },
+            {
+              "name": "daiji",
+              "frames": 198,
+              "playTimes": 0,
+              "frameEvents": []
+            },
+            {
+              "name": "paobu",
+              "frames": 16,
+              "playTimes": 0,
+              "frameEvents": []
+            }
+          ],
+          "bones": 137,
+          "slots": 112
+        },
+        {
+          "name": "effect_1",
+          "fps": 30,
+          "animations": [
+            {
+              "name": "effect_1",
+              "frames": 19,
+              "playTimes": 0,
+              "frameEvents": []
+            }
+          ],
+          "bones": 1,
+          "slots": 10
+        },
+        {
+          "name": "effect_2",
+          "fps": 30,
+          "animations": [
+            {
+              "name": "effect_2",
+              "frames": 19,
+              "playTimes": 0,
+              "frameEvents": []
+            }
+          ],
+          "bones": 1,
+          "slots": 10
+        },
+        {
+          "name": "effect_3",
+          "fps": 30,
+          "animations": [
+            {
+              "name": "effect_3",
+              "frames": 39,
+              "playTimes": 0,
+              "frameEvents": []
+            }
+          ],
+          "bones": 1,
+          "slots": 20
+        }
+      ],
+      "status": "pending"
+    }
+  ],
+  "previewAnimation": "common_activity_simayi_new01",
+  "extraAtlas": "mjl_img_simayi",
+  "scope": "Inventory only; independent image/action/effect/equip verification remains pending"
+}

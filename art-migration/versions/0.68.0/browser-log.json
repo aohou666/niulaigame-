@@ -1,0 +1,1158 @@
+{
+  "errors": [],
+  "failed": [],
+  "requestFailures": [],
+  "resourceEvents": [],
+  "logs": [
+    {
+      "type": "log",
+      "text": ">===================<"
+    },
+    {
+      "type": "log",
+      "text": "{\"AgentCode\":\"lite3zbtest\",\"BuildTime\":\"20260323 16:05:44\",\"ClientVer\":\"49784\",\"CodeVersion\":\"1.0.0.0\",\"DataVer\":\"49784\",\"EnableConsoleLog\":true,\"HttpCB\":\"\",\"HttpSerever\":\"127.0.0.1:8787/offline-api\",\"HttpUnitServer\":\"127.0.0.1:8787/offline-api\",\"IsDebug\":true,\"ProjectName\":\"sglite\",\"PtId\":9,\"RsyncConfig\":{\"buildType\":\"release\",\"name\":\"bh\"},\"__KEY\":\"bh_lite3zbtest_andr\",\"__agents\":[\"bh_lite3zbtest_h5\",\"hide\",\"bh_lite3zbtest_andr\"],\"__gameUrl\":\"h5.bhsg.lintey.com/sglite_web/lite3zbtest/index_bh_lite3zbtest_andr.html\",\"__serverKEY\":\"lite3zbtest\",\"bookmark\":\"冰狐lite3安卓包，新调的数值的版本\",\"email\":\" \",\"emailTitle\":\" \",\"ext\":{\"COUPON\":1,\"HIDE_ACCOUNT_BTN\":true,\"HIDE_FIGHT_SKIP_BUTTON_BATTLE_TYPES\":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69],\"HIDE_LOGIN_LOGO\":1,\"HIDING_NOTICE_TITLE\":1,\"LOGIN_BG_RES\":\"login13_bg_jpg\",\"LOGIN_EZ_LOADING_BG_RES\":\"login"
+    },
+    {
+      "type": "log",
+      "text": ">===================<"
+    },
+    {
+      "type": "log",
+      "text": "Egret Engine Version: 5.4.1"
+    },
+    {
+      "type": "log",
+      "text": "当前stage尺寸 720 1350 480 900"
+    },
+    {
+      "type": "log",
+      "text": "x: 20, y: 0"
+    },
+    {
+      "type": "log",
+      "text": "x: 388, y: 0"
+    },
+    {
+      "type": "log",
+      "text": "x: 20, y: 22"
+    },
+    {
+      "type": "log",
+      "text": "x: 388, y: 22"
+    },
+    {
+      "type": "log",
+      "text": "x: 20, y: 44"
+    },
+    {
+      "type": "log",
+      "text": "x: 388, y: 44"
+    },
+    {
+      "type": "log",
+      "text": "===========Utils init info=========="
+    },
+    {
+      "type": "log",
+      "text": "getPlatform: undefined"
+    },
+    {
+      "type": "log",
+      "text": "getBrowser: "
+    },
+    {
+      "type": "log",
+      "text": "runtimeType: web"
+    },
+    {
+      "type": "log",
+      "text": "egretnative: "
+    },
+    {
+      "type": "log",
+      "text": "href: http://127.0.0.1:8787/index_bh_lite3zbtest_andr.html?mode=heroes&heroaudit=1"
+    },
+    {
+      "type": "log",
+      "text": "getUrlKV: {}"
+    },
+    {
+      "type": "log",
+      "text": "【Main】 : 使用客户端版本号拼接"
+    },
+    {
+      "type": "info",
+      "text": "DragonBones: 5.7.000\nWebsite: http://dragonbones.com/\nSource and Demo: https://github.com/DragonBones/"
+    },
+    {
+      "type": "log",
+      "text": "使用默认内存策略"
+    },
+    {
+      "type": "log",
+      "text": "【Main】 : startUp"
+    },
+    {
+      "type": "warning",
+      "text": "【LoginMediator】： 当前模块没有指定moduleCode，将影响到等级解锁及配置表跳转，使用临时值 500001"
+    },
+    {
+      "type": "warning",
+      "text": "【MainMediator】： 当前模块没有指定moduleCode，将影响到等级解锁及配置表跳转，使用临时值 500002"
+    },
+    {
+      "type": "warning",
+      "text": "【FightMediator】： 当前模块没有指定moduleCode，将影响到等级解锁及配置表跳转，使用临时值 500003"
+    },
+    {
+      "type": "warning",
+      "text": "【RankMediator】： 当前模块没有指定moduleCode，将影响到等级解锁及配置表跳转，使用临时值 500004"
+    },
+    {
+      "type": "warning",
+      "text": "【CommonMediator】： 当前模块没有指定moduleCode，将影响到等级解锁及配置表跳转，使用临时值 500005"
+    },
+    {
+      "type": "warning",
+      "text": "【PlayerMediator】： 当前模块没有指定moduleCode，将影响到等级解锁及配置表跳转，使用临时值 500006"
+    },
+    {
+      "type": "warning",
+      "text": "【HandBookMediator】： 当前模块没有指定moduleCode，将影响到等级解锁及配置表跳转，使用临时值 500007"
+    },
+    {
+      "type": "warning",
+      "text": "【ModuleOpenMediator】： 当前模块没有指定moduleCode，将影响到等级解锁及配置表跳转，使用临时值 500008"
+    },
+    {
+      "type": "warning",
+      "text": "【PeakWarMed】： 当前模块没有指定moduleCode，将影响到等级解锁及配置表跳转，使用临时值 500009"
+    },
+    {
+      "type": "warning",
+      "text": "【ArticlesMediator】： 当前模块没有指定moduleCode，将影响到等级解锁及配置表跳转，使用临时值 500010"
+    },
+    {
+      "type": "warning",
+      "text": "【FormationMed】： 当前模块没有指定moduleCode，将影响到等级解锁及配置表跳转，使用临时值 500011"
+    },
+    {
+      "type": "warning",
+      "text": "【BraveBookMediator】： 当前模块没有指定moduleCode，将影响到等级解锁及配置表跳转，使用临时值 500012"
+    },
+    {
+      "type": "warning",
+      "text": "【OfficialGuidelineMediator】： 当前模块没有指定moduleCode，将影响到等级解锁及配置表跳转，使用临时值 500013"
+    },
+    {
+      "type": "warning",
+      "text": "【EightDiagramMediator】： 当前模块没有指定moduleCode，将影响到等级解锁及配置表跳转，使用临时值 500014"
+    },
+    {
+      "type": "warning",
+      "text": "【SevenValentineEDMediator】： 当前模块没有指定moduleCode，将影响到等级解锁及配置表跳转，使用临时值 500015"
+    },
+    {
+      "type": "warning",
+      "text": "【PowerSaveMed】： 当前模块没有指定moduleCode，将影响到等级解锁及配置表跳转，使用临时值 500016"
+    },
+    {
+      "type": "warning",
+      "text": "【SoulSealLinkMediator】： 当前模块没有指定moduleCode，将影响到等级解锁及配置表跳转，使用临时值 500017"
+    },
+    {
+      "type": "log",
+      "text": "打开 i"
+    },
+    {
+      "type": "warning",
+      "text": "sheet资源被覆盖! origin: '_main_m_json.jingjichang_icon_yhzttl' current: _slg_m_json.jingjichang_icon_yhzttl"
+    },
+    {
+      "type": "warning",
+      "text": "sheet资源被覆盖! origin: '_main_m_json.lzbh_img_di' current: _stormWar_m_json.lzbh_img_di"
+    },
+    {
+      "type": "warning",
+      "text": "sheet资源被覆盖! origin: '_main_m_json.common_img_touxiangkuang' current: _border_m_json.common_img_touxiangkuang"
+    },
+    {
+      "type": "log",
+      "text": "[RESKIN] protected configuration verified {\"version\":\"0.58.0\",\"heroRows\":5136,\"heroSlots\":86,\"portraits\":85,\"protectedHeroDifferences\":[],\"protectedSkillDifferences\":[]}"
+    },
+    {
+      "type": "log",
+      "text": "玩家数据 t"
+    },
+    {
+      "type": "log",
+      "text": "玩家数据 t"
+    },
+    {
+      "type": "log",
+      "text": "玩家数据 t"
+    },
+    {
+      "type": "log",
+      "text": "玩家数据 t"
+    },
+    {
+      "type": "log",
+      "text": "玩家数据 t"
+    },
+    {
+      "type": "log",
+      "text": "[CHARACTER-IDLE] 85 full sequences; original ID13 excluded"
+    },
+    {
+      "type": "log",
+      "text": "打开 a"
+    },
+    {
+      "type": "log",
+      "text": "打开 a"
+    },
+    {
+      "type": "log",
+      "text": "[OFFLINE] mode opened heroes"
+    },
+    {
+      "type": "log",
+      "text": "【HeroMediator】： BaseMediator:updateView HeroMediator 5 no show"
+    },
+    {
+      "type": "log",
+      "text": "【UpstarAltarMed】： BaseMediator:updateView UpstarAltarMed 3 no show"
+    },
+    {
+      "type": "log",
+      "text": "【ChampionMediator】： BaseMediator:updateView ChampionMediator 1 no show"
+    },
+    {
+      "type": "log",
+      "text": "【ChampionMediator】： BaseMediator:updateView ChampionMediator 3 no show"
+    },
+    {
+      "type": "log",
+      "text": "【BeautyMediator】： BaseMediator:updateView BeautyMediator 0 no show"
+    },
+    {
+      "type": "log",
+      "text": "【NewChampionMediator】： BaseMediator:updateView NewChampionMediator 1 no show"
+    },
+    {
+      "type": "log",
+      "text": "【SlgMediator】： BaseMediator:updateView SlgMediator 16 no show"
+    },
+    {
+      "type": "log",
+      "text": "【GuildDefenceMediator】： BaseMediator:updateView GuildDefenceMediator 1 no show"
+    },
+    {
+      "type": "log",
+      "text": "[OFFLINE][TRAIN-RPC] abyssMazeHero.GetAbyssMazeHeroInfo {\"progress\":0,\"attempts\":0,\"claims\":{},\"actions\":{\"ClearHeroList\":1,\"ChangeFormation\":1,\"Resurrection\":3},\"wins\":0,\"losses\":0,\"passed\":[],\"completedBattles\":{}}"
+    },
+    {
+      "type": "log",
+      "text": "[OFFLINE][TRAIN-RPC] abyssMaze.GetAbyssMazeInfo {\"progress\":1,\"attempts\":1,\"claims\":{},\"actions\":{\"StartGame\":1},\"wins\":1,\"losses\":0,\"passed\":[],\"completedBattles\":{}}"
+    },
+    {
+      "type": "log",
+      "text": "[OFFLINE][TRAIN-RPC] dojo.GetDojoInfo {\"progress\":7,\"attempts\":7,\"claims\":{},\"actions\":{\"GetDojoInfo\":55,\"Challenge\":7},\"wins\":7,\"losses\":0,\"passed\":[{\"progress\":6,\"battleId\":\"codex-dojo-win-1\",\"at\":1791203318},{\"progress\":7,\"battleId\":\"offline-battle-1791206735664-1054\",\"at\":1791206758}],\"completedBattles\":{\"codex-dojo-win-1\":{\"won\":true,\"at\":1791203318},\"offline-battle-1791206735664-1054\":{\"won\":true,\"at\":1791206758}}}"
+    },
+    {
+      "type": "log",
+      "text": "[OFFLINE][TRAIN-RPC] teamExpedition.GetTeamExpeditionInfo {\"progress\":3,\"attempts\":3,\"claims\":{},\"actions\":{\"GetTeamExpeditionInfo\":56,\"Challenge\":3},\"wins\":3,\"losses\":0,\"passed\":[],\"completedBattles\":{}}"
+    },
+    {
+      "type": "log",
+      "text": "[OFFLINE][TRAIN-RPC] raceTower.GetRaceTowerInfo {\"progress\":1,\"attempts\":1,\"claims\":{},\"actions\":{\"GetRaceTowerInfo\":54,\"Challenge\":1},\"wins\":1,\"losses\":0,\"passed\":[],\"completedBattles\":{}}"
+    },
+    {
+      "type": "log",
+      "text": "[OFFLINE][TRAIN-RPC] worldKing.GetInfo {\"progress\":1,\"attempts\":1,\"claims\":{},\"actions\":{\"GetInfo\":261,\"JoinMatching\":3},\"wins\":1,\"losses\":0,\"passed\":[{\"progress\":1,\"battleId\":\"offline-battle-1791206804721-1055\",\"at\":1791206831}],\"completedBattles\":{\"offline-battle-1791206804721-1055\":{\"won\":true,\"at\":1791206831}}}"
+    },
+    {
+      "type": "log",
+      "text": "【WorldKingPy】： 获取排位赛数据   GetInfoR {err: 0, ok: true, local: true, module: worldKing, action: GetInfo}"
+    },
+    {
+      "type": "log",
+      "text": "[OFFLINE][TRAIN-RPC] peakWar.GetPeakWarFreedomInfo {\"progress\":1,\"attempts\":1,\"claims\":{},\"actions\":{\"GetPeakWarFreedomInfo\":28,\"FreedomChallenge\":1,\"GetPeakWarHighLadderInfo\":4},\"wins\":1,\"losses\":0,\"passed\":[],\"completedBattles\":{}}"
+    },
+    {
+      "type": "log",
+      "text": "玩家数据 t"
+    },
+    {
+      "type": "log",
+      "text": "玩家数据 t"
+    },
+    {
+      "type": "log",
+      "text": "玩家数据 t"
+    },
+    {
+      "type": "log",
+      "text": "玩家数据 t"
+    },
+    {
+      "type": "log",
+      "text": "玩家数据 t"
+    },
+    {
+      "type": "log",
+      "text": "[OFFLINE][TRAIN-RPC] spectralTower.GetSpectralTowerInfo {\"progress\":5,\"attempts\":5,\"claims\":{},\"actions\":{\"GetSpectralTowerInfo\":23,\"EnterInto\":2,\"ChooseGuider\":2,\"TriggerEvent\":2,\"MopUp\":3},\"wins\":5,\"losses\":0,\"passed\":[],\"completedBattles\":{}}"
+    },
+    {
+      "type": "log",
+      "text": "【TeamExpeMediator】： BaseMediator:updateView TeamExpeMediator 1 no show"
+    },
+    {
+      "type": "log",
+      "text": "【TeamExpeMediator】： BaseMediator:updateView TeamExpeMediator 3 no show"
+    },
+    {
+      "type": "log",
+      "text": "【TeamExpeMediator】： BaseMediator:updateView TeamExpeMediator 4 no show"
+    },
+    {
+      "type": "log",
+      "text": "【WorldKingMediator】： BaseMediator:updateView WorldKingMediator 1 no show"
+    },
+    {
+      "type": "log",
+      "text": "【RankMediator】： BaseMediator:updateView RankMediator 2 no show"
+    },
+    {
+      "type": "log",
+      "text": "【PeakWarMed】： BaseMediator:updateView PeakWarMed 1 no show"
+    },
+    {
+      "type": "log",
+      "text": "strMd5 action=game_notice&game_notice=0&os_code=undefined&platform=lite3zbtest&project=sglite&pt_id=9&serVer=1.0.0.0&subPlatform=&time=1793324585901507310f58a0ac8e3d8ad8f60c8b85b46sglite"
+    },
+    {
+      "type": "log",
+      "text": "toGet http://127.0.0.1:8787/offline-api?action=game_notice&game_notice=0&os_code=undefined&platform=lite3zbtest&project=sglite&pt_id=9&serVer=1.0.0.0&subPlatform=&time=1793324585901&sign=a9df1c6e7a88aa307df4dd242c44f79c"
+    },
+    {
+      "type": "log",
+      "text": "[OFFLINE][TRAIN-RPC] worldKing.GetInfo {\"progress\":1,\"attempts\":1,\"claims\":{},\"actions\":{\"GetInfo\":261,\"JoinMatching\":3},\"wins\":1,\"losses\":0,\"passed\":[{\"progress\":1,\"battleId\":\"offline-battle-1791206804721-1055\",\"at\":1791206831}],\"completedBattles\":{\"offline-battle-1791206804721-1055\":{\"won\":true,\"at\":1791206831}}}"
+    },
+    {
+      "type": "log",
+      "text": "【WorldKingPy】： 获取排位赛数据   GetInfoR {err: 0, ok: true, local: true, module: worldKing, action: GetInfo}"
+    },
+    {
+      "type": "log",
+      "text": "【WorldKingMediator】： BaseMediator:updateView WorldKingMediator 1 no show"
+    },
+    {
+      "type": "log",
+      "text": "【RankMediator】： BaseMediator:updateView RankMediator 2 no show"
+    },
+    {
+      "type": "log",
+      "text": "打开 r"
+    },
+    {
+      "type": "log",
+      "text": "打开  ui HeroMainInfoViewSkin"
+    },
+    {
+      "type": "log",
+      "text": "当前模型配置 false [hero_001_01]"
+    },
+    {
+      "type": "log",
+      "text": "打开 r"
+    },
+    {
+      "type": "log",
+      "text": "打开  ui HeroMainInfoViewSkin"
+    },
+    {
+      "type": "log",
+      "text": "当前模型配置 false [hero_002_01]"
+    },
+    {
+      "type": "log",
+      "text": "打开 r"
+    },
+    {
+      "type": "log",
+      "text": "打开  ui HeroMainInfoViewSkin"
+    },
+    {
+      "type": "log",
+      "text": "当前模型配置 false [hero_003_01]"
+    },
+    {
+      "type": "log",
+      "text": "打开 r"
+    },
+    {
+      "type": "log",
+      "text": "打开  ui HeroMainInfoViewSkin"
+    },
+    {
+      "type": "log",
+      "text": "当前模型配置 false [hero_004_01]"
+    },
+    {
+      "type": "log",
+      "text": "打开 r"
+    },
+    {
+      "type": "log",
+      "text": "打开  ui HeroMainInfoViewSkin"
+    },
+    {
+      "type": "log",
+      "text": "当前模型配置 false [hero_005_01]"
+    },
+    {
+      "type": "log",
+      "text": "打开 r"
+    },
+    {
+      "type": "log",
+      "text": "打开  ui HeroMainInfoViewSkin"
+    },
+    {
+      "type": "log",
+      "text": "当前模型配置 false [hero_006_01]"
+    },
+    {
+      "type": "log",
+      "text": "打开 r"
+    },
+    {
+      "type": "log",
+      "text": "打开  ui HeroMainInfoViewSkin"
+    },
+    {
+      "type": "log",
+      "text": "当前模型配置 false [hero_007_01]"
+    },
+    {
+      "type": "log",
+      "text": "打开 r"
+    },
+    {
+      "type": "log",
+      "text": "打开  ui HeroMainInfoViewSkin"
+    },
+    {
+      "type": "log",
+      "text": "当前模型配置 false [hero_008_01]"
+    },
+    {
+      "type": "log",
+      "text": "打开 r"
+    },
+    {
+      "type": "log",
+      "text": "打开  ui HeroMainInfoViewSkin"
+    },
+    {
+      "type": "log",
+      "text": "当前模型配置 false [hero_009_01]"
+    },
+    {
+      "type": "log",
+      "text": "打开 r"
+    },
+    {
+      "type": "log",
+      "text": "打开  ui HeroMainInfoViewSkin"
+    },
+    {
+      "type": "log",
+      "text": "当前模型配置 false [hero_010_01]"
+    },
+    {
+      "type": "log",
+      "text": "打开 r"
+    },
+    {
+      "type": "log",
+      "text": "打开  ui HeroMainInfoViewSkin"
+    },
+    {
+      "type": "log",
+      "text": "当前模型配置 false [hero_011_01]"
+    },
+    {
+      "type": "log",
+      "text": "打开 r"
+    },
+    {
+      "type": "log",
+      "text": "打开  ui HeroMainInfoViewSkin"
+    },
+    {
+      "type": "log",
+      "text": "当前模型配置 false [hero_012_01]"
+    },
+    {
+      "type": "log",
+      "text": "打开 r"
+    },
+    {
+      "type": "log",
+      "text": "打开  ui HeroMainInfoViewSkin"
+    },
+    {
+      "type": "log",
+      "text": "当前模型配置 false [hero_014_01]"
+    },
+    {
+      "type": "log",
+      "text": "打开 r"
+    },
+    {
+      "type": "log",
+      "text": "打开  ui HeroMainInfoViewSkin"
+    },
+    {
+      "type": "log",
+      "text": "当前模型配置 false [hero_015_01]"
+    },
+    {
+      "type": "log",
+      "text": "打开 r"
+    },
+    {
+      "type": "log",
+      "text": "打开  ui HeroMainInfoViewSkin"
+    },
+    {
+      "type": "log",
+      "text": "当前模型配置 false [hero_016_01]"
+    },
+    {
+      "type": "log",
+      "text": "打开 r"
+    },
+    {
+      "type": "log",
+      "text": "打开  ui HeroMainInfoViewSkin"
+    },
+    {
+      "type": "log",
+      "text": "当前模型配置 false [hero_017_01]"
+    },
+    {
+      "type": "log",
+      "text": "打开 r"
+    },
+    {
+      "type": "log",
+      "text": "打开  ui HeroMainInfoViewSkin"
+    },
+    {
+      "type": "log",
+      "text": "当前模型配置 false [hero_018_01]"
+    },
+    {
+      "type": "log",
+      "text": "打开 r"
+    },
+    {
+      "type": "log",
+      "text": "打开  ui HeroMainInfoViewSkin"
+    },
+    {
+      "type": "log",
+      "text": "当前模型配置 false [hero_019_01]"
+    },
+    {
+      "type": "log",
+      "text": "打开 r"
+    },
+    {
+      "type": "log",
+      "text": "打开  ui HeroMainInfoViewSkin"
+    },
+    {
+      "type": "log",
+      "text": "当前模型配置 false [hero_089_03]"
+    },
+    {
+      "type": "log",
+      "text": "打开 r"
+    },
+    {
+      "type": "log",
+      "text": "打开  ui HeroMainInfoViewSkin"
+    },
+    {
+      "type": "log",
+      "text": "当前模型配置 false [hero_021_01]"
+    },
+    {
+      "type": "log",
+      "text": "打开 r"
+    },
+    {
+      "type": "log",
+      "text": "打开  ui HeroMainInfoViewSkin"
+    },
+    {
+      "type": "log",
+      "text": "当前模型配置 false [hero_022_01]"
+    }
+  ],
+  "images": [
+    "http://127.0.0.1:8787/assets/street/characters/001/avatar.png",
+    "http://127.0.0.1:8787/assets/street/ui/loading/courier-shutter-v1.jpg?v=f51ede56a398a84e",
+    "http://127.0.0.1:8787/assets/street/ui/loading/industrial-gauge-housing-v1.png?v=efe29070639145b5",
+    "http://127.0.0.1:8787/assets/street/ui/loading/industrial-gauge-fill-v1.png?v=104e11a8c9ff7bcb",
+    "http://127.0.0.1:8787/assets/street/ui/loading/industrial-gauge-shadow-v1.png?v=6e3fc624c7722ec7",
+    "http://127.0.0.1:8787/resource/assets/ui/login/common_denglu_bg_01_35d6c6f1.jpg",
+    "http://127.0.0.1:8787/resource/assets/ui/login/common_denglu_bg_02_ef7ba7b4.png",
+    "http://127.0.0.1:8787/resource/assets/ui/login/_login_m_5860d256.png",
+    "http://127.0.0.1:8787/resource/assets/ui/common/_btn_lb/_btn_lb_m_54b18acb.png",
+    "http://127.0.0.1:8787/resource/assets/ui/common/btn/beibao_img_gouxuankuang_d4c48260.png",
+    "http://127.0.0.1:8787/assets/street/ui/sheet-variants/_main_m_json.common_btn_huang.png?v=46bb9e82873a3432",
+    "http://127.0.0.1:8787/resource/assets/font/white_black_5eb767cc.png",
+    "http://127.0.0.1:8787/assets/street/ui/controls/beibao_img_gou_png.png?v=0054c4155dc7acb5",
+    "http://127.0.0.1:8787/resource/assets/ui/hangUpSystem/_hangUpSystem_m_4710a7de.png",
+    "http://127.0.0.1:8787/assets/street/ui/controls/wujiang_icon_xiangqing_png.png?v=5fe2466545934498",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/icon/common_icon_gztb_01_960c9841.png",
+    "http://127.0.0.1:8787/resource/assets/ui/main/_main_m_8eeb9227.png",
+    "http://127.0.0.1:8787/resource/assets/ui/stormWar/_stormWar_m_929ad2be.png",
+    "http://127.0.0.1:8787/resource/assets/font/gold_num_1285e620.png",
+    "http://127.0.0.1:8787/resource/assets/ui/activity/first_recharge/xs_img_xinxitiao_e4db9893.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/icon/common_icon_guanzhidi_deb06694.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/icon/common_icon_yydf2_ea7660a2.png",
+    "http://127.0.0.1:8787/resource/assets/ui/common/scale/common_bg_toumingdi_ef16947a.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/icon/common_icon_sanguozhi_27bd5b36.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/icon/common_icon_sanguowushuang_f7af138a.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/icon/common_icon_qunyingge2_f2301455.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/icon/common_icon_pimodian2_d5650b23.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/icon/wsg_cc81154d.png",
+    "http://127.0.0.1:8787/resource/assets/font/sgz_city_num_fca1d541.png",
+    "http://127.0.0.1:8787/resource/assets/ui/common/img/sldb_img_jiantou2_752c4260.png",
+    "http://127.0.0.1:8787/assets/street/ui/navigation/_main_m_json.main_icon_wujiang.png?v=6a29511428a4d86c",
+    "http://127.0.0.1:8787/assets/street/ui/navigation/_hangUpSystem_m_json.main_img_tubiaodik.png?v=f5c2b53f1c80db31",
+    "http://127.0.0.1:8787/assets/street/ui/navigation/_main_m_json.main_icon_ybd.png?v=1578295d77f14de9",
+    "http://127.0.0.1:8787/assets/street/ui/navigation/_main_m_json.main_icon_lilian.png?v=9bd97c21fc2466fc",
+    "http://127.0.0.1:8787/assets/street/ui/navigation/_main_m_json.main_icon_zhuangbei.png?v=021829d6b65416dc",
+    "http://127.0.0.1:8787/assets/street/ui/navigation/_main_m_json.main_icon_gonghui.png?v=28084788984c314c",
+    "http://127.0.0.1:8787/assets/street/ui/navigation/_main_m_json.main_icon_zhandou.png?v=e2bee045cb65f1ea",
+    "http://127.0.0.1:8787/assets/street/ui/navigation/_main_m_json.main_icon_baoxiang.png?v=222fbf91d0335416",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/head1/head1_zhu_10_fdf764b.png",
+    "http://127.0.0.1:8787/resource/assets/ui/common/img/zzq_img_jjjdtd_99e86eba.png",
+    "http://127.0.0.1:8787/resource/assets/ui/common/img/zzq_img_jjjdt_bc88ebd3.png",
+    "http://127.0.0.1:8787/assets/street/environments/workshop-courtyard-menu.jpg?v=cd76228e114ba3f0",
+    "http://127.0.0.1:8787/assets/street/ui/_hero_m_json.wujiang_img_renwu.png?v=298a243d17d8bead",
+    "http://127.0.0.1:8787/assets/street/ui/controls/common_btn_hong_png.png?v=0c5fb62a9b9fe44b",
+    "http://127.0.0.1:8787/resource/assets/ui/hero/_hero_m_91e6b479.png",
+    "http://127.0.0.1:8787/resource/assets/ui/transform/wujiang_btn_wjtp1_edd6b652.png",
+    "http://127.0.0.1:8787/resource/assets/ui/hero/sgws_img_renwu_e4562bdd.png",
+    "http://127.0.0.1:8787/resource/assets/font/hero_level_num_3746d426.png",
+    "http://127.0.0.1:8787/assets/street/ui/currency/common_icon_tongbi_png.png?v=37c9b4b8a7087d39",
+    "http://127.0.0.1:8787/assets/street/ui/controls/common_btn_tianjia_png.png?v=0b151eb87da059a4",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/icon/common_icon_danyao1_753dc941.png",
+    "http://127.0.0.1:8787/assets/street/ui/hero-list-cards/common_img_liebiao_5_png.png?v=69077da9ef022d95",
+    "http://127.0.0.1:8787/assets/street/characters/077/bind_half_skin_077_1_png.png",
+    "http://127.0.0.1:8787/assets/street/ui/controls/common_btn_an_png.png?v=d5b04ee2860f6bd5",
+    "http://127.0.0.1:8787/resource/assets/font/sgz_reward_num_de199144.png",
+    "http://127.0.0.1:8787/assets/street/characters/075/bind_half_hero_075_1_png.png",
+    "http://127.0.0.1:8787/assets/street/characters/082/bind_half_hero_082_1_png.png",
+    "http://127.0.0.1:8787/resource/assets/ui/common/_border/_border_m_40c0a74f.png",
+    "http://127.0.0.1:8787/assets/street/characters/079/bind_half_skin_079_1_png.png",
+    "http://127.0.0.1:8787/assets/street/characters/076/bind_half_hero_076_1_png.png",
+    "http://127.0.0.1:8787/assets/street/ui/hero-details/panel.png?v=5df78fe6a6eac25e",
+    "http://127.0.0.1:8787/assets/street/ui/hero-details/workshop.png?v=efda81253279270f",
+    "http://127.0.0.1:8787/resource/assets/ui/zbxx/zbxx_img_baidi_a2f1ed3c.png",
+    "http://127.0.0.1:8787/assets/street/ui/hero-details/title.png?v=81d158ce52218fff",
+    "http://127.0.0.1:8787/resource/assets/ui/tx/tx_img_yinying_db63549c.png",
+    "http://127.0.0.1:8787/assets/street/idle/001/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/001/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/ui/hero/wujiang_txt_zhi%20zhen_494a24b6.png",
+    "http://127.0.0.1:8787/assets/street/ui/controls/common_btn_fanhui_png.png?v=e6e8046278b42e31",
+    "http://127.0.0.1:8787/resource/assets/ui/common/_hero_ar/_hero_ar_m_949f4144.png",
+    "http://127.0.0.1:8787/resource/assets/font/hero_name_3acb45ae.png",
+    "http://127.0.0.1:8787/resource/assets/font/fightCap_ddedec63.png",
+    "http://127.0.0.1:8787/assets/street/ui/controls/common_btn_qiehuan_new_png.png?v=1775e51c1795f1dd",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_001_01_f49bd81a.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_001_02_26212398.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_001_03_8d94075a.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_001_04_e93d0094.png",
+    "http://127.0.0.1:8787/resource/assets/font/white_red_aa301d3e.png",
+    "http://127.0.0.1:8787/resource/assets/ui/common/_btn_yq/common_yq_0_a47c7003.png",
+    "http://127.0.0.1:8787/resource/assets/ui/common/_btn_yq/common_yq_1_4fbf6b5b.png",
+    "http://127.0.0.1:8787/resource/assets/font/tabbar_up_831e5f5f.png",
+    "http://127.0.0.1:8787/resource/assets/font/tabbar_down_b126cb0b.png",
+    "http://127.0.0.1:8787/assets/street/idle/001/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/002/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/002/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_002_01_ae6029c1.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_002_02_ef9c6dcf.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_002_03_c08d4fdd.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_002_04_6981b5c1.png",
+    "http://127.0.0.1:8787/assets/street/idle/002/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/003/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/003/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_003_01_674719a9.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_003_02_2a12a958.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_003_03_463f96d3.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_003_04_8b06f5cd.png",
+    "http://127.0.0.1:8787/assets/street/idle/003/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/004/battle-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_004_01_4250d145.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_004_02_a8655087.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_004_03_d73d7207.png",
+    "http://127.0.0.1:8787/assets/street/idle/004/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_004_04_a0e216aa.png",
+    "http://127.0.0.1:8787/assets/street/idle/005/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/005/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_005_02_8e6eb218.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_005_01_9b15f6f9.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_005_03_be441409.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_005_04_b245dd6e.png",
+    "http://127.0.0.1:8787/assets/street/ui/controls/common_btn_zise_png.png?v=49876fe4eb697cf9",
+    "http://127.0.0.1:8787/assets/street/idle/006/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/006/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_006_01_431dc529.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_006_02_64963e4a.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_006_03_e79caf97.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_006_04_f4a1cf19.png",
+    "http://127.0.0.1:8787/assets/street/idle/006/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/007/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_007_01_d0e8c2a0.png",
+    "http://127.0.0.1:8787/assets/street/idle/007/battle-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_007_02_2c4a4eea.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_007_03_5db85fef.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_007_04_700a3e9d.png",
+    "http://127.0.0.1:8787/assets/street/idle/007/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/008/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/008/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_008_03_f4a651.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_008_01_4ef58070.png",
+    "http://127.0.0.1:8787/assets/street/idle/008/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/009/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/009/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_009_01_4d72323a.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_009_03_e1bf64a3.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_010_01_8b8efcf6.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_010_03_efa84673.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_010_02_157d5af.png",
+    "http://127.0.0.1:8787/assets/street/idle/010/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/010/detail-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/011/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/011/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_011_01_5cde7a3a.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_011_02_25f37540.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_011_03_d98e3fea.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_011_04_31d0174f.png",
+    "http://127.0.0.1:8787/assets/street/idle/011/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/012/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/012/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_012_01_79998a04.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_012_02_52aef057.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_012_03_a56ab8b0.png",
+    "http://127.0.0.1:8787/assets/street/idle/012/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/014/detail-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/014/battle-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_014_01_cf998728.png",
+    "http://127.0.0.1:8787/assets/street/idle/014/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/015/battle-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_015_01_81b6af8f.png",
+    "http://127.0.0.1:8787/assets/street/idle/015/detail-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/015/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/016/battle-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_016_01_39fb20ed.png",
+    "http://127.0.0.1:8787/assets/street/idle/016/detail-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/016/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/017/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/017/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_017_01_539300c0.png",
+    "http://127.0.0.1:8787/assets/street/idle/018/battle-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_018_02_f7460668.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_018_01_50c3cbe2.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_018_03_42c4bb9e.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_018_04_5153e084.png",
+    "http://127.0.0.1:8787/assets/street/idle/018/detail-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/018/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/019/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/019/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_019_01_b709b96f.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_019_02_d1346483.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_019_03_361843d7.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_019_04_5d043d65.png",
+    "http://127.0.0.1:8787/assets/street/idle/019/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/020/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_020_02_c3812360.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_020_01_500f1650.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_020_03_f62359c3.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_020_04_1ad97877.png",
+    "http://127.0.0.1:8787/assets/street/idle/021/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/021/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_021_01_6abaa051.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_021_02_86b6779e.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_021_03_c8ce7d.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_021_04_a174429a.png",
+    "http://127.0.0.1:8787/assets/street/idle/021/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/022/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/022/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_022_01_213d0e9a.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_022_02_59e65cd4.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_022_03_55d4af31.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_022_04_aa379588.png",
+    "http://127.0.0.1:8787/assets/street/idle/022/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/023/detail-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/023/battle-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_023_01_2085865.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_023_02_9546dc19.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_023_03_7d404901.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_023_04_464d38d0.png",
+    "http://127.0.0.1:8787/assets/street/idle/023/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/024/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/024/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_024_01_cf12213a.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_024_02_172e8410.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_024_03_990aab13.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_024_04_610ff948.png",
+    "http://127.0.0.1:8787/assets/street/idle/024/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/025/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_025_01_7cac5468.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_025_02_6be76b00.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_025_03_6b04f75f.png",
+    "http://127.0.0.1:8787/assets/street/idle/025/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/025/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/026/battle-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_026_01_74e469a6.png",
+    "http://127.0.0.1:8787/assets/street/idle/026/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_026_03_3f37826e.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_026_02_f4fea019.png",
+    "http://127.0.0.1:8787/assets/street/idle/027/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/027/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_027_01_e554fd2a.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_027_03_f570073f.png",
+    "http://127.0.0.1:8787/assets/street/idle/027/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/028/battle-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_028_01_d2cb7fbb.png",
+    "http://127.0.0.1:8787/assets/street/idle/028/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_028_03_ef416c4f.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_028_02_108a283b.png",
+    "http://127.0.0.1:8787/assets/street/idle/029/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_029_02_4fc2c970.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_029_03_c12d9bf9.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_029_01_1e75c57a.png",
+    "http://127.0.0.1:8787/assets/street/idle/029/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/029/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/030/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/030/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_030_03_9e3f826.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_030_01_5ab13eee.png",
+    "http://127.0.0.1:8787/assets/street/idle/030/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/031/detail-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/031/battle-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_031_01_5181b3bb.png",
+    "http://127.0.0.1:8787/assets/street/idle/031/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/032/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/032/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_032_01_e7a319c4.png",
+    "http://127.0.0.1:8787/assets/street/idle/032/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/033/battle-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_033_01_b38460ba.png",
+    "http://127.0.0.1:8787/assets/street/idle/033/detail-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/033/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/034/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/034/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_034_01_98c703.png",
+    "http://127.0.0.1:8787/assets/street/idle/034/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/034/detail-2.webp",
+    "http://127.0.0.1:8787/assets/street/idle/035/battle-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_035_01_f53ab558.png",
+    "http://127.0.0.1:8787/assets/street/idle/035/detail-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/035/detail-1.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_036_01_55cdea03.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_036_02_ba4f09d7.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_036_03_c4b63b21.png",
+    "http://127.0.0.1:8787/assets/street/idle/036/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_036_04_79dd3bb5.png",
+    "http://127.0.0.1:8787/assets/street/idle/036/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/036/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/037/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/037/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_037_01_1dca9dfa.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_037_02_cdf60cfb.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_037_03_ee8b72d9.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_037_04_1ccee7e0.png",
+    "http://127.0.0.1:8787/assets/street/idle/037/detail-1.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_038_02_24233220.png",
+    "http://127.0.0.1:8787/assets/street/idle/038/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/038/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_038_01_750f16d2.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_038_03_6ac652db.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_038_04_478c8104.png",
+    "http://127.0.0.1:8787/assets/street/idle/038/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/039/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/039/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_039_01_193e3620.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_039_02_b5a7d146.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_039_03_c5581c63.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_039_04_e76be9ce.png",
+    "http://127.0.0.1:8787/assets/street/idle/039/detail-1.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_040_01_f1f3458b.png",
+    "http://127.0.0.1:8787/assets/street/idle/040/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/040/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_040_03_c0d9d24f.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_040_02_ee5e8404.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_040_04_611e8a92.png",
+    "http://127.0.0.1:8787/assets/street/idle/040/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/041/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/041/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_041_01_b34ef298.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_041_02_373e12ca.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_041_03_e7b0c206.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_041_04_f6939fa8.png",
+    "http://127.0.0.1:8787/assets/street/idle/041/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/042/battle-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_042_01_6086f93c.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_042_03_3f23fbab.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_042_02_cda655f7.png",
+    "http://127.0.0.1:8787/assets/street/idle/042/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_042_04_c5fd6df0.png",
+    "http://127.0.0.1:8787/assets/street/idle/042/detail-1.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_043_01_f9c87984.png",
+    "http://127.0.0.1:8787/assets/street/idle/043/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/043/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_043_02_40d2b2a4.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_043_03_91d258c5.png",
+    "http://127.0.0.1:8787/assets/street/idle/043/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/044/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/044/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_044_01_7e3e9be.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_044_02_711dc680.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_044_03_f451f0da.png",
+    "http://127.0.0.1:8787/assets/street/idle/044/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/045/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/045/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_045_01_873b4aba.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_045_03_9897560e.png",
+    "http://127.0.0.1:8787/assets/street/idle/045/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/046/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/046/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_046_01_183c4d09.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_046_02_5a587441.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_046_03_8e87d2b8.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_046_04_37b1b4dc.png",
+    "http://127.0.0.1:8787/assets/street/idle/046/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/047/battle-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_047_01_2b9cfae6.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_047_02_46160d3e.png",
+    "http://127.0.0.1:8787/assets/street/idle/047/detail-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/047/detail-1.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_048_01_3971b5fd.png",
+    "http://127.0.0.1:8787/assets/street/idle/048/detail-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/048/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/049/battle-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_049_01_e2efd49e.png",
+    "http://127.0.0.1:8787/assets/street/idle/049/detail-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/049/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/050/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/050/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_050_01_55c1b22b.png",
+    "http://127.0.0.1:8787/assets/street/idle/051/battle-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_051_01_60a2872f.png",
+    "http://127.0.0.1:8787/assets/street/idle/051/detail-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/051/detail-1.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_052_01_b7b34250.png",
+    "http://127.0.0.1:8787/assets/street/idle/052/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/052/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_053_01_92d699f1.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_053_03_ee980555.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_053_02_4d0d175e.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_053_04_cbb8d85d.png",
+    "http://127.0.0.1:8787/assets/street/idle/053/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/053/detail-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/053/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/054/detail-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/054/battle-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_054_01_2d758a0a.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_054_02_b4ed9d3b.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_054_03_6d54a2ff.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_054_04_78dc4fd8.png",
+    "http://127.0.0.1:8787/assets/street/idle/054/detail-1.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_055_01_5462bced.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_055_02_8c56a95a.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_055_03_5d2e58b5.png",
+    "http://127.0.0.1:8787/assets/street/idle/055/battle-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_055_04_752299b9.png",
+    "http://127.0.0.1:8787/assets/street/idle/055/detail-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/056/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/056/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_056_01_a81eaf20.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_056_02_1bd2ba2f.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_056_03_70470157.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_056_04_3ed5eade.png",
+    "http://127.0.0.1:8787/assets/street/idle/056/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/057/battle-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_057_01_2b16c73e.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_057_03_b07e9669.png",
+    "http://127.0.0.1:8787/assets/street/idle/057/detail-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/058/battle-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_058_01_da13b23d.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_058_03_14e557b9.png",
+    "http://127.0.0.1:8787/assets/street/idle/058/detail-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/058/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/059/battle-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_059_01_7db6074d.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_059_03_36f2356d.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_059_02_aa4a27a3.png",
+    "http://127.0.0.1:8787/assets/street/idle/059/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_059_04_52eb1a7b.png",
+    "http://127.0.0.1:8787/assets/street/idle/059/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/060/revision-d38c9e3d2c68c3bf/battle-8178c1eb27715af6.webp",
+    "http://127.0.0.1:8787/assets/street/idle/060/revision-d38c9e3d2c68c3bf/detail-102de672462af3bb.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_060_01_3c985586.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_060_02_68bf85cf.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_060_03_c69c14b6.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_060_04_bfe0e4fb.png",
+    "http://127.0.0.1:8787/assets/street/idle/061/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/061/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_061_03_ceeb4220.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_061_01_bf3611d0.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_061_02_bd0c6dd8.png",
+    "http://127.0.0.1:8787/assets/street/idle/061/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/062/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_062_03_14d12d2.png",
+    "http://127.0.0.1:8787/assets/street/idle/062/battle-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_062_02_b00249c4.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_062_01_e9f6ebe.png",
+    "http://127.0.0.1:8787/assets/street/idle/062/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/063/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/063/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_063_03_2052f53e.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_063_01_d0e17e.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_063_02_35c78508.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_063_04_99889ddf.png",
+    "http://127.0.0.1:8787/assets/street/idle/063/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/064/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/064/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_064_02_64e43443.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_064_01_bee0fc56.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_064_03_5c95ce87.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_064_04_7c09ea81.png",
+    "http://127.0.0.1:8787/assets/street/idle/064/detail-1.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_065_01_e62e34ee.png",
+    "http://127.0.0.1:8787/assets/street/idle/065/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/065/detail-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/065/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/066/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/066/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_066_01_d9374788.png",
+    "http://127.0.0.1:8787/assets/street/idle/067/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/067/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_067_01_927bf6b4.png",
+    "http://127.0.0.1:8787/assets/street/idle/067/detail-1.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_068_01_d9757e78.png",
+    "http://127.0.0.1:8787/assets/street/idle/068/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/068/detail-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/068/detail-1.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_069_01_82573f15.png",
+    "http://127.0.0.1:8787/assets/street/idle/069/detail-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/069/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/069/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/070/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/070/detail-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/070/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/071/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/071/detail-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/072/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/072/detail-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/072/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/073/detail-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/073/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/073/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/073/detail-2.webp",
+    "http://127.0.0.1:8787/assets/street/idle/074/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/074/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_074_02_46deca91.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_074_03_617ed455.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_074_01_b2029d83.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_074_04_4f1f7df3.png",
+    "http://127.0.0.1:8787/assets/street/idle/074/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/075/detail-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/075/battle-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_075_01_5ee8ae22.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_075_02_7ad0e04b.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_075_03_867e86dc.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_075_05_e97b7ed1.png",
+    "http://127.0.0.1:8787/assets/street/idle/076/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/076/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_076_01_a489d95c.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_076_03_8ab3da54.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_076_02_676268c1.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_076_05_8d890ab3.png",
+    "http://127.0.0.1:8787/assets/street/idle/076/detail-1.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_077_01_c53ab8b7.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_077_04_f6ec3b06.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_077_03_11004c75.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_077_02_e199d9a5.png",
+    "http://127.0.0.1:8787/assets/street/idle/077/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_077_05_7f9bc6d5.png",
+    "http://127.0.0.1:8787/assets/street/idle/078/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/078/detail-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/078/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/079/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/079/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_079_01_55df86ce.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_079_04_d412aa51.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_079_02_486461b9.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_079_03_f05e2e64.png",
+    "http://127.0.0.1:8787/assets/street/idle/079/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/080/battle-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_080_02_703ac790.png",
+    "http://127.0.0.1:8787/assets/street/idle/080/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_080_01_d9ffab41.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_080_03_c56c967f.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_080_04_f30b6775.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_080_05_583d3df.png",
+    "http://127.0.0.1:8787/assets/street/idle/080/detail-1.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_081_01_198fff0c.png",
+    "http://127.0.0.1:8787/assets/street/idle/081/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/081/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_081_02_5d234874.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_081_03_740228ae.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_081_04_d013d79.png",
+    "http://127.0.0.1:8787/assets/street/idle/082/detail-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/094/battle-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_082_01_e7e42a79.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_082_02_13401e6c.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_082_03_63e7ff3d.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_082_05_f900e8da.png",
+    "http://127.0.0.1:8787/assets/street/idle/082/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/083/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/083/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_083_01_9270f04.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_083_02_8b27b174.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_083_03_e0317b09.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_083_04_788c2f27.png",
+    "http://127.0.0.1:8787/assets/street/idle/083/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/084/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/084/detail-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/084/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/085/battle-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_085_03_1fb7f119.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_085_02_fd355578.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_085_01_2ceb6bcd.png",
+    "http://127.0.0.1:8787/assets/street/idle/085/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_085_05_8bab4d00.png",
+    "http://127.0.0.1:8787/assets/street/idle/085/detail-1.webp",
+    "http://127.0.0.1:8787/assets/street/idle/085/detail-2.webp",
+    "http://127.0.0.1:8787/assets/street/idle/082/battle-0.webp",
+    "http://127.0.0.1:8787/assets/street/idle/094/detail-0.webp",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_094_01_6ee3aaeb.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_094_02_a018ce29.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_094_03_7cd47c07.png",
+    "http://127.0.0.1:8787/resource/assets/shuzhi/jinnengtubiao/common_icon_094_04_fbd12111.png"
+  ]
+}

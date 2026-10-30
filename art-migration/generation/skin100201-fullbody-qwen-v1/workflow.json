@@ -1,0 +1,99 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "4": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "2",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ],
+      "prompt": "Use the reference only for the exact adult yellow bull identity: same face, black eye mask, short black hair, dark horns, purple muzzle and hands, body proportions. Create a genuinely independent game skin: an absurd neighborhood night-market variety-show host. Replace the plain brown sweater and jeans with a tailored asymmetrical TEAL and deep VIOLET patchwork stage jacket, soft ivory ruffled collar, brass buttons, violet wide cropped trousers, teal-violet two-tone canvas sneakers with ivory soles. Small orange pompom on jacket lapel. Keep a single walnut held in anatomical RIGHT hand on viewer LEFT near shoulder as an understated juggling prop; LEFT hand relaxed empty. No weapons. Relaxed balanced full-body standing pose facing viewer RIGHT in three-quarter view. Tactile2.5D semi-realistic semi-cartoon production style, actual cloth weave and enamel accents, friendly absurd street-block personality. Entire horns, ears, fingers, walnut and BOTH shoes visible with generous blank margins. Plain flat medium-gray studio background for later precise alpha matting. No text, logo, watermark, ground shadow, extra characters, scenery, particle effects or objects. Distinct outfit silhouette and colors, not a hue-shift of the original sweater.\n",
+      "negative_prompt": "blurry, cropped body, duplicate character, watermark, unreadable text, medieval armor, ancient Chinese costume",
+      "resolution": 1024,
+      "images.image_1": [
+        "8",
+        0
+      ]
+    }
+  },
+  "5": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "seed": 2026102901,
+      "steps": 32,
+      "cfg": 4,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "positive": [
+        "4",
+        0
+      ],
+      "negative": [
+        "4",
+        1
+      ],
+      "latent_image": [
+        "4",
+        2
+      ],
+      "denoise": 1
+    }
+  },
+  "6": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "5",
+        0
+      ],
+      "vae": [
+        "3",
+        0
+      ]
+    }
+  },
+  "7": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "6",
+        0
+      ],
+      "filename_prefix": "street-reskin/qwen"
+    }
+  },
+  "8": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "street_f52e62f88af27709.png"
+    }
+  }
+}

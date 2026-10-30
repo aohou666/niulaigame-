@@ -1,0 +1,11 @@
+{
+  "sourceAlpha": {
+    "path": "art-migration/generation/skin100201-unicycle-matte-v2/skin100201_unicycle_alpha_00001_.png",
+    "sha256": "9b44e63d539d1908871ef342165e1e548a374a2f287225c158991b00bfed7de0"
+  },
+  "operation": "Zero alpha <=64; preserve original RGB and alpha >64",
+  "reason": "BEN2 left background alpha up to45 on outer15-pixel border; observed body bbox >64 safely inside image",
+  "removedPixels": 15051,
+  "outputSha256": "8e90991f145eee0e88562f2edfd01c000ce902806837d7c0200a976e41fae939",
+  "manualReview": "approved-high-contrast-preview"
+}

@@ -1,0 +1,35 @@
+{
+  "skinCode": 100201,
+  "heroId": 2,
+  "originalName": "盛装小丑",
+  "originalModel": "hero_skin_002_01",
+  "status": "independent-unicycle-design-approved-alpha-pending",
+  "newDesign": "街区夜市杂耍掌柜：保留老八黄牛身份与面罩，独立青紫拼色演出夹克/围领/宽裤与彩鞋，区别基础棕毛衣牛仔裤；最终道具和动作须按原模型逐项核对",
+  "references": [
+    {
+      "path": "local_game/assets/street/characters/002/portrait.png",
+      "sha256": "f52e62f88af27709029d5d694f927f5ba53c82547c1a5412f70b5cdb5023b651"
+    },
+    {
+      "path": "local_game/resource/assets/shuzhi/half/half_skin_002_1_b8290903.png",
+      "sha256": "1739b7b4d5a9cbedbe2f5282d241e943a9175cf8c2d61446672c531707ffa082"
+    },
+    {
+      "path": "local_game/resource/assets/shuzhi/pifuka/wujiang_img_pifukasmy_eaf2085c.png",
+      "sha256": "ab2ccd9c17c6504e4e2f0c334694542359b1e8240c25c2b302eaba826d3ea722"
+    }
+  ],
+  "requiredStages": [
+    "independent full-body art",
+    "separate avatar/avatar2/halfPic/dermaPic bindings",
+    "native skin action and effect inventory",
+    "continuous motions and alpha review",
+    "actual equip/view/battle verification"
+  ],
+  "fullyComplete": false,
+  "actualProps": {
+    "rightHand": "one walnut",
+    "leftHand": "two red-ivory striped balls",
+    "vehicle": "one copper/teal pedal unicycle"
+  }
+}

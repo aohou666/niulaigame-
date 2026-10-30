@@ -1,0 +1,50 @@
+{
+  "promptId": "3f0e2225-fa04-472d-a79c-8c901a7ad4d1",
+  "submittedUtc": "2026-10-30T01:31:29Z",
+  "status": "generated-unreviewed",
+  "provider": "local-comfyui",
+  "workflowSha256": "e4f4580886d2f463a0f20931dadb78414d715adf34b1eacbff65630e84bfd598",
+  "response": {
+    "prompt_id": "3f0e2225-fa04-472d-a79c-8c901a7ad4d1",
+    "number": 1,
+    "node_errors": {}
+  },
+  "comfyStatus": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "3f0e2225-fa04-472d-a79c-8c901a7ad4d1",
+          "timestamp": 1793323889415
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "1",
+            "2",
+            "3"
+          ],
+          "prompt_id": "3f0e2225-fa04-472d-a79c-8c901a7ad4d1",
+          "timestamp": 1793323889423
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "3f0e2225-fa04-472d-a79c-8c901a7ad4d1",
+          "timestamp": 1793324015889
+        }
+      ]
+    ]
+  },
+  "outputs": [
+    {
+      "path": "art-migration/generation/skin100201-unicycle-qwen-v2/qwen_00237_.png",
+      "sha256": "cca26c715c9c206143014511517fedcf254d6d9d8cb1ef2f881bc3830f16d3c4"
+    }
+  ]
+}
