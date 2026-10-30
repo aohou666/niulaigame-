@@ -79,3 +79,10 @@ v0.69 `character-idle.js`新增可选data.skins和按模型/拥有者选择独�
 
 ## v0.74接续优先
 125皮肤属性名称/值按AttrConfig修复并检查，移除无效_png和缺失默认pf_img_baojizi_png请求。剩9键/17异常，面板整体仍fail。皮肤容器指定脚底450使预览低于标题，但人物未贴背景台面/旧卡拉伸仍开issue。85详情和100201正式待机循环回归通过；1902依赖索引通过，10角色1876动作检查全部通过。没有活动生成任务，普攻v1/v2和技能v1均已拒收不抠像。v74完成后推72/73/74并核对SHA。
+
+推送已核对：v0.74 HEAD和delivery/main均a4b005c92f6cdba5ae55d52f14cba24c0db823e4；1902依赖HEAD通过。下一推送v0.77（75/76/77）。
+
+## v0.75在做
+修复HeroDermaItem横图拉伸：原生类为私有未导出，首次game.HeroDermaItem补丁无效、比例测试失败；现从this.list_derma.itemRenderer取得实际类，4张原生135x82纹理按159x96.58显示并居中，125属性检查通过。全85/10角色回归运行中，未提交v75。官方佩戴图标工具cell228正在生成，完成必须保存到项目，不重复提交。
+
+v0.75全85/1876动作/1902依赖/台账复查全部通过，待提交。官方佩戴图标cell228已完成保存generation/skin-panel-equip-official-v1；下一步验64x64及实际ButtonSkinIcon2，接入缺失common_icon_peidai。保留所有其他缺口，下一推送v0.77。

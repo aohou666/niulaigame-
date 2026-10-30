@@ -1043,6 +1043,29 @@
                             if (cb) cb();
                         };
                     }
+                    function installOfflineCardAspect(DermaItemRenderer) {
+                        if (!DermaItemRenderer || DermaItemRenderer.prototype._offlineCardAspectPatched) return;
+                        var originalDermaItemDataChanged = DermaItemRenderer.prototype.dataChanged;
+                        DermaItemRenderer.prototype.dataChanged = function () {
+                            var image = this.img_dermaType;
+                            if (!image._offlineCardAspectListener) {
+                                image._offlineCardAspectListener = function () {
+                                    var texture = image.texture;
+                                    if (!texture || !texture.textureWidth || !texture.textureHeight) return;
+                                    var scale = Math.min(159 / texture.textureWidth, 246 / texture.textureHeight);
+                                    image.scale9Grid = null;
+                                    image.width = texture.textureWidth * scale;
+                                    image.height = texture.textureHeight * scale;
+                                    image.horizontalCenter = 0; image.verticalCenter = 0;
+                                };
+                                image.addEventListener(egret.Event.COMPLETE, image._offlineCardAspectListener, image);
+                            }
+                            var result = originalDermaItemDataChanged.apply(this, arguments);
+                            image._offlineCardAspectListener();
+                            return result;
+                        };
+                        DermaItemRenderer.prototype._offlineCardAspectPatched = true;
+                    }
                     if (game.HeroDermaPanel && !game.HeroDermaPanel.prototype._offlineSkinPanelPatched) {
                         // Attribute codes in HeroDermaLO use AttrConfig, not the battle EAttrType enum.
                         // Create empty image slots so the skin does not request its absent default Crit image.
@@ -1059,6 +1082,7 @@
                         var originalSkinInitList = game.HeroDermaPanel.prototype.initList;
                         game.HeroDermaPanel.prototype.initList = function () {
                             originalSkinInitList.call(this);
+                            installOfflineCardAspect(this.list_derma.itemRenderer);
                             var panel = this;
                             var selectedCode = Number(this._offlineSelectedDermaCode) || Number(this.dermaCode) || 0;
                             var entries = Object.keys(config.HeroDermaLO.Store).map(function (key) {
