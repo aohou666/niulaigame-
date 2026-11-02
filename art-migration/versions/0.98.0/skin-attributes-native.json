@@ -1,0 +1,4527 @@
+{
+  "pass": true,
+  "scope": "All skin attribute text/values using production updateDermaInfo; model rendering isolated only during sweep. Worn-state test uses browser-memory hero.dermaCode only, restored after capture; no equip transaction. Whole panel still has unrelated errors.",
+  "frameImages": [
+    {
+      "key": "common_img_jichukuang_09_png",
+      "texture": [
+        640,
+        346
+      ],
+      "expected": [
+        640,
+        346
+      ],
+      "draw": [
+        662,
+        900
+      ],
+      "grid": {
+        "x": 302,
+        "y": 165,
+        "width": 18,
+        "height": 16
+      }
+    },
+    {
+      "key": "common_img_heiditiao_01_png",
+      "texture": [
+        285,
+        38
+      ],
+      "expected": [
+        285,
+        38
+      ],
+      "draw": [
+        285,
+        38
+      ],
+      "grid": {
+        "x": 22,
+        "y": 4,
+        "width": 10,
+        "height": 30
+      }
+    },
+    {
+      "key": "common_img_heiditiao_03_png",
+      "texture": [
+        202,
+        39
+      ],
+      "expected": [
+        202,
+        39
+      ],
+      "draw": [
+        202.27,
+        38.89
+      ],
+      "grid": {
+        "x": 8,
+        "y": 3,
+        "width": 30,
+        "height": 21
+      }
+    },
+    {
+      "key": "common_img_heiditiao_03_png",
+      "texture": [
+        202,
+        39
+      ],
+      "expected": [
+        202,
+        39
+      ],
+      "draw": [
+        202.27,
+        38.89
+      ],
+      "grid": {
+        "x": 8,
+        "y": 3,
+        "width": 30,
+        "height": 21
+      }
+    },
+    {
+      "key": "common_img_heiditiao_03_png",
+      "texture": [
+        202,
+        39
+      ],
+      "expected": [
+        202,
+        39
+      ],
+      "draw": [
+        202.27,
+        38.89
+      ],
+      "grid": {
+        "x": 8,
+        "y": 3,
+        "width": 30,
+        "height": 21
+      }
+    },
+    {
+      "key": "common_img_dikuang03_png",
+      "texture": [
+        55,
+        55
+      ],
+      "expected": [
+        55,
+        55
+      ],
+      "draw": [
+        125,
+        30
+      ],
+      "grid": {
+        "x": 6,
+        "y": 6,
+        "width": 43,
+        "height": 43
+      }
+    }
+  ],
+  "raceIcon": {
+    "source": "_hero_ar_m_json.common_btn_wei",
+    "expected": "_hero_ar_m_json.common_btn_wei",
+    "size": [
+      58,
+      62
+    ]
+  },
+  "listEntries": [
+    {
+      "code": 10202,
+      "name": "司马懿",
+      "model": "hero_002_02",
+      "isLast": false
+    },
+    {
+      "code": 10203,
+      "name": "司马懿",
+      "model": "hero_002_03",
+      "isLast": false
+    },
+    {
+      "code": 100201,
+      "name": "夜市杂耍掌柜",
+      "model": "hero_skin_002_01",
+      "isLast": false
+    },
+    {
+      "code": 100202,
+      "name": "魔龙君临",
+      "model": "hero_087_03",
+      "isLast": false
+    },
+    {
+      "isLast": true
+    }
+  ],
+  "cards": [
+    {
+      "className": "HeroDermaItem",
+      "globalClass": "undefined",
+      "gameClass": "undefined",
+      "wornVisible": false,
+      "wornSource": "pf_img_yichuandai_png",
+      "wornTexture": [
+        89,
+        89
+      ],
+      "expectedWorn": false,
+      "patched": true,
+      "hasListener": true,
+      "source": "street_2_wujiang_img_002_2_png",
+      "texture": [
+        135,
+        82
+      ],
+      "draw": [
+        159,
+        96.57777777777778
+      ],
+      "selected": false
+    },
+    {
+      "className": "HeroDermaItem",
+      "globalClass": "undefined",
+      "gameClass": "undefined",
+      "wornVisible": false,
+      "wornSource": "pf_img_yichuandai_png",
+      "wornTexture": [
+        89,
+        89
+      ],
+      "expectedWorn": false,
+      "patched": true,
+      "hasListener": true,
+      "source": "street_2_wujiang_img_002_3_png",
+      "texture": [
+        135,
+        82
+      ],
+      "draw": [
+        159,
+        96.57777777777778
+      ],
+      "selected": false
+    },
+    {
+      "className": "HeroDermaItem",
+      "globalClass": "undefined",
+      "gameClass": "undefined",
+      "wornVisible": false,
+      "wornSource": "pf_img_yichuandai_png",
+      "wornTexture": [
+        89,
+        89
+      ],
+      "expectedWorn": false,
+      "patched": true,
+      "hasListener": true,
+      "source": "street_skin100201_wujiang_img_pifukasmy_png",
+      "texture": [
+        135,
+        82
+      ],
+      "draw": [
+        159,
+        96.57777777777778
+      ],
+      "selected": true
+    },
+    {
+      "className": "HeroDermaItem",
+      "globalClass": "undefined",
+      "gameClass": "undefined",
+      "wornVisible": false,
+      "wornSource": "pf_img_yichuandai_png",
+      "wornTexture": [
+        89,
+        89
+      ],
+      "expectedWorn": false,
+      "patched": true,
+      "hasListener": true,
+      "source": "street_2_wujiang_img_mljl_png",
+      "texture": [
+        135,
+        82
+      ],
+      "draw": [
+        159,
+        96.57777777777778
+      ],
+      "selected": false
+    }
+  ],
+  "rows": [
+    {
+      "code": 10102,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 10103,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 10202,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 10203,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 10302,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 10303,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 10402,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 10403,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 10502,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 10503,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 10602,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 10603,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 10702,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 10703,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 10802,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 10803,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 10902,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 10903,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 11002,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 11003,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 11102,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 11103,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 11202,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 11203,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 11802,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 11803,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 11902,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 11903,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 12002,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 12003,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 12102,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 12103,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 12202,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 12203,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 12302,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 12303,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 12402,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 12403,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 12502,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 12503,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 12602,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 12603,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 12702,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 12703,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 12802,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 12803,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 12902,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 12903,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 13002,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 13003,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 13602,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 13603,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 13702,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 13703,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 13802,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 13803,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 13902,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 13903,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 14002,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 14003,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 14102,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 14103,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 14202,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 14203,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 14302,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 14303,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 14402,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 14403,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 14502,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 14503,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 14602,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 14603,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 14702,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 14703,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 15302,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 15303,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 15402,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 15403,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 15502,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 15503,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 15602,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 15603,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 15702,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 15703,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 15802,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 15803,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 15902,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 15903,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 16002,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 16003,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 16102,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 16103,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 16202,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 16203,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 16302,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 16303,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 16402,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 16403,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 17402,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 17403,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+5%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 100101,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+10%"
+        },
+        {
+          "name": "生命",
+          "value": "+10%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 100201,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+10%"
+        },
+        {
+          "name": "生命",
+          "value": "+10%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "value": "999999",
+          "source": null
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 100202,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+10%"
+        },
+        {
+          "name": "生命",
+          "value": "+10%"
+        },
+        {
+          "name": "全体攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "全体生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "全体攻击",
+          "value": "+5%",
+          "source": ""
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 100301,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+10%"
+        },
+        {
+          "name": "生命",
+          "value": "+10%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "name": "全体攻击",
+          "value": "+5%",
+          "source": ""
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 101801,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+8%"
+        },
+        {
+          "name": "生命",
+          "value": "+8%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+8%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+8%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "name": "全体攻击",
+          "value": "+5%",
+          "source": ""
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 101901,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+10%"
+        },
+        {
+          "name": "生命",
+          "value": "+10%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "name": "全体攻击",
+          "value": "+5%",
+          "source": ""
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 101902,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+10%"
+        },
+        {
+          "name": "生命",
+          "value": "+10%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "name": "全体攻击",
+          "value": "+5%",
+          "source": ""
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 101903,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+10%"
+        },
+        {
+          "name": "生命",
+          "value": "+10%"
+        },
+        {
+          "name": "全体增伤",
+          "value": "+5%"
+        },
+        {
+          "name": "全体免伤",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "全体增伤",
+          "value": "+5%",
+          "source": ""
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 102001,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+10%"
+        },
+        {
+          "name": "生命",
+          "value": "+10%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "name": "全体增伤",
+          "value": "+5%",
+          "source": ""
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 102002,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+10%"
+        },
+        {
+          "name": "生命",
+          "value": "+10%"
+        },
+        {
+          "name": "全体攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "全体生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "全体攻击",
+          "value": "+5%",
+          "source": ""
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 102101,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+8%"
+        },
+        {
+          "name": "生命",
+          "value": "+8%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+8%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+8%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "name": "全体攻击",
+          "value": "+5%",
+          "source": ""
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 102201,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+10%"
+        },
+        {
+          "name": "生命",
+          "value": "+10%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "name": "全体攻击",
+          "value": "+5%",
+          "source": ""
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 103701,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+10%"
+        },
+        {
+          "name": "生命",
+          "value": "+10%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "name": "全体攻击",
+          "value": "+5%",
+          "source": ""
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 103901,
+      "expected": [
+        {
+          "name": "全体攻击",
+          "value": "+3%"
+        },
+        {
+          "name": "全体生命",
+          "value": "+3%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "全体攻击",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "全体生命",
+          "value": "+3%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "name": "全体攻击",
+          "value": "+5%",
+          "source": ""
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 105301,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+10%"
+        },
+        {
+          "name": "生命",
+          "value": "+10%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "name": "全体攻击",
+          "value": "+5%",
+          "source": ""
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 105302,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+10%"
+        },
+        {
+          "name": "生命",
+          "value": "+10%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "name": "全体攻击",
+          "value": "+5%",
+          "source": ""
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 105303,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+10%"
+        },
+        {
+          "name": "生命",
+          "value": "+10%"
+        },
+        {
+          "name": "全体攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "全体生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "全体攻击",
+          "value": "+5%",
+          "source": ""
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 105601,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+10%"
+        },
+        {
+          "name": "生命",
+          "value": "+10%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": false,
+          "name": "全体攻击",
+          "value": "+5%",
+          "source": ""
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 107701,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+10%"
+        },
+        {
+          "name": "生命",
+          "value": "+10%"
+        },
+        {
+          "name": "全体暴击",
+          "value": "+5%"
+        },
+        {
+          "name": "全体破甲",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "全体暴击",
+          "value": "+5%",
+          "source": ""
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 108001,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+10%"
+        },
+        {
+          "name": "生命",
+          "value": "+10%"
+        },
+        {
+          "name": "全体生命",
+          "value": "+5%"
+        },
+        {
+          "name": "全体免伤",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "全体生命",
+          "value": "+5%",
+          "source": ""
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 108201,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+10%"
+        },
+        {
+          "name": "生命",
+          "value": "+10%"
+        },
+        {
+          "name": "全体攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "全体生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "全体攻击",
+          "value": "+5%",
+          "source": ""
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 108301,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+10%"
+        },
+        {
+          "name": "生命",
+          "value": "+10%"
+        },
+        {
+          "name": "全体增伤",
+          "value": "+5%"
+        },
+        {
+          "name": "全体免伤",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "全体增伤",
+          "value": "+5%",
+          "source": ""
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 108302,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+10%"
+        },
+        {
+          "name": "生命",
+          "value": "+10%"
+        },
+        {
+          "name": "全体攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "全体破甲",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "全体攻击",
+          "value": "+5%",
+          "source": ""
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 108501,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+10%"
+        },
+        {
+          "name": "闪避",
+          "value": "+10%"
+        },
+        {
+          "name": "全体攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "全体破甲",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "闪避",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "全体攻击",
+          "value": "+5%",
+          "source": ""
+        }
+      ],
+      "pass": true
+    },
+    {
+      "code": 109401,
+      "expected": [
+        {
+          "name": "攻击",
+          "value": "+10%"
+        },
+        {
+          "name": "生命",
+          "value": "+10%"
+        },
+        {
+          "name": "全体攻击",
+          "value": "+5%"
+        },
+        {
+          "name": "全体生命",
+          "value": "+5%"
+        }
+      ],
+      "cells": [
+        {
+          "visible": true,
+          "name": "攻击",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "生命",
+          "value": "+10%",
+          "source": ""
+        },
+        {
+          "visible": true,
+          "name": "全体攻击",
+          "value": "+5%",
+          "source": ""
+        }
+      ],
+      "pass": true
+    }
+  ],
+  "liveSelected": [
+    {
+      "visible": true,
+      "name": "攻击",
+      "value": "+10%",
+      "source": ""
+    },
+    {
+      "visible": true,
+      "name": "生命",
+      "value": "+10%",
+      "source": ""
+    },
+    {
+      "visible": false,
+      "value": "999999",
+      "source": null
+    }
+  ],
+  "visibleLabelCount": 4,
+  "knownPanelErrors": [],
+  "knownPanelNetworkFailures": []
+}

@@ -1,3 +1,16 @@
+## v0.98（当前）：100201 共享主动技能 FX 31 纹理接入
+
+2026-11-02 用户恢复续作。v98 已把 `common_newskill_simayi_01_1`（15 纹理 / 62@24）与 `01_2`（16 纹理 / 16@24）的 normal/EZ 共 4 个容器接入生产 `street-art-data.js`（容器 6→10，version 0.98.0），目标 bin 逐字节 SHA 与候选一致。`common_newskill_simayi_01_3` 的 2 个 ground 纹理仍为候选（actualBattleDependencyProven=false），未接入。
+
+生产实例验证无 route 覆盖：4 alias/digest 通过，四容器各跑完整原生循环 62/62/16/16 帧、24fps、回调/完成各 1、纹理 15/15/16/16；证据 `versions/0.98.0/active-fx-production.json` + `active-fx-instantiation.json`。
+
+全量门禁：双85 各 85/85、1876 base 动作、14FX、125 属性、6 缓存、100202 fidelity 全通过；artverify errors[]；review bindingErrors[]/artErrors[]；generatedRuntimeGitTracking pass（1802，missing/binaryDiff 0）；verifiedPhysicalRegions 384、verifiedPhysicalAnimations 24（较 v97 +62/+2）。单资源 complete 69→73；完整角色 0/85、独立皮肤 0/125 不变。
+
+下一步：ground 01_3 实际消费审计；剩余共享技能横幅；按 85 角色拆批推进。提交后推 96/97/98 批次并核远端 SHA。以下为 v97 历史入口，数字冲突以本节为准。
+
+## v97 历史入口（以下数字以 v0.98 节为准）
+2026-10-30北京时间20:32核对到超过20:00截止，未及时执行截止，已停止新生成/代码/美术改动。只做保留、核队列和暂停续作。详见CUTOFF-20261030.json。v97 dc0867ab已推工作分支并远端SHA核对；main仍v95，v98未发布。新31FX候选实际验证和过亮失败证据均保留，不算已接入。Comfy本任务running0/pending0、worker0；原automation已不存在，将按截止暂停当前goal，不归档聊天。
+
 # 当前接续入口（详细历史见 WORKLOG.md）
 
 ## 目标与规则
@@ -5,7 +18,7 @@
 
 ## Git/环境
 cwd C:/Users/dongdong/Documents/ChatGPT/安装；branch codex/street-reskin-20261029；delivery=https://github.com/aohou666/oldniulai.git，保留origin。
-HEAD v96=3a7b47c0794c99db7f7eb63dc06007d2a3b30ac4；远端main v95=4eb1604c21b2e1a62d3289e21cefb272f77a3322已核；下次推v98（96/97/98），v97工作区已接入并全量复查通过、待commit。v97启用1798依赖index通过（旧raster退出后减少，不是漏资源）；旧HEAD1926依赖通过，原resource包独立Release依赖。禁止git add .；精确暂存，忽略的合格PNG需add -f；保留无关dirty（Android/MainActivity/README/offline-launcher/disabled技能/旧collector等）。
+HEAD v97=dc0867ab7135327099900254d3f71d0263879c53；旧v96=3a7b47c0794c99db7f7eb63dc06007d2a3b30ac4；远端main v95=4eb1604c21b2e1a62d3289e21cefb272f77a3322已核；下次推v98（96/97/98），v97已commit并全量复查通过，HEAD1798依赖通过。v97启用1798依赖index通过（旧raster退出后减少，不是漏资源）；旧HEAD1926依赖通过，原resource包独立Release依赖。禁止git add .；精确暂存，忽略的合格PNG需add -f；保留无关dirty（Android/MainActivity/README/offline-launcher/disabled技能/旧collector等）。
 Python .tools/python/python.exe，PYTHONUTF8=1、read_text('utf8')；Node24/Playwright位置见mjs。8787主存档pc_server_data/offline-replica-save.json禁止测试改写；8794隔离outputs/street-reskin/stress/8794-save.json，每场backup/finally恢复+主SHA，不并行两场写入测试。Comfy8188实时queue上次running0/pending0，generation-worker.json旧Oct29不当作活队列。官方imagegen句柄1078/1085/1094均终态；继续先核实际队列/句柄。
 
 ## 历史生产v96与基础缺口（v97已替换下述100201身体/UI）
@@ -37,8 +50,12 @@ skin100201-native-activity-preview-v1：原common_activity_simayi_new01为19旧�
 1. 横幅候选验证已齐，后续合格资源正式接入时一起纳入全量账和依赖。
 2. ground原作基线诊断；补主动FX31区新绘/原生及实战、33区依赖审计，避免仅rig完整就算全皮肤。
 3. v97已完成full147 schema/provenance/motion/UI/battle/perf校验并接入2容器、4静态字段+gallery/preview/banner2图+name/desc；旧100201 raster退出配置、源图和配置存档保留。nativeSkins显式登记，completeSkin=false。后续继续共享主动FX31区，2区ground实际使用审查。
-4. v97全账/双85/1876动作/14FX/125attr/6cache/100202fidelity/4肖像页SHA/index1798依赖全部通过，当前需精确commit并HEAD核验；v98后推96/97/98，不造空版本。
+4. v97全账/双85/1876动作/14FX/125attr/6cache/100202fidelity/4肖像页SHA/index1798依赖全部通过，已精确commit并HEAD1798依赖核验；v98后推96/97/98，不造空版本。
 
 ## 既有守卫/验证
 v88 dermaCode DTO真实穿脱/挂机；OfflineBattleAttributes只标记percent-points的离线AI深拷贝43→.43，不改显示/存档/未标原敌人。v93 46portrait132x257竖杆全道具保留；v87城市庭院960x898已准，1098拉伸拒收；CITY-MAP-087-VERTICAL-STRETCH/DETAIL-NULL/RESOURCE-LOAD-015/TEMPORAL仍未全结。
 双85命令street-runtime-check.mjs --all-heroes --assert-no-detail-body-loads --output=独立目录，第二套加--base-heroes；body/effects-roster、skin-effect-cache、skin-attribute/fidelity按实质改动跑。stage后street_art_verify.py、street_runtime_tracking.py、street_review.py核JSON非只看shell。上下文只读此入口和当前证据，旧过程查WORKLOG/Git，不删失败/聊天，不声称系统上下文已手动压缩。
+
+
+## 留待下一次明确续作的候选
+active15-native-v3：飞行/碰撞13/光晕共15纹理，normal/EZ62@24均通过；统一碰撞scale.98，glow alpha.18。v1 EZ碰撞12裁切失败；v2实际过亮拒收，均保留。active16-native-v2：飞行/砸击14/曝光共16纹理，normal/EZ16@24均通过；统一scale1.3，impact alpha.28/exposure alpha.12；v1过亮拒收。两者native-review.json已记录候选批准范围、原作baseline和实际focused BattleAI证据SHA，非整skin完成。实际BattleAI使用EZ1_1+EZ1_2，各15/16纹理均记录，normal单独native；native-battle-active31-focused在body107-packed-trial-v2内，主不变/隔离恢复。ground2-native-v1也仅候选，实际消费关系未核。MiniMax e23c2392已成功收124帧、只接受作材料/衰减参考；official active16源实际引用其contact，无生成活句柄。下一次若获续作，再正式接入候选、更新台账、全量v98复查并推96/97/98批次；本次不再做这些新改动。

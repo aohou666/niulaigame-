@@ -1,5 +1,5 @@
 window.StreetArtData ={
-  "version": "0.97.0",
+  "version": "0.98.0",
   "resources": [
     {
       "originalKey": "dk_02_bg_01_jpg",
@@ -2430,6 +2430,310 @@ window.StreetArtData ={
     }
   ],
   "containers": [
+    {
+      "originalKey": "common_newskill_simayi_01_1_bin",
+      "originalPath": "resource/assets/effect/common_newskill_simayi_01_1_f59b3318.bin",
+      "originalSha256": "ce3ebfeaf11fbae84fb096b0544ba8c5ef5c67c94d959423d4187072c38a69a9",
+      "targetKey": "street_common_newskill_simayi_01_1_walnut_flight_bin",
+      "targetPath": "assets/street/skins/100201/native-fx/common_newskill_simayi_01_1-walnut-flight-c58cf22e06d7f7f6.bin",
+      "targetSha256": "c58cf22e06d7f7f6718472ab3c9027e7a97c360848b43db3bf33ee7a854010af",
+      "type": "bin",
+      "skinCode": 100201,
+      "changedRegions": [
+        "飞行",
+        "碰撞1",
+        "碰撞2",
+        "碰撞3",
+        "碰撞4",
+        "碰撞5",
+        "碰撞6",
+        "碰撞7",
+        "碰撞8",
+        "碰撞9",
+        "碰撞10",
+        "碰撞11",
+        "碰撞12",
+        "碰撞13",
+        "光晕"
+      ],
+      "regionReviewPath": "art-migration/generation/skin100201-active15-native-v3/qa.json",
+      "regionReviewSha256": "06a19d88faf8913ee1190646a4a919e40fe382e393eea713550e091254544ce4",
+      "nativeAnimationReplacement": "common_newskill_simayi_01_1",
+      "completeContainerReplaced": true,
+      "scope": "All15 textures of shared native active-skill flight/burst effect; no whole skin claim.",
+      "verification": {
+        "originalKey": "common_newskill_simayi_01_1_bin",
+        "imageSize": [
+          2048,
+          2048
+        ],
+        "decodedBytes": 16777216,
+        "changedRegions": [
+          "飞行",
+          "碰撞10",
+          "碰撞5",
+          "碰撞11",
+          "碰撞6",
+          "碰撞1",
+          "碰撞12",
+          "碰撞7",
+          "碰撞2",
+          "碰撞13",
+          "碰撞8",
+          "碰撞3",
+          "碰撞9",
+          "碰撞4",
+          "光晕"
+        ],
+        "unchangedRegions": 0,
+        "skeletonAndAtlasByteIdentical": true,
+        "nativeAnimations": [
+          [
+            "common_newskill_simayi_01_1",
+            [
+              [
+                "common_newskill_simayi_01_1",
+                62
+              ]
+            ]
+          ]
+        ],
+        "completeContainerReplaced": true
+      },
+      "nativeRuntimeAuditPath": "art-migration/versions/0.98.0/active-fx-instantiation.json",
+      "nativeRuntimeAuditSha256": "6f2faff54a292b2964bb477d1226861f52add5e3c6a771d91c445052fb431546",
+      "actualBattleProofPath": "art-migration/generation/skin100201-native-body107-packed-trial-v2/native-battle-active31-focused/runtime.json",
+      "actualBattleProofSha256": "b06a3908cf854d130c589c55af7da424c0822c1eec1efad709c25bd04d9e6266"
+    },
+    {
+      "originalKey": "common_newskill_simayi_01_1_ez_bin",
+      "originalPath": "resource/assets/effect/common_newskill_simayi_01_1_ez_7169a33c.bin",
+      "originalSha256": "3b00d1f680688b4f817b08efed4a05472af371b4bfb2cb114f11aa839f5d3631",
+      "targetKey": "street_common_newskill_simayi_01_1_ez_walnut_flight_bin",
+      "targetPath": "assets/street/skins/100201/native-fx/common_newskill_simayi_01_1_ez-walnut-flight-54dee81791501554.bin",
+      "targetSha256": "54dee81791501554ad46f12248355bcaf0c43d6a3ad85c5cfed48751f43ce69e",
+      "type": "bin",
+      "skinCode": 100201,
+      "changedRegions": [
+        "飞行",
+        "碰撞1",
+        "碰撞2",
+        "碰撞3",
+        "碰撞4",
+        "碰撞5",
+        "碰撞6",
+        "碰撞7",
+        "碰撞8",
+        "碰撞9",
+        "碰撞10",
+        "碰撞11",
+        "碰撞12",
+        "碰撞13",
+        "光晕"
+      ],
+      "regionReviewPath": "art-migration/generation/skin100201-active15-native-v3/qa.json",
+      "regionReviewSha256": "06a19d88faf8913ee1190646a4a919e40fe382e393eea713550e091254544ce4",
+      "nativeAnimationReplacement": "common_newskill_simayi_01_1",
+      "completeContainerReplaced": true,
+      "scope": "All15 textures of shared native active-skill flight/burst effect; no whole skin claim.",
+      "verification": {
+        "originalKey": "common_newskill_simayi_01_1_ez_bin",
+        "imageSize": [
+          1024,
+          1024
+        ],
+        "decodedBytes": 4194304,
+        "changedRegions": [
+          "飞行",
+          "碰撞10",
+          "碰撞5",
+          "碰撞11",
+          "碰撞6",
+          "碰撞1",
+          "碰撞12",
+          "碰撞7",
+          "碰撞2",
+          "碰撞13",
+          "碰撞8",
+          "碰撞3",
+          "碰撞9",
+          "碰撞4",
+          "光晕"
+        ],
+        "unchangedRegions": 0,
+        "skeletonAndAtlasByteIdentical": true,
+        "nativeAnimations": [
+          [
+            "common_newskill_simayi_01_1",
+            [
+              [
+                "common_newskill_simayi_01_1",
+                62
+              ]
+            ]
+          ]
+        ],
+        "completeContainerReplaced": true
+      },
+      "nativeRuntimeAuditPath": "art-migration/versions/0.98.0/active-fx-instantiation.json",
+      "nativeRuntimeAuditSha256": "6f2faff54a292b2964bb477d1226861f52add5e3c6a771d91c445052fb431546",
+      "actualBattleProofPath": "art-migration/generation/skin100201-native-body107-packed-trial-v2/native-battle-active31-focused/runtime.json",
+      "actualBattleProofSha256": "b06a3908cf854d130c589c55af7da424c0822c1eec1efad709c25bd04d9e6266"
+    },
+    {
+      "originalKey": "common_newskill_simayi_01_2_bin",
+      "originalPath": "resource/assets/effect/common_newskill_simayi_01_2_efc4f5f0.bin",
+      "originalSha256": "8ce3a17c40652b0079b007676475530f0b130e88bc502ba80efc5b67d691eea2",
+      "targetKey": "street_common_newskill_simayi_01_2_walnut_flight_bin",
+      "targetPath": "assets/street/skins/100201/native-fx/common_newskill_simayi_01_2-walnut-slam-5d51a3800b6d7cec.bin",
+      "targetSha256": "5d51a3800b6d7cecd9a8ce29df4eacfab8e7ecdeaa4602c1423759baf798d0d4",
+      "type": "bin",
+      "skinCode": 100201,
+      "changedRegions": [
+        "飞行",
+        "砸击1",
+        "砸击2",
+        "砸击3",
+        "砸击4",
+        "砸击5",
+        "砸击6",
+        "砸击7",
+        "砸击8",
+        "砸击9",
+        "砸击10",
+        "砸击11",
+        "砸击12",
+        "砸击13",
+        "砸击14",
+        "曝光"
+      ],
+      "regionReviewPath": "art-migration/generation/skin100201-active16-native-v2/qa.json",
+      "regionReviewSha256": "eaeff99b80103a75db8f88de014f5ae49a27ff0c6785388c1322b562c6c1000c",
+      "nativeAnimationReplacement": "common_newskill_simayi_01_2",
+      "completeContainerReplaced": true,
+      "scope": "All16 textures of shared native active-skill flight/burst effect; no whole skin claim.",
+      "verification": {
+        "originalKey": "common_newskill_simayi_01_2_bin",
+        "imageSize": [
+          2048,
+          2048
+        ],
+        "decodedBytes": 16777216,
+        "changedRegions": [
+          "飞行",
+          "砸击12",
+          "砸击2",
+          "砸击6",
+          "砸击8",
+          "砸击9",
+          "砸击5",
+          "砸击13",
+          "砸击11",
+          "砸击4",
+          "砸击14",
+          "砸击10",
+          "砸击3",
+          "砸击1",
+          "砸击7",
+          "曝光"
+        ],
+        "unchangedRegions": 0,
+        "skeletonAndAtlasByteIdentical": true,
+        "nativeAnimations": [
+          [
+            "common_newskill_simayi_01_2",
+            [
+              [
+                "common_newskill_simayi_01_2",
+                16
+              ]
+            ]
+          ]
+        ],
+        "completeContainerReplaced": true
+      },
+      "nativeRuntimeAuditPath": "art-migration/versions/0.98.0/active-fx-instantiation.json",
+      "nativeRuntimeAuditSha256": "6f2faff54a292b2964bb477d1226861f52add5e3c6a771d91c445052fb431546",
+      "actualBattleProofPath": "art-migration/generation/skin100201-native-body107-packed-trial-v2/native-battle-active31-focused/runtime.json",
+      "actualBattleProofSha256": "b06a3908cf854d130c589c55af7da424c0822c1eec1efad709c25bd04d9e6266"
+    },
+    {
+      "originalKey": "common_newskill_simayi_01_2_ez_bin",
+      "originalPath": "resource/assets/effect/common_newskill_simayi_01_2_ez_43dda2b1.bin",
+      "originalSha256": "ca2429cfbb57cf41fbde31c8156be428babf27497a189e5e929ca206d7a1f82d",
+      "targetKey": "street_common_newskill_simayi_01_2_ez_walnut_flight_bin",
+      "targetPath": "assets/street/skins/100201/native-fx/common_newskill_simayi_01_2_ez-walnut-slam-9299f9ed9dbdeafd.bin",
+      "targetSha256": "9299f9ed9dbdeafd880a1eac72aca42bc49065e411f74c88b6a32d6f904eb54c",
+      "type": "bin",
+      "skinCode": 100201,
+      "changedRegions": [
+        "飞行",
+        "砸击1",
+        "砸击2",
+        "砸击3",
+        "砸击4",
+        "砸击5",
+        "砸击6",
+        "砸击7",
+        "砸击8",
+        "砸击9",
+        "砸击10",
+        "砸击11",
+        "砸击12",
+        "砸击13",
+        "砸击14",
+        "曝光"
+      ],
+      "regionReviewPath": "art-migration/generation/skin100201-active16-native-v2/qa.json",
+      "regionReviewSha256": "eaeff99b80103a75db8f88de014f5ae49a27ff0c6785388c1322b562c6c1000c",
+      "nativeAnimationReplacement": "common_newskill_simayi_01_2",
+      "completeContainerReplaced": true,
+      "scope": "All16 textures of shared native active-skill flight/burst effect; no whole skin claim.",
+      "verification": {
+        "originalKey": "common_newskill_simayi_01_2_ez_bin",
+        "imageSize": [
+          1024,
+          1024
+        ],
+        "decodedBytes": 4194304,
+        "changedRegions": [
+          "飞行",
+          "砸击12",
+          "砸击2",
+          "砸击6",
+          "砸击8",
+          "砸击9",
+          "砸击5",
+          "砸击13",
+          "砸击11",
+          "砸击4",
+          "砸击14",
+          "砸击10",
+          "砸击3",
+          "砸击1",
+          "砸击7",
+          "曝光"
+        ],
+        "unchangedRegions": 0,
+        "skeletonAndAtlasByteIdentical": true,
+        "nativeAnimations": [
+          [
+            "common_newskill_simayi_01_2",
+            [
+              [
+                "common_newskill_simayi_01_2",
+                16
+              ]
+            ]
+          ]
+        ],
+        "completeContainerReplaced": true
+      },
+      "nativeRuntimeAuditPath": "art-migration/versions/0.98.0/active-fx-instantiation.json",
+      "nativeRuntimeAuditSha256": "6f2faff54a292b2964bb477d1226861f52add5e3c6a771d91c445052fb431546",
+      "actualBattleProofPath": "art-migration/generation/skin100201-native-body107-packed-trial-v2/native-battle-active31-focused/runtime.json",
+      "actualBattleProofSha256": "b06a3908cf854d130c589c55af7da424c0822c1eec1efad709c25bd04d9e6266"
+    },
     {
       "originalKey": "common_newskill_simayi_02_qiu_bin",
       "originalPath": "resource/assets/effect/common_newskill_simayi_02_qiu_8d6ed433.bin",

@@ -1,0 +1,86 @@
+{
+  "pass": true,
+  "label": "v98-production",
+  "scope": "Shared 100201 active-skill FX: 15+16 independently drawn textures on the original native 62@24 / 16@24 timelines; normal and EZ are resolutions of the same skin effect. No whole skin/character claim; no save writes.",
+  "resourceDigests": [
+    {
+      "key": "common_newskill_simayi_01_1_bin",
+      "url": "assets/street/skins/100201/native-fx/common_newskill_simayi_01_1-walnut-flight-c58cf22e06d7f7f6.bin?v=c58cf22e06d7f7f6",
+      "digest": "c58cf22e06d7f7f6718472ab3c9027e7a97c360848b43db3bf33ee7a854010af"
+    },
+    {
+      "key": "common_newskill_simayi_01_1_ez_bin",
+      "url": "assets/street/skins/100201/native-fx/common_newskill_simayi_01_1_ez-walnut-flight-54dee81791501554.bin?v=54dee81791501554",
+      "digest": "54dee81791501554ad46f12248355bcaf0c43d6a3ad85c5cfed48751f43ce69e"
+    },
+    {
+      "key": "common_newskill_simayi_01_2_bin",
+      "url": "assets/street/skins/100201/native-fx/common_newskill_simayi_01_2-walnut-slam-5d51a3800b6d7cec.bin?v=5d51a3800b6d7cec",
+      "digest": "5d51a3800b6d7cecd9a8ce29df4eacfab8e7ecdeaa4602c1423759baf798d0d4"
+    },
+    {
+      "key": "common_newskill_simayi_01_2_ez_bin",
+      "url": "assets/street/skins/100201/native-fx/common_newskill_simayi_01_2_ez-walnut-slam-9299f9ed9dbdeafd.bin?v=9299f9ed9dbdeafd",
+      "digest": "9299f9ed9dbdeafd880a1eac72aca42bc49065e411f74c88b6a32d6f904eb54c"
+    }
+  ],
+  "models": [
+    {
+      "key": "common_newskill_simayi_01_1_bin",
+      "model": "common_newskill_simayi_01_1",
+      "animation": "common_newskill_simayi_01_1",
+      "frames": 62,
+      "fps": 24,
+      "complete": 1,
+      "distinctTextures": 15,
+      "sampleCount": 156,
+      "elapsed": 2590
+    },
+    {
+      "key": "common_newskill_simayi_01_1_ez_bin",
+      "model": "common_newskill_simayi_01_1_ez",
+      "animation": "common_newskill_simayi_01_1",
+      "frames": 62,
+      "fps": 24,
+      "complete": 1,
+      "distinctTextures": 15,
+      "sampleCount": 156,
+      "elapsed": 2592
+    },
+    {
+      "key": "common_newskill_simayi_01_2_bin",
+      "model": "common_newskill_simayi_01_2",
+      "animation": "common_newskill_simayi_01_2",
+      "frames": 16,
+      "fps": 24,
+      "complete": 1,
+      "distinctTextures": 16,
+      "sampleCount": 41,
+      "elapsed": 669
+    },
+    {
+      "key": "common_newskill_simayi_01_2_ez_bin",
+      "model": "common_newskill_simayi_01_2_ez",
+      "animation": "common_newskill_simayi_01_2",
+      "frames": 16,
+      "fps": 24,
+      "complete": 1,
+      "distinctTextures": 16,
+      "sampleCount": 41,
+      "elapsed": 673
+    }
+  ],
+  "errors": [],
+  "failures": [],
+  "productionConfiguration": true,
+  "manualReview": "approved-complete-native-loop",
+  "visualReview": "Production street-art-data.js aliases resolved; each of the four containers loaded by digest and played its full native 62/62/16/16 frame loop with exactly one callback and one completion; 15/15/16/16 distinct textures visited. Paused frames 0/mid/last captured for each model. Not a whole-skin visual sign-off.",
+  "sourceEvidence": {
+    "productionTest": "art-migration/versions/0.98.0/active-fx-production.json",
+    "productionTestSha256": "9211d007446f8fb10a686e07f1b5060002166e706bb9dd98fcde3da0a109dc5b",
+    "candidateReviews": {
+      "skin100201-active15-native-v3": "2ba82ca6d575a7f54b6e217313d21979fa3aed3f99089038b7882aaa4eab73f9",
+      "skin100201-active16-native-v2": "71cb63ddb8027f4dc58952ae80c3ca19426761c0bcec591b02821eb5aa6edb87"
+    }
+  }
+}

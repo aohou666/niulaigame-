@@ -1,0 +1,29 @@
+{
+  "version": "0.98.0",
+  "status": "verified",
+  "newActiveSkillContainers": 4,
+  "newActiveSkillTextures": 31,
+  "newActiveSkillPhysicalRegions": 62,
+  "currentActiveSkillContainers": 4,
+  "sharedGroundCandidatesUnbound": 2,
+  "completeSingleResources": 73,
+  "completeCharacters": 0,
+  "completeIndependentSkins": 0,
+  "runtimeDependencies": 1802,
+  "verifiedPhysicalRegions": 384,
+  "verifiedPhysicalAnimations": 24,
+  "packedRegionsNotYetReplaced": 81024,
+  "animationsNotYetReplaced": 7037,
+  "dual85Pass": true,
+  "baseContinuousFrameChecks": 1876,
+  "otherFXModels": 14,
+  "skinConfigs": 125,
+  "isolatedBattleProof": {
+    "path": "art-migration/generation/skin100201-native-body107-packed-trial-v2/native-battle-active31-focused/runtime.json",
+    "sha256": "b06a3908cf854d130c589c55af7da424c0822c1eec1efad709c25bd04d9e6266",
+    "scope": "Actual unedited BattleAI with equipped 100201, EZ variants of 01_1/01_2 visible; normal variants separately native-tested. v98 ships byte-identical containers (same targetSha256), so the v97 battle proof is reused rather than re-run; v98 adds a production-alias instantiation proof.",
+    "reusedNotRerun": true
+  },
+  "note": "Shared 100201 active-skill FX (common_newskill_simayi_01_1 / 01_2, normal and EZ) are production-bound on the original native 62@24 / 16@24 timelines and verified by digest, alias, full loop and completion. The two common_newskill_simayi_01_3 ground layers stay candidate because actual consumption is unproven. Full characters/skins remain 0/85 and 0/125; the original resource pack is a separate runtime dependency; no APK/mobile or zero-bug claim.",
+  "nextPush": "v0.98.0 release commit; remote main still v0.95.0; push the 96/97/98 batch."
+}
