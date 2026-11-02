@@ -1,0 +1,29 @@
+{
+  "pass": true,
+  "scope": "100201 shared active-skill FX dependency audit: does the client consume common_newskill_simayi_01_3 (normal/EZ)?",
+  "checked": {
+    "skillConfig": "local_game/resource/config/g_skill_96a92798.json",
+    "resourceManifest": "local_game/resource/default.res_49784.json",
+    "codeAndData": "local_game/**/*.js, *.json, *.html + binary scan of local_game/resource (files < 80 MB)"
+  },
+  "simayiEffectGroups": {
+    "common_newskill_simayi_01_jn": ["common_newskill_simayi_01_1", "common_newskill_simayi_01_2"],
+    "common_newskill_simayi_01_pg": ["common_newskill_simayi_02", "common_newskill_simayi_02_qiu"],
+    "common_skill_simayi_01": ["common_skill_simayi_01_2", "common_skill_simayi_01_2", "common_skill_simayi_01_1"],
+    "common_skill_simayi_02": ["common_skill_simayi_02_1", "common_skill_simayi_02_2"]
+  },
+  "orphanResources": [
+    "common_newskill_simayi_01_3_bin",
+    "common_newskill_simayi_01_3_ez_bin"
+  ],
+  "evidence": {
+    "skillGroupReferences": 0,
+    "codeReferences": 0,
+    "manifestRegistrations": 2,
+    "binaryScanMatches": "only default.res_49784.json (manifest registration); no config/skill/code consumer",
+    "actualBattleObservation": "v97 candidate focused battle observed common_newskill_simayi_01_1_ez and 01_2_ez (15/16 textures); 01_3 never observed or requested"
+  },
+  "conclusion": "common_newskill_simayi_01_3 has no client consumer in the current build. The 100201 active skill effect group uses only 01_1 and 01_2, both now production-bound in v0.98.0. 01_3 is an orphan resource; it must not be bound as if the skin needed it.",
+  "action": "Keep skin100201-active-ground2-native-v1 candidates archived and unbound. Do not count the 2 ground regions as required art. If a future client/server revision references 01_3, re-open this audit.",
+  "note": "Manifest registration alone is not usage; it is generated for every packed resource. Search covered UTF-8 text and raw bytes; strings constructed dynamically from a numeric suffix were not observed anywhere in the client code."
+}

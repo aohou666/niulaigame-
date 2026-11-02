@@ -29,8 +29,9 @@
 
 ## 明确边界
 
-- **ground2（`common_newskill_simayi_01_3` normal/EZ，2 纹理）未接入**：候选 `actualBattleDependencyProven=false`，
-  实际技能消费关系未证明；保持候选，等依赖审计后再决定。
+- **ground2（`common_newskill_simayi_01_3` normal/EZ，2 纹理）不接入**：依赖审计已证明它只出现在 `default.res` 清单，
+  `g_skill` 的 `common_newskill_simayi_01_jn` 只引用 01_1/01_2，无任何技能组或代码消费 01_3 → 孤儿资源；
+  候选保留、不计入必需美术。证据 `skin-migration/100201/active-skill-native/dependency-audit.json`。
 - **`packed-art.jsonl` 未翻状态**：按 v95–v97 约定保持原始打包台账；`street_review.py` 从未 complete 行
   与 verified container 推导 confirmedRegions，翻成 complete 会让 review 跳过这些行、丢失已确认区域计数。
 - **隔离实战沿用 v97 证据**：v98 容器字节与候选完全相同（targetSha256 一致），

@@ -742,3 +742,8 @@ v97已提交dc0867ab7135327099900254d3f71d0263879c53，HEAD1798依赖无missing/
 
 2026-11-02 用户恢复续作，DSH 接手。生产 street-art-data.js 新增 4 容器（01_1/01_2 normal+EZ，容器 6→10，version 0.98.0），目标 bin SHA 逐字节核验。无 route 覆盖的生产实例：alias 全部安装、digest 一致、四容器完整原生循环 62/62/16/16@24、回调/完成各1、纹理15/15/16/16；截图与报告 versions/0.98.0。ground 01_3 两纹理 actualBattleDependencyProven=false，继续候选不接。
 全量门禁：双85 85/85 两套、1876 base 动作、14FX、125 属性、6 缓存、100202 fidelity、artverify errors[]、review bindingErrors[]/artErrors[]、index 1802 依赖 missing/binaryDiff 0、verifiedPhysicalRegions 384/animations 24。单资源 69→73，完整角色0/85、独立皮肤0/125。主存档未改（b8cf849c…），隔离 8787/8794 均为副本，测试后未写主档。
+
+
+## v0.98 依赖审计：common_newskill_simayi_01_3 为孤儿资源
+
+2026-11-02 复核 g_skill/default.res/代码与二进制：simayi 组中 common_newskill_simayi_01_jn 仅引用 01_1/01_2，01_3 只在 default.res 清单登记，无技能组或代码消费；v97 实战也只观察到 01_1_ez/01_2_ez。结论：01_3（normal/EZ 2纹理）不接入、候选保留、不计必需美术；证据 skin-migration/100201/active-skill-native/dependency-audit.json。v98 完整门禁与推送不受影响。

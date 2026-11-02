@@ -6,7 +6,7 @@
 
 全量门禁：双85 各 85/85、1876 base 动作、14FX、125 属性、6 缓存、100202 fidelity 全通过；artverify errors[]；review bindingErrors[]/artErrors[]；generatedRuntimeGitTracking pass（1802，missing/binaryDiff 0）；verifiedPhysicalRegions 384、verifiedPhysicalAnimations 24（较 v97 +62/+2）。单资源 complete 69→73；完整角色 0/85、独立皮肤 0/125 不变。
 
-下一步：ground 01_3 实际消费审计；剩余共享技能横幅；按 85 角色拆批推进。提交后推 96/97/98 批次并核远端 SHA。以下为 v97 历史入口，数字冲突以本节为准。
+ground 01_3 依赖审计已完成（2026-11-02）：`g_skill` 的司马懿组只有 `common_newskill_simayi_01_jn` 引用 01_1/01_2；`common_newskill_simayi_01_3` 只出现在 `default.res` 清单登记，无任何技能组/代码引用 → 孤儿资源，不接入，候选保留，不计入必需美术。证据：`skin-migration/100201/active-skill-native/dependency-audit.json`。下一步：剩余共享技能横幅；按 85 角色拆批推进。v98 提交 `980eab63`，交付记录 `f2ca7cb5`，远端 main/工作分支同 SHA。以下为 v97 历史入口，数字冲突以本节为准。
 
 ## v97 历史入口（以下数字以 v0.98 节为准）
 2026-10-30北京时间20:32核对到超过20:00截止，未及时执行截止，已停止新生成/代码/美术改动。只做保留、核队列和暂停续作。详见CUTOFF-20261030.json。v97 dc0867ab已推工作分支并远端SHA核对；main仍v95，v98未发布。新31FX候选实际验证和过亮失败证据均保留，不算已接入。Comfy本任务running0/pending0、worker0；原automation已不存在，将按截止暂停当前goal，不归档聊天。
