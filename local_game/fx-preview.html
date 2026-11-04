@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>技能特效换皮预览</title>
+<style>
+  :root { color-scheme: dark; font-family: "Microsoft YaHei", "PingFang SC", sans-serif; }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; background: #14171d; color: #e8dfcd; }
+  body { display: grid; grid-template-rows: auto 1fr; height: 100vh; overflow: hidden; }
+  header { padding: 14px 20px; border-bottom: 1px solid #333944; background: #1b1f27; display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+  header h1 { margin: 0; font-size: 19px; color: #ffd486; letter-spacing: .5px; }
+  header .meta { color: #8f97a5; font-size: 12.5px; }
+  main { display: grid; grid-template-columns: 360px 1fr; min-height: 0; }
+  aside { border-right: 1px solid #333944; display: flex; flex-direction: column; min-height: 0; background: #181c23; }
+  .search { padding: 12px; border-bottom: 1px solid #2a303a; }
+  .search input { width: 100%; padding: 9px 11px; border-radius: 8px; border: 1px solid #3a424f; background: #10141a; color: #eee; font-size: 14px; outline: none; }
+  .search input:focus { border-color: #d7ad62; }
+  #list { overflow: auto; padding: 6px 0 20px; }
+  .row { display: block; width: 100%; text-align: left; padding: 9px 14px; background: transparent; border: 0; border-left: 3px solid transparent; color: inherit; cursor: pointer; font: inherit; }
+  .row:hover { background: #202631; }
+  .row.active { background: #2a2419; border-left-color: #ffd486; }
+  .row .name { font-size: 13.5px; color: #f2e7d2; }
+  .row .sub { margin-top: 2px; font-size: 11.5px; color: #8d96a4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .row .tag { font-size: 10.5px; color: #d7ad62; border: 1px solid #5c4a30; border-radius: 4px; padding: 0 4px; margin-left: 6px; }
+  .stagewrap { position: relative; display: grid; place-items: center; min-height: 0; background: radial-gradient(circle at 50% 40%, #222936, #0f1217 70%); padding: 18px; }
+  .stagebox { position: relative; width: min(560px, 62vh); aspect-ratio: 1 / 1; border: 1px solid #3c4452; border-radius: 12px; overflow: hidden; box-shadow: 0 30px 80px #000a; background: #0d1015; }
+  iframe { width: 100%; height: 100%; border: 0; display: block; }
+  .caption { position: absolute; left: 12px; top: 10px; pointer-events: none; font-size: 12px; color: #ffd486; background: #0b0e13cc; padding: 5px 9px; border-radius: 6px; }
+  .toolbar { margin-top: 16px; display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+  button.tool { border: 1px solid #4a5261; background: #232a35; color: #e8dfcd; border-radius: 8px; padding: 8px 14px; font-size: 13px; cursor: pointer; }
+  button.tool:hover { border-color: #d7ad62; color: #ffd486; }
+  button.tool.on { border-color: #d7ad62; background: #3a2f1d; color: #ffd486; }
+  .hint { margin-top: 12px; color: #7f8794; font-size: 12px; text-align: center; line-height: 1.7; }
+  .hint code { color: #b9c2d0; }
+  #status { position: absolute; right: 12px; top: 10px; font-size: 11px; color: #8f97a5; background: #0b0e13cc; padding: 4px 8px; border-radius: 6px; }
+  @media (max-width: 900px) { main { grid-template-columns: 1fr; grid-template-rows: 45% 55%; } aside { border-right: 0; border-bottom: 1px solid #333944; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>技能特效换皮预览</h1>
+  <span class="meta" id="count">加载中…</span>
+  <span class="meta">左侧列表点一条即播；共享技能键按角色配色，单角色键走运行时重定向。</span>
+</header>
+<main>
+  <aside>
+    <div class="search"><input id="q" type="search" placeholder="搜索英雄 / 技能 / 配色…" autocomplete="off"></div>
+    <div id="list"></div>
+  </aside>
+  <section class="stagewrap">
+    <div>
+      <div class="stagebox">
+        <iframe id="game" src="index_bh_lite3zbtest_andr.html?mode=heroes&amp;fxpreview=1&amp;v=20261103-ez" title="fx stage"></iframe>
+        <div class="caption" id="caption">等待游戏加载…</div>
+        <div id="status"></div>
+      </div>
+      <div class="toolbar">
+        <button class="tool" id="prev">上一条</button>
+        <button class="tool" id="replay">重播</button>
+        <button class="tool on" id="loop">循环开</button>
+        <button class="tool" id="next">下一条</button>
+        <button class="tool" id="zoom">缩放 80%</button>
+      </div>
+      <div class="hint">预览用干净舞台播放特效本体（normal 分辨率），战斗用 EZ 半分辨率；实机战斗表现请打开
+        <code>?mode=demo</code> 或 <code>offline-launcher.html</code>。</div>
+    </div>
+  </section>
+</main>
+<script src="fx-preview-data.js?v=20261103-ez"></script>
+<script>
+(function () {
+  'use strict';
+  var rows = window.StreetFXPreviewRows || [];
+  var list = document.getElementById('list');
+  var q = document.getElementById('q');
+  var caption = document.getElementById('caption');
+  var statusEl = document.getElementById('status');
+  var iframe = document.getElementById('game');
+  var cur = -1, loop = true, zoom = 0.8;
+  var stageApi = null, pendingIndex = -1, ready = false;
+
+  var byId = rows.map(function (r, i) { r._i = i; return r; });
+
+  function resourcesReady(win) {
+    if (!win.StreetFXResources || !win.RES) return false;
+    for (var i = 0; i < win.StreetFXResources.length; i++) {
+      try { if (!win.RES.hasRes(win.StreetFXResources[i].name)) return false; } catch (e) { return false; }
+    }
+    return true;
+  }
+
+  function applyFilter() {
+    var term = q.value.trim().toLowerCase();
+    var frag = document.createDocumentFragment();
+    byId.forEach(function (r) {
+      var hay = (r.hero + ' ' + r.original + ' ' + r.slot + ' ' + r.theme + ' ' + r.palette + ' ' + r.key).toLowerCase();
+      if (term && hay.indexOf(term) < 0) return;
+      var b = document.createElement('button');
+      b.className = 'row' + (r._i === cur ? ' active' : '');
+      b.innerHTML = '<div class="name">' + esc(r.hero) + ' · ' + esc(r.slot) + (r.shared ? '<span class="tag">共享键</span>' : '') +
+        '</div><div class="sub">' + esc(r.theme || '') + (r.palette ? ' · ' + esc(r.palette) : '') + ' · ' + esc(r.key) + '</div>';
+      b.onclick = function () { playIndex(r._i); };
+      frag.appendChild(b);
+    });
+    list.replaceChildren(frag);
+  }
+  function esc(s) { return String(s || '').replace(/[&<>"]/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+
+  function setActive(index) {
+    cur = index;
+    var nodes = list.querySelectorAll('.row');
+    for (var i = 0; i < nodes.length; i++) nodes[i].classList.remove('active');
+    var r = rows[index];
+    caption.textContent = r ? (r.hero + ' · ' + r.slot + ' · ' + (r.theme || r.key)) : '';
+  }
+
+  function bootStage() {
+    var win = iframe.contentWindow;
+    try {
+      // The offline reskin build adds a fixed DOM "角色图鉴" button outside the Egret stage.
+      try {
+        var style = win.document.createElement('style');
+        style.textContent = '.rc-open{display:none!important}.rc-root{display:none!important}';
+        win.document.head.appendChild(style);
+      } catch (e) {}
+      var stage = win.egret && win.egret.MainContext && win.egret.MainContext.instance && win.egret.MainContext.instance.stage;
+      if (!stage) return false;
+      try { if (!win.RES.hasRes('common_skill_zhaoyun_01_bin') || !resourcesReady(win)) return false; } catch (e) { return false; }
+      var box = new win.egret.DisplayObjectContainer();
+      var bg = new win.egret.Shape();
+      bg.graphics.beginFill(0x10141a); bg.graphics.drawRect(-1200, -1200, 2400, 2400); bg.graphics.endFill();
+      box.addChild(bg);
+      box.x = stage.stageWidth / 2; box.y = stage.stageHeight / 2;
+      stage.addChild(box);
+      // The heroes page keeps re-adding / re-showing its own layers. Force anything added after the
+      // preview box to stay invisible and keep the box on top.
+      var addChild = stage.addChild, addChildAt = stage.addChildAt;
+      stage.addChild = function (child) {
+        var ret = addChild.apply(stage, arguments);
+        if (child !== box) child.visible = false;
+        try { stage.setChildIndex(box, stage.numChildren - 1); } catch (e) {}
+        return ret;
+      };
+      stage.addChildAt = function (child, index) {
+        var ret = addChildAt.apply(stage, arguments);
+        if (child !== box) child.visible = false;
+        return ret;
+      };
+      function hideOthers() {
+        for (var i = 0; i < stage.numChildren; i++) {
+          var c = stage.getChildAt(i);
+          if (c !== box) c.visible = false;
+        }
+        try { stage.setChildIndex(box, stage.numChildren - 1); } catch (e) {}
+      }
+      hideOthers();
+      setInterval(hideOthers, 120);
+      stageApi = {
+        win: win, box: box,
+        play: function (db) {
+          return new Promise(function (resolve) {
+            try {
+              var e = win.Utils.MsgUtils.getSimpleEffect(db, box);
+              if (!e) { resolve(false); return; }
+              e.x = 0; e.y = 0;
+              e.scaleX = e.scaleY = zoom;
+              var done = false;
+              function finish(ok) { if (done) return; done = true; resolve(ok); }
+              e.playEffect(1, function () { finish(true); }, true);
+              setTimeout(function () { finish(!!e.parent); }, 6000);
+            } catch (err) { console.error(err); resolve(false); }
+          });
+        }
+      };
+      ready = true;
+      win.__fxPreview = stageApi;
+      statusEl.textContent = '就绪';
+      if (pendingIndex >= 0) { var pi = pendingIndex; pendingIndex = -1; playIndex(pi); }
+      return true;
+    } catch (e) { return false; }
+  }
+  function timer() { if (!bootStage()) setTimeout(timer, 250); }
+  if (iframe.contentDocument && iframe.contentDocument.readyState === 'complete') timer(); else iframe.addEventListener('load', timer);
+
+  function playIndex(index, quiet) {
+    cur = index;
+    setActive(index);
+    if (!quiet) applyFilter();
+    var r = rows[index];
+    if (!r) return;
+    var db = r.db;
+    if (!ready) { pendingIndex = index; caption.textContent = '游戏加载中…'; return; }
+    stageApi.play(db).then(function (ok) {
+      if (!ok) return;
+      if (!loop) return;
+      setTimeout(function () { if (loop && cur === index) playIndex(index, true); }, 260);
+    });
+  }
+
+  document.getElementById('replay').onclick = function () { if (cur >= 0 && ready) stageApi.play(rows[cur].db); };
+  document.getElementById('prev').onclick = function () { if (rows.length) playIndex((cur - 1 + rows.length) % rows.length); };
+  document.getElementById('next').onclick = function () { if (rows.length) playIndex((cur + 1) % rows.length); };
+  document.getElementById('loop').onclick = function () { loop = !loop; this.classList.toggle('on', loop); this.textContent = loop ? '循环开' : '循环关'; };
+  document.getElementById('zoom').onclick = function () {
+    zoom = zoom === 1 ? 0.75 : zoom === 0.75 ? 0.5 : 1;
+    this.textContent = '缩放 ' + Math.round(zoom * 100) + '%';
+  };
+  q.addEventListener('input', applyFilter);
+  document.getElementById('count').textContent = rows.length + ' 条特效 · ' + new Set(rows.map(function (r) { return r.heroId; })).size + ' 名角色';
+  applyFilter();
+  setTimeout(function () { if (cur < 0 && rows.length) playIndex(0); }, 200);
+})();
+</script>
+</body>
+</html>

@@ -1,3 +1,13 @@
+## 2026-11-04 大招视频抠图并按原作帧率替换原皮（未发布）
+
+85 条大招视频（`outputs/street-reskin/ultimate-keys-86/videos`）已全部抠幕并按原作容器帧数／帧率接入 `local_game`，83 个角色可映射（6 刀盾牛、18 肘击牛无对应大招容器，保留原样）。
+
+- 素材：`local_game/assets/street/ultimate/<id>/`，83 个角色、2914 帧、约 70MB WebP（同内容 PNG 约 1.1GB）。生成脚本 `tools/street_ultimate_mat.py`，QA `tools/street_ultimate_qa.py`（`fringeTop` 已从 812‰ 降到最高 69‰）。
+- 数据：`local_game/street-ultimate-data.js`（83 角色、159 个唯一触发键；6 个共享键角色靠施法者判定）。
+- 运行时：`local_game/street-ultimate.js`，包装 `DBEffect.prototype.trigger`，隐藏原骨骼、在战场层中心播新序列，帧率 = 原作 fps × 原 timeScale，帧数与时长不变；前后 10 帧预取、即时释放；异常回退原效果。
+- 验证：`tools/street-ultimate-test.mjs`（夹具，53/53 帧、2217ms、原画隐藏）；`tools/street-ultimate-battle-test.mjs`（真实 demo 战斗 + 8794 隔离存档，pass，主存档 SHA 不变）。真实战斗中角色 1 的 53 帧全呈现、1650ms，AI 实放的角色 3／22／45 大招同样接管。
+- 待补：85 条中仅 83 条有原作容器映射；6／18 需先定位其大招容器。
+
 ## v0.98（当前）：100201 共享主动技能 FX 31 纹理接入
 
 2026-11-02 用户恢复续作。v98 已把 `common_newskill_simayi_01_1`（15 纹理 / 62@24）与 `01_2`（16 纹理 / 16@24）的 normal/EZ 共 4 个容器接入生产 `street-art-data.js`（容器 6→10，version 0.98.0），目标 bin 逐字节 SHA 与候选一致。`common_newskill_simayi_01_3` 的 2 个 ground 纹理仍为候选（actualBattleDependencyProven=false），未接入。
@@ -7,6 +17,19 @@
 全量门禁：双85 各 85/85、1876 base 动作、14FX、125 属性、6 缓存、100202 fidelity 全通过；artverify errors[]；review bindingErrors[]/artErrors[]；generatedRuntimeGitTracking pass（1802，missing/binaryDiff 0）；verifiedPhysicalRegions 384、verifiedPhysicalAnimations 24（较 v97 +62/+2）。单资源 complete 69→73；完整角色 0/85、独立皮肤 0/125 不变。
 
 ground 01_3 依赖审计已完成（2026-11-02）：`g_skill` 的司马懿组只有 `common_newskill_simayi_01_jn` 引用 01_1/01_2；`common_newskill_simayi_01_3` 只出现在 `default.res` 清单登记，无任何技能组/代码引用 → 孤儿资源，不接入，候选保留，不计入必需美术。证据：`skin-migration/100201/active-skill-native/dependency-audit.json`。下一步：剩余共享技能横幅；按 85 角色拆批推进。v98 提交 `980eab63`，交付记录 `f2ca7cb5`，远端 main/工作分支同 SHA。以下为 v97 历史入口，数字冲突以本节为准。
+
+## 2026-11-03 工作区新增（未发布，不算 v0.99）
+
+批量技能特效换皮已接入 `local_game`（245 键：202 图案 + 24 键回退换色 + 19 共享键按角色 66 引用）。
+关键修复 1：`street-fx-dispatch.js` 原先在启动时注册的容器会被随后加载的 `default.res.json` 清掉，
+导致单角色键 redirect 后运行时报缺资源；已改为 hook `RES.loadConfig` + 60 秒复核补注册
+（HTML 版本 `?v=0.98.0-h018-2`）。关键修复 2：战斗优先加载 `<key>_ez_bin`，图案批量原先只有
+normal，实战仍显示原版 EZ；已用 `tools/street_pattern_ez.py` 补 244 个 EZ 图案容器并在表中重定向
+（`?v=20261103-batch-ez`，635 资源 / 451 重定向）。验证：EZ 图案在 smoke hero 12/24 与实战截图
+（`battle/hero024-f3.png`）中生效，主存档 SHA 未变。边界：buff（护盾/治疗）、主角/美人技能、
+宠物/UI 不在这一批，所以蓝球护盾、绿圈治疗、芙蓉出水保持原样；不等于 85 角色 / 125 皮肤完成。
+预览入口 `start-fx-preview.cmd` → 8794 的 `fx-preview.html`（292 条）/ `offline-launcher.html`；
+说明见 `outputs/street-reskin/preview-20261103/预览说明.md` 与 H018 笔记第 18 节。
 
 ## v97 历史入口（以下数字以 v0.98 节为准）
 2026-10-30北京时间20:32核对到超过20:00截止，未及时执行截止，已停止新生成/代码/美术改动。只做保留、核队列和暂停续作。详见CUTOFF-20261030.json。v97 dc0867ab已推工作分支并远端SHA核对；main仍v95，v98未发布。新31FX候选实际验证和过亮失败证据均保留，不算已接入。Comfy本任务running0/pending0、worker0；原automation已不存在，将按截止暂停当前goal，不归档聊天。

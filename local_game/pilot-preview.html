@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3 角色母题特效试点</title>
+<style>
+  :root { color-scheme: dark; font-family: "Microsoft YaHei", sans-serif; }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; background: #10141a; color: #eee; display: grid; grid-template-rows: auto 1fr; }
+  header { padding: 12px 14px; background: #1b1f27; border-bottom: 1px solid #333944; }
+  h1 { margin: 0 0 4px; font-size: 17px; color: #ffd486; }
+  .sub { font-size: 12px; color: #8f97a5; line-height: 1.5; }
+  main { display: grid; grid-template-rows: auto 1fr auto; min-height: 0; }
+  .bar { display: flex; gap: 8px; padding: 10px; flex-wrap: wrap; justify-content: center; }
+  button { border: 1px solid #4a5261; background: #232a35; color: #e8dfcd; border-radius: 8px; padding: 9px 13px; font-size: 14px; }
+  button.on { border-color: #d7ad62; background: #3a2f1d; color: #ffd486; }
+  .stage { position: relative; display: grid; place-items: center; min-height: 0; padding: 8px; }
+  .frame { position: relative; width: min(92vw, 68vh); aspect-ratio: 1/1; border: 1px solid #3c4452; border-radius: 10px; overflow: hidden; background: #0d1015; }
+  iframe { width: 100%; height: 100%; border: 0; }
+  .label { position: absolute; left: 8px; top: 8px; font-size: 12px; color: #ffd486; background: #0b0e13cc; padding: 4px 8px; border-radius: 6px; pointer-events: none; }
+  .note { padding: 10px 14px 16px; color: #8f97a5; font-size: 12px; line-height: 1.6; text-align: center; }
+  code { color: #c6d0de; }
+</style>
+</head>
+<body>
+<header>
+  <h1>3 角色母题特效试点</h1>
+  <div class="sub">鸡 / 锤王 / 驱鬼道长 · 各自实际显示位与帧数（鸡 54 位/64 帧，锤 7/14，道 1/41），
+    只换贴图、时钟和帧率不动。页面下方可切换<strong>原版/母题版</strong>；只含特效，不含角色模型、技能横幅和 UI。</div>
+</header>
+<main>
+  <div class="bar" id="heroBar"></div>
+  <div class="stage">
+    <div class="frame">
+      <iframe id="game" src="index_bh_lite3zbtest_andr.html?mode=heroes&amp;pilot=1"></iframe>
+      <div class="label" id="label">加载中…</div>
+    </div>
+  </div>
+  <div class="bar">
+    <button id="orig">原版</button>
+    <button id="motif" class="on">母题版</button>
+    <button id="replay">重播</button>
+    <button id="loop" class="on">循环开</button>
+  </div>
+  <div class="note">
+    母题版容器：<code>local_game/assets/street/fx/pilot/&lt;key&gt;_motif.bin</code>；
+    时钟/时长/显示位与原作一致。真机 / 手机请用 <code>test-phone-preview.cmd pilot</code> 打开本页。
+  </div>
+</main>
+<script>
+(function () {
+  'use strict';
+  if (location.protocol === 'file:') {
+    document.querySelector('main').innerHTML =
+      '<div style="padding:40px;font-size:16px;line-height:2;color:#e8dfcd">' +
+      '请不要直接双击 HTML。<br>先运行 <code>start-fx-preview.cmd</code>，' +
+      '再打开 <a style="color:#ffd486" href="http://127.0.0.1:8794/pilot-preview.html">' +
+      'http://127.0.0.1:8794/pilot-preview.html</a>。</div>';
+    return;
+  }
+  var ENTRIES = [
+    {hero: '鸡', key: 'common_skill_pangtong_02', url: '/assets/street/fx/pilot/common_skill_pangtong_02_motif.bin'},
+    {hero: '锤王', key: 'common_skill_pangde_02', url: '/assets/street/fx/pilot/batch/street_fx_h016_ult_v01_l01_s01.bin'},
+    {hero: '驱鬼道长', key: 'common_skill_zhangjiao_baguazhen', url: '/assets/street/fx/pilot/batch/street_fx_h054_ult_v01_l01_s01.bin'},
+    {hero: '道长普攻', key: 'common_skill_zhangjiao_01', url: '/assets/street/fx/pilot/batch/street_fx_h054_atk_v01_l01_s01.bin'},
+    {hero: '懂子', key: 'common_skill_caocao_02_1', url: '/assets/street/fx/pilot/batch/street_fx_h001_ult_v01_l02_s01.bin'},
+    {hero: '懂子普攻', key: 'common_skill_tongyongjz_01_2', url: '/assets/street/fx/pilot/batch/street_fx_h001_atk_v01_l01_s01.bin'}
+  ];
+  var cur = 0, variant = 'motif', loop = true, ready = false, api = null, timer = 0, attempts = 0;
+  var iframe = document.getElementById('game');
+  var label = document.getElementById('label');
+  var bar = document.getElementById('heroBar');
+
+  ENTRIES.forEach(function (e, i) {
+    var b = document.createElement('button');
+    b.textContent = e.hero;
+    b.onclick = function () { cur = i; renderButtons(); reload(); };
+    bar.appendChild(b);
+  });
+  function renderButtons() {
+    Array.prototype.forEach.call(bar.children, function (b, i) { b.className = i === cur ? 'on' : ''; });
+    document.getElementById('orig').className = variant === 'original' ? 'on' : '';
+    document.getElementById('motif').className = variant === 'motif' ? 'on' : '';
+  }
+  function reload() {
+    ready = false; api = null;
+    label.textContent = '加载中…';
+    iframe.src = 'index_bh_lite3zbtest_andr.html?mode=heroes&pilot=' + variant + '-' + Date.now();
+  }
+  function boot() {
+    var w = iframe.contentWindow;
+    try {
+      try {
+        var st = w.document.createElement('style');
+        st.textContent = '.rc-open{display:none!important}.rc-root{display:none!important}';
+        w.document.head.appendChild(st);
+      } catch (e) {}
+      var stage = w.egret && w.egret.MainContext && w.egret.MainContext.instance && w.egret.MainContext.instance.stage;
+      if (!stage) return false;
+      try { if (!w.RES.hasRes('common_skill_zhaoyun_01_bin')) return false; } catch (e) { return false; }
+      var entry = ENTRIES[cur];
+      if (variant === 'motif') {
+        w.RES.config.addResourceData({name: 'pilot_' + entry.key + '_bin', url: entry.url, type: 'bin', root: ''});
+        w.StreetFXRedirect[entry.key + '_bin'] = 'pilot_' + entry.key + '_bin';
+      }
+      for (var i = 0; i < stage.numChildren; i++) stage.getChildAt(i).visible = false;
+      var box = new w.egret.DisplayObjectContainer();
+      var bg = new w.egret.Shape();
+      bg.graphics.beginFill(0x10141a); bg.graphics.drawRect(-1200, -1200, 2400, 2400); bg.graphics.endFill();
+      box.addChild(bg);
+      box.x = stage.stageWidth / 2; box.y = stage.stageHeight / 2;
+      stage.addChild(box);
+      function hide() {
+        for (var i = 0; i < stage.numChildren; i++) { var c = stage.getChildAt(i); if (c !== box) c.visible = false; }
+        try { stage.setChildIndex(box, stage.numChildren - 1); } catch (e) {}
+      }
+      hide(); setInterval(hide, 200);
+      api = {
+        play: function () {
+          box.removeChildren();
+          box.addChild(bg);
+          var e = w.Utils.MsgUtils.getSimpleEffect(entry.key, box);
+          e.x = 0; e.y = 0; e.scaleX = e.scaleY = 0.8;
+          e.playEffect(1, function () { if (loop) timer = setTimeout(api.play, 500); }, true);
+        }
+      };
+      ready = true;
+      label.textContent = entry.hero + ' · ' + (variant === 'motif' ? '母题版' : '原版');
+      api.play();
+      return true;
+    } catch (e) { return false; }
+  }
+  function wait() {
+    if (boot()) return;
+    if (++attempts > 120) {
+      label.textContent = '加载失败：请确认 8794 服务在跑，并通过 http://127.0.0.1:8794/pilot-preview.html 打开';
+      return;
+    }
+    setTimeout(wait, 250);
+  }
+  iframe.addEventListener('load', function () { attempts = 0; setTimeout(wait, 400); });
+
+  document.getElementById('orig').onclick = function () { variant = 'original'; renderButtons(); reload(); };
+  document.getElementById('motif').onclick = function () { variant = 'motif'; renderButtons(); reload(); };
+  document.getElementById('replay').onclick = function () { if (ready && api) api.play(); };
+  document.getElementById('loop').onclick = function () {
+    loop = !loop; this.className = loop ? 'on' : ''; this.textContent = loop ? '循环开' : '循环关';
+  };
+  renderButtons();
+})();
+</script>
+</body>
+</html>
