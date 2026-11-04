@@ -7,6 +7,9 @@
 - 运行时：`local_game/street-ultimate.js`，包装 `DBEffect.prototype.trigger`，隐藏原骨骼、在战场层中心播新序列，帧率 = 原作 fps × 原 timeScale，帧数与时长不变；前后 10 帧预取、即时释放；异常回退原效果。
 - 验证：`tools/street-ultimate-test.mjs`（夹具，53/53 帧、2217ms、原画隐藏）；`tools/street-ultimate-battle-test.mjs`（真实 demo 战斗 + 8794 隔离存档，pass，主存档 SHA 不变）。真实战斗中角色 1 的 53 帧全呈现、1650ms，AI 实放的角色 3／22／45 大招同样接管。
 - 待补：85 条中仅 83 条有原作容器映射；6／18 需先定位其大招容器。
+- 提交与远端：`e107d5fd` 已推 https://github.com/aohou666/niulaigame-.git 的 `main`（新仓库为空，历史 `4a8edea3` 先推、特性提交后推），本地 HEAD 与远端 SHA 一致。
+- 本地清理：删除 `local_game` 根 65 张截图（157.9MB，打包脚本会把它们塞进 APK）、旧 640 pilot 中间帧 215MB、临时探针 9.7MB，合计约 393MB；明细 `outputs/street-reskin/CLEANUP-20261104.md`。`art-migration/`、`outputs/` 其余大件属交付/证据，未擅自删除。
+- 复核：真实战斗（demo + 8794 隔离存档）复跑通过——角色 1 53/53 帧 1650ms、角色 84 共享键 40/40 帧、角色 83 62/62 帧，原画隐藏、主存档 SHA 不变、无报错；数据完整性 83 角色 / 2914 帧 / 0 缺文件。
 
 ## v0.98（当前）：100201 共享主动技能 FX 31 纹理接入
 

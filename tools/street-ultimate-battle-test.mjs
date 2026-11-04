@@ -48,7 +48,10 @@ try {
     const res = await page.evaluate(async (heroId) => {
       const hero = StreetUltimateData.heroes[String(heroId)];
       if (!hero) return {heroId, error: 'no data'};
-      const key = hero.keys[0];
+      const key = (hero.keys.length ? hero.keys : hero.allKeys)[0];
+      if (!hero.keys.length) {
+        StreetUltimate.noteCast({effectsTarEnemy: [{src: [key]}]}, {config: {code: 41010000 + heroId}});
+      }
       const eff = window.__layers.effLayer;
       const layer = window.__layers.battleLayer;
       const e = Utils.MsgUtils.getSimpleEffect(key, eff);
@@ -78,14 +81,16 @@ try {
     }
     await page.waitForTimeout(3200);
     const end = await page.evaluate(() => ({s: StreetUltimate.snapshot(), fxOnStage: window.__last ? !!window.__last.stage : null}));
-    report.shots.push({heroId: id, shots, end: {active: end.s.active.length, finished: end.s.finished.slice(-1), fxOnStage: end.fxOnStage}});
+    const own = (end.s.finished || []).filter(x => x.heroId === id).pop();
+    const ownActive = (end.s.active || []).some(x => x.heroId === id);
+    report.shots.push({heroId: id, shots, end: {ownActive, own: own || null, finished: end.s.finished.slice(-1), fxOnStage: end.fxOnStage}});
   }
   report.played = played;
   report.errors = errors;
   const lastSnap = await page.evaluate(() => StreetUltimate.snapshot());
   report.final = lastSnap;
-  report.pass = errors.length === 0 && report.shots.every(s => s.shots.some(x => x.overlays >= 1) &&
-    s.shots.every(x => x.fxVisible === false) && s.end.active === 0);
+  report.pass = errors.length === 0 && report.shots.every(s => s.end.own &&
+    s.shots.every(x => x.fxVisible === false) && s.shots.some(x => x.active >= 1) && !s.end.ownActive);
   console.log(JSON.stringify({pass: report.pass, shots: report.shots.map(s => ({hero: s.heroId, frames: s.shots.map(x => x.frames), end: s.end})), errors}, null, 1));
 } catch (e) {
   report.error = e.stack;
