@@ -1,0 +1,29 @@
+你在同一台电脑上接手后续工作。工作区：C:\Users\dongdong\Documents\ChatGPT\安装
+
+先读：agent-handoff-20261104\接手说明.md（唯一有效入口），再按需查：
+- local_game\README.md（大招接入 + APK 打包的全部约束和踩坑）
+- art-migration\CURRENT.md（顶部有本次会话记录）
+上一份 agent-handoff-20261102\ 只作历史，状态已过时，别照它动手。
+
+两件必须解决的事：
+
+1) P0：用户手机装 APK 后卡在加载完（进度条走完、有音乐）进不了主界面。
+   本机模拟器（Android 16 API36，甚至 1GB 内存）能进主界面，根因未定位。
+   产物在 outputs\原创角色换皮-大招版-精简.apk（1.21 GiB）和 -完整.apk（2.05 GiB）。
+   请先拿真机 logcat / WebView 控制台，或让用户用手机浏览器开局域网预览对照：
+   http://192.168.1.190:8790/offline-launcher.html （服务器若没开，见接手说明第 6 节启动命令）。
+   不要在没日志的情况下靠"再删资源/换壳"猜。
+
+2) P1：用户明确说当前大招版本"明显是不行的"，要返工。
+   已知硬伤：4 秒视频被均匀压到原作帧数（不少角色原作只有 9~24 帧，等于鬼畜快放）；
+   整屏居中叠层，忽略 g_skill effectQP 每层的 offset/scaleX/timeScale/z；
+   抠像是二值 alpha 无羽化，品红幕角色有辉光残留；6 刀盾牛、18 肘击牛没有映射。
+   返工前先和用户确认"时长策略/构图策略"，再做 1~2 个 pilot 给他看，别直接批量。
+
+环境：Python .tools\python\python.exe（PYTHONUTF8=1）；Node E:\claudecode\nodejs\node.exe；
+Playwright 在 C:/Users/dongdong/.cache/codex-runtimes/...；Android SDK %LOCALAPPDATA%\Android\Sdk；
+JRE .tools\jre17-tuna\...\bin\java.exe；签名密钥 outputs\apk-build\offline.p12（别名 offlinekey，密码 offline，别丢）。
+远端：https://github.com/aohou666/niulaigame-.git ，分支 codex/street-reskin-20261029，本地 HEAD 先自核。
+
+硬规矩：禁止 git reset/clean/add .，精确暂存；禁止测试污染 pc_server_data\offline-replica-save.json，
+战斗测试走 8794 隔离存档并恢复；不删 art-migration 的验证证据。
