@@ -119,7 +119,23 @@ node tools/street-ultimate-battle-test.mjs --heroes=1,83,45  # 真实战斗场�
 
 ### 打包 APK（2026-11-04）
 
-`tools/package-full-apk.py` 复用上一次 debug 构建的 shell（`classes*.dex` + 二进制 manifest + `resources.arsc`），把 `assets/` 整棵树换成当前 `local_game`，再由调用方签名。产物：`outputs/原创角色换皮-大招版-预览.apk`（2.05 GiB）。
+`tools/package-full-apk.py` 复用上一次 debug 构建的 shell（`classes*.dex` + 二进制 manifest + `resources.arsc`），把 `assets/` 整棵树换成当前 `local_game`，再由调用方签名。
+
+两种产物：
+
+- `--slim`（默认）：`outputs/原创角色换皮-大招版-精简.apk`，**1.21 GiB**（初始 2.05 GiB，降 41%）。
+- `--full`：全部资产，`outputs/原创角色换皮-大招版-预览.apk` 等价物约 2.05 GiB。
+
+精简模式删的是引擎取不到的内容，不是"看起来没用"的图：
+
+| 类别 | 大小 / 文件 | 依据 |
+|---|---|---|
+| 未注册的街景 FX 容器 | 433.2 MB / 1026 | 不在 `street-fx-table.js` 的 `StreetFXResources` 里，`RES` 没有任何入口，全工作区也搜不到引用；含 `fx/pilot` 旧试验包 |
+| 有 `_ez` 孪生的 HD 特效容器 | 348.5 MB / 890 | `DB_GLOBAL.ENABLE_AUTO_EZ=true`，`getDBFileName()` 只要 `_ez` 已注册就永远走 `_ez`；只删特效区（`effect`/`ui_effect`/`street/fx`），`model` 区的 HD 保留给 `useHD:true` 的展示模型 |
+| 街景角色/皮肤 WebP 重编码 | 约 117 MB | `characters/`、`skins/` 以 q92 重压（原文件接近无损，体积虚高），哈希只当缓存键、不做校验 |
+| 大 PNG 无损重压 | 约 50 MB | `optimize=True, compress_level=9`，像素不变；跳过调色板/16bit/动图 |
+
+再往下压的可选项（未做，需确认）：`assets/street/idle` 图集降采样约 −100 MB、`model` 区 HD 容器 −75 MB、街景 idle 用 q85 再省 40 MB。原版 `resource/assets`（783 MB）是没被换掉的原始美术，删了会掉原皮内容。
 
 关键约束（改打包脚本前先看）：
 
@@ -130,14 +146,14 @@ node tools/street-ultimate-battle-test.mjs --heroes=1,83,45  # 真实战斗场�
 
 签名密钥：`outputs/apk-build/offline.p12`（别名 `offlinekey`，密码 `offline`）。同一密钥签名才能覆盖安装升级，别丢。
 
-验证（Android 16 x86_64 模拟器，2GB APK 可正常安装）：
+验证（Android 16 x86_64 模拟器，两种包都能正常安装）：
 
 ```powershell
-adb install -r "outputs\原创角色换皮-大招版-预览.apk"
-# 打包内实测：StreetUltimateData 83 角色；demo 战斗 matched 15、overlays 4、frames 102，
-# 角色 3 大招 50/52 帧、1620ms，WebView 无脚本错误
+adb install -r "outputs\原创角色换皮-大招版-精简.apk"
+# 精简包实测：main / heroes / demo 三屏无新增缺资源；demo 战 matched 20、frames 174，
+# StreetBody 帧 284；控制台只有既有的「找不到 pack.etc1.ktx，使用 png」提示（原包本来就有）
 node tools/verify-apk-webview.mjs   # 需要先 adb forward tcp:9222 localabstract:webview_devtools_remote_<pid>
 ```
 
-真实战斗画面：`outputs/apk-build/apk-battle-1.png`（西瓜摊主大招）、`apk-battle-2.png`。
+真实战斗画面：`outputs/apk-build/slim-battle-1.png`、`slim-battle-2.png`。
 

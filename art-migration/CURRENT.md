@@ -10,7 +10,7 @@
 - 提交与远端：`e107d5fd` 已推 https://github.com/aohou666/niulaigame-.git 的 `main`（新仓库为空，历史 `4a8edea3` 先推、特性提交后推），本地 HEAD 与远端 SHA 一致。
 - 本地清理：删除 `local_game` 根 65 张截图（157.9MB，打包脚本会把它们塞进 APK）、旧 640 pilot 中间帧 215MB、临时探针 9.7MB、`outputs/migration smoke portable` 890MB，并对 `.git` 做 `gc --prune=now`（5.5GB → 1.73GB），合计释放约 5.1GB；明细 `outputs/street-reskin/CLEANUP-20261104.md`。`art-migration/`、`outputs/` 其余大件属交付/证据，未擅自删除。
 - 复核：真实战斗（demo + 8794 隔离存档）复跑通过——角色 1 53/53 帧 1650ms、角色 84 共享键 40/40 帧、角色 83 62/62 帧，原画隐藏、主存档 SHA 不变、无报错；数据完整性 83 角色 / 2914 帧 / 0 缺文件。
-- APK：`tools/package-full-apk.py` 复用旧 shell + 当前 `local_game` 资产 + 自写 4 字节对齐 + `apksigner` 签名，产物 `outputs/原创角色换皮-大招版-预览.apk`（2.05 GiB）。Android 16 模拟器实测安装成功，包内 `StreetUltimateData` 83 角色、demo 战斗 matched 15 / overlays 4 / frames 102、角色 3 大招 50/52 帧，WebView 无脚本错误；截图 `outputs/apk-build/apk-battle-1.png`。打包约束（资产必须 STORED、ZIP 路径镜像 local_game、zipalign 不支持 ≥2GiB）记在 `local_game/README.md`。
+- APK：`tools/package-full-apk.py` 复用旧 shell + 当前 `local_game` 资产 + 自写 4 字节对齐 + `apksigner` 签名。默认 `--slim`：删掉引擎取不到的 781.7MB（未注册街景 FX 433.2MB / 有 `_ez` 孪生的 HD 特效 348.5MB），再把街景角色/皮肤 WebP 以 q92 重压、大 PNG 无损重压，产物 `outputs/原创角色换皮-大招版-精简.apk` **1.21 GiB**（原 2.05 GiB，−41%）。Android 16 模拟器实测：安装成功，main/heroes/demo 三屏无新增缺资源（只剩原包既有的 ETC1 回退提示），demo 战大招 overlay matched 20 / frames 174、StreetBody 284 帧，战斗截图 `outputs/apk-build/slim-battle-1.png`。打包约束与进一步可压缩项记在 `local_game/README.md`。
 
 ## v0.98（当前）：100201 共享主动技能 FX 31 纹理接入
 
