@@ -117,3 +117,27 @@ node tools/street-ultimate-battle-test.mjs --heroes=1,83,45  # 真实战斗场�
 
 真实战斗实测：角色 1 的 53 帧全部呈现、耗时 1650ms（53/24/1.34），原画隐藏，AI 实际释放的角色 3／22／45 大招同样被接管；主存档 SHA 不变。
 
+### 打包 APK（2026-11-04）
+
+`tools/package-full-apk.py` 复用上一次 debug 构建的 shell（`classes*.dex` + 二进制 manifest + `resources.arsc`），把 `assets/` 整棵树换成当前 `local_game`，再由调用方签名。产物：`outputs/原创角色换皮-大招版-预览.apk`（2.05 GiB）。
+
+关键约束（改打包脚本前先看）：
+
+- **所有资产必须 STORED（不压缩）**：`AssetHttpServer` 用 `AssetManager.openFd()` 读资产，压缩过的条目会直接 404，表现就是「Asset not found」白屏。
+- **ZIP 路径要镜像 `local_game`**：APK 里是 `assets/<相对 local_game 的路径>`。街景资产请求 `/assets/street/...`，所以 APK 内必须是 `assets/assets/street/...`；根目录的 html/js 则是 `assets/index_bh_...html`。
+- **zipalign 处理不了 ≥2 GiB 的包**（实测 2.2GB 直接报 `Unable to open ... as zip archive`），所以 4 字节对齐由打包脚本用 `0xD935` 填充扩展字段自己写入；`resources.arsc` 必须 STORED 且对齐，否则 Android 11+ 拒装。
+- 未打入：`assets/character_idle/`（85 个角色的全分辨率待机源帧，运行时走 `character-idle-atlas-data.js` 的 atlas）与 `assets/street/idle/**/*.png`（旧帧，atlas 只引用 .webp）。要连源帧一起打包会变成 5 GiB 以上，Android 也无法安装。
+
+签名密钥：`outputs/apk-build/offline.p12`（别名 `offlinekey`，密码 `offline`）。同一密钥签名才能覆盖安装升级，别丢。
+
+验证（Android 16 x86_64 模拟器，2GB APK 可正常安装）：
+
+```powershell
+adb install -r "outputs\原创角色换皮-大招版-预览.apk"
+# 打包内实测：StreetUltimateData 83 角色；demo 战斗 matched 15、overlays 4、frames 102，
+# 角色 3 大招 50/52 帧、1620ms，WebView 无脚本错误
+node tools/verify-apk-webview.mjs   # 需要先 adb forward tcp:9222 localabstract:webview_devtools_remote_<pid>
+```
+
+真实战斗画面：`outputs/apk-build/apk-battle-1.png`（西瓜摊主大招）、`apk-battle-2.png`。
+
